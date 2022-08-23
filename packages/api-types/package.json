@@ -21,5 +21,8 @@
       "import": "./v2.ts",
       "types": "./v2.d.ts"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
