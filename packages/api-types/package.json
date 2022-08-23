@@ -6,7 +6,7 @@
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
     "postpublish": "npm run clean:node",
     "publish": "npm run build:release && npm publish -f",
-    "test": "tsc --noEmit"
+    "test:ts": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
