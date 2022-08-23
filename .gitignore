@@ -1,3 +1,8 @@
+# ignore average files with this pattern
+**/.ignore.*
+/test*.js
+/test*.ts
+
 # Logs
 logs
 *.log
