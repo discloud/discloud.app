@@ -25,7 +25,7 @@ export class REST {
    * @param fullRoute - The full route to query
    * @param options - Optional request options
    */
-  get(fullRoute: RouteLike, options: RequestData = {}) {
+  get<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
     return this.request({ ...options, fullRoute, method: RequestMethod.Get });
   }
 
@@ -35,7 +35,7 @@ export class REST {
    * @param fullRoute - The full route to query
    * @param options - Optional request options
    */
-  delete(fullRoute: RouteLike, options: RequestData = {}) {
+  delete<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
     return this.request({ ...options, fullRoute, method: RequestMethod.Delete });
   }
 
@@ -45,7 +45,7 @@ export class REST {
    * @param fullRoute - The full route to query
    * @param options - Optional request options
    */
-  post(fullRoute: RouteLike, options: RequestData = {}) {
+  post<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
     return this.request({ ...options, fullRoute, method: RequestMethod.Post });
   }
 
@@ -55,7 +55,7 @@ export class REST {
    * @param fullRoute - The full route to query
    * @param options - Optional request options
    */
-  put(fullRoute: RouteLike, options: RequestData = {}) {
+  put<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
     return this.request({ ...options, fullRoute, method: RequestMethod.Put });
   }
 
