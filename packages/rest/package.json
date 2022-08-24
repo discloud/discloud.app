@@ -1,0 +1,23 @@
+{
+  "name": "@discloudjs/rest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist",
+  "scripts": {
+    "build:release": "tsc",
+    "publish": "npm run build:release && npm publish -f",
+    "test:ts": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "undici": "^5.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
