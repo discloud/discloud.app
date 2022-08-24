@@ -1,25 +1,26 @@
 import { RESTApiBaseResult } from "./base";
 
-export interface ApiApp {
-  id: string,
-  online: boolean,
-  ramKilled: boolean,
-  ram: number,
-  mainFile: string,
-  lang: string,
-  mods: string[],
-  autoDeployGit: string,
+export interface BaseApiApp {
+  id: string
+}
+
+export interface ApiApp extends BaseApiApp {
+  online: boolean
+  ramKilled: boolean
+  ram: number
+  mainFile: string
+  lang: string
+  mods: string[]
+  autoDeployGit: string
   autoRestart: boolean
 }
 
-export interface ApiAppBackup {
-  id: string
+export interface ApiAppBackup extends BaseApiApp {
   status: string
   url: string
 }
 
-export interface ApiAppLog {
-  id: string
+export interface ApiAppLog extends BaseApiApp {
   terminal: ApiTerminal
 }
 
@@ -34,14 +35,14 @@ export interface ApiAppCRUD {
   restarted: string[]
 }
 
-export interface ApiAppStatus {
-  id: string
+export interface ApiAppStatus extends BaseApiApp {
   container: string
   cpu: string
   last_restart: string
   memory: string
   netIO: ApiNetIO
   ssd: string
+  startedAt: string
 }
 
 export interface ApiNetIO {
