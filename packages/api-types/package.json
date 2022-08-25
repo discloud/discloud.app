@@ -18,7 +18,7 @@
   "exports": {
     "./v2": {
       "require": "./v2.js",
-      "import": "./v2.ts",
+      "import": "./v2.js",
       "types": "./v2.d.ts"
     }
   },
