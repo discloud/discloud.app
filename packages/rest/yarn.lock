@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@discloudapp/api-types@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.7.tgz#3c96bffa77b172df19d7f1a2cd677420a0f69cad"
+  integrity sha512-C72gRqdHiET8LjgE0gv+VpO5JNun8+qf1Lg0/n8OB2N5DDSJP+8z60g7PO+lSvkg/fGJxr9ipUiUkUcEhV3E1Q==
+
 typescript@^4.7.4:
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
