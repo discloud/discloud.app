@@ -1,6 +1,6 @@
 import { RESTApiBaseResult } from "./base";
 
-export interface RESTGetApiTeam extends RESTApiBaseResult {
+export interface RESTGetApiTeamResult extends RESTApiBaseResult {
   apps: ApiTeamApps[]
 }
 

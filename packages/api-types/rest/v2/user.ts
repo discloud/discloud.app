@@ -1,6 +1,6 @@
 import { RESTApiBaseResult } from "./base";
 
-export interface RESTGetApiUser extends RESTApiBaseResult {
+export interface RESTGetApiUserResult extends RESTApiBaseResult {
   user: ApiUser
 }
 
