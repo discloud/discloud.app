@@ -53,9 +53,12 @@ export interface RawFile {
  * Represents possible data to be given to an endpoint
  */
 export interface RequestData {
+	/**
+	 * Whether to append JSON data to form data instead of `payload_json` when sending files
+	 */
+	appendToFormData?: boolean;
   /**
    * The body to send to this request.
-   * If providing as BodyInit, set `passThroughBody: true`
    */
   body?: BodyInit | unknown
   /**

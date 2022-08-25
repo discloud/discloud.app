@@ -1,5 +1,5 @@
 import { Blob } from "node:buffer";
-import { BodyInit, Dispatcher, FormData, request, RequestInit } from "undici";
+import { Dispatcher, FormData, request } from "undici";
 import { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
 import { DefaultRestOptions } from "./utils/contants";
 
@@ -30,33 +30,32 @@ export class RequestManager {
 
     const url = `${this.options.api}/v${this.options.version}${request.fullRoute}${query}`;
 
-    let finalBody: RequestInit["body"];
+    const additionalHeaders: Record<string, string> = {};
+    const formData = new FormData();
 
     if (request.file) {
-      const formData = new FormData();
-
       const file = new Blob([request.file.data]);
 
       formData.append(request.file.key ?? "file", file, request.file.name);
-
-      if (request.body)
-        for (const [key, value] of Object.entries(request.body as Record<string, unknown>)) {
-          formData.append(key, value);
-        }
-
-      finalBody = formData;
     } else if (request.body) {
-      finalBody = request.body as BodyInit;
+      additionalHeaders["Content-Type"] = "application/json";
     }
 
     const fetchOptions: RequestOptions = {
-      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-      headers: { ...(request.headers ?? {}), ...headers } as Record<string, string>,
+      headers: { ...(request.headers ?? {}), ...headers, ...additionalHeaders },
       method: request.method.toUpperCase() as Dispatcher.HttpMethod,
     };
 
-    if (finalBody)
-      fetchOptions.body = finalBody as Exclude<RequestOptions["body"], undefined>;
+    if (request.body)
+      if (request.appendToFormData) {
+        for (const [key, value] of Object.entries(request.body as Record<string, unknown>))
+          formData.append(key, value);
+      } else {
+        fetchOptions.body = JSON.stringify(request.body);
+      }
+
+    if (request.appendToFormData)
+      fetchOptions.body = formData as Exclude<RequestOptions["body"], undefined>;
 
     return { url, fetchOptions };
   }
@@ -70,8 +69,10 @@ export class RequestManager {
       console.error(error);
     }
 
-    if (res.statusCode > 399 && res.statusCode < 500) 
-      throw new Error("[DISCLOUD API] " + await res.body.json().then(body => body.message));
+    if (res.statusCode > 399 && res.statusCode < 500)
+      await res.body.json().then(body => {
+        throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
+      });
 
     return res;
   }

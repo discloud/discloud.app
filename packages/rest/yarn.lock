@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@discloudapp/api-types@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.7.tgz#3c96bffa77b172df19d7f1a2cd677420a0f69cad"
-  integrity sha512-C72gRqdHiET8LjgE0gv+VpO5JNun8+qf1Lg0/n8OB2N5DDSJP+8z60g7PO+lSvkg/fGJxr9ipUiUkUcEhV3E1Q==
+"@discloudapp/api-types@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.11.tgz#32feb84324b17758c1892e998a375c3572811e96"
+  integrity sha512-e9aU86n+IhoyybwqkRnTL43tL5wfQjE0lngmN69AnzcfDpZL8Ey2ZLs6gDuScLMy4Y7NF41ESEe8pX6aq004sQ==
 
 typescript@^4.7.4:
   version "4.7.4"
