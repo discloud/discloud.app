@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./dist",
   "scripts": {
@@ -15,7 +15,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.7",
+    "@discloudapp/api-types": "^0.0.11",
     "undici": "^5.10.0"
   },
   "publishConfig": {
