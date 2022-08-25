@@ -1,5 +1,5 @@
 import { Blob } from "node:buffer";
-import { Dispatcher, FormData, request, RequestInit } from "undici";
+import { BodyInit, Dispatcher, FormData, request, RequestInit } from "undici";
 import { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
 import { DefaultRestOptions } from "./utils/contants";
 
@@ -45,6 +45,8 @@ export class RequestManager {
         }
 
       finalBody = formData;
+    } else if (request.body) {
+      finalBody = request.body as BodyInit;
     }
 
     const fetchOptions: RequestOptions = {
