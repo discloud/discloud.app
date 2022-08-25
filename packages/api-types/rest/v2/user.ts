@@ -5,9 +5,12 @@ export interface RESTGetApiUserResult extends RESTApiBaseResult {
 }
 
 export interface ApiUser {
-  userID: string
-  totalRamMb: number
-  ramUsedMb: number
   apps: string[]
+  customdomains: string[]
+  locale: string
   plan: string
+  ramUsedMb: number
+  subdomains: string[]
+  totalRamMb: number
+  userID: string
 }
