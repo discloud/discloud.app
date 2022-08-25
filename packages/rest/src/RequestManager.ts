@@ -68,6 +68,9 @@ export class RequestManager {
       console.error(error);
     }
 
+    if (res.statusCode > 399 && res.statusCode < 500) 
+      throw new Error("[DISCLOUD API] " + await res.body.json().then(body => body.message));
+
     return res;
   }
 }
