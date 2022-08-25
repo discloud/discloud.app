@@ -13,4 +13,13 @@ export interface ApiUser {
   subdomains: string[]
   totalRamMb: number
   userID: string
+  lastDataLeft?: LastDataLeft,
+  planDataEnd?: string
+}
+
+export interface LastDataLeft {
+  days: number
+  hours: number
+  minutes: number
+  seconds: number
 }
