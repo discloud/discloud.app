@@ -1,0 +1,34 @@
+{
+  "name": "discloud.app",
+  "version": "0.0.3",
+  "main": "./dist",
+  "scripts": {
+    "build:release": "tsc",
+    "prepublish": "npm run build:release",
+    "publish": "npm publish -f",
+    "test:ts": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discloudapp/discloud.app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/discloudapp/discloud.app/issues"
+  },
+  "homepage": "https://github.com/discloudapp/discloud.app#readme",
+  "dependencies": {
+    "@discloudapp/api-types": "^0.0.14",
+    "@discloudapp/rest": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.10",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "typescript": "^4.7.4"
+  }
+}
