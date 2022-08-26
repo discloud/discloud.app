@@ -18,6 +18,7 @@ export const Routes = new class Routes {
   appStart = App.start;
   appStatus = App.status;
   appStop = App.stop;
+  appTeam = App.team;
 
   /** locale */
   locale = Locale.locale;
