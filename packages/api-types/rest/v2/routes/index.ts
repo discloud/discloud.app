@@ -1,4 +1,5 @@
 import { App } from "./App";
+import { Locale } from "./Locale";
 import { Team } from "./Team";
 import { Upload } from "./Upload";
 import { User } from "./User";
@@ -17,6 +18,9 @@ export const Routes = new class Routes {
   appStart = App.start;
   appStatus = App.status;
   appStop = App.stop;
+
+  /** locale */
+  locale = Locale.locale;
 
   /** team */
   team = Team.team;
