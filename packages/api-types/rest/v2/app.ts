@@ -52,6 +52,7 @@ export interface ApiNetIO {
 export interface ApiTerminal {
   big: string
   small: string
+  url: string
 }
 
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
