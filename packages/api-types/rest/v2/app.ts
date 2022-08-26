@@ -126,3 +126,17 @@ export interface RESTGetApiAppTeamResult {
   status: string
   team: ApiAppTeam[]
 }
+
+export type RESTDeleteApiAppTeamResult = RESTApiBaseResult
+
+export interface ApiAppTeamManager extends ApiAppTeam {
+  appID: string
+}
+
+export interface RESTPostApiAppTeamResult extends RESTApiBaseResult {
+  app: ApiAppTeamManager
+}
+
+export interface RESTPutApiAppTeamResult extends RESTApiBaseResult {
+  app: ApiAppTeamManager
+}
