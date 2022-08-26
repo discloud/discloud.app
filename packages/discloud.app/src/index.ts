@@ -20,4 +20,4 @@ export {
   Team,
   User
 };
-
+export const discloud = new DiscloudApp();
