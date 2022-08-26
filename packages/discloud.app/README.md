@@ -1,4 +1,4 @@
-# discloud.app
+# Discloud.app
 
 ## Example
 
@@ -17,7 +17,7 @@ Usage
 const { discloud } = require("discloud.app");
 
 // Set token
-await discloud.login("DISCLOUD_TOKEN");
+discloud.login("DISCLOUD_TOKEN");
 ```
 
 ```js
@@ -25,5 +25,9 @@ await discloud.login("DISCLOUD_TOKEN");
 // Get instanced discloud
 const { discloud } = require("discloud.app");
 
-await discloud.apps.fetch("ID"); // App
+// ...
+
+async function () {
+  await discloud.apps.fetch("ID"); // Promise<App>
+}
 ```
