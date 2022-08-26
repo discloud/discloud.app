@@ -47,14 +47,14 @@ export class RequestManager {
     };
 
     if (request.body)
-      if (request.appendToFormData) {
+      if (request.file) {
         for (const [key, value] of Object.entries(request.body as Record<string, unknown>))
           formData.append(key, value);
       } else {
         fetchOptions.body = JSON.stringify(request.body);
       }
 
-    if (request.appendToFormData)
+    if (request.file)
       fetchOptions.body = formData as Exclude<RequestOptions["body"], undefined>;
 
     return { url, fetchOptions };
