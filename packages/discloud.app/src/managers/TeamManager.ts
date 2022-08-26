@@ -1,4 +1,6 @@
-import { RESTGetApiTeamResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManager, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { readFileSync } from "fs";
+import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Team from "../structures/Team";
 import BaseManager from "./BaseManager";
@@ -6,6 +8,94 @@ import BaseManager from "./BaseManager";
 export default class TeamManager extends BaseManager {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp);
+  }
+
+  async status(appID: string): Promise<unknown>
+  async status(appID?: "all"): Promise<unknown>
+  async status(appID = "all") {
+    const data = await this.discloudApp.rest.get(Routes.teamStatus(appID));
+
+    return data;
+  }
+
+  async terminal(appID: string): Promise<unknown>
+  async terminal(appID?: "all"): Promise<unknown>
+  async terminal(appID = "all") {
+    const data = await this.discloudApp.rest.get(Routes.appLogs(appID));
+
+    return data;
+  }
+
+  async backup(appID: string): Promise<unknown>
+  async backup(appID?: "all"): Promise<unknown>
+  async backup(appID = "all") {
+    const data = await this.discloudApp.rest.get(Routes.teamBackup(appID));
+
+    return data;
+  }
+
+  async ram(appID: string, quantity: number): Promise<boolean> {
+    const data = await this.discloudApp.rest.put(Routes.appRam(appID), {
+      body: {
+        ramMB: quantity
+      }
+    });
+
+    return data.status === "ok";
+  }
+
+  async update(appID: string, options: UpdateAppOptions) {
+    if (typeof options.file === "string")
+      options.file = {
+        data: readFileSync(options.file),
+        name: options.file.split("/").pop()!,
+        key: "file"
+      };
+
+    const data = await this.discloudApp.rest.put(Routes.teamCommit(appID), {
+      file: options.file
+    });
+
+    return data;
+  }
+
+  async restart(appID: string): Promise<boolean>
+  async restart(appID?: "all"): Promise<ApiAppManager>
+  async restart(appID = "all") {
+    const data = await this.discloudApp.rest.put<
+      | RESTPutApiAppRestartResult
+      | RESTPutApiAppAllRestartResult
+    >(Routes.teamRestart(appID));
+
+    if ("apps" in data) return data.apps;
+
+    return data.status === "ok";
+  }
+
+  async start(appID: string): Promise<boolean>
+  async start(appID?: "all"): Promise<ApiAppManager>
+  async start(appID = "all") {
+    const data = await this.discloudApp.rest.put<
+      | RESTPutApiAppStartResult
+      | RESTPutApiAppAllStartResult
+    >(Routes.teamStart(appID));
+
+    if ("apps" in data) return data.apps;
+
+    return data.status === "ok";
+  }
+
+  async stop(appID: string): Promise<boolean>
+  async stop(appID?: "all"): Promise<ApiAppManager>
+  async stop(appID = "all") {
+    const data = await this.discloudApp.rest.put<
+      | RESTPutApiAppStopResult
+      | RESTPutApiAppAllStopResult
+    >(Routes.teamStop(appID));
+
+    if ("apps" in data) return data.apps;
+
+    return data.status === "ok";
   }
 
   async fetch() {
