@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "scripts": {
     "build:release": "tsc",
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
@@ -8,6 +8,10 @@
     "postpublish": "npm run clean:node",
     "publish": "npm publish -f",
     "test:ts": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discloudapp/discloud.app.git"
   },
   "keywords": [],
   "author": "",
