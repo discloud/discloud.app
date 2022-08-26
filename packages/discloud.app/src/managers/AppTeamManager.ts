@@ -1,4 +1,4 @@
-import { RESTGetApiAppTeamResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppTeamManager, RESTDeleteApiAppTeamResult, RESTGetApiAppTeamResult, RESTPostApiAppTeamResult, RESTPutApiAppTeamResult, Routes } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import ModPermissionsBF, { ModPermissionsResolvable } from "../util/ModPermissionsBF";
@@ -13,32 +13,34 @@ export default class AppTeamManager extends BaseManager {
     this.app = app;
   }
 
-  async create(modID: string, perms: ModPermissionsResolvable): Promise<unknown> {
-    const data = await this.discloudApp.rest.post(Routes.appTeam(this.app.id), {
+  async create(modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+    const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(this.app.id), {
       body: {
         modID,
         perms: new ModPermissionsBF(perms).toArray()
       }
     });
 
-    return data;
+    return data.app;
   }
 
-  async edit(modID: string, perms: ModPermissionsResolvable): Promise<unknown> {
-    const data = await this.discloudApp.rest.put(Routes.appTeam(this.app.id), {
+  async edit(modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(this.app.id), {
       body: {
         modID,
         perms: new ModPermissionsBF(perms).toArray()
       }
     });
 
-    return data;
+    return data.app;
   }
 
   async delete(modID: string): Promise<unknown> {
-    const data = await this.discloudApp.rest.delete(Routes.appTeam(this.app.id, modID));
+    const data = await this.discloudApp.rest.delete<
+      RESTDeleteApiAppTeamResult
+    >(Routes.appTeam(this.app.id, modID));
 
-    return data;
+    return data.status === "ok";
   }
 
   async fetch() {

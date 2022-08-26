@@ -1,4 +1,4 @@
-import { ApiAppManager, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { readFileSync } from "fs";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
@@ -10,28 +10,48 @@ export default class TeamManager extends BaseManager {
     super(discloudApp);
   }
 
-  async status(appID: string): Promise<unknown>
-  async status(appID?: "all"): Promise<unknown>
+  async status(appID: string): Promise<ApiAppStatus>
+  async status(appID?: "all"): Promise<ApiAppStatus[]>
   async status(appID = "all") {
-    const data = await this.discloudApp.rest.get(Routes.teamStatus(appID));
+    const data = await this.discloudApp.rest.get<
+      | RESTGetApiAppStatusResult
+      | RESTGetApiAppAllStatusResult
+    >(Routes.teamStatus(appID));
 
-    return data;
+    return data.apps;
   }
 
-  async terminal(appID: string): Promise<unknown>
-  async terminal(appID?: "all"): Promise<unknown>
+  async terminal(appID: string): Promise<ApiTerminal>
+  async terminal(appID?: "all"): Promise<Map<string, ApiTerminal>>
   async terminal(appID = "all") {
-    const data = await this.discloudApp.rest.get(Routes.appLogs(appID));
+    const data = await this.discloudApp.rest.get<
+      | RESTGetApiAppLogResult
+      | RESTGetApiAppAllLogResult
+    >(Routes.appLogs(appID));
+    const logs = new Map<string, ApiTerminal>();
 
-    return data;
+    if (Array.isArray(data.apps)) {
+      for (let i = 0; i < data.apps.length; i++) {
+        const app = data.apps[i];
+
+        logs.set(app.id, app.terminal);
+      }
+    } else {
+      return data.apps.terminal;
+    }
+
+    return logs;
   }
 
-  async backup(appID: string): Promise<unknown>
-  async backup(appID?: "all"): Promise<unknown>
+  async backup(appID: string): Promise<ApiAppBackup>
+  async backup(appID?: "all"): Promise<ApiAppBackup[]>
   async backup(appID = "all") {
-    const data = await this.discloudApp.rest.get(Routes.teamBackup(appID));
+    const data = await this.discloudApp.rest.get<
+      | RESTGetApiAppBackupResult
+      | RESTGetApiAppAllBackupResult
+    >(Routes.teamBackup(appID));
 
-    return data;
+    return data.backups;
   }
 
   async ram(appID: string, quantity: number): Promise<boolean> {
