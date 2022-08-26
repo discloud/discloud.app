@@ -27,8 +27,11 @@ export const Routes = new class Routes {
   team = Team.team;
   teamBackup = Team.backup;
   teamCommit = Team.commit;
+  teamLogs = Team.logs;
+  teamRam = Team.ram;
   teamRestart = Team.restart;
   teamStart = Team.start;
+  teamStatus = Team.status;
   teamStop = Team.stop;
 
   /** upload */

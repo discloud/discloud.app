@@ -21,6 +21,20 @@ export const Team = new class Team {
   }
 
   /**
+   * - GET - `/team/{appID}/logs`
+   */
+  logs<appID extends string>(appID: appID): `/team/${appID}/logs` {
+    return `/team/${appID}/logs`;
+  }
+
+  /**
+   * - PUT - `/team/{appID}/ram`
+   */
+  ram<appID extends string>(appID: appID): `/team/${appID}/ram` {
+    return `/team/${appID}/ram`;
+  }
+
+  /**
    * - PUT - `/app/{appID}/restart`
    */
   restart<appID extends string>(appID: appID): `/team/${appID}/restart` {
@@ -32,6 +46,13 @@ export const Team = new class Team {
    */
   start<appID extends string>(appID: appID): `/team/${appID}/start` {
     return `/team/${appID}/start`;
+  }
+
+  /**
+   * - PUT - `/app/{appID}/status`
+   */
+  status<appID extends string>(appID: appID): `/team/${appID}/status` {
+    return `/team/${appID}/status`;
   }
 
   /**
