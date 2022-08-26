@@ -29,10 +29,9 @@ export interface ApiTerminal {
   small: string
 }
 
-export interface ApiAppCRUD {
+export interface ApiAppManager {
   alreadyInProcess: string[]
   alreadyOffline: string[]
-  restarted: string[]
 }
 
 export interface ApiAppStatus extends BaseApiApp {
@@ -82,17 +81,25 @@ export interface RESTGetApiAppStatusResult extends RESTApiBaseResult {
   apps: ApiAppStatus
 }
 
-export interface RESTApiAppCRUDResult extends RESTApiBaseResult {
-  apps: ApiAppCRUD
+export interface RESTApiAppManagerResult extends RESTApiBaseResult {
+  apps: ApiAppManager
 }
 
-export type RESTDeleteApiAppAllDeleteResult = RESTApiAppCRUDResult
+export interface RESTDeleteApiAppAllDeleteResult extends RESTApiAppManagerResult {
+  removealled: string[]
+}
 
-export type RESTPutApiAppAllRestartResult = RESTApiAppCRUDResult
+export interface RESTPutApiAppAllRestartResult extends RESTApiAppManagerResult {
+  restarted: string[]
+}
 
-export type RESTPutApiAppAllStartResult = RESTApiAppCRUDResult
+export interface RESTPutApiAppAllStartResult extends RESTApiAppManagerResult {
+  started: string[]
+}
 
-export type RESTPutApiAppAllStopResult = RESTApiAppCRUDResult
+export interface RESTPutApiAppAllStopResult extends RESTApiAppManagerResult {
+  stoped: string[]
+}
 
 export type RESTDeleteApiAppDeleteResult = RESTApiBaseResult
 
