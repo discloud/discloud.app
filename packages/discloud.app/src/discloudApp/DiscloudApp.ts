@@ -1,4 +1,4 @@
-import { ApiUser, Routes } from "@discloudapp/api-types/v2";
+import { ApiUser } from "@discloudapp/api-types/v2";
 import { REST } from "@discloudapp/rest";
 import { env } from "node:process";
 import { DiscloudAppOptions } from "../@types";
@@ -46,7 +46,7 @@ export default class DiscloudApp {
 
     if (!this.#token) env.DISCLOUD_TOKEN = this.#token = token;
 
-    this.user = new User(this, await this.rest.get(Routes.user()).then(data => data.user));
+    await this.user.fetch();
 
     return "[DISCLOUD API] Logged.";
   }
