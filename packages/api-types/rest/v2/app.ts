@@ -24,11 +24,6 @@ export interface ApiAppLog extends BaseApiApp {
   terminal: ApiTerminal
 }
 
-export interface ApiTerminal {
-  big: string
-  small: string
-}
-
 export interface ApiAppManager {
   alreadyInProcess: string[]
   alreadyOffline: string[]
@@ -44,9 +39,19 @@ export interface ApiAppStatus extends BaseApiApp {
   startedAt: string
 }
 
+export interface ApiAppTeam {
+  modID: string
+  perms: string[]
+}
+
 export interface ApiNetIO {
   down: string
   up: string
+}
+
+export interface ApiTerminal {
+  big: string
+  small: string
 }
 
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
@@ -115,4 +120,9 @@ export interface RESTPutApiAppCommitResult extends RESTApiBaseResult {
 
 export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
   statusCode: number
+}
+
+export interface RESTGetApiAppTeamResult {
+  status: string
+  team: ApiAppTeam[]
 }
