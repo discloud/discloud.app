@@ -1,4 +1,8 @@
 export interface RESTApiBaseResult {
-  status: string
+  status: RESTApiStatusResponse
   message: string
 }
+
+export type RESTApiStatusResponse =
+  | "ok"
+  | "error"
