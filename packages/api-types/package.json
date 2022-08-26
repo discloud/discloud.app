@@ -1,11 +1,11 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "scripts": {
     "build:release": "tsc",
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
-    "prepublish": "npm run build:release",
     "postpublish": "npm run clean:node",
+    "prepublish": "npm run build:release",
     "publish": "npm publish -f",
     "test:ts": "tsc --noEmit"
   },
