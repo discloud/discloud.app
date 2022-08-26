@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./dist",
   "scripts": {
     "build:release": "tsc",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/discloudapp/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.14",
+    "@discloudapp/api-types": "^0.0.15",
     "@discloudapp/rest": "^0.0.5"
   },
   "devDependencies": {
