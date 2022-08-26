@@ -12,4 +12,8 @@ export default class Team extends Base {
     this.id = data.id;
     this.perms = data.perms;
   }
+
+  toString() {
+    return this.id;
+  }
 }

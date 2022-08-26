@@ -31,6 +31,8 @@ export default class User extends Base {
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
     const data = await this.discloudApp.rest.put<RESTPutApiLocaleResult>(Routes.locale(locale));
 
+    this.locale = data.locale;
+
     return data.locale === locale;
   }
 
@@ -38,5 +40,9 @@ export default class User extends Base {
     const data = await this.discloudApp.rest.get<RESTGetApiUserResult>(Routes.user());
 
     return this.discloudApp.user = new User(this.discloudApp, data.user);
+  }
+
+  toString() {
+    return this.id;
   }
 }

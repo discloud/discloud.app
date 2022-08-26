@@ -44,4 +44,8 @@ export default class App extends Base {
 
     this.team = new AppTeamManager(this.discloudApp, this);
   }
+
+  toString() {
+    return this.id;
+  }
 }
