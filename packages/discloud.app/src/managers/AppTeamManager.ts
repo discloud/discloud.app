@@ -35,12 +35,12 @@ export default class AppTeamManager extends BaseManager {
     return data.app;
   }
 
-  async delete(modID: string): Promise<unknown> {
+  async delete(modID: string): Promise<RESTDeleteApiAppTeamResult> {
     const data = await this.discloudApp.rest.delete<
       RESTDeleteApiAppTeamResult
     >(Routes.appTeam(this.app.id, modID));
 
-    return data.status === "ok";
+    return data;
   }
 
   async fetch() {

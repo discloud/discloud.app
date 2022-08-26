@@ -1,4 +1,4 @@
-import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { readFileSync } from "fs";
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
@@ -55,13 +55,13 @@ export default class AppManager extends BaseManager {
   }
 
   async ram(appID: string, quantity: number) {
-    const data = await this.discloudApp.rest.put(Routes.appRam(appID), {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
         ramMB: quantity
       }
     });
 
-    return data.status === "ok";
+    return data;
   }
 
   async create(options: CreateAppOptions) {
@@ -100,7 +100,7 @@ export default class AppManager extends BaseManager {
     return data;
   }
 
-  async delete(appID: string): Promise<boolean>
+  async delete(appID: string): Promise<RESTDeleteApiAppDeleteResult>
   async delete(appID?: "all"): Promise<ApiAppManager>
   async delete(appID = "all") {
     const data = await this.discloudApp.rest.delete<
@@ -110,10 +110,10 @@ export default class AppManager extends BaseManager {
 
     if ("apps" in data) return data.apps;
 
-    return data.status === "ok";
+    return data;
   }
 
-  async restart(appID: string): Promise<boolean>
+  async restart(appID: string): Promise<RESTPutApiAppRestartResult>
   async restart(appID?: "all"): Promise<ApiAppManager>
   async restart(appID = "all") {
     const data = await this.discloudApp.rest.put<
@@ -123,10 +123,10 @@ export default class AppManager extends BaseManager {
 
     if ("apps" in data) return data.apps;
 
-    return data.status === "ok";
+    return data;
   }
 
-  async start(appID: string): Promise<boolean>
+  async start(appID: string): Promise<RESTPutApiAppStartResult>
   async start(appID?: "all"): Promise<ApiAppManager>
   async start(appID = "all") {
     const data = await this.discloudApp.rest.put<
@@ -136,10 +136,10 @@ export default class AppManager extends BaseManager {
 
     if ("apps" in data) return data.apps;
 
-    return data.status === "ok";
+    return data;
   }
 
-  async stop(appID: string): Promise<boolean>
+  async stop(appID: string): Promise<RESTPutApiAppStopResult>
   async stop(appID?: "all"): Promise<ApiAppManager>
   async stop(appID = "all") {
     const data = await this.discloudApp.rest.put<
@@ -149,7 +149,7 @@ export default class AppManager extends BaseManager {
 
     if ("apps" in data) return data.apps;
 
-    return data.status === "ok";
+    return data;
   }
 
   async fetch(appID: string): Promise<App>
