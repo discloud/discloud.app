@@ -1,3 +1,10 @@
+import { env } from "node:process";
+import { DiscloudAppOptions } from "../@types";
+
+export const DefaultDiscloudAppOptions: DiscloudAppOptions = {
+  token: env.DISCLOUD_TOKEN
+};
+
 export const ModPermissions = {
   start_app: 1,
   stop_app: 2,

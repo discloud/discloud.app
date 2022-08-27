@@ -5,6 +5,7 @@ import { DiscloudAppOptions } from "../@types";
 import AppManager from "../managers/AppManager";
 import TeamManager from "../managers/TeamManager";
 import User from "../structures/User";
+import { DefaultDiscloudAppOptions } from "../util/constants";
 
 export default class DiscloudApp {
   #token?: string;
@@ -15,17 +16,11 @@ export default class DiscloudApp {
   user: User;
 
   constructor(options: DiscloudAppOptions = {}) {
-    this.options = options;
+    this.options = { ...DefaultDiscloudAppOptions, ...options };
     this.rest = new REST();
 
-    if ("DISCLOUD_TOKEN" in env) {
-      this.#token = env.DISCLOUD_TOKEN;
-    } else {
-      env.DISCLOUD_TOKEN = this.#token = options.token;
-    }
-
-    if (this.#token)
-      this.#setToken(this.#token);
+    if (this.options.token)
+      this.#setToken(this.options.token);
 
     this.apps = new AppManager(this);
     this.team = new TeamManager(this);
@@ -33,7 +28,7 @@ export default class DiscloudApp {
   }
 
   #setToken(token: string) {
-    this.rest.setToken(token);
+    this.rest.setToken(env.DISCLOUD_TOKEN = this.#token = token);
     return this;
   }
 
@@ -41,10 +36,10 @@ export default class DiscloudApp {
     return this.#token;
   }
 
-  async login(token = this.#token) {
-    if (!token || typeof token !== "string") throw new Error("[DISCLOUD API] Missing token.");
+  async login(token = this.token || env.DISCLOUD_TOKEN) {
+    if (typeof token !== "string") throw new Error("[DISCLOUD API] Missing token.");
 
-    if (!this.#token) env.DISCLOUD_TOKEN = this.#token = token;
+    this.#setToken(token);
 
     await this.user.fetch();
 
