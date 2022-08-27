@@ -30,13 +30,15 @@ export class RequestManager {
 
     const url = `${this.options.api}/v${this.options.version}${request.fullRoute}${query}`;
 
-    const additionalHeaders: Record<string, string> = {};
+    const additionalHeaders: Record<string, number | string> = {};
     const formData = new FormData();
 
     if (request.file) {
       const file = new Blob([request.file.data]);
 
       formData.append(request.file.key ?? "file", file, request.file.name);
+
+      additionalHeaders.headersTimeout = 300;
     } else if (request.body) {
       additionalHeaders["Content-Type"] = "application/json";
     }
@@ -61,13 +63,7 @@ export class RequestManager {
   }
 
   async request(url: string, options: RequestOptions) {
-    let res!: Dispatcher.ResponseData;
-
-    try {
-      res = await request(url, { ...options });
-    } catch (error) {
-      console.error(error);
-    }
+    const res = await request(url, { ...options });
 
     if (res.statusCode > 399 && res.statusCode < 500)
       await res.body.json().then(body => {
