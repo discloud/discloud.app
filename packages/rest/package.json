@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./dist",
   "scripts": {
@@ -8,15 +8,19 @@
     "publish": "npm run build:release && npm publish -f",
     "test:ts": "tsc --noEmit"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gorniaky/discloud.app.git"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^4.7.4"
-  },
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.14",
+    "@discloudapp/api-types": "^0.0.19",
     "undici": "^5.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2"
   },
   "publishConfig": {
     "access": "public"

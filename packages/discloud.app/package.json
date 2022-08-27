@@ -10,26 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/discloudapp/discloud.app.git"
+    "url": "git+https://github.com/Gorniaky/discloud.app.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/discloudapp/discloud.app/issues"
+    "url": "https://github.com/Gorniaky/discloud.app/issues"
   },
-  "homepage": "https://github.com/discloudapp/discloud.app#readme",
+  "homepage": "https://github.com/Gorniaky/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.18",
-    "@discloudapp/rest": "^0.0.5",
+    "@discloudapp/api-types": "^0.0.19",
+    "@discloudapp/rest": "^0.0.6",
     "undici": "^5.10.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
-    "dotenv": "^16.0.1",
-    "eslint": "^8.22.0",
+    "eslint": "^8.23.0",
     "typescript": "^4.8.2"
   }
 }

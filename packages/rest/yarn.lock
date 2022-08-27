@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@discloudapp/api-types@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.14.tgz#3d6d456c093f8a4a8f435fcc5f3d36a25466e592"
-  integrity sha512-3FljcFEhnrJEqnyBzmnD2jt02XosXV67D8aXr1LKEwZRf61FegNCpD8Kmn5x6KJ8YINbX3O39sn9lhLmltZOJg==
+"@discloudapp/api-types@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.19.tgz#75ec5d4fedb6b82a91f614029684c809466aabf9"
+  integrity sha512-QMBol24/bI5oVhxKax0rtArmfusuMQCRnQDR9Kyo0IZnCClxX3IaG+720dT6U01qQZkgTMloUkex+QfdE3hpLQ==
 
-typescript@^4.7.4:
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
-  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
+typescript@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.2.tgz#e3b33d5ccfb5914e4eeab6699cf208adee3fd790"
+  integrity sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==
 
 undici@^5.10.0:
   version "5.10.0"
