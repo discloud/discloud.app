@@ -11,10 +11,17 @@ export interface ApiUser {
   plan: string
   ramUsedMb: number
   subdomains: string[]
+  appsStatus: Record<string, ApiUserAppStatus>
   totalRamMb: number
   userID: string
   lastDataLeft?: LastDataLeft,
   planDataEnd?: string
+}
+
+export interface ApiUserAppStatus {
+  online: boolean
+  ramKilled: boolean
+  exitCode: number
 }
 
 export interface LastDataLeft {

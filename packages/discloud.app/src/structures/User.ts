@@ -5,6 +5,7 @@ import Base from "./Base";
 
 export default class User extends Base {
   appIDs;
+  appsStatus;
   customdomains;
   id;
   locale;
@@ -24,6 +25,7 @@ export default class User extends Base {
     this.plan = data.plan;
     this.planDataEnd = data.planDataEnd;
     this.ramUsedMb = data.ramUsedMb;
+    this.appsStatus = data.appsStatus;
     this.subdomains = data.subdomains;
     this.totalRamMb = data.totalRamMb;
   }
