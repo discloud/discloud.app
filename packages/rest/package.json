@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "./dist",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.19",
+    "@discloudapp/api-types": "^0.0.20",
     "undici": "^5.10.0"
   },
   "devDependencies": {
