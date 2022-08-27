@@ -1,8 +1,8 @@
 import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
-import { readFileSync } from "fs";
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
+import { resolveFile } from "../util";
 import BaseManager from "./BaseManager";
 
 export default class AppManager extends BaseManager {
@@ -66,11 +66,7 @@ export default class AppManager extends BaseManager {
 
   async create(options: CreateAppOptions) {
     if (typeof options.file === "string")
-      options.file = {
-        data: readFileSync(options.file),
-        name: options.file.split("/").pop()!,
-        key: "file"
-      };
+      options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.post<RESTPostApiUploadResult>(Routes.upload(), {
       file: options.file
@@ -87,11 +83,7 @@ export default class AppManager extends BaseManager {
 
   async update(appID: string, options: UpdateAppOptions) {
     if (typeof options.file === "string")
-      options.file = {
-        data: readFileSync(options.file),
-        name: options.file.split("/").pop()!,
-        key: "file"
-      };
+      options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.appCommit(appID), {
       file: options.file

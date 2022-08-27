@@ -10,6 +10,7 @@ import ModPermissionsBF from "./util/ModPermissionsBF";
 export * from "@discloudapp/api-types/v2";
 export * from "@discloudapp/rest";
 export * from "./@types";
+export * from "./util";
 export {
   App,
   AppManager,

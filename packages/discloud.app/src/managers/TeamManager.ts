@@ -1,8 +1,8 @@
 import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
-import { readFileSync } from "fs";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Team from "../structures/Team";
+import { resolveFile } from "../util";
 import BaseManager from "./BaseManager";
 
 export default class TeamManager extends BaseManager {
@@ -66,11 +66,7 @@ export default class TeamManager extends BaseManager {
 
   async update(appID: string, options: UpdateAppOptions) {
     if (typeof options.file === "string")
-      options.file = {
-        data: readFileSync(options.file),
-        name: options.file.split("/").pop()!,
-        key: "file"
-      };
+      options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put(Routes.teamCommit(appID), {
       file: options.file
