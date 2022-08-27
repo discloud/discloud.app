@@ -81,3 +81,18 @@ discloud.apps.update("APP_ID", {
   }
 });
 ```
+
+> For you to send a `stream`, import the `streamToBlob` function to convert:
+
+```js
+const { discloud, streamToBlob } = require("discloud.app");
+
+const blob = await streamToBlob(stream);
+
+discloud.apps.create({
+  file: {
+    data: blob, // Blob | Buffer
+    name: "FILE_NAME.zip"
+  }
+});
+```
