@@ -1,6 +1,7 @@
-import { ApiUser, ApiUserAppStatus, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiUser, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
 import { LocaleString } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
+import { arrayToMap } from "../util";
 import Base from "./Base";
 
 export default class User extends Base {
@@ -33,7 +34,7 @@ export default class User extends Base {
     this.ramUsedMb = data.ramUsedMb;
 
     if (data.appsStatus)
-      this.appsStatus = new Map<string, ApiUserAppStatus>(Object.entries(data.appsStatus));
+      this.appsStatus = arrayToMap(data.appsStatus, "id");
 
     this.subdomains = data.subdomains;
     this.totalRamMb = data.totalRamMb;
