@@ -23,7 +23,7 @@ export default class App extends Base {
 
   constructor(
     discloudApp: DiscloudApp,
-    data: (ApiApp | ApiUploadApp) & Partial<ApiApp & ApiUploadApp>
+    data: (ApiApp | ApiUploadApp) & Partial<ApiApp & ApiUploadApp>,
   ) {
     super(discloudApp);
 

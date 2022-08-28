@@ -23,7 +23,7 @@ export class RequestManager {
 
   resolveRequest(request: InternalRequest) {
     const headers: RequestHeaders = {
-      "api-token": this.#token
+      "api-token": this.#token,
     };
 
     const query = request.query?.toString() ? `?${request.query}` : "";

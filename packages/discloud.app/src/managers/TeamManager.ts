@@ -57,8 +57,8 @@ export default class TeamManager extends BaseManager {
   async ram(appID: string, quantity: number) {
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
-        ramMB: quantity
-      }
+        ramMB: quantity,
+      },
     });
 
     return data;
@@ -69,7 +69,7 @@ export default class TeamManager extends BaseManager {
       options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put(Routes.teamCommit(appID), {
-      file: options.file
+      file: options.file,
     });
 
     return data;

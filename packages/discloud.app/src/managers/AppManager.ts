@@ -57,8 +57,8 @@ export default class AppManager extends BaseManager {
   async ram(appID: string, quantity: number) {
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
-        ramMB: quantity
-      }
+        ramMB: quantity,
+      },
     });
 
     return data;
@@ -69,7 +69,7 @@ export default class AppManager extends BaseManager {
       options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.post<RESTPostApiUploadResult>(Routes.upload(), {
-      file: options.file
+      file: options.file,
     });
 
     if ("app" in data) {
@@ -86,7 +86,7 @@ export default class AppManager extends BaseManager {
       options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.appCommit(appID), {
-      file: options.file
+      file: options.file,
     });
 
     return data;

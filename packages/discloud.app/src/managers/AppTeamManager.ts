@@ -17,8 +17,8 @@ export default class AppTeamManager extends BaseManager {
     const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(this.app.id), {
       body: {
         modID,
-        perms: new ModPermissionsBF(perms).toArray()
-      }
+        perms: new ModPermissionsBF(perms).toArray(),
+      },
     });
 
     return data.app;
@@ -28,8 +28,8 @@ export default class AppTeamManager extends BaseManager {
     const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(this.app.id), {
       body: {
         modID,
-        perms: new ModPermissionsBF(perms).toArray()
-      }
+        perms: new ModPermissionsBF(perms).toArray(),
+      },
     });
 
     return data.app;
