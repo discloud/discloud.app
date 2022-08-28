@@ -92,19 +92,27 @@ export interface RESTApiAppManagerResult extends RESTApiBaseResult {
 }
 
 export interface RESTDeleteApiAppAllDeleteResult extends RESTApiAppManagerResult {
-  removealled: string[]
+  apps: ApiAppManager & {
+    removealled: string[]
+  }
 }
 
 export interface RESTPutApiAppAllRestartResult extends RESTApiAppManagerResult {
-  restarted: string[]
+  apps: ApiAppManager & {
+    restarted: string[]
+  }
 }
 
 export interface RESTPutApiAppAllStartResult extends RESTApiAppManagerResult {
-  started: string[]
+  apps: ApiAppManager & {
+    started: string[]
+  }
 }
 
 export interface RESTPutApiAppAllStopResult extends RESTApiAppManagerResult {
-  stoped: string[]
+  apps: ApiAppManager & {
+    stoped: string[]
+  }
 }
 
 export type RESTDeleteApiAppDeleteResult = RESTApiBaseResult
