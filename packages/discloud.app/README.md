@@ -34,7 +34,7 @@ async function () {
 
 ## How to `upload`/`commit` your app
 
-Before continuing, make sure your [`rar/zip`](https://docs.discloudbot.com/v/en/suport/faq/zip) contains the [`discloud.config`](https://docs.discloudbot.com/v/en/suport/faq/discloud.config) file.
+Before continuing, make sure your [`zip`](https://docs.discloudbot.com/v/en/suport/faq/zip) contains the [`discloud.config`](https://docs.discloudbot.com/v/en/suport/faq/discloud.config) file.
 
 > Upload with simply the file `path/url`:
 
@@ -42,7 +42,7 @@ Before continuing, make sure your [`rar/zip`](https://docs.discloudbot.com/v/en/
 const { discloud } = require("discloud.app");
 
 discloud.apps.create({
-  file: "FILE_PATH/FILE_NAME.zip" // rar | zip
+  file: "FILE_PATH/FILE_NAME.zip"
 });
 ```
 
@@ -65,7 +65,7 @@ discloud.apps.create({
 const { discloud } = require("discloud.app");
 
 discloud.apps.update("APP_ID", {
-  file: "FILE_PATH/FILE_NAME.zip" // rar | zip
+  file: "FILE_PATH/FILE_NAME.zip"
 });
 ```
 
