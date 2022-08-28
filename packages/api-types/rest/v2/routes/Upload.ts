@@ -1,7 +1,7 @@
 export const Upload = new class Upload {
   /**
- * - POST - `/upload`
- */
+   * - POST - `/upload`
+   */
   upload(): "/upload" {
     return "/upload";
   }

@@ -1,7 +1,7 @@
 export const User = new class User {
   /**
- * - GET - `/user`
- */
+   * - GET - `/user`
+   */
   user(): "/user" {
     return "/user";
   }
