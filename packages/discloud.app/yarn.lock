@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.20.tgz#fc366ae4fc30192cfd6a166197c97ae6a553ada2"
   integrity sha512-9RL7sORmHlSHQPj5tT2OR8rcLDMMqVZ8iMtjrirYySBnF8Lhig5Y08dUA7w0DY8NRJLAtwV5J01yiPIpBbPqjw==
 
+"@discloudapp/api-types@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.0.22.tgz#4c2ef8e88d520c53000be376c2c7f80e40be875c"
+  integrity sha512-pXKz5mJfTO+zY1GXrqXVw04aIho2WrniRy0Wg5AfHf721XeGGpDPEr1WqlQ4sqDp/lr+L6c10B0r1kQjkdO9pw==
+
 "@discloudapp/rest@^0.0.7":
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/@discloudapp/rest/-/rest-0.0.7.tgz#c55fac7acaed45d7109bc8602c5d35db335fbeb7"
