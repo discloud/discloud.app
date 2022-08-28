@@ -1,6 +1,6 @@
 {
-  "exclude": ["node_modules", "**/.ignore_*"],
-  "include": ["packages", "**.d.ts"],
+  "exclude": ["node_modules", "**/.ignore_*", "**/dist/"],
+  "include": ["packages", "**.ts", "test/test.ts"],
   "compilerOptions": {
     // "incremental": true,
     // "composite": true,
@@ -33,7 +33,7 @@
     "resolveJsonModule": true,
     // "noResolve": true,
     "allowJs": true,
-    "checkJs": true,
+    // "checkJs": true,
     // "maxNodeModuleJsDepth": 1,
     "declaration": true,
     // "declarationMap": true,
