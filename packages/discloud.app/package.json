@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Gorniaky/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.22",
+    "@discloudapp/api-types": "^0.0.23",
     "@discloudapp/rest": "^0.0.7",
     "undici": "^5.10.0"
   },

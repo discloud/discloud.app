@@ -1,4 +1,4 @@
-import { ApiApp, ApiAppUpload } from "@discloudapp/api-types/v2";
+import { ApiApp, ApiUploadApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppTeamManager from "../managers/AppTeamManager";
 import Base from "./Base";
@@ -23,7 +23,7 @@ export default class App extends Base {
 
   constructor(
     discloudApp: DiscloudApp,
-    data: (ApiApp | ApiAppUpload) & Partial<ApiApp & ApiAppUpload>
+    data: (ApiApp | ApiUploadApp) & Partial<ApiApp & ApiUploadApp>
   ) {
     super(discloudApp);
 

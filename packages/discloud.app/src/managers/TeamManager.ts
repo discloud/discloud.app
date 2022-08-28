@@ -76,7 +76,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
-  async restart(appID?: "all"): Promise<ApiAppManager>
+  async restart(appID?: "all"): Promise<ApiAppManager & { restarted: string[] }>
   async restart(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppRestartResult
@@ -89,7 +89,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async start(appID: string): Promise<RESTPutApiAppStartResult>
-  async start(appID?: "all"): Promise<ApiAppManager>
+  async start(appID?: "all"): Promise<ApiAppManager & { started: string[] }>
   async start(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStartResult
@@ -102,7 +102,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
-  async stop(appID?: "all"): Promise<ApiAppManager>
+  async stop(appID?: "all"): Promise<ApiAppManager & { stoped: string[] }>
   async stop(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStopResult

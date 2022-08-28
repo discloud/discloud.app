@@ -93,7 +93,7 @@ export default class AppManager extends BaseManager {
   }
 
   async delete(appID: string): Promise<RESTDeleteApiAppDeleteResult>
-  async delete(appID?: "all"): Promise<ApiAppManager>
+  async delete(appID?: "all"): Promise<ApiAppManager & { removealled: string[] }>
   async delete(appID = "all") {
     const data = await this.discloudApp.rest.delete<
       | RESTDeleteApiAppDeleteResult
@@ -106,7 +106,7 @@ export default class AppManager extends BaseManager {
   }
 
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
-  async restart(appID?: "all"): Promise<ApiAppManager>
+  async restart(appID?: "all"): Promise<ApiAppManager & { restarted: string[] }>
   async restart(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppRestartResult
@@ -119,7 +119,7 @@ export default class AppManager extends BaseManager {
   }
 
   async start(appID: string): Promise<RESTPutApiAppStartResult>
-  async start(appID?: "all"): Promise<ApiAppManager>
+  async start(appID?: "all"): Promise<ApiAppManager & { started: string[] }>
   async start(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStartResult
@@ -132,7 +132,7 @@ export default class AppManager extends BaseManager {
   }
 
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
-  async stop(appID?: "all"): Promise<ApiAppManager>
+  async stop(appID?: "all"): Promise<ApiAppManager & { stoped: string[] }>
   async stop(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStopResult
