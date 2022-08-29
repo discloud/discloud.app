@@ -19,6 +19,6 @@ export {
   DiscloudApp,
   ModPermissionsBF,
   Team,
-  User
+  User,
 };
 export const discloud = new DiscloudApp();

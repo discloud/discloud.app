@@ -2,7 +2,7 @@ import { env } from "node:process";
 import { DiscloudAppOptions } from "../@types";
 
 export const DefaultDiscloudAppOptions: DiscloudAppOptions = {
-  token: env.DISCLOUD_TOKEN
+  token: env.DISCLOUD_TOKEN,
 };
 
 export const ModPermissions = {
@@ -13,5 +13,5 @@ export const ModPermissions = {
   commit_app: 16,
   edit_ram: 32,
   backup_app: 64,
-  status_app: 128
+  status_app: 128,
 };
