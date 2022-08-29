@@ -132,7 +132,7 @@ export type RESTPutApiAppStartResult = RESTApiBaseResult
 export type RESTPutApiAppStopResult = RESTApiBaseResult
 
 export interface RESTPutApiAppCommitResult extends RESTApiBaseResult {
-  statusCode: string
+  statusCode: number
   logs?: string
 }
 

@@ -1,7 +1,7 @@
 import { RESTApiBaseResult } from "./base";
 
 export interface RESTPostApiUploadResult extends RESTApiBaseResult {
-  statusCode: string
+  statusCode: number
   app: ApiUploadApp
   logs?: string
 }
