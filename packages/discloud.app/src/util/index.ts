@@ -13,7 +13,7 @@ export function arrayToMap<T extends Record<any, any>, H = unknown>(
 export function arrayToMap<T extends Record<any, any>, H = unknown>(
   array: T[],
   index: string,
-  holds?: { new(...args: any[]): H }
+  holds?: { new(...args: any[]): H },
 ) {
   const map = new Map<string, unknown>();
 
@@ -32,13 +32,13 @@ export async function resolveFile(file: string): Promise<RawFile> {
       return {
         name: file.split("/").pop()!,
         data: await request(file).then(res => res.body) as Buffer,
-        key: "file"
+        key: "file",
       };
 
     return {
       name: file.split("/").pop()!,
       data: readFileSync(file),
-      key: "file"
+      key: "file",
     };
   }
 
@@ -53,4 +53,8 @@ export function streamToBlob(stream: Stream, mimeType?: string) {
       .once("end", () => resolve(new Blob(chunks, { type: mimeType })))
       .once("error", reject);
   });
+}
+
+export function calculatePercentage(value: string | number, major: string | number) {
+  return Number(((Number(value) / Number(major)) * 100).toFixed(2));
 }
