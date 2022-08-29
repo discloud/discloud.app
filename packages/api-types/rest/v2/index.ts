@@ -7,3 +7,7 @@ export * from "./upload";
 export * from "./user";
 
 export const APIVersion = "2";
+
+export const RouteBases = {
+  api: `https://api.discloud.app/v${APIVersion}`,
+} as const;

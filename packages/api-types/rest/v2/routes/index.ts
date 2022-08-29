@@ -4,8 +4,6 @@ import { Team } from "./Team";
 import { Upload } from "./Upload";
 import { User } from "./User";
 
-export * from "./RouteBases";
-
 export const Routes = new class Routes {
   /** app */
   app = App.app;
