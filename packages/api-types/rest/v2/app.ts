@@ -29,6 +29,22 @@ export interface ApiAppManager {
   alreadyOffline: string[]
 }
 
+export interface ApiAppManagerRemovedAll extends ApiAppManager {
+  removealled: string[]
+}
+
+export interface ApiAppManagerRestartedAll extends ApiAppManager {
+  restarted: string[]
+}
+
+export interface ApiAppManagerStartedAll extends ApiAppManager {
+  started: string[]
+}
+
+export interface ApiAppManagerStopedAll extends ApiAppManager {
+  stoped: string[]
+}
+
 export interface ApiAppStatus extends BaseApiApp {
   container: string
   cpu: string
@@ -92,27 +108,19 @@ export interface RESTApiAppManagerResult extends RESTApiBaseResult {
 }
 
 export interface RESTDeleteApiAppAllDeleteResult extends RESTApiAppManagerResult {
-  apps: ApiAppManager & {
-    removealled: string[]
-  }
+  apps: ApiAppManagerRemovedAll
 }
 
 export interface RESTPutApiAppAllRestartResult extends RESTApiAppManagerResult {
-  apps: ApiAppManager & {
-    restarted: string[]
-  }
+  apps: ApiAppManagerRestartedAll
 }
 
 export interface RESTPutApiAppAllStartResult extends RESTApiAppManagerResult {
-  apps: ApiAppManager & {
-    started: string[]
-  }
+  apps: ApiAppManagerStartedAll
 }
 
 export interface RESTPutApiAppAllStopResult extends RESTApiAppManagerResult {
-  apps: ApiAppManager & {
-    stoped: string[]
-  }
+  apps: ApiAppManagerStopedAll
 }
 
 export type RESTDeleteApiAppDeleteResult = RESTApiBaseResult
