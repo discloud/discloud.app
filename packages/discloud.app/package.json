@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "main": "./dist",
   "scripts": {
     "build:release": "tsc",
@@ -12,8 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/Gorniaky/discloud.app.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "discloud"
+  ],
+  "author": "Gorniaky <hwss.s2@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gorniaky/discloud.app/issues"
