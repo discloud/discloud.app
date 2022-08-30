@@ -16,8 +16,11 @@ export interface ApiApp extends BaseApiApp {
 }
 
 export interface ApiAppBackup extends BaseApiApp {
-  status: string
   url: string
+}
+
+export interface ApiAppBackupAll extends ApiAppBackup {
+  status: string
 }
 
 export interface ApiAppLog extends BaseApiApp {
@@ -77,7 +80,7 @@ export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
 }
 
 export interface RESTGetApiAppAllBackupResult extends RESTApiBaseResult {
-  backups: ApiAppBackup[]
+  backups: ApiAppBackupAll[]
 }
 
 export interface RESTGetApiAppAllLogResult extends RESTApiBaseResult {
@@ -93,7 +96,7 @@ export interface RESTGetApiAppResult extends RESTApiBaseResult {
 }
 
 export interface RESTGetApiAppBackupResult extends RESTApiBaseResult {
-  backups: Omit<ApiAppBackup, "status">
+  backups: ApiAppBackup
 }
 
 export interface RESTGetApiAppLogResult extends RESTApiBaseResult {
