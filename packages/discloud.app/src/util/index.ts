@@ -31,7 +31,7 @@ export async function resolveFile(file: string): Promise<RawFile> {
     if (/^https?:\/\//.test(file))
       return {
         name: file.split("/").pop()!,
-        data: await request(file).then(res => res.body) as Buffer,
+        data: await request(file, { throwOnError: true }).then(res => res.body) as Buffer,
         key: "file",
       };
 
