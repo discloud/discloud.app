@@ -27,21 +27,22 @@ export interface ApiAppLog extends BaseApiApp {
 export interface ApiAppManager {
   alreadyInProcess: string[]
   alreadyOffline: string[]
+  alreadyOnline: string[]
 }
 
-export interface ApiAppManagerRemovedAll extends ApiAppManager {
+export interface ApiAppManagerRemovedAll extends Omit<ApiAppManager, "alreadyOnline"> {
   removealled: string[]
 }
 
-export interface ApiAppManagerRestartedAll extends ApiAppManager {
+export interface ApiAppManagerRestartedAll extends Omit<ApiAppManager, "alreadyOnline"> {
   restarted: string[]
 }
 
-export interface ApiAppManagerStartedAll extends ApiAppManager {
+export interface ApiAppManagerStartedAll extends Omit<ApiAppManager, "alreadyOffline"> {
   started: string[]
 }
 
-export interface ApiAppManagerStopedAll extends ApiAppManager {
+export interface ApiAppManagerStopedAll extends Omit<ApiAppManager, "alreadyOnline"> {
   stoped: string[]
 }
 
@@ -104,7 +105,7 @@ export interface RESTGetApiAppStatusResult extends RESTApiBaseResult {
 }
 
 export interface RESTApiAppManagerResult extends RESTApiBaseResult {
-  apps: ApiAppManager
+  apps: Partial<ApiAppManager>
 }
 
 export interface RESTDeleteApiAppAllDeleteResult extends RESTApiAppManagerResult {
