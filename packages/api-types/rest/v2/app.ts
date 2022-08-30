@@ -92,7 +92,7 @@ export interface RESTGetApiAppResult extends RESTApiBaseResult {
 }
 
 export interface RESTGetApiAppBackupResult extends RESTApiBaseResult {
-  backups: ApiAppBackup
+  backups: Omit<ApiAppBackup, "status">
 }
 
 export interface RESTGetApiAppLogResult extends RESTApiBaseResult {
