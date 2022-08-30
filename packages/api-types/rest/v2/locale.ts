@@ -1,4 +1,6 @@
+import { RESTApiStatusResponse } from "./base";
+
 export interface RESTPutApiLocaleResult {
-  status: string
+  status: RESTApiStatusResponse
   locale: string
 }

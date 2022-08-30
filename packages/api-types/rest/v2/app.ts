@@ -1,4 +1,4 @@
-import { RESTApiBaseResult } from "./base";
+import { RESTApiBaseResult, RESTApiStatusResponse } from "./base";
 
 export interface BaseApiApp {
   id: string
@@ -141,7 +141,7 @@ export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
 }
 
 export interface RESTGetApiAppTeamResult {
-  status: string
+  status: RESTApiStatusResponse
   team: ApiAppTeam[]
 }
 
