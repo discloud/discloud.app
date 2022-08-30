@@ -65,7 +65,7 @@ export class RequestManager {
   async request(url: string, options: RequestOptions) {
     const res = await request(url, { ...options });
 
-    if (res.statusCode > 399 && res.statusCode < 500)
+    if (res.statusCode > 399 && res.statusCode < 600)
       await res.body.json().then(body => {
         throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
       });
