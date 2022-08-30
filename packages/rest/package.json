@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@discloudapp/api-types": "^0.0.20",
+    "@discloudapp/api-types": "^0.0.25",
     "undici": "^5.10.0"
   },
   "devDependencies": {
