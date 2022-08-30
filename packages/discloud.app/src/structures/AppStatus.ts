@@ -9,6 +9,10 @@ export default class AppStatus extends Base {
   id;
   last_restart;
   memory;
+
+  /**
+   * @description Percentage of memory usage
+   */
   memoryUsage;
   netIO;
   ssd;
@@ -22,6 +26,7 @@ export default class AppStatus extends Base {
     this.cpu = data.cpu;
     this.id = data.id;
     this.last_restart = data.last_restart;
+
     if (data.memory) {
       this.memory = data.memory;
       const matched = data.memory.match(/[\d.]+/g) ?? [];
