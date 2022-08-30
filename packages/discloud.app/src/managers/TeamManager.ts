@@ -1,4 +1,4 @@
-import { ApiAppBackup, ApiAppManager, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppBackup, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppStatus from "../structures/AppStatus";
@@ -101,7 +101,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
-  async restart(appID?: "all"): Promise<ApiAppManager & { restarted: string[] }>
+  async restart(appID?: "all"): Promise<ApiAppManagerRestartedAll>
   async restart(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppRestartResult
@@ -114,7 +114,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async start(appID: string): Promise<RESTPutApiAppStartResult>
-  async start(appID?: "all"): Promise<ApiAppManager & { started: string[] }>
+  async start(appID?: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStartResult
@@ -127,7 +127,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
-  async stop(appID?: "all"): Promise<ApiAppManager & { stoped: string[] }>
+  async stop(appID?: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID = "all") {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStopResult
