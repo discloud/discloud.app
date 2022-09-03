@@ -167,10 +167,10 @@ export default BitField;
  * * An Array of BitFieldResolvable
  */
 export type BitFieldResolvable<S extends string, N extends bigint | number> =
-  | `${N extends bigint ? bigint : number}`
-  | BitField<S, N>
-  | BitFieldResolvable<S, N>[]
+  | `${bigint}`
   | N
   | S
+  | BitField<S, N>
+  | BitFieldResolvable<S, N>[]
 
 type EnumLike<E, V> = Record<keyof E, V>
