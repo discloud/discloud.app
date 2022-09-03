@@ -11,7 +11,6 @@ export interface ApiUser {
   plan: string
   ramUsedMb: number
   subdomains: string[]
-  appsStatus: ApiUserAppStatus[]
   totalRamMb: number
   userID: string
   lastDataLeft?: LastDataLeft,
