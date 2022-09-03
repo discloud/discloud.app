@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "scripts": {
     "build:release": "tsc",
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
@@ -13,8 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/Gorniaky/discloud.app.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "discloud"
+  ],
+  "author": "Gorniaky <hwss.s2@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "rimraf": "^3.0.2",
