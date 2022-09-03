@@ -146,6 +146,7 @@ export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
 
 export interface RESTGetApiAppTeamResult {
   status: RESTApiStatusResponse
+  message?: string
   team: ApiAppTeam[]
 }
 
