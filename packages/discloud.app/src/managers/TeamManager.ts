@@ -1,4 +1,4 @@
-import { ApiAppBackup, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppBackup, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppStatus from "../structures/AppStatus";
@@ -93,7 +93,9 @@ export default class TeamManager extends BaseManager {
     if (typeof options.file === "string")
       options.file = await resolveFile(options.file);
 
-    const data = await this.discloudApp.rest.put(Routes.teamCommit(appID), {
+    const data = await this.discloudApp.rest.put<
+      | RESTPutApiAppCommitResult
+    >(Routes.teamCommit(appID), {
       file: options.file,
     });
 
