@@ -5,6 +5,7 @@ export interface BaseApiApp {
 }
 
 export interface ApiApp extends BaseApiApp {
+  name: string
   online: boolean
   ramKilled: boolean
   ram: number
