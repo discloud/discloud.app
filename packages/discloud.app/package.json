@@ -32,5 +32,8 @@
     "@typescript-eslint/parser": "^5.36.1",
     "eslint": "^8.23.0",
     "typescript": "^4.8.2"
+  },
+  "engines": {
+    "node": ">=16.17"
   }
 }

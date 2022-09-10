@@ -22,6 +22,9 @@
   "devDependencies": {
     "typescript": "^4.8.2"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "publishConfig": {
     "access": "public"
   }
