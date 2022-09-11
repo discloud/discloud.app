@@ -2,6 +2,7 @@
 **/.ignore.*
 /test*.js
 /test*.ts
+*.zip
 
 # Logs
 logs
