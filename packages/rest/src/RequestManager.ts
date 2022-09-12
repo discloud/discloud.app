@@ -30,7 +30,8 @@ export class RequestManager {
 
     const url = `${this.options.api}/v${this.options.version}${request.fullRoute}${query}`;
 
-    const additionalHeaders: Record<string, number | string> = {};
+    const additionalHeaders: Record<string, string> = {};
+    const additionalOptions: Partial<RequestOptions> = {};
     const formData = new FormData();
 
     if (request.file) {
@@ -38,7 +39,7 @@ export class RequestManager {
 
       formData.append(request.file.key ?? "file", file, request.file.name);
 
-      additionalHeaders.headersTimeout = 300;
+      additionalOptions.headersTimeout = 300000;
     } else if (request.body) {
       additionalHeaders["Content-Type"] = "application/json";
     }
@@ -46,6 +47,7 @@ export class RequestManager {
     const fetchOptions: RequestOptions = {
       headers: { ...(request.headers ?? {}), ...headers, ...additionalHeaders },
       method: request.method.toUpperCase() as Dispatcher.HttpMethod,
+      ...additionalOptions,
     };
 
     if (request.body)
