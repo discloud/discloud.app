@@ -6,5 +6,10 @@ export interface RESTGetApiTeamResult extends RESTApiBaseResult {
 
 export interface ApiTeamApps {
   id: string
+  name: string
+  online: boolean
+  ramKilled: boolean
+  exitCode: number
+  lang: string
   perms: string[]
 }

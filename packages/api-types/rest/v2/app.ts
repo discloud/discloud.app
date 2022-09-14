@@ -10,6 +10,7 @@ export interface ApiApp extends BaseApiApp {
   ramKilled: boolean
   ram: number
   mainFile: string
+  exitCode: number
   lang: string
   mods: string[]
   autoDeployGit: string
