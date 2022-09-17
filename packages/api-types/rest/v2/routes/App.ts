@@ -7,6 +7,14 @@ export const App = new class App {
   }
 
   /**
+   * - PUT - `/app/${appID}/apt`
+   * - DELETE - `/app/${appID}/apt`
+   */
+  apt<appID extends string>(appID: appID): `app/${appID}/apt` {
+    return `app/${appID}/apt`;
+  }
+
+  /**
    * - GET - `/app/${appID}/backup`
    */
   backup<appID extends string>(appID: appID): `/app/${appID}/backup` {
