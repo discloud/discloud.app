@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "build:release": "tsc",
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
