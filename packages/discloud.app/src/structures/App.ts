@@ -1,25 +1,32 @@
 import { ApiApp, ApiUploadApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
+import AppAptManager from "../managers/AppAptManager";
 import AppTeamManager from "../managers/AppTeamManager";
 import Base from "./Base";
 
 export default class App extends Base {
-  addedAtTimestamp;
-  autoDeployGit;
+  // both
   autoRestart;
-  avatarURL;
   id;
   lang;
   mainFile;
-  mods;
   name;
-  online;
   ram;
+
+  // ApiApp
+  autoDeployGit;
+  mods;
+  online;
   ramKilled;
+
+  // ApiUploadApp
+  addedAtTimestamp;
+  avatarURL;
   type;
   version;
 
   team: AppTeamManager;
+  apt: AppAptManager;
 
   constructor(
     discloudApp: DiscloudApp,
@@ -43,6 +50,7 @@ export default class App extends Base {
     this.version = data.version;
 
     this.team = new AppTeamManager(this.discloudApp, this);
+    this.apt = new AppAptManager(this.discloudApp, this);
   }
 
   toString() {

@@ -5,12 +5,8 @@ import ModPermissionsBF, { ModPermissionsResolvable } from "../util/ModPermissio
 import BaseManager from "./BaseManager";
 
 export default class AppTeamManager extends BaseManager {
-  app;
-
-  constructor(discloudApp: DiscloudApp, app: App) {
+  constructor(discloudApp: DiscloudApp, public app: App) {
     super(discloudApp);
-
-    this.app = app;
   }
 
   async create(modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
