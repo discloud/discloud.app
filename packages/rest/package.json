@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./dist",
   "scripts": {
@@ -12,11 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/Gorniaky/discloud.app.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "dependencies": {
-    "@discloudapp/api-types": "^0.1.0",
+    "@discloudapp/api-types": "^0.1.4",
     "undici": "^5.10.0"
   },
   "devDependencies": {
