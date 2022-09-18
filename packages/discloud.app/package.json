@@ -1,11 +1,11 @@
 {
   "name": "discloud.app",
-  "version": "0.0.19",
+  "version": "0.1.0",
   "main": "./dist",
   "scripts": {
     "build:release": "tsc",
     "prepublish": "npm run build:release",
-    "publish": "npm publish -f",
+    "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },
   "repository": {
@@ -16,13 +16,13 @@
     "discloud"
   ],
   "author": "Gorniaky <hwss.s2@gmail.com>",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/Gorniaky/discloud.app/issues"
   },
   "homepage": "https://github.com/Gorniaky/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.1.0",
+    "@discloudapp/api-types": "^0.1.4",
     "@discloudapp/rest": "^0.1.0",
     "undici": "^5.10.0"
   },
