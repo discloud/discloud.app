@@ -6,7 +6,7 @@
   "scripts": {
     "build:release": "tsc",
     "prepublish": "npm run build:release",
-    "release": "npm run build:release && npm publish",
+    "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },
   "repository": {
