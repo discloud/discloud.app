@@ -10,8 +10,8 @@ export const App = new class App {
    * - PUT - `/app/${appID}/apt`
    * - DELETE - `/app/${appID}/apt`
    */
-  apt<appID extends string>(appID: appID): `app/${appID}/apt` {
-    return `app/${appID}/apt`;
+  apt<appID extends string>(appID: appID): `/app/${appID}/apt` {
+    return `/app/${appID}/apt`;
   }
 
   /**
