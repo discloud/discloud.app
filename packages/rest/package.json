@@ -1,12 +1,12 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "./dist",
   "scripts": {
     "build:release": "tsc",
     "prepublish": "npm run build:release",
-    "release": "npm publish",
+    "release": "npm run build:release && npm publish",
     "test:ts": "tsc --noEmit"
   },
   "repository": {
