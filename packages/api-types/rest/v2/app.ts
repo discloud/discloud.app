@@ -141,6 +141,10 @@ export interface RESTPutApiAppAptResult extends RESTApiBaseResult {
   statusCode: number
 }
 
+export interface RESTDeleteApiAppAptResult extends RESTApiBaseResult {
+  statusCode: number
+}
+
 export interface RESTPutApiAppCommitResult extends RESTApiBaseResult {
   statusCode: number
   logs?: string
