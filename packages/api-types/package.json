@@ -1,12 +1,12 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build:release": "tsc",
     "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
     "postpublish": "npm run clean:node",
     "prepublish": "npm run build:release",
-    "publish": "npm publish && npm run post publish && exit",
+    "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },
   "repository": {
@@ -17,7 +17,7 @@
     "discloud"
   ],
   "author": "Gorniaky <hwss.s2@gmail.com>",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "devDependencies": {
     "rimraf": "^3.0.2",
     "typescript": "^4.8.3"
