@@ -7,6 +7,7 @@ import { User } from "./User";
 export const Routes = new class Routes {
   /** app */
   app = App.app;
+  appApt = App.apt;
   appBackup = App.backup;
   appCommit = App.commit;
   appDelete = App.delete;
