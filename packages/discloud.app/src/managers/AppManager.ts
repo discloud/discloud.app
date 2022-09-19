@@ -80,6 +80,10 @@ export default class AppManager extends BaseManager {
   }
 
   async ram(appID: string, quantity: number) {
+    if (!appID) throw new Error("App ID is missing.");
+
+    if (quantity < 100) throw new Error("RAM quantity must be more than 100.");
+
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
         ramMB: quantity,
@@ -97,11 +101,8 @@ export default class AppManager extends BaseManager {
       file: options.file,
     });
 
-    if ("app" in data) {
-      const app = new App(this.discloudApp, data.app);
-
-      return { ...data, app };
-    }
+    if ("app" in data)
+      return { ...data, app: new App(this.discloudApp, data.app) };
 
     return data;
   }
