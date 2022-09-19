@@ -38,7 +38,8 @@ export default class User extends Base {
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
     const data = await this.discloudApp.rest.put<RESTPutApiLocaleResult>(Routes.locale(locale));
 
-    this.locale = data.locale;
+    if ("locale" in data)
+      this.locale = data.locale;
 
     return data.locale === locale;
   }
