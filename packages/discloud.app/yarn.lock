@@ -2,22 +2,17 @@
 # yarn lockfile v1
 
 
-"@discloudapp/api-types@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.1.0.tgz#19389729d63a90d7e4870372adec59af359ed226"
-  integrity sha512-7b+qPnm5pikje0GvOx70GcgukBo7w5tjPV/pWF6S6o3rJB821H5SWxT4yG9Ia2BWNLumO6xGNacmWSH85OmDkA==
-
 "@discloudapp/api-types@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.1.4.tgz#6d64ac7e315d62db30d51142960da075812ad874"
   integrity sha512-E3dcAl97YOXnJaLLIeUSAhC6VcUpaHYeIEfCimQnkrjt6SpyNNS/zDHBDc4otg0/EH5yJGIsVEHF7dXafZKujA==
 
-"@discloudapp/rest@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@discloudapp/rest/-/rest-0.1.0.tgz#d585e6765b77742be61ef0458751432d0248bb56"
-  integrity sha512-x1tI+OI3yitucNX5wTLNDv1Wd6+36onKQkEKHM9uDfu/WrzT+ChIHWwmAfXmheQwAT+42bVSiyuergSKoC2d4A==
+"@discloudapp/rest@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@discloudapp/rest/-/rest-0.1.2.tgz#f6c24c3db8a682653d89c2a39d3679ed79f00be4"
+  integrity sha512-9KEV4gSs35HiKgUK4Ve1VPhQG4dRb6YnF1rfIXsf0P3kE9pkjFKQFaCNvtZYQ9u0s6PvnSJA38iCSGpPBrdZcg==
   dependencies:
-    "@discloudapp/api-types" "^0.1.0"
+    "@discloudapp/api-types" "^0.1.4"
     undici "^5.10.0"
 
 "@eslint/eslintrc@^1.3.2":

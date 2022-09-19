@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Gorniaky/discloud.app#readme",
   "dependencies": {
     "@discloudapp/api-types": "^0.1.4",
-    "@discloudapp/rest": "^0.1.0",
+    "@discloudapp/rest": "^0.1.2",
     "undici": "^5.10.0"
   },
   "devDependencies": {
