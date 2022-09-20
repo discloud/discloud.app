@@ -10,7 +10,17 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/packages/*" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/packages/api-types"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/discloud.app"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/rest"
     schedule:
       interval: "daily"
