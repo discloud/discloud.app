@@ -1,9 +1,11 @@
 import { ApiUser, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
 import { LocaleString } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
+import AppManager from "../managers/AppManager";
 import Base from "./Base";
 
 export default class User extends Base {
+  apps;
   appIDs;
   customdomains;
   id;
@@ -18,8 +20,8 @@ export default class User extends Base {
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
-    this.appIDs = data.apps;
-    this.customdomains = data.customdomains;
+    this.appIDs = data.apps ?? [];
+    this.customdomains = data.customdomains ?? [];
     this.id = data.userID;
     this.locale = data.locale;
     this.plan = data.plan;
@@ -31,8 +33,10 @@ export default class User extends Base {
 
     this.ramUsedMb = data.ramUsedMb;
 
-    this.subdomains = data.subdomains;
+    this.subdomains = data.subdomains ?? [];
     this.totalRamMb = data.totalRamMb;
+
+    this.apps = new AppManager(this.discloudApp);
   }
 
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
