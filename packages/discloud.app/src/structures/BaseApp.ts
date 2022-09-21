@@ -39,6 +39,7 @@ abstract class BaseApp extends Base {
   }
 
   protected _patch(data: ApiApp | ApiUploadApp) {
+    super._patch(data);
     Object.assign(this, { ...this, ...new this.constructor(this.discloudApp, data) });
     return this;
   }
