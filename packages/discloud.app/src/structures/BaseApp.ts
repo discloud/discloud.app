@@ -1,13 +1,9 @@
 import { ApiApp, ApiUploadApp } from "@discloudapp/api-types/v2";
-import { Constructor, UpdateAppOptions } from "../@types";
+import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppAptManager from "../managers/AppAptManager";
 import AppTeamManager from "../managers/AppTeamManager";
 import Base from "./Base";
-
-interface BaseApp {
-  constructor: Constructor<this>
-}
 
 abstract class BaseApp extends Base {
   // both
@@ -18,8 +14,8 @@ abstract class BaseApp extends Base {
   name;
   ram;
 
-  apt: AppAptManager<this>;
-  team: AppTeamManager<this>;
+  #apt: AppAptManager<this>;
+  #team: AppTeamManager<this>;
 
   constructor(
     discloudApp: DiscloudApp,
@@ -34,14 +30,16 @@ abstract class BaseApp extends Base {
     this.name = data.name;
     this.ram = data.ram;
 
-    this.apt = new AppAptManager(discloudApp, this);
-    this.team = new AppTeamManager(discloudApp, this);
+    this.#apt = new AppAptManager(discloudApp, this);
+    this.#team = new AppTeamManager(discloudApp, this);
   }
 
-  protected _patch(data: ApiApp | ApiUploadApp) {
-    super._patch(data);
-    Object.assign(this, { ...this, ...new this.constructor(this.discloudApp, data) });
-    return this;
+  get apt() {
+    return this.#apt;
+  }
+
+  get team() {
+    return this.#team;
   }
 
   async setRam(quantity: number) {

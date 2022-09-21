@@ -9,7 +9,7 @@ export default class Team extends Base {
   lang;
   name;
   online;
-  perms: ModPermissionsFlags[];
+  perms;
   ramKilled;
 
   constructor(discloudApp: DiscloudApp, data: ApiTeamApps) {
