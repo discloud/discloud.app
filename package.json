@@ -2,6 +2,10 @@
   "name": "discloudapp",
   "version": "0.0.0",
   "license": "Apache 2.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@types/node": "^18.7.18",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
