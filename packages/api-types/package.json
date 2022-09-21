@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "scripts": {
     "build:release": "tsc",
-    "clean:node": "rimraf ./{rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
+    "clean:node": "rimraf ./{payload,rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
     "postpublish": "npm run clean:node",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",
