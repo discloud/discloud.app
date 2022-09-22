@@ -9,7 +9,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   MAIN: string
   RAM: number
   TYPE: AppTypes
-  VERSION: Version<V>
+  VERSION: AppVersion<V>
 }
 
 interface DiscloudConfigBot<V extends AppLanguages> extends BaseDiscloudConfig<V> {
@@ -37,7 +37,7 @@ export type AppLanguages =
   | "rb"
   | "rs"
 
-type Version<T extends AppLanguages = AppLanguages> =
+export type AppVersion<T extends AppLanguages = AppLanguages> =
   T extends "go" ? VersionGo :
   T extends "java" ? VersionJava :
   T extends "js" ? VersionJs :
