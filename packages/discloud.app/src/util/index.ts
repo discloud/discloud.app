@@ -4,6 +4,8 @@ import { readFileSync } from "node:fs";
 import { Stream } from "node:stream";
 import { request } from "undici";
 
+export * from "./constants";
+
 export async function resolveFile(file: string): Promise<RawFile> {
   if (typeof file === "string") {
     if (/^https?:\/\//.test(file))

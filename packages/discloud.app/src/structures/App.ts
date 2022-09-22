@@ -1,94 +1,31 @@
-import { ApiApp, ApiUploadApp } from "@discloudapp/api-types/v2";
+import { ApiApp } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import AppAptManager from "../managers/AppAptManager";
-import AppTeamManager from "../managers/AppTeamManager";
-import Base from "./Base";
+import BaseApp from "./BaseApp";
 
-export default class App extends Base {
-  // both
-  autoRestart;
-  id;
-  lang;
-  mainFile;
-  name;
-  ram;
-
+export default class App extends BaseApp {
   // ApiApp
   autoDeployGit;
+  exitCode;
   mods;
   online;
   ramKilled;
 
-  // ApiUploadApp
-  addedAtTimestamp;
-  avatarURL;
-  type;
-  version;
-
-  team: AppTeamManager;
-  apt: AppAptManager;
-
   constructor(
     discloudApp: DiscloudApp,
-    data: (ApiApp | ApiUploadApp) & Partial<ApiApp & ApiUploadApp>,
+    data: ApiApp,
   ) {
-    super(discloudApp);
+    super(discloudApp, data);
 
-    this.addedAtTimestamp = data.addedAtTimestamp;
     this.autoDeployGit = data.autoDeployGit;
-    this.autoRestart = data.autoRestart;
-    this.avatarURL = data.avatarURL;
-    this.id = data.id;
-    this.lang = data.lang;
-    this.mainFile = data.mainFile;
+    this.exitCode = data.exitCode;
     this.mods = data.mods ?? [];
-    this.name = data.name;
     this.online = data.online ?? true;
-    this.ram = data.ram;
     this.ramKilled = data.ramKilled;
-    this.type = data.type;
-    this.version = data.version;
-
-    this.team = new AppTeamManager(this.discloudApp, this);
-    this.apt = new AppAptManager(this.discloudApp, this);
-  }
-
-  backup() {
-    return this.discloudApp.apps.backup(this.id);
-  }
-
-  async setRam(quantity: number) {
-    const data = await this.discloudApp.apps.ram(this.id, quantity);
-
-    if (data.statusCode === 200)
-      this.ram = quantity;
-
-    return data;
-  }
-
-  terminal() {
-    return this.discloudApp.apps.terminal(this.id);
-  }
-
-  delete() {
-    return this.discloudApp.apps.delete(this.id);
-  }
-
-  async update(options: UpdateAppOptions) {
-    const data = await this.discloudApp.apps.update(this.id, options);
-
-    this.online = data.statusCode === 200;
-
-    return data;
-  }
-
-  status() {
-    return this.discloudApp.apps.status(this.id);
   }
 
   async restart() {
-    const data = await this.discloudApp.apps.restart(this.id);
+    const data = await super.restart();
 
     this.online = data.status === "ok";
 
@@ -96,7 +33,7 @@ export default class App extends Base {
   }
 
   async start() {
-    const data = await this.discloudApp.apps.start(this.id);
+    const data = await super.start();
 
     this.online = data.status === "ok";
 
@@ -104,14 +41,18 @@ export default class App extends Base {
   }
 
   async stop() {
-    const data = await this.discloudApp.apps.stop(this.id);
+    const data = await super.stop();
 
     this.online = data.status === "ok";
 
     return data;
   }
 
-  toString() {
-    return this.id;
+  async update(options: UpdateAppOptions) {
+    const data = await super.update(options);
+
+    this.online = data.statusCode === 200;
+
+    return data;
   }
 }

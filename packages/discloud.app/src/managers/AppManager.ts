@@ -3,12 +3,13 @@ import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppStatus from "../structures/AppStatus";
+import AppUploaded from "../structures/AppUploaded";
 import { resolveFile } from "../util";
-import BaseManager from "./BaseManager";
+import CachedManager from "./CachedManager";
 
-export default class AppManager extends BaseManager {
+export default class AppManager extends CachedManager<App> {
   constructor(discloudApp: DiscloudApp) {
-    super(discloudApp);
+    super(discloudApp, App);
   }
 
   async status(appID: string): Promise<AppStatus>
@@ -90,6 +91,12 @@ export default class AppManager extends BaseManager {
       },
     });
 
+    if (data.statusCode === 200)
+      this._add({
+        id: appID,
+        ram: quantity,
+      });
+
     return data;
   }
 
@@ -102,7 +109,7 @@ export default class AppManager extends BaseManager {
     });
 
     if ("app" in data)
-      return { ...data, app: new App(this.discloudApp, data.app) };
+      return { ...data, app: new AppUploaded(this.discloudApp, data.app) };
 
     return data;
   }
@@ -126,7 +133,14 @@ export default class AppManager extends BaseManager {
       | RESTDeleteApiAppAllDeleteResult
     >(Routes.appDelete(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._removeMany(data.apps.removealled);
+
+      return data.apps;
+    }
+
+    if (data.status === "ok")
+      this._remove(appID);
 
     return data;
   }
@@ -139,7 +153,19 @@ export default class AppManager extends BaseManager {
       | RESTPutApiAppAllRestartResult
     >(Routes.appRestart(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.restarted.map(app => ({
+        id: app,
+        online: true,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: data.status === "ok",
+    });
 
     return data;
   }
@@ -152,7 +178,19 @@ export default class AppManager extends BaseManager {
       | RESTPutApiAppAllStartResult
     >(Routes.appStart(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.started.map(app => ({
+        id: app,
+        online: true,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: data.status === "ok",
+    });
 
     return data;
   }
@@ -165,7 +203,19 @@ export default class AppManager extends BaseManager {
       | RESTPutApiAppAllStopResult
     >(Routes.appStop(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.stoped.map(app => ({
+        id: app,
+        online: false,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: !(data.status === "ok"),
+    });
 
     return data;
   }
@@ -177,20 +227,12 @@ export default class AppManager extends BaseManager {
 
     const data = await this.discloudApp.rest.get<RESTGetApiAppResult>(Routes.app(appID));
 
-    return new App(this.discloudApp, data.apps);
+    return this._add(data.apps);
   }
 
   async #fetchMany() {
     const data = await this.discloudApp.rest.get<RESTGetApiAppAllResult>(Routes.app("all"));
 
-    const apps = new Map<string, App>();
-
-    for (let i = 0; i < data.apps.length; i++) {
-      const app = data.apps[i];
-
-      apps.set(app.id, new App(this.discloudApp, app));
-    }
-
-    return apps;
+    return this._addMany(data.apps);
   }
 }

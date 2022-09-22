@@ -5,20 +5,18 @@ import { DiscloudAppOptions } from "../@types";
 import AppManager from "../managers/AppManager";
 import TeamManager from "../managers/TeamManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions } from "../util/constants";
+import { DefaultDiscloudAppOptions } from "../util";
 
 export default class DiscloudApp {
   #token?: string;
-  apps: AppManager;
+  #apps = new AppManager(this);
+  #team = new TeamManager(this);
+  #user = new User(this, <ApiUser>{});
+  #rest = new REST();
   options: Omit<DiscloudAppOptions, "token">;
-  rest: REST;
-  team: TeamManager;
-  user: User;
 
   constructor(options: DiscloudAppOptions = {}) {
     options = { ...DefaultDiscloudAppOptions, ...options };
-
-    this.rest = new REST();
 
     if (options.token) {
       this.#setToken(options.token);
@@ -26,10 +24,22 @@ export default class DiscloudApp {
     }
 
     this.options = options;
+  }
 
-    this.apps = new AppManager(this);
-    this.team = new TeamManager(this);
-    this.user = new User(this, <ApiUser>{});
+  get apps() {
+    return this.#apps;
+  }
+
+  get rest() {
+    return this.#rest;
+  }
+
+  get team() {
+    return this.#team;
+  }
+
+  get user() {
+    return this.#user;
   }
 
   #setToken(token: string) {

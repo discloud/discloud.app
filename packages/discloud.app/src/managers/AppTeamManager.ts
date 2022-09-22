@@ -1,11 +1,11 @@
 import { ApiAppTeamManager, RESTDeleteApiAppTeamResult, RESTGetApiAppTeamResult, RESTPostApiAppTeamResult, RESTPutApiAppTeamResult, Routes } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import App from "../structures/App";
+import BaseApp from "../structures/BaseApp";
 import ModPermissionsBF, { ModPermissionsResolvable } from "../util/ModPermissionsBF";
 import BaseManager from "./BaseManager";
 
-export default class AppTeamManager extends BaseManager {
-  constructor(discloudApp: DiscloudApp, public app: App) {
+export default class AppTeamManager<T extends BaseApp> extends BaseManager {
+  constructor(discloudApp: DiscloudApp, public app: T) {
     super(discloudApp);
   }
 

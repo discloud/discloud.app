@@ -1,5 +1,9 @@
 import { RawFile } from "@discloudapp/rest";
-import { ModPermissions } from "../util/constants";
+import { ModPermissions } from "../util";
+
+export interface Constructor<T = any> {
+  new(...args: any[]): T
+}
 
 export interface DiscloudAppOptions {
   token?: string

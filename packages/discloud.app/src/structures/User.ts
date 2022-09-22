@@ -18,8 +18,8 @@ export default class User extends Base {
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
-    this.appIDs = data.apps;
-    this.customdomains = data.customdomains;
+    this.appIDs = data.apps ?? [];
+    this.customdomains = data.customdomains ?? [];
     this.id = data.userID;
     this.locale = data.locale;
     this.plan = data.plan;
@@ -31,8 +31,12 @@ export default class User extends Base {
 
     this.ramUsedMb = data.ramUsedMb;
 
-    this.subdomains = data.subdomains;
+    this.subdomains = data.subdomains ?? [];
     this.totalRamMb = data.totalRamMb;
+  }
+
+  get apps() {
+    return this.discloudApp.apps;
   }
 
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
@@ -47,7 +51,7 @@ export default class User extends Base {
   async fetch() {
     const data = await this.discloudApp.rest.get<RESTGetApiUserResult>(Routes.user());
 
-    return this.discloudApp.user = new User(this.discloudApp, data.user);
+    return this._patch(data.user);
   }
 
   toString() {
