@@ -1,4 +1,4 @@
-export type DiscloudConfig<T = AppTypes, V extends AppLanguages = AppLanguages> =
+export type DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> =
   T extends "bot" ? DiscloudConfigBot<V> :
   T extends "site" ? DiscloudConfigSite<V> :
   BaseDiscloudConfig<V>
@@ -14,6 +14,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
 
 interface DiscloudConfigBot<V extends AppLanguages> extends BaseDiscloudConfig<V> {
   AVATAR: string
+  ID?: string
   NAME: string
   TYPE: "bot"
 }
