@@ -5,7 +5,7 @@ import { DiscloudAppOptions } from "../@types";
 import AppManager from "../managers/AppManager";
 import TeamManager from "../managers/TeamManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions } from "../util/constants";
+import { DefaultDiscloudAppOptions } from "../util";
 
 export default class DiscloudApp {
   #token?: string;
