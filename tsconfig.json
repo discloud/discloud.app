@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules", "**/.ignore_*", "**/dist/"],
-  "include": ["packages", "**.ts", "test/test.ts"],
+  "include": ["packages", "**.ts"],
   "compilerOptions": {
     // "incremental": true,
     // "composite": true,
