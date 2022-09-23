@@ -28,7 +28,7 @@
     "undici": "^5.10.0"
   },
   "devDependencies": {
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.7.19",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.24.0",
