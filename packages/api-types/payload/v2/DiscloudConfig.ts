@@ -48,6 +48,7 @@ export type AppVersion<T extends AppLanguages = AppLanguages> =
   BaseVersion
 
 type BaseVersion = "latest"
+  | `${number}.${number | "x"}.${number | "x"}`
 
 type VersionGo = BaseVersion
 
