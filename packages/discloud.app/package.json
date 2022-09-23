@@ -2,6 +2,7 @@
   "name": "discloud.app",
   "version": "0.1.1",
   "main": "./dist",
+  "private": true,
   "scripts": {
     "build:release": "tsc",
     "prepublish": "npm run build:release",
