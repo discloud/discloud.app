@@ -2,22 +2,17 @@
 # yarn lockfile v1
 
 
-"@discloudapp/api-types@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.1.4.tgz#6d64ac7e315d62db30d51142960da075812ad874"
-  integrity sha512-E3dcAl97YOXnJaLLIeUSAhC6VcUpaHYeIEfCimQnkrjt6SpyNNS/zDHBDc4otg0/EH5yJGIsVEHF7dXafZKujA==
+"@discloudapp/api-types@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.2.3.tgz#a2e892d8544fc1fede3dc7b947518c6b4e0336b8"
+  integrity sha512-4npoH9mL6EVWtd3u+l7gfQvMDJenxneeTTpzgX3F2Fthu3UckWn5wX4jMX7Yy7pJVYlLRuS8et1NBgtAYu4h8w==
 
-"@discloudapp/api-types@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.2.2.tgz#e1aa79a8647eacb5d4968b39dd27f7b60f3dd1da"
-  integrity sha512-VezFeyHsWrn+aRWuApRUXVGs0ugxMTRvR/raWwr0lBiLftTWolYRj+Ly4iV2ixtuZODuD8ZuJ2UX0bMaEBU9RQ==
-
-"@discloudapp/rest@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@discloudapp/rest/-/rest-0.1.2.tgz#f6c24c3db8a682653d89c2a39d3679ed79f00be4"
-  integrity sha512-9KEV4gSs35HiKgUK4Ve1VPhQG4dRb6YnF1rfIXsf0P3kE9pkjFKQFaCNvtZYQ9u0s6PvnSJA38iCSGpPBrdZcg==
+"@discloudapp/rest@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@discloudapp/rest/-/rest-0.1.3.tgz#95c5022f13894b91d1cb3821b7f93c78565035b4"
+  integrity sha512-mUln/9wor4KDuT4BQ7a0Zfzmbjvzn13hClhPmArYuyVz4HjWFkOolazhTSkWsLPW1Ukt76Or5/5w7hhHhoY8qg==
   dependencies:
-    "@discloudapp/api-types" "^0.1.4"
+    "@discloudapp/api-types" "^0.2.3"
     undici "^5.10.0"
 
 "@eslint/eslintrc@^1.3.2":
@@ -85,10 +80,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
 
-"@types/node@^18.7.18":
-  version "18.7.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.18.tgz#633184f55c322e4fb08612307c274ee6d5ed3154"
-  integrity sha512-m+6nTEOadJZuTPkKR/SYK3A2d7FZrgElol9UP1Kae90VVU4a6mxnPuLiIW1m4Cq4gZ/nWb9GrdVXJCoCazDAbg==
+"@types/node@^18.7.19":
+  version "18.7.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.19.tgz#ad83aa9b7af470fab7e0f562be87e97dc8ffe08e"
+  integrity sha512-Sq1itGUKUX1ap7GgZlrzdBydjbsJL/NSQt/4wkAxUJ7/OS5c2WkoN6WSpWc2Yc5wtKMZOUA0VCs/j2XJadN3HA==
 
 "@typescript-eslint/eslint-plugin@^5.38.0":
   version "5.38.0"
