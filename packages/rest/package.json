@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gorniaky/discloud.app.git"
+    "url": "git+https://github.com/discloud/discloud.app.git"
   },
   "license": "Apache 2.0",
   "dependencies": {
