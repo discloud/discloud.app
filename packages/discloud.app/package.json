@@ -24,7 +24,7 @@
   "dependencies": {
     "@discloudapp/api-types": "^0.2.3",
     "@discloudapp/rest": "^0.1.3",
-    "undici": "^5.10.0"
+    "undici": "^5.11.0"
   },
   "devDependencies": {
     "@types/node": "^18.8.0",
