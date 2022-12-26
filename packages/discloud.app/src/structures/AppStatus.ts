@@ -30,7 +30,7 @@ export default class AppStatus extends Base {
     if (data.memory) {
       this.memory = data.memory;
       const matched = data.memory.match(/[\d.]+/g) ?? [];
-      this.memoryUsage = calculatePercentage(matched[0], matched[1]);
+      this.memoryUsage = calculatePercentage(matched[0]!, matched[1]);
     }
 
     this.netIO = data.netIO;
