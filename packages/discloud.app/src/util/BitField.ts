@@ -36,7 +36,7 @@ export class BitField<S, N> {
 
   /**
    * Adds bits to these ones.
-   * @param bits Bits to add
+   * @param bits - Bits to add
    * @returns These bits or new BitField if the instance is frozen.
    */
   add(...bits: BitFieldResolvable<S, N>[]): BitField<S, N> {
@@ -51,7 +51,7 @@ export class BitField<S, N> {
 
   /**
    * Checks whether the bitfield has a bit, or any of multiple bits.
-   * @param bits Bit(s) to check for
+   * @param bits - Bit(s) to check for
    */
   any(...bits: BitFieldResolvable<S, N>[]): boolean {
     return (this.bitField & this.constructor.resolve(bits)) !== this.constructor.DefaultBit;
@@ -59,7 +59,7 @@ export class BitField<S, N> {
 
   /**
    * Checks if this bitfield equals another
-   * @param bits Bit(s) to check for
+   * @param bits - Bit(s) to check for
    */
   equals(...bits: BitFieldResolvable<S, N>[]): boolean {
     return this.bitField === this.constructor.resolve(bits);
@@ -74,7 +74,7 @@ export class BitField<S, N> {
 
   /**
    * Checks whether the bitfield has a bit, or multiple bits.
-   * @param bits Bit(s) to check for
+   * @param bits - Bit(s) to check for
    */
   has(...bits: BitFieldResolvable<S, N>[]): boolean {
     const bit = this.constructor.resolve(bits);
@@ -83,7 +83,7 @@ export class BitField<S, N> {
 
   /**
    * Gets all given bits that are missing from the bitfield.
-   * @param bits Bit(s) to check for
+   * @param bits - Bit(s) to check for
    */
   missing(...bits: BitFieldResolvable<S, N>[]): S[] {
     return new this.constructor(bits).remove(this).toArray() as S[];
@@ -91,7 +91,7 @@ export class BitField<S, N> {
 
   /**
    * Removes bits from these.
-   * @param bits Bits to remove
+   * @param bits - Bits to remove
    * @returns These bits or new BitField if the instance is frozen.
    */
   remove(...bits: BitFieldResolvable<S, N>[]): BitField<S, N> {
@@ -135,7 +135,7 @@ export class BitField<S, N> {
 
   /**
    * Resolves bitfields to their numeric form.
-   * @param bit bit(s) to resolve
+   * @param bit - bit(s) to resolve
    */
   static resolve<N extends bigint | number>(bit: BitFieldResolvable<string, N>): N {
     const DefaultBit = this.DefaultBit as N;
