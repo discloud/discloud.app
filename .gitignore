@@ -4,6 +4,12 @@
 /test*.ts
 *.zip
 
+# build api-types
+packages/api-types/**/*.d.ts
+packages/api-types/**/*.js
+packages/api-types/**/*.js.map
+packages/api-types/**/*.ts.map
+
 # Logs
 logs
 *.log
