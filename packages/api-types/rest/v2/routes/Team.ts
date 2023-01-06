@@ -7,7 +7,7 @@ export const Team = new class Team {
   }
 
   /**
-   * - GET - `/app/${appID}/backup`
+   * - GET - `/app/{appID}/backup`
    */
   backup<appID extends string>(appID: appID): `/team/${appID}/backup` {
     return `/team/${appID}/backup`;

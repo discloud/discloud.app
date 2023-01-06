@@ -1,28 +1,28 @@
 export const App = new class App {
   /**
-   * - GET - `/app/${appID}`
+   * - GET - `/app/{appID}`
    */
   app<appID extends string>(appID: appID): `/app/${appID}` {
     return `/app/${appID}`;
   }
 
   /**
-   * - PUT - `/app/${appID}/apt`
-   * - DELETE - `/app/${appID}/apt`
+   * - PUT - `/app/{appID}/apt`
+   * - DELETE - `/app/{appID}/apt`
    */
   apt<appID extends string>(appID: appID): `/app/${appID}/apt` {
     return `/app/${appID}/apt`;
   }
 
   /**
-   * - GET - `/app/${appID}/backup`
+   * - GET - `/app/{appID}/backup`
    */
   backup<appID extends string>(appID: appID): `/app/${appID}/backup` {
     return `/app/${appID}/backup`;
   }
 
   /**
-   * - PUT - `/app/${appID}/commit`
+   * - PUT - `/app/{appID}/commit`
    */
   commit<appID extends string>(appID: appID): `/app/${appID}/commit` {
     return `/app/${appID}/commit`;
