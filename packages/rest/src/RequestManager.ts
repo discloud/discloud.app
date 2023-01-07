@@ -1,4 +1,3 @@
-import { Blob } from "node:buffer";
 import { Dispatcher, File, FormData, request } from "undici";
 import { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
 import { DefaultRestOptions } from "./utils/contants";
@@ -36,12 +35,15 @@ export class RequestManager {
 
     if (request.file) {
       if (request.file instanceof File) {
-        formData.append("file", request.file, request.file.name);
+        formData.append("file", request.file);
       } else {
-        if (request.file.data instanceof File)
+        if (request.file.data instanceof File) {
           request.file.name = request.file.name ?? request.file.data.name;
+        } else {
+          request.file.data = new File([request.file.data], request.file.name);
+        }
 
-        formData.append(request.file.key ?? "file", new Blob([request.file.data]), request.file.name);
+        formData.append(request.file.key ?? "file", request.file.data);
       }
 
       additionalOptions.headersTimeout = 300000;
@@ -63,8 +65,7 @@ export class RequestManager {
         fetchOptions.body = JSON.stringify(request.body);
       }
 
-    if (request.file)
-      fetchOptions.body = formData as Exclude<RequestOptions["body"], undefined>;
+    if (request.file) fetchOptions.body = formData;
 
     return { url, fetchOptions };
   }
