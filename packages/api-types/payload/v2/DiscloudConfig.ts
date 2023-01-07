@@ -6,6 +6,7 @@ export type DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguages
 interface BaseDiscloudConfig<V extends AppLanguages> {
   APT: string
   AUTORESTART: boolean
+  ID?: string
   MAIN: string
   RAM: number
   TYPE: AppTypes
@@ -13,8 +14,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
 }
 
 interface DiscloudConfigBot<V extends AppLanguages> extends BaseDiscloudConfig<V> {
-  AVATAR: string
-  ID?: string
+  AVATAR?: string
   NAME: string
   TYPE: "bot"
 }
@@ -67,3 +67,12 @@ type VersionRb = BaseVersion
 
 type VersionRs = BaseVersion
   | "suja"
+
+export type AptType =
+  | "canvas"
+  | "ffmpeg"
+  | "java"
+  | "libgl"
+  | "openssl"
+  | "puppeteer"
+  | "tools"
