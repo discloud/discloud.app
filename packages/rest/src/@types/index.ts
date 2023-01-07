@@ -35,8 +35,6 @@ export interface RawFile {
   name: string
   /**
    * An explicit key to use for key of the formdata field for this file.
-   * When not provided, the index of the file in the files array is used in the form `files[${index}]`.
-   * If you wish to alter the placeholder snowflake, you must provide this property in the same form (`files[${placeholder}]`)
    */
   key?: string
   /**
