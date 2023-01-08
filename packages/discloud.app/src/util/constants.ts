@@ -15,3 +15,5 @@ export const ModPermissions = {
   status_app: 64,
   stop_app: 128,
 };
+
+export const fileNamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;

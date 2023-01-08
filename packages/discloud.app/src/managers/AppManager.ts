@@ -101,8 +101,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   async create(options: CreateAppOptions) {
-    if (typeof options.file === "string")
-      options.file = await resolveFile(options.file);
+    options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.post<RESTPostApiUploadResult>(Routes.upload(), {
       file: options.file,
@@ -115,8 +114,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   async update(appID: string, options: UpdateAppOptions) {
-    if (typeof options.file === "string")
-      options.file = await resolveFile(options.file);
+    options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.appCommit(appID), {
       file: options.file,

@@ -11,7 +11,7 @@ export default class AppStatus extends Base {
   memory;
 
   /**
-   * @description Percentage of memory usage
+   * Percentage of memory usage
    */
   memoryUsage;
   netIO;
