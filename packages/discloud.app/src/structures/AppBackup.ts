@@ -28,6 +28,8 @@ export class AppBackup<All extends boolean = boolean> extends Base {
 
     writeFileSync(file, this.data);
 
-    if (existsSync(file)) return this.url = file;
+    if (existsSync(file)) this.url = file;
+
+    return this;
   }
 }
