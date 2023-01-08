@@ -1,24 +1,29 @@
 import { RawFile } from "@discloudapp/rest";
 import { Blob } from "node:buffer";
-import { PathLike, readFileSync } from "node:fs";
+import { createReadStream, PathLike } from "node:fs";
 import { Readable, Stream } from "node:stream";
 import { File, request } from "undici";
 import { fileNamePattern } from "./constants";
 
 export * from "./constants";
 
-export async function resolveFile(file: File | PathLike | RawFile | Readable): Promise<File> {
+export async function resolveFile(file: Blob | File | PathLike | RawFile | Readable): Promise<File> {
   if (file instanceof File) return file;
 
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
-    if (/^https?:\/\//.test(file))
-      return new File([await request(file, { throwOnError: true }).then(res => res.body.blob())],
-        `${file.match(fileNamePattern)?.pop()}`);
+    const fileName = `${file.match(fileNamePattern)?.pop()}`;
 
-    return new File([readFileSync(file)], `${file.match(fileNamePattern)?.pop()}`);
+    if (/^https?:\/\//.test(file))
+      return request(file, { throwOnError: true })
+        .then(res => res.body.blob())
+        .then(blob => new File([blob], fileName));
+
+    return streamToFile(createReadStream(file), fileName);
   }
+
+  if (file instanceof Blob) return new File([file], "file");
 
   if (Buffer.isBuffer(file)) return new File([file], "file");
 
@@ -33,12 +38,12 @@ export async function resolveFile(file: File | PathLike | RawFile | Readable): P
   return <never>file;
 }
 
-export function streamToFile(stream: Stream, mimeType?: string) {
+export function streamToFile(stream: Stream, fileName?: string | null, mimeType?: string) {
   return new Promise<File>((resolve, reject) => {
     const chunks: any[] = [];
 
     stream.on("data", chunk => chunks.push(chunk))
-      .once("end", () => resolve(new File(chunks, "file", { type: mimeType })))
+      .once("end", () => resolve(new File(chunks, fileName ?? "file", { type: mimeType })))
       .once("error", reject);
   });
 }
