@@ -9,6 +9,7 @@ export class AppBackup<All extends boolean = boolean> extends Base {
   id;
   url;
   status?: string;
+  data?: Buffer;
 
   constructor(discloudApp: DiscloudApp, backup: All extends true ? ApiAppBackupAll : ApiAppBackup) {
     super(discloudApp);
@@ -21,11 +22,11 @@ export class AppBackup<All extends boolean = boolean> extends Base {
   }
 
   async download(path: PathLike = cwd(), fileName?: string) {
-    const data = await fetch(this.url).then(res => res.arrayBuffer());
+    this.data = Buffer.from(await fetch(this.url).then(res => res.arrayBuffer()));
 
     const file = `${path}/${(fileName ?? this.id).split(".").slice(0, -1).join(".")}.zip`;
 
-    writeFileSync(file, Buffer.from(data));
+    writeFileSync(file, this.data);
 
     if (existsSync(file)) return this.url = file;
   }
