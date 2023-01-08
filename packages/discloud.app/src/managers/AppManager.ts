@@ -1,7 +1,8 @@
-import { ApiAppBackup, ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
+import { AppBackup } from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
 import { resolveFile } from "../util";
@@ -57,8 +58,8 @@ export default class AppManager extends CachedManager<App> {
     }
   }
 
-  async backup(appID: string): Promise<ApiAppBackup>
-  async backup(appID?: "all"): Promise<Map<string, ApiAppBackup>>
+  async backup(appID: string): Promise<AppBackup>
+  async backup(appID?: "all"): Promise<Map<string, AppBackup<true>>>
   async backup(appID = "all") {
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppBackupResult
@@ -66,18 +67,18 @@ export default class AppManager extends CachedManager<App> {
     >(Routes.appBackup(appID));
 
     if (Array.isArray(data.backups)) {
-      const backups = new Map<string, ApiAppBackup>();
+      const backups = new Map<string, AppBackup<true>>();
 
       for (let i = 0; i < data.backups.length; i++) {
         const backup = data.backups[i];
 
-        backups.set(backup.id, backup);
+        backups.set(backup.id, new AppBackup<true>(this.discloudApp, backup));
       }
 
       return backups;
     }
 
-    return data.backups;
+    return new AppBackup(this.discloudApp, data.backups);
   }
 
   async ram(appID: string, quantity: number) {

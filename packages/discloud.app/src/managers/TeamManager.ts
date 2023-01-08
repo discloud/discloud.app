@@ -1,6 +1,7 @@
-import { ApiAppBackup, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
+import { AppBackup } from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";
 import Team from "../structures/Team";
 import { resolveFile } from "../util";
@@ -56,8 +57,8 @@ export default class TeamManager extends BaseManager {
     }
   }
 
-  async backup(appID: string): Promise<ApiAppBackup>
-  async backup(appID?: "all"): Promise<Map<string, ApiAppBackup>>
+  async backup(appID: string): Promise<AppBackup>
+  async backup(appID?: "all"): Promise<Map<string, AppBackup<true>>>
   async backup(appID = "all") {
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppBackupResult
@@ -65,18 +66,18 @@ export default class TeamManager extends BaseManager {
     >(Routes.teamBackup(appID));
 
     if (Array.isArray(data.backups)) {
-      const backups = new Map<string, ApiAppBackup>();
+      const backups = new Map<string, AppBackup<true>>();
 
       for (let i = 0; i < data.backups.length; i++) {
         const backup = data.backups[i];
 
-        backups.set(backup.id, backup);
+        backups.set(backup.id, new AppBackup<true>(this.discloudApp, backup));
       }
 
       return backups;
     }
 
-    return data.backups;
+    return new AppBackup(this.discloudApp, data.backups);
   }
 
   async ram(appID: string, quantity: number) {
