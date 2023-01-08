@@ -1,5 +1,6 @@
 import { RawFile } from "@discloudapp/rest";
 import { PathLike } from "node:fs";
+import { Readable } from "node:stream";
 import { File } from "undici";
 import { ModPermissions } from "../util";
 
@@ -12,11 +13,11 @@ export interface DiscloudAppOptions {
 }
 
 export interface CreateAppOptions {
-  file: File | PathLike | RawFile
+  file: File | PathLike | RawFile | Readable
 }
 
 export interface UpdateAppOptions {
-  file: File | PathLike | RawFile
+  file: File | PathLike | RawFile | Readable
 }
 
 export type ModPermissionsFlags = keyof typeof ModPermissions
