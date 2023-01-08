@@ -6,15 +6,7 @@ interface Base {
 }
 
 abstract class Base {
-  #discloudApp: DiscloudApp;
-
-  constructor(discloudApp: DiscloudApp) {
-    this.#discloudApp = discloudApp;
-  }
-
-  get discloudApp() {
-    return this.#discloudApp;
-  }
+  constructor(public readonly discloudApp: DiscloudApp) { }
 
   protected _clone(): this {
     return Object.assign(Object.create(this), this);
