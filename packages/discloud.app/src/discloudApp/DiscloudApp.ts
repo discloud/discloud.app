@@ -9,11 +9,11 @@ import { DefaultDiscloudAppOptions } from "../util";
 
 export default class DiscloudApp {
   #token?: string;
-  #apps = new AppManager(this);
-  #team = new TeamManager(this);
-  #user = new User(this, <ApiUser>{});
-  #rest = new REST();
   options: Omit<DiscloudAppOptions, "token">;
+  readonly apps = new AppManager(this);
+  readonly team = new TeamManager(this);
+  readonly user = new User(this, <ApiUser>{});
+  readonly rest = new REST();
 
   constructor(options: DiscloudAppOptions = {}) {
     options = { ...DefaultDiscloudAppOptions, ...options };
@@ -24,22 +24,6 @@ export default class DiscloudApp {
     }
 
     this.options = options;
-  }
-
-  get apps() {
-    return this.#apps;
-  }
-
-  get rest() {
-    return this.#rest;
-  }
-
-  get team() {
-    return this.#team;
-  }
-
-  get user() {
-    return this.#user;
   }
 
   #setToken(token: string) {

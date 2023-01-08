@@ -5,11 +5,13 @@ import BaseApp from "../structures/BaseApp";
 import BaseManager from "./BaseManager";
 
 export default class AppAptManager<T extends BaseApp> extends BaseManager {
-  constructor(discloudApp: DiscloudApp, public app: T) {
+  constructor(discloudApp: DiscloudApp, public readonly app: T) {
     super(discloudApp);
   }
 
-  async install(apt: AptString): Promise<RESTPutApiAppAptResult> {
+  async install(apt: AptString | AptString[]): Promise<RESTPutApiAppAptResult> {
+    if (Array.isArray(apt)) apt = <AptString>apt.join();
+
     const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(this.app.id), {
       body: {
         apt,
@@ -19,7 +21,9 @@ export default class AppAptManager<T extends BaseApp> extends BaseManager {
     return data;
   }
 
-  async uninstall(apt: AptString): Promise<RESTDeleteApiAppAptResult> {
+  async uninstall(apt: AptString | AptString[]): Promise<RESTDeleteApiAppAptResult> {
+    if (Array.isArray(apt)) apt = <AptString>apt.join();
+
     const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(this.app.id), {
       body: {
         apt,

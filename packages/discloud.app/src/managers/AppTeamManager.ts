@@ -5,7 +5,7 @@ import ModPermissionsBF, { ModPermissionsResolvable } from "../util/ModPermissio
 import BaseManager from "./BaseManager";
 
 export default class AppTeamManager<T extends BaseApp> extends BaseManager {
-  constructor(discloudApp: DiscloudApp, public app: T) {
+  constructor(discloudApp: DiscloudApp, public readonly app: T) {
     super(discloudApp);
   }
 

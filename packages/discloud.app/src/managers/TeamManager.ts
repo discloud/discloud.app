@@ -90,8 +90,7 @@ export default class TeamManager extends BaseManager {
   }
 
   async update(appID: string, options: UpdateAppOptions) {
-    if (typeof options.file === "string")
-      options.file = await resolveFile(options.file);
+    options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppCommitResult

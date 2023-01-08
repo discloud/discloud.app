@@ -1,5 +1,5 @@
 import { BinaryLike } from "crypto";
-import { BodyInit, request } from "undici";
+import { BodyInit, File, request } from "undici";
 import { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
@@ -35,14 +35,12 @@ export interface RawFile {
   name: string
   /**
    * An explicit key to use for key of the formdata field for this file.
-   * When not provided, the index of the file in the files array is used in the form `files[${index}]`.
-   * If you wish to alter the placeholder snowflake, you must provide this property in the same form (`files[${placeholder}]`)
    */
   key?: string
   /**
    * The actual data for the file
    */
-  data: Blob | BinaryLike | Buffer
+  data: Blob | BinaryLike | Buffer | DataView | File
   /**
    * Content-Type of the file
    */
@@ -58,9 +56,9 @@ export interface RequestData {
    */
   body?: BodyInit | unknown
   /**
-   * Files to be attached to this request
+   * File to be attached to this request
    */
-  file?: RawFile
+  file?: File | RawFile
   /**
    * Additional headers to add to this request
    */

@@ -14,8 +14,8 @@ abstract class BaseApp extends Base {
   name;
   ram;
 
-  #apt: AppAptManager<this>;
-  #team: AppTeamManager<this>;
+  readonly apt: AppAptManager<this>;
+  readonly team: AppTeamManager<this>;
 
   constructor(
     discloudApp: DiscloudApp,
@@ -30,16 +30,8 @@ abstract class BaseApp extends Base {
     this.name = data.name;
     this.ram = data.ram;
 
-    this.#apt = new AppAptManager(discloudApp, this);
-    this.#team = new AppTeamManager(discloudApp, this);
-  }
-
-  get apt() {
-    return this.#apt;
-  }
-
-  get team() {
-    return this.#team;
+    this.apt = new AppAptManager(discloudApp, this);
+    this.team = new AppTeamManager(discloudApp, this);
   }
 
   async setRam(quantity: number) {
