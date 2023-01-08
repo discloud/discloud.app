@@ -27,6 +27,6 @@ export class AppBackup<All extends boolean = boolean> extends Base {
 
     writeFileSync(file, Buffer.from(data));
 
-    if (existsSync(file)) return file;
+    if (existsSync(file)) return this.url = file;
   }
 }
