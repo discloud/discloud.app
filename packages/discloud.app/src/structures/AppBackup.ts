@@ -21,10 +21,10 @@ export default class AppBackup<All extends boolean = boolean> extends Base {
       this.status = backup.status;
   }
 
-  async download(path: PathLike = cwd(), fileName?: string) {
+  async download(path: PathLike = cwd(), fileName: string = this.id) {
     this.data = Buffer.from(await fetch(this.url).then(res => res.arrayBuffer()));
 
-    const file = `${path}/${(fileName ?? this.id).split(".").slice(0, -1).join(".")}.zip`;
+    const file = `${path}/${fileName.split(".").slice(0, -1).join(".")}.zip`;
 
     writeFileSync(file, this.data);
 
