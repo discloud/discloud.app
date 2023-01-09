@@ -20,7 +20,7 @@ export default class App extends BaseApp {
     this.autoDeployGit = data.autoDeployGit;
     this.exitCode = data.exitCode;
     this.mods = data.mods ?? [];
-    this.online = data.online ?? true;
+    this.online = data.online ?? false;
     this.ramKilled = data.ramKilled;
   }
 
