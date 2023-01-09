@@ -24,7 +24,7 @@ export default class AppBackup<All extends boolean = boolean> extends Base {
   async download(path: PathLike = cwd(), fileName: string = this.id) {
     this.data = Buffer.from(await fetch(this.url).then(res => res.arrayBuffer()));
 
-    const file = `${path}/${fileName.split(".").slice(0, -1).join(".")}.zip`;
+    const file = `${path}/${fileName}.${this.url.split(".").at(-1)}`;
 
     writeFileSync(file, this.data);
 
