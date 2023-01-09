@@ -63,7 +63,7 @@ export default class Team extends Base {
   async stop() {
     const data = await this.discloudApp.team.stop(this.id);
 
-    this.online = data.status === "ok";
+    this.online = !(data.status === "ok");
 
     return data;
   }

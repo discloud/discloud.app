@@ -43,7 +43,7 @@ export default class App extends BaseApp {
   async stop() {
     const data = await super.stop();
 
-    this.online = data.status === "ok";
+    this.online = !(data.status === "ok");
 
     return data;
   }
