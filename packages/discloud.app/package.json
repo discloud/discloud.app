@@ -26,9 +26,6 @@
     "@discloudapp/rest": "^0.2.0",
     "undici": "^5.14.0"
   },
-  "devDependencies": {
-    "typescript": "^4.9.4"
-  },
   "engines": {
     "node": ">=16.17"
   }
