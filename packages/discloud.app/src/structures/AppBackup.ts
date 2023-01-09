@@ -5,7 +5,7 @@ import { fetch } from "undici";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
-export class AppBackup<All extends boolean = boolean> extends Base {
+export default class AppBackup<All extends boolean = boolean> extends Base {
   id;
   url;
   status?: string;

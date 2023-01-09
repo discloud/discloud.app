@@ -2,7 +2,7 @@ import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStarte
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
-import { AppBackup } from "../structures/AppBackup";
+import AppBackup from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
 import { resolveFile } from "../util";
