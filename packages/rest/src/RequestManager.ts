@@ -6,6 +6,30 @@ export class RequestManager {
   #token!: string;
   options: RESTOptions;
 
+  /**
+   * If the rate limit bucket is currently limited
+   */
+  get #limited() {
+    return this.#localLimited;
+  }
+
+  /**
+   * If the rate limit bucket is currently limited by its limit
+   */
+  get #localLimited() {
+    return this.#remaining < 1 && Date.now() < this.#reset;
+  }
+
+  /**
+   * The remaining requests that can be made before we are rate limited
+   */
+  #remaining = 1;
+
+  /**
+   * The time this rate limit bucket will reset
+   */
+  #reset = 0;
+
   constructor(options: Partial<RESTOptions>) {
     this.options = { ...DefaultRestOptions, ...options };
   }
@@ -71,13 +95,18 @@ export class RequestManager {
   }
 
   async request(url: string, options: RequestOptions) {
-    const res = await request(url, { ...options });
+    while (this.#limited) {
+      const res = await request(url, { ...options });
 
-    if (res.statusCode > 399 && res.statusCode < 600)
-      await res.body.json().then(body => {
+      this.#remaining = Number(res.headers["ratelimit-remaining"]);
+      this.#reset = Date.now() + (Number(res.headers["ratelimit-reset"]) * 1000);
+
+      if (res.statusCode > 399 && res.statusCode < 600) {
+        const body = await res.body.json();
         throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
-      });
+      }
 
-    return res;
+      return res;
+    }
   }
 }
