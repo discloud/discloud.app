@@ -59,7 +59,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   async backup(appID: string): Promise<AppBackup>
-  async backup(appID?: "all"): Promise<Map<string, AppBackup<true>>>
+  async backup(appID?: "all"): Promise<Map<string, AppBackup>>
   async backup(appID = "all") {
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppBackupResult
@@ -67,12 +67,12 @@ export default class AppManager extends CachedManager<App> {
     >(Routes.appBackup(appID));
 
     if (Array.isArray(data.backups)) {
-      const backups = new Map<string, AppBackup<true>>();
+      const backups = new Map<string, AppBackup>();
 
       for (let i = 0; i < data.backups.length; i++) {
         const backup = data.backups[i];
 
-        backups.set(backup.id, new AppBackup<true>(this.discloudApp, backup));
+        backups.set(backup.id, new AppBackup(this.discloudApp, backup));
       }
 
       return backups;
