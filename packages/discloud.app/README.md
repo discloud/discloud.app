@@ -1,15 +1,20 @@
 # Discloud.app
 
-## Example
-
-Install discloud.app
+## Instalation
 
 ```sh
 npm i discloud.app
 yarn add discloud.app
 ```
 
-Usage
+## Links
+
+[Documentation](https://discloud.github.io/discloud.app)
+[Github](https://github.com/discloud/discloud.app)
+[NPM](https://www.npmjs.com/package/discloud.app)
+[Discloud Server](https://discord.gg/discloud)
+
+## Examples usage
 
 ```js
 // index.js
@@ -34,7 +39,7 @@ async function () {
 
 ## How to `upload`/`commit` your app
 
-Before continuing, make sure your [`zip`](https://docs.discloudbot.com/v/en/suport/faq/zip) contains the [`discloud.config`](https://docs.discloudbot.com/v/en/suport/faq/discloud.config) file.
+Before continuing, make sure your [`zip`](https://docs.discloudbot.com/v/en/suport/faq/zip) contains the [`discloud.config`](https://docs.discloudbot.com/v/en/discloud.config) file.
 
 > Upload with simply the file `path/url`:
 
@@ -43,10 +48,10 @@ const { discloud } = require("discloud.app");
 
 discloud.apps.create({
   file: "FILE_PATH/FILE_NAME.zip"
-});
+}); // Promise<RESTPostApiUploadResult>
 ```
 
-> Upload with `Blob | Buffer`:
+> Upload with `Blob | Buffer | File | RawFile | ReadableStream`:
 
 ```js
 const { discloud } = require("discloud.app");
@@ -56,7 +61,7 @@ discloud.apps.create({
     data: readFileSync("FILE_PATH/FILE_NAME.zip"), // Blob | Buffer
     name: "FILE_NAME.zip"
   }
-});
+}); // Promise<RESTPostApiUploadResult>
 ```
 
 > Commit with simply the file `path/url`:
@@ -66,10 +71,10 @@ const { discloud } = require("discloud.app");
 
 discloud.apps.update("APP_ID", {
   file: "FILE_PATH/FILE_NAME.zip"
-});
+}); // Promise<RESTPutApiAppCommitResult>
 ```
 
-> Commit with `Blob | Buffer`:
+> Commit with `Blob | Buffer | File | RawFile | ReadableStream`:
 
 ```js
 const { discloud } = require("discloud.app");
@@ -79,20 +84,15 @@ discloud.apps.update("APP_ID", {
     data: readFileSync("FILE_PATH/FILE_NAME.zip"), // Blob | Buffer
     name: "FILE_NAME.zip"
   }
-});
+}); // Promise<RESTPutApiAppCommitResult>
 ```
 
-> For you to send a `stream`, import the `streamToBlob` function to convert:
+> For you to send a `stream`, import the `streamToFile` function to convert:
 
 ```js
-const { discloud, streamToBlob } = require("discloud.app");
+const { discloud, streamToFile } = require("discloud.app");
 
-const blob = await streamToBlob(stream);
+const file = await streamToFile(stream, "FILE_NAME.zip");
 
-discloud.apps.create({
-  file: {
-    data: blob, // Blob | Buffer
-    name: "FILE_NAME.zip"
-  }
-});
+discloud.apps.create({ file }); // Promise<RESTPostApiUploadResult>
 ```
