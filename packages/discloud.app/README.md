@@ -9,10 +9,10 @@ yarn add discloud.app
 
 ## Links
 
-[Documentation](https://discloud.github.io/discloud.app)
-[Github](https://github.com/discloud/discloud.app)
-[NPM](https://www.npmjs.com/package/discloud.app)
-[Discloud Server](https://discord.gg/discloud)
+[Documentation](https://discloud.github.io/discloud.app)  
+[Github](https://github.com/discloud/discloud.app)  
+[NPM](https://www.npmjs.com/package/discloud.app)  
+[Discloud Server](https://discord.gg/discloud)  
 
 ## Examples usage
 
