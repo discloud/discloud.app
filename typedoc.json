@@ -10,6 +10,5 @@
   "json": "docs/docs.json",
   "pretty": true,
   "githubPages": true,
-  "includeVersion": true,
-  "emit": "both"
+  "includeVersion": true
 }
