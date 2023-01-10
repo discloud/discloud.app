@@ -5,13 +5,13 @@ import { fetch } from "undici";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
-export default class AppBackup<All extends boolean = boolean> extends Base {
+class AppBackup extends Base {
   id;
   url;
   status?: string;
   data?: Buffer;
 
-  constructor(discloudApp: DiscloudApp, backup: All extends true ? ApiAppBackupAll : ApiAppBackup) {
+  constructor(discloudApp: DiscloudApp, backup: ApiAppBackupAll | ApiAppBackup) {
     super(discloudApp);
 
     this.id = backup.id;
@@ -33,3 +33,5 @@ export default class AppBackup<All extends boolean = boolean> extends Base {
     return this;
   }
 }
+
+export default AppBackup;
