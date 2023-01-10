@@ -8,5 +8,11 @@
   "json": "docs/docs.json",
   "pretty": true,
   "githubPages": true,
-  "includeVersion": true
+  "includeVersion": true,
+  "plugin": [
+    // "typedoc-plugin-markdown",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-rename-defaults",
+    "typedoc-plugin-resolve-crossmodule-references"
+  ]
 }
