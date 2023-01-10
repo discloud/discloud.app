@@ -5,10 +5,10 @@
 *.zip
 
 # build api-types
-packages/api-types/**/*.d.ts
-packages/api-types/**/*.js
-packages/api-types/**/*.js.map
-packages/api-types/**/*.ts.map
+packages/**/*.d.ts
+packages/**/*.js
+packages/**/*.js.map
+packages/**/*.ts.map
 
 # Logs
 logs
