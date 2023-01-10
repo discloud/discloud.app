@@ -1,13 +1,12 @@
 {
   "name": "discloudapp",
-  "version": "0.0.0",
   "license": "Apache-2.0",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "typedoc": "typedoc"
+    "docgen": "typedoc"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

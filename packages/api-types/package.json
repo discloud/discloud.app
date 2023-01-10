@@ -25,6 +25,9 @@
       "types": "./v2.d.ts"
     }
   },
+  "typedoc": {
+    "entryPoint": "./v2.ts"
+  },
   "publishConfig": {
     "access": "public"
   }

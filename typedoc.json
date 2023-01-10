@@ -2,9 +2,7 @@
   "$schema": "https://typedoc.org/schema.json",
   "entryPointStrategy": "packages",
   "entryPoints": [
-    "packages/discloud.app",
-    "packages/rest",
-    "packages/api-types",
+    "packages/*"
   ],
   "out": "docs",
   "json": "docs/docs.json",

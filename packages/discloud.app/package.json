@@ -1,12 +1,15 @@
 {
   "name": "discloud.app",
   "version": "0.2.0",
-  "main": "./dist",
+  "main": "dist",
   "scripts": {
     "build:release": "tsc",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts"
   },
   "repository": {
     "type": "git",
