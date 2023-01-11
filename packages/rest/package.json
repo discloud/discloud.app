@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "dist",
   "scripts": {
     "build:release": "tsc",
@@ -17,7 +17,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@discloudapp/api-types": "^0.2.3",
+    "@discloudapp/api-types": "^0.2.4",
     "undici": "^5.14.0"
   },
   "engines": {
