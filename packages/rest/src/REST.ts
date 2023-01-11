@@ -65,7 +65,14 @@ export class REST {
    * @param options - Request options
    */
   async request(options: InternalRequest) {
-    return this.raw(options).then(r => r.body.json());
+    const res = await this.raw(options);
+
+    const header = res?.headers["content-type"];
+
+    if (header?.includes("application/json"))
+      return res?.body.json();
+
+    return res?.body.arrayBuffer();
   }
 
   /**
