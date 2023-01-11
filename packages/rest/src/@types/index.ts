@@ -1,4 +1,4 @@
-import { BinaryLike } from "crypto";
+import type { BinaryLike } from "node:crypto";
 import { BodyInit, File, request } from "undici";
 import { RequestMethod } from "../@enum";
 
