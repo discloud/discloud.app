@@ -13,9 +13,15 @@ export interface RESTOptions {
    */
   api: string
   /**
+   * How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
+   *
+   * @defaultValue `60`
+   */
+  globalRequestsPerMinute: number
+  /**
    * The version of the API to use
    *
-   * @defaultValue `'2'`
+   * @defaultValue `{APIVersion}`
    */
   version: string
 }
