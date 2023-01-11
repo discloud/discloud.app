@@ -1,3 +1,4 @@
+import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
 import { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
 import { DefaultRestOptions } from "./utils/contants";
@@ -5,6 +6,37 @@ import { DefaultRestOptions } from "./utils/contants";
 export class RequestManager {
   #token!: string;
   options: RESTOptions;
+
+  /**
+   * If the rate limit bucket is currently limited
+   */
+  get #limited() {
+    return this.#localLimited;
+  }
+
+  /**
+   * If the rate limit bucket is currently limited by its limit
+   */
+  get #localLimited() {
+    return this.#remaining < 1 && Date.now() < this.#reset;
+  }
+
+  /**
+   * The remaining requests that can be made before we are rate limited
+   */
+  #remaining = 1;
+
+  /**
+   * The time this rate limit bucket will reset
+   */
+  #reset = 0;
+
+  /**
+   * The time until queued requests can continue
+   */
+  get #timeToReset(): number {
+    return this.#reset - Date.now();
+  }
 
   constructor(options: Partial<RESTOptions>) {
     this.options = { ...DefaultRestOptions, ...options };
@@ -71,12 +103,19 @@ export class RequestManager {
   }
 
   async request(url: string, options: RequestOptions) {
+    while (this.#limited) {
+      await sleep(this.#timeToReset);
+    }
+
     const res = await request(url, { ...options });
 
-    if (res.statusCode > 399 && res.statusCode < 600)
-      await res.body.json().then(body => {
-        throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
-      });
+    this.#remaining = Number(res.headers["ratelimit-remaining"]);
+    this.#reset = Date.now() + (Number(res.headers["ratelimit-reset"]) * 1000);
+
+    if (res.statusCode > 399 && res.statusCode < 600) {
+      const body = await res.body.json();
+      throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
+    }
 
     return res;
   }
