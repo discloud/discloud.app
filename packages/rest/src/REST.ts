@@ -1,5 +1,5 @@
 import { RequestMethod } from "./@enum";
-import { InternalRequest, RequestData, RESTOptions, RouteLike } from "./@types";
+import type { InternalRequest, RequestData, RESTOptions, RouteLike } from "./@types";
 import { RequestManager } from "./RequestManager";
 
 export class REST {
@@ -67,12 +67,10 @@ export class REST {
   async request(options: InternalRequest) {
     const res = await this.raw(options);
 
-    const header = res?.headers["content-type"];
+    if (res.headers["content-type"]?.includes("application/json"))
+      return res.body.json();
 
-    if (header?.includes("application/json"))
-      return res?.body.json();
-
-    return res?.body.arrayBuffer();
+    return res.body.arrayBuffer();
   }
 
   /**
