@@ -1,0 +1,29 @@
+{
+  "name": "@discloudapp/util",
+  "version": "0.1.0",
+  "description": "A utility pack for discloud.app",
+  "main": "dist",
+  "scripts": {
+    "build:release": "tsc",
+    "prepublish": "npm run build:release",
+    "release": "npm run prepublish && npm publish",
+    "test:ts": "tsc --noEmit"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discloud/discloud.app.git"
+  },
+  "keywords": [
+    "discloud"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "undici": "^5.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
