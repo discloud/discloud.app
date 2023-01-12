@@ -5,7 +5,9 @@ import { Readable, Stream } from "node:stream";
 import { File, request } from "undici";
 import { fileNamePattern } from "./constants";
 
+export * from "./BitField";
 export * from "./constants";
+export * from "./ModPermissionsBF";
 
 export async function resolveFile(file: Blob | File | PathLike | RawFile | Readable): Promise<File> {
   if (file instanceof File) return file;
