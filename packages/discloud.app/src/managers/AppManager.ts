@@ -1,11 +1,12 @@
 import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { resolveFile } from "@discloudapp/util";
+import { File } from "undici";
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
-import { resolveFile } from "../util";
 import CachedManager from "./CachedManager";
 
 export default class AppManager extends CachedManager<App> {
@@ -105,7 +106,7 @@ export default class AppManager extends CachedManager<App> {
     options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.post<RESTPostApiUploadResult>(Routes.upload(), {
-      file: options.file,
+      file: <File>options.file,
     });
 
     if ("app" in data)
@@ -118,7 +119,7 @@ export default class AppManager extends CachedManager<App> {
     options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.appCommit(appID), {
-      file: options.file,
+      file: <File>options.file,
     });
 
     return data;

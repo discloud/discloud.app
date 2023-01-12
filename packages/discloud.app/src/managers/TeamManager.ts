@@ -1,10 +1,11 @@
 import { ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { resolveFile } from "@discloudapp/util";
+import { File } from "undici";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";
 import Team from "../structures/Team";
-import { resolveFile } from "../util";
 import BaseManager from "./BaseManager";
 
 export default class TeamManager extends BaseManager {
@@ -96,7 +97,7 @@ export default class TeamManager extends BaseManager {
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppCommitResult
     >(Routes.teamCommit(appID), {
-      file: options.file,
+      file: <File>options.file,
     });
 
     return data;
