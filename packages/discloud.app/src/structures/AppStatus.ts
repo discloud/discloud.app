@@ -1,6 +1,6 @@
 import { ApiAppStatus } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import { calculatePercentage } from "../util";
+import { calculatePercentage } from "@discloudapp/util";
 import Base from "./Base";
 
 export default class AppStatus extends Base {

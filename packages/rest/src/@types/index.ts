@@ -1,4 +1,4 @@
-import type { BinaryLike } from "node:crypto";
+import { RawFile } from "@discloudapp/util";
 import { BodyInit, File, request } from "undici";
 import { RequestMethod } from "../@enum";
 
@@ -31,25 +31,6 @@ export interface RESTOptions {
  */
 export interface RequestHeaders {
   "api-token": string
-  contentType?: string
-}
-
-export interface RawFile {
-  /**
-   * The name of the file
-   */
-  name: string
-  /**
-   * An explicit key to use for key of the formdata field for this file.
-   */
-  key?: string
-  /**
-   * The actual data for the file
-   */
-  data: Blob | BinaryLike | Buffer | DataView | File
-  /**
-   * Content-Type of the file
-   */
   contentType?: string
 }
 

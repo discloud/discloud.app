@@ -156,8 +156,6 @@ export class BitField<S, N> {
   }
 }
 
-export default BitField;
-
 /**
  * Data that can be resolved to give a bitfield. This can be:
  * * A bit number (this can be a number literal or a value taken from {@link BitField.Flags})
@@ -174,3 +172,5 @@ export type BitFieldResolvable<S extends string, N extends bigint | number> =
   | BitFieldResolvable<S, N>[]
 
 type EnumLike<E, V> = Record<keyof E, V>
+
+export default BitField;

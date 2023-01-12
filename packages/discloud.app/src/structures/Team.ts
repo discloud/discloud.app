@@ -1,5 +1,6 @@
 import { ApiTeamApps } from "@discloudapp/api-types/v2";
-import { ModPermissionsFlags, UpdateAppOptions } from "../@types";
+import { ModPermissionsFlags } from "@discloudapp/util";
+import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
