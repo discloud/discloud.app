@@ -16,6 +16,9 @@
 <li><a href="../modules/discloud_app.html">discloud.app</a></li>
 <li><a href="discloud_app.App.html">App</a></li></ul>
 <h1>Class App</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Base for app structures</p>
+</div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
@@ -23,7 +26,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">App</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L6">packages/discloud.app/src/structures/App.ts:6</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L6">packages/discloud.app/src/structures/App.ts:6</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -84,7 +87,7 @@
 <h4 class="tsd-returns-title">Returns <a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L14">packages/discloud.app/src/structures/App.ts:14</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L28">packages/discloud.app/src/structures/App.ts:28</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="apt" class="tsd-anchor"></a>
@@ -92,86 +95,108 @@
 <div class="tsd-signature">apt<span class="tsd-signature-symbol">:</span> <a href="discloud_app.AppAptManager.html" class="tsd-signature-type" data-tsd-kind="Class">AppAptManager</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#apt">apt</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L17">packages/discloud.app/src/structures/BaseApp.ts:17</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L37">packages/discloud.app/src/structures/BaseApp.ts:37</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="autoDeployGit" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>auto<wbr/>Deploy<wbr/>Git</span><a href="#autoDeployGit" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">auto<wbr/>Deploy<wbr/>Git<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">auto<wbr/>Deploy<wbr/>Git<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>If your app has auto deploy on github enabled</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L8">packages/discloud.app/src/structures/App.ts:8</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L10">packages/discloud.app/src/structures/App.ts:10</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="autoRestart" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>auto<wbr/>Restart</span><a href="#autoRestart" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">auto<wbr/>Restart<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<div class="tsd-signature">auto<wbr/>Restart<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>If your app has auto-restart enabled</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#autoRestart">autoRestart</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L10">packages/discloud.app/src/structures/BaseApp.ts:10</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L15">packages/discloud.app/src/structures/BaseApp.ts:15</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="constructor-1" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">constructor<span class="tsd-signature-symbol">:</span> <a href="../interfaces/discloud_app.Constructor.html" class="tsd-signature-type" data-tsd-kind="Interface">Constructor</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <p>Inherited from BaseApp.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/Base.ts#L5">packages/discloud.app/src/structures/Base.ts:5</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/Base.ts#L5">packages/discloud.app/src/structures/Base.ts:5</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="discloudApp" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>discloud<wbr/>App</span><a href="#discloudApp" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">discloud<wbr/>App<span class="tsd-signature-symbol">:</span> <a href="discloud_app.DiscloudApp.html" class="tsd-signature-type" data-tsd-kind="Class">DiscloudApp</a></div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#discloudApp">discloudApp</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/Base.ts#L9">packages/discloud.app/src/structures/Base.ts:9</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/Base.ts#L12">packages/discloud.app/src/structures/Base.ts:12</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="exitCode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>exit<wbr/>Code</span><a href="#exitCode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">exit<wbr/>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">exit<wbr/>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>Your app&#39;s exit code on stopping</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L9">packages/discloud.app/src/structures/App.ts:9</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L14">packages/discloud.app/src/structures/App.ts:14</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Your app id</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#id">id</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L11">packages/discloud.app/src/structures/BaseApp.ts:11</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L19">packages/discloud.app/src/structures/BaseApp.ts:19</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="lang" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>lang</span><a href="#lang" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">lang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">lang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Your app programming language</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#lang">lang</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L12">packages/discloud.app/src/structures/BaseApp.ts:12</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L23">packages/discloud.app/src/structures/BaseApp.ts:23</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="mainFile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>main<wbr/>File</span><a href="#mainFile" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">main<wbr/>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">main<wbr/>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The main file of your application</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#mainFile">mainFile</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L13">packages/discloud.app/src/structures/BaseApp.ts:13</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L27">packages/discloud.app/src/structures/BaseApp.ts:27</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="mods" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mods</span><a href="#mods" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">mods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature">mods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>Moderators IDs of your app</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L10">packages/discloud.app/src/structures/App.ts:10</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L18">packages/discloud.app/src/structures/App.ts:18</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The name of your application</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#name">name</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L14">packages/discloud.app/src/structures/BaseApp.ts:14</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L31">packages/discloud.app/src/structures/BaseApp.ts:31</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="online" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>online</span><a href="#online" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">online<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<div class="tsd-signature">online<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>If your app is online</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L11">packages/discloud.app/src/structures/App.ts:11</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L22">packages/discloud.app/src/structures/App.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="ram" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ram</span><a href="#ram" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">ram<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature">ram<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The ram quantity for your application</p>
+</div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#ram">ram</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L15">packages/discloud.app/src/structures/BaseApp.ts:15</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L35">packages/discloud.app/src/structures/BaseApp.ts:35</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="ramKilled" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ram<wbr/>Killed</span><a href="#ramKilled" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">ram<wbr/>Killed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<div class="tsd-signature">ram<wbr/>Killed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>If your application was stopped due to lack of RAM</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L12">packages/discloud.app/src/structures/App.ts:12</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L26">packages/discloud.app/src/structures/App.ts:26</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="team" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>team</span><a href="#team" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">team<span class="tsd-signature-symbol">:</span> <a href="discloud_app.AppTeamManager.html" class="tsd-signature-type" data-tsd-kind="Class">AppTeamManager</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a><span class="tsd-signature-symbol">&gt;</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#team">team</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L18">packages/discloud.app/src/structures/BaseApp.ts:18</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L38">packages/discloud.app/src/structures/BaseApp.ts:38</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="_clone" class="tsd-anchor"></a>
@@ -182,7 +207,7 @@
 <h4 class="tsd-returns-title">Returns <a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#_clone">_clone</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/Base.ts#L11">packages/discloud.app/src/structures/Base.ts:11</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/Base.ts#L14">packages/discloud.app/src/structures/Base.ts:14</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="_patch" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_patch</span><a href="#_patch" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited">
@@ -196,7 +221,7 @@
 <h4 class="tsd-returns-title">Returns <a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#_patch">_patch</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/Base.ts#L15">packages/discloud.app/src/structures/Base.ts:15</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/Base.ts#L18">packages/discloud.app/src/structures/Base.ts:18</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="_update" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_update</span><a href="#_update" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited">
@@ -210,107 +235,136 @@
 <h4 class="tsd-returns-title">Returns <a href="discloud_app.App.html" class="tsd-signature-type" data-tsd-kind="Class">App</a></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#_update">_update</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/Base.ts#L20">packages/discloud.app/src/structures/Base.ts:20</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/Base.ts#L23">packages/discloud.app/src/structures/Base.ts:23</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="backup" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>backup</span><a href="#backup" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="backup.backup-1">backup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.AppBackup.html" class="tsd-signature-type" data-tsd-kind="Class">AppBackup</a><span class="tsd-signature-symbol">&gt;</span><a href="#backup.backup-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get backups of your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.AppBackup.html" class="tsd-signature-type" data-tsd-kind="Class">AppBackup</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#backup">backup</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L46">packages/discloud.app/src/structures/BaseApp.ts:46</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L75">packages/discloud.app/src/structures/BaseApp.ts:75</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="delete" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete</span><a href="#delete" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="delete.delete-1">delete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#delete.delete-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Delete your application from Discloud.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#delete">delete</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L54">packages/discloud.app/src/structures/BaseApp.ts:54</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L89">packages/discloud.app/src/structures/BaseApp.ts:89</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="restart" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>restart</span><a href="#restart" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="restart.restart-1">restart<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#restart.restart-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Restart your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#restart">restart</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L27">packages/discloud.app/src/structures/App.ts:27</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L41">packages/discloud.app/src/structures/App.ts:41</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="setRam" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Ram</span><a href="#setRam" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="setRam.setRam-1">set<wbr/>Ram<span class="tsd-signature-symbol">(</span>quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTPutApiAppRamResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTPutApiAppRamResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#setRam.setRam-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Set the quantity of ram to your application</p>
+
+<h3>Returns</h3><p>Promise <a href="../interfaces/discloud_app.RESTPutApiAppRamResult.html">RESTPutApiAppRamResult</a></p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>quantity: <span class="tsd-signature-type">number</span></h5></li></ul></div>
+<h5>quantity: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Minimum values is <code>100</code> to <code>bot</code> or <code>512</code> for <code>site</code></p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTPutApiAppRamResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTPutApiAppRamResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#setRam">setRam</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L37">packages/discloud.app/src/structures/BaseApp.ts:37</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L63">packages/discloud.app/src/structures/BaseApp.ts:63</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="start" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>start</span><a href="#start" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="start.start-1">start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#start.start-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Start your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#start">start</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L35">packages/discloud.app/src/structures/App.ts:35</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L49">packages/discloud.app/src/structures/App.ts:49</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="status" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>status</span><a href="#status" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="status.status-1">status<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.AppStatus.html" class="tsd-signature-type" data-tsd-kind="Class">AppStatus</a><span class="tsd-signature-symbol">&gt;</span><a href="#status.status-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get the status of your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="discloud_app.AppStatus.html" class="tsd-signature-type" data-tsd-kind="Class">AppStatus</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#status">status</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L58">packages/discloud.app/src/structures/BaseApp.ts:58</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L96">packages/discloud.app/src/structures/BaseApp.ts:96</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="stop" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stop</span><a href="#stop" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="stop.stop-1">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#stop.stop-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Stop your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTApiBaseResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTApiBaseResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#stop">stop</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L43">packages/discloud.app/src/structures/App.ts:43</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L57">packages/discloud.app/src/structures/App.ts:57</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="terminal" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>terminal</span><a href="#terminal" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="terminal.terminal-1">terminal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.ApiTerminal.html" class="tsd-signature-type" data-tsd-kind="Interface">ApiTerminal</a><span class="tsd-signature-symbol">&gt;</span><a href="#terminal.terminal-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get logs of your application on Discloud</p>
+</div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.ApiTerminal.html" class="tsd-signature-type" data-tsd-kind="Interface">ApiTerminal</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#terminal">terminal</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L50">packages/discloud.app/src/structures/BaseApp.ts:50</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L82">packages/discloud.app/src/structures/BaseApp.ts:82</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="toString" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>String</span><a href="#toString" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="toString.toString-1">to<wbr/>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#toString.toString-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography">
+<h3>Returns</h3><p>app id</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#toString">toString</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/BaseApp.ts#L62">packages/discloud.app/src/structures/BaseApp.ts:62</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/BaseApp.ts#L136">packages/discloud.app/src/structures/BaseApp.ts:136</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="update" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update</span><a href="#update" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-<li class="tsd-signature tsd-anchor-link" id="update.update-1">update<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discloud_app.UpdateAppOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAppOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTPutApiAppCommitResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTPutApiAppCommitResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#update.update-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="update.update-1">update<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/discloud_app.UploadAppOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">UploadAppOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTPutApiAppCommitResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTPutApiAppCommitResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#update.update-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Update an of your apps on Discloud.</p>
+
+<h3>Returns</h3><p>Promise <a href="../interfaces/discloud_app.RESTPutApiAppCommitResult.html">RESTPutApiAppCommitResult</a></p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>options: <a href="../interfaces/discloud_app.UpdateAppOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAppOptions</a></h5></li></ul></div>
+<h5>options: <a href="../interfaces/discloud_app.UploadAppOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">UploadAppOptions</a></h5>
+<div class="tsd-comment tsd-typography"><p>Options to update your app.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" class="tsd-signature-type external" target="_blank">Promise</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/discloud_app.RESTPutApiAppCommitResult.html" class="tsd-signature-type" data-tsd-kind="Interface">RESTPutApiAppCommitResult</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="discloud_app.BaseApp.html">BaseApp</a>.<a href="discloud_app.BaseApp.html#update">update</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/7c7dcd2/packages/discloud.app/src/structures/App.ts#L51">packages/discloud.app/src/structures/App.ts:51</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/519b8af/packages/discloud.app/src/structures/App.ts#L65">packages/discloud.app/src/structures/App.ts:65</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -332,7 +386,7 @@
 <ul>
 <li class="current"><a href="../modules.html">discloudapp</a>
 <ul>
-<li class="tsd-kind-module"><a href="../modules/_discloudapp_api_types.html">@discloudapp/api-<wbr/>types -<wbr/> v0.2.4</a></li>
+<li class="tsd-kind-module"><a href="../modules/_discloudapp_api_types.html">@discloudapp/api-<wbr/>types -<wbr/> v0.2.5</a></li>
 <li class="tsd-kind-module"><a href="../modules/_discloudapp_rest.html">@discloudapp/rest -<wbr/> v0.3.3</a></li>
 <li class="tsd-kind-module"><a href="../modules/_discloudapp_util.html">@discloudapp/util -<wbr/> v0.2.0</a></li>
 <li class="current tsd-kind-module"><a href="../modules/discloud_app.html">discloud.app -<wbr/> v0.4.0</a></li></ul></li></ul></div></details></nav>
