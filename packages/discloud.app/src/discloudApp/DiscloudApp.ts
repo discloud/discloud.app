@@ -7,6 +7,9 @@ import TeamManager from "../managers/TeamManager";
 import User from "../structures/User";
 import { DefaultDiscloudAppOptions } from "../util";
 
+/**
+ * Client for Discloud API
+ */
 export default class DiscloudApp {
   #token?: string;
   options: Omit<DiscloudAppOptions, "token">;

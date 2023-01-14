@@ -40,9 +40,9 @@ export {
 };
 
 /**
- * This is an instance of `DiscloudApp`
+ * This is an instance of {@link DiscloudApp}
  * 
- * Use this instead of instantiating the `DiscloudApp` class to use the library.
+ * Use this instead of instantiating the {@link DiscloudApp} class to use the library.
  * 
  * @example
  * 

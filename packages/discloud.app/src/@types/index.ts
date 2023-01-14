@@ -8,11 +8,11 @@ export interface DiscloudAppOptions {
   token?: string
 }
 
-export interface CreateAppOptions {
-  file: FileResolvable
-}
+export type CreateAppOptions = UploadAppOptions
 
-export interface UpdateAppOptions {
+export type UpdateAppOptions = UploadAppOptions
+
+export interface UploadAppOptions {
   file: FileResolvable
 }
 

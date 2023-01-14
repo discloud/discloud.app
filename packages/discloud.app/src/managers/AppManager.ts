@@ -1,5 +1,5 @@
 import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
-import { resolveFile } from "@discloudapp/util";
+import { FileResolvable, resolveFile } from "@discloudapp/util";
 import { File } from "undici";
 import { CreateAppOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
@@ -9,11 +9,19 @@ import AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
 import CachedManager from "./CachedManager";
 
+/**
+ * Manager for apps on Discloud
+ */
 export default class AppManager extends CachedManager<App> {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp, App);
   }
 
+  /**
+   * Get the status of your application on Discloud
+   * 
+   * @param appID - Your app id
+   */
   async status(appID: string): Promise<AppStatus>
   async status(appID?: "all"): Promise<Map<string, AppStatus>>
   async status(appID = "all") {
@@ -37,6 +45,11 @@ export default class AppManager extends CachedManager<App> {
     return new AppStatus(this.discloudApp, data.apps);
   }
 
+  /**
+   * Get logs of your application on Discloud
+   * 
+   * @param appID - Your app id
+   */
   async terminal(appID: string): Promise<ApiTerminal>
   async terminal(appID?: "all"): Promise<Map<string, ApiTerminal>>
   async terminal(appID = "all") {
@@ -59,6 +72,11 @@ export default class AppManager extends CachedManager<App> {
     }
   }
 
+  /**
+   * Get backups of your application on Discloud
+   * 
+   * @param appID - Your app id
+   */
   async backup(appID: string): Promise<AppBackup>
   async backup(appID?: "all"): Promise<Map<string, AppBackup>>
   async backup(appID = "all") {
@@ -82,6 +100,13 @@ export default class AppManager extends CachedManager<App> {
     return new AppBackup(this.discloudApp, data.backups);
   }
 
+  /**
+   * Set the quantity of ram to your application
+   * 
+   * @param appID - Your app id
+   * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
+   * @returns Promise {@link RESTPutApiAppRamResult}
+   */
   async ram(appID: string, quantity: number) {
     if (!appID) throw new Error("App ID is missing.");
 
@@ -102,6 +127,12 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Upload a new app or site to Discloud
+   * 
+   * @param options - Options for create a new app. A {@link FileResolvable} is required.
+   * @returns Promise {@link RESTPostApiUploadResult}
+   */
   async create(options: CreateAppOptions) {
     options.file = await resolveFile(options.file);
 
@@ -115,6 +146,13 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Update an of your apps on Discloud.
+   * 
+   * @param appID - Your app id
+   * @param options - Options to update your app.
+   * @returns Promise {@link RESTPutApiAppCommitResult}
+   */
   async update(appID: string, options: UpdateAppOptions) {
     options.file = await resolveFile(options.file);
 
@@ -125,6 +163,11 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Delete your application from Discloud.
+   * 
+   * @param appID - Your app id
+   */
   async delete(appID: string): Promise<RESTDeleteApiAppDeleteResult>
   async delete(appID?: "all"): Promise<ApiAppManagerRemovedAll>
   async delete(appID = "all") {
@@ -145,6 +188,11 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Restart your application on Discloud.
+   * 
+   * @param appID - You app id
+   */
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
   async restart(appID?: "all"): Promise<ApiAppManagerRestartedAll>
   async restart(appID = "all") {
@@ -170,6 +218,11 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Start your application on Discloud.
+   * 
+   * @param appID - You app id
+   */
   async start(appID: string): Promise<RESTPutApiAppStartResult>
   async start(appID?: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID = "all") {
@@ -195,6 +248,11 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Stop your application on Discloud.
+   * 
+   * @param appID - You app id
+   */
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
   async stop(appID?: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID = "all") {
@@ -220,6 +278,11 @@ export default class AppManager extends CachedManager<App> {
     return data;
   }
 
+  /**
+   * Get information of your application on Discloud.
+   * 
+   * @param appID - You app id.
+   */
   async fetch(appID: string): Promise<App>
   async fetch(appID?: "all"): Promise<Map<string, App>>
   async fetch(appID = "all") {

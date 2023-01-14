@@ -2,6 +2,9 @@ import { Constructor } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import DataManager from "./DataManager";
 
+/**
+ * Manager of cache
+ */
 export default abstract class CachedManager<T> extends DataManager<T> {
   #cache: Map<string, T> = new Map();
 
