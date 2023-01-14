@@ -9,7 +9,7 @@ export interface RESTGetApiUserResult extends RESTApiBaseResult {
 
 export interface ApiUser {
   /**
-   * Your application IDs
+   * Your applications ID
    */
   apps: string[]
   /**
@@ -45,7 +45,7 @@ export interface ApiUser {
    */
   lastDataLeft?: LastDataLeft,
   /**
-   * Timestamp of when will your plan end
+   * Date of when will your plan end
    */
   planDataEnd?: string
 }

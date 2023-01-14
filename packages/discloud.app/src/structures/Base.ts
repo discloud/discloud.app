@@ -5,6 +5,9 @@ interface Base {
   constructor: Constructor<this>
 }
 
+/**
+ * Base for all structures
+ */
 abstract class Base {
   constructor(public readonly discloudApp: DiscloudApp) { }
 

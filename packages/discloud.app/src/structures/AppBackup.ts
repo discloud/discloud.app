@@ -6,9 +6,22 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 class AppBackup extends Base {
-  id;
-  url;
+  /**
+   * Your app id
+   */
+  id: string;
+  /**
+   * The backup url.
+   * - You can access it `only once`.
+   */
+  url: string;
+  /**
+   * The backup status
+   */
   status?: string;
+  /**
+   * The backup {@link Buffer}
+   */
   data?: Buffer;
 
   constructor(discloudApp: DiscloudApp, backup: ApiAppBackupAll | ApiAppBackup) {
@@ -21,8 +34,14 @@ class AppBackup extends Base {
       this.status = backup.status;
   }
 
+  /**
+   * Make backup of your application
+   * 
+   * @param path - Backup path
+   * @param fileName - Backup file name
+   */
   async download(path: PathLike = cwd(), fileName: string = this.id) {
-    this.data = Buffer.from(await fetch(this.url).then(res => res.arrayBuffer()));
+    this.data = await fetch(this.url).then(res => res.arrayBuffer()).then(Buffer.from);
 
     const file = `${path}/${fileName}.${this.url.split(".").at(-1)}`;
 

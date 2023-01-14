@@ -19,12 +19,3 @@ export interface UploadAppOptions {
 export type LocaleString =
   | "en-US"
   | "pt-BR"
-
-export type AptString =
-  | "canvas"
-  | "puppeteer"
-  | "java"
-  | "ffmpeg"
-  | "libgl"
-  | "openssl"
-  | "tools"

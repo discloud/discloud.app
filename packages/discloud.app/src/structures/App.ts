@@ -4,11 +4,25 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseApp from "./BaseApp";
 
 export default class App extends BaseApp {
-  // ApiApp
-  autoDeployGit;
+  /**
+   * If your app has auto deploy on github enabled
+   */
+  autoDeployGit: string;
+  /**
+   * Your app's exit code on stopping
+   */
   exitCode;
+  /**
+   * Moderators IDs of your app
+   */
   mods;
+  /**
+   * If your app is online
+   */
   online;
+  /**
+   * If your application was stopped due to lack of RAM
+   */
   ramKilled;
 
   constructor(

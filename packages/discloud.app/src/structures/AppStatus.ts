@@ -1,23 +1,50 @@
-import { ApiAppStatus } from "@discloudapp/api-types/v2";
+import { ApiAppStatus, ApiNetIO } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import { calculatePercentage } from "@discloudapp/util";
 import Base from "./Base";
 
 export default class AppStatus extends Base {
-  container;
-  cpu;
-  id;
-  last_restart;
-  memory;
-
+  /**
+   * Status of your application
+   * - It can be `Online` or `Offline` for example
+   */
+  container: string;
+  /**
+   * CPU usage as percentage
+   */
+  cpu: string;
+  /**
+   * Your app id
+   */
+  id: string;
+  /**
+   * Relative time of the last restart
+   */
+  lastRestart: string;
+  /**
+   * RAM usage
+   */
+  memory?: string;
   /**
    * Percentage of memory usage
    */
-  memoryUsage;
-  netIO;
-  ssd;
-  startedAt;
-  startedAtTimestamp;
+  memoryUsage?: number;
+  /**
+   * Internet usage
+   */
+  netIO: ApiNetIO;
+  /**
+   * Storage space
+   */
+  ssd: string;
+  /**
+   * Date of your application has started
+   */
+  startedAt?: Date;
+  /**
+   * Timestamp of when your app started
+   */
+  startedAtTimestamp?: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiAppStatus) {
     super(discloudApp);
@@ -25,7 +52,7 @@ export default class AppStatus extends Base {
     this.container = data.container;
     this.cpu = data.cpu;
     this.id = data.id;
-    this.last_restart = data.last_restart;
+    this.lastRestart = data.last_restart;
 
     if (data.memory) {
       this.memory = data.memory;

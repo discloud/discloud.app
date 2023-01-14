@@ -4,16 +4,46 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class User extends Base {
-  appIDs;
-  customdomains;
-  id;
-  locale;
-  plan;
-  planDataEnd;
-  planDataEndTimestamp;
-  ramUsedMb;
-  subdomains;
-  totalRamMb;
+  /**
+   * Your applications ID
+   */
+  appIDs: string[];
+  /**
+   * Your custom domains on Discloud
+   */
+  customdomains: string[];
+  /**
+   * Your id
+   */
+  id: string;
+  /**
+   * Your locale
+   */
+  locale: string;
+  /**
+   * Your plan
+   */
+  plan: string;
+  /**
+   * Date of when will your plan end
+   */
+  planDataEnd?: Date;
+  /**
+   * Timestamp of when will your plan end
+   */
+  planDataEndTimestamp?: number;
+  /**
+   * Quantity of RAM was used for your applications
+   */
+  ramUsedMb: number;
+  /**
+   * Your subdomains on Discloud
+   */
+  subdomains: string[];
+  /**
+   * Your total RAM quantity
+   */
+  totalRamMb: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
@@ -39,6 +69,13 @@ export default class User extends Base {
     return this.discloudApp.apps;
   }
 
+  /**
+   * Set your locale on Discloud
+   * 
+   * @param locale - Your locale like "en-US".
+   * @see {@link LocaleString}
+   * @returns Promise {@link Boolean}
+   */
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
     const data = await this.discloudApp.rest.put<RESTPutApiLocaleResult>(Routes.locale(locale));
 
@@ -48,12 +85,20 @@ export default class User extends Base {
     return data.locale === locale;
   }
 
+  /**
+   * Fetch a user from Discloud API
+   * 
+   * @returns Promise {@link User}
+   */
   async fetch() {
     const data = await this.discloudApp.rest.get<RESTGetApiUserResult>(Routes.user());
 
     return this._patch(data.user);
   }
 
+  /**
+   * @returns user id
+   */
   toString() {
     return this.id;
   }

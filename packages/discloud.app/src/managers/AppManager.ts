@@ -189,7 +189,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   /**
-   * Restart your application on Discloud.
+   * Restart your application on Discloud
    * 
    * @param appID - You app id
    */
@@ -219,7 +219,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   /**
-   * Start your application on Discloud.
+   * Start your application on Discloud
    * 
    * @param appID - You app id
    */
@@ -249,7 +249,7 @@ export default class AppManager extends CachedManager<App> {
   }
 
   /**
-   * Stop your application on Discloud.
+   * Stop your application on Discloud
    * 
    * @param appID - You app id
    */

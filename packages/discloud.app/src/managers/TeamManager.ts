@@ -117,7 +117,7 @@ export default class TeamManager extends BaseManager {
   }
 
   /**
-   * Update an of your team apps on Discloud.
+   * Update an of your team apps on Discloud
    * 
    * @param appID - Your team app id
    * @param options - Options to update your app.
@@ -136,7 +136,7 @@ export default class TeamManager extends BaseManager {
   }
 
   /**
-   * Restart your team application on Discloud.
+   * Restart your team application on Discloud
    * 
    * @param appID - Your team app id
    */
@@ -154,7 +154,7 @@ export default class TeamManager extends BaseManager {
   }
 
   /**
-   * Start your team application on Discloud.
+   * Start your team application on Discloud
    * 
    * @param appID - Your team app id
    */
@@ -172,7 +172,7 @@ export default class TeamManager extends BaseManager {
   }
 
   /**
-   * Stop your team application on Discloud.
+   * Stop your team application on Discloud
    * 
    * @param appID - Your team app id
    */

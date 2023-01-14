@@ -3,10 +3,21 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseApp from "./BaseApp";
 
 export default class AppUploaded extends BaseApp {
-  // ApiUploadApp
+  /**
+   * The timestamp of the upload of your application
+   */
   addedAtTimestamp;
+  /**
+   * Your app's avatar url
+   */
   avatarURL;
+  /**
+   * Your app's type
+   */
   type;
+  /**
+   * The version of the package
+   */
   version;
 
   constructor(

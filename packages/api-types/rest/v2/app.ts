@@ -122,7 +122,7 @@ export interface ApiAppStatus extends BaseApiApp {
    */
   container: string
   /**
-   * CPU usage in percentage
+   * CPU usage as percentage
    */
   cpu: string
   /**
