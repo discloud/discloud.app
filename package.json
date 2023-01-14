@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "docgen": "typedoc"
+    "docgen": "typedoc && typedoc --options typedoc_md.json"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
