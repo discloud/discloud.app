@@ -5,7 +5,7 @@ import { Upload } from "./Upload";
 import { User } from "./User";
 
 export const Routes = new class Routes {
-  /** app */
+  // app
   app = App.app;
   appApt = App.apt;
   appBackup = App.backup;
@@ -19,10 +19,10 @@ export const Routes = new class Routes {
   appStop = App.stop;
   appTeam = App.team;
 
-  /** locale */
+  // locale
   locale = Locale.locale;
 
-  /** team */
+  // team
   team = Team.team;
   teamBackup = Team.backup;
   teamCommit = Team.commit;
@@ -33,9 +33,9 @@ export const Routes = new class Routes {
   teamStatus = Team.status;
   teamStop = Team.stop;
 
-  /** upload */
+  // upload
   upload = Upload.upload;
 
-  /** user */
+  // user
   user = User.user;
 };
