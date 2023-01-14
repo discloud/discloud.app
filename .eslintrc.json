@@ -16,6 +16,7 @@
     "@typescript-eslint/no-extra-semi": "warn",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-var-requires": "off",
     "comma-dangle": ["warn", "always-multiline"],
     "indent": ["warn", 2, { "SwitchCase": 1 }],
