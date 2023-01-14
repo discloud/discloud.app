@@ -1,6 +1,4 @@
 {
-  "exclude": ["node_modules", "**/.ignore_*", "**/dist/"],
-  "include": ["packages", "**.ts"],
   "compilerOptions": {
     // "incremental": true,
     // "composite": true,
@@ -11,14 +9,14 @@
     "target": "ESNext",
     "lib": ["ESNext"],
     // "jsx": "preserve",
-    // "experimentalDecorators": true,
-    // "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     // "jsxFactory": "",
     // "jsxFragmentFactory": "",
     // "jsxImportSource": "",
     // "reactNamespace": "",
     // "noLib": true,
-    // "useDefineForClassFields": true,
+    "useDefineForClassFields": true,
     // "moduleDetection": "auto",
     "module": "commonjs",
     // "rootDir": "./",
@@ -40,7 +38,7 @@
     // "emitDeclarationOnly": true,
     // "sourceMap": true,
     // "outFile": "./",
-    // "outDir": "./",
+    "outDir": "dist",
     // "removeComments": true,
     // "noEmit": true,
     // "importHelpers": true,
@@ -54,7 +52,7 @@
     "newLine": "lf",
     // "stripInternal": true,
     // "noEmitHelpers": true,
-    // "noEmitOnError": true,
+    "noEmitOnError": true,
     "preserveConstEnums": true,
     // "declarationDir": "./",
     // "preserveValueImports": true,
@@ -83,6 +81,6 @@
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
     // "skipDefaultLibCheck": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   }
 }
