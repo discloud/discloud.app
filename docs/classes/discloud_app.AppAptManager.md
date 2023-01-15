@@ -59,7 +59,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L10)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L10)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -107,7 +107,7 @@ Promise [RESTPutApiAppAptResult](../interfaces/discloud_app.RESTPutApiAppAptResu
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ___
 
@@ -131,4 +131,4 @@ Promise [RESTDeleteApiAppAptResult](../interfaces/discloud_app.RESTDeleteApiAppA
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:39](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/AppAptManager.ts#L39)
+[packages/discloud.app/src/managers/AppAptManager.ts:39](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L39)

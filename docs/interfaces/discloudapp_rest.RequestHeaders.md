@@ -10,10 +10,21 @@ Possible headers for an API call
 
 ### Properties
 
+- [User-Agent](discloudapp_rest.RequestHeaders.md#user-agent)
 - [api-token](discloudapp_rest.RequestHeaders.md#api-token)
 - [contentType](discloudapp_rest.RequestHeaders.md#contenttype)
 
 ## Properties
+
+### User-Agent
+
+• `Optional` **User-Agent**: `string`
+
+#### Defined in
+
+[packages/rest/src/@types/index.ts:45](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L45)
+
+___
 
 ### api-token
 
@@ -21,7 +32,7 @@ Possible headers for an API call
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:33](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L33)
+[packages/rest/src/@types/index.ts:43](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L43)
 
 ___
 
@@ -31,4 +42,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:34](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L34)
+[packages/rest/src/@types/index.ts:44](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L44)

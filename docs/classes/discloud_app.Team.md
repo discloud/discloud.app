@@ -64,7 +64,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:37](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L37)
+[packages/discloud.app/src/structures/Team.ts:37](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L37)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -104,7 +104,7 @@ Your team's app exit code on stop
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:15](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L15)
+[packages/discloud.app/src/structures/Team.ts:15](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L15)
 
 ___
 
@@ -116,7 +116,7 @@ Your team application id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:11](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L11)
+[packages/discloud.app/src/structures/Team.ts:11](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L11)
 
 ___
 
@@ -128,7 +128,7 @@ Your team's app programming language
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:19](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L19)
+[packages/discloud.app/src/structures/Team.ts:19](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L19)
 
 ___
 
@@ -140,7 +140,7 @@ Your team application name
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:23](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L23)
+[packages/discloud.app/src/structures/Team.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L23)
 
 ___
 
@@ -152,7 +152,7 @@ If your team application is online
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:27](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L27)
+[packages/discloud.app/src/structures/Team.ts:27](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L27)
 
 ___
 
@@ -164,7 +164,7 @@ Your permissions to manage this application.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:31](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L31)
+[packages/discloud.app/src/structures/Team.ts:31](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L31)
 
 ___
 
@@ -176,7 +176,7 @@ If your team's app stopped due to low RAM
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:35](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L35)
+[packages/discloud.app/src/structures/Team.ts:35](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L35)
 
 ## Methods
 
@@ -194,7 +194,7 @@ If your team's app stopped due to low RAM
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L23)
+[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L23)
 
 ___
 
@@ -258,7 +258,7 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:52](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L52)
+[packages/discloud.app/src/structures/Team.ts:52](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L52)
 
 ___
 
@@ -274,7 +274,7 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:93](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L93)
+[packages/discloud.app/src/structures/Team.ts:93](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L93)
 
 ___
 
@@ -298,7 +298,7 @@ Promise [RESTPutApiAppRamResult](../interfaces/discloud_app.RESTPutApiAppRamResu
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:62](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L62)
+[packages/discloud.app/src/structures/Team.ts:62](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L62)
 
 ___
 
@@ -314,7 +314,7 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:104](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L104)
+[packages/discloud.app/src/structures/Team.ts:104](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L104)
 
 ___
 
@@ -330,7 +330,7 @@ Get the status for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:69](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L69)
+[packages/discloud.app/src/structures/Team.ts:69](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L69)
 
 ___
 
@@ -346,7 +346,7 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:115](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L115)
+[packages/discloud.app/src/structures/Team.ts:115](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L115)
 
 ___
 
@@ -362,7 +362,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:76](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L76)
+[packages/discloud.app/src/structures/Team.ts:76](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L76)
 
 ___
 
@@ -378,7 +378,7 @@ app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:126](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L126)
+[packages/discloud.app/src/structures/Team.ts:126](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L126)
 
 ___
 
@@ -402,4 +402,4 @@ Promise [RESTPutApiAppCommitResult](../interfaces/discloud_app.RESTPutApiAppComm
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Team.ts:86](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Team.ts#L86)
+[packages/discloud.app/src/structures/Team.ts:86](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Team.ts#L86)

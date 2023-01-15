@@ -17,6 +17,7 @@ Internal request options
 ### Properties
 
 - [body](discloud_app.InternalRequest.md#body)
+- [dispatcher](discloud_app.InternalRequest.md#dispatcher)
 - [file](discloud_app.InternalRequest.md#file)
 - [fullRoute](discloud_app.InternalRequest.md#fullroute)
 - [headers](discloud_app.InternalRequest.md#headers)
@@ -37,7 +38,23 @@ The body to send to this request.
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:40
+packages/rest/dist/@types/index.d.ts:51
+
+___
+
+### dispatcher
+
+• `Optional` **dispatcher**: `Agent`
+
+The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
+
+#### Inherited from
+
+[RequestData](discloud_app.RequestData.md).[dispatcher](discloud_app.RequestData.md#dispatcher)
+
+#### Defined in
+
+packages/rest/dist/@types/index.d.ts:55
 
 ___
 
@@ -53,7 +70,7 @@ File to be attached to this request
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:44
+packages/rest/dist/@types/index.d.ts:59
 
 ___
 
@@ -63,7 +80,7 @@ ___
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:60
+packages/rest/dist/@types/index.d.ts:75
 
 ___
 
@@ -79,7 +96,7 @@ Additional headers to add to this request
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:48
+packages/rest/dist/@types/index.d.ts:63
 
 ___
 
@@ -89,7 +106,7 @@ ___
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:61
+packages/rest/dist/@types/index.d.ts:76
 
 ___
 
@@ -105,4 +122,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:52
+packages/rest/dist/@types/index.d.ts:67

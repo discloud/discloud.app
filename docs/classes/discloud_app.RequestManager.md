@@ -13,6 +13,7 @@
 ### Properties
 
 - [#private](discloud_app.RequestManager.md##private)
+- [agent](discloud_app.RequestManager.md#agent)
 - [globalRemaining](discloud_app.RequestManager.md#globalremaining)
 - [globalReset](discloud_app.RequestManager.md#globalreset)
 - [options](discloud_app.RequestManager.md#options)
@@ -42,7 +43,7 @@
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:22
+packages/rest/dist/RequestManager.d.ts:19
 
 ## Properties
 
@@ -56,6 +57,19 @@ packages/rest/dist/RequestManager.d.ts:4
 
 ___
 
+### agent
+
+• `Optional` **agent**: `Dispatcher`
+
+The [Agent](https://undici.nodejs.org/#/docs/api/Agent) for all requests
+performed by this manager.
+
+#### Defined in
+
+packages/rest/dist/RequestManager.d.ts:10
+
+___
+
 ### globalRemaining
 
 • **globalRemaining**: `number`
@@ -64,7 +78,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:13
+packages/rest/dist/RequestManager.d.ts:14
 
 ___
 
@@ -76,7 +90,7 @@ The timestamp at which the global bucket resets
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:17
+packages/rest/dist/RequestManager.d.ts:18
 
 ___
 
@@ -102,7 +116,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:9
+packages/rest/dist/RequestManager.d.ts:23
 
 ___
 
@@ -118,7 +132,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:21
+packages/rest/dist/RequestManager.d.ts:27
 
 ## Methods
 
@@ -139,7 +153,7 @@ packages/rest/dist/RequestManager.d.ts:21
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:35
+packages/rest/dist/RequestManager.d.ts:40
 
 ___
 
@@ -164,7 +178,7 @@ ___
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:29
+packages/rest/dist/RequestManager.d.ts:34
 
 ___
 
@@ -186,4 +200,4 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:28
+packages/rest/dist/RequestManager.d.ts:33

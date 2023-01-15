@@ -17,6 +17,7 @@ Internal request options
 ### Properties
 
 - [body](discloudapp_rest.InternalRequest.md#body)
+- [dispatcher](discloudapp_rest.InternalRequest.md#dispatcher)
 - [file](discloudapp_rest.InternalRequest.md#file)
 - [fullRoute](discloudapp_rest.InternalRequest.md#fullroute)
 - [headers](discloudapp_rest.InternalRequest.md#headers)
@@ -37,7 +38,23 @@ The body to send to this request.
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:44](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L44)
+[packages/rest/src/@types/index.ts:55](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L55)
+
+___
+
+### dispatcher
+
+• `Optional` **dispatcher**: `Agent`
+
+The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
+
+#### Inherited from
+
+[RequestData](discloudapp_rest.RequestData.md).[dispatcher](discloudapp_rest.RequestData.md#dispatcher)
+
+#### Defined in
+
+[packages/rest/src/@types/index.ts:59](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L59)
 
 ___
 
@@ -53,7 +70,7 @@ File to be attached to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:48](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L48)
+[packages/rest/src/@types/index.ts:63](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L63)
 
 ___
 
@@ -63,7 +80,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:65](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L65)
+[packages/rest/src/@types/index.ts:80](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L80)
 
 ___
 
@@ -79,7 +96,7 @@ Additional headers to add to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:52](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L52)
+[packages/rest/src/@types/index.ts:67](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L67)
 
 ___
 
@@ -89,7 +106,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:66](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L66)
+[packages/rest/src/@types/index.ts:81](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L81)
 
 ___
 
@@ -105,4 +122,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:56](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/@types/index.ts#L56)
+[packages/rest/src/@types/index.ts:71](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L71)

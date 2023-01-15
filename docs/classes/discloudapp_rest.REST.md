@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[packages/rest/src/REST.ts:8](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L8)
+[packages/rest/src/REST.ts:8](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L8)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[packages/rest/src/REST.ts:6](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L6)
+[packages/rest/src/REST.ts:6](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L6)
 
 ## Methods
 
@@ -77,7 +77,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L38)
+[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L38)
 
 ___
 
@@ -106,7 +106,7 @@ Runs a get request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:28](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L28)
+[packages/rest/src/REST.ts:28](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L28)
 
 ___
 
@@ -135,7 +135,7 @@ Runs a post request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:48](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L48)
+[packages/rest/src/REST.ts:48](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L48)
 
 ___
 
@@ -164,7 +164,7 @@ Runs a put request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L58)
+[packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L58)
 
 ___
 
@@ -186,7 +186,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-[packages/rest/src/REST.ts:81](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L81)
+[packages/rest/src/REST.ts:81](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L81)
 
 ___
 
@@ -208,7 +208,7 @@ Runs a request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L67)
+[packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L67)
 
 ___
 
@@ -230,4 +230,4 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/REST.ts:17](https://github.com/discloud/discloud.app/blob/482fdb3/packages/rest/src/REST.ts#L17)
+[packages/rest/src/REST.ts:17](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/REST.ts#L17)

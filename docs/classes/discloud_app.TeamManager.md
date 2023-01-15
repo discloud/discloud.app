@@ -52,7 +52,7 @@ Manager for your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:15](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L15)
+[packages/discloud.app/src/managers/TeamManager.ts:15](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L15)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Manager for your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -88,7 +88,7 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:79](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L79)
+[packages/discloud.app/src/managers/TeamManager.ts:79](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L79)
 
 ▸ **backup**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppBackup`](discloud_app.AppBackup.md)\>\>
 
@@ -104,7 +104,7 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:80](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L80)
+[packages/discloud.app/src/managers/TeamManager.ts:80](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L80)
 
 ___
 
@@ -120,7 +120,7 @@ Get information of your team application on Discloud.
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:197](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L197)
+[packages/discloud.app/src/managers/TeamManager.ts:197](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L197)
 
 ___
 
@@ -145,7 +145,7 @@ Promise [RESTPutApiAppRamResult](../interfaces/discloud_app.RESTPutApiAppRamResu
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:109](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L109)
+[packages/discloud.app/src/managers/TeamManager.ts:109](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L109)
 
 ___
 
@@ -167,7 +167,7 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:143](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L143)
+[packages/discloud.app/src/managers/TeamManager.ts:143](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L143)
 
 ▸ **restart**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerRestartedAll`](../interfaces/discloud_app.ApiAppManagerRestartedAll.md)\>
 
@@ -183,7 +183,7 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:144](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L144)
+[packages/discloud.app/src/managers/TeamManager.ts:144](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L144)
 
 ___
 
@@ -205,7 +205,7 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:161](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L161)
+[packages/discloud.app/src/managers/TeamManager.ts:161](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L161)
 
 ▸ **start**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStartedAll`](../interfaces/discloud_app.ApiAppManagerStartedAll.md)\>
 
@@ -221,7 +221,7 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:162](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L162)
+[packages/discloud.app/src/managers/TeamManager.ts:162](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L162)
 
 ___
 
@@ -243,7 +243,7 @@ Get the status for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:24](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L24)
+[packages/discloud.app/src/managers/TeamManager.ts:24](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L24)
 
 ▸ **status**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppStatus`](discloud_app.AppStatus.md)\>\>
 
@@ -259,7 +259,7 @@ Get the status for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:25](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L25)
+[packages/discloud.app/src/managers/TeamManager.ts:25](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L25)
 
 ___
 
@@ -281,7 +281,7 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:179](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L179)
+[packages/discloud.app/src/managers/TeamManager.ts:179](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L179)
 
 ▸ **stop**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStopedAll`](../interfaces/discloud_app.ApiAppManagerStopedAll.md)\>
 
@@ -297,7 +297,7 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:180](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L180)
+[packages/discloud.app/src/managers/TeamManager.ts:180](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L180)
 
 ___
 
@@ -319,7 +319,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:52](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L52)
+[packages/discloud.app/src/managers/TeamManager.ts:52](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L52)
 
 ▸ **terminal**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>\>
 
@@ -335,7 +335,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:53](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L53)
+[packages/discloud.app/src/managers/TeamManager.ts:53](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L53)
 
 ___
 
@@ -360,4 +360,4 @@ Promise [RESTPutApiAppCommitResult](../interfaces/discloud_app.RESTPutApiAppComm
 
 #### Defined in
 
-[packages/discloud.app/src/managers/TeamManager.ts:126](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/managers/TeamManager.ts#L126)
+[packages/discloud.app/src/managers/TeamManager.ts:126](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/TeamManager.ts#L126)

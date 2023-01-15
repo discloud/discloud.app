@@ -8,11 +8,25 @@
 
 ### Properties
 
+- [agent](discloud_app.RESTOptions.md#agent)
 - [api](discloud_app.RESTOptions.md#api)
 - [globalRequestsPerMinute](discloud_app.RESTOptions.md#globalrequestsperminute)
+- [headers](discloud_app.RESTOptions.md#headers)
 - [version](discloud_app.RESTOptions.md#version)
 
 ## Properties
+
+### agent
+
+• **agent**: `Dispatcher`
+
+The agent to set globally
+
+#### Defined in
+
+packages/rest/dist/@types/index.d.ts:16
+
+___
 
 ### api
 
@@ -42,7 +56,23 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:18
+packages/rest/dist/@types/index.d.ts:22
+
+___
+
+### headers
+
+• **headers**: `Record`<`string`, `string`\>
+
+Additional headers to send for all API requests
+
+**`Default Value`**
+
+`{}`
+
+#### Defined in
+
+packages/rest/dist/@types/index.d.ts:28
 
 ___
 
@@ -58,4 +88,4 @@ The version of the API to use
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:24
+packages/rest/dist/@types/index.d.ts:34

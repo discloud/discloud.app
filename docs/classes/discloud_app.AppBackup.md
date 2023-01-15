@@ -53,7 +53,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:27](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L27)
+[packages/discloud.app/src/structures/AppBackup.ts:27](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L27)
 
 ## Properties
 
@@ -67,7 +67,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -79,7 +79,7 @@ The backup Buffer
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:25](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L25)
+[packages/discloud.app/src/structures/AppBackup.ts:25](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L25)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -105,7 +105,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:12](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L12)
+[packages/discloud.app/src/structures/AppBackup.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L12)
 
 ___
 
@@ -117,7 +117,7 @@ The backup status
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:21](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L21)
+[packages/discloud.app/src/structures/AppBackup.ts:21](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L21)
 
 ___
 
@@ -130,7 +130,7 @@ The backup url.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:17](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L17)
+[packages/discloud.app/src/structures/AppBackup.ts:17](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L17)
 
 ## Methods
 
@@ -148,7 +148,7 @@ The backup url.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/Base.ts#L23)
+[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L23)
 
 ___
 
@@ -219,4 +219,4 @@ Make backup of your application
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:43](https://github.com/discloud/discloud.app/blob/482fdb3/packages/discloud.app/src/structures/AppBackup.ts#L43)
+[packages/discloud.app/src/structures/AppBackup.ts:43](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppBackup.ts#L43)
