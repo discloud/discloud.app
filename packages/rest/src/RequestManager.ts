@@ -1,18 +1,17 @@
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
 import type { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
-import { DefaultRestOptions } from "./utils/contants";
+import { DefaultRestOptions, DefaultUserAgent } from "./utils/contants";
 
 export class RequestManager {
   #token!: string;
   options: RESTOptions;
 
   /**
-   * If the rate limit bucket is currently limited by its limit
+   * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} for all requests
+   * performed by this manager.
    */
-  get globalLimited() {
-    return this.globalRemaining < 1 && Date.now() < this.globalReset;
-  }
+  agent?: Dispatcher;
 
   /**
 	 * The number of requests remaining in the global bucket
@@ -22,18 +21,26 @@ export class RequestManager {
   /**
 	 * The timestamp at which the global bucket resets
 	 */
-  public globalReset = 0;
+  globalReset = 0;
+
+  constructor(options: Partial<RESTOptions>) {
+    this.options = { ...DefaultRestOptions, ...options };
+    this.globalRemaining = this.options.globalRequestsPerMinute;
+    this.agent = this.options.agent;
+  }
+
+  /**
+   * If the rate limit bucket is currently limited by its limit
+   */
+  get globalLimited() {
+    return this.globalRemaining < 1 && Date.now() < this.globalReset;
+  }
 
   /**
    * The time until queued requests can continue
    */
   get globalTimeToReset(): number {
     return this.globalReset - Date.now();
-  }
-
-  constructor(options: Partial<RESTOptions>) {
-    this.options = { ...DefaultRestOptions, ...options };
-    this.globalRemaining = this.options.globalRequestsPerMinute;
   }
 
   /**
@@ -48,7 +55,9 @@ export class RequestManager {
 
   resolveRequest(request: InternalRequest) {
     const headers: RequestHeaders = {
+      ...this.options.headers,
       "api-token": this.#token,
+      "User-Agent": DefaultUserAgent,
     };
 
     const query = request.query?.toString() ? `?${request.query}` : "";
@@ -78,7 +87,7 @@ export class RequestManager {
     }
 
     const fetchOptions: RequestOptions = {
-      headers: { ...(request.headers ?? {}), ...headers, ...additionalHeaders },
+      headers: { ...(request.headers ?? {}), ...additionalHeaders, ...headers },
       method: request.method.toUpperCase() as Dispatcher.HttpMethod,
       ...additionalOptions,
     };
@@ -92,6 +101,9 @@ export class RequestManager {
       }
 
     if (request.file) fetchOptions.body = formData;
+
+    // Prioritize setting an agent per request, use the agent for this instance otherwise.
+    fetchOptions.dispatcher = request.dispatcher ?? this.agent;
 
     return { url, fetchOptions };
   }
