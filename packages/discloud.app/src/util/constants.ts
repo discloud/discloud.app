@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { env } from "node:process";
 import { DiscloudAppOptions } from "../@types";
 
-export const version: string = JSON.parse(readFileSync(join(__dirname, "package.json"), "utf8")).version;
+export const version: string = JSON.parse(readFileSync(join(__dirname, "..", "..", "package.json"), "utf8")).version;
 
 /**
  * Library default options
