@@ -21,7 +21,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "undici": "^5.15.0"
+    "undici": "^5.15.1"
   },
   "publishConfig": {
     "access": "public"
