@@ -16,7 +16,8 @@
     "url": "git+https://github.com/discloud/discloud.app.git"
   },
   "keywords": [
-    "discloud"
+    "discloud",
+    "discloud.app"
   ],
   "author": "Gorniaky <hwss.s2@gmail.com>",
   "license": "Apache-2.0",
@@ -25,9 +26,9 @@
   },
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.2.5",
-    "@discloudapp/rest": "^0.4.0",
-    "@discloudapp/util": "^0.2.0",
+    "@discloudapp/api-types": "^0.2.6",
+    "@discloudapp/rest": "^0.5.1",
+    "@discloudapp/util": "^0.3.0",
     "undici": "^5.16.0"
   },
   "engines": {
