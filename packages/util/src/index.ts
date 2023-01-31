@@ -1,5 +1,7 @@
 export * from "./BitField";
+export * from "./DiscloudConfig";
 export * from "./FileResolver";
+export * from "./IgnoreFiles";
 export * from "./ModPermissionsBF";
 
 export function calculatePercentage(value: string | number, major: string | number) {
