@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/util",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A utility pack for discloud.app",
   "main": "dist",
   "scripts": {
@@ -17,7 +17,8 @@
     "url": "git+https://github.com/discloud/discloud.app.git"
   },
   "keywords": [
-    "discloud"
+    "discloud",
+    "discloud.app"
   ],
   "license": "Apache-2.0",
   "dependencies": {
