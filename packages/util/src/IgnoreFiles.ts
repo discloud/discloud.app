@@ -21,8 +21,8 @@ export interface IgnoreFilesOptions {
   /**
    * @defaultValue true
    */
-  globPattern: boolean
-  optionalIgnoreList: string[]
+  globPattern?: boolean
+  optionalIgnoreList?: string[]
 }
 
 export class IgnoreFiles {
@@ -35,8 +35,9 @@ export class IgnoreFiles {
   constructor(options: IgnoreFilesOptions) {
     this.path = this.#normalizePath(options.path);
     this.fileName = options.fileName;
-    this.globPattern = options.globPattern;
+    this.globPattern = options.globPattern ?? true;
     if (this.fileName && this.path) this.files = this.#findIgnoreFiles(this.fileName, this.path);
+    options.optionalIgnoreList ??= [];
     this.list = options.optionalIgnoreList.concat(this.#getIgnoreList());
     if (this.globPattern)
       this.list = this.list.flatMap(a => [a, `${a}/**`, `**/${a}`, `**/${a}/**`, `${this.path}/${a}`, `${this.path}/${a}/**`]);
