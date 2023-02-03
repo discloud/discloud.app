@@ -10,23 +10,25 @@ export const discloudConfigRequiredScopes = {
 export class DiscloudConfig {
   constructor(public path: string) {
     if (this.path.endsWith("discloud.config"))
-      if (existsSync(this.path) && statSync(this.path).isFile()) return;
+      if (this.exists && statSync(this.path).isFile()) return;
 
-    if (existsSync(this.path) && statSync(this.path).isFile())
+    if (this.exists && statSync(this.path).isFile())
       this.path = dirname(this.path);
 
     this.path = join(path, "discloud.config");
   }
 
   get data(): DiscloudConfigType {
-    if (this.exists)
-      return this.#configToObj(readFileSync(this.path, "utf8"));
-
+    if (this.exists) return this.#configToObj(readFileSync(this.path, "utf8"));
     return <DiscloudConfigType>{};
   }
 
   get exists() {
     return existsSync(this.path);
+  }
+
+  get existsMain() {
+    if (this.data.MAIN) return existsSync(this.data.MAIN);
   }
 
   get fileExt() {
@@ -41,7 +43,9 @@ export class DiscloudConfig {
     return discloudConfigRequiredScopes[this.data.TYPE] ?? Object.values(discloudConfigRequiredScopes);
   }
 
-  #objToString(obj: any, sep = "="): string {
+  #objToString(obj: any): string {
+    if (typeof obj === "undefined" || obj === null) return "";
+    if (typeof obj === "function") return this.#configToObj(obj());
     if (!obj) return `${obj}`;
 
     const result = [];
@@ -54,7 +58,7 @@ export class DiscloudConfig {
         const keys = Object.keys(obj);
 
         for (let i = 0; i < keys.length; i++)
-          result.push(`${keys[i]}${sep}${this.#objToString(obj[keys[i]])}`);
+          result.push(`${keys[i]}=${this.#objToString(obj[keys[i]])}`);
       }
     } else {
       result.push(obj);
@@ -72,7 +76,7 @@ export class DiscloudConfig {
     save = { ...this.data, ...save };
 
     try {
-      writeFileSync(this.path, this.#objToString(save, "="), "utf8");
+      writeFileSync(this.path, this.#objToString(save), "utf8");
     } catch (error) {
       return error as Error;
     }
