@@ -40,7 +40,7 @@ export class DiscloudConfig {
   }
 
   get #requiredProps() {
-    return discloudConfigRequiredScopes[this.data.TYPE] ?? Object.values(discloudConfigRequiredScopes);
+    return discloudConfigRequiredScopes[this.data.TYPE] ?? Object.values(discloudConfigRequiredScopes).flat();
   }
 
   #objToString(obj: any): string {
