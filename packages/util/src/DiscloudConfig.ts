@@ -52,8 +52,8 @@ export class DiscloudConfig {
 
     if (typeof obj === "object") {
       if (Array.isArray(obj)) {
-        for (let i = 0; i < obj.length; i++)
-          result.push(this.#objToString(obj[i]));
+        for (const value of obj)
+          result.push(this.#objToString(value));
       } else {
         const keys = Object.keys(obj);
 
