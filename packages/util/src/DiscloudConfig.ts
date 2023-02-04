@@ -69,14 +69,22 @@ export class DiscloudConfig {
 
   #configToObj(s: string) {
     if (typeof s !== "string") return {};
-    return Object.fromEntries(s.split(/\r?\n/).map(a => a.split("=")));
+    return Object.fromEntries(s.split(/\r?\n/).filter(a=> !/^\s*#/.test(a)).map(a => a.split("=")));
   }
 
-  update(save: Partial<DiscloudConfigType>): Error | void {
+  get(key: string): string | undefined {
+    return (<any>this.data)[key];
+  }
+
+  set(key: string, value: any) {
+    this.update({ [key]: value });
+  }
+
+  update(save: Partial<DiscloudConfigType>, comments?: string[]): Error | void {
     save = { ...this.data, ...save };
 
     try {
-      writeFileSync(this.path, this.#objToString(save), "utf8");
+      writeFileSync(this.path, this.#objToString([comments, save]), "utf8");
     } catch (error) {
       return error as Error;
     }
