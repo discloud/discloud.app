@@ -29,6 +29,18 @@ export const APTPackages = <(keyof typeof APT)[]>Object.keys(APT);
 
 export type APTString = keyof typeof APT
 
+export const discloudConfigScopes = [
+  "APT",
+  "AUTORESTART",
+  "AVATAR",
+  "ID",
+  "MAIN",
+  "NAME",
+  "RAM",
+  "TYPE",
+  "VERSION",
+] as const;
+
 export type DiscloudConfigType<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> =
   T extends "bot" ? DiscloudConfigBot<V> :
   T extends "site" ? DiscloudConfigSite<V> :
