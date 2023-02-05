@@ -18,6 +18,11 @@ export class DiscloudConfig {
     this.path = join(path, "discloud.config");
   }
 
+  get comments() {
+    if (this.exists) return readFileSync(this.path, "utf8").split(/\r?\n/).filter(a => /^\s*#/.test(a));
+    return [];
+  }
+
   get data(): DiscloudConfigType {
     if (this.exists) return this.#configToObj(readFileSync(this.path, "utf8"));
     return <DiscloudConfigType>{};
@@ -80,7 +85,7 @@ export class DiscloudConfig {
     this.update({ [key]: value });
   }
 
-  update(save: Partial<DiscloudConfigType>, comments?: string[]): Error | void {
+  update(save: Partial<DiscloudConfigType>, comments: string[] = this.comments): Error | void {
     save = { ...this.data, ...save };
 
     try {
