@@ -74,10 +74,39 @@ export class DiscloudConfig {
 
   #configToObj(s: string) {
     if (typeof s !== "string") return {};
-    return Object.fromEntries(s.split(/\r?\n/).filter(a=> !/^\s*#/.test(a)).map(a => a.split("=")));
+
+    return this.#processValues(Object.fromEntries(s
+      .split(/\r?\n/)
+      .filter(a => !/^\s*#/.test(a))
+      .filter(a => a)
+      .map(a => a.split("="))));
   }
 
-  get(key: string): string | undefined {
+  #processValues(obj: any) {
+    if (!obj) return obj;
+
+    const keys = Object.keys(obj);
+
+    for (const key of keys) {
+      if (["APT", "AVATAR", "ID", "MAIN", "NAME", "TYPE", "VERSION"].includes(key)) continue;
+
+      const value = obj[key];
+
+      if (!isNaN(Number(value))) {
+        obj[key] = Number(value);
+        continue;
+      }
+
+      if (["true", "false"].includes(obj[key])) {
+        obj[key] = value == "true";
+        continue;
+      }
+    }
+
+    return obj;
+  }
+
+  get<T = any>(key: string): T | undefined {
     return (<any>this.data)[key];
   }
 
