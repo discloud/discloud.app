@@ -18,29 +18,26 @@ export const allBlockedFilesRegex = RegExp(`(${allBlockedFiles.join("|")})$`.rep
 export interface IgnoreFilesOptions {
   fileName: string
   path: string
-  /**
-   * @defaultValue true
-   */
-  globPattern?: boolean
   optionalIgnoreList?: string[]
 }
 
 export class IgnoreFiles {
   fileName: string;
-  files: string[] = [];
-  globPattern: boolean;
+  filesIgnore: string[] = [];
   list: string[] = [];
   path: string;
 
   constructor(options: IgnoreFilesOptions) {
     this.path = this.#normalizePath(options.path);
+
     this.fileName = options.fileName;
-    this.globPattern = options.globPattern ?? true;
-    if (this.fileName && this.path) this.files = this.#findIgnoreFiles(this.fileName, this.path);
+
+    if (this.fileName && this.path)
+      this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.path);
+
     options.optionalIgnoreList ??= [];
-    this.list = options.optionalIgnoreList.concat(this.#getIgnoreList());
-    if (this.globPattern)
-      this.list = this.list.flatMap(a => [a, `${a}/**`, `**/${a}`, `**/${a}/**`, `${this.path}/${a}`, `${this.path}/${a}/**`]);
+    this.list = options.optionalIgnoreList.concat(this.#getIgnoreList())
+      .concat(allBlockedFiles.flatMap(a => [a, `**/${a}/**`]));
   }
 
   #findIgnoreFiles(fileName: string, path: string) {
@@ -49,7 +46,7 @@ export class IgnoreFiles {
   }
 
   #getIgnoreList() {
-    return this.#resolveIgnoreFile(this.files);
+    return this.#resolveIgnoreFile(this.filesIgnore);
   }
 
   #normalizePath(path: string) {
