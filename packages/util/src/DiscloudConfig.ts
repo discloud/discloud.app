@@ -1,5 +1,5 @@
 import { DiscloudConfigType } from "@discloudapp/api-types/v2";
-import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { exists, read, write } from "fs-jetpack";
 import { dirname, join } from "node:path";
 
 export const discloudConfigRequiredScopes = {
@@ -9,31 +9,31 @@ export const discloudConfigRequiredScopes = {
 
 export class DiscloudConfig {
   constructor(public path: string) {
-    if (this.path.endsWith("discloud.config"))
-      if (this.exists && statSync(this.path).isFile()) return;
+    if (this.exists === "file") {
+      if (this.path.endsWith("discloud.config")) return;
 
-    if (this.exists && statSync(this.path).isFile())
       this.path = dirname(this.path);
+    }
 
     this.path = join(path, "discloud.config");
   }
 
   get comments() {
-    if (this.exists) return readFileSync(this.path, "utf8").split(/\r?\n/).filter(a => /^\s*#/.test(a));
-    return [];
+    return read(this.path, "utf8")
+      ?.split(/\r?\n/)
+      .filter(a => /^\s*#/.test(a)) ?? [];
   }
 
   get data(): DiscloudConfigType {
-    if (this.exists) return this.#configToObj(readFileSync(this.path, "utf8"));
-    return <DiscloudConfigType>{};
+    return this.#configToObj(read(this.path, "utf8")!);
   }
 
   get exists() {
-    return existsSync(this.path);
+    return exists(this.path);
   }
 
   get existsMain() {
-    if (this.data.MAIN) return existsSync(this.data.MAIN);
+    if (this.data.MAIN) return exists(this.data.MAIN);
   }
 
   get fileExt() {
@@ -76,8 +76,8 @@ export class DiscloudConfig {
     if (typeof s !== "string") return {};
 
     return this.#processValues(Object.fromEntries(s
-      .split(/\r?\n/)
-      .filter(a => !/^\s*#/.test(a))
+      .replace(/\s*#.*/g, "")
+      .split(/[\r\n]/)
       .filter(a => a)
       .map(a => a.split("="))));
   }
@@ -118,7 +118,7 @@ export class DiscloudConfig {
     save = { ...this.data, ...save };
 
     try {
-      writeFileSync(this.path, this.#objToString([comments, save]), "utf8");
+      write(this.path, this.#objToString([comments, save]));
     } catch (error) {
       return error as Error;
     }

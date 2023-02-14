@@ -1,4 +1,5 @@
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { exists, read } from "fs-jetpack";
+import { readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 export const blockedFiles = {
@@ -36,13 +37,14 @@ export class IgnoreFiles {
       this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.path);
 
     options.optionalIgnoreList ??= [];
-    this.list = options.optionalIgnoreList.concat(this.#getIgnoreList())
+    this.list = options.optionalIgnoreList
+      .concat(this.#getIgnoreList().flatMap(a => [a, `${a}/**`]))
       .concat(allBlockedFiles.flatMap(a => [a, `**/${a}/**`]));
   }
 
   #findIgnoreFiles(fileName: string, path: string) {
     return this.#recursivelyReadDirSync(path)
-      .filter(file => file.endsWith(fileName) && statSync(file).isFile());
+      .filter(file => file.endsWith(fileName) && exists(file) === "file");
   }
 
   #getIgnoreList() {
@@ -50,37 +52,36 @@ export class IgnoreFiles {
   }
 
   #normalizePath(path: string) {
-    return path.replace(/\\/g, "/");
+    return path.replace(/\\/g, "/").replace(/\/$/, "");
   }
 
   #resolveIgnoreFile(ignoreFile: string | string[]) {
     if (Array.isArray(ignoreFile)) {
       const ignored = <string[]>[];
 
-      for (let i = 0; i < ignoreFile.length; i++)
-        ignored.push(...this.#resolveIgnoreFile(ignoreFile[i]));
+      for (const file of ignoreFile)
+        ignored.push(...this.#resolveIgnoreFile(file));
 
       return ignored;
     }
 
-    if (ignoreFile)
-      if (existsSync(ignoreFile))
-        if (statSync(ignoreFile).isFile())
-          return readFileSync(ignoreFile, "utf8")
-            .replace(/#[^\r?\n]+/g, "")
-            .split(/\r?\n/)
-            .filter(a => a);
+    if (ignoreFile && exists(ignoreFile) === "file")
+      return read(ignoreFile, "utf8")
+        ?.replace(/\s*#.*/g, "")
+        .split(/\r?\n/)
+        .filter(a => a) ?? [];
 
     return [];
   }
 
   #recursivelyReadDirSync(path: string): string[] {
-    if (!existsSync(path)) return [];
-    if (statSync(path).isFile()) path = dirname(path);
+    if (!exists(path)) return [];
+    if (exists(path) === "file")
+      return this.#recursivelyReadDirSync(dirname(path));
 
     const files = readdirSync(this.#normalizePath(path), { withFileTypes: true });
 
-    const cache = [];
+    const cache: string[] = [];
 
     for (const file of files) {
       const fileOrDir = join(path, file.name);

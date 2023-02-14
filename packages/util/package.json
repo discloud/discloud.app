@@ -2,7 +2,7 @@
   "name": "@discloudapp/util",
   "version": "0.3.6",
   "description": "A utility pack for discloud.app",
-  "main": "dist",
+  "main": "index.js",
   "scripts": {
     "watch": "tsc -watch -p ./",
     "build:release": "tsc",
@@ -23,6 +23,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "fs-jetpack": "^5.1.0",
     "undici": "^5.19.1"
   },
   "publishConfig": {
