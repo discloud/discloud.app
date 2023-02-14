@@ -1,5 +1,6 @@
 import { DiscloudConfigType } from "@discloudapp/api-types/v2";
 import { exists, read, write } from "fs-jetpack";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 export const discloudConfigRequiredScopes = {
@@ -25,11 +26,18 @@ export class DiscloudConfig {
   }
 
   get data(): DiscloudConfigType {
-    return this.#configToObj(read(this.path, "utf8")!);
+    if (this.exists)
+      return this.#configToObj(readFileSync(this.path, "utf8"));
+
+    return <any>{};
   }
 
   get exists() {
-    return exists(this.path);
+    try {
+      return exists(this.path);
+    } catch {
+      return false;
+    }
   }
 
   get existsMain() {
