@@ -27,14 +27,19 @@ export interface RawFile {
 /**
  * This parameter could be {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link String}, {@link URL} or {@link Writable} 
  */
-export type FileResolvable = Blob | File | PathLike | RawFile | Readable | Writable
+export type FileResolvable =
+  | Blob
+  | File
+  | PathLike
+  | RawFile
+  | Readable
+  | Writable;
 
 /**
  * A function that converts {@link FileResolvable} to {@link File}
  * 
  * @param file - The file as {@link FileResolvable} to resolve
  * @param fileName - The name of the file to upload
- * @returns A promise of {@link File}
  */
 export async function resolveFile(file: FileResolvable, fileName?: string): Promise<File> {
   if (file instanceof File) return file;
@@ -42,7 +47,7 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
-    fileName = fileName ?? `${file.match(fileNamePattern)?.pop()}`;
+    fileName ??= file.match(fileNamePattern)?.pop() ?? "file";
 
     if (/^https?:\/\//.test(file))
       return request(file, { throwOnError: true })
@@ -50,9 +55,9 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
         .then(blob => new File([blob], fileName ?? "file"));
 
     if (existsSync(file))
-      return streamToFile(createReadStream(file), fileName ?? "file");
+      return streamToFile(createReadStream(file), fileName);
 
-    return new File([file], "file");
+    return new File([file], fileName);
   }
 
   if (file instanceof Blob) return new File([file], fileName ?? "file");
@@ -76,7 +81,6 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
  * @param stream - A parameter like {@link Readable} or {@link Writable}
  * @param fileName - A file name, if you wish
  * @param mimeType - A mimeType parameter
- * @returns A promise of {@link File}
  */
 export function streamToFile(stream: Stream, fileName?: string | null, mimeType?: string) {
   return new Promise<File>((resolve, reject) => {
@@ -92,7 +96,6 @@ export function streamToFile(stream: Stream, fileName?: string | null, mimeType?
  * 
  * @param stream - A parameter like {@link Readable} or {@link Writable}
  * @param mimeType - A mimeType parameter
- * @returns A promise of {@link Blob}
  */
 export function streamToBlob(stream: Stream, mimeType?: string) {
   return new Promise<Blob>((resolve, reject) => {
