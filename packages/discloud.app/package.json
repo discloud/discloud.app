@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.4.13",
+  "version": "0.4.14",
   "main": "index.js",
   "scripts": {
     "build:release": "tsc",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@discloudapp/api-types": "^0.2.6",
     "@discloudapp/rest": "^0.5.2",
-    "@discloudapp/util": "^0.3.6",
+    "@discloudapp/util": "^0.3.7",
     "undici": "^5.19.1"
   },
   "engines": {
