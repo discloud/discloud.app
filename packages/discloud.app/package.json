@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.4.14",
+  "version": "0.4.15",
   "main": "index.js",
   "scripts": {
     "build:release": "tsc",
