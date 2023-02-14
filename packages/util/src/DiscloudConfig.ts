@@ -1,22 +1,24 @@
 import { DiscloudConfigType } from "@discloudapp/api-types/v2";
 import { exists, read, write } from "fs-jetpack";
-import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 export const discloudConfigRequiredScopes = {
   bot: ["MAIN", "NAME", "TYPE", "RAM", "VERSION"],
   site: ["ID", "MAIN", "TYPE", "RAM", "VERSION"],
+  common: ["MAIN", "TYPE", "RAM", "VERSION"],
 };
 
 export class DiscloudConfig {
   constructor(public path: string) {
-    if (this.exists === "file") {
-      if (this.path.endsWith("discloud.config")) return;
+    try {
+      if (this.exists === "file") {
+        if (this.path.endsWith("discloud.config")) return;
 
-      this.path = dirname(this.path);
-    }
+        this.path = dirname(this.path);
+      }
 
-    this.path = join(path, "discloud.config");
+      this.path = join(this.path, "discloud.config");
+    } catch { }
   }
 
   get comments() {
@@ -26,10 +28,7 @@ export class DiscloudConfig {
   }
 
   get data(): DiscloudConfigType {
-    if (this.exists)
-      return this.#configToObj(readFileSync(this.path, "utf8"));
-
-    return <any>{};
+    return this.#configToObj(read(this.path, "utf8")!);
   }
 
   get exists() {
@@ -53,7 +52,8 @@ export class DiscloudConfig {
   }
 
   get #requiredProps() {
-    return discloudConfigRequiredScopes[this.data.TYPE] ?? Object.values(discloudConfigRequiredScopes).flat();
+    return discloudConfigRequiredScopes[this.data.TYPE] ??
+      discloudConfigRequiredScopes.common;
   }
 
   #objToString(obj: any): string {
@@ -123,9 +123,9 @@ export class DiscloudConfig {
   }
 
   update(save: Partial<DiscloudConfigType>, comments: string[] = this.comments): Error | void {
-    save = { ...this.data, ...save };
-
     try {
+      save = { ...this.data, ...save };
+
       write(this.path, this.#objToString([comments, save]));
     } catch (error) {
       return error as Error;
