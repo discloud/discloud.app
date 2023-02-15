@@ -8,7 +8,9 @@
     "build:release": "tsc",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",
-    "test:ts": "tsc --noEmit"
+    "test": "tsc && npm run test:ts && npm run test:unit",
+    "test:ts": "tsc --noEmit",
+    "test:unit": "node dist/test"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts"
