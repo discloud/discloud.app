@@ -115,7 +115,7 @@ export interface ApiAppManagerStopedAll extends Omit<ApiAppManager, "alreadyOnli
   stoped: string[]
 }
 
-export interface ApiAppStatus extends BaseApiApp {
+export interface ApiStatusApp extends BaseApiApp {
   /**
    * Status of your application
    * - It can be `Online` or `Offline` for example
@@ -210,7 +210,7 @@ export interface RESTGetApiAppAllStatusResult extends RESTApiBaseResult {
   /**
    * Status of all of your applications
    */
-  apps: ApiAppStatus[]
+  apps: ApiStatusApp[]
 }
 
 export interface RESTGetApiAppResult extends RESTApiBaseResult {
@@ -238,7 +238,7 @@ export interface RESTGetApiAppStatusResult extends RESTApiBaseResult {
   /**
    * Status of your application
    */
-  apps: ApiAppStatus
+  apps: ApiStatusApp
 }
 
 export interface RESTApiAppManagerResult extends RESTApiBaseResult {
