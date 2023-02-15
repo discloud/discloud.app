@@ -16,7 +16,6 @@ abstract class Base {
   }
 
   protected _patch(data: unknown): this {
-    Object.assign(this, { ...this, ...new this.constructor(this.discloudApp, data) });
     return this;
   }
 

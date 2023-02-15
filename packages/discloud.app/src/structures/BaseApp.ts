@@ -1,4 +1,4 @@
-import { ApiApp, ApiUploadApp } from "@discloudapp/api-types/v2";
+import { ApiApp, ApiAppStatus, ApiUploadApp } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppAptManager from "../managers/AppAptManager";
@@ -10,48 +10,30 @@ import Base from "./Base";
  */
 abstract class BaseApp extends Base {
   /**
-   * If your app has auto-restart enabled
-   */
-  autoRestart: boolean;
-  /**
    * Your app id
    */
-  id: string;
-  /**
-   * Your app programming language
-   */
-  lang: string;
-  /**
-   * The main file of your application
-   */
-  mainFile: string;
-  /**
-   * The name of your application
-   */
-  name: string;
-  /**
-   * The ram quantity for your application
-   */
-  ram: number;
+  id!: string;
 
   readonly apt: AppAptManager<this>;
   readonly team: AppTeamManager<this>;
 
   constructor(
     discloudApp: DiscloudApp,
-    data: ApiApp | ApiUploadApp,
+    data: ApiApp | ApiUploadApp | ApiAppStatus,
   ) {
     super(discloudApp);
 
-    this.autoRestart = data.autoRestart;
-    this.id = data.id;
-    this.lang = data.lang;
-    this.mainFile = data.mainFile;
-    this.name = data.name;
-    this.ram = data.ram;
+    this._patch(data);
 
     this.apt = new AppAptManager(discloudApp, this);
     this.team = new AppTeamManager(discloudApp, this);
+  }
+
+  protected _patch(data: ApiApp | ApiUploadApp | ApiAppStatus): this {
+    if ("id" in data)
+      this.id = data.id;
+
+    return super._patch(data);
   }
 
   /**
@@ -61,12 +43,7 @@ abstract class BaseApp extends Base {
    * @returns Promise {@link RESTPutApiAppRamResult}
    */
   async setRam(quantity: number) {
-    const data = await this.discloudApp.apps.ram(this.id, quantity);
-
-    if (data.statusCode === 200)
-      this.ram = quantity;
-
-    return data;
+    return this.discloudApp.apps.ram(this.id, quantity);
   }
 
   /**

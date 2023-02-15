@@ -31,15 +31,13 @@ export default class AppManager extends CachedManager<App> {
     >(Routes.appStatus(appID));
 
     if (Array.isArray(data.apps)) {
-      const status = new Map<string, AppStatus>();
+      const cache = new Map<string, AppStatus>();
 
-      for (let i = 0; i < data.apps.length; i++) {
-        const app = data.apps[i];
-
-        status.set(app.id, new AppStatus(this.discloudApp, app));
+      for (const app of data.apps) {
+        cache.set(app.id, new AppStatus(this.discloudApp, app));
       }
 
-      return status;
+      return cache;
     }
 
     return new AppStatus(this.discloudApp, data.apps);
@@ -58,15 +56,13 @@ export default class AppManager extends CachedManager<App> {
       | RESTGetApiAppAllLogResult
     >(Routes.appLogs(appID));
     if (Array.isArray(data.apps)) {
-      const logs = new Map<string, ApiTerminal>();
+      const cache = new Map<string, ApiTerminal>();
 
-      for (let i = 0; i < data.apps.length; i++) {
-        const app = data.apps[i];
-
-        logs.set(app.id, app.terminal);
+      for (const app of data.apps) {
+        cache.set(app.id, app.terminal);
       }
 
-      return logs;
+      return cache;
     } else {
       return data.apps.terminal;
     }
@@ -86,15 +82,13 @@ export default class AppManager extends CachedManager<App> {
     >(Routes.appBackup(appID));
 
     if (Array.isArray(data.backups)) {
-      const backups = new Map<string, AppBackup>();
+      const cache = new Map<string, AppBackup>();
 
-      for (let i = 0; i < data.backups.length; i++) {
-        const backup = data.backups[i];
-
-        backups.set(backup.id, new AppBackup(this.discloudApp, backup));
+      for (const backup of data.backups) {
+        cache.set(backup.id, new AppBackup(this.discloudApp, backup));
       }
 
-      return backups;
+      return cache;
     }
 
     return new AppBackup(this.discloudApp, data.backups);

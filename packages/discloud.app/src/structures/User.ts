@@ -7,23 +7,23 @@ export default class User extends Base {
   /**
    * Your applications ID
    */
-  appIDs: string[];
+  appIDs: string[] = [];
   /**
    * Your custom domains on Discloud
    */
-  customdomains: string[];
+  customdomains: string[] = [];
   /**
    * Your id
    */
-  id: string;
+  id!: string;
   /**
    * Your locale
    */
-  locale: string;
+  locale!: string;
   /**
    * Your plan
    */
-  plan: string;
+  plan!: string;
   /**
    * Date of when will your plan end
    */
@@ -35,34 +35,53 @@ export default class User extends Base {
   /**
    * Quantity of RAM was used for your applications
    */
-  ramUsedMb: number;
+  ramUsedMb!: number;
   /**
    * Your subdomains on Discloud
    */
-  subdomains: string[];
+  subdomains: string[] = [];
   /**
    * Your total RAM quantity
    */
-  totalRamMb: number;
+  totalRamMb!: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
-    this.appIDs = data.apps ?? [];
-    this.customdomains = data.customdomains ?? [];
-    this.id = data.userID;
-    this.locale = data.locale;
-    this.plan = data.plan;
+    this._patch(data);
+  }
 
-    if (data.planDataEnd) {
-      this.planDataEnd = new Date(data.planDataEnd);
+  protected _patch(data: ApiUser): this {
+    if ("apps" in data)
+      this.appIDs = data.apps;
+
+    if ("customdomains" in data)
+      this.customdomains = data.customdomains;
+
+    if ("userID" in data)
+      this.id = data.userID;
+
+    if ("locale" in data)
+      this.locale = data.locale;
+
+    if ("plan" in data)
+      this.plan = data.plan;
+
+    if ("planDataEnd" in data) {
+      this.planDataEnd = new Date(data.planDataEnd!);
       this.planDataEndTimestamp = this.planDataEnd.valueOf();
     }
 
-    this.ramUsedMb = data.ramUsedMb;
+    if ("ramUsedMb" in data)
+      this.ramUsedMb = data.ramUsedMb;
 
-    this.subdomains = data.subdomains ?? [];
-    this.totalRamMb = data.totalRamMb;
+    if ("subdomains" in data)
+      this.subdomains = data.subdomains;
+
+    if ("totalRamMb" in data)
+      this.totalRamMb = data.totalRamMb;
+
+    return super._patch(data);
   }
 
   get apps() {

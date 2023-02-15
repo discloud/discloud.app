@@ -1,71 +1,80 @@
 import { ApiAppStatus, ApiNetIO } from "@discloudapp/api-types/v2";
-import DiscloudApp from "../discloudApp/DiscloudApp";
 import { calculatePercentage } from "@discloudapp/util";
-import Base from "./Base";
+import DiscloudApp from "../discloudApp/DiscloudApp";
+import BaseApp from "./BaseApp";
 
-export default class AppStatus extends Base {
+export default class AppStatus extends BaseApp {
   /**
    * Status of your application
    * - It can be `Online` or `Offline` for example
    */
-  container: string;
+  container!: string;
   /**
    * CPU usage as percentage
    */
-  cpu: string;
-  /**
-   * Your app id
-   */
-  id: string;
+  cpu!: string;
   /**
    * Relative time of the last restart
    */
-  lastRestart: string;
+  lastRestart!: string;
   /**
    * RAM usage
    */
-  memory?: string;
+  memory!: string;
   /**
    * Percentage of memory usage
    */
-  memoryUsage?: number;
+  memoryUsage!: number;
   /**
    * Internet usage
    */
-  netIO: ApiNetIO;
+  netIO!: ApiNetIO;
   /**
    * Storage space
    */
-  ssd: string;
+  ssd!: string;
   /**
    * Date of your application has started
    */
-  startedAt?: Date;
+  startedAt!: Date;
   /**
    * Timestamp of when your app started
    */
-  startedAtTimestamp?: number;
+  startedAtTimestamp!: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiAppStatus) {
-    super(discloudApp);
+    super(discloudApp, data);
 
-    this.container = data.container;
-    this.cpu = data.cpu;
-    this.id = data.id;
-    this.lastRestart = data.last_restart;
+    this._patch(data);
+  }
 
-    if (data.memory) {
+  protected _patch(data: ApiAppStatus): this {
+    if ("container" in data)
+      this.container = data.container;
+
+    if ("cpu" in data)
+      this.cpu = data.cpu;
+
+    if ("last_restart" in data)
+      this.lastRestart = data.last_restart;
+
+    if ("memory" in data) {
       this.memory = data.memory;
       const matched = data.memory.match(/[\d.]+/g) ?? [];
       this.memoryUsage = calculatePercentage(matched[0]!, matched[1]);
     }
 
-    this.netIO = data.netIO;
-    this.ssd = data.ssd;
+    if ("netIO" in data)
+      this.netIO = data.netIO;
 
-    if (data.startedAt) {
+    if ("ssd" in data)
+      this.ssd = data.ssd;
+
+    if ("startedAt" in data) {
       this.startedAt = new Date(data.startedAt);
       this.startedAtTimestamp = this.startedAt.valueOf();
     }
+
+    return super._patch(data);
   }
 }

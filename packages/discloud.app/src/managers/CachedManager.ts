@@ -33,8 +33,7 @@ export default abstract class CachedManager<T> extends DataManager<T> {
   protected _addMany(data: any[]): Map<string, T> {
     const cache = new Map<string, T>();
 
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
+    for (const element of data) {
       const obj = this._add(element);
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -49,8 +48,8 @@ export default abstract class CachedManager<T> extends DataManager<T> {
   }
 
   protected _removeMany(ids: string[]) {
-    for (let i = 0; i < ids.length; i++)
-      this._remove(ids[i]);
+    for (const id of ids)
+      this._remove(id);
 
     return true;
   }

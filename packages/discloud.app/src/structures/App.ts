@@ -7,23 +7,43 @@ export default class App extends BaseApp {
   /**
    * If your app has auto deploy on github enabled
    */
-  autoDeployGit: string;
+  autoDeployGit!: string;
+  /**
+   * If your app has auto-restart enabled
+   */
+  autoRestart!: boolean;
   /**
    * Your app's exit code on stopping
    */
-  exitCode;
+  exitCode!: number;
+  /**
+   * Your app programming language
+   */
+  lang!: string;
+  /**
+   * The main file of your application
+   */
+  mainFile!: string;
   /**
    * Moderators IDs of your app
    */
-  mods;
+  mods: string[] = [];
+  /**
+   * The name of your application
+   */
+  name!: string;
   /**
    * If your app is online
    */
-  online;
+  online!: boolean;
+  /**
+   * The ram quantity for your application
+   */
+  ram!: number;
   /**
    * If your application was stopped due to lack of RAM
    */
-  ramKilled;
+  ramKilled!: boolean;
 
   constructor(
     discloudApp: DiscloudApp,
@@ -31,42 +51,40 @@ export default class App extends BaseApp {
   ) {
     super(discloudApp, data);
 
-    this.autoDeployGit = data.autoDeployGit;
-    this.exitCode = data.exitCode;
-    this.mods = data.mods ?? [];
-    this.online = data.online ?? false;
-    this.ramKilled = data.ramKilled;
+    this._patch(data);
   }
 
-  async restart() {
-    const data = await super.restart();
+  protected _patch(data: ApiApp): this {
+    if ("autoDeployGit" in data)
+      this.autoDeployGit = data.autoDeployGit;
 
-    this.online = data.status === "ok";
+    if ("autoRestart" in data)
+      this.autoRestart = data.autoRestart;
 
-    return data;
-  }
+    if ("exitCode" in data)
+      this.exitCode = data.exitCode;
 
-  async start() {
-    const data = await super.start();
+    if ("lang" in data)
+      this.lang = data.lang;
 
-    this.online = data.status === "ok";
+    if ("mainFile" in data)
+      this.mainFile = data.mainFile;
 
-    return data;
-  }
+    if ("mods" in data)
+      this.mods = data.mods;
 
-  async stop() {
-    const data = await super.stop();
+    if ("name" in data)
+      this.name = data.name;
 
-    this.online = !(data.status === "ok");
+    if ("online" in data)
+      this.online = data.online;
 
-    return data;
-  }
+    if ("ram" in data)
+      this.ram = data.ram;
 
-  async update(options: UpdateAppOptions) {
-    const data = await super.update(options);
+    if ("ramKilled" in data)
+      this.ramKilled = data.ramKilled;
 
-    this.online = data.statusCode === 200;
-
-    return data;
+    return super._patch(data);
   }
 }

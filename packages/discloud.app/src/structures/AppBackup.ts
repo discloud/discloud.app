@@ -9,12 +9,12 @@ class AppBackup extends Base {
   /**
    * Your app id
    */
-  id: string;
+  id!: string;
   /**
    * The backup url.
    * - You can access it `only once`.
    */
-  url: string;
+  url!: string;
   /**
    * The backup status
    */
@@ -24,14 +24,20 @@ class AppBackup extends Base {
    */
   data?: Buffer;
 
-  constructor(discloudApp: DiscloudApp, backup: ApiAppBackupAll | ApiAppBackup) {
+  constructor(discloudApp: DiscloudApp, data: ApiAppBackupAll | ApiAppBackup) {
     super(discloudApp);
 
-    this.id = backup.id;
-    this.url = backup.url;
+    this._patch(data);
+  }
 
-    if ("status" in backup)
-      this.status = backup.status;
+  protected _patch(data: ApiAppBackupAll | ApiAppBackup): this {
+    this.id = data.id;
+    this.url = data.url;
+
+    if ("status" in data)
+      this.status = data.status;
+
+    return super._patch(data);
   }
 
   /**

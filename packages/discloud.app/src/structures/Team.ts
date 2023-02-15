@@ -8,42 +8,61 @@ export default class Team extends Base {
   /**
    * Your team application id
    */
-  id: string;
+  id!: string;
   /**
    * Your team's app exit code on stop
    */
-  exitCode: number;
+  exitCode!: number;
   /**
    * Your team's app programming language
    */
-  lang: string;
+  lang!: string;
   /**
    * Your team application name
    */
-  name: string;
+  name!: string;
   /**
    * If your team application is online
    */
-  online: boolean;
+  online!: boolean;
   /**
    * Your permissions to manage this application.
    */
-  perms: string[];
+  perms: string[] = [];
   /**
    * If your team's app stopped due to low RAM
    */
-  ramKilled: boolean;
+  ramKilled!: boolean;
 
   constructor(discloudApp: DiscloudApp, data: ApiTeamApps) {
     super(discloudApp);
 
-    this.id = data.id;
-    this.exitCode = data.exitCode;
-    this.lang = data.lang;
-    this.name = data.name;
-    this.online = data.online;
-    this.perms = data.perms as ModPermissionsFlags[];
-    this.ramKilled = data.ramKilled;
+    this._patch(data);
+  }
+
+  protected _patch(data: ApiTeamApps): this {
+    if ("id" in data)
+      this.id = data.id;
+
+    if ("exitCode" in data)
+      this.exitCode = data.exitCode;
+
+    if ("lang" in data)
+      this.lang = data.lang;
+
+    if ("name" in data)
+      this.name = data.name;
+
+    if ("online" in data)
+      this.online = data.online;
+
+    if ("perms" in data)
+      this.perms = data.perms as ModPermissionsFlags[];
+
+    if ("ramKilled" in data)
+      this.ramKilled = data.ramKilled;
+
+    return super._patch(data);
   }
 
   /**
