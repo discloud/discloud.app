@@ -22,13 +22,21 @@ export class DiscloudConfig {
   }
 
   get comments() {
-    return read(this.path, "utf8")
-      ?.split(/\r?\n/)
-      .filter(a => /^\s*#/.test(a)) ?? [];
+    try {
+      return read(this.path, "utf8")
+        ?.split(/\r?\n/)
+        .filter(a => /^\s*#/.test(a)) ?? [];
+    } catch {
+      return [];
+    }
   }
 
   get data(): DiscloudConfigType {
-    return this.#configToObj(read(this.path, "utf8")!);
+    try {
+      return this.#configToObj(read(this.path, "utf8")!);
+    } catch (error) {
+      return <any>{};
+    }
   }
 
   get exists() {
@@ -48,7 +56,8 @@ export class DiscloudConfig {
   }
 
   get missingProps() {
-    return this.#requiredProps.filter(key => !this.data[<keyof DiscloudConfigType>key]);
+    return this.#requiredProps
+      .filter(key => !this.data[<keyof DiscloudConfigType>key]);
   }
 
   get #requiredProps() {
@@ -114,11 +123,11 @@ export class DiscloudConfig {
     return obj;
   }
 
-  get<T = any>(key: string): T | undefined {
-    return (<any>this.data)[key];
+  get<K extends keyof DiscloudConfigType>(key: K): DiscloudConfigType[K] {
+    return this.data[key];
   }
 
-  set(key: string, value: any) {
+  set<K extends keyof DiscloudConfigType>(key: K, value: DiscloudConfigType[K]) {
     this.update({ [key]: value });
   }
 
