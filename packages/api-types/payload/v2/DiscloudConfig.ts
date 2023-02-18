@@ -1,6 +1,6 @@
 export const APT = {
   canvas: [
-    "libcairo2-dev",
+    "libcairo2",
     "libpango1.0-dev",
     "libjpeg-dev",
     "libgif-dev",
@@ -12,17 +12,28 @@ export const APT = {
   libgl: ["libsm6", "libxext6"],
   openssl: ["pkg-config", "libssl-dev"],
   puppeteer: [
-    "libnss3",
-    "libatk-bridge2.0-0",
-    "libgtk-3-0",
     "libasound2",
-    "libxshmfence-dev",
+    "libatk-1.0-0",
+    "libatk-bridge2.0-0",
+    "libcairo2",
+    "libcups2",
     "libdrm-dev",
+    "libdrm2",
     "libgbm-dev",
-    "libglib2.0-dev",
+    "libgbm1",
+    "libglib2.0-0",
+    "libgtk-3-0",
+    "libnss3",
+    "libpango-1.0-0",
     "libx11-xcb-dev",
+    "libxcomposite1",
+    "libxdamage1",
+    "libxfixes3",
+    "libxkbcommon0",
+    "libxrandr2",
+    "libxshmfence-dev",
   ],
-  tools: ["git", "wget", "make", "curl"],
+  tools: ["cmake", "curl", "git", "make", "wget"],
 };
 
 export const APTPackages = <(keyof typeof APT)[]>Object.keys(APT);
