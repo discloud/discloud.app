@@ -23,7 +23,7 @@
   "dependencies": {
     "@discloudapp/api-types": "^0.2.6",
     "@discloudapp/util": "^0.3.3",
-    "undici": "^5.19.1"
+    "undici": "^5.20.0"
   },
   "engines": {
     "node": ">=16"
