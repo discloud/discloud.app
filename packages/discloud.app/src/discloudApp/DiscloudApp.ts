@@ -1,5 +1,6 @@
 import { ApiUser } from "@discloudapp/api-types/v2";
-import { REST } from "@discloudapp/rest";
+import { REST, RESTEvents } from "@discloudapp/rest";
+import EventEmitter from "node:events";
 import { env } from "node:process";
 import { DiscloudAppOptions } from "../@types";
 import AppAptManager from "../managers/AppAptManager";
@@ -12,7 +13,7 @@ import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
 /**
  * Client for Discloud API
  */
-export default class DiscloudApp {
+export default class DiscloudApp extends EventEmitter {
   readonly options: DiscloudAppOptions;
   readonly rest: REST;
   readonly appApt = new AppAptManager(this);
@@ -22,6 +23,8 @@ export default class DiscloudApp {
   readonly user = new User(this, <ApiUser>{});
 
   constructor(options: DiscloudAppOptions = {}) {
+    super({ captureRejections: true });
+
     options = mergeDefaults(DefaultDiscloudAppOptions, options);
 
     if ("token" in options) {
@@ -31,7 +34,8 @@ export default class DiscloudApp {
 
     this.options = options;
 
-    this.rest = new REST(this.options.rest);
+    this.rest = new REST(options.rest)
+      .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
   }
 
   #setToken(token: string) {
