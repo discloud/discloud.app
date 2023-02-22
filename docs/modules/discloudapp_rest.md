@@ -6,6 +6,7 @@
 
 ### Enumerations
 
+- [RESTEvents](../enums/discloudapp_rest.RESTEvents.md)
 - [RequestMethod](../enums/discloudapp_rest.RequestMethod.md)
 
 ### Classes
@@ -17,8 +18,10 @@
 
 - [InternalRequest](../interfaces/discloudapp_rest.InternalRequest.md)
 - [RESTOptions](../interfaces/discloudapp_rest.RESTOptions.md)
+- [RateLimitData](../interfaces/discloudapp_rest.RateLimitData.md)
 - [RequestData](../interfaces/discloudapp_rest.RequestData.md)
 - [RequestHeaders](../interfaces/discloudapp_rest.RequestHeaders.md)
+- [RestEvents](../interfaces/discloudapp_rest.RestEvents-1.md)
 
 ### Type Aliases
 
@@ -33,7 +36,7 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L7)
+[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/rest/src/@types/index.ts#L7)
 
 ___
 
@@ -43,4 +46,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/@types/index.ts#L5)
+[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/rest/src/@types/index.ts#L5)

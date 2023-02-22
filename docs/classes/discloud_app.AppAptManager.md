@@ -1,16 +1,10 @@
 [discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / AppAptManager
 
-# Class: AppAptManager<T\>
+# Class: AppAptManager
 
 [discloud.app](../modules/discloud_app.md).AppAptManager
 
 Manager for APT on your application on Discloud
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends [`BaseApp`](discloud_app.BaseApp.md) |
 
 ## Hierarchy
 
@@ -26,7 +20,6 @@ Manager for APT on your application on Discloud
 
 ### Properties
 
-- [app](discloud_app.AppAptManager.md#app)
 - [discloudApp](discloud_app.AppAptManager.md#discloudapp)
 
 ### Methods
@@ -38,20 +31,13 @@ Manager for APT on your application on Discloud
 
 ### constructor
 
-• **new AppAptManager**<`T`\>(`discloudApp`, `app`)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends [`BaseApp`](discloud_app.BaseApp.md)<`T`\> |
+• **new AppAptManager**(`discloudApp`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
-| `app` | `T` |
 
 #### Overrides
 
@@ -59,19 +45,9 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+[packages/discloud.app/src/managers/AppAptManager.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L9)
 
 ## Properties
-
-### app
-
-• `Readonly` **app**: `T`
-
-#### Defined in
-
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L10)
-
-___
 
 ### discloudApp
 
@@ -83,13 +59,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
 ### install
 
-▸ **install**(`apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
+▸ **install**(`appID`, `apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
 
 Install APTs for your application on Discloud
 
@@ -97,6 +73,7 @@ Install APTs for your application on Discloud
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `appID` | `string` | The app id |
 | `apt` | ``"ffmpeg"`` \| ``"canvas"`` \| ``"java"`` \| ``"libgl"`` \| ``"openssl"`` \| ``"puppeteer"`` \| ``"tools"`` \| (``"ffmpeg"`` \| ``"canvas"`` \| ``"java"`` \| ``"libgl"`` \| ``"openssl"`` \| ``"puppeteer"`` \| ``"tools"``)[] | One or more APTs to install. See AptString. |
 
 #### Returns
@@ -107,13 +84,13 @@ Promise [RESTPutApiAppAptResult](../interfaces/discloud_app.RESTPutApiAppAptResu
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ___
 
 ### uninstall
 
-▸ **uninstall**(`apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
+▸ **uninstall**(`appID`, `apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
 
 Uninstall APTs for your application on Discloud
 
@@ -121,6 +98,7 @@ Uninstall APTs for your application on Discloud
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `appID` | `string` | The app id |
 | `apt` | ``"ffmpeg"`` \| ``"canvas"`` \| ``"java"`` \| ``"libgl"`` \| ``"openssl"`` \| ``"puppeteer"`` \| ``"tools"`` \| (``"ffmpeg"`` \| ``"canvas"`` \| ``"java"`` \| ``"libgl"`` \| ``"openssl"`` \| ``"puppeteer"`` \| ``"tools"``)[] | One or more APTs to uninstall. See AptString. |
 
 #### Returns
@@ -131,4 +109,4 @@ Promise [RESTDeleteApiAppAptResult](../interfaces/discloud_app.RESTDeleteApiAppA
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:39](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/AppAptManager.ts#L39)
+[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L40)

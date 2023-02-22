@@ -20,11 +20,11 @@ Base for all structures
 
 ### Properties
 
+- [appId](discloud_app.AppStatus.md#appid)
 - [constructor](discloud_app.AppStatus.md#constructor-1)
 - [container](discloud_app.AppStatus.md#container)
 - [cpu](discloud_app.AppStatus.md#cpu)
 - [discloudApp](discloud_app.AppStatus.md#discloudapp)
-- [id](discloud_app.AppStatus.md#id)
 - [lastRestart](discloud_app.AppStatus.md#lastrestart)
 - [memory](discloud_app.AppStatus.md#memory)
 - [memoryUsage](discloud_app.AppStatus.md#memoryusage)
@@ -33,11 +33,16 @@ Base for all structures
 - [startedAt](discloud_app.AppStatus.md#startedat)
 - [startedAtTimestamp](discloud_app.AppStatus.md#startedattimestamp)
 
+### Accessors
+
+- [app](discloud_app.AppStatus.md#app)
+
 ### Methods
 
 - [\_clone](discloud_app.AppStatus.md#_clone)
 - [\_patch](discloud_app.AppStatus.md#_patch)
 - [\_update](discloud_app.AppStatus.md#_update)
+- [fetch](discloud_app.AppStatus.md#fetch)
 
 ## Constructors
 
@@ -50,7 +55,7 @@ Base for all structures
 | Name | Type |
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
-| `data` | [`ApiAppStatus`](../interfaces/discloud_app.ApiAppStatus.md) |
+| `data` | [`ApiStatusApp`](../interfaces/discloud_app.ApiStatusApp.md) |
 
 #### Overrides
 
@@ -58,13 +63,25 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:49](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L49)
+[packages/discloud.app/src/structures/AppStatus.ts:49](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L49)
 
 ## Properties
 
+### appId
+
+• **appId**: `string`
+
+Your app id
+
+#### Defined in
+
+[packages/discloud.app/src/structures/AppStatus.ts:10](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L10)
+
+___
+
 ### constructor
 
-• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)<[`AppStatus`](discloud_app.AppStatus.md)\>
+• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`AppStatus`](discloud_app.AppStatus.md)\>
 
 #### Inherited from
 
@@ -72,7 +89,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -85,7 +102,7 @@ Status of your application
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:11](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L11)
+[packages/discloud.app/src/structures/AppStatus.ts:15](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L15)
 
 ___
 
@@ -97,7 +114,7 @@ CPU usage as percentage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:15](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L15)
+[packages/discloud.app/src/structures/AppStatus.ts:19](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L19)
 
 ___
 
@@ -111,19 +128,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
-
-___
-
-### id
-
-• **id**: `string`
-
-Your app id
-
-#### Defined in
-
-[packages/discloud.app/src/structures/AppStatus.ts:19](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L19)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -135,31 +140,31 @@ Relative time of the last restart
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L23)
+[packages/discloud.app/src/structures/AppStatus.ts:23](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L23)
 
 ___
 
 ### memory
 
-• `Optional` **memory**: `string`
+• **memory**: `string`
 
 RAM usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:27](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L27)
+[packages/discloud.app/src/structures/AppStatus.ts:27](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L27)
 
 ___
 
 ### memoryUsage
 
-• `Optional` **memoryUsage**: `number`
+• **memoryUsage**: `number`
 
 Percentage of memory usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:31](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L31)
+[packages/discloud.app/src/structures/AppStatus.ts:31](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L31)
 
 ___
 
@@ -171,7 +176,7 @@ Internet usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:35](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L35)
+[packages/discloud.app/src/structures/AppStatus.ts:35](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L35)
 
 ___
 
@@ -183,31 +188,45 @@ Storage space
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:39](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L39)
+[packages/discloud.app/src/structures/AppStatus.ts:39](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L39)
 
 ___
 
 ### startedAt
 
-• `Optional` **startedAt**: [`Date`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date )
+• **startedAt**: [`Date`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date )
 
 Date of your application has started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:43](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L43)
+[packages/discloud.app/src/structures/AppStatus.ts:43](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L43)
 
 ___
 
 ### startedAtTimestamp
 
-• `Optional` **startedAtTimestamp**: `number`
+• **startedAtTimestamp**: `number`
 
 Timestamp of when your app started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:47](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppStatus.ts#L47)
+[packages/discloud.app/src/structures/AppStatus.ts:47](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L47)
+
+## Accessors
+
+### app
+
+• `get` **app**(): `undefined` \| [`App`](discloud_app.App.md)
+
+#### Returns
+
+`undefined` \| [`App`](discloud_app.App.md)
+
+#### Defined in
+
+[packages/discloud.app/src/structures/AppStatus.ts:55](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L55)
 
 ## Methods
 
@@ -225,7 +244,7 @@ Timestamp of when your app started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -237,19 +256,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `unknown` |
+| `data` | [`ApiStatusApp`](../interfaces/discloud_app.ApiStatusApp.md) |
 
 #### Returns
 
 [`AppStatus`](discloud_app.AppStatus.md)
 
-#### Inherited from
+#### Overrides
 
 [Base](discloud_app.Base.md).[_patch](discloud_app.Base.md#_patch)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/AppStatus.ts:63](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L63)
 
 ___
 
@@ -273,4 +292,18 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L23)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L22)
+
+___
+
+### fetch
+
+▸ **fetch**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
+
+#### Returns
+
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
+
+#### Defined in
+
+[packages/discloud.app/src/structures/AppStatus.ts:59](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppStatus.ts#L59)

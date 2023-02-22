@@ -4,11 +4,11 @@
 
 [discloud.app](../modules/discloud_app.md).AppUploaded
 
-Base for app structures
+Base for all structures
 
 ## Hierarchy
 
-- [`BaseApp`](discloud_app.BaseApp.md)
+- [`Base`](discloud_app.Base.md)
 
   ↳ **`AppUploaded`**
 
@@ -21,35 +21,27 @@ Base for app structures
 ### Properties
 
 - [addedAtTimestamp](discloud_app.AppUploaded.md#addedattimestamp)
-- [apt](discloud_app.AppUploaded.md#apt)
+- [appId](discloud_app.AppUploaded.md#appid)
 - [autoRestart](discloud_app.AppUploaded.md#autorestart)
 - [avatarURL](discloud_app.AppUploaded.md#avatarurl)
 - [constructor](discloud_app.AppUploaded.md#constructor-1)
 - [discloudApp](discloud_app.AppUploaded.md#discloudapp)
-- [id](discloud_app.AppUploaded.md#id)
 - [lang](discloud_app.AppUploaded.md#lang)
 - [mainFile](discloud_app.AppUploaded.md#mainfile)
 - [name](discloud_app.AppUploaded.md#name)
 - [ram](discloud_app.AppUploaded.md#ram)
-- [team](discloud_app.AppUploaded.md#team)
 - [type](discloud_app.AppUploaded.md#type)
 - [version](discloud_app.AppUploaded.md#version)
+
+### Accessors
+
+- [app](discloud_app.AppUploaded.md#app)
 
 ### Methods
 
 - [\_clone](discloud_app.AppUploaded.md#_clone)
 - [\_patch](discloud_app.AppUploaded.md#_patch)
 - [\_update](discloud_app.AppUploaded.md#_update)
-- [backup](discloud_app.AppUploaded.md#backup)
-- [delete](discloud_app.AppUploaded.md#delete)
-- [restart](discloud_app.AppUploaded.md#restart)
-- [setRam](discloud_app.AppUploaded.md#setram)
-- [start](discloud_app.AppUploaded.md#start)
-- [status](discloud_app.AppUploaded.md#status)
-- [stop](discloud_app.AppUploaded.md#stop)
-- [terminal](discloud_app.AppUploaded.md#terminal)
-- [toString](discloud_app.AppUploaded.md#tostring)
-- [update](discloud_app.AppUploaded.md#update)
 
 ## Constructors
 
@@ -66,11 +58,11 @@ Base for app structures
 
 #### Overrides
 
-[BaseApp](discloud_app.BaseApp.md).[constructor](discloud_app.BaseApp.md#constructor)
+[Base](discloud_app.Base.md).[constructor](discloud_app.Base.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppUploaded.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppUploaded.ts#L23)
+[packages/discloud.app/src/structures/AppUploaded.ts:47](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L47)
 
 ## Properties
 
@@ -82,21 +74,19 @@ The timestamp of the upload of your application
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppUploaded.ts:9](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppUploaded.ts#L9)
+[packages/discloud.app/src/structures/AppUploaded.ts:13](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L13)
 
 ___
 
-### apt
+### appId
 
-• `Readonly` **apt**: [`AppAptManager`](discloud_app.AppAptManager.md)<[`AppUploaded`](discloud_app.AppUploaded.md)\>
+• **appId**: `string`
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[apt](discloud_app.BaseApp.md#apt)
+Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:37](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L37)
+[packages/discloud.app/src/structures/AppUploaded.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L9)
 
 ___
 
@@ -106,13 +96,9 @@ ___
 
 If your app has auto-restart enabled
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[autoRestart](discloud_app.BaseApp.md#autorestart)
-
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:15](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L15)
+[packages/discloud.app/src/structures/AppUploaded.ts:17](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L17)
 
 ___
 
@@ -124,21 +110,21 @@ Your app's avatar url
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppUploaded.ts:13](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppUploaded.ts#L13)
+[packages/discloud.app/src/structures/AppUploaded.ts:21](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L21)
 
 ___
 
 ### constructor
 
-• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)<[`AppUploaded`](discloud_app.AppUploaded.md)\>
+• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`AppUploaded`](discloud_app.AppUploaded.md)\>
 
 #### Inherited from
 
-BaseApp.constructor
+Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -148,27 +134,11 @@ ___
 
 #### Inherited from
 
-[BaseApp](discloud_app.BaseApp.md).[discloudApp](discloud_app.BaseApp.md#discloudapp)
+[Base](discloud_app.Base.md).[discloudApp](discloud_app.Base.md#discloudapp)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
-
-___
-
-### id
-
-• **id**: `string`
-
-Your app id
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[id](discloud_app.BaseApp.md#id)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:19](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L19)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -178,13 +148,9 @@ ___
 
 Your app programming language
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[lang](discloud_app.BaseApp.md#lang)
-
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L23)
+[packages/discloud.app/src/structures/AppUploaded.ts:25](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L25)
 
 ___
 
@@ -194,13 +160,9 @@ ___
 
 The main file of your application
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[mainFile](discloud_app.BaseApp.md#mainfile)
-
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:27](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L27)
+[packages/discloud.app/src/structures/AppUploaded.ts:29](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L29)
 
 ___
 
@@ -210,13 +172,9 @@ ___
 
 The name of your application
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[name](discloud_app.BaseApp.md#name)
-
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:31](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L31)
+[packages/discloud.app/src/structures/AppUploaded.ts:33](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L33)
 
 ___
 
@@ -226,27 +184,9 @@ ___
 
 The ram quantity for your application
 
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[ram](discloud_app.BaseApp.md#ram)
-
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseApp.ts:35](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L35)
-
-___
-
-### team
-
-• `Readonly` **team**: [`AppTeamManager`](discloud_app.AppTeamManager.md)<[`AppUploaded`](discloud_app.AppUploaded.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[team](discloud_app.BaseApp.md#team)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:38](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L38)
+[packages/discloud.app/src/structures/AppUploaded.ts:37](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L37)
 
 ___
 
@@ -258,7 +198,7 @@ Your app's type
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppUploaded.ts:17](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppUploaded.ts#L17)
+[packages/discloud.app/src/structures/AppUploaded.ts:41](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L41)
 
 ___
 
@@ -270,7 +210,21 @@ The version of the package
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppUploaded.ts:21](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/AppUploaded.ts#L21)
+[packages/discloud.app/src/structures/AppUploaded.ts:45](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L45)
+
+## Accessors
+
+### app
+
+• `get` **app**(): `undefined` \| [`App`](discloud_app.App.md)
+
+#### Returns
+
+`undefined` \| [`App`](discloud_app.App.md)
+
+#### Defined in
+
+[packages/discloud.app/src/structures/AppUploaded.ts:53](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L53)
 
 ## Methods
 
@@ -284,11 +238,11 @@ The version of the package
 
 #### Inherited from
 
-[BaseApp](discloud_app.BaseApp.md).[_clone](discloud_app.BaseApp.md#_clone)
+[Base](discloud_app.Base.md).[_clone](discloud_app.Base.md#_clone)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -300,19 +254,19 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `unknown` |
+| `data` | [`ApiUploadApp`](../interfaces/discloud_app.ApiUploadApp.md) |
 
 #### Returns
 
 [`AppUploaded`](discloud_app.AppUploaded.md)
 
-#### Inherited from
+#### Overrides
 
-[BaseApp](discloud_app.BaseApp.md).[_patch](discloud_app.BaseApp.md#_patch)
+[Base](discloud_app.Base.md).[_patch](discloud_app.Base.md#_patch)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/AppUploaded.ts:57](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/AppUploaded.ts#L57)
 
 ___
 
@@ -332,224 +286,8 @@ ___
 
 #### Inherited from
 
-[BaseApp](discloud_app.BaseApp.md).[_update](discloud_app.BaseApp.md#_update)
+[Base](discloud_app.Base.md).[_update](discloud_app.Base.md#_update)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L23)
-
-___
-
-### backup
-
-▸ **backup**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
-
-Get backups of your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[backup](discloud_app.BaseApp.md#backup)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:75](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L75)
-
-___
-
-### delete
-
-▸ **delete**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-Delete your application from Discloud.
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[delete](discloud_app.BaseApp.md#delete)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:89](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L89)
-
-___
-
-### restart
-
-▸ **restart**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-Restart your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[restart](discloud_app.BaseApp.md#restart)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:103](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L103)
-
-___
-
-### setRam
-
-▸ **setRam**(`quantity`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
-
-Set the quantity of ram to your application
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `quantity` | `number` | Minimum values is `100` to `bot` or `512` for `site` |
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
-
-Promise [RESTPutApiAppRamResult](../interfaces/discloud_app.RESTPutApiAppRamResult.md)
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[setRam](discloud_app.BaseApp.md#setram)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:63](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L63)
-
-___
-
-### start
-
-▸ **start**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-Start your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[start](discloud_app.BaseApp.md#start)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:110](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L110)
-
-___
-
-### status
-
-▸ **status**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
-
-Get the status of your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[status](discloud_app.BaseApp.md#status)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:96](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L96)
-
-___
-
-### stop
-
-▸ **stop**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-Stop your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[stop](discloud_app.BaseApp.md#stop)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:119](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L119)
-
-___
-
-### terminal
-
-▸ **terminal**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
-
-Get logs of your application on Discloud
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[terminal](discloud_app.BaseApp.md#terminal)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:82](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L82)
-
-___
-
-### toString
-
-▸ **toString**(): `string`
-
-#### Returns
-
-`string`
-
-app id
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[toString](discloud_app.BaseApp.md#tostring)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:136](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L136)
-
-___
-
-### update
-
-▸ **update**(`options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
-
-Update an of your apps on Discloud.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | [`UploadAppOptions`](../interfaces/discloud_app.UploadAppOptions.md) | Options to update your app. |
-
-#### Returns
-
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
-
-Promise [RESTPutApiAppCommitResult](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)
-
-#### Inherited from
-
-[BaseApp](discloud_app.BaseApp.md).[update](discloud_app.BaseApp.md#update)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/BaseApp.ts:129](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/BaseApp.ts#L129)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L22)

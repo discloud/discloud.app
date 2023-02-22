@@ -8,14 +8,14 @@
 
 ### Properties
 
-- [token](discloud_app.DiscloudAppOptions.md#token)
+- [rest](discloud_app.DiscloudAppOptions.md#rest)
 
 ## Properties
 
-### token
+### rest
 
-• `Optional` **token**: `string`
+• `Optional` **rest**: [`RESTOptions`](discloud_app.RESTOptions.md)
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/@types/index.ts#L8)
+[packages/discloud.app/src/@types/index.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/@types/index.ts#L9)

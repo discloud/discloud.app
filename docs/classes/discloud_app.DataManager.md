@@ -52,7 +52,7 @@ Manager for data
 | Name | Type |
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
-| `holds` | [`Constructor`](../interfaces/discloud_app.Constructor.md)<`T`\> |
+| `holds` | [`Constructor`](../modules/discloud_app.md#constructor)<`T`\> |
 
 #### Overrides
 
@@ -60,7 +60,7 @@ Manager for data
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/DataManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ## Properties
 
@@ -74,17 +74,17 @@ Manager for data
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ___
 
 ### holds
 
-• `Protected` **holds**: [`Constructor`](../interfaces/discloud_app.Constructor.md)<`T`\>
+• `Protected` **holds**: [`Constructor`](../modules/discloud_app.md#constructor)<`T`\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/DataManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ## Accessors
 
@@ -98,4 +98,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/DataManager.ts#L13)
+[packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/DataManager.ts#L13)

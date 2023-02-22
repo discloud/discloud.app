@@ -14,9 +14,9 @@
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">discloudapp</a></li>
 <li><a href="_discloudapp_rest.html">@discloudapp/rest</a></li></ul>
-<h1>Module @discloudapp/rest - v0.4.0</h1></div><aside class="tsd-sources">
+<h1>Module @discloudapp/rest - v0.6.0</h1></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/86003e6/packages/rest/src/index.ts#L1">packages/rest/src/index.ts:1</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/discloud/discloud.app/blob/d2f41b0/packages/rest/src/index.ts#L1">packages/rest/src/index.ts:1</a></li></ul></aside>
 <section class="tsd-panel-group">
 <section class="tsd-panel tsd-typography"></section></section>
 <section class="tsd-panel-group tsd-index-group">
@@ -24,7 +24,8 @@
 <h3 class="tsd-index-heading uppercase">Index</h3>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Enumerations</h3>
-<div class="tsd-index-list"><a href="../enums/_discloudapp_rest.RequestMethod.html" class="tsd-index-link tsd-kind-enum tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-enum)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-8-path"></rect><path d="M9.45 16V7.24H14.49V8.224H10.518V10.936H14.07V11.908H10.518V15.016H14.49V16H9.45Z" fill="var(--color-text)" id="icon-8-text"></path></svg><span>Request<wbr/>Method</span></a>
+<div class="tsd-index-list"><a href="../enums/_discloudapp_rest.RESTEvents.html" class="tsd-index-link tsd-kind-enum tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-enum)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-8-path"></rect><path d="M9.45 16V7.24H14.49V8.224H10.518V10.936H14.07V11.908H10.518V15.016H14.49V16H9.45Z" fill="var(--color-text)" id="icon-8-text"></path></svg><span>RESTEvents</span></a>
+<a href="../enums/_discloudapp_rest.RequestMethod.html" class="tsd-index-link tsd-kind-enum tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-8-path"></use><use href="#icon-8-text"></use></svg><span>Request<wbr/>Method</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Classes</h3>
@@ -35,8 +36,10 @@
 <h3 class="tsd-index-heading">Interfaces</h3>
 <div class="tsd-index-list"><a href="../interfaces/_discloudapp_rest.InternalRequest.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Internal<wbr/>Request</span></a>
 <a href="../interfaces/_discloudapp_rest.RESTOptions.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>RESTOptions</span></a>
+<a href="../interfaces/_discloudapp_rest.RateLimitData.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Rate<wbr/>Limit<wbr/>Data</span></a>
 <a href="../interfaces/_discloudapp_rest.RequestData.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Data</span></a>
 <a href="../interfaces/_discloudapp_rest.RequestHeaders.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Headers</span></a>
+<a href="../interfaces/_discloudapp_rest.RestEvents-1.html" class="tsd-index-link tsd-kind-interface tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Rest<wbr/>Events</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Type Aliases</h3>
@@ -64,19 +67,22 @@
 <ul>
 <li class="current"><a href="../modules.html">discloudapp</a>
 <ul>
-<li class="tsd-kind-module"><a href="_discloudapp_api_types.html">@discloudapp/api-<wbr/>types -<wbr/> v0.2.5</a></li>
-<li class="current selected tsd-kind-module"><a href="_discloudapp_rest.html">@discloudapp/rest -<wbr/> v0.4.0</a></li>
-<li class="tsd-kind-module"><a href="_discloudapp_util.html">@discloudapp/util -<wbr/> v0.2.0</a></li>
-<li class="tsd-kind-module"><a href="discloud_app.html">discloud.app -<wbr/> v0.4.1</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="_discloudapp_api_types.html">@discloudapp/api-<wbr/>types -<wbr/> v0.2.7</a></li>
+<li class="current selected tsd-kind-module"><a href="_discloudapp_rest.html">@discloudapp/rest -<wbr/> v0.6.0</a></li>
+<li class="tsd-kind-module"><a href="_discloudapp_util.html">@discloudapp/util -<wbr/> v0.3.10</a></li>
+<li class="tsd-kind-module"><a href="discloud_app.html">discloud.app -<wbr/> v0.6.0</a></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
+<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_discloudapp_rest.RESTEvents.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-8-path"></use><use href="#icon-8-text"></use></svg>RESTEvents</a></li>
 <li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_discloudapp_rest.RequestMethod.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-8-path"></use><use href="#icon-8-text"></use></svg>Request<wbr/>Method</a></li>
 <li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_discloudapp_rest.REST.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>REST</a></li>
 <li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_discloudapp_rest.RequestManager.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Request<wbr/>Manager</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.InternalRequest.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Internal<wbr/>Request</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.RESTOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>RESTOptions</a></li>
+<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.RateLimitData.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Rate<wbr/>Limit<wbr/>Data</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.RequestData.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Request<wbr/>Data</a></li>
 <li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.RequestHeaders.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Request<wbr/>Headers</a></li>
+<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_discloudapp_rest.RestEvents-1.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg>Rest<wbr/>Events</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="../types/_discloudapp_rest.RequestOptions.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Request<wbr/>Options</a></li>
 <li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="../types/_discloudapp_rest.RouteLike.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Route<wbr/>Like</a></li></ul></nav></div></div>
 <div class="container tsd-generator">

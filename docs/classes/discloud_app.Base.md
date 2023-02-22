@@ -10,13 +10,21 @@ Base for all structures
 
 - **`Base`**
 
+  ↳ [`AppApt`](discloud_app.AppApt.md)
+
   ↳ [`AppBackup`](discloud_app.AppBackup.md)
 
   ↳ [`AppStatus`](discloud_app.AppStatus.md)
 
+  ↳ [`AppTeam`](discloud_app.AppTeam.md)
+
+  ↳ [`AppUploaded`](discloud_app.AppUploaded.md)
+
   ↳ [`BaseApp`](discloud_app.BaseApp.md)
 
-  ↳ [`Team`](discloud_app.Team.md)
+  ↳ [`BaseTeamApp`](discloud_app.BaseTeamApp.md)
+
+  ↳ [`TeamAppStatus`](discloud_app.TeamAppStatus.md)
 
   ↳ [`User`](discloud_app.User.md)
 
@@ -51,17 +59,17 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Properties
 
 ### constructor
 
-• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)<[`Base`](discloud_app.Base.md)\>
+• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`Base`](discloud_app.Base.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -71,7 +79,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
@@ -85,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -105,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -125,4 +133,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:23](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/structures/Base.ts#L23)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/structures/Base.ts#L22)

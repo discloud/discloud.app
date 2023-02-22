@@ -7,10 +7,13 @@
 ### Classes
 
 - [BitField](../classes/discloudapp_util.BitField.md)
+- [DiscloudConfig](../classes/discloudapp_util.DiscloudConfig.md)
+- [IgnoreFiles](../classes/discloudapp_util.IgnoreFiles.md)
 - [ModPermissionsBF](../classes/discloudapp_util.ModPermissionsBF.md)
 
 ### Interfaces
 
+- [IgnoreFilesOptions](../interfaces/discloudapp_util.IgnoreFilesOptions.md)
 - [RawFile](../interfaces/discloudapp_util.RawFile.md)
 
 ### Type Aliases
@@ -24,6 +27,10 @@
 ### Variables
 
 - [ModPermissions](discloudapp_util.md#modpermissions)
+- [allBlockedFiles](discloudapp_util.md#allblockedfiles)
+- [allBlockedFilesRegex](discloudapp_util.md#allblockedfilesregex)
+- [blockedFiles](discloudapp_util.md#blockedfiles)
+- [discloudConfigRequiredScopes](discloudapp_util.md#discloudconfigrequiredscopes)
 - [fileNamePattern](discloudapp_util.md#filenamepattern)
 
 ### Functions
@@ -48,7 +55,7 @@
 
 #### Defined in
 
-[packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/BitField.ts#L6)
+[packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/BitField.ts#L6)
 
 ___
 
@@ -71,7 +78,7 @@ Data that can be resolved to give a bitfield. This can be:
 
 #### Defined in
 
-[packages/util/src/BitField.ts:166](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/BitField.ts#L166)
+[packages/util/src/BitField.ts:166](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/BitField.ts#L166)
 
 ___
 
@@ -83,7 +90,7 @@ This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/di
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:30](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/FileResolver.ts#L30)
+[packages/util/src/FileResolver.ts:30](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/FileResolver.ts#L30)
 
 ___
 
@@ -93,7 +100,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/ModPermissionsBF.ts#L14)
+[packages/util/src/ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/ModPermissionsBF.ts#L14)
 
 ___
 
@@ -103,7 +110,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/ModPermissionsBF.ts:16](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/ModPermissionsBF.ts#L16)
+[packages/util/src/ModPermissionsBF.ts:16](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/ModPermissionsBF.ts#L16)
 
 ## Variables
 
@@ -126,7 +133,67 @@ ___
 
 #### Defined in
 
-[packages/util/src/ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/ModPermissionsBF.ts#L3)
+[packages/util/src/ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/ModPermissionsBF.ts#L3)
+
+___
+
+### allBlockedFiles
+
+• `Const` **allBlockedFiles**: `string`[]
+
+#### Defined in
+
+[packages/util/src/IgnoreFiles.ts:15](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/IgnoreFiles.ts#L15)
+
+___
+
+### allBlockedFilesRegex
+
+• `Const` **allBlockedFilesRegex**: [`RegExp`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp )
+
+#### Defined in
+
+[packages/util/src/IgnoreFiles.ts:17](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/IgnoreFiles.ts#L17)
+
+___
+
+### blockedFiles
+
+• `Const` **blockedFiles**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `common` | `string`[] |
+| `go` | `never`[] |
+| `js` | `string`[] |
+| `py` | `string`[] |
+| `rb` | `string`[] |
+| `rs` | `string`[] |
+| `ts` | `string`[] |
+
+#### Defined in
+
+[packages/util/src/IgnoreFiles.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/IgnoreFiles.ts#L5)
+
+___
+
+### discloudConfigRequiredScopes
+
+• `Const` **discloudConfigRequiredScopes**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `bot` | `string`[] |
+| `common` | `string`[] |
+| `site` | `string`[] |
+
+#### Defined in
+
+[packages/util/src/DiscloudConfig.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/DiscloudConfig.ts#L5)
 
 ___
 
@@ -136,7 +203,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:6](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/FileResolver.ts#L6)
+[packages/util/src/FileResolver.ts:6](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/FileResolver.ts#L6)
 
 ## Functions
 
@@ -157,7 +224,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/index.ts:5](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/index.ts#L5)
+[packages/util/src/index.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/index.ts#L7)
 
 ___
 
@@ -178,11 +245,9 @@ A function that converts [FileResolvable](discloudapp_util.md#fileresolvable) to
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`File`\>
 
-A promise of File
-
 #### Defined in
 
-[packages/util/src/FileResolver.ts:39](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/FileResolver.ts#L39)
+[packages/util/src/FileResolver.ts:44](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/FileResolver.ts#L44)
 
 ___
 
@@ -203,11 +268,9 @@ A function that converts a like Stream parameter to Blob
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`Blob`\>
 
-A promise of Blob
-
 #### Defined in
 
-[packages/util/src/FileResolver.ts:97](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/FileResolver.ts#L97)
+[packages/util/src/FileResolver.ts:100](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/FileResolver.ts#L100)
 
 ___
 
@@ -229,8 +292,6 @@ A function that converts a like Stream parameter to File
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`File`\>
 
-A promise of File
-
 #### Defined in
 
-[packages/util/src/FileResolver.ts:81](https://github.com/discloud/discloud.app/blob/86003e6/packages/util/src/FileResolver.ts#L81)
+[packages/util/src/FileResolver.ts:85](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/util/src/FileResolver.ts#L85)

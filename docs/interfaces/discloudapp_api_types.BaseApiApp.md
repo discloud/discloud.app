@@ -14,7 +14,7 @@
 
   ↳ [`ApiAppLog`](discloudapp_api_types.ApiAppLog.md)
 
-  ↳ [`ApiAppStatus`](discloudapp_api_types.ApiAppStatus.md)
+  ↳ [`ApiStatusApp`](discloudapp_api_types.ApiStatusApp.md)
 
 ## Table of contents
 
@@ -32,4 +32,4 @@ Your app id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/api-types/rest/v2/app.ts#L7)
+[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/api-types/rest/v2/app.ts#L7)

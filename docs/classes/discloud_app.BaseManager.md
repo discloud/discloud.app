@@ -16,8 +16,6 @@ Base for all managers
 
   ↳ [`DataManager`](discloud_app.DataManager.md)
 
-  ↳ [`TeamManager`](discloud_app.TeamManager.md)
-
 ## Table of contents
 
 ### Constructors
@@ -42,7 +40,7 @@ Base for all managers
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Properties
 
@@ -52,4 +50,4 @@ Base for all managers
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/86003e6/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/BaseManager.ts#L7)
