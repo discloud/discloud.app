@@ -1,19 +1,19 @@
-import { ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiAppStatus, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { resolveFile } from "@discloudapp/util";
 import { File } from "undici";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
-import AppStatus from "../structures/AppStatus";
-import Team from "../structures/Team";
-import BaseManager from "./BaseManager";
+import TeamApp from "../structures/TeamApp";
+import TeamAppStatus from "../structures/TeamAppStatus";
+import CachedManager from "./CachedManager";
 
 /**
  * Manager for your team on Discloud
  */
-export default class TeamManager extends BaseManager {
+export default class TeamAppManager extends CachedManager<TeamApp> {
   constructor(discloudApp: DiscloudApp) {
-    super(discloudApp);
+    super(discloudApp, TeamApp);
   }
 
   /**
@@ -21,8 +21,8 @@ export default class TeamManager extends BaseManager {
    * 
    * @param appID - Your team app id
    */
-  async status(appID: string): Promise<ApiAppStatus>
-  async status(appID?: "all"): Promise<Map<string, AppStatus>>
+  async status(appID: string): Promise<TeamAppStatus>
+  async status(appID?: "all"): Promise<Map<string, TeamAppStatus>>
   async status(appID = "all") {
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppStatusResult
@@ -30,16 +30,16 @@ export default class TeamManager extends BaseManager {
     >(Routes.teamStatus(appID));
 
     if (Array.isArray(data.apps)) {
-      const cache = new Map<string, AppStatus>();
+      const cache = new Map<string, TeamAppStatus>();
 
-      for (const app of data.apps) {
-        cache.set(app.id, new AppStatus(this.discloudApp, app));
+      for (const app of this._addMany(data.apps).values()) {
+        cache.set(app.id, app.status);
       }
 
       return cache;
     }
 
-    return data.apps;
+    return this._add(data.apps).status;
   }
 
   /**
@@ -107,6 +107,12 @@ export default class TeamManager extends BaseManager {
       },
     });
 
+    if (data.statusCode === 200)
+      this._add({
+        id: appID,
+        ram: quantity,
+      });
+
     return data;
   }
 
@@ -142,7 +148,19 @@ export default class TeamManager extends BaseManager {
       | RESTPutApiAppAllRestartResult
     >(Routes.teamRestart(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.restarted.map(app => ({
+        id: app,
+        online: true,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: data.status === "ok",
+    });
 
     return data;
   }
@@ -160,7 +178,19 @@ export default class TeamManager extends BaseManager {
       | RESTPutApiAppAllStartResult
     >(Routes.teamStart(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.started.map(app => ({
+        id: app,
+        online: true,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: data.status === "ok",
+    });
 
     return data;
   }
@@ -178,7 +208,19 @@ export default class TeamManager extends BaseManager {
       | RESTPutApiAppAllStopResult
     >(Routes.teamStop(appID));
 
-    if ("apps" in data) return data.apps;
+    if ("apps" in data) {
+      this._addMany(data.apps.stoped.map(app => ({
+        id: app,
+        online: false,
+      })));
+
+      return data.apps;
+    }
+
+    this._add({
+      id: appID,
+      online: !(data.status === "ok"),
+    });
 
     return data;
   }
@@ -191,12 +233,6 @@ export default class TeamManager extends BaseManager {
   async fetch() {
     const data = await this.discloudApp.rest.get<RESTGetApiTeamResult>(Routes.team());
 
-    const cache = new Map<string, Team>();
-
-    for (const app of data.apps) {
-      cache.set(app.id, new Team(this.discloudApp, app));
-    }
-
-    return cache;
+    return this._addMany(data.apps);
   }
 }

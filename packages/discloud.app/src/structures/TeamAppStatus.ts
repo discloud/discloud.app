@@ -3,7 +3,7 @@ import { calculatePercentage } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
-export default class AppStatus extends Base {
+export default class TeamAppStatus extends Base {
   /**
    * Your app id
    */
@@ -53,11 +53,11 @@ export default class AppStatus extends Base {
   }
 
   get app() {
-    return this.discloudApp.apps.cache.get(this.appId);
+    return this.discloudApp.team.cache.get(this.appId);
   }
 
   fetch() {
-    return this.discloudApp.apps.status(this.appId);
+    return this.discloudApp.team.status(this.appId);
   }
 
   protected _patch(data: ApiStatusApp): this {

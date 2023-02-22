@@ -7,20 +7,21 @@ import BaseManager from "./BaseManager";
 /**
  * Manager for Team on your application on Discloud
  */
-export default class AppTeamManager<T extends BaseApp> extends BaseManager {
-  constructor(discloudApp: DiscloudApp, public readonly app: T) {
+export default class AppTeamManager extends BaseManager {
+  constructor(discloudApp: DiscloudApp) {
     super(discloudApp);
   }
 
   /**
    * Add a mod for you application on Discloud
    * 
+   * @param appID - The app id
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    * @returns Promise {@link ApiAppTeamManager}
    */
-  async create(modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
-    const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(this.app.id), {
+  async create(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+    const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(appID), {
       body: {
         modID,
         perms: new ModPermissionsBF(perms).toArray(),
@@ -33,12 +34,13 @@ export default class AppTeamManager<T extends BaseApp> extends BaseManager {
   /**
    * Edit permissions of a mod for you application on Discloud
    * 
+   * @param appID - The app id
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    * @returns Promise {@link ApiAppTeamManager}
    */
-  async edit(modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
-    const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(this.app.id), {
+  async edit(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(appID), {
       body: {
         modID,
         perms: new ModPermissionsBF(perms).toArray(),
@@ -52,13 +54,14 @@ export default class AppTeamManager<T extends BaseApp> extends BaseManager {
   /**
    * Remove a mod from you application on Discloud
    * 
+   * @param appID - The app id
    * @param modID - The mod id
    * @returns Promise {@link RESTDeleteApiAppTeamResult}
    */
-  async delete(modID: string): Promise<RESTDeleteApiAppTeamResult> {
+  async delete(appID: string, modID: string): Promise<RESTDeleteApiAppTeamResult> {
     const data = await this.discloudApp.rest.delete<
       RESTDeleteApiAppTeamResult
-    >(Routes.appTeam(this.app.id, modID));
+    >(Routes.appTeam(appID, modID));
 
     return data;
   }
@@ -68,8 +71,8 @@ export default class AppTeamManager<T extends BaseApp> extends BaseManager {
    * 
    * @returns Promise {@link RESTGetApiAppTeamResult}
    */
-  async fetch() {
-    const data = await this.discloudApp.rest.get<RESTGetApiAppTeamResult>(Routes.appTeam(this.app.id));
+  async fetch(appID: string) {
+    const data = await this.discloudApp.rest.get<RESTGetApiAppTeamResult>(Routes.appTeam(appID));
 
     return data.team;
   }
