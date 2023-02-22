@@ -41,15 +41,15 @@ class DiscloudApp extends EventEmitter {
 
     options = mergeDefaults(DefaultDiscloudAppOptions, options);
 
+    this.rest = new REST(options.rest)
+      .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
+
     if ("token" in options) {
       this.#setToken(<string>options.token);
       delete options.token;
     }
 
     this.options = options;
-
-    this.rest = new REST(options.rest)
-      .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
   }
 
   #setToken(token: string) {
