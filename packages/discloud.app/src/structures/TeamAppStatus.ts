@@ -53,11 +53,11 @@ export default class TeamAppStatus extends Base {
   }
 
   get app() {
-    return this.discloudApp.team.cache.get(this.appId);
+    return this.discloudApp.teamApps.cache.get(this.appId);
   }
 
   fetch() {
-    return this.discloudApp.team.status(this.appId);
+    return this.discloudApp.teamApps.status(this.appId);
   }
 
   protected _patch(data: ApiStatusApp): this {

@@ -8,7 +8,7 @@ export const version: string = JSON.parse(readFileSync(join(__dirname, "..", "..
 /**
  * Library default options
  */
-export const DefaultDiscloudAppOptions: DiscloudAppOptions = {
+export const DefaultDiscloudAppOptions: DiscloudAppOptions & { token?: string } = {
   /** The token to authenticate on Discloud API */
   token: env.DISCLOUD_TOKEN,
 };

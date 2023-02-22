@@ -7,29 +7,31 @@ import AppManager from "../managers/AppManager";
 import AppTeamManager from "../managers/AppTeamManager";
 import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions } from "../util";
+import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
 
 /**
  * Client for Discloud API
  */
 export default class DiscloudApp {
-  readonly options: Omit<DiscloudAppOptions, "token">;
-  readonly rest = new REST();
+  readonly options: DiscloudAppOptions;
+  readonly rest: REST;
   readonly appApt = new AppAptManager(this);
   readonly apps = new AppManager(this);
   readonly appTeam = new AppTeamManager(this);
-  readonly team = new TeamAppManager(this);
+  readonly teamApps = new TeamAppManager(this);
   readonly user = new User(this, <ApiUser>{});
 
   constructor(options: DiscloudAppOptions = {}) {
-    options = { ...DefaultDiscloudAppOptions, ...options };
+    options = mergeDefaults(DefaultDiscloudAppOptions, options);
 
-    if (options.token) {
-      this.#setToken(options.token);
+    if ("token" in options) {
+      this.#setToken(<string>options.token);
       delete options.token;
     }
 
     this.options = options;
+
+    this.rest = new REST(this.options.rest);
   }
 
   #setToken(token: string) {
