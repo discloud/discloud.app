@@ -1,4 +1,4 @@
-import { ApiApp, ApiAppStatus, ApiUploadApp } from "@discloudapp/api-types/v2";
+import { BaseApiApp } from "@discloudapp/api-types/v2";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppAptManager from "../managers/AppAptManager";
@@ -8,28 +8,22 @@ import Base from "./Base";
 /**
  * Base for app structures
  */
-abstract class BaseApp extends Base {
+export default abstract class BaseApp extends Base {
   /**
    * Your app id
    */
-  id!: string;
-
-  readonly apt: AppAptManager<this>;
-  readonly team: AppTeamManager<this>;
+  declare id: string;
 
   constructor(
     discloudApp: DiscloudApp,
-    data: ApiApp | ApiUploadApp | ApiAppStatus,
+    data: BaseApiApp,
   ) {
     super(discloudApp);
 
     this._patch(data);
-
-    this.apt = new AppAptManager(discloudApp, this);
-    this.team = new AppTeamManager(discloudApp, this);
   }
 
-  protected _patch(data: ApiApp | ApiUploadApp | ApiAppStatus): this {
+  protected _patch(data: BaseApiApp) {
     if ("id" in data)
       this.id = data.id;
 
@@ -65,13 +59,6 @@ abstract class BaseApp extends Base {
    */
   delete() {
     return this.discloudApp.apps.delete(this.id);
-  }
-
-  /**
-   * Get the status of your application on Discloud
-   */
-  status() {
-    return this.discloudApp.apps.status(this.id);
   }
 
   /**
@@ -114,5 +101,3 @@ abstract class BaseApp extends Base {
     return this.id;
   }
 }
-
-export default BaseApp;

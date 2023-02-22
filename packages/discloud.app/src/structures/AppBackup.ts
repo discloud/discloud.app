@@ -9,12 +9,12 @@ class AppBackup extends Base {
   /**
    * Your app id
    */
-  id!: string;
+  declare id: string;
   /**
    * The backup url.
    * - You can access it `only once`.
    */
-  url!: string;
+  declare url: string;
   /**
    * The backup status
    */

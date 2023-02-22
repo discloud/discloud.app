@@ -2,41 +2,46 @@ import { ApiUser } from "@discloudapp/api-types/v2";
 import { REST } from "@discloudapp/rest";
 import { env } from "node:process";
 import { DiscloudAppOptions } from "../@types";
+import AppAptManager from "../managers/AppAptManager";
 import AppManager from "../managers/AppManager";
-import TeamManager from "../managers/TeamManager";
+import AppTeamManager from "../managers/AppTeamManager";
+import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions } from "../util";
+import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
 
 /**
  * Client for Discloud API
  */
 export default class DiscloudApp {
-  #token?: string;
-  options: Omit<DiscloudAppOptions, "token">;
+  readonly options: DiscloudAppOptions;
+  readonly rest: REST;
+  readonly appApt = new AppAptManager(this);
   readonly apps = new AppManager(this);
-  readonly team = new TeamManager(this);
+  readonly appTeam = new AppTeamManager(this);
+  readonly teamApps = new TeamAppManager(this);
   readonly user = new User(this, <ApiUser>{});
-  readonly rest = new REST();
 
   constructor(options: DiscloudAppOptions = {}) {
-    options = { ...DefaultDiscloudAppOptions, ...options };
+    options = mergeDefaults(DefaultDiscloudAppOptions, options);
 
-    if (options.token) {
-      this.#setToken(options.token);
+    if ("token" in options) {
+      this.#setToken(<string>options.token);
       delete options.token;
     }
 
     this.options = options;
+
+    this.rest = new REST(this.options.rest);
   }
 
   #setToken(token: string) {
     if (!env.DISCLOUD_TOKEN && token) env.DISCLOUD_TOKEN = token;
-    this.rest.setToken(this.#token = token);
+    this.rest.setToken(token);
     return this;
   }
 
   get token() {
-    return this.#token;
+    return this.rest.token;
   }
 
   /**

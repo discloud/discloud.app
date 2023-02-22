@@ -4,7 +4,7 @@
   "description": "A utility pack for discloud.app",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc -watch -p ./",
+    "watch": "tsc -watch",
     "build:release": "tsc",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",

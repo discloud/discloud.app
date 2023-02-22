@@ -1,52 +1,57 @@
 import { ApiUploadApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import BaseApp from "./BaseApp";
+import Base from "./Base";
 
-export default class AppUploaded extends BaseApp {
+export default class AppUploaded extends Base {
+  /**
+   * Your app id
+   */
+  declare appId: string;
   /**
    * The timestamp of the upload of your application
    */
-  addedAtTimestamp!: number;
+  declare addedAtTimestamp: number;
   /**
    * If your app has auto-restart enabled
    */
-  autoRestart!: boolean;
+  declare autoRestart: boolean;
   /**
    * Your app's avatar url
    */
-  avatarURL!: string;
+  declare avatarURL: string;
   /**
    * Your app programming language
    */
-  lang!: string;
+  declare lang: string;
   /**
    * The main file of your application
    */
-  mainFile!: string;
+  declare mainFile: string;
   /**
    * The name of your application
    */
-  name!: string;
+  declare name: string;
   /**
    * The ram quantity for your application
    */
-  ram!: number;
+  declare ram: number;
   /**
    * Your app's type
    */
-  type!: string;
+  declare type: string;
   /**
    * The version of the package
    */
-  version!: string;
+  declare version: string;
 
-  constructor(
-    discloudApp: DiscloudApp,
-    data: ApiUploadApp,
-  ) {
-    super(discloudApp, data);
+  constructor(discloudApp: DiscloudApp, data: ApiUploadApp) {
+    super(discloudApp);
 
     this._patch(data);
+  }
+
+  get app() {
+    return this.discloudApp.apps.cache.get(this.appId);
   }
 
   protected _patch(data: ApiUploadApp): this {
@@ -58,6 +63,9 @@ export default class AppUploaded extends BaseApp {
 
     if ("autoRestart" in data)
       this.autoRestart = data.autoRestart;
+
+    if ("id" in data)
+      this.appId = data.id;
 
     if ("lang" in data)
       this.lang = data.lang;

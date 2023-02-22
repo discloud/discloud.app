@@ -3,6 +3,7 @@
   "version": "0.5.0",
   "main": "index.js",
   "scripts": {
+    "watch": "tsc -watch",
     "build:release": "tsc",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",
@@ -26,8 +27,8 @@
   },
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.2.6",
-    "@discloudapp/rest": "^0.5.2",
+    "@discloudapp/api-types": "^0.2.7",
+    "@discloudapp/rest": "^0.6.0",
     "@discloudapp/util": "^0.3.10",
     "undici": "^5.20.0"
   },

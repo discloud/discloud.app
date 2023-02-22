@@ -5,14 +5,18 @@ import AppTeamManager from "./managers/AppTeamManager";
 import BaseManager from "./managers/BaseManager";
 import CachedManager from "./managers/CachedManager";
 import DataManager from "./managers/DataManager";
-import TeamManager from "./managers/TeamManager";
+import TeamAppManager from "./managers/TeamAppManager";
 import App from "./structures/App";
+import AppApt from "./structures/AppApt";
 import AppBackup from "./structures/AppBackup";
 import AppStatus from "./structures/AppStatus";
+import AppTeam from "./structures/AppTeam";
 import AppUploaded from "./structures/AppUploaded";
 import Base from "./structures/Base";
 import BaseApp from "./structures/BaseApp";
-import Team from "./structures/Team";
+import BaseTeamApp from "./structures/BaseTeamApp";
+import TeamApp from "./structures/TeamApp";
+import TeamAppStatus from "./structures/TeamAppStatus";
 import User from "./structures/User";
 
 export * from "@discloudapp/api-types/v2";
@@ -22,20 +26,24 @@ export * from "./@types";
 export * from "./util";
 export {
   App,
+  AppApt,
   AppAptManager,
   AppBackup,
   AppManager,
   AppStatus,
+  AppTeam,
   AppTeamManager,
   AppUploaded,
   Base,
   BaseApp,
   BaseManager,
+  BaseTeamApp,
   CachedManager,
   DataManager,
   DiscloudApp,
-  Team,
-  TeamManager,
+  TeamApp,
+  TeamAppStatus,
+  TeamAppManager,
   User,
 };
 

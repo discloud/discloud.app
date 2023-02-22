@@ -1,4 +1,5 @@
 import { ApiUser, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
+import { calculatePercentage } from "..";
 import { LocaleString } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
@@ -15,27 +16,27 @@ export default class User extends Base {
   /**
    * Your id
    */
-  id!: string;
+  declare id: string;
   /**
    * Your locale
    */
-  locale!: string;
+  declare locale: string;
   /**
    * Your plan
    */
-  plan!: string;
+  declare plan: string;
   /**
    * Date of when will your plan end
    */
-  planDataEnd?: Date;
+  declare planDataEnd: Date;
   /**
    * Timestamp of when will your plan end
    */
-  planDataEndTimestamp?: number;
+  declare planDataEndTimestamp: number;
   /**
    * Quantity of RAM was used for your applications
    */
-  ramUsedMb!: number;
+  declare ramUsedMb: number;
   /**
    * Your subdomains on Discloud
    */
@@ -43,7 +44,9 @@ export default class User extends Base {
   /**
    * Your total RAM quantity
    */
-  totalRamMb!: number;
+  declare totalRamMb: number;
+
+  declare RamUsage: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
@@ -80,6 +83,9 @@ export default class User extends Base {
 
     if ("totalRamMb" in data)
       this.totalRamMb = data.totalRamMb;
+
+    if ("ramUsedMb" in this && "totalRamMb" in this)
+      this.RamUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
 
     return super._patch(data);
   }

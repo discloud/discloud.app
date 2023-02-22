@@ -33,14 +33,14 @@ export default class AppManager extends CachedManager<App> {
     if (Array.isArray(data.apps)) {
       const cache = new Map<string, AppStatus>();
 
-      for (const app of data.apps) {
-        cache.set(app.id, new AppStatus(this.discloudApp, app));
+      for (const app of this._addMany(data.apps).values()) {
+        cache.set(app.id, app.status);
       }
 
       return cache;
     }
 
-    return new AppStatus(this.discloudApp, data.apps);
+    return this._add(data.apps).status;
   }
 
   /**
@@ -112,7 +112,7 @@ export default class AppManager extends CachedManager<App> {
       },
     });
 
-    if (data.statusCode === 200)
+    if (data.status === "ok")
       this._add({
         id: appID,
         ram: quantity,
@@ -133,6 +133,8 @@ export default class AppManager extends CachedManager<App> {
     const data = await this.discloudApp.rest.post<RESTPostApiUploadResult>(Routes.upload(), {
       file: <File>options.file,
     });
+
+    this._add(data.app);
 
     if ("app" in data)
       return { ...data, app: new AppUploaded(this.discloudApp, data.app) };

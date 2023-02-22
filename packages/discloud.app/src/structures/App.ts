@@ -1,29 +1,31 @@
-import { ApiApp } from "@discloudapp/api-types/v2";
-import { UpdateAppOptions } from "../@types";
+import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
+import AppApt from "./AppApt";
+import AppStatus from "./AppStatus";
+import AppTeam from "./AppTeam";
 import BaseApp from "./BaseApp";
 
 export default class App extends BaseApp {
   /**
    * If your app has auto deploy on github enabled
    */
-  autoDeployGit!: string;
+  declare autoDeployGit: string;
   /**
    * If your app has auto-restart enabled
    */
-  autoRestart!: boolean;
+  declare autoRestart: boolean;
   /**
    * Your app's exit code on stopping
    */
-  exitCode!: number;
+  declare exitCode: number;
   /**
    * Your app programming language
    */
-  lang!: string;
+  declare lang: string;
   /**
    * The main file of your application
    */
-  mainFile!: string;
+  declare mainFile: string;
   /**
    * Moderators IDs of your app
    */
@@ -31,30 +33,31 @@ export default class App extends BaseApp {
   /**
    * The name of your application
    */
-  name!: string;
+  declare name: string;
   /**
    * If your app is online
    */
-  online!: boolean;
+  declare online: boolean;
   /**
    * The ram quantity for your application
    */
-  ram!: number;
+  declare ram: number;
   /**
    * If your application was stopped due to lack of RAM
    */
-  ramKilled!: boolean;
+  declare ramKilled: boolean;
 
-  constructor(
-    discloudApp: DiscloudApp,
-    data: ApiApp,
-  ) {
+  declare apt: AppApt;
+  declare team: AppTeam;
+  declare status: AppStatus;
+
+  constructor(discloudApp: DiscloudApp, data: ApiApp | ApiStatusApp) {
     super(discloudApp, data);
 
     this._patch(data);
   }
 
-  protected _patch(data: ApiApp): this {
+  protected _patch(data: ApiApp | ApiStatusApp) {
     if ("autoDeployGit" in data)
       this.autoDeployGit = data.autoDeployGit;
 
@@ -84,6 +87,10 @@ export default class App extends BaseApp {
 
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled;
+
+    this.apt ??= new AppApt(this.discloudApp, data);
+    this.team ??= new AppTeam(this.discloudApp, data);
+    this.status ??= new AppStatus(this.discloudApp, <ApiStatusApp>data);
 
     return super._patch(data);
   }
