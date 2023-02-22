@@ -2,7 +2,7 @@ import { ApiUser } from "@discloudapp/api-types/v2";
 import { REST, RESTEvents } from "@discloudapp/rest";
 import EventEmitter from "node:events";
 import { env } from "node:process";
-import { DiscloudAppOptions } from "../@types";
+import { ClientEvents, DiscloudAppOptions } from "../@types";
 import AppAptManager from "../managers/AppAptManager";
 import AppManager from "../managers/AppManager";
 import AppTeamManager from "../managers/AppTeamManager";
@@ -13,7 +13,21 @@ import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
 /**
  * Client for Discloud API
  */
-export default class DiscloudApp extends EventEmitter {
+
+interface DiscloudApp {
+  emit: (<K extends keyof ClientEvents>(event: K, ...args: ClientEvents[K]) => boolean) &
+  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, ...args: any[]) => boolean);
+  off: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
+  on: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
+  once: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
+  removeAllListeners: (<K extends keyof ClientEvents>(event?: K) => this) &
+  (<S extends string | symbol>(event?: Exclude<S, keyof ClientEvents>) => this);
+}
+
+class DiscloudApp extends EventEmitter {
   readonly options: DiscloudAppOptions;
   readonly rest: REST;
   readonly appApt = new AppAptManager(this);
@@ -63,3 +77,5 @@ export default class DiscloudApp extends EventEmitter {
     return "[DISCLOUD API] Logged.";
   }
 }
+
+export default DiscloudApp;

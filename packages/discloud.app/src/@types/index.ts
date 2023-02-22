@@ -1,4 +1,4 @@
-import { RESTOptions } from "@discloudapp/rest/dist";
+import { RestEvents, RESTOptions } from "@discloudapp/rest/dist";
 import { FileResolvable } from "@discloudapp/util";
 
 export type Constructor<T> = new (...args: any[]) => T;
@@ -20,3 +20,5 @@ export interface UploadAppOptions {
 export type LocaleString =
   | "en-US"
   | "pt-BR"
+
+export interface ClientEvents extends RestEvents { }
