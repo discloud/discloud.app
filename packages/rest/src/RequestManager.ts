@@ -1,9 +1,27 @@
+import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
-import type { InternalRequest, RequestHeaders, RequestOptions, RESTOptions } from "./@types";
+import type { InternalRequest, RateLimitData, RequestHeaders, RequestOptions, RestEvents, RESTOptions } from "./@types";
 import { DefaultRestOptions, DefaultUserAgent } from "./utils/contants";
 
-export class RequestManager {
+export interface RequestManager {
+	emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
+		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: any[]) => boolean);
+
+	off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+
+	on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+
+	once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+
+	removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
+		(<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
+}
+
+export class RequestManager extends EventEmitter {
   #token!: string;
   options: RESTOptions;
 
@@ -24,6 +42,7 @@ export class RequestManager {
   globalReset = 0;
 
   constructor(options: Partial<RESTOptions>) {
+    super();
     this.options = { ...DefaultRestOptions, ...options };
     this.globalRemaining = this.options.globalRequestsPerMinute;
     this.agent = this.options.agent;
@@ -43,6 +62,10 @@ export class RequestManager {
     return this.globalReset - Date.now();
   }
 
+  get token() {
+    return this.#token;
+  }
+
   /**
    * Sets the authorization token that should be used for requests
    *
@@ -57,7 +80,6 @@ export class RequestManager {
     const headers: RequestHeaders = {
       ...this.options.headers,
       "api-token": this.#token,
-      "User-Agent": DefaultUserAgent,
     };
 
     const query = request.query?.toString() ? `?${request.query}` : "";
@@ -109,8 +131,16 @@ export class RequestManager {
   }
 
   async request(url: string, options: RequestOptions) {
-    while (this.globalLimited)
+    while (this.globalLimited) {
+      this.emit("rateLimited", <RateLimitData>{
+        global: this.globalLimited,
+        method: options.method ?? "GET",
+        timeToReset: this.globalTimeToReset,
+        url,
+      });
+
       await sleep(this.globalTimeToReset);
+    }
 
     const res = await request(url, options);
 

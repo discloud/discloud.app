@@ -1,12 +1,33 @@
-import { RequestMethod } from "./@enum";
-import type { InternalRequest, RequestData, RESTOptions, RouteLike } from "./@types";
+import EventEmitter from "node:events";
+import { RequestMethod, RESTEvents } from "./@enum";
+import type { InternalRequest, RequestData, RestEvents, RESTOptions, RouteLike } from "./@types";
 import { RequestManager } from "./RequestManager";
 
-export class REST {
+export interface REST {
+  emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: any[]) => boolean);
+  off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
+  (<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
+}
+
+export class REST extends EventEmitter {
   readonly requestManager: RequestManager;
 
   constructor(options: Partial<RESTOptions> = {}) {
-    this.requestManager = new RequestManager(options);
+    super();
+
+    this.requestManager = new RequestManager(options)
+      .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
+  }
+
+  get token() {
+    return this.requestManager.token;
   }
 
   /**

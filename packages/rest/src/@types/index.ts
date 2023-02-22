@@ -80,3 +80,14 @@ export interface InternalRequest extends RequestData {
   fullRoute: RouteLike
   method: RequestMethod
 }
+
+export interface RateLimitData {
+  timeToReset: number
+  method: `${RequestMethod}`,
+  url: string
+  global: boolean
+}
+
+export interface RestEvents {
+  rateLimited: [rateLimitData: RateLimitData]
+}

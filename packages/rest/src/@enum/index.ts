@@ -4,3 +4,7 @@ export const enum RequestMethod {
   Post = "POST",
   Put = "PUT",
 }
+
+export const enum RESTEvents {
+  RateLimited = "rateLimited"
+}
