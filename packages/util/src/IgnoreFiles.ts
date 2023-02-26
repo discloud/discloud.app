@@ -1,6 +1,6 @@
 import { exists, read } from "fs-jetpack";
 import { readdirSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, isAbsolute, join } from "node:path";
 
 export const blockedFiles = {
   common: [".git", ".vscode", ".cache"],
@@ -38,8 +38,8 @@ export class IgnoreFiles {
 
     options.optionalIgnoreList ??= [];
     this.list = options.optionalIgnoreList
-      .concat(this.#getIgnoreList().flatMap(a => [a, `${a}/**`]))
-      .concat(allBlockedFiles.flatMap(a => [a, `**/${a}/**`]));
+      .concat(this.#getIgnoreList())
+      .concat(this.#resolveIgnorePatterns(allBlockedFiles, this.path));
   }
 
   #findIgnoreFiles(fileName: string, path: string) {
@@ -52,7 +52,19 @@ export class IgnoreFiles {
   }
 
   #normalizePath(path: string) {
-    return path.replace(/\\/g, "/").replace(/\/$/, "");
+    path = path.replace(/\\/g, "/").replace(/[*]/g, "") || ".";
+    if (path.length > 1) path = path.replace(/\/$/, "");
+    return path;
+  }
+
+  #resolveIgnorePatterns(ignore: string[], path: string) {
+    path = this.#normalizePath(path);
+    return ignore.flatMap(a => [
+      a,
+      `${isAbsolute(path) ? a : `**/${a}`}/**`,
+      `${path}/**/${a}`,
+      `${path}/**/${a}/**`,
+    ]);
   }
 
   #resolveIgnoreFile(ignoreFile: string | string[]) {
@@ -65,11 +77,14 @@ export class IgnoreFiles {
       return ignored;
     }
 
-    if (ignoreFile && exists(ignoreFile) === "file")
-      return read(ignoreFile, "utf8")
+    if (typeof ignoreFile === "string" && exists(ignoreFile) === "file") {
+      const readed = read(ignoreFile, "utf8")
         ?.replace(/\s*#.*/g, "")
         .split(/\r?\n/)
         .filter(a => a) ?? [];
+
+      return this.#resolveIgnorePatterns(readed, dirname(ignoreFile));
+    }
 
     return [];
   }
