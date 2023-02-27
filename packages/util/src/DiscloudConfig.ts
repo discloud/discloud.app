@@ -86,7 +86,7 @@ export class DiscloudConfig {
       result.push(obj);
     }
 
-    return result.join("\n");
+    return result.filter(line => line).join("\n");
   }
 
   #configToObj(s: string) {
@@ -95,8 +95,8 @@ export class DiscloudConfig {
     return this.#processValues(Object.fromEntries(s
       .replace(/\s*#.*/g, "")
       .split(/[\r\n]/)
-      .filter(a => a)
-      .map(a => a.split("="))));
+      .filter(line => line)
+      .map(line => line.split("="))));
   }
 
   #processValues(obj: any) {
@@ -135,7 +135,11 @@ export class DiscloudConfig {
     try {
       save = { ...this.data, ...save };
 
-      write(this.path, this.#objToString([comments, save]));
+      write(this.path, this.#objToString(
+        comments?.length ?
+          [comments, save] :
+          save,
+      ));
     } catch (error) {
       return error as Error;
     }
