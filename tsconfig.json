@@ -1,4 +1,5 @@
 {
+  "exclude": ["**/dist/**", "**/.ignore_*", "**/node_modules/**"],
   "compilerOptions": {
     // "incremental": true,
     // "composite": true,
@@ -81,6 +82,6 @@
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
     // "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }

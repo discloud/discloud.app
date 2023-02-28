@@ -1,5 +1,4 @@
 {
-  "exclude": ["node_modules", "**/.ignore_*"],
   "include": ["src"],
   "extends": "../../tsconfig.json",
   "compilerOptions": {
