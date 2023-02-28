@@ -18,7 +18,7 @@ export const allBlockedFilesRegex = RegExp(`(${allBlockedFiles.join("|")})$`.rep
 
 export interface IgnoreFilesOptions {
   fileName: string
-  path: string
+  path: string | string[]
   optionalIgnoreList?: string[]
 }
 
@@ -26,25 +26,31 @@ export class IgnoreFiles {
   fileName: string;
   filesIgnore: string[] = [];
   list: string[] = [];
-  path: string;
+  paths: string[] = [];
 
   constructor(options: IgnoreFilesOptions) {
-    this.path = this.#normalizePath(options.path);
+    if (Array.isArray(options.path)) {
+      for (const path of options.path) {
+        this.paths.push(this.#normalizePath(path));
+      }
+    } else {
+      this.paths.push(this.#normalizePath(options.path));
+    }
 
     this.fileName = options.fileName;
 
-    if (this.fileName && this.path)
-      this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.path);
+    if (this.fileName && this.paths.length)
+      this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.paths);
 
     options.optionalIgnoreList ??= [];
     this.list = options.optionalIgnoreList
       .concat(this.#getIgnoreList())
-      .concat(this.#resolveIgnorePatterns(allBlockedFiles, this.path));
+      .concat(this.#resolveIgnorePatterns(allBlockedFiles, this.paths));
   }
 
-  #findIgnoreFiles(fileName: string, path: string) {
-    return this.#recursivelyReadDirSync(path)
-      .filter(file => file.endsWith(fileName) && exists(file) === "file");
+  #findIgnoreFiles(fileName: string, paths: string[]) {
+    return paths.flatMap(path => this.#recursivelyReadDirSync(path)
+      .filter(file => file.endsWith(fileName) && exists(file) === "file"));
   }
 
   #getIgnoreList() {
@@ -57,14 +63,17 @@ export class IgnoreFiles {
     return path;
   }
 
-  #resolveIgnorePatterns(ignore: string[], path: string) {
-    path = this.#normalizePath(path);
-    return ignore.flatMap(a => [
-      a,
-      `${isAbsolute(path) ? a : `**/${a}`}/**`,
-      `${path}/**/${a}`,
-      `${path}/**/${a}/**`,
-    ]);
+  #resolveIgnorePatterns(ignore: string[], paths: string[]) {
+    return paths.flatMap(path => {
+      path = this.#normalizePath(path);
+
+      return ignore.flatMap(a => [
+        a,
+        `${isAbsolute(path) ? a : `**/${a}`}/**`,
+        `${path}/**/${a}`,
+        `${path}/**/${a}/**`,
+      ]);
+    });
   }
 
   #resolveIgnoreFile(ignoreFile: string | string[]) {
@@ -83,7 +92,7 @@ export class IgnoreFiles {
         .split(/\r?\n/)
         .filter(a => a) ?? [];
 
-      return this.#resolveIgnorePatterns(readed, dirname(ignoreFile));
+      return this.#resolveIgnorePatterns(readed, [dirname(ignoreFile)]);
     }
 
     return [];
