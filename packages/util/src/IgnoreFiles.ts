@@ -44,8 +44,8 @@ export class IgnoreFiles {
 
     options.path = this.paths.flatMap(path => this.#makeBothCase(path));
 
-    options.optionalIgnoreList ??= [];
-    this.list = options.optionalIgnoreList
+    this.list = (options.optionalIgnoreList ?? [])
+      .flatMap(path => this.#makeBothCase(path))
       .concat(this.#getIgnoreList())
       .concat(this.#resolveIgnorePatterns(allBlockedFiles, options.path));
   }
