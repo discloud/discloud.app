@@ -29,7 +29,7 @@
   "dependencies": {
     "@discloudapp/api-types": "^0.2.7",
     "@discloudapp/rest": "^0.6.0",
-    "@discloudapp/util": "^0.3.12",
+    "@discloudapp/util": "^0.4.0",
     "undici": "^5.20.0"
   },
   "engines": {
