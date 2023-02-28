@@ -42,15 +42,27 @@ export class IgnoreFiles {
     if (this.fileName && this.paths.length)
       this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.paths);
 
+    options.path = this.paths.flatMap(path => this.#makeBothCase(path));
+
     options.optionalIgnoreList ??= [];
     this.list = options.optionalIgnoreList
       .concat(this.#getIgnoreList())
-      .concat(this.#resolveIgnorePatterns(allBlockedFiles, this.paths));
+      .concat(this.#resolveIgnorePatterns(allBlockedFiles, options.path));
   }
 
   #findIgnoreFiles(fileName: string, paths: string[]) {
     return paths.flatMap(path => this.#recursivelyReadDirSync(path)
       .filter(file => file.endsWith(fileName) && exists(file) === "file"));
+  }
+
+  #makeBothCase(s: string) {
+    if (isAbsolute(s))
+      return [
+        s.replace(/^./, a => a.toLowerCase()),
+        s.replace(/^./, a => a.toUpperCase()),
+      ];
+
+    return [s];
   }
 
   #getIgnoreList() {
@@ -92,7 +104,7 @@ export class IgnoreFiles {
         .split(/\r?\n/)
         .filter(a => a) ?? [];
 
-      return this.#resolveIgnorePatterns(readed, [dirname(ignoreFile)]);
+      return this.#resolveIgnorePatterns(readed, this.#makeBothCase(dirname(ignoreFile)));
     }
 
     return [];

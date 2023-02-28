@@ -32,6 +32,8 @@ export class GS {
 
   #normalizePath(path: string) {
     try {
+      path = path.replace(/\\/g, "/");
+
       if (!isAbsolute(path))
         path = path.replace(/^(\.|~)$|^(\.|~)\/|^\/|\/$/g, "") || "**";
 
