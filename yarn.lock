@@ -9,14 +9,6 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@discloudapp/util@^0.3.10":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@discloudapp/util/-/util-0.3.12.tgz#83a69c87b47b6e5b79b768bcc6e295635f2c2976"
-  integrity sha512-IA/lnCOzptkpZzuy36YC6CERxzK8ukBjqccjcYlYRKOiQOc8lduVOTf8QRw9CVqbngi/l57hJZ8zkP96m/tg3Q==
-  dependencies:
-    fs-jetpack "^5.1.0"
-    undici "^5.20.0"
-
 "@eslint/eslintrc@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.0.0.tgz#943309d8697c52fc82c076e90c1c74fbbe69dbff"
@@ -1029,6 +1021,11 @@ rimraf@^3.0.2:
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
+
+rimraf@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-4.1.3.tgz#e8ace19d5f009b4fa6108deeaffe39ef68bba194"
+  integrity sha512-iyzalDLo3l5FZxxaIGUY7xI4Bf90Xt7pCipc1Mr7RsdU7H3538z+M0tlsUDrz0aHeGS9uNqiKHUJyTewwRP91Q==
 
 run-parallel@^1.1.9:
   version "1.2.0"
