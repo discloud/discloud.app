@@ -46,7 +46,7 @@ export default class User extends Base {
    */
   declare totalRamMb: number;
 
-  declare RamUsage: number;
+  declare ramUsage: number;
 
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
@@ -85,7 +85,7 @@ export default class User extends Base {
       this.totalRamMb = data.totalRamMb;
 
     if ("ramUsedMb" in this && "totalRamMb" in this)
-      this.RamUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
+      this.ramUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
 
     return super._patch(data);
   }
