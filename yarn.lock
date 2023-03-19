@@ -9,6 +9,14 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@discloudapp/util@^0.3.10":
+  version "0.3.12"
+  resolved "https://registry.yarnpkg.com/@discloudapp/util/-/util-0.3.12.tgz#83a69c87b47b6e5b79b768bcc6e295635f2c2976"
+  integrity sha512-IA/lnCOzptkpZzuy36YC6CERxzK8ukBjqccjcYlYRKOiQOc8lduVOTf8QRw9CVqbngi/l57hJZ8zkP96m/tg3Q==
+  dependencies:
+    fs-jetpack "^5.1.0"
+    undici "^5.20.0"
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.2.0.tgz#a831e6e468b4b2b5ae42bf658bea015bf10bc518"
@@ -633,7 +641,7 @@ glob@^7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^9.3.0:
+glob@^9.0.1, glob@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/glob/-/glob-9.3.0.tgz#be6e50d172d025c3fcf87903ae25b36b787c0bb0"
   integrity sha512-EAZejC7JvnQINayvB/7BJbpZpNOJ8Lrw2OZNEvQxe0vaLn1SuwMcfV7/MNaX8L/T0wmptBFI4YMtDvSBxYDc7w==
@@ -1184,7 +1192,7 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.4.tgz#61678cf5fa3f5b7eb789bb345df29afb8257c22c"
   integrity sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==
 
-undici@^5.21.0:
+undici@^5.20.0, undici@^5.21.0:
   version "5.21.0"
   resolved "https://registry.yarnpkg.com/undici/-/undici-5.21.0.tgz#b00dfc381f202565ab7f52023222ab862bb2494f"
   integrity sha512-HOjK8l6a57b2ZGXOcUsI5NLfoTrfmbOl90ixJDl0AEFG4wgHNDQxtZy15/ZQp7HhjkpaGlp/eneMgtsu1dIlUA==
