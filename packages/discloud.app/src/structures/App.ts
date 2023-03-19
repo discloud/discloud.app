@@ -92,6 +92,10 @@ export default class App extends BaseApp {
     this.team ??= new AppTeam(this.discloudApp, data);
     this.status ??= new AppStatus(this.discloudApp, <ApiStatusApp>data);
 
+    (<any>this.apt)._patch(data);
+    (<any>this.team)._patch(data);
+    (<any>this.status)._patch(<ApiStatusApp>data);
+
     return super._patch(data);
   }
 }
