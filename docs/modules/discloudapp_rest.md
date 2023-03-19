@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/rest/src/@types/index.ts#L7)
+[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@types/index.ts#L7)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/rest/src/@types/index.ts#L5)
+[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@types/index.ts#L5)

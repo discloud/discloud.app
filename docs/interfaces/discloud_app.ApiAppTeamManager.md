@@ -28,7 +28,7 @@ Your team application id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:325](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/api-types/rest/v2/app.ts#L325)
+[packages/api-types/rest/v2/app.ts:325](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L325)
 
 ___
 
@@ -44,7 +44,7 @@ Moderator ID
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:154](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/api-types/rest/v2/app.ts#L154)
+[packages/api-types/rest/v2/app.ts:154](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L154)
 
 ___
 
@@ -60,4 +60,4 @@ Moderator permissions
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/api-types/rest/v2/app.ts#L158)
+[packages/api-types/rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L158)

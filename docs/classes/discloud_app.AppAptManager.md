@@ -45,7 +45,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:9](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L9)
+[packages/discloud.app/src/managers/AppAptManager.ts:9](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppAptManager.ts#L9)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -84,7 +84,7 @@ Promise [RESTPutApiAppAptResult](../interfaces/discloud_app.RESTPutApiAppAptResu
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ___
 
@@ -109,4 +109,4 @@ Promise [RESTDeleteApiAppAptResult](../interfaces/discloud_app.RESTDeleteApiAppA
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/d2f41b0/packages/discloud.app/src/managers/AppAptManager.ts#L40)
+[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppAptManager.ts#L40)

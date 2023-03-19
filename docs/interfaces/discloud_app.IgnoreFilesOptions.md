@@ -20,7 +20,7 @@
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:13
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:13
 
 ___
 
@@ -30,14 +30,14 @@ ___
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:15
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:15
 
 ___
 
 ### path
 
-• **path**: `string`
+• **path**: `string` \| `string`[]
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:14
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:14

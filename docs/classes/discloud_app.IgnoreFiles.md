@@ -16,7 +16,7 @@
 - [fileName](discloud_app.IgnoreFiles.md#filename)
 - [filesIgnore](discloud_app.IgnoreFiles.md#filesignore)
 - [list](discloud_app.IgnoreFiles.md#list)
-- [path](discloud_app.IgnoreFiles.md#path)
+- [paths](discloud_app.IgnoreFiles.md#paths)
 
 ## Constructors
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:23
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:23
 
 ## Properties
 
@@ -42,7 +42,7 @@ packages/util/dist/IgnoreFiles.d.ts:23
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:18
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:18
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:19
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:19
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:20
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:20
 
 ___
 
@@ -72,14 +72,14 @@ ___
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:21
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:21
 
 ___
 
-### path
+### paths
 
-• **path**: `string`
+• **paths**: `string`[]
 
 #### Defined in
 
-packages/util/dist/IgnoreFiles.d.ts:22
+packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:22
