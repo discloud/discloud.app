@@ -26,7 +26,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "fs-jetpack": "^5.1.0",
-    "glob": "^9.3.1",
+    "glob": "^9.3.2",
     "undici": "^5.21.0"
   },
   "publishConfig": {
