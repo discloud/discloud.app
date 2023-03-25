@@ -33,7 +33,7 @@
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:7
+packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:7
 
 ## Properties
 
@@ -43,7 +43,7 @@ packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:7
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:3
+packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:3
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:5
+packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:5
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:6
+packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:6
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/GS.d.ts:4
+packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:4

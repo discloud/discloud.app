@@ -32,7 +32,7 @@ The body to send to this request.
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:51
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:51
 
 ___
 
@@ -44,7 +44,7 @@ The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:55
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:55
 
 ___
 
@@ -56,19 +56,19 @@ File to be attached to this request
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:59
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:59
 
 ___
 
 ### headers
 
-• `Optional` **headers**: `Record`<`string`, `string`\>
+• `Optional` **headers**: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string`, `string`\>
 
 Additional headers to add to this request
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:63
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:63
 
 ___
 
@@ -80,4 +80,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:67
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:67

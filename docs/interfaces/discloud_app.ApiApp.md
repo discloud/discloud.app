@@ -36,7 +36,7 @@ If your app has auto deploy on github enabled
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:46](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L46)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:46
 
 ___
 
@@ -48,7 +48,7 @@ If your app has auto-restart enabled
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:50](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L50)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:50
 
 ___
 
@@ -60,7 +60,7 @@ Your app's exit code on stopping
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:34](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L34)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:34
 
 ___
 
@@ -76,7 +76,7 @@ Your app id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L7)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:7
 
 ___
 
@@ -88,7 +88,7 @@ Your application's programming language
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:38](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L38)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:38
 
 ___
 
@@ -100,7 +100,7 @@ The main file path
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:30](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L30)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:30
 
 ___
 
@@ -112,7 +112,7 @@ The IDs of your application's moderators
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:42](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L42)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:42
 
 ___
 
@@ -124,7 +124,7 @@ Your application's name
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:14](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L14)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:14
 
 ___
 
@@ -136,7 +136,7 @@ If your application is online
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:18](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L18)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:18
 
 ___
 
@@ -148,7 +148,7 @@ The RAM quantity for your application
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:26](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L26)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:26
 
 ___
 
@@ -160,4 +160,4 @@ If your application was stopped due to lack of RAM
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:22](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L22)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:22

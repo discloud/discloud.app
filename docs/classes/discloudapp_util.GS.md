@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/GS.ts#L10)
+[packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L10)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/GS.ts#L7)
+[packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L7)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/GS.ts#L8)
+[packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L8)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/GS.ts#L11)
+[packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L11)
 
 ## Methods
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:33](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/GS.ts#L33)
+[packages/util/src/GS.ts:33](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L33)

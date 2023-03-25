@@ -44,7 +44,7 @@
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:10
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:10
 
 ## Properties
 
@@ -54,7 +54,7 @@ packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:10
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:8
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:9
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:9
 
 ## Accessors
 
@@ -78,21 +78,21 @@ packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:9
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:11
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:11
 
 ___
 
 ### data
 
-• `get` **data**(): `DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>
+• `get` **data**(): [`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)
 
 #### Returns
 
-`DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>
+[`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:12
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:12
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:13
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:13
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:14
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:15
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:15
 
 ___
 
@@ -148,13 +148,13 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:16
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:16
 
 ## Methods
 
 ### get
 
-▸ **get**<`K`\>(`key`): `DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>[`K`]
+▸ **get**<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)[`K`]
 
 #### Type parameters
 
@@ -170,11 +170,11 @@ packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:16
 
 #### Returns
 
-`DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>[`K`]
+[`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)[`K`]
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:17
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:17
 
 ___
 
@@ -193,7 +193,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `key` | `K` |
-| `value` | `DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>[`K`] |
+| `value` | [`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)[`K`] |
 
 #### Returns
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:18
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:18
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `save` | `Partial`<`DiscloudConfigBot`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloud_app.md#applanguages)\>\> |
+| `save` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)\> |
 | `comments?` | `string`[] |
 
 #### Returns
@@ -222,4 +222,4 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:19
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:19

@@ -22,7 +22,7 @@ Bigger log of your application
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:176](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L176)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:176
 
 ___
 
@@ -34,7 +34,7 @@ Smaller log of your application
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:180](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L180)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:180
 
 ___
 
@@ -47,4 +47,4 @@ The log url.
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:185](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L185)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:185

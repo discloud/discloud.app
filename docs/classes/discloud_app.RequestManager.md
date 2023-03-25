@@ -70,11 +70,11 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Partial`<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
+| `options` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:28
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:28
 
 ## Properties
 
@@ -84,7 +84,7 @@ packages/rest/dist/RequestManager.d.ts:28
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:13
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:13
 
 ___
 
@@ -97,17 +97,17 @@ performed by this manager.
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:19
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:19
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:6
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:6
 
 ___
 
@@ -119,7 +119,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:23
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:23
 
 ___
 
@@ -131,37 +131,37 @@ The timestamp at which the global bucket resets
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:27
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:27
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:7
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:7
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:8
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:9
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:9
 
 ___
 
@@ -171,17 +171,17 @@ ___
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:14
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`RequestManager`](discloud_app.RequestManager.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event?`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>) => [`RequestManager`](discloud_app.RequestManager.md)
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:10
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:10
 
 ___
 
@@ -247,7 +247,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:32
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:32
 
 ___
 
@@ -263,7 +263,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:36
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:36
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:37
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:37
 
 ## Methods
 
@@ -659,7 +659,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
-| `options` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `options` | { `dispatcher?`: `Dispatcher`  } & [`Omit`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys )<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`Pick`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys )<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:50
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:50
 
 ___
 
@@ -687,12 +687,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & [`Omit`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys )<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`Pick`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys )<`RequestOptions`, ``"method"``\>\> |
 | `url` | `string` |
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:44
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:44
 
 ___
 
@@ -745,7 +745,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/rest/dist/RequestManager.d.ts:43
+packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:43
 
 ___
 

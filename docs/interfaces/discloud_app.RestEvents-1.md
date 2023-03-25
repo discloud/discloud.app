@@ -24,4 +24,4 @@
 
 #### Defined in
 
-packages/rest/dist/@types/index.d.ts:85
+packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:85

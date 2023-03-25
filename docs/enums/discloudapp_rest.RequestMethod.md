@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[packages/rest/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@enum/index.ts#L2)
+[packages/rest/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@enum/index.ts#L2)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@enum/index.ts#L3)
+[packages/rest/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@enum/index.ts#L3)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@enum/index.ts:4](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@enum/index.ts#L4)
+[packages/rest/src/@enum/index.ts:4](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@enum/index.ts#L4)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@enum/index.ts:5](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@enum/index.ts#L5)
+[packages/rest/src/@enum/index.ts:5](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@enum/index.ts#L5)

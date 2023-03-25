@@ -20,7 +20,7 @@
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:13
+packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:13
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:15
+packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:15
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-packages/rest/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:14

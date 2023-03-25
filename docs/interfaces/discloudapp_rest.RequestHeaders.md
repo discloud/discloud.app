@@ -22,7 +22,7 @@ Possible headers for an API call
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:45](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@types/index.ts#L45)
+[packages/rest/src/@types/index.ts:45](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L45)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:43](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@types/index.ts#L43)
+[packages/rest/src/@types/index.ts:43](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L43)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:44](https://github.com/discloud/discloud.app/blob/9c516a5/packages/rest/src/@types/index.ts#L44)
+[packages/rest/src/@types/index.ts:44](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L44)

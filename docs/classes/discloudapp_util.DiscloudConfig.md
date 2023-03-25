@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L12)
+[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Properties
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L12)
+[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Accessors
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L63)
+[packages/util/src/DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L63)
 
 ___
 
@@ -85,21 +85,21 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L24)
+[packages/util/src/DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L24)
 
 ___
 
 ### data
 
-• `get` **data**(): `DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>
+• `get` **data**(): [`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)
 
 #### Returns
 
-`DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>
+[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L34)
+[packages/util/src/DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L34)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L42)
+[packages/util/src/DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L42)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:50](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L50)
+[packages/util/src/DiscloudConfig.ts:50](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L50)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L54)
+[packages/util/src/DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L54)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:58](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L58)
+[packages/util/src/DiscloudConfig.ts:58](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L58)
 
 ## Methods
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:92](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L92)
+[packages/util/src/DiscloudConfig.ts:92](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L92)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L68)
+[packages/util/src/DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L68)
 
 ___
 
@@ -215,13 +215,13 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:102](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L102)
+[packages/util/src/DiscloudConfig.ts:102](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L102)
 
 ___
 
 ### get
 
-▸ **get**<`K`\>(`key`): `DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>[`K`]
+▸ **get**<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)[`K`]
 
 #### Type parameters
 
@@ -237,11 +237,11 @@ ___
 
 #### Returns
 
-`DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>[`K`]
+[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)[`K`]
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:126](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L126)
+[packages/util/src/DiscloudConfig.ts:126](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L126)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `key` | `K` |
-| `value` | `DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>[`K`] |
+| `value` | [`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)[`K`] |
 
 #### Returns
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:130](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L130)
+[packages/util/src/DiscloudConfig.ts:130](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L130)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `save` | `Partial`<`DiscloudConfigBot`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\> \| `DiscloudConfigSite`<[`AppLanguages`](../modules/discloudapp_api_types.md#applanguages)\>\> |
+| `save` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)\> |
 | `comments` | `string`[] |
 
 #### Returns
@@ -289,4 +289,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:134](https://github.com/discloud/discloud.app/blob/9c516a5/packages/util/src/DiscloudConfig.ts#L134)
+[packages/util/src/DiscloudConfig.ts:134](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L134)

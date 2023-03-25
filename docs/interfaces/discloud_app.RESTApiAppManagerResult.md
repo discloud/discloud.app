@@ -30,11 +30,11 @@
 
 ### apps
 
-• **apps**: `Partial`<[`ApiAppManager`](discloud_app.ApiAppManager.md)\>
+• **apps**: [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`ApiAppManager`](discloud_app.ApiAppManager.md)\>
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:245](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L245)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:245
 
 ___
 
@@ -51,7 +51,7 @@ Message of the API
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/base.ts#L10)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:10
 
 ___
 
@@ -67,4 +67,4 @@ The status of API response
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/base.ts#L5)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:5

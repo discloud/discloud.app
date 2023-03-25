@@ -31,7 +31,7 @@ Your app id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L7)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:7
 
 ___
 
@@ -43,4 +43,4 @@ Here you can see your application `logs`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:72](https://github.com/discloud/discloud.app/blob/9c516a5/packages/api-types/rest/v2/app.ts#L72)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:72

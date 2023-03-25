@@ -47,7 +47,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:11](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppTeamManager.ts#L11)
+[packages/discloud.app/src/managers/AppTeamManager.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/AppTeamManager.ts#L11)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -87,7 +87,7 @@ Promise [ApiAppTeamManager](../interfaces/discloud_app.ApiAppTeamManager.md)
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:23](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppTeamManager.ts#L23)
+[packages/discloud.app/src/managers/AppTeamManager.ts:23](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/AppTeamManager.ts#L23)
 
 ___
 
@@ -112,7 +112,7 @@ Promise [RESTDeleteApiAppTeamResult](../modules/discloud_app.md#restdeleteapiapp
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:61](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppTeamManager.ts#L61)
+[packages/discloud.app/src/managers/AppTeamManager.ts:61](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/AppTeamManager.ts#L61)
 
 ___
 
@@ -138,7 +138,7 @@ Promise [ApiAppTeamManager](../interfaces/discloud_app.ApiAppTeamManager.md)
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:42](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppTeamManager.ts#L42)
+[packages/discloud.app/src/managers/AppTeamManager.ts:42](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/AppTeamManager.ts#L42)
 
 ___
 
@@ -162,4 +162,4 @@ Promise [RESTGetApiAppTeamResult](../interfaces/discloud_app.RESTGetApiAppTeamRe
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:74](https://github.com/discloud/discloud.app/blob/9c516a5/packages/discloud.app/src/managers/AppTeamManager.ts#L74)
+[packages/discloud.app/src/managers/AppTeamManager.ts:74](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/managers/AppTeamManager.ts#L74)
