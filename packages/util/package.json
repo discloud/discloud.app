@@ -2,7 +2,8 @@
   "name": "@discloudapp/util",
   "version": "0.4.2",
   "description": "A utility pack for discloud.app",
-  "main": "index.js",
+  "main": "dist",
+  "types": "dist/index.d.ts",
   "scripts": {
     "watch": "tsc -watch",
     "build:release": "tsc",
