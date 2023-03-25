@@ -9,7 +9,7 @@
     "docgen": "typedoc && typedoc --options typedoc_md.json"
   },
   "devDependencies": {
-    "@types/node": "^18.15.6",
+    "@types/node": "^18.15.9",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "dotenv": "^16.0.3",
@@ -19,10 +19,10 @@
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.28",
     "typedoc-plugin-markdown": "^3.14.0",
-    "typedoc-plugin-mdn-links": "^2.0.2",
+    "typedoc-plugin-mdn-links": "^3.0.3",
     "typedoc-plugin-rename-defaults": "^0.6.4",
     "typedoc-plugin-resolve-crossmodule-references": "^0.3.3",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   },
   "yarn-upgrade-all": {
     "ignore": [
