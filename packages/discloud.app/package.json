@@ -31,7 +31,7 @@
     "@discloudapp/api-types": "^0.2.7",
     "@discloudapp/rest": "^0.6.1",
     "@discloudapp/util": "^0.4.3",
-    "undici": "^5.21.0"
+    "undici": "^5.21.2"
   },
   "engines": {
     "node": ">=16.17"
