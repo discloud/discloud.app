@@ -10,9 +10,6 @@
     "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },
-  "typedoc": {
-    "entryPoint": "./src/index.ts"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/discloud/discloud.app.git"

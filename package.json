@@ -18,6 +18,7 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "typedoc": "^0.24.4",
+    "typedoc-plugin-coverage": "^2.0.1",
     "typedoc-plugin-markdown": "^3.15.1",
     "typedoc-plugin-mdn-links": "^3.0.3",
     "typedoc-plugin-rename-defaults": "^0.6.5",
