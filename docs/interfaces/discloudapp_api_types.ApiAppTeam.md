@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiAppTeam
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiAppTeam
 
 # Interface: ApiAppTeam
 
@@ -7,6 +7,8 @@
 ## Hierarchy
 
 - **`ApiAppTeam`**
+
+  ↳ [`ApiAppTeamManager`](discloudapp_api_types.ApiAppTeamManager.md)
 
   ↳ [`ApiAppTeamManager`](discloudapp_api_types.ApiAppTeamManager.md)
 
@@ -27,7 +29,7 @@ Moderator ID
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:154](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L154)
+[rest/v2/app.ts:154](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L154)
 
 ___
 
@@ -39,4 +41,4 @@ Moderator permissions
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L158)
+[rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L158)

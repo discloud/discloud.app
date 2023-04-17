@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiTerminal
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiTerminal
 
 # Interface: ApiTerminal
 
@@ -10,7 +10,6 @@
 
 - [big](discloudapp_api_types.ApiTerminal.md#big)
 - [small](discloudapp_api_types.ApiTerminal.md#small)
-- [url](discloudapp_api_types.ApiTerminal.md#url)
 
 ## Properties
 
@@ -22,7 +21,7 @@ Bigger log of your application
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:176](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L176)
+[rest/v2/app.ts:176](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L176)
 
 ___
 
@@ -34,17 +33,4 @@ Smaller log of your application
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:180](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L180)
-
-___
-
-### url
-
-• **url**: `string`
-
-The log url.
-- You can access it `only once`.
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:185](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L185)
+[rest/v2/app.ts:180](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L180)

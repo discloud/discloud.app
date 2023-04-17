@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTPutApiAppRamResult
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTPutApiAppRamResult
 
 # Interface: RESTPutApiAppRamResult
 
@@ -33,7 +33,7 @@ Message of the API
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:10
+[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -49,7 +49,7 @@ The status of API response
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:5
+[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L5)
 
 ___
 
@@ -61,4 +61,4 @@ Status code from API
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:301
+[packages/api-types/rest/v2/app.ts:296](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L296)

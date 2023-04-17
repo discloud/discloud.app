@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTApiAppManagerResult
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTApiAppManagerResult
 
 # Interface: RESTApiAppManagerResult
 
@@ -9,6 +9,14 @@
 - [`RESTApiBaseResult`](discloudapp_api_types.RESTApiBaseResult.md)
 
   ↳ **`RESTApiAppManagerResult`**
+
+  ↳↳ [`RESTDeleteApiAppAllDeleteResult`](discloudapp_api_types.RESTDeleteApiAppAllDeleteResult.md)
+
+  ↳↳ [`RESTPutApiAppAllRestartResult`](discloudapp_api_types.RESTPutApiAppAllRestartResult.md)
+
+  ↳↳ [`RESTPutApiAppAllStartResult`](discloudapp_api_types.RESTPutApiAppAllStartResult.md)
+
+  ↳↳ [`RESTPutApiAppAllStopResult`](discloudapp_api_types.RESTPutApiAppAllStopResult.md)
 
   ↳↳ [`RESTDeleteApiAppAllDeleteResult`](discloudapp_api_types.RESTDeleteApiAppAllDeleteResult.md)
 
@@ -30,11 +38,11 @@
 
 ### apps
 
-• **apps**: [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`ApiAppManager`](discloudapp_api_types.ApiAppManager.md)\>
+• **apps**: `Partial`<[`ApiAppManager`](discloudapp_api_types.ApiAppManager.md)\>
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:245](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L245)
+[rest/v2/app.ts:240](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L240)
 
 ___
 
@@ -51,7 +59,7 @@ Message of the API
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/base.ts#L10)
+[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -67,4 +75,4 @@ The status of API response
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/base.ts#L5)
+[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L5)

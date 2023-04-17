@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / IgnoreFiles
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / IgnoreFiles
 
 # Class: IgnoreFiles
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:31](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L31)
+[IgnoreFiles.ts:31](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L31)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:26](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L26)
+[IgnoreFiles.ts:26](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L26)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L27)
+[IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L27)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L28)
+[IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L28)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L29)
+[IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L29)
 
 ## Methods
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:53](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L53)
+[IgnoreFiles.ts:53](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L53)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:68](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L68)
+[IgnoreFiles.ts:68](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L68)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:58](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L58)
+[IgnoreFiles.ts:58](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L58)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:72](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L72)
+[IgnoreFiles.ts:72](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L72)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:113](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L113)
+[IgnoreFiles.ts:113](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L113)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:91](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L91)
+[IgnoreFiles.ts:91](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L91)
 
 ___
 
@@ -217,4 +217,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L78)
+[IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L78)

@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiAppManagerStartedAll
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / ApiAppManagerStartedAll
 
 # Interface: ApiAppManagerStartedAll
 
@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`Omit`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys )<[`ApiAppManager`](discloudapp_api_types.ApiAppManager.md), ``"alreadyOffline"``\>
+- `Omit`<[`ApiAppManager`](discloudapp_api_types.ApiAppManager.md), ``"alreadyOffline"``\>
 
   ↳ **`ApiAppManagerStartedAll`**
 
@@ -32,7 +32,7 @@ Omit.alreadyInProcess
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:79](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L79)
+[rest/v2/app.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L79)
 
 ___
 
@@ -48,7 +48,7 @@ Omit.alreadyOnline
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L87)
+[rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L87)
 
 ___
 
@@ -60,4 +60,4 @@ Which of your applications have been `started`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:108](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L108)
+[rest/v2/app.ts:108](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L108)

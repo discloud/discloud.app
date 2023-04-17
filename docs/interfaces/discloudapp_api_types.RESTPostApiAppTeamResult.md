@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTPostApiAppTeamResult
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTPostApiAppTeamResult
 
 # Interface: RESTPostApiAppTeamResult
 
@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:329](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L329)
+[rest/v2/app.ts:324](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L324)
 
 ___
 
@@ -43,7 +43,7 @@ Message of the API
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/base.ts#L10)
+[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -59,4 +59,4 @@ The status of API response
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/base.ts#L5)
+[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L5)

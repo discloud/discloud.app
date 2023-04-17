@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RequestManager
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RequestManager
 
 # Class: RequestManager
 
@@ -70,11 +70,11 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
+| `options` | `Partial`<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:44](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L44)
+[packages/rest/src/RequestManager.ts:44](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L44)
 
 ## Properties
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L25)
+[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L25)
 
 ___
 
@@ -97,17 +97,17 @@ performed by this manager.
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:32](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L32)
+[packages/rest/src/RequestManager.ts:32](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L32)
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:8](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L8)
+[packages/rest/src/RequestManager.ts:8](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L8)
 
 ___
 
@@ -119,7 +119,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:37](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L37)
+[packages/rest/src/RequestManager.ts:37](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L37)
 
 ___
 
@@ -131,37 +131,37 @@ The timestamp at which the global bucket resets
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:42](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L42)
+[packages/rest/src/RequestManager.ts:42](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L42)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L11)
+[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L11)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:14](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L14)
+[packages/rest/src/RequestManager.ts:14](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L14)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L17)
+[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L17)
 
 ___
 
@@ -171,17 +171,17 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:26](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L26)
+[packages/rest/src/RequestManager.ts:26](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L26)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event?`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:20](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L20)
+[packages/rest/src/RequestManager.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L20)
 
 ___
 
@@ -247,7 +247,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L54)
+[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L54)
 
 ___
 
@@ -263,7 +263,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L61)
+[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L61)
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:65](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L65)
+[packages/rest/src/RequestManager.ts:65](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L65)
 
 ## Methods
 
@@ -659,7 +659,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
-| `options` | { `dispatcher?`: `Dispatcher`  } & [`Omit`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys )<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`Pick`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys )<`RequestOptions`, ``"method"``\>\> |
+| `options` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:133](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L133)
+[packages/rest/src/RequestManager.ts:133](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L133)
 
 ___
 
@@ -687,12 +687,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & [`Omit`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys )<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`Pick`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys )<`RequestOptions`, ``"method"``\>\> |
+| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 | `url` | `string` |
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:79](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L79)
+[packages/rest/src/RequestManager.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L79)
 
 ___
 
@@ -745,7 +745,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:74](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/RequestManager.ts#L74)
+[packages/rest/src/RequestManager.ts:74](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/RequestManager.ts#L74)
 
 ___
 

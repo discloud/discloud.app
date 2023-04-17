@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTGetApiAppLogResult
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTGetApiAppLogResult
 
 # Interface: RESTGetApiAppLogResult
 
@@ -28,7 +28,7 @@ Log of your application
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:234
+[packages/api-types/rest/v2/app.ts:229](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L229)
 
 ___
 
@@ -45,7 +45,7 @@ Message of the API
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:10
+[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -61,4 +61,4 @@ The status of API response
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:5
+[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L5)

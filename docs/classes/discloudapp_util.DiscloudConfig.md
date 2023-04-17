@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / DiscloudConfig
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / DiscloudConfig
 
 # Class: DiscloudConfig
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L12)
+[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Properties
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L12)
+[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Accessors
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L63)
+[DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L63)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L24)
+[DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L24)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L34)
+[DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L34)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L42)
+[DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L42)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:50](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L50)
+[DiscloudConfig.ts:50](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L50)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L54)
+[DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L54)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:58](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L58)
+[DiscloudConfig.ts:58](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L58)
 
 ## Methods
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:92](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L92)
+[DiscloudConfig.ts:92](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L92)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L68)
+[DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L68)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:102](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L102)
+[DiscloudConfig.ts:102](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L102)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:126](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L126)
+[DiscloudConfig.ts:126](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L126)
 
 ___
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:130](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L130)
+[DiscloudConfig.ts:130](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L130)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `save` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)\> |
+| `save` | `Partial`<[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)\> |
 | `comments` | `string`[] |
 
 #### Returns
@@ -289,4 +289,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/DiscloudConfig.ts:134](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/DiscloudConfig.ts#L134)
+[DiscloudConfig.ts:134](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/DiscloudConfig.ts#L134)

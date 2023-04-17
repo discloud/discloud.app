@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / IgnoreFiles
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / IgnoreFiles
 
 # Class: IgnoreFiles
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:23
+packages/util/dist/IgnoreFiles.d.ts:23
 
 ## Properties
 
@@ -42,7 +42,7 @@ packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:23
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:18
+packages/util/dist/IgnoreFiles.d.ts:18
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:19
+packages/util/dist/IgnoreFiles.d.ts:19
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:20
+packages/util/dist/IgnoreFiles.d.ts:20
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:21
+packages/util/dist/IgnoreFiles.d.ts:21
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/IgnoreFiles.d.ts:22
+packages/util/dist/IgnoreFiles.d.ts:22

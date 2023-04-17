@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiAppManager
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiAppManager
 
 # Interface: ApiAppManager
 
@@ -22,7 +22,7 @@ Which of your applications are currently `processing`
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:79
+[packages/api-types/rest/v2/app.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L79)
 
 ___
 
@@ -34,7 +34,7 @@ Which of your applications are currently `offline`
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:83
+[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L83)
 
 ___
 
@@ -46,4 +46,4 @@ Which of your applications are currently `online`
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:87
+[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L87)

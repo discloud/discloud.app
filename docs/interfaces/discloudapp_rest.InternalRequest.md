@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / InternalRequest
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / InternalRequest
 
 # Interface: InternalRequest
 
@@ -38,7 +38,7 @@ The body to send to this request.
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:55](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L55)
+[packages/rest/src/@types/index.ts:55](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L55)
 
 ___
 
@@ -54,13 +54,13 @@ The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:59](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L59)
+[packages/rest/src/@types/index.ts:59](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L59)
 
 ___
 
 ### file
 
-• `Optional` **file**: `File` \| [`RawFile`](discloudapp_util.RawFile.md)
+• `Optional` **file**: `File` \| [`RawFile`](discloud_app.RawFile.md)
 
 File to be attached to this request
 
@@ -70,7 +70,7 @@ File to be attached to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:63](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L63)
+[packages/rest/src/@types/index.ts:63](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L63)
 
 ___
 
@@ -80,13 +80,13 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:80](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L80)
+[packages/rest/src/@types/index.ts:80](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L80)
 
 ___
 
 ### headers
 
-• `Optional` **headers**: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string`, `string`\>
+• `Optional` **headers**: `Record`<`string`, `string`\>
 
 Additional headers to add to this request
 
@@ -96,7 +96,7 @@ Additional headers to add to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:67](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L67)
+[packages/rest/src/@types/index.ts:67](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L67)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:81](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L81)
+[packages/rest/src/@types/index.ts:81](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L81)
 
 ___
 
@@ -122,4 +122,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:71](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L71)
+[packages/rest/src/@types/index.ts:71](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L71)

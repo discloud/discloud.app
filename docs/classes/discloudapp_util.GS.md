@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / GS
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / GS
 
 # Class: GS
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L10)
+[GS.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/GS.ts#L10)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L7)
+[GS.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/GS.ts#L7)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L8)
+[GS.ts:8](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/GS.ts#L8)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L11)
+[GS.ts:11](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/GS.ts#L11)
 
 ## Methods
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/GS.ts:33](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/GS.ts#L33)
+[GS.ts:33](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/GS.ts#L33)

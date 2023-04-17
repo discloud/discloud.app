@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / GS
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / GS
 
 # Class: GS
 
@@ -33,7 +33,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:7
+packages/util/dist/GS.d.ts:7
 
 ## Properties
 
@@ -43,7 +43,7 @@ packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:7
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:3
+packages/util/dist/GS.d.ts:3
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:5
+packages/util/dist/GS.d.ts:5
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:6
+packages/util/dist/GS.d.ts:6
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:4
+packages/util/dist/GS.d.ts:4

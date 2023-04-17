@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiAppBackup
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiAppBackup
 
 # Interface: ApiAppBackup
 
@@ -9,6 +9,8 @@
 - [`BaseApiApp`](discloud_app.BaseApiApp.md)
 
   ↳ **`ApiAppBackup`**
+
+  ↳↳ [`ApiAppBackupAll`](discloud_app.ApiAppBackupAll.md)
 
   ↳↳ [`ApiAppBackupAll`](discloud_app.ApiAppBackupAll.md)
 
@@ -33,7 +35,7 @@ Your app id
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:7
+[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L7)
 
 ___
 
@@ -46,4 +48,4 @@ The backup url.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:58
+[packages/api-types/rest/v2/app.ts:58](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L58)

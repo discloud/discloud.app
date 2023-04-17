@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiNetIO
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ApiNetIO
 
 # Interface: ApiNetIO
 
@@ -21,7 +21,7 @@ Amount of downloaded to container
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:165
+[packages/api-types/rest/v2/app.ts:165](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L165)
 
 ___
 
@@ -33,4 +33,4 @@ Amount of uploaded from container
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:169
+[packages/api-types/rest/v2/app.ts:169](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L169)

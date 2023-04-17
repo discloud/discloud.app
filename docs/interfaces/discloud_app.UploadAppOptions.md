@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / UploadAppOptions
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / UploadAppOptions
 
 # Interface: UploadAppOptions
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/@types/index.ts#L17)

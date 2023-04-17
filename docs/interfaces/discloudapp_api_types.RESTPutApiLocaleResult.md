@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTPutApiLocaleResult
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / RESTPutApiLocaleResult
 
 # Interface: RESTPutApiLocaleResult
 
@@ -23,7 +23,7 @@ Your locale
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/locale.ts#L11)
+[rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/locale.ts#L11)
 
 ___
 
@@ -35,7 +35,7 @@ List of locales in case you choose a wrong locale
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:19](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/locale.ts#L19)
+[rest/v2/locale.ts:19](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/locale.ts#L19)
 
 ___
 
@@ -47,7 +47,7 @@ API message response
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/locale.ts#L15)
+[rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/locale.ts#L15)
 
 ___
 
@@ -59,4 +59,4 @@ API status response
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/locale.ts#L7)
+[rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/locale.ts#L7)

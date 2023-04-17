@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / REST
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / REST
 
 # Class: REST
 
@@ -68,61 +68,61 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
+| `options?` | `Partial`<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:14
+packages/rest/dist/REST.d.ts:14
 
 ## Properties
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:6
+packages/rest/dist/REST.d.ts:6
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:7
+packages/rest/dist/REST.d.ts:7
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:8
+packages/rest/dist/REST.d.ts:8
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:9
+packages/rest/dist/REST.d.ts:9
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloud_app.REST.md) & <S\>(`event?`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>) => [`REST`](discloud_app.REST.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloud_app.REST.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`REST`](discloud_app.REST.md)
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:10
+packages/rest/dist/REST.d.ts:10
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:13
+packages/rest/dist/REST.d.ts:13
 
 ___
 
@@ -196,7 +196,7 @@ node_modules/@types/node/events.d.ts:327
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:15
+packages/rest/dist/REST.d.ts:15
 
 ## Methods
 
@@ -252,7 +252,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:35
+packages/rest/dist/REST.d.ts:35
 
 ___
 
@@ -315,7 +315,7 @@ Runs a get request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:28
+packages/rest/dist/REST.d.ts:28
 
 ___
 
@@ -425,7 +425,7 @@ Runs a post request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:42
+packages/rest/dist/REST.d.ts:42
 
 ___
 
@@ -528,7 +528,7 @@ Runs a put request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:49
+packages/rest/dist/REST.d.ts:49
 
 ___
 
@@ -550,7 +550,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:61
+packages/rest/dist/REST.d.ts:61
 
 ___
 
@@ -725,7 +725,7 @@ Runs a request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:55
+packages/rest/dist/REST.d.ts:55
 
 ___
 
@@ -778,7 +778,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:21
+packages/rest/dist/REST.d.ts:21
 
 ___
 

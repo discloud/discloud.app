@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / RawFile
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / RawFile
 
 # Interface: RawFile
 
@@ -23,7 +23,7 @@ Content-Type of the file
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:24](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/FileResolver.ts#L24)
+[FileResolver.ts:24](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/FileResolver.ts#L24)
 
 ___
 
@@ -35,7 +35,7 @@ The actual data for the file
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/FileResolver.ts#L20)
+[FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/FileResolver.ts#L20)
 
 ___
 
@@ -47,7 +47,7 @@ An explicit key to use for key of the formdata field for this file.
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/FileResolver.ts#L16)
+[FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/FileResolver.ts#L16)
 
 ___
 
@@ -59,4 +59,4 @@ The name of the file
 
 #### Defined in
 
-[packages/util/src/FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/FileResolver.ts#L12)
+[FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/FileResolver.ts#L12)

@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / DiscloudApp
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / DiscloudApp
 
 # Class: DiscloudApp
 
@@ -73,7 +73,7 @@
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
 
 ## Properties
 
@@ -83,7 +83,7 @@
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
 
 ___
 
@@ -103,47 +103,47 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `boolean` & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
 
 ___
 
@@ -153,17 +153,17 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event?`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
 
 ___
 
@@ -257,7 +257,7 @@ node_modules/@types/node/events.d.ts:327
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:61](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L61)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:61](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L61)
 
 ## Methods
 
@@ -277,7 +277,7 @@ node_modules/@types/node/events.d.ts:327
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
 
 ___
 
@@ -441,7 +441,7 @@ Login on Discloud API
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:70](https://github.com/discloud/discloud.app/blob/0fe6620/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L70)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:70](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L70)
 
 ___
 

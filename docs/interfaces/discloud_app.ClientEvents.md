@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ClientEvents
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / ClientEvents
 
 # Interface: ClientEvents
 
@@ -28,4 +28,4 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:85
+packages/rest/dist/@types/index.d.ts:85

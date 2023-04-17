@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTApiAppManagerResult
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTApiAppManagerResult
 
 # Interface: RESTApiAppManagerResult
 
@@ -9,6 +9,14 @@
 - [`RESTApiBaseResult`](discloud_app.RESTApiBaseResult.md)
 
   ↳ **`RESTApiAppManagerResult`**
+
+  ↳↳ [`RESTDeleteApiAppAllDeleteResult`](discloud_app.RESTDeleteApiAppAllDeleteResult.md)
+
+  ↳↳ [`RESTPutApiAppAllRestartResult`](discloud_app.RESTPutApiAppAllRestartResult.md)
+
+  ↳↳ [`RESTPutApiAppAllStartResult`](discloud_app.RESTPutApiAppAllStartResult.md)
+
+  ↳↳ [`RESTPutApiAppAllStopResult`](discloud_app.RESTPutApiAppAllStopResult.md)
 
   ↳↳ [`RESTDeleteApiAppAllDeleteResult`](discloud_app.RESTDeleteApiAppAllDeleteResult.md)
 
@@ -30,11 +38,11 @@
 
 ### apps
 
-• **apps**: [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`ApiAppManager`](discloud_app.ApiAppManager.md)\>
+• **apps**: `Partial`<[`ApiAppManager`](discloud_app.ApiAppManager.md)\>
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:245
+[packages/api-types/rest/v2/app.ts:240](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L240)
 
 ___
 
@@ -51,7 +59,7 @@ Message of the API
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:10
+[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -67,4 +75,4 @@ The status of API response
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:5
+[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/base.ts#L5)

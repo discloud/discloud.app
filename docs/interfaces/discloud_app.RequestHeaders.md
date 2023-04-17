@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RequestHeaders
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RequestHeaders
 
 # Interface: RequestHeaders
 
@@ -22,7 +22,7 @@ Possible headers for an API call
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:42
+packages/rest/dist/@types/index.d.ts:42
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:40
+packages/rest/dist/@types/index.d.ts:40
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:41
+packages/rest/dist/@types/index.d.ts:41

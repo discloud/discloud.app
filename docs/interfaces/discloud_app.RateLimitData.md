@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RateLimitData
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RateLimitData
 
 # Interface: RateLimitData
 
@@ -21,7 +21,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:82
+packages/rest/dist/@types/index.d.ts:82
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:80
+packages/rest/dist/@types/index.d.ts:80
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:79
+packages/rest/dist/@types/index.d.ts:79
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:81
+packages/rest/dist/@types/index.d.ts:81

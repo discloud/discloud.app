@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RestEvents
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RestEvents
 
 # Interface: RestEvents
 
@@ -7,6 +7,8 @@
 ## Hierarchy
 
 - **`RestEvents`**
+
+  ↳ [`ClientEvents`](discloud_app.ClientEvents.md)
 
   ↳ [`ClientEvents`](discloud_app.ClientEvents.md)
 
@@ -24,4 +26,4 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:85
+packages/rest/dist/@types/index.d.ts:85

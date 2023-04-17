@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTEvents
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTEvents
 
 # Enumeration: RESTEvents
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:8
+packages/rest/dist/@enum/index.d.ts:8

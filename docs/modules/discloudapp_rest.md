@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / @discloudapp/rest
+[Documentation](../README.md) / [Exports](../modules.md) / @discloudapp/rest
 
 # Module: @discloudapp/rest
 
@@ -32,11 +32,11 @@
 
 ### RequestOptions
 
-Ƭ **RequestOptions**: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<[`Parameters`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype )<typeof `request`\>[``1``], `undefined`\>
+Ƭ **RequestOptions**: `Exclude`<`Parameters`<typeof `request`\>[``1``], `undefined`\>
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L7)
+[packages/rest/src/@types/index.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L7)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L5)
+[packages/rest/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L5)

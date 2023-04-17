@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / BaseApiApp
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/api-types](../modules/discloudapp_api_types.md) / BaseApiApp
 
 # Interface: BaseApiApp
 
@@ -7,6 +7,14 @@
 ## Hierarchy
 
 - **`BaseApiApp`**
+
+  ↳ [`ApiApp`](discloudapp_api_types.ApiApp.md)
+
+  ↳ [`ApiAppBackup`](discloudapp_api_types.ApiAppBackup.md)
+
+  ↳ [`ApiAppLog`](discloudapp_api_types.ApiAppLog.md)
+
+  ↳ [`ApiStatusApp`](discloudapp_api_types.ApiStatusApp.md)
 
   ↳ [`ApiApp`](discloudapp_api_types.ApiApp.md)
 
@@ -32,4 +40,4 @@ Your app id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/api-types/rest/v2/app.ts#L7)
+[rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L7)

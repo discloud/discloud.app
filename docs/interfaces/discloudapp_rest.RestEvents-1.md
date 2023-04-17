@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RestEvents
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RestEvents
 
 # Interface: RestEvents
 
@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:92](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L92)
+[packages/rest/src/@types/index.ts:92](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L92)

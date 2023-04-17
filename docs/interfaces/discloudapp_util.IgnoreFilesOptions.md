@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / IgnoreFilesOptions
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/util](../modules/discloudapp_util.md) / IgnoreFilesOptions
 
 # Interface: IgnoreFilesOptions
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:20](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L20)
+[IgnoreFiles.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L20)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:22](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L22)
+[IgnoreFiles.ts:22](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L22)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[packages/util/src/IgnoreFiles.ts:21](https://github.com/discloud/discloud.app/blob/0fe6620/packages/util/src/IgnoreFiles.ts#L21)
+[IgnoreFiles.ts:21](https://github.com/discloud/discloud.app/blob/a142e7d/packages/util/src/IgnoreFiles.ts#L21)

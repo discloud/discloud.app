@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / InternalRequest
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / InternalRequest
 
 # Interface: InternalRequest
 
@@ -38,7 +38,7 @@ The body to send to this request.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:51
+packages/rest/dist/@types/index.d.ts:51
 
 ___
 
@@ -54,7 +54,7 @@ The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:55
+packages/rest/dist/@types/index.d.ts:55
 
 ___
 
@@ -70,7 +70,7 @@ File to be attached to this request
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:59
+packages/rest/dist/@types/index.d.ts:59
 
 ___
 
@@ -80,13 +80,13 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:75
+packages/rest/dist/@types/index.d.ts:75
 
 ___
 
 ### headers
 
-• `Optional` **headers**: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string`, `string`\>
+• `Optional` **headers**: `Record`<`string`, `string`\>
 
 Additional headers to add to this request
 
@@ -96,7 +96,7 @@ Additional headers to add to this request
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:63
+packages/rest/dist/@types/index.d.ts:63
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:76
+packages/rest/dist/@types/index.d.ts:76
 
 ___
 
@@ -122,4 +122,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:67
+packages/rest/dist/@types/index.d.ts:67

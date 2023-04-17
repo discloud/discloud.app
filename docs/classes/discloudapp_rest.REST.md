@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / REST
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / REST
 
 # Class: REST
 
@@ -68,61 +68,61 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
+| `options` | `Partial`<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
 
 #### Defined in
 
-[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L22)
+[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L22)
 
 ## Properties
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
 
 #### Defined in
 
-[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L7)
+[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L7)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
 
 #### Defined in
 
-[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L9)
+[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L9)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
 
 #### Defined in
 
-[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L11)
+[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L11)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
 
 #### Defined in
 
-[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L13)
+[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L13)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event?`: [`Exclude`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers )<`S`, ``"rateLimited"``\>) => [`REST`](discloudapp_rest.REST.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`REST`](discloudapp_rest.REST.md)
 
 #### Defined in
 
-[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L15)
+[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L15)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L20)
+[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L20)
 
 ___
 
@@ -196,7 +196,7 @@ node_modules/@types/node/events.d.ts:327
 
 #### Defined in
 
-[packages/rest/src/REST.ts:29](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L29)
+[packages/rest/src/REST.ts:29](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L29)
 
 ## Methods
 
@@ -252,7 +252,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:59](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L59)
+[packages/rest/src/REST.ts:59](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L59)
 
 ___
 
@@ -315,7 +315,7 @@ Runs a get request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:49](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L49)
+[packages/rest/src/REST.ts:49](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L49)
 
 ___
 
@@ -425,7 +425,7 @@ Runs a post request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:69](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L69)
+[packages/rest/src/REST.ts:69](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L69)
 
 ___
 
@@ -528,7 +528,7 @@ Runs a put request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:79](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L79)
+[packages/rest/src/REST.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L79)
 
 ___
 
@@ -550,7 +550,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-[packages/rest/src/REST.ts:102](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L102)
+[packages/rest/src/REST.ts:102](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L102)
 
 ___
 
@@ -725,7 +725,7 @@ Runs a request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L88)
+[packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L88)
 
 ___
 
@@ -778,7 +778,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/REST.ts#L38)
+[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L38)
 
 ___
 

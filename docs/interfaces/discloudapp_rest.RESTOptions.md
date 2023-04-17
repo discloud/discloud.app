@@ -1,4 +1,4 @@
-[discloudapp](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RESTOptions
+[Documentation](../README.md) / [Exports](../modules.md) / [@discloudapp/rest](../modules/discloudapp_rest.md) / RESTOptions
 
 # Interface: RESTOptions
 
@@ -24,7 +24,7 @@ The agent to set globally
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:18](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L18)
+[packages/rest/src/@types/index.ts:18](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L18)
 
 ___
 
@@ -40,7 +40,7 @@ The base api path, without version
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L14)
+[packages/rest/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L14)
 
 ___
 
@@ -56,13 +56,13 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L24)
+[packages/rest/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L24)
 
 ___
 
 ### headers
 
-• **headers**: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string`, `string`\>
+• **headers**: `Record`<`string`, `string`\>
 
 Additional headers to send for all API requests
 
@@ -72,7 +72,7 @@ Additional headers to send for all API requests
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:30](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L30)
+[packages/rest/src/@types/index.ts:30](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L30)
 
 ___
 
@@ -88,4 +88,4 @@ The version of the API to use
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/0fe6620/packages/rest/src/@types/index.ts#L36)
+[packages/rest/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L36)
