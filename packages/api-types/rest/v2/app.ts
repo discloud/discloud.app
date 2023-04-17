@@ -178,11 +178,6 @@ export interface ApiTerminal {
    * Smaller log of your application
    */
   small: string
-  /**
-   * The log url.
-   * - You can access it `only once`.
-   */
-  url: string
 }
 
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
