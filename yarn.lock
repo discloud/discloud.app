@@ -1210,13 +1210,12 @@ typedoc-plugin-coverage@^2.1.0:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-2.1.0.tgz#619bf10853c5851c47dc17585e14385647bbb754"
   integrity sha512-d0Lc/aOPRAMnfABCW2cQqCQdzLUzadeq62r4DBrSchcfzx1X8nOvhXK/n4mVAO4wQQUchTm2ZGAzTtiAc2nl0A==
 
-typedoc-plugin-markdown@^3.15.2:
-  version "3.15.2"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.15.2.tgz#6d1c04e048cdf9fbc17652f8e9d674f51888a062"
-  integrity sha512-OPXAL9hhdoVJzH/UaKAz6CBS/s8KlYyLWwnxF7ap0fQCuaMMWShA1JBq4n1SXbiGjx+7DOhOfTKQ5OzwryN3Vw==
+typedoc-plugin-markdown@^3.15.3:
+  version "3.15.3"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-3.15.3.tgz#f5419a32b93efbdc0fcba60ca4de37727aeb8ba9"
+  integrity sha512-idntFYu3vfaY3eaD+w9DeRd0PmNGqGuNLKihPU9poxFGnATJYGn9dPtEhn2QrTdishFMg7jPXAhos+2T6YCWRQ==
   dependencies:
     handlebars "^4.7.7"
-    typedoc-plugin-mdn-links "^3.0.3"
 
 typedoc-plugin-mdn-links@^3.0.3:
   version "3.0.3"
