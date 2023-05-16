@@ -2,7 +2,7 @@ import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
 import type { InternalRequest, RateLimitData, RequestHeaders, RequestOptions, RestEvents, RESTOptions } from "./@types";
-import { DefaultRestOptions, DefaultUserAgent } from "./utils/contants";
+import { DefaultRestOptions } from "./utils/contants";
 
 export interface RequestManager {
 	emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
