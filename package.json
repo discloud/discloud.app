@@ -23,7 +23,7 @@
     "typedoc-plugin-mdn-links": "^3.0.3",
     "typedoc-plugin-rename-defaults": "^0.6.5",
     "typedoc-plugin-resolve-crossmodule-references": "^0.3.3",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   },
   "yarn-upgrade-all": {}
 }
