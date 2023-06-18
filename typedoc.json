@@ -15,6 +15,5 @@
     "typedoc-plugin-mdn-links",
     // "typedoc-plugin-missing-exports",
     "typedoc-plugin-rename-defaults",
-    // "typedoc-plugin-resolve-crossmodule-references"
   ]
 }
