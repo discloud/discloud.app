@@ -22,7 +22,7 @@
     "typedoc-plugin-markdown": "^3.15.3",
     "typedoc-plugin-mdn-links": "^3.0.3",
     "typedoc-plugin-rename-defaults": "^0.6.5",
-    "typescript": "^5.1.5"
+    "typescript": "^5.1.6"
   },
   "yarn-upgrade-all": {}
 }
