@@ -1,5 +1,5 @@
 import { DiscloudConfigType } from "@discloudapp/api-types/v2";
-import { exists, read, write } from "fs-jetpack";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 export const discloudConfigRequiredScopes = {
@@ -23,7 +23,7 @@ export class DiscloudConfig {
 
   get comments() {
     try {
-      return read(this.path, "utf8")
+      return readFileSync(this.path, "utf8")
         ?.split(/\r?\n/)
         .filter(a => /^\s*#/.test(a)) ?? [];
     } catch {
@@ -33,22 +33,34 @@ export class DiscloudConfig {
 
   get data(): DiscloudConfigType {
     try {
-      return this.#configToObj(read(this.path, "utf8")!);
+      return this.#configToObj(readFileSync(this.path, "utf8")!);
     } catch (error) {
       return <any>{};
     }
   }
 
   get exists() {
-    try {
-      return exists(this.path);
-    } catch {
-      return false;
+    if (existsSync(this.path)) {
+      const stats = statSync(this.path);
+
+      if (stats.isFile()) return "file";
+
+      if (stats.isDirectory()) return "dir";
     }
+
+    return false;
   }
 
   get existsMain() {
-    if (this.data.MAIN) return exists(this.data.MAIN);
+    if (existsSync(this.data.MAIN)) {
+      const stats = statSync(this.data.MAIN);
+
+      if (stats.isFile()) return "file";
+
+      if (stats.isDirectory()) return "dir";
+    }
+
+    return false;
   }
 
   get fileExt() {
@@ -135,11 +147,11 @@ export class DiscloudConfig {
     try {
       save = { ...this.data, ...save };
 
-      write(this.path, this.#objToString(
+      writeFileSync(this.path, this.#objToString(
         comments?.length ?
           [comments, save] :
           save,
-      ));
+      ), "utf8");
     } catch (error) {
       return error as Error;
     }

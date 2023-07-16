@@ -1,5 +1,4 @@
-import { exists, read } from "fs-jetpack";
-import { readdirSync } from "node:fs";
+import { readdirSync, existsSync, statSync, readFileSync } from "node:fs";
 import { dirname, isAbsolute, join } from "node:path";
 
 export const blockedFiles = {
@@ -52,7 +51,7 @@ export class IgnoreFiles {
 
   #findIgnoreFiles(fileName: string, paths: string[]) {
     return paths.flatMap(path => this.#recursivelyReadDirSync(path)
-      .filter(file => file.endsWith(fileName) && exists(file) === "file"));
+      .filter(file => file.endsWith(fileName) && existsSync(file) && statSync(file).isFile()));
   }
 
   #makeBothCase(s: string) {
@@ -98,8 +97,8 @@ export class IgnoreFiles {
       return ignored;
     }
 
-    if (typeof ignoreFile === "string" && exists(ignoreFile) === "file") {
-      const readed = read(ignoreFile, "utf8")
+    if (typeof ignoreFile === "string" && existsSync(ignoreFile) && statSync(ignoreFile).isFile()) {
+      const readed = readFileSync(ignoreFile, "utf8")
         ?.replace(/\s*#.*/g, "")
         .split(/\r?\n/)
         .filter(a => a) ?? [];
@@ -111,8 +110,8 @@ export class IgnoreFiles {
   }
 
   #recursivelyReadDirSync(path: string): string[] {
-    if (!exists(path)) return [];
-    if (exists(path) === "file")
+    if (!existsSync(path)) return [];
+    if (statSync(path).isFile())
       return this.#recursivelyReadDirSync(dirname(path));
 
     const files = readdirSync(this.#normalizePath(path), { withFileTypes: true });

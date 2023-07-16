@@ -1,5 +1,5 @@
-import { exists } from "fs-jetpack";
 import { globSync } from "glob";
+import { existsSync, statSync } from "node:fs";
 import { isAbsolute } from "node:path";
 import { IgnoreFiles } from "./IgnoreFiles";
 
@@ -37,7 +37,7 @@ export class GS {
       if (!isAbsolute(path))
         path = path.replace(/^(\.|~)$|^(\.|~)\/|^\/|\/$/g, "") || "**";
 
-      path = exists(path) === "dir" ? path.replace(/\/$/, "") + "/**" : path;
+      path = (existsSync(path) && statSync(path).isDirectory()) ? path.replace(/\/$/, "") + "/**" : path;
     } catch {
       path = path.replace(/\/$/, "") + "/**";
     }
