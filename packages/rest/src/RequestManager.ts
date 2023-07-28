@@ -1,24 +1,24 @@
 import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
-import type { InternalRequest, RateLimitData, RequestHeaders, RequestOptions, RestEvents, RESTOptions } from "./@types";
+import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
 import { DefaultRestOptions } from "./utils/contants";
 
 export interface RequestManager {
-	emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
-		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: any[]) => boolean);
+  emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: any[]) => boolean);
 
-	off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
 
-	on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
 
-	once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-		(<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
+  once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
 
-	removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
-		(<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
+  removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
+  (<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
 }
 
 export class RequestManager extends EventEmitter {
@@ -32,13 +32,13 @@ export class RequestManager extends EventEmitter {
   agent?: Dispatcher;
 
   /**
-	 * The number of requests remaining in the global bucket
-	 */
+   * The number of requests remaining in the global bucket
+   */
   globalRemaining: number;
 
   /**
-	 * The timestamp at which the global bucket resets
-	 */
+   * The timestamp at which the global bucket resets
+   */
   globalReset = 0;
 
   constructor(options: Partial<RESTOptions>) {
@@ -52,7 +52,7 @@ export class RequestManager extends EventEmitter {
    * If the rate limit bucket is currently limited by its limit
    */
   get globalLimited() {
-    return this.globalRemaining < 1 && Date.now() < this.globalReset;
+    return this.globalRemaining < 1 && this.globalTimeToReset > -1;
   }
 
   /**
