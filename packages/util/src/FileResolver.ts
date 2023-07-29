@@ -49,7 +49,7 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
 
     fileName ??= file.match(fileNamePattern)?.pop() ?? "file";
 
-    if (/^https?:\/\//.test(file))
+    if (/^(?:ht|s?f)tps?:\/\//.test(file))
       return request(file, { throwOnError: true })
         .then(res => res.body.blob())
         .then(blob => new File([blob], fileName ?? "file"));
