@@ -89,7 +89,7 @@ export class REST extends EventEmitter {
     const res = await this.raw(options);
 
     if (res.headers["content-type"]?.includes("application/json"))
-      return res.body.json();
+      return res.body.json() as any;
 
     return res.body.arrayBuffer();
   }

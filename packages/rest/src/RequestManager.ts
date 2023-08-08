@@ -148,7 +148,7 @@ export class RequestManager extends EventEmitter {
     this.globalReset = Date.now() + (Number(res.headers["ratelimit-reset"]) * 1000);
 
     if (res.statusCode > 399 && res.statusCode < 600) {
-      const body = await res.body.json();
+      const body = await res.body.json() as Record<string, any>;
       throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
     }
 
