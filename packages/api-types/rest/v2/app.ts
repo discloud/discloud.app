@@ -41,6 +41,10 @@ export interface ApiApp extends BaseApiApp {
    */
   mods: string[]
   /**
+   * Your app's avatar url
+   */
+  avatarURL: string
+  /**
    * If your app has auto deploy on github enabled
    */
   autoDeployGit: string

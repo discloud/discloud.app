@@ -15,6 +15,10 @@ export default class App extends BaseApp {
    */
   declare autoRestart: boolean;
   /**
+   * Your app's avatar url
+   */
+  declare avatarURL: string;
+  /**
    * Your app's exit code on stopping
    */
   declare exitCode: number;
@@ -63,6 +67,9 @@ export default class App extends BaseApp {
 
     if ("autoRestart" in data)
       this.autoRestart = data.autoRestart;
+
+    if ("avatarURL" in data)
+      this.avatarURL = data.avatarURL;
 
     if ("exitCode" in data)
       this.exitCode = data.exitCode;
