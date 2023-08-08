@@ -14,11 +14,6 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@discloudapp/api-types@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@discloudapp/api-types/-/api-types-0.2.8.tgz#e85dd321bc0e32a5ae8e7a99ecdfb6ccae19f0eb"
-  integrity sha512-dFfxgtjMHj8mySDr+CZlpG4TKyuUxtXP78bz+zFrkwLTx1o57fVjJjNowqNDDgBfZe7fD6KzZkyX8rjeGiuOkQ==
-
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
