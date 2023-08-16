@@ -1,14 +1,14 @@
 import BitField, { BitFieldResolvable } from "./BitField";
 
 export const ModPermissions = {
-  backup_app: 1,
-  commit_app: 2,
-  edit_ram: 4,
-  logs_app: 8,
-  restart_app: 16,
-  start_app: 32,
-  status_app: 64,
-  stop_app: 128,
+  backup_app: 1 << 0,
+  commit_app: 1 << 1,
+  edit_ram: 1 << 2,
+  logs_app: 1 << 3,
+  restart_app: 1 << 4,
+  start_app: 1 << 5,
+  status_app: 1 << 6,
+  stop_app: 1 << 7,
 };
 
 export type ModPermissionsFlags = keyof typeof ModPermissions
