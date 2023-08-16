@@ -26,7 +26,7 @@
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
     "@discloudapp/api-types": "^0.3.0",
-    "@discloudapp/rest": "^0.6.5",
+    "@discloudapp/rest": "^0.7.0",
     "@discloudapp/util": "^0.4.5",
     "undici": "^5.23.0"
   },
