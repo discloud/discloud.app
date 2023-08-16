@@ -55,6 +55,7 @@ export default class AppManager extends CachedManager<App> {
       | RESTGetApiAppLogResult
       | RESTGetApiAppAllLogResult
     >(Routes.appLogs(appID));
+
     if (Array.isArray(data.apps)) {
       const cache = new Map<string, ApiTerminal>();
 
@@ -63,9 +64,9 @@ export default class AppManager extends CachedManager<App> {
       }
 
       return cache;
-    } else {
-      return data.apps.terminal;
     }
+
+    return data.apps.terminal;
   }
 
   /**
@@ -137,7 +138,7 @@ export default class AppManager extends CachedManager<App> {
     this._add(data.app);
 
     if ("app" in data)
-      return { ...data, app: new AppUploaded(this.discloudApp, data.app) };
+      return Object.assign(data, { app: new AppUploaded(this.discloudApp, data.app) });
 
     return data;
   }

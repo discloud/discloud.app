@@ -20,7 +20,8 @@ export default class AppApt extends Base {
   }
 
   protected _patch(data: BaseApiApp): this {
-    this.appId = data.id;
+    if ("id" in data)
+      this.appId = data.id;
 
     return super._patch(data);
   }
