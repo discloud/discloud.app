@@ -29,7 +29,7 @@ Moderator ID
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:154](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L154)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:158
 
 ___
 
@@ -41,4 +41,4 @@ Moderator permissions
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L158)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:162

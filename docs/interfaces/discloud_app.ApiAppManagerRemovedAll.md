@@ -32,7 +32,7 @@ Omit.alreadyInProcess
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L79)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:83
 
 ___
 
@@ -48,7 +48,7 @@ Omit.alreadyOffline
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L83)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:87
 
 ___
 
@@ -60,4 +60,4 @@ Which of your applications have been `removed`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:94](https://github.com/discloud/discloud.app/blob/a142e7d/packages/api-types/rest/v2/app.ts#L94)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:98

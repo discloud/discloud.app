@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/rest/src/@enum/index.ts:9](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@enum/index.ts#L9)
+[packages/rest/src/@enum/index.ts:9](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@enum/index.ts#L9)

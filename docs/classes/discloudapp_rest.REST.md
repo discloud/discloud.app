@@ -52,7 +52,9 @@
 - [request](discloudapp_rest.REST.md#request)
 - [setMaxListeners](discloudapp_rest.REST.md#setmaxlisteners)
 - [setToken](discloudapp_rest.REST.md#settoken)
+- [addAbortListener](discloudapp_rest.REST.md#addabortlistener)
 - [getEventListeners](discloudapp_rest.REST.md#geteventlisteners)
+- [getMaxListeners](discloudapp_rest.REST.md#getmaxlisteners-1)
 - [listenerCount](discloudapp_rest.REST.md#listenercount-1)
 - [on](discloudapp_rest.REST.md#on-1)
 - [once](discloudapp_rest.REST.md#once-1)
@@ -72,7 +74,7 @@
 
 #### Defined in
 
-[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L22)
+[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L22)
 
 ## Properties
 
@@ -82,7 +84,7 @@
 
 #### Defined in
 
-[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L7)
+[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L7)
 
 ___
 
@@ -92,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L9)
+[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L9)
 
 ___
 
@@ -102,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L11)
+[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L11)
 
 ___
 
@@ -112,7 +114,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L13)
+[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L13)
 
 ___
 
@@ -122,7 +124,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L15)
+[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L15)
 
 ___
 
@@ -132,17 +134,25 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L20)
+[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L20)
 
 ___
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](discloudapp_rest.RequestManager.md#capturerejectionsymbol)
+▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](discloudapp_rest.REST.md#capturerejectionsymbol)
+
+Value: `Symbol.for('nodejs.rejection')`
+
+See how to write a custom `rejection handler`.
+
+**`Since`**
+
+v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:328
+node_modules/@types/node/events.d.ts:390
 
 ___
 
@@ -150,11 +160,17 @@ ___
 
 ▪ `Static` **captureRejections**: `boolean`
 
-Sets or gets the default captureRejection value for all emitters.
+Value: [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
+
+Change the default `captureRejections` option on all new `EventEmitter` objects.
+
+**`Since`**
+
+v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:333
+node_modules/@types/node/events.d.ts:397
 
 ___
 
@@ -162,27 +178,66 @@ ___
 
 ▪ `Static` **defaultMaxListeners**: `number`
 
+By default, a maximum of `10` listeners can be registered for any single
+event. This limit can be changed for individual `EventEmitter` instances
+using the `emitter.setMaxListeners(n)` method. To change the default
+for _all_`EventEmitter` instances, the `events.defaultMaxListeners`property can be used. If this value is not a positive number, a `RangeError`is thrown.
+
+Take caution when setting the `events.defaultMaxListeners` because the
+change affects _all_`EventEmitter` instances, including those created before
+the change is made. However, calling `emitter.setMaxListeners(n)` still has
+precedence over `events.defaultMaxListeners`.
+
+This is not a hard limit. The `EventEmitter` instance will allow
+more listeners to be added but will output a trace warning to stderr indicating
+that a "possible EventEmitter memory leak" has been detected. For any single`EventEmitter`, the `emitter.getMaxListeners()` and `emitter.setMaxListeners()`methods can be used to
+temporarily avoid this warning:
+
+```js
+import { EventEmitter } from 'node:events';
+const emitter = new EventEmitter();
+emitter.setMaxListeners(emitter.getMaxListeners() + 1);
+emitter.once('event', () => {
+  // do stuff
+  emitter.setMaxListeners(Math.max(emitter.getMaxListeners() - 1, 0));
+});
+```
+
+The `--trace-warnings` command-line flag can be used to display the
+stack trace for such warnings.
+
+The emitted warning can be inspected with `process.on('warning')` and will
+have the additional `emitter`, `type`, and `count` properties, referring to
+the event emitter instance, the event's name and the number of attached
+listeners, respectively.
+Its `name` property is set to `'MaxListenersExceededWarning'`.
+
+**`Since`**
+
+v0.11.2
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:334
+node_modules/@types/node/events.d.ts:434
 
 ___
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](discloudapp_rest.RequestManager.md#errormonitor)
+▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](discloudapp_rest.REST.md#errormonitor)
 
-This symbol shall be used to install a listener for only monitoring `'error'`
-events. Listeners installed using this symbol are called before the regular
-`'error'` listeners are called.
+This symbol shall be used to install a listener for only monitoring `'error'`events. Listeners installed using this symbol are called before the regular`'error'` listeners are called.
 
-Installing a listener using this symbol does not change the behavior once an
-`'error'` event is emitted, therefore the process will still crash if no
+Installing a listener using this symbol does not change the behavior once an`'error'` event is emitted. Therefore, the process will still crash if no
 regular `'error'` listener is installed.
+
+**`Since`**
+
+v13.6.0, v12.17.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:327
+node_modules/@types/node/events.d.ts:383
 
 ## Accessors
 
@@ -196,7 +251,7 @@ node_modules/@types/node/events.d.ts:327
 
 #### Defined in
 
-[packages/rest/src/REST.ts:29](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L29)
+[packages/rest/src/REST.ts:29](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L29)
 
 ## Methods
 
@@ -205,10 +260,6 @@ node_modules/@types/node/events.d.ts:327
 ▸ **addListener**(`eventName`, `listener`): [`REST`](discloudapp_rest.REST.md)
 
 Alias for `emitter.on(eventName, listener)`.
-
-**`Since`**
-
-v0.1.26
 
 #### Parameters
 
@@ -221,9 +272,13 @@ v0.1.26
 
 [`REST`](discloudapp_rest.REST.md)
 
+**`Since`**
+
+v0.1.26
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:354
+node_modules/@types/node/events.d.ts:454
 
 ___
 
@@ -252,7 +307,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:59](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L59)
+[packages/rest/src/REST.ts:59](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L59)
 
 ___
 
@@ -264,7 +319,8 @@ Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
 
 ```js
-const EventEmitter = require('events');
+import { EventEmitter } from 'node:events';
+
 const myEE = new EventEmitter();
 myEE.on('foo', () => {});
 myEE.on('bar', () => {});
@@ -276,17 +332,17 @@ console.log(myEE.eventNames());
 // Prints: [ 'foo', 'bar', Symbol(symbol) ]
 ```
 
-**`Since`**
-
-v6.0.0
-
 #### Returns
 
 (`string` \| `symbol`)[]
 
+**`Since`**
+
+v6.0.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:669
+node_modules/@types/node/events.d.ts:779
 
 ___
 
@@ -315,7 +371,7 @@ Runs a get request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:49](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L49)
+[packages/rest/src/REST.ts:49](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L49)
 
 ___
 
@@ -326,43 +382,46 @@ ___
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](discloudapp_rest.REST.md#defaultmaxlisteners).
 
-**`Since`**
-
-v1.0.0
-
 #### Returns
 
 `number`
 
+**`Since`**
+
+v1.0.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:526
+node_modules/@types/node/events.d.ts:631
 
 ___
 
 ### listenerCount
 
-▸ **listenerCount**(`eventName`): `number`
+▸ **listenerCount**(`eventName`, `listener?`): `number`
 
-Returns the number of listeners listening to the event named `eventName`.
-
-**`Since`**
-
-v3.2.0
+Returns the number of listeners listening for the event named `eventName`.
+If `listener` is provided, it will return how many times the listener is found
+in the list of the listeners of the event.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `eventName` | `string` \| `symbol` | The name of the event being listened for |
+| `listener?` | [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function ) | The event handler function |
 
 #### Returns
 
 `number`
 
+**`Since`**
+
+v3.2.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:616
+node_modules/@types/node/events.d.ts:725
 
 ___
 
@@ -380,10 +439,6 @@ console.log(util.inspect(server.listeners('connection')));
 // Prints: [ [Function] ]
 ```
 
-**`Since`**
-
-v0.1.26
-
 #### Parameters
 
 | Name | Type |
@@ -394,9 +449,13 @@ v0.1.26
 
 [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
 
+**`Since`**
+
+v0.1.26
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:539
+node_modules/@types/node/events.d.ts:644
 
 ___
 
@@ -425,7 +484,7 @@ Runs a post request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:69](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L69)
+[packages/rest/src/REST.ts:69](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L69)
 
 ___
 
@@ -446,10 +505,6 @@ server.prependListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-**`Since`**
-
-v6.0.0
-
 #### Parameters
 
 | Name | Type | Description |
@@ -461,9 +516,13 @@ v6.0.0
 
 [`REST`](discloudapp_rest.REST.md)
 
+**`Since`**
+
+v6.0.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:634
+node_modules/@types/node/events.d.ts:743
 
 ___
 
@@ -482,10 +541,6 @@ server.prependOnceListener('connection', (stream) => {
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-**`Since`**
-
-v6.0.0
-
 #### Parameters
 
 | Name | Type | Description |
@@ -497,9 +552,13 @@ v6.0.0
 
 [`REST`](discloudapp_rest.REST.md)
 
+**`Since`**
+
+v6.0.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:650
+node_modules/@types/node/events.d.ts:759
 
 ___
 
@@ -528,7 +587,7 @@ Runs a put request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:79](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L79)
+[packages/rest/src/REST.ts:79](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L79)
 
 ___
 
@@ -550,7 +609,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-[packages/rest/src/REST.ts:102](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L102)
+[packages/rest/src/REST.ts:102](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L102)
 
 ___
 
@@ -562,6 +621,7 @@ Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
 
 ```js
+import { EventEmitter } from 'node:events';
 const emitter = new EventEmitter();
 emitter.once('log', () => console.log('log once'));
 
@@ -585,10 +645,6 @@ newListeners[0]();
 emitter.emit('log');
 ```
 
-**`Since`**
-
-v9.4.0
-
 #### Parameters
 
 | Name | Type |
@@ -599,9 +655,13 @@ v9.4.0
 
 [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
 
+**`Since`**
+
+v9.4.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:569
+node_modules/@types/node/events.d.ts:675
 
 ___
 
@@ -630,6 +690,8 @@ time of emitting are called in order. This implies that any`removeListener()` or
 will not remove them from`emit()` in progress. Subsequent events behave as expected.
 
 ```js
+import { EventEmitter } from 'node:events';
+class MyEmitter extends EventEmitter {}
 const myEmitter = new MyEmitter();
 
 const callbackA = () => {
@@ -670,6 +732,7 @@ event (as in the example below), `removeListener()` will remove the most
 recently added instance. In the example the `once('ping')`listener is removed:
 
 ```js
+import { EventEmitter } from 'node:events';
 const ee = new EventEmitter();
 
 function pong() {
@@ -686,10 +749,6 @@ ee.emit('ping');
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-**`Since`**
-
-v0.1.26
-
 #### Parameters
 
 | Name | Type |
@@ -701,17 +760,27 @@ v0.1.26
 
 [`REST`](discloudapp_rest.REST.md)
 
+**`Since`**
+
+v0.1.26
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:494
+node_modules/@types/node/events.d.ts:599
 
 ___
 
 ### request
 
-▸ **request**(`options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`\>
+▸ **request**<`T`\>(`options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`T`\>
 
 Runs a request from the api
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
 
 #### Parameters
 
@@ -721,11 +790,11 @@ Runs a request from the api
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`T`\>
 
 #### Defined in
 
-[packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L88)
+[packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L88)
 
 ___
 
@@ -740,10 +809,6 @@ modified for this specific `EventEmitter` instance. The value can be set to`Infi
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-**`Since`**
-
-v0.3.5
-
 #### Parameters
 
 | Name | Type |
@@ -754,9 +819,13 @@ v0.3.5
 
 [`REST`](discloudapp_rest.REST.md)
 
+**`Since`**
+
+v0.3.5
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:520
+node_modules/@types/node/events.d.ts:625
 
 ___
 
@@ -778,7 +847,64 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/REST.ts#L38)
+[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/REST.ts#L38)
+
+___
+
+### addAbortListener
+
+▸ `Static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Listens once to the `abort` event on the provided `signal`.
+
+Listening to the `abort` event on abort signals is unsafe and may
+lead to resource leaks since another third party with the signal can
+call `e.stopImmediatePropagation()`. Unfortunately Node.js cannot change
+this since it would violate the web standard. Additionally, the original
+API makes it easy to forget to remove listeners.
+
+This API allows safely using `AbortSignal`s in Node.js APIs by solving these
+two issues by listening to the event such that `stopImmediatePropagation` does
+not prevent the listener from running.
+
+Returns a disposable so that it may be unsubscribed from more easily.
+
+```js
+import { addAbortListener } from 'node:events';
+
+function example(signal) {
+  let disposable;
+  try {
+    signal.addEventListener('abort', (e) => e.stopImmediatePropagation());
+    disposable = addAbortListener(signal, (e) => {
+      // Do something when signal is aborted.
+    });
+  } finally {
+    disposable?.[Symbol.dispose]();
+  }
+}
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signal` | `AbortSignal` |
+| `resource` | (`event`: `Event`) => `void` |
+
+#### Returns
+
+`Disposable`
+
+that removes the `abort` listener.
+
+**`Since`**
+
+v20.5.0
+
+#### Defined in
+
+node_modules/@types/node/events.d.ts:375
 
 ___
 
@@ -795,25 +921,21 @@ For `EventTarget`s this is the only way to get the event listeners for the
 event target. This is useful for debugging and diagnostic purposes.
 
 ```js
-const { getEventListeners, EventEmitter } = require('events');
+import { getEventListeners, EventEmitter } from 'node:events';
 
 {
   const ee = new EventEmitter();
   const listener = () => console.log('Events are fun');
   ee.on('foo', listener);
-  getEventListeners(ee, 'foo'); // [listener]
+  console.log(getEventListeners(ee, 'foo')); // [ [Function: listener] ]
 }
 {
   const et = new EventTarget();
   const listener = () => console.log('Events are fun');
   et.addEventListener('foo', listener);
-  getEventListeners(et, 'foo'); // [listener]
+  console.log(getEventListeners(et, 'foo')); // [ [Function: listener] ]
 }
 ```
-
-**`Since`**
-
-v15.2.0, v14.17.0
 
 #### Parameters
 
@@ -826,9 +948,63 @@ v15.2.0, v14.17.0
 
 [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
 
+**`Since`**
+
+v15.2.0, v14.17.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:299
+node_modules/@types/node/events.d.ts:296
+
+___
+
+### getMaxListeners
+
+▸ `Static` **getMaxListeners**(`emitter`): `number`
+
+Returns the currently set max amount of listeners.
+
+For `EventEmitter`s this behaves exactly the same as calling `.getMaxListeners` on
+the emitter.
+
+For `EventTarget`s this is the only way to get the max event listeners for the
+event target. If the number of event handlers on a single EventTarget exceeds
+the max set, the EventTarget will print a warning.
+
+```js
+import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
+
+{
+  const ee = new EventEmitter();
+  console.log(getMaxListeners(ee)); // 10
+  setMaxListeners(11, ee);
+  console.log(getMaxListeners(ee)); // 11
+}
+{
+  const et = new EventTarget();
+  console.log(getMaxListeners(et)); // 10
+  setMaxListeners(11, et);
+  console.log(getMaxListeners(et)); // 11
+}
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `emitter` | `EventEmitter` \| `_DOMEventTarget` |
+
+#### Returns
+
+`number`
+
+**`Since`**
+
+v19.9.0
+
+#### Defined in
+
+node_modules/@types/node/events.d.ts:325
 
 ___
 
@@ -839,21 +1015,14 @@ ___
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
 ```js
-const { EventEmitter, listenerCount } = require('events');
+import { EventEmitter, listenerCount } from 'node:events';
+
 const myEmitter = new EventEmitter();
 myEmitter.on('event', () => {});
 myEmitter.on('event', () => {});
 console.log(listenerCount(myEmitter, 'event'));
 // Prints: 2
 ```
-
-**`Since`**
-
-v0.9.12
-
-**`Deprecated`**
-
-Since v3.2.0 - Use `listenerCount` instead.
 
 #### Parameters
 
@@ -866,9 +1035,17 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 `number`
 
+**`Since`**
+
+v0.9.12
+
+**`Deprecated`**
+
+Since v3.2.0 - Use `listenerCount` instead.
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:271
+node_modules/@types/node/events.d.ts:268
 
 ___
 
@@ -877,25 +1054,24 @@ ___
 ▸ `Static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`<`any`\>
 
 ```js
-const { on, EventEmitter } = require('events');
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
 
-(async () => {
-  const ee = new EventEmitter();
+const ee = new EventEmitter();
 
-  // Emit later on
-  process.nextTick(() => {
-    ee.emit('foo', 'bar');
-    ee.emit('foo', 42);
-  });
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+});
 
-  for await (const event of on(ee, 'foo')) {
-    // The execution of this inner block is synchronous and it
-    // processes one event at a time (even with await). Do not use
-    // if concurrent execution is required.
-    console.log(event); // prints ['bar'] [42]
-  }
-  // Unreachable here
-})();
+for await (const event of on(ee, 'foo')) {
+  // The execution of this inner block is synchronous and it
+  // processes one event at a time (even with await). Do not use
+  // if concurrent execution is required.
+  console.log(event); // prints ['bar'] [42]
+}
+// Unreachable here
 ```
 
 Returns an `AsyncIterator` that iterates `eventName` events. It will throw
@@ -906,7 +1082,9 @@ composed of the emitted event arguments.
 An `AbortSignal` can be used to cancel waiting on events:
 
 ```js
-const { on, EventEmitter } = require('events');
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
 const ac = new AbortController();
 
 (async () => {
@@ -930,10 +1108,6 @@ const ac = new AbortController();
 process.nextTick(() => ac.abort());
 ```
 
-**`Since`**
-
-v13.6.0, v12.16.0
-
 #### Parameters
 
 | Name | Type | Description |
@@ -948,9 +1122,13 @@ v13.6.0, v12.16.0
 
 that iterates `eventName` events emitted by the `emitter`
 
+**`Since`**
+
+v13.6.0, v12.16.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:254
+node_modules/@types/node/events.d.ts:250
 
 ___
 
@@ -967,31 +1145,28 @@ This method is intentionally generic and works with the web platform [EventTarge
 semantics and does not listen to the `'error'` event.
 
 ```js
-const { once, EventEmitter } = require('events');
+import { once, EventEmitter } from 'node:events';
+import process from 'node:process';
 
-async function run() {
-  const ee = new EventEmitter();
+const ee = new EventEmitter();
 
-  process.nextTick(() => {
-    ee.emit('myevent', 42);
-  });
+process.nextTick(() => {
+  ee.emit('myevent', 42);
+});
 
-  const [value] = await once(ee, 'myevent');
-  console.log(value);
+const [value] = await once(ee, 'myevent');
+console.log(value);
 
-  const err = new Error('kaboom');
-  process.nextTick(() => {
-    ee.emit('error', err);
-  });
+const err = new Error('kaboom');
+process.nextTick(() => {
+  ee.emit('error', err);
+});
 
-  try {
-    await once(ee, 'myevent');
-  } catch (err) {
-    console.log('error happened', err);
-  }
+try {
+  await once(ee, 'myevent');
+} catch (err) {
+  console.error('error happened', err);
 }
-
-run();
 ```
 
 The special handling of the `'error'` event is only used when `events.once()`is used to wait for another event. If `events.once()` is used to wait for the
@@ -999,13 +1174,13 @@ The special handling of the `'error'` event is only used when `events.once()`is 
 special handling:
 
 ```js
-const { EventEmitter, once } = require('events');
+import { EventEmitter, once } from 'node:events';
 
 const ee = new EventEmitter();
 
 once(ee, 'error')
   .then(([err]) => console.log('ok', err.message))
-  .catch((err) => console.log('error', err.message));
+  .catch((err) => console.error('error', err.message));
 
 ee.emit('error', new Error('boom'));
 
@@ -1015,7 +1190,7 @@ ee.emit('error', new Error('boom'));
 An `AbortSignal` can be used to cancel waiting for the event:
 
 ```js
-const { EventEmitter, once } = require('events');
+import { EventEmitter, once } from 'node:events';
 
 const ee = new EventEmitter();
 const ac = new AbortController();
@@ -1038,10 +1213,6 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-**`Since`**
-
-v11.13.0, v10.16.0
-
 #### Parameters
 
 | Name | Type |
@@ -1054,9 +1225,13 @@ v11.13.0, v10.16.0
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
 
+**`Since`**
+
+v11.13.0, v10.16.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:194
+node_modules/@types/node/events.d.ts:189
 
 ▸ `Static` **once**(`emitter`, `eventName`, `options?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
 
@@ -1074,7 +1249,7 @@ node_modules/@types/node/events.d.ts:194
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:195
+node_modules/@types/node/events.d.ts:190
 
 ___
 
@@ -1083,20 +1258,13 @@ ___
 ▸ `Static` **setMaxListeners**(`n?`, `...eventTargets`): `void`
 
 ```js
-const {
-  setMaxListeners,
-  EventEmitter
-} = require('events');
+import { setMaxListeners, EventEmitter } from 'node:events';
 
 const target = new EventTarget();
 const emitter = new EventEmitter();
 
 setMaxListeners(5, target, emitter);
 ```
-
-**`Since`**
-
-v15.4.0
 
 #### Parameters
 
@@ -1109,6 +1277,10 @@ v15.4.0
 
 `void`
 
+**`Since`**
+
+v15.4.0
+
 #### Defined in
 
-node_modules/@types/node/events.d.ts:317
+node_modules/@types/node/events.d.ts:340

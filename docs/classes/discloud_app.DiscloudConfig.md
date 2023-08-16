@@ -44,7 +44,7 @@
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:10
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:10
 
 ## Properties
 
@@ -54,7 +54,7 @@ packages/util/dist/DiscloudConfig.d.ts:10
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:8
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:9
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:9
 
 ## Accessors
 
@@ -78,7 +78,7 @@ packages/util/dist/DiscloudConfig.d.ts:9
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:11
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:11
 
 ___
 
@@ -92,35 +92,35 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:12
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:12
 
 ___
 
 ### exists
 
-• `get` **exists**(): `ExistsResult`
+• `get` **exists**(): ``false`` \| ``"file"`` \| ``"dir"``
 
 #### Returns
 
-`ExistsResult`
+``false`` \| ``"file"`` \| ``"dir"``
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:13
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:13
 
 ___
 
 ### existsMain
 
-• `get` **existsMain**(): `undefined` \| `ExistsResult`
+• `get` **existsMain**(): ``false`` \| ``"file"`` \| ``"dir"``
 
 #### Returns
 
-`undefined` \| `ExistsResult`
+``false`` \| ``"file"`` \| ``"dir"``
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:14
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:15
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:15
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:16
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:16
 
 ## Methods
 
@@ -174,7 +174,7 @@ packages/util/dist/DiscloudConfig.d.ts:16
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:17
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:17
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:18
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:18
 
 ___
 
@@ -222,4 +222,4 @@ ___
 
 #### Defined in
 
-packages/util/dist/DiscloudConfig.d.ts:19
+packages/discloud.app/node_modules/@discloudapp/util/dist/DiscloudConfig.d.ts:19

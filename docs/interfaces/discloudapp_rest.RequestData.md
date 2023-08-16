@@ -34,7 +34,7 @@ The body to send to this request.
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:55](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L55)
+[packages/rest/src/@types/index.ts:55](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L55)
 
 ___
 
@@ -46,19 +46,19 @@ The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:59](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L59)
+[packages/rest/src/@types/index.ts:59](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L59)
 
 ___
 
 ### file
 
-• `Optional` **file**: `File` \| [`RawFile`](discloud_app.RawFile.md)
+• `Optional` **file**: `File` \| `RawFile`
 
 File to be attached to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:63](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L63)
+[packages/rest/src/@types/index.ts:63](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L63)
 
 ___
 
@@ -70,7 +70,7 @@ Additional headers to add to this request
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:67](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L67)
+[packages/rest/src/@types/index.ts:67](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L67)
 
 ___
 
@@ -82,4 +82,4 @@ Query string parameters to append to the called endpoint
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:71](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L71)
+[packages/rest/src/@types/index.ts:71](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L71)

@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:92](https://github.com/discloud/discloud.app/blob/a142e7d/packages/rest/src/@types/index.ts#L92)
+[packages/rest/src/@types/index.ts:92](https://github.com/discloud/discloud.app/blob/9141dfb/packages/rest/src/@types/index.ts#L92)

@@ -61,7 +61,7 @@ Base for app structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:15](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L15)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:15](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L15)
 
 ## Properties
 
@@ -75,7 +75,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -101,7 +101,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
 
 ## Methods
 
@@ -119,7 +119,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:24](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L24)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:24](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L24)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/Base.ts#L22)
 
 ___
 
@@ -183,7 +183,7 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:34](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L34)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:34](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L34)
 
 ___
 
@@ -199,7 +199,7 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:68](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L68)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:68](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L68)
 
 ___
 
@@ -223,7 +223,7 @@ Promise [RESTPutApiAppRamResult](../interfaces/discloud_app.RESTPutApiAppRamResu
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:44](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L44)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:44](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L44)
 
 ___
 
@@ -239,7 +239,7 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:75](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L75)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:75](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L75)
 
 ___
 
@@ -255,7 +255,7 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:82](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L82)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:82](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L82)
 
 ___
 
@@ -271,7 +271,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:51](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L51)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:51](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L51)
 
 ___
 
@@ -287,7 +287,7 @@ app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:89](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L89)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:89](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L89)
 
 ___
 
@@ -311,4 +311,4 @@ Promise [RESTPutApiAppCommitResult](../interfaces/discloud_app.RESTPutApiAppComm
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:61](https://github.com/discloud/discloud.app/blob/a142e7d/packages/discloud.app/src/structures/BaseTeamApp.ts#L61)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:61](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/structures/BaseTeamApp.ts#L61)

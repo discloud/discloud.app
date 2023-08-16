@@ -23,7 +23,7 @@ Content-Type of the file
 
 #### Defined in
 
-packages/util/dist/FileResolver.d.ts:26
+packages/discloud.app/node_modules/@discloudapp/util/dist/FileResolver.d.ts:26
 
 ___
 
@@ -35,7 +35,7 @@ The actual data for the file
 
 #### Defined in
 
-packages/util/dist/FileResolver.d.ts:22
+packages/discloud.app/node_modules/@discloudapp/util/dist/FileResolver.d.ts:22
 
 ___
 
@@ -47,7 +47,7 @@ An explicit key to use for key of the formdata field for this file.
 
 #### Defined in
 
-packages/util/dist/FileResolver.d.ts:18
+packages/discloud.app/node_modules/@discloudapp/util/dist/FileResolver.d.ts:18
 
 ___
 
@@ -59,4 +59,4 @@ The name of the file
 
 #### Defined in
 
-packages/util/dist/FileResolver.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/util/dist/FileResolver.d.ts:14
