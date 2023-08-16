@@ -47,7 +47,7 @@ export class REST extends EventEmitter {
    * @param options - Optional request options
    */
   get<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
-    return this.request({ ...options, fullRoute, method: RequestMethod.Get });
+    return this.request(Object.assign(options, { fullRoute, method: RequestMethod.Get }));
   }
 
   /**
@@ -57,7 +57,7 @@ export class REST extends EventEmitter {
    * @param options - Optional request options
    */
   delete<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
-    return this.request({ ...options, fullRoute, method: RequestMethod.Delete });
+    return this.request(Object.assign(options, { fullRoute, method: RequestMethod.Delete }));
   }
 
   /**
@@ -67,7 +67,7 @@ export class REST extends EventEmitter {
    * @param options - Optional request options
    */
   post<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
-    return this.request({ ...options, fullRoute, method: RequestMethod.Post });
+    return this.request(Object.assign(options, { fullRoute, method: RequestMethod.Post }));
   }
 
   /**
@@ -77,7 +77,7 @@ export class REST extends EventEmitter {
    * @param options - Optional request options
    */
   put<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
-    return this.request({ ...options, fullRoute, method: RequestMethod.Put });
+    return this.request(Object.assign(options, { fullRoute, method: RequestMethod.Put }));
   }
 
   /**

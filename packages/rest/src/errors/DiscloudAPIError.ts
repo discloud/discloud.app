@@ -1,4 +1,4 @@
-export class DiscloudAPIError extends Error {
+export default class DiscloudAPIError extends Error {
   constructor(
     message: string,
     public code: number | string,

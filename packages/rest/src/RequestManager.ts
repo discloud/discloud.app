@@ -1,10 +1,10 @@
 import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
-import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
-import { DiscloudAPIError } from "./errors/DiscloudAPIError";
-import { DefaultRestOptions } from "./utils/contants";
 import { RESTEvents } from "./@enum";
+import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
+import DiscloudAPIError from "./errors/DiscloudAPIError";
+import { DefaultRestOptions } from "./utils/contants";
 
 export interface RequestManager {
   emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
@@ -55,7 +55,7 @@ export class RequestManager extends EventEmitter {
 
   constructor(options: Partial<RESTOptions>) {
     super();
-    this.options = { ...DefaultRestOptions, ...options };
+    this.options = Object.assign({}, DefaultRestOptions, options);
     this.globalRemaining = this.options.globalRequestsPerMinute;
     this.agent = this.options.agent;
   }
@@ -89,10 +89,7 @@ export class RequestManager extends EventEmitter {
   }
 
   resolveRequest(request: InternalRequest) {
-    const headers: RequestHeaders = {
-      ...this.options.headers,
-      "api-token": this.#token,
-    };
+    const headers: RequestHeaders = Object.assign({}, this.options.headers, { "api-token": this.#token });
 
     const query = request.query?.toString() ? `?${request.query}` : "";
 
@@ -120,11 +117,10 @@ export class RequestManager extends EventEmitter {
       additionalHeaders["Content-Type"] = "application/json";
     }
 
-    const fetchOptions: RequestOptions = {
-      headers: { ...(request.headers ?? {}), ...additionalHeaders, ...headers },
+    const fetchOptions: RequestOptions = Object.assign({
+      headers: Object.assign({}, request.headers, additionalHeaders, headers),
       method: request.method.toUpperCase() as Dispatcher.HttpMethod,
-      ...additionalOptions,
-    };
+    }, additionalOptions);
 
     if (request.body)
       if (request.file) {
