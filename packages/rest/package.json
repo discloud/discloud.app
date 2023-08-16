@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
