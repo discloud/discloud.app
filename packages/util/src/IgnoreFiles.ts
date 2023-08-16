@@ -11,7 +11,7 @@ export const blockedFiles = {
   ts: ["node_modules", "package-lock.json", "yarn.lock", ".npm"],
 };
 
-export const allBlockedFiles = [...new Set(Object.values(blockedFiles).flat())];
+export const allBlockedFiles = Array.from(new Set(Object.values(blockedFiles).flat()));
 
 export const allBlockedFilesRegex = RegExp(`(${allBlockedFiles.join("|")})$`.replace(/\./g, "\\."), "i");
 

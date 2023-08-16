@@ -110,7 +110,7 @@ export class BitField<S, N> {
    */
   serialize() {
     return Object.entries(this.constructor.Flags)
-      .reduce((acc, [flag, bit]) => ({ ...acc, [flag]: this.has(bit) }),
+      .reduce((acc, [flag, bit]) => Object.assign(acc, { [flag]: this.has(bit) }),
         <Record<S, boolean>>{});
   }
 

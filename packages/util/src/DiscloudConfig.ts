@@ -145,7 +145,7 @@ export class DiscloudConfig {
 
   update(save: Partial<DiscloudConfigType>, comments: string[] = this.comments): Error | void {
     try {
-      save = { ...this.data, ...save };
+      save = Object.assign(this.data, save);
 
       writeFileSync(this.path, this.#objToString(
         comments?.length ?
