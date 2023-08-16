@@ -2,6 +2,7 @@ import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { Dispatcher, File, FormData, request } from "undici";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
+import { DiscloudAPIError } from "./errors/DiscloudAPIError";
 import { DefaultRestOptions } from "./utils/contants";
 
 export interface RequestManager {
@@ -32,14 +33,24 @@ export class RequestManager extends EventEmitter {
   agent?: Dispatcher;
 
   /**
-   * The number of requests remaining in the global bucket
+   * The number of requests limit on the global bucket
    */
-  globalRemaining: number;
+  globalLimit = 60;
 
   /**
-   * The timestamp at which the global bucket resets
+   * The number of requests remaining in the global bucket
+   */
+  globalRemaining = 0;
+
+  /**
+   * The seconds that the global bucket is reset
    */
   globalReset = 0;
+
+  /**
+   * The time at which the last request was made
+   */
+  globalTime = 0;
 
   constructor(options: Partial<RESTOptions>) {
     super();
@@ -52,14 +63,14 @@ export class RequestManager extends EventEmitter {
    * If the rate limit bucket is currently limited by its limit
    */
   get globalLimited() {
-    return this.globalRemaining < 1 && this.globalTimeToReset > -1;
+    return !this.globalRemaining && this.globalTimeToReset > -1;
   }
 
   /**
    * The time until queued requests can continue
    */
   get globalTimeToReset(): number {
-    return this.globalReset - Date.now();
+    return this.globalReset * 1000 + this.globalTime - Date.now();
   }
 
   get token() {
@@ -144,12 +155,27 @@ export class RequestManager extends EventEmitter {
 
     const res = await request(url, options);
 
+    this.globalTime = Date.now();
+    this.globalLimit = Number(res.headers["ratelimit-limit"]);
     this.globalRemaining = Number(res.headers["ratelimit-remaining"]);
-    this.globalReset = Date.now() + (Number(res.headers["ratelimit-reset"]) * 1000);
+    this.globalReset = Number(res.headers["ratelimit-reset"]);
 
-    if (res.statusCode > 399 && res.statusCode < 600) {
-      const body = await res.body.json() as Record<string, any>;
-      throw new Error(`\x1b[31m[DISCLOUD API] ${body.message}\x1b[0m`);
+    if (this.globalLimited) {
+      this.emit("rateLimited", <RateLimitData>{
+        global: this.globalLimited,
+        method: options.method,
+        timeToReset: this.globalTimeToReset,
+        url,
+      });
+    }
+
+    if (res.statusCode > 399) {
+      const body = options.body;
+      const code = res.statusCode;
+      const message = await res.body.json().then((body: any) => body.message);
+      const method = options.method ?? "GET";
+      const path = `/${url.split("/").slice(4).join("/") ?? url.split("/").at(-1)}`;
+      throw new DiscloudAPIError(message, code, method, path, body);
     }
 
     return res;
