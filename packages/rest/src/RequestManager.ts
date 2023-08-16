@@ -4,6 +4,7 @@ import { Dispatcher, File, FormData, request } from "undici";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
 import { DiscloudAPIError } from "./errors/DiscloudAPIError";
 import { DefaultRestOptions } from "./utils/contants";
+import { RESTEvents } from "./@enum";
 
 export interface RequestManager {
   emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
@@ -143,7 +144,7 @@ export class RequestManager extends EventEmitter {
 
   async request(url: string, options: RequestOptions) {
     while (this.globalLimited) {
-      this.emit("rateLimited", <RateLimitData>{
+      this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
         method: options.method ?? "GET",
         timeToReset: this.globalTimeToReset,
@@ -161,7 +162,7 @@ export class RequestManager extends EventEmitter {
     this.globalReset = Number(res.headers["ratelimit-reset"]);
 
     if (this.globalLimited) {
-      this.emit("rateLimited", <RateLimitData>{
+      this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
         method: options.method,
         timeToReset: this.globalTimeToReset,
