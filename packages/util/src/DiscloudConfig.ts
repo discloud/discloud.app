@@ -98,7 +98,7 @@ export class DiscloudConfig {
       result.push(obj);
     }
 
-    return result.filter(line => line).join("\n");
+    return result.filter(Boolean).join("\n");
   }
 
   #configToObj(s: string) {
@@ -107,7 +107,7 @@ export class DiscloudConfig {
     return this.#processValues(Object.fromEntries(s
       .replace(/\s*#.*/g, "")
       .split(/[\r\n]/)
-      .filter(line => line)
+      .filter(Boolean)
       .map(line => line.split("="))));
   }
 

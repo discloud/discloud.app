@@ -101,7 +101,7 @@ export class IgnoreFiles {
       const readed = readFileSync(ignoreFile, "utf8")
         ?.replace(/\s*#.*/g, "")
         .split(/\r?\n/)
-        .filter(a => a) ?? [];
+        .filter(Boolean) ?? [];
 
       return this.#resolveIgnorePatterns(readed, this.#makeBothCase(dirname(ignoreFile)));
     }
