@@ -9,7 +9,7 @@
     "docgen": "typedoc && typedoc --options typedoc_md.json"
   },
   "devDependencies": {
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.5.1",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "dotenv": "^16.3.1",
