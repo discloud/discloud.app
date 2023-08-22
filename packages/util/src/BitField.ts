@@ -21,7 +21,7 @@ export interface BitField<S extends string, N extends bigint | number> {
 /**
  * Data structure that makes it easy to interact with a bitfield.
  */
-export class BitField<S, N> {
+export abstract class BitField<S, N> {
   static DefaultBit = 0;
 
   /**

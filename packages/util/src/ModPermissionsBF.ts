@@ -9,7 +9,7 @@ export const ModPermissions = {
   start_app: 1 << 5,
   status_app: 1 << 6,
   stop_app: 1 << 7,
-};
+} as const;
 
 export type ModPermissionsFlags = keyof typeof ModPermissions
 
