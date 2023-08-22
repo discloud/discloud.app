@@ -1,5 +1,7 @@
-import { readdirSync, existsSync, statSync, readFileSync } from "node:fs";
-import { dirname, isAbsolute, join } from "node:path";
+import { globSync } from "glob";
+import { readFileSync } from "node:fs";
+import { type } from "node:os";
+import { dirname, join } from "node:path";
 
 export const blockedFiles = {
   common: [".git", ".vscode", ".cache"],
@@ -22,113 +24,89 @@ export interface IgnoreFilesOptions {
 }
 
 export class IgnoreFiles {
-  fileName: string;
+  declare fileName: string;
   filesIgnore: string[] = [];
-  list: string[] = [];
+  list: string[] = allBlockedFiles;
   paths: string[] = [];
 
   constructor(options: IgnoreFilesOptions) {
-    if (Array.isArray(options.path)) {
-      for (const path of options.path) {
-        this.paths.push(this.#normalizePath(path));
-      }
-    } else {
-      this.paths.push(this.#normalizePath(options.path));
-    }
-
     this.fileName = options.fileName;
 
-    if (this.fileName && this.paths.length)
-      this.filesIgnore = this.#findIgnoreFiles(this.fileName, this.paths);
-
-    options.path = this.paths.flatMap(path => this.#makeBothCase(path));
-
-    this.list = (options.optionalIgnoreList ?? [])
-      .flatMap(path => this.#makeBothCase(path))
-      .concat(this.#getIgnoreList())
-      .concat(this.#resolveIgnorePatterns(allBlockedFiles, options.path));
-  }
-
-  #findIgnoreFiles(fileName: string, paths: string[]) {
-    return paths.flatMap(path => this.#recursivelyReadDirSync(path)
-      .filter(file => file.endsWith(fileName) && existsSync(file) && statSync(file).isFile()));
-  }
-
-  #makeBothCase(s: string) {
-    if (isAbsolute(s))
-      return [
-        s.replace(/^./, a => a.toLowerCase()),
-        s.replace(/^./, a => a.toUpperCase()),
-      ];
-
-    return [s];
-  }
-
-  #getIgnoreList() {
-    return this.#resolveIgnoreFile(this.filesIgnore);
-  }
-
-  #normalizePath(path: string) {
-    path = path.replace(/\\/g, "/").replace(/[*]/g, "") || ".";
-    if (path.length > 1) path = path.replace(/\/$/, "");
-    return path;
-  }
-
-  #resolveIgnorePatterns(ignore: string[], paths: string[]) {
-    return paths.flatMap(path => {
-      path = this.#normalizePath(path);
-
-      return ignore.flatMap(a => [
-        a,
-        `${isAbsolute(path) ? a : `**/${a}`}/**`,
-        `${path}/**/${a}`,
-        `${path}/**/${a}/**`,
-      ]);
-    });
-  }
-
-  #resolveIgnoreFile(ignoreFile: string | string[]) {
-    if (Array.isArray(ignoreFile)) {
-      const ignored = <string[]>[];
-
-      for (const file of ignoreFile)
-        ignored.push(...this.#resolveIgnoreFile(file));
-
-      return ignored;
+    if (options.optionalIgnoreList?.length) {
+      this.list.push(...IgnoreFiles.normalizePaths(options.optionalIgnoreList));
     }
 
-    if (typeof ignoreFile === "string" && existsSync(ignoreFile) && statSync(ignoreFile).isFile()) {
-      const readed = readFileSync(ignoreFile, "utf8")
-        ?.replace(/\s*#.*/g, "")
-        .split(/\r?\n/)
-        .filter(Boolean) ?? [];
-
-      return this.#resolveIgnorePatterns(readed, this.#makeBothCase(dirname(ignoreFile)));
+    for (let i = 0; i < this.list.length; i++) {
+      this.list[i] = IgnoreFiles.normalizeIgnore(this.list[i]);
     }
 
-    return [];
+    if (Array.isArray(options.path)) {
+      this.paths = IgnoreFiles.normalizePaths(options.path);
+    } else if (options.path) {
+      this.paths.push(IgnoreFiles.normalizePath(options.path));
+    }
+
+    if (this.fileName)
+      this.filesIgnore = IgnoreFiles.findIgnoreFiles(this.fileName, this.paths, this.list);
+
+    if (this.filesIgnore.length)
+      this.list.push(...this.processIgnoreFiles(this.filesIgnore));
   }
 
-  #recursivelyReadDirSync(path: string): string[] {
-    if (!existsSync(path)) return [];
-    if (statSync(path).isFile())
-      return this.#recursivelyReadDirSync(dirname(path));
+  static findIgnoreFiles(fileName: string, paths: string[], ignore: string[]) {
+    const files = [];
 
-    const files = readdirSync(this.#normalizePath(path), { withFileTypes: true });
+    for (const path of paths) {
+      files.push(globSync(join(path, "**", fileName), {
+        dot: true,
+        ignore,
+        windowsPathsNoEscape: type() === "Windows_NT",
+      }));
+    }
 
-    const cache: string[] = [];
+    return files.flat();
+  }
+
+  static normalizeIgnore(ignore: string, path = "**") {
+    return join(path, ignore, "**").replace(/\\/g, "/");
+  }
+
+  static normalizePath(path: string) {
+    return join(...path.split(/[\\/]/));
+  }
+
+  static normalizePaths(paths: string[]) {
+    for (let i = 0; i < paths.length; i++) {
+      paths[i] = this.normalizePath(paths[i]);
+    }
+
+    return paths;
+  }
+
+  static processIgnoreFile(file: string) {
+    const dir = dirname(file).replace(/^\.$/, "") || "**";
+
+    const list = readFileSync(file, "utf8")
+      .replace(/\s*#.*/g, "")
+      .split(/[\r\n]+/)
+      .filter(Boolean);
+
+    const ignore = [];
+
+    for (const iterator of list) {
+      ignore.push(this.normalizeIgnore(iterator, dir));
+    }
+
+    return ignore;
+  }
+
+  processIgnoreFiles(files = this.filesIgnore) {
+    const ignore = [];
 
     for (const file of files) {
-      const fileOrDir = join(path, file.name);
-
-      if (file.isDirectory()) {
-        if (allBlockedFilesRegex.test(fileOrDir)) continue;
-        cache.push(...this.#recursivelyReadDirSync(fileOrDir));
-      } else {
-        cache.push(fileOrDir);
-      }
+      ignore.push(IgnoreFiles.processIgnoreFile(file));
     }
 
-    return cache;
+    return ignore.flat();
   }
 }

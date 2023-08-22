@@ -1,11 +1,11 @@
 import { globSync } from "glob";
-import { existsSync, statSync } from "node:fs";
-import { isAbsolute } from "node:path";
+import { type } from "node:os";
+import { join } from "node:path";
 import { IgnoreFiles } from "./IgnoreFiles";
 
 export class GS {
   found: string[] = [];
-  ignore: IgnoreFiles;
+  declare ignore: IgnoreFiles;
 
   constructor(
     public pattern: string | string[],
@@ -19,28 +19,29 @@ export class GS {
     });
 
     if (Array.isArray(this.pattern)) {
-      this.pattern = this.pattern.map(path => this.#normalizePath(path));
+      this.pattern = this.pattern.flatMap(path => [
+        join(this.#normalizePath(path), "**"),
+        join("**", this.#normalizePath(path)),
+      ]);
     } else {
-      this.pattern = this.#normalizePath(this.pattern);
+      this.pattern = [
+        join(this.#normalizePath(this.pattern), "**"),
+        join("**", this.#normalizePath(this.pattern)),
+      ];
     }
 
     this.found = globSync(this.pattern, {
       dot: true,
       ignore: this.ignore.list,
+      windowsPathsNoEscape: type() === "Windows_NT",
     });
+
+    if (this.found.includes(".")) {
+      this.found.splice(this.found.indexOf("."), 1);
+    }
   }
 
   #normalizePath(path: string) {
-    try {
-      path = path.replace(/\\/g, "/");
-
-      if (!isAbsolute(path))
-        path = path.replace(/^(\.|~)$|^(\.|~)\/|^\/|\/$/g, "") || "**";
-
-      path = (existsSync(path) && statSync(path).isDirectory()) ? path.replace(/\/$/, "") + "/**" : path;
-    } catch {
-      path = path.replace(/\/$/, "") + "/**";
-    }
-    return path;
+    return join(...path.split(/[\\/]/));
   }
 }
