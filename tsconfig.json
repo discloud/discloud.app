@@ -1,5 +1,5 @@
 {
-  "exclude": ["**/dist/**", "**/.ignore_*", "**/node_modules/**"],
+  "exclude": ["**/out/**", "**/.ignore_*", "**/node_modules/**"],
   "compilerOptions": {
     // "incremental": true,
     // "composite": true,
