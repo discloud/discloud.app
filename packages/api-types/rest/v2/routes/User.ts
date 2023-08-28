@@ -1,8 +1,8 @@
-export const User = new class User {
+export abstract class User {
   /**
    * - GET - `/user`
    */
-  user(): "/user" {
+  static user(): "/user" {
     return "/user";
   }
-};
+}

@@ -1,8 +1,8 @@
-export const Upload = new class Upload {
+export abstract class Upload {
   /**
    * - POST - `/upload`
    */
-  upload(): "/upload" {
+  static upload(): "/upload" {
     return "/upload";
   }
-};
+}

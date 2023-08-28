@@ -4,38 +4,39 @@ import { Team } from "./Team";
 import { Upload } from "./Upload";
 import { User } from "./User";
 
-export const Routes = new class Routes {
+export abstract class Routes {
   // app
-  app = App.app;
-  appApt = App.apt;
-  appBackup = App.backup;
-  appCommit = App.commit;
-  appDelete = App.delete;
-  appLogs = App.logs;
-  appRam = App.ram;
-  appRestart = App.restart;
-  appStart = App.start;
-  appStatus = App.status;
-  appStop = App.stop;
-  appTeam = App.team;
+  static app = App.app;
+  static appApt = App.apt;
+  static appBackup = App.backup;
+  static appCommit = App.commit;
+  static appDelete = App.delete;
+  static appLogs = App.logs;
+  static appProfile = App.profile;
+  static appRam = App.ram;
+  static appRestart = App.restart;
+  static appStart = App.start;
+  static appStatus = App.status;
+  static appStop = App.stop;
+  static appTeam = App.team;
 
   // locale
-  locale = Locale.locale;
+  static locale = Locale.locale;
 
   // team
-  team = Team.team;
-  teamBackup = Team.backup;
-  teamCommit = Team.commit;
-  teamLogs = Team.logs;
-  teamRam = Team.ram;
-  teamRestart = Team.restart;
-  teamStart = Team.start;
-  teamStatus = Team.status;
-  teamStop = Team.stop;
+  static team = Team.team;
+  static teamBackup = Team.backup;
+  static teamCommit = Team.commit;
+  static teamLogs = Team.logs;
+  static teamRam = Team.ram;
+  static teamRestart = Team.restart;
+  static teamStart = Team.start;
+  static teamStatus = Team.status;
+  static teamStop = Team.stop;
 
   // upload
-  upload = Upload.upload;
+  static upload = Upload.upload;
 
   // user
-  user = User.user;
-};
+  static user = User.user;
+}
