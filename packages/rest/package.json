@@ -1,11 +1,11 @@
 {
   "name": "@discloudapp/rest",
   "version": "0.7.2",
-  "main": "dist",
-  "types": "dist/index.d.ts",
+  "main": "out",
+  "types": "out/index.d.ts",
   "scripts": {
-    "build:release": "tsc",
     "watch": "tsc -watch",
+    "build:release": "tsc",
     "prepublish": "npm run build:release",
     "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
@@ -20,7 +20,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@discloudapp/api-types": "^0.3.0",
+    "@discloudapp/api-types": "^0.4.0",
     "@discloudapp/util": "^0.4.7",
     "undici": "^5.23.0"
   },
