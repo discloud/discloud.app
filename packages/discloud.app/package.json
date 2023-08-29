@@ -1,8 +1,8 @@
 {
   "name": "discloud.app",
   "version": "0.7.2",
-  "main": "dist",
-  "types": "dist/index.d.ts",
+  "main": "out",
+  "types": "out/index.d.ts",
   "scripts": {
     "watch": "tsc -watch",
     "build:release": "tsc",
@@ -25,10 +25,11 @@
   },
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
-    "@discloudapp/api-types": "^0.3.0",
-    "@discloudapp/rest": "^0.7.2",
+    "@discloudapp/api-types": "^0.4.0",
+    "@discloudapp/rest": "^0.7.3",
     "@discloudapp/util": "^0.4.7",
-    "undici": "^5.23.0"
+    "undici": "^5.23.0",
+    "zod": "^3.22.2"
   },
   "engines": {
     "node": ">=16.17"

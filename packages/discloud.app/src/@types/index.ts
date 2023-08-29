@@ -1,5 +1,6 @@
-import { RestEvents, RESTOptions } from "@discloudapp/rest/dist";
+import { RestEvents, RESTOptions } from "@discloudapp/rest";
 import { FileResolvable } from "@discloudapp/util";
+import z from "zod";
 
 export type Constructor<T> = new (...args: any[]) => T;
 
@@ -8,6 +9,13 @@ export type If<T extends boolean, A, B = undefined> = T extends true ? A : T ext
 export interface DiscloudAppOptions {
   rest?: RESTOptions
 }
+
+export const ProfileOptions = z.object({
+  avatarURL: z.string(),
+  name: z.string().max(30),
+}).partial();
+
+export type ProfileOptions = z.infer<typeof ProfileOptions>
 
 export type CreateAppOptions = UploadAppOptions
 

@@ -1,7 +1,7 @@
-import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTApiBaseResult, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { FileResolvable, resolveFile } from "@discloudapp/util";
 import { File } from "undici";
-import { CreateAppOptions, UpdateAppOptions } from "../@types";
+import { CreateAppOptions, ProfileOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
@@ -181,6 +181,27 @@ export default class AppManager extends CachedManager<App> {
 
     if (data.status === "ok")
       this._remove(appID);
+
+    return data;
+  }
+
+
+  /**
+   * Update the profile of your apps on Discloud.
+   * 
+   * @param appID - Your app id
+   * @param options - Options to update your app.
+   * @returns Promise {@link REST}
+   */
+  async profile(appID: string, options: ProfileOptions) {
+    ProfileOptions.parse(options);
+
+    const data = await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appCommit(appID), {
+      body: options,
+    });
+
+    if (data.status === "ok")
+      this._add(options);
 
     return data;
   }

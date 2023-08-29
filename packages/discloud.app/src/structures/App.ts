@@ -101,7 +101,7 @@ export default class App extends BaseApp {
 
     (<any>this.apt)._patch(data);
     (<any>this.team)._patch(data);
-    (<any>this.status)._patch(<ApiStatusApp>data);
+    (<any>this.status)._patch(data);
 
     return super._patch(data);
   }

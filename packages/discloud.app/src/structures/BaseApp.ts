@@ -1,8 +1,6 @@
 import { BaseApiApp } from "@discloudapp/api-types/v2";
-import { UpdateAppOptions } from "../@types";
+import { ProfileOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import AppAptManager from "../managers/AppAptManager";
-import AppTeamManager from "../managers/AppTeamManager";
 import Base from "./Base";
 
 /**
@@ -59,6 +57,10 @@ export default abstract class BaseApp extends Base {
    */
   delete() {
     return this.discloudApp.apps.delete(this.id);
+  }
+
+  profile(options: ProfileOptions) {
+    return this.discloudApp.apps.profile(this.id, options);
   }
 
   /**
