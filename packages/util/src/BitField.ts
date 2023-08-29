@@ -30,7 +30,7 @@ export abstract class BitField<S, N> {
    */
   static Flags: EnumLike<any, any> = {};
 
-  constructor(bits: BitFieldResolvable<S, N> = BitField.DefaultBit) {
+  constructor(...bits: BitFieldResolvable<S, N> = this.constructor.DefaultBit) {
     this.bitField = this.constructor.resolve(bits);
   }
 
@@ -39,7 +39,7 @@ export abstract class BitField<S, N> {
    * @param bits - Bits to add
    * @returns These bits or new BitField if the instance is frozen.
    */
-  add(...bits: BitFieldResolvable<S, N>[]): BitField<S, N> {
+  add(...bits: BitFieldResolvable<S, N>[]): this {
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
     if (Object.isFrozen(this)) return new this.constructor(this.bitField | total);
@@ -94,7 +94,7 @@ export abstract class BitField<S, N> {
    * @param bits - Bits to remove
    * @returns These bits or new BitField if the instance is frozen.
    */
-  remove(...bits: BitFieldResolvable<S, N>[]): BitField<S, N> {
+  remove(...bits: BitFieldResolvable<S, N>[]): this {
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
     if (Object.isFrozen(this)) return new this.constructor(this.bitField & ~total);
@@ -112,6 +112,19 @@ export abstract class BitField<S, N> {
     return Object.entries(this.constructor.Flags)
       .reduce((acc, [flag, bit]) => Object.assign(acc, { [flag]: this.has(bit) }),
         <Record<S, boolean>>{});
+  }
+
+  /**
+   * Replace the bits with these.
+   * @param bits - bits to set
+   * @returns These bits or new BitField if the instance is frozen.
+   */
+  set(...bits: BitFieldResolvable<S, N>[]): this {
+    if (Object.isFrozen(this)) return new this.constructor(bits);
+
+    this.bitField = this.constructor.resolve(bits);
+
+    return this;
   }
 
   /**
@@ -138,21 +151,21 @@ export abstract class BitField<S, N> {
    * @param bit - bit(s) to resolve
    */
   static resolve<N extends bigint | number>(bit: BitFieldResolvable<string, N>): N {
-    const DefaultBit = this.DefaultBit as N;
-
-    if (typeof DefaultBit === typeof bit && bit >= DefaultBit) return bit;
-
     if (bit instanceof BitField) return bit.bitField;
+
+    const DefaultBit = this.DefaultBit as N;
 
     if (Array.isArray(bit)) return bit.reduce((p, b) => p | this.resolve(b), DefaultBit);
 
+    if (typeof DefaultBit === typeof bit && bit >= DefaultBit) return bit;
+
     if (typeof bit === "string") {
-      if (typeof this.Flags[bit] !== "undefined") return this.Flags[bit];
+      if (this.Flags[bit] !== undefined) return this.Flags[bit];
 
       if (!isNaN(Number(bit))) return typeof DefaultBit === "bigint" ? BigInt(bit) : Number(bit);
     }
 
-    throw new RangeError("Invalid BitField");
+    throw new RangeError(`Invalid BitField: ${bit}`);
   }
 }
 
