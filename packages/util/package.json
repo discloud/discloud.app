@@ -23,7 +23,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "glob": "^10.3.3",
+    "glob": "^10.3.4",
     "undici": "^5.23.0"
   },
   "publishConfig": {
