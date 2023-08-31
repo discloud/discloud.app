@@ -153,9 +153,12 @@ export class RequestManager extends EventEmitter {
     const res = await request(url, options);
 
     this.globalTime = Date.now();
-    this.globalLimit = Number(res.headers["ratelimit-limit"]);
-    this.globalRemaining = Number(res.headers["ratelimit-remaining"]);
-    this.globalReset = Number(res.headers["ratelimit-reset"]);
+    const limit = Number(res.headers["ratelimit-limit"]);
+    const remaining = Number(res.headers["ratelimit-remaining"]);
+    const reset = Number(res.headers["ratelimit-reset"]);
+    if (!isNaN(limit)) this.globalLimit = Number(res.headers["ratelimit-limit"]);
+    if (!isNaN(remaining)) this.globalRemaining = Number(res.headers["ratelimit-remaining"]);
+    if (!isNaN(reset)) this.globalReset = Number(res.headers["ratelimit-reset"]);
 
     if (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
