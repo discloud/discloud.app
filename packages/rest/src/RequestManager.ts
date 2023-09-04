@@ -172,7 +172,7 @@ export class RequestManager extends EventEmitter {
     if (res.statusCode > 399) {
       const body = options.body;
       const code = res.statusCode;
-      const message = await res.body.json().then((body: any) => body.message);
+      const message = await res.body.json().then((body: any) => body.message).catch(() => res.body.text());
       const method = options.method ?? "GET";
       const path = `/${url.split("/").slice(4).join("/") ?? url.split("/").at(-1)}`;
       throw new DiscloudAPIError(message, code, method, path, body);

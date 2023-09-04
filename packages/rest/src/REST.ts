@@ -91,6 +91,9 @@ export class REST extends EventEmitter {
     if (res.headers["content-type"]?.includes("application/json"))
       return res.body.json() as T;
 
+    if (res.headers["content-type"]?.includes("text/html"))
+      return res.body.text() as T;
+
     return res.body.arrayBuffer() as T;
   }
 
