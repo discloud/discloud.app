@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 export * from "./BitField";
 export * from "./DiscloudConfig";
 export * from "./FileResolver";

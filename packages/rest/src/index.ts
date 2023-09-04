@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 export * from "./@enum";
 export * from "./@types";
 export * from "./REST";

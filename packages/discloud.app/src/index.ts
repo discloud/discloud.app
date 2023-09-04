@@ -1,3 +1,5 @@
+import "source-map-support/register";
+
 import DiscloudApp from "./discloudApp/DiscloudApp";
 import AppAptManager from "./managers/AppAptManager";
 import AppManager from "./managers/AppManager";
@@ -42,8 +44,8 @@ export {
   DataManager,
   DiscloudApp,
   TeamApp,
-  TeamAppStatus,
   TeamAppManager,
+  TeamAppStatus,
   User,
 };
 
