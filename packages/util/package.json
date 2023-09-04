@@ -24,6 +24,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "glob": "^10.3.4",
+    "tslib": "^2.6.2",
     "undici": "^5.23.0"
   },
   "publishConfig": {
