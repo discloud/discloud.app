@@ -22,16 +22,16 @@ export interface BitField<S extends string, N extends bigint | number> {
  * Data structure that makes it easy to interact with a bitfield.
  */
 export abstract class BitField<S, N> {
-  static DefaultBit = 0;
+  static DefaultBit: bigint | number = 0;
 
   /**
    * Numeric bitfield flags.
    * <info>Defined in extension classes</info>
    */
-  static Flags: EnumLike<any, any> = {};
+  static Flags: EnumLike<unknown, bigint | number> = {};
 
-  constructor(...bits: BitFieldResolvable<S, N> = this.constructor.DefaultBit) {
-    this.bitField = this.constructor.resolve(bits);
+  constructor(...bits: BitFieldResolvable<S, N>[]) {
+    this.bitField = this.constructor.resolve(bits ?? this.constructor.DefaultBit);
   }
 
   /**
