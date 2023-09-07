@@ -2,7 +2,7 @@ export function mergeDefaults<
   A extends Record<any, any>,
   B extends Record<any, any>
 >(defaults: A, options: B) {
-  if (typeof options === "undefined" || options === null) return defaults;
+  if (options === null || options === undefined) return defaults;
 
   const keys = Object.keys(defaults);
 
