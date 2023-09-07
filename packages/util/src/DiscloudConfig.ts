@@ -78,7 +78,7 @@ export class DiscloudConfig {
   }
 
   #objToString(obj: any): string {
-    if (typeof obj === "undefined" || obj === null) return "";
+    if (obj === null || obj === undefined) return "";
     if (typeof obj === "function") return this.#configToObj(obj());
     if (!obj) return `${obj}`;
 
