@@ -4,8 +4,8 @@ import { join } from "node:path";
 import { IgnoreFiles } from "./IgnoreFiles";
 
 export class GS {
-  found: string[] = [];
-  declare ignore: IgnoreFiles;
+  readonly found: string[] = [];
+  declare readonly ignore: IgnoreFiles;
 
   constructor(
     public pattern: string | string[],
@@ -39,6 +39,8 @@ export class GS {
     if (this.found.includes(".")) {
       this.found.splice(this.found.indexOf("."), 1);
     }
+
+    this.found = Array.from(new Set(this.found));
   }
 
   #normalizePath(path: string) {
