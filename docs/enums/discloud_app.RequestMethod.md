@@ -21,7 +21,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:2
+packages/rest/out/@enum/index.d.ts:2
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:3
+packages/rest/out/@enum/index.d.ts:3
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:4
+packages/rest/out/@enum/index.d.ts:4
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:5
+packages/rest/out/@enum/index.d.ts:5

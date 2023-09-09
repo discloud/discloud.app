@@ -75,7 +75,7 @@
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
 
 ## Properties
 
@@ -85,7 +85,7 @@
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
 
 ___
 
@@ -312,7 +312,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:61](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L61)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:61](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L61)
 
 ## Methods
 
@@ -332,7 +332,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 ### login
 
-▸ **login**(`token?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`string`\>
+▸ **login**(`token?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
 
 Login on Discloud API
 
@@ -496,11 +496,11 @@ Login on Discloud API
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`string`\>
+[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:70](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L70)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:70](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L70)
 
 ___
 

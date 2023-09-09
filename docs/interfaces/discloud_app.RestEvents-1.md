@@ -10,8 +10,6 @@
 
   ↳ [`ClientEvents`](discloud_app.ClientEvents.md)
 
-  ↳ [`ClientEvents`](discloud_app.ClientEvents.md)
-
 ## Table of contents
 
 ### Properties
@@ -26,4 +24,4 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:85
+packages/rest/out/@types/index.d.ts:85

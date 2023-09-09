@@ -24,7 +24,7 @@ The agent to set globally
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:16
+packages/rest/out/@types/index.d.ts:16
 
 ___
 
@@ -40,7 +40,7 @@ The base api path, without version
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:12
+packages/rest/out/@types/index.d.ts:12
 
 ___
 
@@ -56,7 +56,7 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:22
+packages/rest/out/@types/index.d.ts:22
 
 ___
 
@@ -72,7 +72,7 @@ Additional headers to send for all API requests
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:28
+packages/rest/out/@types/index.d.ts:28
 
 ___
 
@@ -88,4 +88,4 @@ The version of the API to use
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@types/index.d.ts:34
+packages/rest/out/@types/index.d.ts:34

@@ -16,14 +16,6 @@
 
   ↳ [`ApiStatusApp`](discloud_app.ApiStatusApp.md)
 
-  ↳ [`ApiApp`](discloud_app.ApiApp.md)
-
-  ↳ [`ApiAppBackup`](discloud_app.ApiAppBackup.md)
-
-  ↳ [`ApiAppLog`](discloud_app.ApiAppLog.md)
-
-  ↳ [`ApiStatusApp`](discloud_app.ApiStatusApp.md)
-
 ## Table of contents
 
 ### Properties
@@ -40,4 +32,4 @@ Your app id
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:7
+[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/app.ts#L7)

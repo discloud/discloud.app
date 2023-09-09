@@ -37,6 +37,7 @@ Data structure that makes it easy to interact with a bitfield.
 - [missing](discloud_app.ModPermissionsBF.md#missing)
 - [remove](discloud_app.ModPermissionsBF.md#remove)
 - [serialize](discloud_app.ModPermissionsBF.md#serialize)
+- [set](discloud_app.ModPermissionsBF.md#set)
 - [toArray](discloud_app.ModPermissionsBF.md#toarray)
 - [toJSON](discloud_app.ModPermissionsBF.md#tojson)
 - [valueOf](discloud_app.ModPermissionsBF.md#valueof)
@@ -46,13 +47,13 @@ Data structure that makes it easy to interact with a bitfield.
 
 ### constructor
 
-• **new ModPermissionsBF**(`bits?`)
+• **new ModPermissionsBF**(`...bits`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `bits?` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\> |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] |
 
 #### Inherited from
 
@@ -60,7 +61,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:26
+packages/util/out/BitField.d.ts:26
 
 ## Properties
 
@@ -76,7 +77,7 @@ Bitfield of the packed bits
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:14
+packages/util/out/BitField.d.ts:14
 
 ___
 
@@ -90,7 +91,7 @@ BitField.constructor
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:10
+packages/util/out/BitField.d.ts:10
 
 ___
 
@@ -100,13 +101,13 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/ModPermissionsBF.d.ts:25
+packages/util/out/ModPermissionsBF.d.ts:25
 
 ___
 
 ### DefaultBit
 
-▪ `Static` **DefaultBit**: `number`
+▪ `Static` **DefaultBit**: `number` \| `bigint`
 
 #### Inherited from
 
@@ -114,7 +115,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:20
+packages/util/out/BitField.d.ts:20
 
 ___
 
@@ -144,7 +145,7 @@ Numeric bitfield flags.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/ModPermissionsBF.d.ts:15
+packages/util/out/ModPermissionsBF.d.ts:15
 
 ## Methods
 
@@ -162,13 +163,13 @@ packages/discloud.app/node_modules/@discloudapp/util/dist/ModPermissionsBF.d.ts:
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:74
+packages/util/out/BitField.d.ts:80
 
 ___
 
 ### add
 
-▸ **add**(`...bits`): [`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
+▸ **add**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 Adds bits to these ones.
 
@@ -180,7 +181,7 @@ Adds bits to these ones.
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
+[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 These bits or new BitField if the instance is frozen.
 
@@ -190,7 +191,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:32
+packages/util/out/BitField.d.ts:32
 
 ___
 
@@ -216,7 +217,7 @@ Checks whether the bitfield has a bit, or any of multiple bits.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:37
+packages/util/out/BitField.d.ts:37
 
 ___
 
@@ -242,7 +243,7 @@ Checks if this bitfield equals another
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:42
+packages/util/out/BitField.d.ts:42
 
 ___
 
@@ -262,7 +263,7 @@ Freezes these bits, making them immutable.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:46
+packages/util/out/BitField.d.ts:46
 
 ___
 
@@ -288,7 +289,7 @@ Checks whether the bitfield has a bit, or multiple bits.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:51
+packages/util/out/BitField.d.ts:51
 
 ___
 
@@ -314,13 +315,13 @@ Gets all given bits that are missing from the bitfield.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:56
+packages/util/out/BitField.d.ts:56
 
 ___
 
 ### remove
 
-▸ **remove**(`...bits`): [`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
+▸ **remove**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 Removes bits from these.
 
@@ -332,7 +333,7 @@ Removes bits from these.
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
+[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 These bits or new BitField if the instance is frozen.
 
@@ -342,7 +343,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:62
+packages/util/out/BitField.d.ts:62
 
 ___
 
@@ -363,7 +364,35 @@ bit is available.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:67
+packages/util/out/BitField.d.ts:67
+
+___
+
+### set
+
+▸ **set**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+
+Replace the bits with these.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | bits to set |
+
+#### Returns
+
+[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+
+These bits or new BitField if the instance is frozen.
+
+#### Inherited from
+
+[BitField](discloud_app.BitField.md).[set](discloud_app.BitField.md#set)
+
+#### Defined in
+
+packages/util/out/BitField.d.ts:73
 
 ___
 
@@ -383,7 +412,7 @@ Gets an Array of bitfield names based on the bits available.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:71
+packages/util/out/BitField.d.ts:77
 
 ___
 
@@ -401,7 +430,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:72
+packages/util/out/BitField.d.ts:78
 
 ___
 
@@ -419,7 +448,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:73
+packages/util/out/BitField.d.ts:79
 
 ___
 
@@ -451,4 +480,4 @@ Resolves bitfields to their numeric form.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:79
+packages/util/out/BitField.d.ts:85

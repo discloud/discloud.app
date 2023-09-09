@@ -74,7 +74,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:14
+packages/rest/out/REST.d.ts:14
 
 ## Properties
 
@@ -84,7 +84,7 @@ packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:14
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:6
+packages/rest/out/REST.d.ts:6
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:7
+packages/rest/out/REST.d.ts:7
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:8
+packages/rest/out/REST.d.ts:8
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:9
+packages/rest/out/REST.d.ts:9
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:10
+packages/rest/out/REST.d.ts:10
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:13
+packages/rest/out/REST.d.ts:13
 
 ___
 
@@ -251,7 +251,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:15
+packages/rest/out/REST.d.ts:15
 
 ## Methods
 
@@ -307,7 +307,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:35
+packages/rest/out/REST.d.ts:35
 
 ___
 
@@ -371,7 +371,7 @@ Runs a get request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:28
+packages/rest/out/REST.d.ts:28
 
 ___
 
@@ -484,7 +484,7 @@ Runs a post request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:42
+packages/rest/out/REST.d.ts:42
 
 ___
 
@@ -587,7 +587,7 @@ Runs a put request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:49
+packages/rest/out/REST.d.ts:49
 
 ___
 
@@ -609,7 +609,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:61
+packages/rest/out/REST.d.ts:61
 
 ___
 
@@ -794,7 +794,7 @@ Runs a request from the api
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:55
+packages/rest/out/REST.d.ts:55
 
 ___
 
@@ -847,7 +847,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/REST.d.ts:21
+packages/rest/out/REST.d.ts:21
 
 ___
 

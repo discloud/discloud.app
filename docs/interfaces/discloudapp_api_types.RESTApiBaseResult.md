@@ -44,42 +44,6 @@
 
   ↳ [`RESTGetApiUserResult`](discloudapp_api_types.RESTGetApiUserResult.md)
 
-  ↳ [`RESTApiAppManagerResult`](discloudapp_api_types.RESTApiAppManagerResult.md)
-
-  ↳ [`RESTDeleteApiAppAptResult`](discloudapp_api_types.RESTDeleteApiAppAptResult.md)
-
-  ↳ [`RESTGetApiAppAllBackupResult`](discloudapp_api_types.RESTGetApiAppAllBackupResult.md)
-
-  ↳ [`RESTGetApiAppAllLogResult`](discloudapp_api_types.RESTGetApiAppAllLogResult.md)
-
-  ↳ [`RESTGetApiAppAllResult`](discloudapp_api_types.RESTGetApiAppAllResult.md)
-
-  ↳ [`RESTGetApiAppAllStatusResult`](discloudapp_api_types.RESTGetApiAppAllStatusResult.md)
-
-  ↳ [`RESTGetApiAppBackupResult`](discloudapp_api_types.RESTGetApiAppBackupResult.md)
-
-  ↳ [`RESTGetApiAppLogResult`](discloudapp_api_types.RESTGetApiAppLogResult.md)
-
-  ↳ [`RESTGetApiAppResult`](discloudapp_api_types.RESTGetApiAppResult.md)
-
-  ↳ [`RESTGetApiAppStatusResult`](discloudapp_api_types.RESTGetApiAppStatusResult.md)
-
-  ↳ [`RESTGetApiTeamResult`](discloudapp_api_types.RESTGetApiTeamResult.md)
-
-  ↳ [`RESTGetApiUserResult`](discloudapp_api_types.RESTGetApiUserResult.md)
-
-  ↳ [`RESTPostApiAppTeamResult`](discloudapp_api_types.RESTPostApiAppTeamResult.md)
-
-  ↳ [`RESTPostApiUploadResult`](discloudapp_api_types.RESTPostApiUploadResult.md)
-
-  ↳ [`RESTPutApiAppAptResult`](discloudapp_api_types.RESTPutApiAppAptResult.md)
-
-  ↳ [`RESTPutApiAppCommitResult`](discloudapp_api_types.RESTPutApiAppCommitResult.md)
-
-  ↳ [`RESTPutApiAppRamResult`](discloudapp_api_types.RESTPutApiAppRamResult.md)
-
-  ↳ [`RESTPutApiAppTeamResult`](discloudapp_api_types.RESTPutApiAppTeamResult.md)
-
 ## Table of contents
 
 ### Properties
@@ -98,7 +62,7 @@ Message of the API
 
 #### Defined in
 
-[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/9141dfb/packages/api-types/rest/v2/base.ts#L10)
+[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -110,4 +74,4 @@ The status of API response
 
 #### Defined in
 
-[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/9141dfb/packages/api-types/rest/v2/base.ts#L5)
+[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/base.ts#L5)

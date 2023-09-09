@@ -47,7 +47,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:11](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/AppTeamManager.ts#L11)
+[packages/discloud.app/src/managers/AppTeamManager.ts:10](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/AppTeamManager.ts#L10)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -83,11 +83,9 @@ Add a mod for you application on Discloud
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
-Promise [ApiAppTeamManager](../interfaces/discloud_app.ApiAppTeamManager.md)
-
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:23](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/AppTeamManager.ts#L23)
+[packages/discloud.app/src/managers/AppTeamManager.ts:21](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/AppTeamManager.ts#L21)
 
 ___
 
@@ -108,11 +106,9 @@ Remove a mod from you application on Discloud
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
-Promise [RESTDeleteApiAppTeamResult](../modules/discloud_app.md#restdeleteapiappteamresult)
-
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:61](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/AppTeamManager.ts#L61)
+[packages/discloud.app/src/managers/AppTeamManager.ts:57](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/AppTeamManager.ts#L57)
 
 ___
 
@@ -134,11 +130,9 @@ Edit permissions of a mod for you application on Discloud
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
-Promise [ApiAppTeamManager](../interfaces/discloud_app.ApiAppTeamManager.md)
-
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:42](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/AppTeamManager.ts#L42)
+[packages/discloud.app/src/managers/AppTeamManager.ts:39](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/AppTeamManager.ts#L39)
 
 ___
 
@@ -158,8 +152,6 @@ Get mods information for your app on Discloud
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeam`](../interfaces/discloud_app.ApiAppTeam.md)[]\>
 
-Promise [RESTGetApiAppTeamResult](../interfaces/discloud_app.RESTGetApiAppTeamResult.md)
-
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:74](https://github.com/discloud/discloud.app/blob/9141dfb/packages/discloud.app/src/managers/AppTeamManager.ts#L74)
+[packages/discloud.app/src/managers/AppTeamManager.ts:69](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/AppTeamManager.ts#L69)

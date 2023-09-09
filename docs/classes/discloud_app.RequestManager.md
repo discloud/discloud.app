@@ -78,7 +78,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:36
+packages/rest/out/RequestManager.d.ts:36
 
 ## Properties
 
@@ -88,7 +88,7 @@ packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:36
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:13
+packages/rest/out/RequestManager.d.ts:13
 
 ___
 
@@ -101,7 +101,7 @@ performed by this manager.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:19
+packages/rest/out/RequestManager.d.ts:19
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:6
+packages/rest/out/RequestManager.d.ts:6
 
 ___
 
@@ -123,7 +123,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:23
+packages/rest/out/RequestManager.d.ts:23
 
 ___
 
@@ -135,7 +135,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:27
+packages/rest/out/RequestManager.d.ts:27
 
 ___
 
@@ -147,7 +147,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:31
+packages/rest/out/RequestManager.d.ts:31
 
 ___
 
@@ -159,7 +159,7 @@ The time at which the last request was made
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:35
+packages/rest/out/RequestManager.d.ts:35
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:7
+packages/rest/out/RequestManager.d.ts:7
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:8
+packages/rest/out/RequestManager.d.ts:8
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:9
+packages/rest/out/RequestManager.d.ts:9
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:14
+packages/rest/out/RequestManager.d.ts:14
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:10
+packages/rest/out/RequestManager.d.ts:10
 
 ___
 
@@ -328,7 +328,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:40
+packages/rest/out/RequestManager.d.ts:40
 
 ___
 
@@ -344,7 +344,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:44
+packages/rest/out/RequestManager.d.ts:44
 
 ___
 
@@ -358,7 +358,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:45
+packages/rest/out/RequestManager.d.ts:45
 
 ## Methods
 
@@ -748,7 +748,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
-| `options` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `options` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
 
@@ -756,7 +756,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:58
+packages/rest/out/RequestManager.d.ts:58
 
 ___
 
@@ -776,12 +776,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 | `url` | `string` |
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:52
+packages/rest/out/RequestManager.d.ts:52
 
 ___
 
@@ -834,7 +834,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/RequestManager.d.ts:51
+packages/rest/out/RequestManager.d.ts:51
 
 ___
 

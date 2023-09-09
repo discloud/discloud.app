@@ -19,13 +19,12 @@
 
 ### Methods
 
-- [#findIgnoreFiles](discloudapp_util.IgnoreFiles.md##findignorefiles)
-- [#getIgnoreList](discloudapp_util.IgnoreFiles.md##getignorelist)
-- [#makeBothCase](discloudapp_util.IgnoreFiles.md##makebothcase)
-- [#normalizePath](discloudapp_util.IgnoreFiles.md##normalizepath)
-- [#recursivelyReadDirSync](discloudapp_util.IgnoreFiles.md##recursivelyreaddirsync)
-- [#resolveIgnoreFile](discloudapp_util.IgnoreFiles.md##resolveignorefile)
-- [#resolveIgnorePatterns](discloudapp_util.IgnoreFiles.md##resolveignorepatterns)
+- [processIgnoreFiles](discloudapp_util.IgnoreFiles.md#processignorefiles)
+- [findIgnoreFiles](discloudapp_util.IgnoreFiles.md#findignorefiles)
+- [normalizeIgnore](discloudapp_util.IgnoreFiles.md#normalizeignore)
+- [normalizePath](discloudapp_util.IgnoreFiles.md#normalizepath)
+- [normalizePaths](discloudapp_util.IgnoreFiles.md#normalizepaths)
+- [processIgnoreFile](discloudapp_util.IgnoreFiles.md#processignorefile)
 
 ## Constructors
 
@@ -41,7 +40,7 @@
 
 #### Defined in
 
-[IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L30)
+[IgnoreFiles.ts:32](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L32)
 
 ## Properties
 
@@ -51,7 +50,7 @@
 
 #### Defined in
 
-[IgnoreFiles.ts:25](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L25)
+[IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L27)
 
 ___
 
@@ -61,17 +60,17 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:26](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L26)
+[IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L28)
 
 ___
 
 ### list
 
-• **list**: `string`[] = `[]`
+• **list**: `string`[] = `allBlockedFiles`
 
 #### Defined in
 
-[IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L27)
+[IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L29)
 
 ___
 
@@ -81,13 +80,33 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L28)
+[IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L30)
 
 ## Methods
 
-### #findIgnoreFiles
+### processIgnoreFiles
 
-▸ `Private` **#findIgnoreFiles**(`fileName`, `paths`): `string`[]
+▸ **processIgnoreFiles**(`files?`): `string`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `files` | `string`[] |
+
+#### Returns
+
+`string`[]
+
+#### Defined in
+
+[IgnoreFiles.ts:103](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L103)
+
+___
+
+### findIgnoreFiles
+
+▸ `Static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `string`[]
 
 #### Parameters
 
@@ -95,6 +114,7 @@ ___
 | :------ | :------ |
 | `fileName` | `string` |
 | `paths` | `string`[] |
+| `ignore` | `string`[] |
 
 #### Returns
 
@@ -102,47 +122,34 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:52](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L52)
+[IgnoreFiles.ts:56](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L56)
 
 ___
 
-### #getIgnoreList
+### normalizeIgnore
 
-▸ `Private` **#getIgnoreList**(): `string`[]
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-[IgnoreFiles.ts:67](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L67)
-
-___
-
-### #makeBothCase
-
-▸ `Private` **#makeBothCase**(`s`): `string`[]
+▸ `Static` **normalizeIgnore**(`ignore`, `path?`): `string`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `s` | `string` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `ignore` | `string` | `undefined` |
+| `path` | `string` | `"**"` |
 
 #### Returns
 
-`string`[]
+`string`
 
 #### Defined in
 
-[IgnoreFiles.ts:57](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L57)
+[IgnoreFiles.ts:70](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L70)
 
 ___
 
-### #normalizePath
+### normalizePath
 
-▸ `Private` **#normalizePath**(`path`): `string`
+▸ `Static` **normalizePath**(`path`): `string`
 
 #### Parameters
 
@@ -156,59 +163,18 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:71](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L71)
+[IgnoreFiles.ts:74](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L74)
 
 ___
 
-### #recursivelyReadDirSync
+### normalizePaths
 
-▸ `Private` **#recursivelyReadDirSync**(`path`): `string`[]
+▸ `Static` **normalizePaths**(`paths`): `string`[]
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `path` | `string` |
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-[IgnoreFiles.ts:112](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L112)
-
-___
-
-### #resolveIgnoreFile
-
-▸ `Private` **#resolveIgnoreFile**(`ignoreFile`): `string`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ignoreFile` | `string` \| `string`[] |
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-[IgnoreFiles.ts:90](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L90)
-
-___
-
-### #resolveIgnorePatterns
-
-▸ `Private` **#resolveIgnorePatterns**(`ignore`, `paths`): `string`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ignore` | `string`[] |
 | `paths` | `string`[] |
 
 #### Returns
@@ -217,4 +183,24 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:77](https://github.com/discloud/discloud.app/blob/9141dfb/packages/util/src/IgnoreFiles.ts#L77)
+[IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L78)
+
+___
+
+### processIgnoreFile
+
+▸ `Static` **processIgnoreFile**(`file`): `string`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `file` | `string` |
+
+#### Returns
+
+`string`[]
+
+#### Defined in
+
+[IgnoreFiles.ts:86](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/IgnoreFiles.ts#L86)

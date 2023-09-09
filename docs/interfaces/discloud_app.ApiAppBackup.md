@@ -12,8 +12,6 @@
 
   ↳↳ [`ApiAppBackupAll`](discloud_app.ApiAppBackupAll.md)
 
-  ↳↳ [`ApiAppBackupAll`](discloud_app.ApiAppBackupAll.md)
-
 ## Table of contents
 
 ### Properties
@@ -35,7 +33,7 @@ Your app id
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:7
+[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/app.ts#L7)
 
 ___
 
@@ -48,4 +46,4 @@ The backup url.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:62
+[packages/api-types/rest/v2/app.ts:62](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/app.ts#L62)

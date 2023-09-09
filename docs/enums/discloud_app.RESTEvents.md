@@ -18,4 +18,4 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/dist/@enum/index.d.ts:8
+packages/rest/out/@enum/index.d.ts:8

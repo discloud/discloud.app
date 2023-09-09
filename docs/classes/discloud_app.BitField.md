@@ -19,8 +19,6 @@ Data structure that makes it easy to interact with a bitfield.
 
   ↳ [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
-  ↳ [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
-
 ## Table of contents
 
 ### Constructors
@@ -45,6 +43,7 @@ Data structure that makes it easy to interact with a bitfield.
 - [missing](discloud_app.BitField.md#missing)
 - [remove](discloud_app.BitField.md#remove)
 - [serialize](discloud_app.BitField.md#serialize)
+- [set](discloud_app.BitField.md#set)
 - [toArray](discloud_app.BitField.md#toarray)
 - [toJSON](discloud_app.BitField.md#tojson)
 - [valueOf](discloud_app.BitField.md#valueof)
@@ -54,7 +53,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 ### constructor
 
-• **new BitField**<`S`, `N`\>(`bits?`)
+• **new BitField**<`S`, `N`\>(`...bits`)
 
 #### Type parameters
 
@@ -67,11 +66,11 @@ Data structure that makes it easy to interact with a bitfield.
 
 | Name | Type |
 | :------ | :------ |
-| `bits?` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\> |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] |
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:26
+packages/util/out/BitField.d.ts:26
 
 ## Properties
 
@@ -83,7 +82,7 @@ Bitfield of the packed bits
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:14
+packages/util/out/BitField.d.ts:14
 
 ___
 
@@ -93,30 +92,30 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:10
+packages/util/out/BitField.d.ts:10
 
 ___
 
 ### DefaultBit
 
-▪ `Static` **DefaultBit**: `number`
+▪ `Static` **DefaultBit**: `number` \| `bigint`
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:20
+packages/util/out/BitField.d.ts:20
 
 ___
 
 ### Flags
 
-▪ `Static` **Flags**: `EnumLike`<`any`, `any`\>
+▪ `Static` **Flags**: `EnumLike`<`unknown`, `number` \| `bigint`\>
 
 Numeric bitfield flags.
 <info>Defined in extension classes</info>
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:25
+packages/util/out/BitField.d.ts:25
 
 ## Methods
 
@@ -130,7 +129,7 @@ packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:25
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:74
+packages/util/out/BitField.d.ts:80
 
 ___
 
@@ -154,7 +153,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:32
+packages/util/out/BitField.d.ts:32
 
 ___
 
@@ -176,7 +175,7 @@ Checks whether the bitfield has a bit, or any of multiple bits.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:37
+packages/util/out/BitField.d.ts:37
 
 ___
 
@@ -198,7 +197,7 @@ Checks if this bitfield equals another
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:42
+packages/util/out/BitField.d.ts:42
 
 ___
 
@@ -214,7 +213,7 @@ Freezes these bits, making them immutable.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:46
+packages/util/out/BitField.d.ts:46
 
 ___
 
@@ -236,7 +235,7 @@ Checks whether the bitfield has a bit, or multiple bits.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:51
+packages/util/out/BitField.d.ts:51
 
 ___
 
@@ -258,7 +257,7 @@ Gets all given bits that are missing from the bitfield.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:56
+packages/util/out/BitField.d.ts:56
 
 ___
 
@@ -282,7 +281,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:62
+packages/util/out/BitField.d.ts:62
 
 ___
 
@@ -299,7 +298,31 @@ bit is available.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:67
+packages/util/out/BitField.d.ts:67
+
+___
+
+### set
+
+▸ **set**(`...bits`): [`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+
+Replace the bits with these.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | bits to set |
+
+#### Returns
+
+[`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+
+These bits or new BitField if the instance is frozen.
+
+#### Defined in
+
+packages/util/out/BitField.d.ts:73
 
 ___
 
@@ -315,7 +338,7 @@ Gets an Array of bitfield names based on the bits available.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:71
+packages/util/out/BitField.d.ts:77
 
 ___
 
@@ -329,7 +352,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:72
+packages/util/out/BitField.d.ts:78
 
 ___
 
@@ -343,7 +366,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:73
+packages/util/out/BitField.d.ts:79
 
 ___
 
@@ -371,4 +394,4 @@ Resolves bitfields to their numeric form.
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/BitField.d.ts:79
+packages/util/out/BitField.d.ts:85

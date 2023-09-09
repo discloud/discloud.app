@@ -33,7 +33,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:7
+packages/util/out/GS.d.ts:7
 
 ## Properties
 
@@ -43,27 +43,27 @@ packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:7
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:3
+packages/util/out/GS.d.ts:3
 
 ___
 
 ### found
 
-• **found**: `string`[]
+• `Readonly` **found**: `string`[]
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:5
+packages/util/out/GS.d.ts:5
 
 ___
 
 ### ignore
 
-• **ignore**: [`IgnoreFiles`](discloud_app.IgnoreFiles.md)
+• `Readonly` **ignore**: [`IgnoreFiles`](discloud_app.IgnoreFiles.md)
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:6
+packages/util/out/GS.d.ts:6
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/util/dist/GS.d.ts:4
+packages/util/out/GS.d.ts:4
