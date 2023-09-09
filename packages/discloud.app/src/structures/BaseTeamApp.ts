@@ -39,7 +39,6 @@ export default abstract class BaseTeamApp extends Base {
    * Set the quantity of ram to application of your team
    * 
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
-   * @returns Promise {@link RESTPutApiAppRamResult}
    */
   setRam(quantity: number) {
     return this.discloudApp.teamApps.ram(this.id, quantity);
@@ -56,7 +55,6 @@ export default abstract class BaseTeamApp extends Base {
    * Update an of your team apps on Discloud
    * 
    * @param options - Options to update your app.
-   * @returns Promise {@link RESTPutApiAppCommitResult}
    */
   update(options: UpdateAppOptions) {
     return this.discloudApp.teamApps.update(this.id, options);
@@ -84,7 +82,6 @@ export default abstract class BaseTeamApp extends Base {
   }
 
   /**
-   * @returns app id
    */
   toString() {
     return this.id;

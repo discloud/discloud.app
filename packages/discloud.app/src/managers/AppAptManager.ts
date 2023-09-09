@@ -15,7 +15,6 @@ export default class AppAptManager extends BaseManager {
    * 
    * @param appID - The app id
    * @param apt - One or more APTs to install. See {@link AptString}.
-   * @returns Promise {@link RESTPutApiAppAptResult}
    */
   async install(appID: string, apt: APTString | APTString[]): Promise<RESTPutApiAppAptResult> {
     if (Array.isArray(apt)) apt = <APTString>apt.join();
@@ -35,7 +34,6 @@ export default class AppAptManager extends BaseManager {
    * 
    * @param appID - The app id
    * @param apt - One or more APTs to uninstall. See {@link AptString}.
-   * @returns Promise {@link RESTDeleteApiAppAptResult}
    */
   async uninstall(appID: string, apt: APTString | APTString[]): Promise<RESTDeleteApiAppAptResult> {
     if (Array.isArray(apt)) apt = <APTString>apt.join();

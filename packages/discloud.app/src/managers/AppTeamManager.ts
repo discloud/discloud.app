@@ -1,7 +1,6 @@
 import { ApiAppTeamManager, RESTDeleteApiAppTeamResult, RESTGetApiAppTeamResult, RESTPostApiAppTeamResult, RESTPutApiAppTeamResult, Routes } from "@discloudapp/api-types/v2";
 import { ModPermissionsBF, ModPermissionsResolvable } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
-import BaseApp from "../structures/BaseApp";
 import BaseManager from "./BaseManager";
 
 /**
@@ -18,7 +17,6 @@ export default class AppTeamManager extends BaseManager {
    * @param appID - The app id
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
-   * @returns Promise {@link ApiAppTeamManager}
    */
   async create(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
     const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(appID), {
@@ -37,7 +35,6 @@ export default class AppTeamManager extends BaseManager {
    * @param appID - The app id
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
-   * @returns Promise {@link ApiAppTeamManager}
    */
   async edit(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
     const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(appID), {
@@ -56,7 +53,6 @@ export default class AppTeamManager extends BaseManager {
    * 
    * @param appID - The app id
    * @param modID - The mod id
-   * @returns Promise {@link RESTDeleteApiAppTeamResult}
    */
   async delete(appID: string, modID: string): Promise<RESTDeleteApiAppTeamResult> {
     const data = await this.discloudApp.rest.delete<
@@ -69,7 +65,6 @@ export default class AppTeamManager extends BaseManager {
   /**
    * Get mods information for your app on Discloud
    * 
-   * @returns Promise {@link RESTGetApiAppTeamResult}
    */
   async fetch(appID: string) {
     const data = await this.discloudApp.rest.get<RESTGetApiAppTeamResult>(Routes.appTeam(appID));

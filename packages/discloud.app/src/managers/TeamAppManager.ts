@@ -98,7 +98,6 @@ export default class TeamAppManager extends CachedManager<TeamApp> {
    * 
    * @param appID - Your team app id
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
-   * @returns Promise {@link RESTPutApiAppRamResult}
    */
   async ram(appID: string, quantity: number) {
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
@@ -121,7 +120,6 @@ export default class TeamAppManager extends CachedManager<TeamApp> {
    * 
    * @param appID - Your team app id
    * @param options - Options to update your app.
-   * @returns Promise {@link RESTPutApiAppCommitResult}
    */
   async update(appID: string, options: UpdateAppOptions) {
     options.file = await resolveFile(options.file);

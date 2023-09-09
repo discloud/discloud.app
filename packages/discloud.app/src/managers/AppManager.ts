@@ -100,7 +100,6 @@ export default class AppManager extends CachedManager<App> {
    * 
    * @param appID - Your app id
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
-   * @returns Promise {@link RESTPutApiAppRamResult}
    */
   async ram(appID: string, quantity: number) {
     if (!appID) throw new Error("App ID is missing.");
@@ -126,7 +125,6 @@ export default class AppManager extends CachedManager<App> {
    * Upload a new app or site to Discloud
    * 
    * @param options - Options for create a new app. A {@link FileResolvable} is required.
-   * @returns Promise {@link RESTPostApiUploadResult}
    */
   async create(options: CreateAppOptions) {
     options.file = await resolveFile(options.file);
@@ -148,7 +146,6 @@ export default class AppManager extends CachedManager<App> {
    * 
    * @param appID - Your app id
    * @param options - Options to update your app.
-   * @returns Promise {@link RESTPutApiAppCommitResult}
    */
   async update(appID: string, options: UpdateAppOptions) {
     options.file = await resolveFile(options.file);
@@ -191,7 +188,6 @@ export default class AppManager extends CachedManager<App> {
    * 
    * @param appID - Your app id
    * @param options - Options to update your app.
-   * @returns Promise {@link REST}
    */
   async profile(appID: string, options: ProfileOptions) {
     ProfileOptions.parse(options);
@@ -313,6 +309,8 @@ export default class AppManager extends CachedManager<App> {
 
   async #fetchMany() {
     const data = await this.discloudApp.rest.get<RESTGetApiAppAllResult>(Routes.app("all"));
+
+    this._clean(data.apps);
 
     return this._addMany(data.apps);
   }

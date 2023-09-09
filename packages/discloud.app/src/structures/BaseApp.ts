@@ -32,7 +32,6 @@ export default abstract class BaseApp extends Base {
    * Set the quantity of ram to your application
    * 
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
-   * @returns Promise {@link RESTPutApiAppRamResult}
    */
   async setRam(quantity: number) {
     return this.discloudApp.apps.ram(this.id, quantity);
@@ -90,14 +89,12 @@ export default abstract class BaseApp extends Base {
    * Update an of your apps on Discloud.
    * 
    * @param options - Options to update your app.
-   * @returns Promise {@link RESTPutApiAppCommitResult}
    */
   update(options: UpdateAppOptions) {
     return this.discloudApp.apps.update(this.id, options);
   }
 
   /**
-   * @returns app id
    */
   toString() {
     return this.id;
