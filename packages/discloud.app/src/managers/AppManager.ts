@@ -171,13 +171,13 @@ export default class AppManager extends CachedManager<App> {
     >(Routes.appDelete(appID));
 
     if ("apps" in data) {
-      this._removeMany(data.apps.removealled);
+      this._deleteMany(data.apps.removealled);
 
       return data.apps;
     }
 
     if (data.status === "ok")
-      this._remove(appID);
+      this._delete(appID);
 
     return data;
   }

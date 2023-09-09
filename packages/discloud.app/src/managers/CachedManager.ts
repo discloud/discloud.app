@@ -50,20 +50,20 @@ export default abstract class CachedManager<T> extends DataManager<T> {
 
     for (const id of this.#cache.keys()) {
       if (data.every(app => app.id !== id)) {
-        this._remove(id);
+        this._delete(id);
       }
     }
   }
 
-  protected _remove(id: string) {
+  protected _delete(id: string) {
     this.discloudApp.user.appIDs.delete(id);
 
     return this.cache.delete(id);
   }
 
-  protected _removeMany(ids: string[]) {
+  protected _deleteMany(ids: string[]) {
     for (const id of ids)
-      this._remove(id);
+      this._delete(id);
 
     return true;
   }
