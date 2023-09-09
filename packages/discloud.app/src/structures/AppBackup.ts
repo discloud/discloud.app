@@ -18,11 +18,11 @@ class AppBackup extends Base {
   /**
    * The backup status
    */
-  status?: string;
+  declare status?: string;
   /**
    * The backup {@link Buffer}
    */
-  data?: Buffer;
+  declare data?: Buffer;
 
   constructor(discloudApp: DiscloudApp, data: ApiAppBackupAll | ApiAppBackup) {
     super(discloudApp);

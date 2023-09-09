@@ -33,7 +33,7 @@ export default class App extends BaseApp {
   /**
    * Moderators IDs of your app
    */
-  mods: string[] = [];
+  readonly mods = new Set<string>();
   /**
    * The name of your application
    */
@@ -51,12 +51,16 @@ export default class App extends BaseApp {
    */
   declare ramKilled: boolean;
 
-  declare apt: AppApt;
-  declare team: AppTeam;
-  declare status: AppStatus;
+  declare readonly apt: AppApt;
+  declare readonly status: AppStatus;
+  declare readonly team: AppTeam;
 
   constructor(discloudApp: DiscloudApp, data: ApiApp | ApiStatusApp) {
     super(discloudApp, data);
+
+    this.apt = new AppApt(this.discloudApp, data);
+    this.status = new AppStatus(this.discloudApp, <ApiStatusApp>data);
+    this.team = new AppTeam(this.discloudApp, data);
 
     this._patch(data);
   }
@@ -81,7 +85,13 @@ export default class App extends BaseApp {
       this.mainFile = data.mainFile;
 
     if ("mods" in data)
-      this.mods = data.mods;
+      if (Array.isArray(data.mods)) {
+        this.mods.clear();
+
+        for (const mod of data.mods) {
+          this.mods.add(mod);
+        }
+      }
 
     if ("name" in data)
       this.name = data.name;
@@ -95,13 +105,9 @@ export default class App extends BaseApp {
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled;
 
-    this.apt ??= new AppApt(this.discloudApp, data);
-    this.team ??= new AppTeam(this.discloudApp, data);
-    this.status ??= new AppStatus(this.discloudApp, <ApiStatusApp>data);
-
-    (<any>this.apt)._patch(data);
-    (<any>this.team)._patch(data);
-    (<any>this.status)._patch(data);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    this.apt._patch(data); this.status._patch(data); this.team._patch(data);
 
     return super._patch(data);
   }

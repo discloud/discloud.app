@@ -26,6 +26,7 @@ export default abstract class CachedManager<T> extends DataManager<T> {
     }
 
     const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
+    this.discloudApp.user.appIDs.add(entry.id);
     this.cache.set(entry.id, entry);
     return entry;
   }
@@ -43,7 +44,17 @@ export default abstract class CachedManager<T> extends DataManager<T> {
     return cache;
   }
 
+  protected _clean(data: { id: string }[]) {
+    for (const id of this.#cache.keys()) {
+      if (data.every(app => app.id !== id)) {
+        this._remove(id);
+      }
+    }
+  }
+
   protected _remove(id: string) {
+    this.discloudApp.user.appIDs.delete(id);
+
     return this.cache.delete(id);
   }
 

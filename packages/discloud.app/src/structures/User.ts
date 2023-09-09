@@ -8,11 +8,11 @@ export default class User extends Base {
   /**
    * Your applications ID
    */
-  appIDs: string[] = [];
+  readonly appIDs = new Set<string>();
   /**
    * Your custom domains on Discloud
    */
-  customdomains: string[] = [];
+  readonly customdomains = new Set<string>();
   /**
    * Your id
    */
@@ -40,7 +40,7 @@ export default class User extends Base {
   /**
    * Your subdomains on Discloud
    */
-  subdomains: string[] = [];
+  readonly subdomains = new Set<string>();
   /**
    * Your total RAM quantity
    */
@@ -56,10 +56,22 @@ export default class User extends Base {
 
   protected _patch(data: ApiUser): this {
     if ("apps" in data)
-      this.appIDs = data.apps;
+      if (Array.isArray(data.apps)) {
+        this.appIDs.clear();
+
+        for (const appId of data.apps) {
+          this.appIDs.add(appId);
+        }
+      }
 
     if ("customdomains" in data)
-      this.customdomains = data.customdomains;
+      if (Array.isArray(data.customdomains)) {
+        this.customdomains.clear();
+
+        for (const customdomain of data.customdomains) {
+          this.customdomains.add(customdomain);
+        }
+      }
 
     if ("userID" in data)
       this.id = data.userID;
@@ -79,7 +91,13 @@ export default class User extends Base {
       this.ramUsedMb = data.ramUsedMb;
 
     if ("subdomains" in data)
-      this.subdomains = data.subdomains;
+      if (Array.isArray(data.subdomains)) {
+        this.subdomains.clear();
+
+        for (const subdomain of data.subdomains) {
+          this.subdomains.add(subdomain);
+        }
+      }
 
     if ("totalRamMb" in data)
       this.totalRamMb = data.totalRamMb;
@@ -99,7 +117,6 @@ export default class User extends Base {
    * 
    * @param locale - Your locale like "en-US".
    * @see {@link LocaleString}
-   * @returns Promise {@link Boolean}
    */
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
     const data = await this.discloudApp.rest.put<RESTPutApiLocaleResult>(Routes.locale(locale));
@@ -113,7 +130,6 @@ export default class User extends Base {
   /**
    * Fetch a user from Discloud API
    * 
-   * @returns Promise {@link User}
    */
   async fetch() {
     const data = await this.discloudApp.rest.get<RESTGetApiUserResult>(Routes.user());
@@ -122,7 +138,6 @@ export default class User extends Base {
   }
 
   /**
-   * @returns user id
    */
   toString() {
     return this.id;

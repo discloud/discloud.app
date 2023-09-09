@@ -67,14 +67,12 @@ class DiscloudApp extends EventEmitter {
    * 
    * @param token - Your Discloud token
    */
-  async login(token = this.token ?? env.DISCLOUD_TOKEN) {
+  login(token = this.token ?? env.DISCLOUD_TOKEN) {
     if (typeof token !== "string") throw new Error("[DISCLOUD API] Missing token.");
 
     this.#setToken(token);
 
-    await this.user.fetch();
-
-    return "[DISCLOUD API] Logged.";
+    return this.user.fetch();
   }
 }
 
