@@ -310,7 +310,7 @@ export default class AppManager extends CachedManager<App> {
   async #fetchMany() {
     const data = await this.discloudApp.rest.get<RESTGetApiAppAllResult>(Routes.app("all"));
 
-    this._clean(data.apps);
+    this._clear(data.apps);
 
     return this._addMany(data.apps);
   }

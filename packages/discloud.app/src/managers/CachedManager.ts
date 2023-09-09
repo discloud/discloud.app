@@ -44,7 +44,7 @@ export default abstract class CachedManager<T> extends DataManager<T> {
     return cache;
   }
 
-  protected _clean(data: { id: string }[]) {
+  protected _clear(data: { id: string }[]) {
     if (!data?.length)
       return this.#cache.clear();
 
