@@ -1,10 +1,10 @@
 import { RawFile } from "@discloudapp/util";
-import { Agent, BodyInit, Dispatcher, File, request } from "undici";
+import { Agent, BodyInit, Dispatcher, File, request, HeadersInit } from "undici";
 import { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
 
-export type RequestOptions = Exclude<Parameters<typeof request>[1], undefined>
+export type RequestOptions = Parameters<typeof request>[1]
 
 export interface RESTOptions {
   /**
@@ -52,7 +52,7 @@ export interface RequestData {
   /**
    * The body to send to this request.
    */
-  body?: BodyInit | unknown
+  body?: BodyInit
   /**
    * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to use for the request.
    */

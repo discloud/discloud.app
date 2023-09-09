@@ -25,7 +25,7 @@ export interface RequestManager {
 
 export class RequestManager extends EventEmitter {
   #token!: string;
-  options: RESTOptions;
+  readonly options: RESTOptions;
 
   /**
    * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} for all requests
@@ -91,12 +91,10 @@ export class RequestManager extends EventEmitter {
   resolveRequest(request: InternalRequest) {
     const headers: RequestHeaders = Object.assign({}, this.options.headers, { "api-token": this.#token });
 
-    const query = request.query?.toString() ? `?${request.query}` : "";
-
-    const url = `${this.options.api}/v${this.options.version}${request.fullRoute}${query}`;
+    const url = `${this.options.api}/v${this.options.version}${request.fullRoute}`;
 
     const additionalHeaders: Record<string, string> = {};
-    const additionalOptions: Partial<RequestOptions> = {};
+    const additionalOptions: Partial<RequestOptions> = { query: request.query };
     const formData = new FormData();
 
     if (request.file) {
@@ -119,12 +117,12 @@ export class RequestManager extends EventEmitter {
 
     const fetchOptions: RequestOptions = Object.assign({
       headers: Object.assign({}, request.headers, additionalHeaders, headers),
-      method: request.method.toUpperCase() as Dispatcher.HttpMethod,
+      method: request.method.toUpperCase(),
     }, additionalOptions);
 
     if (request.body)
       if (request.file) {
-        for (const [key, value] of Object.entries(request.body as Record<string, unknown>))
+        for (const [key, value] of Object.entries(request.body))
           formData.append(key, value);
       } else {
         fetchOptions.body = JSON.stringify(request.body);
@@ -139,6 +137,8 @@ export class RequestManager extends EventEmitter {
   }
 
   async request(url: string, options: RequestOptions) {
+    if (!options) options = {};
+
     while (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
@@ -156,9 +156,9 @@ export class RequestManager extends EventEmitter {
     const limit = Number(res.headers["ratelimit-limit"]);
     const remaining = Number(res.headers["ratelimit-remaining"]);
     const reset = Number(res.headers["ratelimit-reset"]);
-    if (!isNaN(limit)) this.globalLimit = Number(res.headers["ratelimit-limit"]);
-    if (!isNaN(remaining)) this.globalRemaining = Number(res.headers["ratelimit-remaining"]);
-    if (!isNaN(reset)) this.globalReset = Number(res.headers["ratelimit-reset"]);
+    if (!isNaN(limit)) this.globalLimit = limit;
+    if (!isNaN(remaining)) this.globalRemaining = remaining;
+    if (!isNaN(reset)) this.globalReset = reset;
 
     if (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{

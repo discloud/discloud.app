@@ -103,7 +103,7 @@ export class REST extends EventEmitter {
    * @param options - Request options
    */
   raw(options: InternalRequest) {
-    const { fetchOptions, url } = this.requestManager.resolveRequest(options);
-    return this.requestManager.request(url, fetchOptions);
+    const request = this.requestManager.resolveRequest(options);
+    return this.requestManager.request(request.url, request.fetchOptions);
   }
 }
