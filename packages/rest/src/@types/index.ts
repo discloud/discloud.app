@@ -52,7 +52,7 @@ export interface RequestData {
   /**
    * The body to send to this request.
    */
-  body?: BodyInit
+  body?: BodyInit | unknown
   /**
    * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to use for the request.
    */

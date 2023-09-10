@@ -122,10 +122,21 @@ export class RequestManager extends EventEmitter {
 
     if (request.body)
       if (request.file) {
-        for (const [key, value] of Object.entries(request.body))
+        if (typeof request.body === "string")
+          try {
+            request.body = JSON.parse(request.body);
+          } catch {
+            request.body = {};
+          }
+
+        for (const [key, value] of Object.entries(<any>request.body))
           formData.append(key, value);
       } else {
-        fetchOptions.body = JSON.stringify(request.body);
+        if (typeof request.body === "string") {
+          fetchOptions.body = request.body;
+        } else {
+          fetchOptions.body = JSON.stringify(request.body);
+        }
       }
 
     if (request.file) fetchOptions.body = formData;
