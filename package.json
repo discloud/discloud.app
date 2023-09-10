@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "docgen": "typedoc && typedoc --options typedoc_md.json"
+    "docgen": "typedoc && typedoc --options typedoc_md.json",
+    "build": "npm run build --workspaces || npm run build --workspaces"
   },
   "devDependencies": {
     "@types/node": "^20.5.9",

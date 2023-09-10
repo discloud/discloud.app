@@ -3,10 +3,10 @@
   "version": "0.4.0",
   "scripts": {
     "watch": "tsc -watch",
-    "build:release": "tsc",
+    "build": "tsc",
     "clean:node": "rimraf --glob ./{payload,rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
     "postpublish": "npm run clean:node",
-    "prepublish": "npm run build:release",
+    "prepublish": "npm run build",
     "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },

@@ -53,7 +53,7 @@
     "newLine": "lf",
     // "stripInternal": true,
     // "noEmitHelpers": true,
-    "noEmitOnError": true,
+    // "noEmitOnError": true,
     "preserveConstEnums": true,
     // "declarationDir": "./",
     // "preserveValueImports": true,

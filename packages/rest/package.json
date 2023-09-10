@@ -5,8 +5,8 @@
   "types": "out/index.d.ts",
   "scripts": {
     "watch": "tsc -watch",
-    "build:release": "tsc",
-    "prepublish": "npm run build:release",
+    "build": "tsc",
+    "prepublish": "npm run build",
     "release": "npm run prepublish && npm publish",
     "test:ts": "tsc --noEmit"
   },
