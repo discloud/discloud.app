@@ -33,7 +33,7 @@ export default abstract class BaseApp extends Base {
    * 
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
-  async setRam(quantity: number) {
+  setRam(quantity: number) {
     return this.discloudApp.apps.ram(this.id, quantity);
   }
 

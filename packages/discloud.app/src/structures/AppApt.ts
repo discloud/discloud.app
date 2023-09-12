@@ -11,18 +11,18 @@ export default class AppApt extends Base {
     this._patch(data);
   }
 
+  protected _patch(data: BaseApiApp): this {
+    if ("id" in data)
+      this.appId = data.id;
+
+    return super._patch(data);
+  }
+
   install(apt: APTString | APTString[]) {
     return this.discloudApp.appApt.install(this.appId, apt);
   }
 
   uninstall(apt: APTString | APTString[]) {
     return this.discloudApp.appApt.uninstall(this.appId, apt);
-  }
-
-  protected _patch(data: BaseApiApp): this {
-    if ("id" in data)
-      this.appId = data.id;
-
-    return super._patch(data);
   }
 }

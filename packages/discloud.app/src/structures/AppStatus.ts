@@ -52,14 +52,6 @@ export default class AppStatus extends Base {
     this._patch(data);
   }
 
-  get app() {
-    return this.discloudApp.apps.cache.get(this.appId);
-  }
-
-  fetch() {
-    return this.discloudApp.apps.status(this.appId);
-  }
-
   protected _patch(data: ApiStatusApp): this {
     if ("container" in data)
       this.container = data.container;
@@ -91,5 +83,13 @@ export default class AppStatus extends Base {
     }
 
     return this;
+  }
+
+  get app() {
+    return this.discloudApp.apps.cache.get(this.appId);
+  }
+
+  fetch() {
+    return this.discloudApp.apps.status(this.appId);
   }
 }

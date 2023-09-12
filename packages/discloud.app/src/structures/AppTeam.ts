@@ -12,6 +12,12 @@ export default class AppTeam extends Base {
     this._patch(data);
   }
 
+  protected _patch(data: BaseApiApp): this {
+    this.appId = data.id;
+
+    return super._patch(data);
+  }
+
   create(modID: string, perms: ModPermissionsResolvable) {
     return this.discloudApp.appTeam.create(this.appId, modID, perms);
   }
@@ -26,11 +32,5 @@ export default class AppTeam extends Base {
 
   fetch() {
     return this.discloudApp.appTeam.fetch(this.appId);
-  }
-
-  protected _patch(data: BaseApiApp): this {
-    this.appId = data.id;
-
-    return super._patch(data);
   }
 }

@@ -50,10 +50,6 @@ export default class AppUploaded extends Base {
     this._patch(data);
   }
 
-  get app() {
-    return this.discloudApp.apps.cache.get(this.appId);
-  }
-
   protected _patch(data: ApiUploadApp): this {
     if ("addedAtTimestamp" in data)
       this.addedAtTimestamp = data.addedAtTimestamp;
@@ -86,5 +82,9 @@ export default class AppUploaded extends Base {
       this.version = data.version;
 
     return super._patch(data);
+  }
+
+  get app() {
+    return this.discloudApp.apps.cache.get(this.appId);
   }
 }

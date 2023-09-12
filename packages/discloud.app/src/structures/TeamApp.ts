@@ -1,5 +1,5 @@
 import { ApiStatusApp, ApiTeamApps } from "@discloudapp/api-types/v2";
-import { ModPermissionsBF, ModPermissionsFlags } from "@discloudapp/util";
+import { ModPermissionsFlags } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseTeamApp from "./BaseTeamApp";
 import TeamAppStatus from "./TeamAppStatus";
@@ -30,10 +30,12 @@ export default class TeamApp extends BaseTeamApp {
    */
   declare ramKilled: boolean;
 
-  declare status: TeamAppStatus;
+  declare readonly status: TeamAppStatus;
 
-  constructor(discloudApp: DiscloudApp, data: ApiTeamApps) {
+  constructor(discloudApp: DiscloudApp, data: ApiTeamApps | ApiStatusApp) {
     super(discloudApp, data);
+
+    this.status = new TeamAppStatus(this.discloudApp, <ApiStatusApp>data);
 
     this._patch(data);
   }
@@ -55,7 +57,7 @@ export default class TeamApp extends BaseTeamApp {
       if (Array.isArray(data.perms)) {
         this.perms.clear();
 
-        for (const perm of new ModPermissionsBF(<ModPermissionsFlags[]>data.perms).toArray()) {
+        for (const perm of <ModPermissionsFlags[]>data.perms) {
           this.perms.add(perm);
         }
       }
@@ -63,7 +65,9 @@ export default class TeamApp extends BaseTeamApp {
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled;
 
-    this.status ??= new TeamAppStatus(this.discloudApp, <ApiStatusApp>data);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    this.status._patch(data);
 
     return super._patch(data);
   }

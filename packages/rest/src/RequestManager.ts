@@ -6,19 +6,15 @@ import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, Reque
 import DiscloudAPIError from "./errors/DiscloudAPIError";
 import { DefaultRestOptions } from "./utils/contants";
 
-export interface RequestManager {
+export interface RequestManager extends EventEmitter {
   emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
-  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: any[]) => boolean);
-
+  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: unknown[]) => boolean);
   off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
   (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-
   on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
   (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-
   once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
   (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-
   removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
   (<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
 }
@@ -54,7 +50,7 @@ export class RequestManager extends EventEmitter {
   globalTime = 0;
 
   constructor(options: Partial<RESTOptions>) {
-    super();
+    super({ captureRejections: true });
     this.options = Object.assign({}, DefaultRestOptions, options);
     this.globalRemaining = this.options.globalRequestsPerMinute;
     this.agent = this.options.agent;

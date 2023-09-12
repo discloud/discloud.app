@@ -28,7 +28,6 @@ export default class AppAptManager extends BaseManager {
     return data;
   }
 
-
   /**
    * Uninstall APTs for your application on Discloud
    * 

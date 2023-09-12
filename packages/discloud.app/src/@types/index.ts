@@ -11,7 +11,7 @@ export interface DiscloudAppOptions {
 }
 
 export const ProfileOptions = z.object({
-  avatarURL: z.string().url().endsWith(".png"),
+  avatarURL: z.string().url().regex(/^(\S+\.(?:jpe?g|png))(?:\?\S*)?$/),
   name: z.string().max(30),
 }).partial();
 

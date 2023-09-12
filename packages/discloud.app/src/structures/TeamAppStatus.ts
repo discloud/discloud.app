@@ -52,14 +52,6 @@ export default class TeamAppStatus extends Base {
     this._patch(data);
   }
 
-  get app() {
-    return this.discloudApp.teamApps.cache.get(this.appId);
-  }
-
-  fetch() {
-    return this.discloudApp.teamApps.status(this.appId);
-  }
-
   protected _patch(data: ApiStatusApp): this {
     if ("container" in data)
       this.container = data.container;
@@ -90,6 +82,14 @@ export default class TeamAppStatus extends Base {
       this.startedAtTimestamp = this.startedAt.valueOf();
     }
 
-    return this;
+    return super._patch(data);
+  }
+
+  get app() {
+    return this.discloudApp.teamApps.cache.get(this.appId);
+  }
+
+  fetch() {
+    return this.discloudApp.teamApps.status(this.appId);
   }
 }

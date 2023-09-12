@@ -129,7 +129,6 @@ export default class User extends Base {
 
   /**
    * Fetch a user from Discloud API
-   * 
    */
   async fetch() {
     const data = await this.discloudApp.rest.get<RESTGetApiUserResult>(Routes.user());
@@ -137,8 +136,6 @@ export default class User extends Base {
     return this._patch(data.user);
   }
 
-  /**
-   */
   toString() {
     return this.id;
   }

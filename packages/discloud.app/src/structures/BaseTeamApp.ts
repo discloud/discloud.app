@@ -70,14 +70,14 @@ export default abstract class BaseTeamApp extends Base {
   /**
    * Start your team application on Discloud
    */
-  async start() {
+  start() {
     return this.discloudApp.teamApps.start(this.id);
   }
 
   /**
    * Stop your team application on Discloud
    */
-  async stop() {
+  stop() {
     return this.discloudApp.teamApps.stop(this.id);
   }
 

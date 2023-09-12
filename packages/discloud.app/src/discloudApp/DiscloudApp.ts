@@ -13,10 +13,9 @@ import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
 /**
  * Client for Discloud API
  */
-
-interface DiscloudApp {
+interface DiscloudApp extends EventEmitter {
   emit: (<K extends keyof ClientEvents>(event: K, ...args: ClientEvents[K]) => boolean) &
-  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, ...args: any[]) => boolean);
+  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, ...args: unknown[]) => boolean);
   off: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
   (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
   on: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
