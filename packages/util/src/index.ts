@@ -6,7 +6,5 @@ export * from "./FileResolver";
 export * from "./GS";
 export * from "./IgnoreFiles";
 export * from "./ModPermissionsBF";
+export * from "./utils";
 
-export function calculatePercentage(value: string | number, major: string | number) {
-  return Number((Number(value) / Number(major) * 100).toFixed(2));
-}
