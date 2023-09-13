@@ -6,5 +6,6 @@ export const enum RequestMethod {
 }
 
 export const enum RESTEvents {
+  Error = "error",
   RateLimited = "rateLimited"
 }
