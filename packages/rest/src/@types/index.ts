@@ -1,5 +1,5 @@
 import { RawFile } from "@discloudapp/util";
-import { Agent, BodyInit, Dispatcher, File, request, HeadersInit } from "undici";
+import { Agent, BodyInit, Dispatcher, File, request } from "undici";
 import { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
@@ -89,5 +89,6 @@ export interface RateLimitData {
 }
 
 export interface RestEvents {
+  error: [error: Error]
   rateLimited: [rateLimitData: RateLimitData]
 }
