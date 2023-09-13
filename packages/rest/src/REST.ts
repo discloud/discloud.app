@@ -23,6 +23,7 @@ export class REST extends EventEmitter {
     super({ captureRejections: true });
 
     this.requestManager = new RequestManager(options)
+      .on(RESTEvents.Error, this.emit.bind(this, RESTEvents.Error))
       .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
   }
 

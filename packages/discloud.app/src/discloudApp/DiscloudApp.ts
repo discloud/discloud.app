@@ -41,6 +41,7 @@ class DiscloudApp extends EventEmitter {
     options = mergeDefaults(DefaultDiscloudAppOptions, options);
 
     this.rest = new REST(options.rest)
+      .on(RESTEvents.Error, this.emit.bind(this, RESTEvents.Error))
       .on(RESTEvents.RateLimited, this.emit.bind(this, RESTEvents.RateLimited));
 
     if ("token" in options) {

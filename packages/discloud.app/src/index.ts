@@ -24,6 +24,7 @@ import User from "./structures/User";
 export * from "@discloudapp/api-types/v2";
 export * from "@discloudapp/rest";
 export * from "@discloudapp/util";
+export * from "./@enum";
 export * from "./@types";
 export * from "./util";
 export {
