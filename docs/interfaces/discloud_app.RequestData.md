@@ -38,7 +38,7 @@ ___
 
 ### dispatcher
 
-• `Optional` **dispatcher**: `Agent`
+• `Optional` **dispatcher**: `Dispatcher`
 
 The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to use for the request.
 

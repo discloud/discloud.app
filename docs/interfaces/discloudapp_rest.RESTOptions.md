@@ -8,25 +8,13 @@
 
 ### Properties
 
-- [agent](discloudapp_rest.RESTOptions.md#agent)
 - [api](discloudapp_rest.RESTOptions.md#api)
+- [dispatcher](discloudapp_rest.RESTOptions.md#dispatcher)
 - [globalRequestsPerMinute](discloudapp_rest.RESTOptions.md#globalrequestsperminute)
 - [headers](discloudapp_rest.RESTOptions.md#headers)
 - [version](discloudapp_rest.RESTOptions.md#version)
 
 ## Properties
-
-### agent
-
-• **agent**: `Dispatcher`
-
-The agent to set globally
-
-#### Defined in
-
-[packages/rest/src/@types/index.ts:18](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L18)
-
-___
 
 ### api
 
@@ -40,7 +28,19 @@ The base api path, without version
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L14)
+[packages/rest/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L14)
+
+___
+
+### dispatcher
+
+• **dispatcher**: `Dispatcher`
+
+The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to set globally
+
+#### Defined in
+
+[packages/rest/src/@types/index.ts:18](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L18)
 
 ___
 
@@ -56,7 +56,7 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L24)
+[packages/rest/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ Additional headers to send for all API requests
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:30](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L30)
+[packages/rest/src/@types/index.ts:30](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L30)
 
 ___
 
@@ -88,4 +88,4 @@ The version of the API to use
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L36)
+[packages/rest/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L36)

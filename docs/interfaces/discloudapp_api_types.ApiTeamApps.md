@@ -26,7 +26,7 @@ Your team's app exit code on stop
 
 #### Defined in
 
-[rest/v2/team.ts:27](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L27)
+[rest/v2/team.ts:27](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L27)
 
 ___
 
@@ -38,7 +38,7 @@ Your team application id
 
 #### Defined in
 
-[rest/v2/team.ts:11](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L11)
+[rest/v2/team.ts:11](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L11)
 
 ___
 
@@ -50,7 +50,7 @@ Your team's app programming language
 
 #### Defined in
 
-[rest/v2/team.ts:31](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L31)
+[rest/v2/team.ts:31](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L31)
 
 ___
 
@@ -62,7 +62,7 @@ Your team application name
 
 #### Defined in
 
-[rest/v2/team.ts:15](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L15)
+[rest/v2/team.ts:15](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L15)
 
 ___
 
@@ -74,7 +74,7 @@ If your team application is online
 
 #### Defined in
 
-[rest/v2/team.ts:19](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L19)
+[rest/v2/team.ts:19](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L19)
 
 ___
 
@@ -86,7 +86,7 @@ Your permissions to manage this application.
 
 #### Defined in
 
-[rest/v2/team.ts:35](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L35)
+[rest/v2/team.ts:35](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L35)
 
 ___
 
@@ -98,4 +98,4 @@ If your team's app stopped due to low RAM
 
 #### Defined in
 
-[rest/v2/team.ts:23](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/api-types/rest/v2/team.ts#L23)
+[rest/v2/team.ts:23](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/team.ts#L23)

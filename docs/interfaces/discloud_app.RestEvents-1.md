@@ -14,9 +14,20 @@
 
 ### Properties
 
+- [error](discloud_app.RestEvents-1.md#error)
 - [rateLimited](discloud_app.RestEvents-1.md#ratelimited)
 
 ## Properties
+
+### error
+
+• **error**: [error: Error]
+
+#### Defined in
+
+packages/rest/out/@types/index.d.ts:86
+
+___
 
 ### rateLimited
 
@@ -24,4 +35,4 @@
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:85
+packages/rest/out/@types/index.d.ts:87

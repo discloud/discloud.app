@@ -10,6 +10,7 @@
 
 - [global](discloud_app.RateLimitData.md#global)
 - [method](discloud_app.RateLimitData.md#method)
+- [path](discloud_app.RateLimitData.md#path)
 - [timeToReset](discloud_app.RateLimitData.md#timetoreset)
 - [url](discloud_app.RateLimitData.md#url)
 
@@ -21,7 +22,7 @@
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:82
+packages/rest/out/@types/index.d.ts:79
 
 ___
 
@@ -35,13 +36,23 @@ packages/rest/out/@types/index.d.ts:80
 
 ___
 
+### path
+
+• **path**: `string`
+
+#### Defined in
+
+packages/rest/out/@types/index.d.ts:81
+
+___
+
 ### timeToReset
 
 • **timeToReset**: `number`
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:79
+packages/rest/out/@types/index.d.ts:82
 
 ___
 
@@ -51,4 +62,4 @@ ___
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:81
+packages/rest/out/@types/index.d.ts:83

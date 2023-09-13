@@ -61,7 +61,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 #### Defined in
 
-[BitField.ts:33](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L33)
+[BitField.ts:33](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L33)
 
 ## Properties
 
@@ -77,7 +77,7 @@ Bitfield of the packed bits
 
 #### Defined in
 
-[BitField.ts:18](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L18)
+[BitField.ts:18](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L18)
 
 ___
 
@@ -91,7 +91,7 @@ BitField.constructor
 
 #### Defined in
 
-[BitField.ts:14](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L14)
+[BitField.ts:14](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L14)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[ModPermissionsBF.ts:20](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/ModPermissionsBF.ts#L20)
+[ModPermissionsBF.ts:20](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/ModPermissionsBF.ts#L20)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[BitField.ts:25](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L25)
+[BitField.ts:25](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L25)
 
 ___
 
@@ -145,7 +145,7 @@ Numeric bitfield flags.
 
 #### Defined in
 
-[ModPermissionsBF.ts:19](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/ModPermissionsBF.ts#L19)
+[ModPermissionsBF.ts:19](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/ModPermissionsBF.ts#L19)
 
 ## Methods
 
@@ -163,7 +163,7 @@ Numeric bitfield flags.
 
 #### Defined in
 
-[BitField.ts:145](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L145)
+[BitField.ts:145](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L145)
 
 ___
 
@@ -191,7 +191,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-[BitField.ts:42](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L42)
+[BitField.ts:42](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L42)
 
 ___
 
@@ -217,7 +217,7 @@ Checks whether the bitfield has a bit, or any of multiple bits.
 
 #### Defined in
 
-[BitField.ts:56](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L56)
+[BitField.ts:56](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L56)
 
 ___
 
@@ -243,7 +243,7 @@ Checks if this bitfield equals another
 
 #### Defined in
 
-[BitField.ts:64](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L64)
+[BitField.ts:64](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L64)
 
 ___
 
@@ -263,7 +263,7 @@ Freezes these bits, making them immutable.
 
 #### Defined in
 
-[BitField.ts:71](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L71)
+[BitField.ts:71](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L71)
 
 ___
 
@@ -289,7 +289,7 @@ Checks whether the bitfield has a bit, or multiple bits.
 
 #### Defined in
 
-[BitField.ts:79](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L79)
+[BitField.ts:79](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L79)
 
 ___
 
@@ -315,7 +315,7 @@ Gets all given bits that are missing from the bitfield.
 
 #### Defined in
 
-[BitField.ts:88](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L88)
+[BitField.ts:88](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L88)
 
 ___
 
@@ -343,7 +343,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-[BitField.ts:97](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L97)
+[BitField.ts:97](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L97)
 
 ___
 
@@ -364,7 +364,7 @@ bit is available.
 
 #### Defined in
 
-[BitField.ts:111](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L111)
+[BitField.ts:111](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L111)
 
 ___
 
@@ -392,7 +392,7 @@ These bits or new BitField if the instance is frozen.
 
 #### Defined in
 
-[BitField.ts:122](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L122)
+[BitField.ts:122](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L122)
 
 ___
 
@@ -412,7 +412,7 @@ Gets an Array of bitfield names based on the bits available.
 
 #### Defined in
 
-[BitField.ts:133](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L133)
+[BitField.ts:133](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L133)
 
 ___
 
@@ -430,7 +430,7 @@ ___
 
 #### Defined in
 
-[BitField.ts:137](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L137)
+[BitField.ts:137](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L137)
 
 ___
 
@@ -448,7 +448,7 @@ ___
 
 #### Defined in
 
-[BitField.ts:141](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L141)
+[BitField.ts:141](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L141)
 
 ___
 
@@ -480,4 +480,4 @@ Resolves bitfields to their numeric form.
 
 #### Defined in
 
-[BitField.ts:153](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/BitField.ts#L153)
+[BitField.ts:153](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/BitField.ts#L153)

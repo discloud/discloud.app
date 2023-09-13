@@ -42,9 +42,9 @@ Manager of cache
 
 - [\_add](discloud_app.CachedManager.md#_add)
 - [\_addMany](discloud_app.CachedManager.md#_addmany)
-- [\_clean](discloud_app.CachedManager.md#_clean)
-- [\_remove](discloud_app.CachedManager.md#_remove)
-- [\_removeMany](discloud_app.CachedManager.md#_removemany)
+- [\_clear](discloud_app.CachedManager.md#_clear)
+- [\_delete](discloud_app.CachedManager.md#_delete)
+- [\_deleteMany](discloud_app.CachedManager.md#_deletemany)
 
 ## Constructors
 
@@ -71,7 +71,7 @@ Manager of cache
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:11](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L11)
+[packages/discloud.app/src/managers/CachedManager.ts:11](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L11)
 
 ## Properties
 
@@ -81,7 +81,7 @@ Manager of cache
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:9](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L9)
+[packages/discloud.app/src/managers/CachedManager.ts:9](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L9)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/DataManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ## Accessors
 
@@ -127,7 +127,7 @@ DataManager.cache
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:15](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L15)
+[packages/discloud.app/src/managers/CachedManager.ts:15](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L15)
 
 ## Methods
 
@@ -147,7 +147,7 @@ DataManager.cache
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L19)
+[packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L19)
 
 ___
 
@@ -167,19 +167,19 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:34](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L34)
+[packages/discloud.app/src/managers/CachedManager.ts:34](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L34)
 
 ___
 
-### \_clean
+### \_clear
 
-▸ `Protected` **_clean**(`data`): `void`
+▸ `Protected` **_clear**(`data?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | { `id`: `string`  }[] |
+| `data?` | { `id`: `string`  }[] |
 
 #### Returns
 
@@ -187,13 +187,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:47](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L47)
+[packages/discloud.app/src/managers/CachedManager.ts:47](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L47)
 
 ___
 
-### \_remove
+### \_delete
 
-▸ `Protected` **_remove**(`id`): `boolean`
+▸ `Protected` **_delete**(`id`): `boolean`
 
 #### Parameters
 
@@ -207,13 +207,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:55](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L55)
+[packages/discloud.app/src/managers/CachedManager.ts:60](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L60)
 
 ___
 
-### \_removeMany
+### \_deleteMany
 
-▸ `Protected` **_removeMany**(`ids`): `boolean`
+▸ `Protected` **_deleteMany**(`ids`): `boolean`
 
 #### Parameters
 
@@ -227,4 +227,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:61](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/discloud.app/src/managers/CachedManager.ts#L61)
+[packages/discloud.app/src/managers/CachedManager.ts:66](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/CachedManager.ts#L66)

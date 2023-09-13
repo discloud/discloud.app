@@ -8,25 +8,13 @@
 
 ### Properties
 
-- [agent](discloud_app.RESTOptions.md#agent)
 - [api](discloud_app.RESTOptions.md#api)
+- [dispatcher](discloud_app.RESTOptions.md#dispatcher)
 - [globalRequestsPerMinute](discloud_app.RESTOptions.md#globalrequestsperminute)
 - [headers](discloud_app.RESTOptions.md#headers)
 - [version](discloud_app.RESTOptions.md#version)
 
 ## Properties
-
-### agent
-
-• **agent**: `Dispatcher`
-
-The agent to set globally
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:16
-
-___
 
 ### api
 
@@ -41,6 +29,18 @@ The base api path, without version
 #### Defined in
 
 packages/rest/out/@types/index.d.ts:12
+
+___
+
+### dispatcher
+
+• **dispatcher**: `Dispatcher`
+
+The [Agent](https://undici.nodejs.org/#/docs/api/Agent) to set globally
+
+#### Defined in
+
+packages/rest/out/@types/index.d.ts:16
 
 ___
 

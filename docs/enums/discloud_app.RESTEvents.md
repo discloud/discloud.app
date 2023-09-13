@@ -8,9 +8,20 @@
 
 ### Enumeration Members
 
+- [Error](discloud_app.RESTEvents.md#error)
 - [RateLimited](discloud_app.RESTEvents.md#ratelimited)
 
 ## Enumeration Members
+
+### Error
+
+• **Error** = ``"error"``
+
+#### Defined in
+
+packages/rest/out/@enum/index.d.ts:8
+
+___
 
 ### RateLimited
 
@@ -18,4 +29,4 @@
 
 #### Defined in
 
-packages/rest/out/@enum/index.d.ts:8
+packages/rest/out/@enum/index.d.ts:9

@@ -14,9 +14,24 @@
 
 ### Properties
 
+- [error](discloud_app.ClientEvents.md#error)
 - [rateLimited](discloud_app.ClientEvents.md#ratelimited)
 
 ## Properties
+
+### error
+
+• **error**: [error: Error]
+
+#### Inherited from
+
+[RestEvents](discloud_app.RestEvents-1.md).[error](discloud_app.RestEvents-1.md#error)
+
+#### Defined in
+
+packages/rest/out/@types/index.d.ts:86
+
+___
 
 ### rateLimited
 
@@ -28,4 +43,4 @@
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:85
+packages/rest/out/@types/index.d.ts:87

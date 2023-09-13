@@ -23,7 +23,7 @@ Content-Type of the file
 
 #### Defined in
 
-[FileResolver.ts:24](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/FileResolver.ts#L24)
+[FileResolver.ts:24](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/FileResolver.ts#L24)
 
 ___
 
@@ -35,7 +35,7 @@ The actual data for the file
 
 #### Defined in
 
-[FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/FileResolver.ts#L20)
+[FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/FileResolver.ts#L20)
 
 ___
 
@@ -47,7 +47,7 @@ An explicit key to use for key of the formdata field for this file.
 
 #### Defined in
 
-[FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/FileResolver.ts#L16)
+[FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/FileResolver.ts#L16)
 
 ___
 
@@ -59,4 +59,4 @@ The name of the file
 
 #### Defined in
 
-[FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/util/src/FileResolver.ts#L12)
+[FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/e5beb23/packages/util/src/FileResolver.ts#L12)

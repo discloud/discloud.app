@@ -72,59 +72,83 @@
 | :------ | :------ |
 | `options` | `Partial`<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
 
+#### Inherited from
+
+EventEmitter.constructor
+
 #### Defined in
 
-[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L22)
+[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L22)
 
 ## Properties
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, ...`args`: `unknown`[]) => `boolean`
+
+#### Overrides
+
+EventEmitter.emit
 
 #### Defined in
 
-[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L7)
+[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L7)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+
+#### Overrides
+
+EventEmitter.off
 
 #### Defined in
 
-[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L9)
+[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L9)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+
+#### Overrides
+
+EventEmitter.on
 
 #### Defined in
 
-[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L11)
+[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L11)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+
+#### Overrides
+
+EventEmitter.once
 
 #### Defined in
 
-[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L13)
+[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L13)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`REST`](discloudapp_rest.REST.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloudapp_rest.REST.md) & <S\>(`event?`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => [`REST`](discloudapp_rest.REST.md)
+
+#### Overrides
+
+EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L15)
+[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L15)
 
 ___
 
@@ -134,7 +158,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L20)
+[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L20)
 
 ___
 
@@ -251,7 +275,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/rest/src/REST.ts:29](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L29)
+[packages/rest/src/REST.ts:30](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L30)
 
 ## Methods
 
@@ -275,6 +299,10 @@ Alias for `emitter.on(eventName, listener)`.
 **`Since`**
 
 v0.1.26
+
+#### Inherited from
+
+EventEmitter.addListener
 
 #### Defined in
 
@@ -307,7 +335,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:59](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L59)
+[packages/rest/src/REST.ts:60](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L60)
 
 ___
 
@@ -340,6 +368,10 @@ console.log(myEE.eventNames());
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.eventNames
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:779
@@ -371,7 +403,7 @@ Runs a get request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:49](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L49)
+[packages/rest/src/REST.ts:50](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L50)
 
 ___
 
@@ -389,6 +421,10 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](disclou
 **`Since`**
 
 v1.0.0
+
+#### Inherited from
+
+EventEmitter.getMaxListeners
 
 #### Defined in
 
@@ -418,6 +454,10 @@ in the list of the listeners of the event.
 **`Since`**
 
 v3.2.0
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -453,6 +493,10 @@ console.log(util.inspect(server.listeners('connection')));
 
 v0.1.26
 
+#### Inherited from
+
+EventEmitter.listeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:644
@@ -484,7 +528,7 @@ Runs a post request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:69](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L69)
+[packages/rest/src/REST.ts:70](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L70)
 
 ___
 
@@ -519,6 +563,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 **`Since`**
 
 v6.0.0
+
+#### Inherited from
+
+EventEmitter.prependListener
 
 #### Defined in
 
@@ -556,6 +604,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.prependOnceListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:759
@@ -587,7 +639,7 @@ Runs a put request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:79](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L79)
+[packages/rest/src/REST.ts:80](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L80)
 
 ___
 
@@ -609,7 +661,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-[packages/rest/src/REST.ts:105](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L105)
+[packages/rest/src/REST.ts:106](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L106)
 
 ___
 
@@ -658,6 +710,10 @@ emitter.emit('log');
 **`Since`**
 
 v9.4.0
+
+#### Inherited from
+
+EventEmitter.rawListeners
 
 #### Defined in
 
@@ -764,6 +820,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.1.26
 
+#### Inherited from
+
+EventEmitter.removeListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:599
@@ -794,7 +854,7 @@ Runs a request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L88)
+[packages/rest/src/REST.ts:89](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L89)
 
 ___
 
@@ -823,6 +883,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.3.5
 
+#### Inherited from
+
+EventEmitter.setMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:625
@@ -847,7 +911,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/REST.ts:38](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/REST.ts#L38)
+[packages/rest/src/REST.ts:39](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/REST.ts#L39)
 
 ___
 
@@ -1002,6 +1066,10 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 v19.9.0
 
+#### Inherited from
+
+EventEmitter.getMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:325
@@ -1042,6 +1110,10 @@ v0.9.12
 **`Deprecated`**
 
 Since v3.2.0 - Use `listenerCount` instead.
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -1125,6 +1197,10 @@ that iterates `eventName` events emitted by the `emitter`
 **`Since`**
 
 v13.6.0, v12.16.0
+
+#### Inherited from
+
+EventEmitter.on
 
 #### Defined in
 
@@ -1229,6 +1305,10 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 v11.13.0, v10.16.0
 
+#### Inherited from
+
+EventEmitter.once
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:189
@@ -1246,6 +1326,10 @@ node_modules/@types/node/events.d.ts:189
 #### Returns
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+
+#### Inherited from
+
+EventEmitter.once
 
 #### Defined in
 
@@ -1280,6 +1364,10 @@ setMaxListeners(5, target, emitter);
 **`Since`**
 
 v15.4.0
+
+#### Inherited from
+
+EventEmitter.setMaxListeners
 
 #### Defined in
 

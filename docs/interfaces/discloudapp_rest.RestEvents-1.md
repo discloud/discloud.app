@@ -8,9 +8,20 @@
 
 ### Properties
 
+- [error](discloudapp_rest.RestEvents-1.md#error)
 - [rateLimited](discloudapp_rest.RestEvents-1.md#ratelimited)
 
 ## Properties
+
+### error
+
+• **error**: [error: Error]
+
+#### Defined in
+
+[packages/rest/src/@types/index.ts:93](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L93)
+
+___
 
 ### rateLimited
 
@@ -18,4 +29,4 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:92](https://github.com/discloud/discloud.app/blob/4f75b2e/packages/rest/src/@types/index.ts#L92)
+[packages/rest/src/@types/index.ts:94](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L94)

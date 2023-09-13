@@ -72,6 +72,10 @@
 | :------ | :------ |
 | `options?` | `Partial`<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
 
+#### Inherited from
+
+EventEmitter.constructor
+
 #### Defined in
 
 packages/rest/out/REST.d.ts:14
@@ -80,7 +84,11 @@ packages/rest/out/REST.d.ts:14
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, ...`args`: `unknown`[]) => `boolean`
+
+#### Overrides
+
+EventEmitter.emit
 
 #### Defined in
 
@@ -90,7 +98,11 @@ ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+
+#### Overrides
+
+EventEmitter.off
 
 #### Defined in
 
@@ -100,7 +112,11 @@ ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+
+#### Overrides
+
+EventEmitter.on
 
 #### Defined in
 
@@ -110,7 +126,11 @@ ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+
+#### Overrides
+
+EventEmitter.once
 
 #### Defined in
 
@@ -120,7 +140,11 @@ ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloud_app.REST.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`REST`](discloud_app.REST.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`REST`](discloud_app.REST.md) & <S\>(`event?`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>) => [`REST`](discloud_app.REST.md)
+
+#### Overrides
+
+EventEmitter.removeAllListeners
 
 #### Defined in
 
@@ -276,6 +300,10 @@ Alias for `emitter.on(eventName, listener)`.
 
 v0.1.26
 
+#### Inherited from
+
+EventEmitter.addListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:454
@@ -340,6 +368,10 @@ console.log(myEE.eventNames());
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.eventNames
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:779
@@ -390,6 +422,10 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](disclou
 
 v1.0.0
 
+#### Inherited from
+
+EventEmitter.getMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:631
@@ -418,6 +454,10 @@ in the list of the listeners of the event.
 **`Since`**
 
 v3.2.0
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -452,6 +492,10 @@ console.log(util.inspect(server.listeners('connection')));
 **`Since`**
 
 v0.1.26
+
+#### Inherited from
+
+EventEmitter.listeners
 
 #### Defined in
 
@@ -520,6 +564,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.prependListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:743
@@ -555,6 +603,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 **`Since`**
 
 v6.0.0
+
+#### Inherited from
+
+EventEmitter.prependOnceListener
 
 #### Defined in
 
@@ -658,6 +710,10 @@ emitter.emit('log');
 **`Since`**
 
 v9.4.0
+
+#### Inherited from
+
+EventEmitter.rawListeners
 
 #### Defined in
 
@@ -764,6 +820,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.1.26
 
+#### Inherited from
+
+EventEmitter.removeListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:599
@@ -822,6 +882,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 **`Since`**
 
 v0.3.5
+
+#### Inherited from
+
+EventEmitter.setMaxListeners
 
 #### Defined in
 
@@ -1002,6 +1066,10 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 v19.9.0
 
+#### Inherited from
+
+EventEmitter.getMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:325
@@ -1042,6 +1110,10 @@ v0.9.12
 **`Deprecated`**
 
 Since v3.2.0 - Use `listenerCount` instead.
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -1125,6 +1197,10 @@ that iterates `eventName` events emitted by the `emitter`
 **`Since`**
 
 v13.6.0, v12.16.0
+
+#### Inherited from
+
+EventEmitter.on
 
 #### Defined in
 
@@ -1229,6 +1305,10 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 v11.13.0, v10.16.0
 
+#### Inherited from
+
+EventEmitter.once
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:189
@@ -1246,6 +1326,10 @@ node_modules/@types/node/events.d.ts:189
 #### Returns
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+
+#### Inherited from
+
+EventEmitter.once
 
 #### Defined in
 
@@ -1280,6 +1364,10 @@ setMaxListeners(5, target, emitter);
 **`Since`**
 
 v15.4.0
+
+#### Inherited from
+
+EventEmitter.setMaxListeners
 
 #### Defined in
 

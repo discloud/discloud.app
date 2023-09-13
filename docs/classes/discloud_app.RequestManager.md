@@ -19,7 +19,6 @@
 ### Properties
 
 - [#private](discloud_app.RequestManager.md##private)
-- [agent](discloud_app.RequestManager.md#agent)
 - [emit](discloud_app.RequestManager.md#emit)
 - [globalLimit](discloud_app.RequestManager.md#globallimit)
 - [globalRemaining](discloud_app.RequestManager.md#globalremaining)
@@ -37,6 +36,7 @@
 
 ### Accessors
 
+- [baseURL](discloud_app.RequestManager.md#baseurl)
 - [globalLimited](discloud_app.RequestManager.md#globallimited)
 - [globalTimeToReset](discloud_app.RequestManager.md#globaltimetoreset)
 - [token](discloud_app.RequestManager.md#token)
@@ -68,17 +68,21 @@
 
 ### constructor
 
-• **new RequestManager**(`options`)
+• **new RequestManager**(`options?`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Partial`<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
+| `options?` | `Partial`<[`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)\> |
+
+#### Inherited from
+
+EventEmitter.constructor
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:36
+packages/rest/out/RequestManager.d.ts:30
 
 ## Properties
 
@@ -88,30 +92,21 @@ packages/rest/out/RequestManager.d.ts:36
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:13
-
-___
-
-### agent
-
-• `Optional` **agent**: `Dispatcher`
-
-The [Agent](https://undici.nodejs.org/#/docs/api/Agent) for all requests
-performed by this manager.
-
-#### Defined in
-
-packages/rest/out/RequestManager.d.ts:19
+packages/rest/out/RequestManager.d.ts:12
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, ...`args`: `any`[]) => `boolean`
+• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, ...`args`: `unknown`[]) => `boolean`
+
+#### Overrides
+
+EventEmitter.emit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:6
+packages/rest/out/RequestManager.d.ts:5
 
 ___
 
@@ -123,7 +118,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:23
+packages/rest/out/RequestManager.d.ts:17
 
 ___
 
@@ -135,7 +130,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:27
+packages/rest/out/RequestManager.d.ts:21
 
 ___
 
@@ -147,7 +142,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:31
+packages/rest/out/RequestManager.d.ts:25
 
 ___
 
@@ -159,13 +154,31 @@ The time at which the last request was made
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:35
+packages/rest/out/RequestManager.d.ts:29
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+
+#### Overrides
+
+EventEmitter.off
+
+#### Defined in
+
+packages/rest/out/RequestManager.d.ts:6
+
+___
+
+### on
+
+• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+
+#### Overrides
+
+EventEmitter.on
 
 #### Defined in
 
@@ -173,9 +186,13 @@ packages/rest/out/RequestManager.d.ts:7
 
 ___
 
-### on
+### once
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
+
+#### Overrides
+
+EventEmitter.once
 
 #### Defined in
 
@@ -183,33 +200,27 @@ packages/rest/out/RequestManager.d.ts:8
 
 ___
 
-### once
-
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, ``"rateLimited"``\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloud_app.RequestManager.md)
-
-#### Defined in
-
-packages/rest/out/RequestManager.d.ts:9
-
-___
-
 ### options
 
-• **options**: [`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)
+• `Readonly` **options**: [`RESTOptions`](../interfaces/discloud_app.RESTOptions.md)
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:14
+packages/rest/out/RequestManager.d.ts:13
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event?`: `Exclude`<`S`, ``"rateLimited"``\>) => [`RequestManager`](discloud_app.RequestManager.md)
+• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloud_app.RequestManager.md) & <S\>(`event?`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>) => [`RequestManager`](discloud_app.RequestManager.md)
+
+#### Overrides
+
+EventEmitter.removeAllListeners
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:10
+packages/rest/out/RequestManager.d.ts:9
 
 ___
 
@@ -316,6 +327,20 @@ node_modules/@types/node/events.d.ts:383
 
 ## Accessors
 
+### baseURL
+
+• `Private` `get` **baseURL**(): `any`
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+packages/rest/out/RequestManager.d.ts:31
+
+___
+
 ### globalLimited
 
 • `get` **globalLimited**(): `boolean`
@@ -328,7 +353,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:40
+packages/rest/out/RequestManager.d.ts:35
 
 ___
 
@@ -344,7 +369,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:44
+packages/rest/out/RequestManager.d.ts:39
 
 ___
 
@@ -358,7 +383,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:45
+packages/rest/out/RequestManager.d.ts:40
 
 ## Methods
 
@@ -382,6 +407,10 @@ Alias for `emitter.on(eventName, listener)`.
 **`Since`**
 
 v0.1.26
+
+#### Inherited from
+
+EventEmitter.addListener
 
 #### Defined in
 
@@ -418,6 +447,10 @@ console.log(myEE.eventNames());
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.eventNames
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:779
@@ -438,6 +471,10 @@ set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](disclou
 **`Since`**
 
 v1.0.0
+
+#### Inherited from
+
+EventEmitter.getMaxListeners
 
 #### Defined in
 
@@ -467,6 +504,10 @@ in the list of the listeners of the event.
 **`Since`**
 
 v3.2.0
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -501,6 +542,10 @@ console.log(util.inspect(server.listeners('connection')));
 **`Since`**
 
 v0.1.26
+
+#### Inherited from
+
+EventEmitter.listeners
 
 #### Defined in
 
@@ -540,6 +585,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v6.0.0
 
+#### Inherited from
+
+EventEmitter.prependListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:743
@@ -575,6 +624,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 **`Since`**
 
 v6.0.0
+
+#### Inherited from
+
+EventEmitter.prependOnceListener
 
 #### Defined in
 
@@ -627,6 +680,10 @@ emitter.emit('log');
 **`Since`**
 
 v9.4.0
+
+#### Inherited from
+
+EventEmitter.rawListeners
 
 #### Defined in
 
@@ -733,6 +790,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.1.26
 
+#### Inherited from
+
+EventEmitter.removeListener
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:599
@@ -748,7 +809,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` |
-| `options` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `options` | `undefined` \| { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
 
@@ -756,7 +817,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:58
+packages/rest/out/RequestManager.d.ts:53
 
 ___
 
@@ -781,7 +842,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:52
+packages/rest/out/RequestManager.d.ts:47
 
 ___
 
@@ -810,6 +871,10 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.3.5
 
+#### Inherited from
+
+EventEmitter.setMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:625
@@ -834,7 +899,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:51
+packages/rest/out/RequestManager.d.ts:46
 
 ___
 
@@ -989,6 +1054,10 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 v19.9.0
 
+#### Inherited from
+
+EventEmitter.getMaxListeners
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:325
@@ -1029,6 +1098,10 @@ v0.9.12
 **`Deprecated`**
 
 Since v3.2.0 - Use `listenerCount` instead.
+
+#### Inherited from
+
+EventEmitter.listenerCount
 
 #### Defined in
 
@@ -1112,6 +1185,10 @@ that iterates `eventName` events emitted by the `emitter`
 **`Since`**
 
 v13.6.0, v12.16.0
+
+#### Inherited from
+
+EventEmitter.on
 
 #### Defined in
 
@@ -1216,6 +1293,10 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 v11.13.0, v10.16.0
 
+#### Inherited from
+
+EventEmitter.once
+
 #### Defined in
 
 node_modules/@types/node/events.d.ts:189
@@ -1233,6 +1314,10 @@ node_modules/@types/node/events.d.ts:189
 #### Returns
 
 [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+
+#### Inherited from
+
+EventEmitter.once
 
 #### Defined in
 
@@ -1267,6 +1352,10 @@ setMaxListeners(5, target, emitter);
 **`Since`**
 
 v15.4.0
+
+#### Inherited from
+
+EventEmitter.setMaxListeners
 
 #### Defined in
 
