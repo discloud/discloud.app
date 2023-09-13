@@ -33,7 +33,7 @@ Message of the API
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/base.ts#L10)
+[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -49,7 +49,7 @@ The status of API response
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/base.ts#L5)
+[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/base.ts#L5)
 
 ___
 
@@ -61,4 +61,4 @@ The user
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/user.ts#L7)
+[packages/api-types/rest/v2/user.ts:7](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/user.ts#L7)

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:85](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L85)
+[packages/rest/src/@types/index.ts:85](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/@types/index.ts#L85)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:86](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L86)
+[packages/rest/src/@types/index.ts:86](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/@types/index.ts#L86)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:87](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L87)
+[packages/rest/src/@types/index.ts:87](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/@types/index.ts#L87)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:88](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L88)
+[packages/rest/src/@types/index.ts:88](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/@types/index.ts#L88)
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:89](https://github.com/discloud/discloud.app/blob/e5beb23/packages/rest/src/@types/index.ts#L89)
+[packages/rest/src/@types/index.ts:89](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/@types/index.ts#L89)

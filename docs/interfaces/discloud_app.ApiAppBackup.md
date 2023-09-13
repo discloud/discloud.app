@@ -33,7 +33,7 @@ Your app id
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/app.ts#L7)
+[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/app.ts#L7)
 
 ___
 
@@ -46,4 +46,4 @@ The backup url.
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:62](https://github.com/discloud/discloud.app/blob/e5beb23/packages/api-types/rest/v2/app.ts#L62)
+[packages/api-types/rest/v2/app.ts:62](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/app.ts#L62)

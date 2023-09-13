@@ -40,7 +40,7 @@ Base for all managers
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Properties
 
@@ -50,4 +50,4 @@ Base for all managers
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/e5beb23/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
