@@ -2,7 +2,7 @@ export function calculatePercentage(value: string | number, major: string | numb
   return Number((Number(value) / Number(major) * 100).toFixed(2));
 }
 
-export function mergeDefaults<A extends Record<any, any>>(defaults: A, options: A) {
+export function mergeDefaults<A extends Record<any, any>>(defaults: A, options: Partial<A>): A {
   if (options === null || options === undefined) return defaults;
 
   const keys = Object.keys(defaults);
@@ -17,5 +17,5 @@ export function mergeDefaults<A extends Record<any, any>>(defaults: A, options: 
     }
   }
 
-  return options;
+  return options as A;
 }
