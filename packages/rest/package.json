@@ -21,7 +21,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@discloudapp/api-types": "^0.4.0",
-    "@discloudapp/util": "^0.4.7",
+    "@discloudapp/util": "^0.5.1",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",
     "undici": "^5.24.0"

@@ -1,5 +1,5 @@
 import { RawFile } from "@discloudapp/util";
-import { Agent, BodyInit, Dispatcher, File, request } from "undici";
+import { BodyInit, Dispatcher, File, request } from "undici";
 import { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
@@ -13,9 +13,9 @@ export interface RESTOptions {
    */
   api: string
   /**
-   * The agent to set globally
+   * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to set globally
    */
-  agent: Dispatcher;
+  dispatcher: Dispatcher;
   /**
    * How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
    *
@@ -56,7 +56,7 @@ export interface RequestData {
   /**
    * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to use for the request.
    */
-  dispatcher?: Agent;
+  dispatcher?: Dispatcher;
   /**
    * File to be attached to this request
    */
@@ -82,10 +82,11 @@ export interface InternalRequest extends RequestData {
 }
 
 export interface RateLimitData {
-  timeToReset: number
-  method: `${RequestMethod}`,
-  url: string
   global: boolean
+  method: `${RequestMethod}`,
+  path: string,
+  timeToReset: number
+  url: string
 }
 
 export interface RestEvents {

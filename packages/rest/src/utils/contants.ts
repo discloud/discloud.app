@@ -5,12 +5,12 @@ import { join } from "node:path";
 import { Agent } from "undici";
 import { RESTOptions } from "../@types";
 
-const DiscloudAppPackageLocation = join(__dirname, "..", "..", "..", "..", "discloud.app", "package.json");
 export const os_name = type();
 export const os_release = release().split?.(".").slice(0, 2).join(".") ?? release();
 export const os_platform = platform();
 export const cpu_arch = arch();
 
+const DiscloudAppPackageLocation = join(__dirname, "..", "..", "..", "..", "discloud.app", "package.json");
 let discloudAppVersion = "";
 if (existsSync(DiscloudAppPackageLocation))
   discloudAppVersion = `/${JSON.parse(readFileSync(DiscloudAppPackageLocation, "utf8")).version}`;
@@ -18,8 +18,8 @@ if (existsSync(DiscloudAppPackageLocation))
 export const DefaultUserAgent = `DiscloudApp${discloudAppVersion} (${os_name} ${os_release}; ${os_platform}; ${cpu_arch})`;
 
 export const DefaultRestOptions: Required<RESTOptions> = {
-  agent: new Agent(),
   api: "https://api.discloud.app",
+  dispatcher: new Agent(),
   globalRequestsPerMinute: 60,
   headers: {
     "User-Agent": DefaultUserAgent,
