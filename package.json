@@ -13,7 +13,7 @@
     "@types/node": "^20.6.0",
     "@types/source-map-support": "^0.5.7",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
-    "@typescript-eslint/parser": "^6.4.1",
+    "@typescript-eslint/parser": "^6.7.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.49.0",
     "eslint-plugin-tsdoc": "^0.2.17",
