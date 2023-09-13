@@ -1,5 +1,6 @@
 import { ApiUser } from "@discloudapp/api-types/v2";
 import { REST, RESTEvents } from "@discloudapp/rest";
+import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "node:events";
 import { env } from "node:process";
 import { ClientEvents, DiscloudAppOptions } from "../@types";
@@ -8,7 +9,7 @@ import AppManager from "../managers/AppManager";
 import AppTeamManager from "../managers/AppTeamManager";
 import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions, mergeDefaults } from "../util";
+import { DefaultDiscloudAppOptions } from "../util";
 
 /**
  * Client for Discloud API

@@ -1,5 +1,5 @@
 import { ApiUser, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
-import { calculatePercentage } from "..";
+import { calculatePercentage } from "@discloudapp/util";
 import { LocaleString } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
@@ -54,7 +54,7 @@ export default class User extends Base {
     this._patch(data);
   }
 
-  protected _patch(data: ApiUser): this {
+  protected _patch(data: Partial<ApiUser>): this {
     if ("apps" in data)
       if (Array.isArray(data.apps)) {
         this.appIDs.clear();
@@ -74,13 +74,13 @@ export default class User extends Base {
       }
 
     if ("userID" in data)
-      this.id = data.userID;
+      this.id = data.userID!;
 
     if ("locale" in data)
-      this.locale = data.locale;
+      this.locale = data.locale!;
 
     if ("plan" in data)
-      this.plan = data.plan;
+      this.plan = data.plan!;
 
     if ("planDataEnd" in data) {
       this.planDataEnd = new Date(data.planDataEnd!);
@@ -88,7 +88,7 @@ export default class User extends Base {
     }
 
     if ("ramUsedMb" in data)
-      this.ramUsedMb = data.ramUsedMb;
+      this.ramUsedMb = data.ramUsedMb!;
 
     if ("subdomains" in data)
       if (Array.isArray(data.subdomains)) {
@@ -100,7 +100,7 @@ export default class User extends Base {
       }
 
     if ("totalRamMb" in data)
-      this.totalRamMb = data.totalRamMb;
+      this.totalRamMb = data.totalRamMb!;
 
     if ("ramUsedMb" in this && "totalRamMb" in this)
       this.ramUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
