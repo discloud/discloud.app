@@ -8,7 +8,7 @@
     "build": "tsc",
     "prepublish": "npm run build",
     "release": "npm run prepublish && npm publish",
-    "test:ts": "tsc --noEmit"
+    "test": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
