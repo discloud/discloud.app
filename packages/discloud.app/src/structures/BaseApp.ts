@@ -18,7 +18,8 @@ export default abstract class BaseApp extends Base {
   ) {
     super(discloudApp);
 
-    this._patch(data);
+    if ("id" in data)
+      this.id = data.id;
   }
 
   protected _patch(data: BaseApiApp) {

@@ -13,7 +13,8 @@ export default class AppTeam extends Base {
   }
 
   protected _patch(data: BaseApiApp): this {
-    this.appId = data.id;
+    if ("id" in data)
+      this.appId = data.id;
 
     return super._patch(data);
   }
