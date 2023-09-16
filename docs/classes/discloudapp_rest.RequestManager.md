@@ -82,7 +82,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L47)
+[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L47)
 
 ## Properties
 
@@ -92,7 +92,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L24)
+[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L24)
 
 ___
 
@@ -106,7 +106,7 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L11)
+[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L11)
 
 ___
 
@@ -118,7 +118,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L30)
+[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L30)
 
 ___
 
@@ -130,7 +130,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L35)
+[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L35)
 
 ___
 
@@ -142,7 +142,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L40)
+[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L40)
 
 ___
 
@@ -154,7 +154,7 @@ The time at which the last request was made
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L45)
+[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L45)
 
 ___
 
@@ -168,7 +168,7 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L13)
+[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L13)
 
 ___
 
@@ -182,7 +182,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L15)
+[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L15)
 
 ___
 
@@ -196,7 +196,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L17)
+[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L17)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L25)
+[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L25)
 
 ___
 
@@ -220,7 +220,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L19)
+[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L19)
 
 ___
 
@@ -337,7 +337,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L54)
+[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L54)
 
 ___
 
@@ -353,7 +353,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L61)
+[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L61)
 
 ___
 
@@ -369,7 +369,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L68)
+[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L68)
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L72)
+[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L72)
 
 ## Methods
 
@@ -808,7 +808,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `url` | `string` |
+| `url` | `string` \| `URL` |
 | `options` | `undefined` \| { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
@@ -817,7 +817,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:145](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L145)
+[packages/rest/src/RequestManager.ts:149](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L149)
 
 ___
 
@@ -838,11 +838,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
-| `url` | `string` |
+| `url` | `URL` |
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L86)
+[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L86)
 
 ___
 
@@ -899,7 +899,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/bf097cb/packages/rest/src/RequestManager.ts#L81)
+[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L81)
 
 ___
 

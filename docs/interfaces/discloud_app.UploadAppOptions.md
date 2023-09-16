@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/@types/index.ts#L25)
+[packages/discloud.app/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/@types/index.ts#L25)

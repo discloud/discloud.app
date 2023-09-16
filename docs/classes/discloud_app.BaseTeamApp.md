@@ -59,7 +59,7 @@ Base for app structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:15](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L15)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L15)
 
 ## Properties
 
@@ -73,7 +73,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -87,19 +87,19 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
 ### id
 
-• **id**: `string`
+• `Readonly` **id**: `string`
 
 Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
 
 ## Methods
 
@@ -117,7 +117,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [`BaseApiApp`](../interfaces/discloud_app.BaseApiApp.md) |
+| `data` | `Partial`<[`BaseApiApp`](../interfaces/discloud_app.BaseApiApp.md)\> |
 
 #### Returns
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:24](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L24)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L24)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
 
 ___
 
@@ -181,7 +181,7 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:34](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L34)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L31)
 
 ___
 
@@ -197,7 +197,7 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:66](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L66)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:63](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L63)
 
 ___
 
@@ -219,7 +219,7 @@ Set the quantity of ram to application of your team
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:43](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L43)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:40](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L40)
 
 ___
 
@@ -235,7 +235,7 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:73](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L73)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:70](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L70)
 
 ___
 
@@ -251,7 +251,7 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:80](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L80)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:77](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L77)
 
 ___
 
@@ -267,7 +267,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:50](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L50)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L47)
 
 ___
 
@@ -281,7 +281,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:86](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L86)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:83](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L83)
 
 ___
 
@@ -303,4 +303,4 @@ Update an of your team apps on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:59](https://github.com/discloud/discloud.app/blob/bf097cb/packages/discloud.app/src/structures/BaseTeamApp.ts#L59)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:56](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L56)

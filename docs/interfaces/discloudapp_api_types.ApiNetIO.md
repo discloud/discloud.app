@@ -21,7 +21,7 @@ Amount of downloaded to container
 
 #### Defined in
 
-[rest/v2/app.ts:169](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/app.ts#L169)
+[rest/v2/app.ts:169](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/app.ts#L169)
 
 ___
 
@@ -33,4 +33,4 @@ Amount of uploaded from container
 
 #### Defined in
 
-[rest/v2/app.ts:173](https://github.com/discloud/discloud.app/blob/bf097cb/packages/api-types/rest/v2/app.ts#L173)
+[rest/v2/app.ts:173](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/app.ts#L173)

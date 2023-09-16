@@ -82,7 +82,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:30
+packages/rest/out/RequestManager.d.ts:31
 
 ## Properties
 
@@ -92,7 +92,7 @@ packages/rest/out/RequestManager.d.ts:30
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:12
+packages/rest/out/RequestManager.d.ts:13
 
 ___
 
@@ -106,7 +106,7 @@ EventEmitter.emit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:5
+packages/rest/out/RequestManager.d.ts:6
 
 ___
 
@@ -118,7 +118,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:17
+packages/rest/out/RequestManager.d.ts:18
 
 ___
 
@@ -130,7 +130,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:21
+packages/rest/out/RequestManager.d.ts:22
 
 ___
 
@@ -142,7 +142,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:25
+packages/rest/out/RequestManager.d.ts:26
 
 ___
 
@@ -154,7 +154,7 @@ The time at which the last request was made
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:29
+packages/rest/out/RequestManager.d.ts:30
 
 ___
 
@@ -168,7 +168,7 @@ EventEmitter.off
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:6
+packages/rest/out/RequestManager.d.ts:7
 
 ___
 
@@ -182,7 +182,7 @@ EventEmitter.on
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:7
+packages/rest/out/RequestManager.d.ts:8
 
 ___
 
@@ -196,7 +196,7 @@ EventEmitter.once
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:8
+packages/rest/out/RequestManager.d.ts:9
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:13
+packages/rest/out/RequestManager.d.ts:14
 
 ___
 
@@ -220,7 +220,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:9
+packages/rest/out/RequestManager.d.ts:10
 
 ___
 
@@ -337,7 +337,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:31
+packages/rest/out/RequestManager.d.ts:32
 
 ___
 
@@ -353,7 +353,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:35
+packages/rest/out/RequestManager.d.ts:36
 
 ___
 
@@ -369,7 +369,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:39
+packages/rest/out/RequestManager.d.ts:40
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:40
+packages/rest/out/RequestManager.d.ts:41
 
 ## Methods
 
@@ -808,7 +808,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `url` | `string` |
+| `url` | `string` \| `URL` |
 | `options` | `undefined` \| { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
@@ -817,7 +817,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:53
+packages/rest/out/RequestManager.d.ts:54
 
 ___
 
@@ -838,11 +838,11 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"path"`` \| ``"origin"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
-| `url` | `string` |
+| `url` | `URL` |
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:47
+packages/rest/out/RequestManager.d.ts:48
 
 ___
 
@@ -899,7 +899,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:46
+packages/rest/out/RequestManager.d.ts:47
 
 ___
 
