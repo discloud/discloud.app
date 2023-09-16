@@ -155,7 +155,7 @@ export class RequestManager extends EventEmitter {
         global: this.globalLimited,
         method: options.method ?? "GET",
         timeToReset: this.globalTimeToReset,
-        url,
+        url: url.toString(),
       });
 
       await sleep(this.globalTimeToReset);
