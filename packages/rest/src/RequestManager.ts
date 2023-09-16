@@ -147,7 +147,7 @@ export class RequestManager extends EventEmitter {
     return { url, fetchOptions };
   }
 
-  async request(url: string | URL | UrlObject, options: RequestOptions) {
+  async request(url: string | URL, options: RequestOptions) {
     if (!options) options = {};
 
     while (this.globalLimited) {
