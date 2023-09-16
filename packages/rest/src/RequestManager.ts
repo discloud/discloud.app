@@ -1,11 +1,10 @@
 import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
-import { UrlObject } from "node:url";
 import { File, FormData, request } from "undici";
 import { RESTEvents } from "./@enum";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
-import DiscloudAPIError from "./errors/DiscloudAPIError";
+import { DiscloudAPIError } from "./errors";
 import { DefaultRestOptions } from "./utils";
 
 export interface RequestManager extends EventEmitter {
