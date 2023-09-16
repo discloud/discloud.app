@@ -1,6 +1,7 @@
 import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
+import { UrlObject } from "node:url";
 import { File, FormData, request } from "undici";
 import { RESTEvents } from "./@enum";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
@@ -86,10 +87,14 @@ export class RequestManager extends EventEmitter {
   resolveRequest(request: InternalRequest) {
     const headers: RequestHeaders = Object.assign({}, this.options.headers, { "api-token": this.#token });
 
-    const url = `${this.baseURL}${request.fullRoute}`;
+    const url = new URL(request.fullRoute, this.baseURL);
+
+    if (request.query) {
+      url.search = new URLSearchParams(request.query).toString();
+    }
 
     const additionalHeaders: Record<string, string> = {};
-    const additionalOptions: Partial<RequestOptions> = { query: request.query };
+    const additionalOptions: Partial<RequestOptions> = {};
     const formData = new FormData();
 
     if (request.file) {
@@ -142,7 +147,7 @@ export class RequestManager extends EventEmitter {
     return { url, fetchOptions };
   }
 
-  async request(url: string, options: RequestOptions) {
+  async request(url: string | URL | UrlObject, options: RequestOptions) {
     if (!options) options = {};
 
     while (this.globalLimited) {
@@ -166,6 +171,7 @@ export class RequestManager extends EventEmitter {
     if (!isNaN(remaining)) this.globalRemaining = remaining;
     if (!isNaN(reset)) this.globalReset = reset;
 
+    url = url.toString();
     const path = url.replace(this.baseURL, "") || `/${url.split("/").slice(4).join("/") ?? url.split("/").at(-1)}`;
 
     if (this.globalLimited) {
