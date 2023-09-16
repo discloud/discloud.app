@@ -10,7 +10,7 @@ export default abstract class BaseTeamApp extends Base {
   /**
    * Your app id
    */
-  declare id: string;
+  declare readonly id: string;
 
   constructor(
     discloudApp: DiscloudApp,
@@ -18,14 +18,10 @@ export default abstract class BaseTeamApp extends Base {
   ) {
     super(discloudApp);
 
-    if ("id" in data)
-      this.id = data.id;
+    this.id = data.id;
   }
 
-  protected _patch(data: BaseApiApp) {
-    if ("id" in data)
-      this.id = data.id;
-
+  protected _patch(data: Partial<BaseApiApp>) {
     return super._patch(data);
   }
 

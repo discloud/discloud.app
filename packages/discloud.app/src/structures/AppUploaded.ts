@@ -6,7 +6,7 @@ export default class AppUploaded extends Base {
   /**
    * Your app id
    */
-  declare appId: string;
+  declare readonly appId: string;
   /**
    * The timestamp of the upload of your application
    */
@@ -47,39 +47,38 @@ export default class AppUploaded extends Base {
   constructor(discloudApp: DiscloudApp, data: ApiUploadApp) {
     super(discloudApp);
 
+    this.appId = data.id;
+
     this._patch(data);
   }
 
-  protected _patch(data: ApiUploadApp): this {
+  protected _patch(data: Partial<ApiUploadApp>): this {
     if ("addedAtTimestamp" in data)
-      this.addedAtTimestamp = data.addedAtTimestamp;
+      this.addedAtTimestamp = data.addedAtTimestamp!;
 
     if ("avatarURL" in data)
-      this.avatarURL = data.avatarURL;
+      this.avatarURL = data.avatarURL!;
 
     if ("autoRestart" in data)
-      this.autoRestart = data.autoRestart;
-
-    if ("id" in data)
-      this.appId = data.id;
+      this.autoRestart = data.autoRestart!;
 
     if ("lang" in data)
-      this.lang = data.lang;
+      this.lang = data.lang!;
 
     if ("mainFile" in data)
-      this.mainFile = data.mainFile;
+      this.mainFile = data.mainFile!;
 
     if ("name" in data)
-      this.name = data.name;
+      this.name = data.name!;
 
     if ("ram" in data)
-      this.ram = data.ram;
+      this.ram = data.ram!;
 
     if ("type" in data)
-      this.type = data.type;
+      this.type = data.type!;
 
     if ("version" in data)
-      this.version = data.version;
+      this.version = data.version!;
 
     return super._patch(data);
   }

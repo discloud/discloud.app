@@ -1,4 +1,4 @@
-import { ApiStatusApp, ApiTeamApps } from "@discloudapp/api-types/v2";
+import { ApiStatusApp, ApiTeamApps, BaseApiApp } from "@discloudapp/api-types/v2";
 import { ModPermissionsFlags } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseTeamApp from "./BaseTeamApp";
@@ -32,26 +32,26 @@ export default class TeamApp extends BaseTeamApp {
 
   declare readonly status: TeamAppStatus;
 
-  constructor(discloudApp: DiscloudApp, data: ApiTeamApps | ApiStatusApp) {
+  constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp, data);
 
-    this.status = new TeamAppStatus(this.discloudApp, <ApiStatusApp>data);
+    this.status = new TeamAppStatus(this.discloudApp, data);
 
     this._patch(data);
   }
 
-  protected _patch(data: ApiTeamApps | ApiStatusApp): this {
+  protected _patch(data: Partial<ApiTeamApps | ApiStatusApp>): this {
     if ("exitCode" in data)
-      this.exitCode = data.exitCode;
+      this.exitCode = data.exitCode!;
 
     if ("lang" in data)
-      this.lang = data.lang;
+      this.lang = data.lang!;
 
     if ("name" in data)
-      this.name = data.name;
+      this.name = data.name!;
 
     if ("online" in data)
-      this.online = data.online;
+      this.online = data.online!;
 
     if ("perms" in data) 
       if (Array.isArray(data.perms)) {
@@ -63,7 +63,7 @@ export default class TeamApp extends BaseTeamApp {
       }
 
     if ("ramKilled" in data)
-      this.ramKilled = data.ramKilled;
+      this.ramKilled = data.ramKilled!;
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore

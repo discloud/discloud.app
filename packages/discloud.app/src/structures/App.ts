@@ -1,4 +1,4 @@
-import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
+import { ApiApp, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppApt from "./AppApt";
 import AppStatus from "./AppStatus";
@@ -55,34 +55,34 @@ export default class App extends BaseApp {
   declare readonly status: AppStatus;
   declare readonly team: AppTeam;
 
-  constructor(discloudApp: DiscloudApp, data: ApiApp | ApiStatusApp) {
+  constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp, data);
 
     this.apt = new AppApt(this.discloudApp, data);
-    this.status = new AppStatus(this.discloudApp, <ApiStatusApp>data);
+    this.status = new AppStatus(this.discloudApp, data);
     this.team = new AppTeam(this.discloudApp, data);
 
     this._patch(data);
   }
 
-  protected _patch(data: ApiApp | ApiStatusApp) {
+  protected _patch(data: Partial<ApiApp | ApiStatusApp>) {
     if ("autoDeployGit" in data)
-      this.autoDeployGit = data.autoDeployGit;
+      this.autoDeployGit = data.autoDeployGit!;
 
     if ("autoRestart" in data)
-      this.autoRestart = data.autoRestart;
+      this.autoRestart = data.autoRestart!;
 
     if ("avatarURL" in data)
-      this.avatarURL = data.avatarURL;
+      this.avatarURL = data.avatarURL!;
 
     if ("exitCode" in data)
-      this.exitCode = data.exitCode;
+      this.exitCode = data.exitCode!;
 
     if ("lang" in data)
-      this.lang = data.lang;
+      this.lang = data.lang!;
 
     if ("mainFile" in data)
-      this.mainFile = data.mainFile;
+      this.mainFile = data.mainFile!;
 
     if ("mods" in data)
       if (Array.isArray(data.mods)) {
@@ -94,16 +94,16 @@ export default class App extends BaseApp {
       }
 
     if ("name" in data)
-      this.name = data.name;
+      this.name = data.name!;
 
     if ("online" in data)
-      this.online = data.online;
+      this.online = data.online!;
 
     if ("ram" in data)
-      this.ram = data.ram;
+      this.ram = data.ram!;
 
     if ("ramKilled" in data)
-      this.ramKilled = data.ramKilled;
+      this.ramKilled = data.ramKilled!;
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore

@@ -1,4 +1,4 @@
-import { ApiNetIO, ApiStatusApp } from "@discloudapp/api-types/v2";
+import { ApiNetIO, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
 import { calculatePercentage } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
@@ -7,7 +7,7 @@ export default class AppStatus extends Base {
   /**
    * Your app id
    */
-  declare appId: string;
+  declare readonly appId: string;
   /**
    * Status of your application
    * - It can be `Online` or `Offline` for example
@@ -46,43 +46,40 @@ export default class AppStatus extends Base {
    */
   declare startedAtTimestamp: number;
 
-  constructor(discloudApp: DiscloudApp, data: ApiStatusApp) {
+  constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp);
 
-    this._patch(data);
+    this.appId = data.id;
   }
 
-  protected _patch(data: ApiStatusApp): this {
+  protected _patch(data: Partial<ApiStatusApp>): this {
     if ("container" in data)
-      this.container = data.container;
+      this.container = data.container!;
 
     if ("cpu" in data)
-      this.cpu = data.cpu;
-
-    if ("id" in data)
-      this.appId = data.id;
+      this.cpu = data.cpu!;
 
     if ("last_restart" in data)
-      this.lastRestart = data.last_restart;
+      this.lastRestart = data.last_restart!;
 
     if ("memory" in data) {
-      this.memory = data.memory;
-      const matched = data.memory.match(/[\d.]+/g) ?? [];
+      this.memory = data.memory!;
+      const matched = data.memory?.match(/[\d.]+/g) ?? [];
       this.memoryUsage = calculatePercentage(matched[0]!, matched[1]);
     }
 
     if ("netIO" in data)
-      this.netIO = data.netIO;
+      this.netIO = data.netIO!;
 
     if ("ssd" in data)
-      this.ssd = data.ssd;
+      this.ssd = data.ssd!;
 
     if ("startedAt" in data) {
-      this.startedAt = new Date(data.startedAt);
+      this.startedAt = new Date(data.startedAt!);
       this.startedAtTimestamp = this.startedAt.valueOf();
     }
 
-    return this;
+    return super._patch(data);
   }
 
   get app() {
