@@ -44,11 +44,20 @@ export default abstract class CachedManager<T> extends DataManager<T> {
     return cache;
   }
 
-  protected _clear(data?: { id: string }[]) {
+  protected _clear(data?: (string | { id: string })[]) {
     if (!data?.length)
       return this.#cache.clear();
 
-    const mapped = data.map(app => app.id);
+    const mapped: string[] = [];
+
+    for (const iterator of data) {
+      if (typeof iterator === "string") {
+        mapped.push(iterator);
+      } else {
+        mapped.push(iterator.id);
+      }
+    }
+
 
     for (const id of this.#cache.keys()) {
       if (!mapped.includes(id)) {

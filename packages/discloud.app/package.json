@@ -26,7 +26,7 @@
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
     "@discloudapp/api-types": "^0.4.0",
-    "@discloudapp/rest": "^0.8.0",
+    "@discloudapp/rest": "^0.8.1",
     "@discloudapp/util": "^0.5.1",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",

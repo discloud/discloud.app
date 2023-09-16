@@ -1,6 +1,9 @@
 import { ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppStatusResult, RESTGetApiTeamResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
+import { constants } from "node:http2";
 import { File } from "undici";
+import z from "zod";
 import { UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
@@ -100,6 +103,9 @@ export default class TeamAppManager extends CachedManager<TeamApp> {
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
   async ram(appID: string, quantity: number) {
+    z.string().parse(appID);
+    z.number().parse(quantity);
+
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
         ramMB: quantity,
@@ -122,6 +128,8 @@ export default class TeamAppManager extends CachedManager<TeamApp> {
    * @param options - Options to update your app.
    */
   async update(appID: string, options: UpdateAppOptions) {
+    z.string().parse(appID);
+
     options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<
@@ -225,12 +233,26 @@ export default class TeamAppManager extends CachedManager<TeamApp> {
 
   /**
    * Get information of your team application on Discloud.
-   * 
-   * @param appID - You app id.
    */
   async fetch() {
-    const data = await this.discloudApp.rest.get<RESTGetApiTeamResult>(Routes.team());
+    try {
+      const data = await this.discloudApp.rest.get<RESTGetApiTeamResult>(Routes.team());
 
-    return this._addMany(data.apps);
+      this._clear(data.apps);
+
+      return this._addMany(data.apps);
+    } catch (error) {
+      if (error instanceof DiscloudAPIError) {
+        switch (error.code) {
+          case constants.HTTP_STATUS_NOT_FOUND:
+            this._clear();
+            break;
+
+          default: throw error;
+        }
+      }
+
+      throw error;
+    }
   }
 }

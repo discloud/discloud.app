@@ -1,4 +1,5 @@
 import { APTString, RESTDeleteApiAppAptResult, RESTPutApiAppAptResult, Routes } from "@discloudapp/api-types/v2";
+import z from "zod";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseManager from "./BaseManager";
 
@@ -17,6 +18,8 @@ export default class AppAptManager extends BaseManager {
    * @param apt - One or more APTs to install. See {@link AptString}.
    */
   async install(appID: string, apt: APTString | APTString[]): Promise<RESTPutApiAppAptResult> {
+    z.string().parse(appID);
+
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), {
@@ -35,6 +38,8 @@ export default class AppAptManager extends BaseManager {
    * @param apt - One or more APTs to uninstall. See {@link AptString}.
    */
   async uninstall(appID: string, apt: APTString | APTString[]): Promise<RESTDeleteApiAppAptResult> {
+    z.string().parse(appID);
+
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
     const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(appID), {

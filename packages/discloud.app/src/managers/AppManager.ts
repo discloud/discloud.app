@@ -1,6 +1,9 @@
 import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTApiBaseResult, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { DiscloudAPIError } from "@discloudapp/rest";
 import { FileResolvable, resolveFile } from "@discloudapp/util";
+import { constants } from "node:http2";
 import { File } from "undici";
+import z from "zod";
 import { CreateAppOptions, ProfileOptions, UpdateAppOptions } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
@@ -102,9 +105,8 @@ export default class AppManager extends CachedManager<App> {
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
   async ram(appID: string, quantity: number) {
-    if (!appID) throw new Error("App ID is missing.");
-
-    if (quantity < 100) throw new Error("RAM quantity must be more than 100.");
+    z.string().parse(appID);
+    z.number().min(100).parse(quantity);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
@@ -148,6 +150,8 @@ export default class AppManager extends CachedManager<App> {
    * @param options - Options to update your app.
    */
   async update(appID: string, options: UpdateAppOptions) {
+    z.string().parse(appID);
+
     options.file = await resolveFile(options.file);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.appCommit(appID), {
@@ -302,16 +306,44 @@ export default class AppManager extends CachedManager<App> {
   async fetch(appID = "all") {
     if (appID === "all") return this.#fetchMany();
 
-    const data = await this.discloudApp.rest.get<RESTGetApiAppResult>(Routes.app(appID));
+    try {
+      const data = await this.discloudApp.rest.get<RESTGetApiAppResult>(Routes.app(appID));
 
-    return this._add(data.apps);
+      return this._add(data.apps);
+    } catch (error) {
+      if (error instanceof DiscloudAPIError) {
+        switch (error.code) {
+          case constants.HTTP_STATUS_NOT_FOUND:
+            this._delete(appID);
+            break;
+
+          default: throw error;
+        }
+      }
+
+      throw error;
+    }
   }
 
   async #fetchMany() {
-    const data = await this.discloudApp.rest.get<RESTGetApiAppAllResult>(Routes.app("all"));
+    try {
+      const data = await this.discloudApp.rest.get<RESTGetApiAppAllResult>(Routes.app("all"));
 
-    this._clear(data.apps);
+      this._clear(data.apps);
 
-    return this._addMany(data.apps);
+      return this._addMany(data.apps);
+    } catch (error) {
+      if (error instanceof DiscloudAPIError) {
+        switch (error.code) {
+          case constants.HTTP_STATUS_NOT_FOUND:
+            this._clear();
+            break;
+
+          default: throw error;
+        }
+      }
+
+      throw error;
+    }
   }
 }
