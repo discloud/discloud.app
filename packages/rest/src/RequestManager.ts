@@ -86,7 +86,7 @@ export class RequestManager extends EventEmitter {
   resolveRequest(request: InternalRequest) {
     const headers: RequestHeaders = Object.assign({}, this.options.headers, { "api-token": this.#token });
 
-    const url = new URL(request.fullRoute, this.baseURL);
+    const url = new URL(this.baseURL + request.fullRoute);
 
     if (request.query) {
       url.search = new URLSearchParams(request.query).toString();
