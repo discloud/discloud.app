@@ -58,7 +58,6 @@ export default abstract class CachedManager<T> extends DataManager<T> {
       }
     }
 
-
     for (const id of this.#cache.keys()) {
       if (!mapped.includes(id)) {
         this._delete(id);
