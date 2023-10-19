@@ -23,7 +23,7 @@
     "typedoc-plugin-coverage": "^2.2.0",
     "typedoc-plugin-markdown": "^3.16.0",
     "typedoc-plugin-mdn-links": "^3.1.0",
-    "typedoc-plugin-rename-defaults": "^0.6.6",
+    "typedoc-plugin-rename-defaults": "^0.6.7",
     "typescript": "^5.2.2"
   },
   "yarn-upgrade-all": {}
