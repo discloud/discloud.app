@@ -16,6 +16,18 @@ yarn add discloud.app
 
 ## Examples usage
 
+[Examples usage](#examples-usage)  
+[How to upload/commit your application](#how-to-uploadcommit-your-application)  
+[How to fetch your application](#how-to-fetch-your-application)  
+[How to start, stop, restart or delete your application](#how-to-start-stop-restart-or-delete-your-application)  
+[How to view app `logs`](#how-to-view-app-logs)  
+[How to `backup` apps](#how-to-backup-apps)  
+[How to see your app `statuses`](#how-to-see-your-app-statuses)  
+[How to change your app's `name` and/or `avatar`](#how-to-change-your-apps-name-andor-avatar)  
+[How to change the amount of `RAM` in the app](#how-to-change-the-amount-of-ram-in-the-app)  
+[How to install or uninstall `APT`](#how-to-install-or-uninstall-apt)  
+[How to `fetch`/`add`/`edit`/`remove` moderators for your application](#how-to-fetchaddeditremove-moderators-for-your-application)  
+
 ```js
 // index.js
 // Get instanced discloud
@@ -191,7 +203,7 @@ discloud.appApt.install("APP_ID", [
 discloud.appApt.uninstall("APP_ID", ["canvas", "ffmpeg"]); // Promise<RESTDeleteApiAppAptResult>
 ```
 
-## How to `fetch`/`add`/`edit`/`remove` moderators for your application
+### How to `fetch`/`add`/`edit`/`remove` moderators for your application
 
 ```js
 const { discloud, ModPermissions } = require("discloud.app");
