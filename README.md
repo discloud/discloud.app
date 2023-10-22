@@ -37,7 +37,7 @@ async function () {
 }
 ```
 
-## How to `upload`/`commit` your app
+### How to `upload`/`commit` your application
 
 Before continuing, make sure your [`zip`](https://docs.discloudbot.com/v/en/suport/faq/zip) contains the [`discloud.config`](https://docs.discloudbot.com/v/en/discloud.config) file.
 
@@ -95,4 +95,134 @@ const { discloud, streamToFile } = require("discloud.app");
 const file = await streamToFile(stream, "FILE_NAME.zip");
 
 discloud.apps.create({ file }); // Promise<RESTPostApiUploadResult>
+```
+
+### How to `fetch` your application
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.fetch("APP_ID"); // Promise<App>
+discloud.apps.fetch(/* "all" | undefined */); // Promise<Map<string, App>>
+```
+
+### How to `start`, `stop`, `restart` or `delete` your application
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.start("APP_ID"); // Promise<RESTApiBaseResult>
+discloud.apps.start(/* "all" | undefined */); // Promise<ApiAppManagerStartedAll>
+
+discloud.apps.stop("APP_ID"); // Promise<RESTApiBaseResult>
+discloud.apps.stop(/* "all" | undefined */); // Promise<ApiAppManagerStopedAll>
+
+discloud.apps.restart("APP_ID"); // Promise<RESTApiBaseResult>
+discloud.apps.restart(/* "all" | undefined */); // Promise<ApiAppManagerRestartedAll>
+
+discloud.apps.delete("APP_ID"); // Promise<RESTDeleteApiAppDeleteResult>
+discloud.apps.delete(/* "all" | undefined */); // Promise<ApiAppManagerRemovedAll>
+```
+
+### How to view app `logs`
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.terminal("APP_ID"); // Promise<ApiTerminal>
+discloud.apps.terminal(/* "all" | undefined */); // Promise<Map<string, ApiTerminal>>
+```
+
+### How to `backup` apps
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.backup("APP_ID"); // Promise<AppBackup>
+discloud.apps.backup(/* "all" | undefined */); // Promise<Map<string, AppBackup>>
+```
+
+### How to see your app `statuses`
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.status("APP_ID"); // Promise<AppStatus>
+discloud.apps.status(/* "all" | undefined */); // Promise<Map<string, AppStatus>>
+```
+
+### How to change your app's `name` and/or `avatar`
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.profile("APP_ID", {
+  avatarURL // Optional URL ending with JPG, JPEG or PNG
+  name // Optional text up to 30 characters
+}); // Promise<RESTApiBaseResult>
+```
+
+### How to change the amount of `RAM` in the app
+
+```js
+const { discloud } = require("discloud.app");
+
+discloud.apps.ram("APP_ID", 100 /* number greater than 100 */); // Promise<RESTPutApiAppRamResult>
+// Remember that if your app type is site, the minimum is 512
+```
+
+### How to install or uninstall `APT`
+
+```js
+const { discloud } = require("discloud.app");
+
+// Install APTs
+discloud.appApt.install("APP_ID", [
+  "canvas",
+  "ffmpeg",
+  "java",
+  "libgl",
+  "openssl",
+  "puppeteer",
+  "tools",
+]); // Promise<RESTPutApiAppAptResult>
+
+// Uninstall APTs
+discloud.appApt.uninstall("APP_ID", ["canvas", "ffmpeg"]); // Promise<RESTDeleteApiAppAptResult>
+```
+
+## How to `fetch`/`add`/`edit`/`remove` moderators for your application
+
+```js
+const { discloud, ModPermissions } = require("discloud.app");
+
+// Fetch mods and permissions
+discloud.appTeam.fetch("APP_ID"); // Promise<ApiAppTeam[]>
+
+// Add a mod
+discloud.appTeam.create("APP_ID", "MOD_ID", [
+  "backup_app",
+  "commit_app",
+  "edit_ram",
+  "logs_app",
+  "restart_app",
+  "start_app",
+  "status_app",
+  "stop_app",
+]); // Promise<ApiAppTeamManager>
+
+// Edit mod permissions
+discloud.appTeam.edit("APP_ID", "MOD_ID", [
+  ModPermissions.backup_app,
+  ModPermissions.commit_app,
+  ModPermissions.edit_ram,
+  ModPermissions.logs_app,
+  ModPermissions.restart_app,
+  ModPermissions.start_app,
+  ModPermissions.status_app,
+  ModPermissions.stop_app,
+]); // Promise<ApiAppTeamManager>
+
+// Remove a mod
+discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 ```
