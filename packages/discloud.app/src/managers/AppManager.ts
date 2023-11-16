@@ -15,7 +15,7 @@ import CachedManager from "./CachedManager";
 /**
  * Manager for apps on Discloud
  */
-export default class AppManager extends CachedManager<App> {
+export default class AppManager extends CachedManager<typeof App> {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp, App);
   }

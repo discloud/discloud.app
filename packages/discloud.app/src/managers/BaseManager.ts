@@ -4,5 +4,9 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
  * Base for all managers
  */
 export default abstract class BaseManager {
-  constructor(public readonly discloudApp: DiscloudApp) { }
+  declare public readonly discloudApp: DiscloudApp;
+
+  constructor(discloudApp: DiscloudApp) {
+    Object.defineProperty(this, "discloudApp", { value: discloudApp });
+  }
 }

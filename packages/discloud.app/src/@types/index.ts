@@ -2,7 +2,11 @@ import { RestEvents, RESTOptions } from "@discloudapp/rest";
 import { FileResolvable } from "@discloudapp/util";
 import z from "zod";
 
-export type Constructor<T> = new (...args: any[]) => T;
+export type Constructable<T extends new (...args: any) => InstanceType<T> = any> = new (...args: any) => InstanceType<T>;
+
+export interface Constructor<T> {
+  new(...args: any): T
+}
 
 export type If<T extends boolean, A, B = undefined> = T extends true ? A : T extends false ? B : A | B;
 

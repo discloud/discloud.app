@@ -1,26 +1,25 @@
-import { Constructor } from "../@types";
+import { Constructable } from "../@types";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import DataManager from "./DataManager";
 
 /**
  * Manager of cache
  */
-export default abstract class CachedManager<T> extends DataManager<T> {
-  #cache: Map<string, T> = new Map();
-
-  constructor(discloudApp: DiscloudApp, holds: Constructor<T>) {
+export default abstract class CachedManager<T extends Constructable<T>> extends DataManager<T> {
+  constructor(discloudApp: DiscloudApp, holds: T, iterable?: Iterable<InstanceType<T>>) {
     super(discloudApp, holds);
+
+    if (iterable) {
+      for (const item of iterable) {
+        this._add(item);
+      }
+    }
   }
 
-  get cache() {
-    return this.#cache;
-  }
-
-  protected _add(data: any): T {
+  protected _add(data: any): InstanceType<T> {
     const existing = this.cache.get(data.id);
     if (existing) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error ts(2339)
       existing._patch(data);
       return existing;
     }
@@ -31,13 +30,12 @@ export default abstract class CachedManager<T> extends DataManager<T> {
     return entry;
   }
 
-  protected _addMany(data: any[]): Map<string, T> {
-    const cache = new Map<string, T>();
+  protected _addMany(data: any[]): Map<string, InstanceType<T>> {
+    const cache = new Map<string, InstanceType<T>>();
 
     for (const element of data) {
       const obj = this._add(element);
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error ts(2339)
       cache.set(obj.id, obj);
     }
 
@@ -46,19 +44,11 @@ export default abstract class CachedManager<T> extends DataManager<T> {
 
   protected _clear(data?: (string | { id: string })[]) {
     if (!data?.length)
-      return this.#cache.clear();
+      return this._cache.clear();
 
-    const mapped: string[] = [];
+    const mapped = data.map(v => typeof v === "string" ? v : v.id);
 
-    for (const iterator of data) {
-      if (typeof iterator === "string") {
-        mapped.push(iterator);
-      } else {
-        mapped.push(iterator.id);
-      }
-    }
-
-    for (const id of this.#cache.keys()) {
+    for (const id of this._cache.keys()) {
       if (!mapped.includes(id)) {
         this._delete(id);
       }

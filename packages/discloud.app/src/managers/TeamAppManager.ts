@@ -14,7 +14,7 @@ import CachedManager from "./CachedManager";
 /**
  * Manager for your team on Discloud
  */
-export default class TeamAppManager extends CachedManager<TeamApp> {
+export default class TeamAppManager extends CachedManager<typeof TeamApp> {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp, TeamApp);
   }
