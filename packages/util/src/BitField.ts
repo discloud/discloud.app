@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 /**
  * @internal
  */
@@ -40,10 +38,13 @@ export abstract class BitField<S, N> {
    * @returns These bits or new BitField if the instance is frozen.
    */
   add(...bits: BitFieldResolvable<S, N>[]): this {
+    // @ts-expect-error ts(2362)
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
+    // @ts-expect-error ts(2511)
     if (Object.isFrozen(this)) return new this.constructor(this.bitField | total);
 
+    // @ts-expect-error ts(2363)
     this.bitField |= total;
 
     return this;
@@ -86,6 +87,7 @@ export abstract class BitField<S, N> {
    * @param bits - Bit(s) to check for
    */
   missing(...bits: BitFieldResolvable<S, N>[]): S[] {
+    // @ts-expect-error ts(2511)
     return new this.constructor(bits).remove(this).toArray() as S[];
   }
 
@@ -95,10 +97,13 @@ export abstract class BitField<S, N> {
    * @returns These bits or new BitField if the instance is frozen.
    */
   remove(...bits: BitFieldResolvable<S, N>[]): this {
+    // @ts-expect-error ts(2362)
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
+    // @ts-expect-error ts(2511)
     if (Object.isFrozen(this)) return new this.constructor(this.bitField & ~total);
 
+    // @ts-expect-error ts(2322)
     this.bitField &= ~total;
 
     return this;
@@ -120,6 +125,7 @@ export abstract class BitField<S, N> {
    * @returns These bits or new BitField if the instance is frozen.
    */
   set(...bits: BitFieldResolvable<S, N>[]): this {
+    // @ts-expect-error ts(2511)
     if (Object.isFrozen(this)) return new this.constructor(bits);
 
     this.bitField = this.constructor.resolve(bits);
@@ -131,6 +137,7 @@ export abstract class BitField<S, N> {
    * Gets an {@link Array} of bitfield names based on the bits available.
    */
   toArray() {
+    // @ts-expect-error ts(2345)
     return Object.keys(this.constructor.Flags).filter(bit => this.has(bit)) as S[];
   }
 
@@ -155,13 +162,17 @@ export abstract class BitField<S, N> {
 
     const DefaultBit = this.DefaultBit as N;
 
+    // @ts-expect-error ts(2322)
     if (Array.isArray(bit)) return bit.reduce((p, b) => p | this.resolve(b), DefaultBit);
 
+    // @ts-expect-error ts(2322) ts(2365)
     if (typeof DefaultBit === typeof bit && bit >= DefaultBit) return bit;
 
     if (typeof bit === "string") {
+      // @ts-expect-error ts(7053)
       if (this.Flags[bit] !== undefined) return this.Flags[bit];
 
+      // @ts-expect-error ts(2322)
       if (!isNaN(Number(bit))) return typeof DefaultBit === "bigint" ? BigInt(bit) : Number(bit);
     }
 
