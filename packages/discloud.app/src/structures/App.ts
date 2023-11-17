@@ -1,4 +1,4 @@
-import { ApiApp, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
+import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import AppApt from "./AppApt";
 import AppStatus from "./AppStatus";
@@ -55,12 +55,14 @@ export default class App extends BaseApp {
   declare readonly status: AppStatus;
   declare readonly team: AppTeam;
 
-  constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
+  constructor(discloudApp: DiscloudApp, data: ApiApp | ApiStatusApp) {
     super(discloudApp, data);
 
-    this.apt = new AppApt(this.discloudApp, data);
-    this.status = new AppStatus(this.discloudApp, data);
-    this.team = new AppTeam(this.discloudApp, data);
+    Object.defineProperties(this, {
+      apt: { value: new AppApt(this.discloudApp, data) },
+      status: { value: new AppStatus(this.discloudApp, data) },
+      team: { value: new AppTeam(this.discloudApp, data) },
+    });
 
     this._patch(data);
   }
@@ -105,8 +107,7 @@ export default class App extends BaseApp {
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled!;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
+    // @ts-expect-error ts(2345) ts(2445)
     this.apt._patch(data); this.status._patch(data); this.team._patch(data);
 
     return super._patch(data);

@@ -35,7 +35,7 @@ export default class TeamApp extends BaseTeamApp {
   constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp, data);
 
-    this.status = new TeamAppStatus(this.discloudApp, data);
+    Object.defineProperty(this, "status", { value: new TeamAppStatus(this.discloudApp, data) });
 
     this._patch(data);
   }
@@ -65,8 +65,7 @@ export default class TeamApp extends BaseTeamApp {
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled!;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
+    // @ts-expect-error ts(2445)
     this.status._patch(data);
 
     return super._patch(data);

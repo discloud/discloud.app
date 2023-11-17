@@ -9,7 +9,11 @@ interface Base {
  * Base for all structures
  */
 abstract class Base {
-  constructor(public readonly discloudApp: DiscloudApp) { }
+  declare public readonly discloudApp: DiscloudApp;
+
+  constructor(discloudApp: DiscloudApp) {
+    Object.defineProperty(this, "discloudApp", { value: discloudApp });
+  }
 
   protected _clone(): this {
     return Object.assign(Object.create(this), this);
