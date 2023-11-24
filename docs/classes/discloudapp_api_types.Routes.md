@@ -42,17 +42,21 @@
 
 ### constructor
 
-• **new Routes**()
+• **new Routes**(): [`Routes`](discloudapp_api_types.Routes.md)
+
+#### Returns
+
+[`Routes`](discloudapp_api_types.Routes.md)
 
 ## Properties
 
 ### app
 
-▪ `Static` **app**: <appID\>(`appID`: `appID`) => \`/app/${appID}\` = `App.app`
+▪ `Static` **app**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}\` = `App.app`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}\`
 
 - GET - `/app/{appID}`
 
@@ -70,21 +74,21 @@
 
 ##### Returns
 
-\`/app/${appID}\`
+\`/app/$\{appID}\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L9)
+[rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L9)
 
 ___
 
 ### appApt
 
-▪ `Static` **appApt**: <appID\>(`appID`: `appID`) => \`/app/${appID}/apt\` = `App.apt`
+▪ `Static` **appApt**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/apt\` = `App.apt`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/apt\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/apt\`
 
 - PUT - `/app/{appID}/apt`
 - DELETE - `/app/{appID}/apt`
@@ -103,21 +107,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/apt\`
+\`/app/$\{appID}/apt\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L10)
+[rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L10)
 
 ___
 
 ### appBackup
 
-▪ `Static` **appBackup**: <appID\>(`appID`: `appID`) => \`/app/${appID}/backup\` = `App.backup`
+▪ `Static` **appBackup**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/backup\` = `App.backup`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/backup\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/backup\`
 
 - GET - `/app/{appID}/backup`
 
@@ -135,21 +139,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/backup\`
+\`/app/$\{appID}/backup\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L11)
+[rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L11)
 
 ___
 
 ### appCommit
 
-▪ `Static` **appCommit**: <appID\>(`appID`: `appID`) => \`/app/${appID}/commit\` = `App.commit`
+▪ `Static` **appCommit**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/commit\` = `App.commit`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/commit\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/commit\`
 
 - PUT - `/app/{appID}/commit`
 
@@ -167,21 +171,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/commit\`
+\`/app/$\{appID}/commit\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L12)
+[rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L12)
 
 ___
 
 ### appDelete
 
-▪ `Static` **appDelete**: <appID\>(`appID`: `appID`) => \`/app/${appID}/delete\` = `App.delete`
+▪ `Static` **appDelete**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/delete\` = `App.delete`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/delete\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/delete\`
 
 - DELETE - `/app/{appID}/delete`
 
@@ -199,21 +203,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/delete\`
+\`/app/$\{appID}/delete\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L13)
+[rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L13)
 
 ___
 
 ### appLogs
 
-▪ `Static` **appLogs**: <appID\>(`appID`: `appID`) => \`/app/${appID}/logs\` = `App.logs`
+▪ `Static` **appLogs**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/logs\` = `App.logs`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/logs\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/logs\`
 
 - GET - `/app/{appID}/logs`
 
@@ -231,21 +235,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/logs\`
+\`/app/$\{appID}/logs\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L14)
+[rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L14)
 
 ___
 
 ### appProfile
 
-▪ `Static` **appProfile**: <appID\>(`appID`: `appID`) => \`/app/${appID}/profile\` = `App.profile`
+▪ `Static` **appProfile**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/profile\` = `App.profile`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/profile\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/profile\`
 
 - PUT - `/app/{appID}/profile`
 
@@ -263,21 +267,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/profile\`
+\`/app/$\{appID}/profile\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L15)
+[rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L15)
 
 ___
 
 ### appRam
 
-▪ `Static` **appRam**: <appID\>(`appID`: `appID`) => \`/app/${appID}/ram\` = `App.ram`
+▪ `Static` **appRam**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/ram\` = `App.ram`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/ram\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/ram\`
 
 - PUT - `/app/{appID}/ram`
 
@@ -295,21 +299,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/ram\`
+\`/app/$\{appID}/ram\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L16)
+[rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L16)
 
 ___
 
 ### appRestart
 
-▪ `Static` **appRestart**: <appID\>(`appID`: `appID`) => \`/app/${appID}/restart\` = `App.restart`
+▪ `Static` **appRestart**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/restart\` = `App.restart`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/restart\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/restart\`
 
 - PUT - `/app/{appID}/restart`
 
@@ -327,21 +331,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/restart\`
+\`/app/$\{appID}/restart\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L17)
+[rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L17)
 
 ___
 
 ### appStart
 
-▪ `Static` **appStart**: <appID\>(`appID`: `appID`) => \`/app/${appID}/start\` = `App.start`
+▪ `Static` **appStart**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/start\` = `App.start`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/start\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/start\`
 
 - PUT - `/app/{appID}/start`
 
@@ -359,21 +363,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/start\`
+\`/app/$\{appID}/start\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L18)
+[rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L18)
 
 ___
 
 ### appStatus
 
-▪ `Static` **appStatus**: <appID\>(`appID`: `appID`) => \`/app/${appID}/status\` = `App.status`
+▪ `Static` **appStatus**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/status\` = `App.status`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/status\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/status\`
 
 - GET - `/app/{appID}/status`
 
@@ -391,21 +395,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/status\`
+\`/app/$\{appID}/status\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L19)
+[rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L19)
 
 ___
 
 ### appStop
 
-▪ `Static` **appStop**: <appID\>(`appID`: `appID`) => \`/app/${appID}/stop\` = `App.stop`
+▪ `Static` **appStop**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/stop\` = `App.stop`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/stop\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/stop\`
 
 - PUT - `/app/{appID}/stop`
 
@@ -423,21 +427,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/stop\`
+\`/app/$\{appID}/stop\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L20)
+[rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L20)
 
 ___
 
 ### appTeam
 
-▪ `Static` **appTeam**: <appID\>(`appID`: `appID`) => \`/app/${appID}/team\`<appID, modID\>(`appID`: `appID`, `modID`: `modID`) => \`/app/${appID}/team/${modID}\` = `App.team`
+▪ `Static` **appTeam**: \<appID\>(`appID`: `appID`) => \`/app/$\{appID}/team\`\<appID, modID\>(`appID`: `appID`, `modID`: `modID`) => \`/app/$\{appID}/team/$\{modID}\` = `App.team`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/app/${appID}/team\`
+▸ \<`appID`\>(`appID`): \`/app/$\{appID}/team\`
 
 - GET - `/app/{appID}/team`
 - POST - `/app/{appID}/team`
@@ -458,9 +462,9 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/team\`
+\`/app/$\{appID}/team\`
 
-▸ <`appID`, `modID`\>(`appID`, `modID`): \`/app/${appID}/team/${modID}\`
+▸ \<`appID`, `modID`\>(`appID`, `modID`): \`/app/$\{appID}/team/$\{modID}\`
 
 ##### Type parameters
 
@@ -478,21 +482,21 @@ ___
 
 ##### Returns
 
-\`/app/${appID}/team/${modID}\`
+\`/app/$\{appID}/team/$\{modID}\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L21)
+[rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L21)
 
 ___
 
 ### locale
 
-▪ `Static` **locale**: <locale\>(`locale`: `locale`) => \`/locale/${locale}\` = `Locale.locale`
+▪ `Static` **locale**: \<locale\>(`locale`: `locale`) => \`/locale/$\{locale}\` = `Locale.locale`
 
 #### Type declaration
 
-▸ <`locale`\>(`locale`): \`/locale/${locale}\`
+▸ \<`locale`\>(`locale`): \`/locale/$\{locale}\`
 
 - PUT - `/locale/{locale}`
 
@@ -510,11 +514,11 @@ ___
 
 ##### Returns
 
-\`/locale/${locale}\`
+\`/locale/$\{locale}\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L24)
+[rest/v2/routes/index.ts:24](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L24)
 
 ___
 
@@ -534,17 +538,17 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:27](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L27)
+[rest/v2/routes/index.ts:27](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L27)
 
 ___
 
 ### teamBackup
 
-▪ `Static` **teamBackup**: <appID\>(`appID`: `appID`) => \`/team/${appID}/backup\` = `Team.backup`
+▪ `Static` **teamBackup**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/backup\` = `Team.backup`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/backup\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/backup\`
 
 - GET - `/app/{appID}/backup`
 
@@ -562,21 +566,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/backup\`
+\`/team/$\{appID}/backup\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L28)
+[rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L28)
 
 ___
 
 ### teamCommit
 
-▪ `Static` **teamCommit**: <appID\>(`appID`: `appID`) => \`/team/${appID}/commit\` = `Team.commit`
+▪ `Static` **teamCommit**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/commit\` = `Team.commit`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/commit\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/commit\`
 
 - PUT - `/app/{appID}/commit`
 
@@ -594,21 +598,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/commit\`
+\`/team/$\{appID}/commit\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L29)
+[rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L29)
 
 ___
 
 ### teamLogs
 
-▪ `Static` **teamLogs**: <appID\>(`appID`: `appID`) => \`/team/${appID}/logs\` = `Team.logs`
+▪ `Static` **teamLogs**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/logs\` = `Team.logs`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/logs\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/logs\`
 
 - GET - `/team/{appID}/logs`
 
@@ -626,21 +630,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/logs\`
+\`/team/$\{appID}/logs\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L30)
+[rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L30)
 
 ___
 
 ### teamRam
 
-▪ `Static` **teamRam**: <appID\>(`appID`: `appID`) => \`/team/${appID}/ram\` = `Team.ram`
+▪ `Static` **teamRam**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/ram\` = `Team.ram`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/ram\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/ram\`
 
 - PUT - `/team/{appID}/ram`
 
@@ -658,21 +662,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/ram\`
+\`/team/$\{appID}/ram\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L31)
+[rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L31)
 
 ___
 
 ### teamRestart
 
-▪ `Static` **teamRestart**: <appID\>(`appID`: `appID`) => \`/team/${appID}/restart\` = `Team.restart`
+▪ `Static` **teamRestart**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/restart\` = `Team.restart`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/restart\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/restart\`
 
 - PUT - `/app/{appID}/restart`
 
@@ -690,21 +694,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/restart\`
+\`/team/$\{appID}/restart\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L32)
+[rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L32)
 
 ___
 
 ### teamStart
 
-▪ `Static` **teamStart**: <appID\>(`appID`: `appID`) => \`/team/${appID}/start\` = `Team.start`
+▪ `Static` **teamStart**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/start\` = `Team.start`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/start\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/start\`
 
 - PUT - `/app/{appID}/start`
 
@@ -722,21 +726,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/start\`
+\`/team/$\{appID}/start\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L33)
+[rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L33)
 
 ___
 
 ### teamStatus
 
-▪ `Static` **teamStatus**: <appID\>(`appID`: `appID`) => \`/team/${appID}/status\` = `Team.status`
+▪ `Static` **teamStatus**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/status\` = `Team.status`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/status\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/status\`
 
 - PUT - `/app/{appID}/status`
 
@@ -754,21 +758,21 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/status\`
+\`/team/$\{appID}/status\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L34)
+[rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L34)
 
 ___
 
 ### teamStop
 
-▪ `Static` **teamStop**: <appID\>(`appID`: `appID`) => \`/team/${appID}/stop\` = `Team.stop`
+▪ `Static` **teamStop**: \<appID\>(`appID`: `appID`) => \`/team/$\{appID}/stop\` = `Team.stop`
 
 #### Type declaration
 
-▸ <`appID`\>(`appID`): \`/team/${appID}/stop\`
+▸ \<`appID`\>(`appID`): \`/team/$\{appID}/stop\`
 
 - PUT - `/app/{appID}/stop`
 
@@ -786,11 +790,11 @@ ___
 
 ##### Returns
 
-\`/team/${appID}/stop\`
+\`/team/$\{appID}/stop\`
 
 #### Defined in
 
-[rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L35)
+[rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L35)
 
 ___
 
@@ -810,7 +814,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:38](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L38)
+[rest/v2/routes/index.ts:38](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L38)
 
 ___
 
@@ -830,4 +834,4 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:41](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/routes/index.ts#L41)
+[rest/v2/routes/index.ts:41](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/routes/index.ts#L41)

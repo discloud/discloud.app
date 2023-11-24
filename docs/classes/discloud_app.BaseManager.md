@@ -30,7 +30,7 @@ Base for all managers
 
 ### constructor
 
-• **new BaseManager**(`discloudApp`)
+• **new BaseManager**(`discloudApp`): [`BaseManager`](discloud_app.BaseManager.md)
 
 #### Parameters
 
@@ -38,9 +38,13 @@ Base for all managers
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 
+#### Returns
+
+[`BaseManager`](discloud_app.BaseManager.md)
+
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:9](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/BaseManager.ts#L9)
 
 ## Properties
 
@@ -50,4 +54,4 @@ Base for all managers
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/BaseManager.ts#L7)

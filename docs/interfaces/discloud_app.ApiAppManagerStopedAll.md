@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- `Omit`<[`ApiAppManager`](discloud_app.ApiAppManager.md), ``"alreadyOnline"``\>
+- `Omit`\<[`ApiAppManager`](discloud_app.ApiAppManager.md), ``"alreadyOnline"``\>
 
   ↳ **`ApiAppManagerStopedAll`**
 
@@ -32,7 +32,7 @@ Omit.alreadyInProcess
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/app.ts#L83)
+[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L83)
 
 ___
 
@@ -48,7 +48,7 @@ Omit.alreadyOffline
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/app.ts#L87)
+[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L87)
 
 ___
 
@@ -60,4 +60,4 @@ Which of your applications have been `stoped`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:119](https://github.com/discloud/discloud.app/blob/a945852/packages/api-types/rest/v2/app.ts#L119)
+[packages/api-types/rest/v2/app.ts:119](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L119)

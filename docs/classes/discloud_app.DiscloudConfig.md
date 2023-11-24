@@ -34,13 +34,17 @@
 
 ### constructor
 
-• **new DiscloudConfig**(`path`)
+• **new DiscloudConfig**(`path`): [`DiscloudConfig`](discloud_app.DiscloudConfig.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `path` | `string` |
+
+#### Returns
+
+[`DiscloudConfig`](discloud_app.DiscloudConfig.md)
 
 #### Defined in
 
@@ -154,7 +158,7 @@ packages/util/out/DiscloudConfig.d.ts:16
 
 ### get
 
-▸ **get**<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)[`K`]
+▸ **get**\<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)[`K`]
 
 #### Type parameters
 
@@ -180,7 +184,7 @@ ___
 
 ### set
 
-▸ **set**<`K`\>(`key`, `value`): `void`
+▸ **set**\<`K`\>(`key`, `value`): `void`
 
 #### Type parameters
 
@@ -207,18 +211,18 @@ ___
 
 ### update
 
-▸ **update**(`save`, `comments?`): `void` \| [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+▸ **update**(`save`, `comments?`): `void` \| `Error`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `save` | `Partial`<[`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)\> |
+| `save` | `Partial`\<[`DiscloudConfigType`](../modules/discloud_app.md#discloudconfigtype)\> |
 | `comments?` | `string`[] |
 
 #### Returns
 
-`void` \| [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+`void` \| `Error`
 
 #### Defined in
 

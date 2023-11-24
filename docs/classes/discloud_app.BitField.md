@@ -1,6 +1,6 @@
 [Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / BitField
 
-# Class: BitField<S, N\>
+# Class: BitField\<S, N\>
 
 [discloud.app](../modules/discloud_app.md).BitField
 
@@ -53,7 +53,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 ### constructor
 
-• **new BitField**<`S`, `N`\>(`...bits`)
+• **new BitField**\<`S`, `N`\>(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 #### Type parameters
 
@@ -66,7 +66,11 @@ Data structure that makes it easy to interact with a bitfield.
 
 | Name | Type |
 | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] |
+
+#### Returns
+
+[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 #### Defined in
 
@@ -88,7 +92,7 @@ ___
 
 ### constructor
 
-• **constructor**: [`BitFieldConstructor`](../modules/discloud_app.md#bitfieldconstructor)<`S`, `N`\>
+• **constructor**: [`BitFieldConstructor`](../modules/discloud_app.md#bitfieldconstructor)\<`S`, `N`\>
 
 #### Defined in
 
@@ -108,7 +112,7 @@ ___
 
 ### Flags
 
-▪ `Static` **Flags**: `EnumLike`<`unknown`, `number` \| `bigint`\>
+▪ `Static` **Flags**: `EnumLike`\<`unknown`, `number` \| `bigint`\>
 
 Numeric bitfield flags.
 <info>Defined in extension classes</info>
@@ -121,11 +125,11 @@ packages/util/out/BitField.d.ts:25
 
 ### [iterator]
 
-▸ **[iterator]**(): [`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<`S`, `void`, `undefined`\>
+▸ **[iterator]**(): `Generator`\<`S`, `void`, `undefined`\>
 
 #### Returns
 
-[`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<`S`, `void`, `undefined`\>
+`Generator`\<`S`, `void`, `undefined`\>
 
 #### Defined in
 
@@ -135,7 +139,7 @@ ___
 
 ### add
 
-▸ **add**(`...bits`): [`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+▸ **add**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 Adds bits to these ones.
 
@@ -143,11 +147,11 @@ Adds bits to these ones.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bits to add |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bits to add |
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 These bits or new BitField if the instance is frozen.
 
@@ -167,7 +171,7 @@ Checks whether the bitfield has a bit, or any of multiple bits.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -189,7 +193,7 @@ Checks if this bitfield equals another
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -203,13 +207,13 @@ ___
 
 ### freeze
 
-▸ **freeze**(): `Readonly`<[`BitField`](discloud_app.BitField.md)<`S`, `N`\>\>
+▸ **freeze**(): `Readonly`\<[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>\>
 
 Freezes these bits, making them immutable.
 
 #### Returns
 
-`Readonly`<[`BitField`](discloud_app.BitField.md)<`S`, `N`\>\>
+`Readonly`\<[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>\>
 
 #### Defined in
 
@@ -227,7 +231,7 @@ Checks whether the bitfield has a bit, or multiple bits.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -249,7 +253,7 @@ Gets all given bits that are missing from the bitfield.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -263,7 +267,7 @@ ___
 
 ### remove
 
-▸ **remove**(`...bits`): [`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+▸ **remove**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 Removes bits from these.
 
@@ -271,11 +275,11 @@ Removes bits from these.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | Bits to remove |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | Bits to remove |
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 These bits or new BitField if the instance is frozen.
 
@@ -287,14 +291,14 @@ ___
 
 ### serialize
 
-▸ **serialize**(): `Record`<`S`, `boolean`\>
+▸ **serialize**(): `Record`\<`S`, `boolean`\>
 
 Gets an object mapping field names to a boolean indicating whether the
 bit is available.
 
 #### Returns
 
-`Record`<`S`, `boolean`\>
+`Record`\<`S`, `boolean`\>
 
 #### Defined in
 
@@ -304,7 +308,7 @@ ___
 
 ### set
 
-▸ **set**(`...bits`): [`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+▸ **set**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 Replace the bits with these.
 
@@ -312,11 +316,11 @@ Replace the bits with these.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`S`, `N`\>[] | bits to set |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`S`, `N`\>[] | bits to set |
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)<`S`, `N`\>
+[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
 
 These bits or new BitField if the instance is frozen.
 
@@ -372,7 +376,7 @@ ___
 
 ### resolve
 
-▸ `Static` **resolve**<`N`\>(`bit`): `N`
+▸ **resolve**\<`N`\>(`bit`): `N`
 
 Resolves bitfields to their numeric form.
 
@@ -386,7 +390,7 @@ Resolves bitfields to their numeric form.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `bit` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`string`, `N`\> | bit(s) to resolve |
+| `bit` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`string`, `N`\> | bit(s) to resolve |
 
 #### Returns
 

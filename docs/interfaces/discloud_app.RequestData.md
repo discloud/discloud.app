@@ -62,7 +62,7 @@ ___
 
 ### headers
 
-• `Optional` **headers**: `Record`<`string`, `string`\>
+• `Optional` **headers**: `Record`\<`string`, `string`\>
 
 Additional headers to add to this request
 

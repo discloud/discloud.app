@@ -30,13 +30,17 @@
 
 ### constructor
 
-• **new IgnoreFiles**(`options`)
+• **new IgnoreFiles**(`options`): [`IgnoreFiles`](discloud_app.IgnoreFiles.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `options` | [`IgnoreFilesOptions`](../interfaces/discloud_app.IgnoreFilesOptions.md) |
+
+#### Returns
+
+[`IgnoreFiles`](discloud_app.IgnoreFiles.md)
 
 #### Defined in
 
@@ -106,7 +110,7 @@ ___
 
 ### findIgnoreFiles
 
-▸ `Static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `string`[]
+▸ **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `string`[]
 
 #### Parameters
 
@@ -128,7 +132,7 @@ ___
 
 ### normalizeIgnore
 
-▸ `Static` **normalizeIgnore**(`ignore`, `path?`): `string`
+▸ **normalizeIgnore**(`ignore`, `path?`): `string`
 
 #### Parameters
 
@@ -149,7 +153,7 @@ ___
 
 ### normalizePath
 
-▸ `Static` **normalizePath**(`path`): `string`
+▸ **normalizePath**(`path`): `string`
 
 #### Parameters
 
@@ -169,7 +173,7 @@ ___
 
 ### normalizePaths
 
-▸ `Static` **normalizePaths**(`paths`): `string`[]
+▸ **normalizePaths**(`paths`): `string`[]
 
 #### Parameters
 
@@ -189,7 +193,7 @@ ___
 
 ### processIgnoreFile
 
-▸ `Static` **processIgnoreFile**(`file`): `string`[]
+▸ **processIgnoreFile**(`file`): `string`[]
 
 #### Parameters
 

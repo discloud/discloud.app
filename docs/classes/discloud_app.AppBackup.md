@@ -38,7 +38,7 @@ Base for all structures
 
 ### constructor
 
-• **new AppBackup**(`discloudApp`, `data`)
+• **new AppBackup**(`discloudApp`, `data`): [`AppBackup`](discloud_app.AppBackup.md)
 
 #### Parameters
 
@@ -47,13 +47,17 @@ Base for all structures
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 | `data` | [`ApiAppBackup`](../interfaces/discloud_app.ApiAppBackup.md) \| [`ApiAppBackupAll`](../interfaces/discloud_app.ApiAppBackupAll.md) |
 
+#### Returns
+
+[`AppBackup`](discloud_app.AppBackup.md)
+
 #### Overrides
 
 [Base](discloud_app.Base.md).[constructor](discloud_app.Base.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:28](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L28)
+[packages/discloud.app/src/structures/AppBackup.ts:28](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L28)
 
 ## Properties
 
@@ -65,13 +69,13 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L13)
+[packages/discloud.app/src/structures/AppBackup.ts:13](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L13)
 
 ___
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`AppBackup`](discloud_app.AppBackup.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 #### Inherited from
 
@@ -79,7 +83,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -91,7 +95,7 @@ The backup Buffer
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:26](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L26)
+[packages/discloud.app/src/structures/AppBackup.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L26)
 
 ___
 
@@ -105,7 +109,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -117,7 +121,7 @@ The backup status
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L22)
+[packages/discloud.app/src/structures/AppBackup.ts:22](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L22)
 
 ___
 
@@ -130,13 +134,13 @@ The backup url.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:18](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L18)
+[packages/discloud.app/src/structures/AppBackup.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L18)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`AppBackup`](discloud_app.AppBackup.md)
+▸ **_clone**(): [`AppBackup`](discloud_app.AppBackup.md)
 
 #### Returns
 
@@ -148,19 +152,19 @@ The backup url.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`AppBackup`](discloud_app.AppBackup.md)
+▸ **_patch**(`data`): [`AppBackup`](discloud_app.AppBackup.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `Partial`<[`ApiAppBackup`](../interfaces/discloud_app.ApiAppBackup.md) \| [`ApiAppBackupAll`](../interfaces/discloud_app.ApiAppBackupAll.md)\> |
+| `data` | `Partial`\<[`ApiAppBackup`](../interfaces/discloud_app.ApiAppBackup.md) \| [`ApiAppBackupAll`](../interfaces/discloud_app.ApiAppBackupAll.md)\> |
 
 #### Returns
 
@@ -172,13 +176,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:36](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L36)
+[packages/discloud.app/src/structures/AppBackup.ts:36](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L36)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`AppBackup`](discloud_app.AppBackup.md)
+▸ **_update**(`data`): [`AppBackup`](discloud_app.AppBackup.md)
 
 #### Parameters
 
@@ -196,13 +200,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
 ### download
 
-▸ **download**(`path?`, `fileName?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+▸ **download**(`path?`, `fileName?`): `Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 Make backup of your application
 
@@ -215,8 +219,8 @@ Make backup of your application
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+`Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppBackup.ts:51](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppBackup.ts#L51)
+[packages/discloud.app/src/structures/AppBackup.ts:51](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppBackup.ts#L51)

@@ -14,8 +14,8 @@
 
 ### rest
 
-• `Optional` **rest**: `Partial`<[`RESTOptions`](discloud_app.RESTOptions.md)\>
+• `Optional` **rest**: `Partial`\<[`RESTOptions`](discloud_app.RESTOptions.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:10](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/@types/index.ts#L10)
+[packages/discloud.app/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/@types/index.ts#L14)

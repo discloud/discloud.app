@@ -21,7 +21,7 @@
 
 ### constructor
 
-• **new GS**(`pattern`, `ignoreFileName?`, `optionalIgnoreList?`)
+• **new GS**(`pattern`, `ignoreFileName?`, `optionalIgnoreList?`): [`GS`](discloud_app.GS.md)
 
 #### Parameters
 
@@ -30,6 +30,10 @@
 | `pattern` | `string` \| `string`[] |
 | `ignoreFileName?` | `string` |
 | `optionalIgnoreList?` | `string`[] |
+
+#### Returns
+
+[`GS`](discloud_app.GS.md)
 
 #### Defined in
 

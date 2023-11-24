@@ -31,7 +31,7 @@ Manager for APT on your application on Discloud
 
 ### constructor
 
-• **new AppAptManager**(`discloudApp`)
+• **new AppAptManager**(`discloudApp`): [`AppAptManager`](discloud_app.AppAptManager.md)
 
 #### Parameters
 
@@ -39,13 +39,17 @@ Manager for APT on your application on Discloud
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 
+#### Returns
+
+[`AppAptManager`](discloud_app.AppAptManager.md)
+
 #### Overrides
 
 [BaseManager](discloud_app.BaseManager.md).[constructor](discloud_app.BaseManager.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L10)
 
 ## Properties
 
@@ -59,13 +63,13 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
 ### install
 
-▸ **install**(`appID`, `apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
+▸ **install**(`appID`, `apt`): `Promise`\<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
 
 Install APTs for your application on Discloud
 
@@ -78,17 +82,17 @@ Install APTs for your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
+`Promise`\<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ___
 
 ### uninstall
 
-▸ **uninstall**(`appID`, `apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
+▸ **uninstall**(`appID`, `apt`): `Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
 
 Uninstall APTs for your application on Discloud
 
@@ -101,8 +105,8 @@ Uninstall APTs for your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
+`Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppAptManager.ts#L40)
+[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L40)

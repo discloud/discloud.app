@@ -51,7 +51,7 @@ Base for all structures
 
 ### constructor
 
-• **new User**(`discloudApp`, `data`)
+• **new User**(`discloudApp`, `data`): [`User`](discloud_app.User.md)
 
 #### Parameters
 
@@ -60,31 +60,35 @@ Base for all structures
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 | `data` | [`ApiUser`](../interfaces/discloud_app.ApiUser.md) |
 
+#### Returns
+
+[`User`](discloud_app.User.md)
+
 #### Overrides
 
 [Base](discloud_app.Base.md).[constructor](discloud_app.Base.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L51)
+[packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L51)
 
 ## Properties
 
 ### appIDs
 
-• `Readonly` **appIDs**: [`Set`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set )<`string`\>
+• `Readonly` **appIDs**: `Set`\<`string`\>
 
 Your applications ID
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L11)
+[packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L11)
 
 ___
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`User`](discloud_app.User.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`User`](discloud_app.User.md)\>
 
 #### Inherited from
 
@@ -92,19 +96,19 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
 ### customdomains
 
-• `Readonly` **customdomains**: [`Set`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set )<`string`\>
+• `Readonly` **customdomains**: `Set`\<`string`\>
 
 Your custom domains on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L15)
+[packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L15)
 
 ___
 
@@ -118,7 +122,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -130,7 +134,7 @@ Your id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L19)
+[packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L19)
 
 ___
 
@@ -142,7 +146,7 @@ Your locale
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L23)
+[packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L23)
 
 ___
 
@@ -154,19 +158,19 @@ Your plan
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L27)
+[packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L27)
 
 ___
 
 ### planDataEnd
 
-• **planDataEnd**: [`Date`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date )
+• **planDataEnd**: `Date`
 
 Date of when will your plan end
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L31)
+[packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L31)
 
 ___
 
@@ -178,7 +182,7 @@ Timestamp of when will your plan end
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L35)
+[packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L35)
 
 ___
 
@@ -188,7 +192,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L49)
+[packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L49)
 
 ___
 
@@ -200,19 +204,19 @@ Quantity of RAM was used for your applications
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L39)
+[packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L39)
 
 ___
 
 ### subdomains
 
-• `Readonly` **subdomains**: [`Set`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set )<`string`\>
+• `Readonly` **subdomains**: `Set`\<`string`\>
 
 Your subdomains on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L43)
+[packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L43)
 
 ___
 
@@ -224,7 +228,7 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L47)
+[packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L47)
 
 ## Accessors
 
@@ -238,13 +242,13 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L111)
+[packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L111)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`User`](discloud_app.User.md)
+▸ **_clone**(): [`User`](discloud_app.User.md)
 
 #### Returns
 
@@ -256,19 +260,19 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`User`](discloud_app.User.md)
+▸ **_patch**(`data`): [`User`](discloud_app.User.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `Partial`<[`ApiUser`](../interfaces/discloud_app.ApiUser.md)\> |
+| `data` | `Partial`\<[`ApiUser`](../interfaces/discloud_app.ApiUser.md)\> |
 
 #### Returns
 
@@ -280,13 +284,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L57)
+[packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L57)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`User`](discloud_app.User.md)
+▸ **_update**(`data`): [`User`](discloud_app.User.md)
 
 #### Parameters
 
@@ -304,29 +308,29 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
 ### fetch
 
-▸ **fetch**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
+▸ **fetch**(): `Promise`\<[`User`](discloud_app.User.md)\>
 
 Fetch a user from Discloud API
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
+`Promise`\<[`User`](discloud_app.User.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L133)
+[packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L133)
 
 ___
 
 ### setLocale
 
-▸ **setLocale**<`L`\>(`locale`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`boolean`\>
+▸ **setLocale**\<`L`\>(`locale`): `Promise`\<`boolean`\>
 
 Set your locale on Discloud
 
@@ -344,7 +348,7 @@ Set your locale on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`boolean`\>
+`Promise`\<`boolean`\>
 
 **`See`**
 
@@ -352,7 +356,7 @@ Set your locale on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L121)
+[packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L121)
 
 ___
 
@@ -366,4 +370,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/User.ts#L139)
+[packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/User.ts#L139)

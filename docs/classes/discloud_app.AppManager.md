@@ -8,7 +8,7 @@ Manager for apps on Discloud
 
 ## Hierarchy
 
-- [`CachedManager`](discloud_app.CachedManager.md)<[`App`](discloud_app.App.md)\>
+- [`CachedManager`](discloud_app.CachedManager.md)\<typeof [`App`](discloud_app.App.md)\>
 
   ↳ **`AppManager`**
 
@@ -20,7 +20,7 @@ Manager for apps on Discloud
 
 ### Properties
 
-- [#cache](discloud_app.AppManager.md##cache)
+- [\_cache](discloud_app.AppManager.md#_cache)
 - [discloudApp](discloud_app.AppManager.md#discloudapp)
 - [holds](discloud_app.AppManager.md#holds)
 
@@ -42,18 +42,21 @@ Manager for apps on Discloud
 - [fetch](discloud_app.AppManager.md#fetch)
 - [profile](discloud_app.AppManager.md#profile)
 - [ram](discloud_app.AppManager.md#ram)
+- [resolve](discloud_app.AppManager.md#resolve)
+- [resolveId](discloud_app.AppManager.md#resolveid)
 - [restart](discloud_app.AppManager.md#restart)
 - [start](discloud_app.AppManager.md#start)
 - [status](discloud_app.AppManager.md#status)
 - [stop](discloud_app.AppManager.md#stop)
 - [terminal](discloud_app.AppManager.md#terminal)
 - [update](discloud_app.AppManager.md#update)
+- [valueOf](discloud_app.AppManager.md#valueof)
 
 ## Constructors
 
 ### constructor
 
-• **new AppManager**(`discloudApp`)
+• **new AppManager**(`discloudApp`): [`AppManager`](discloud_app.AppManager.md)
 
 #### Parameters
 
@@ -61,27 +64,31 @@ Manager for apps on Discloud
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 
+#### Returns
+
+[`AppManager`](discloud_app.AppManager.md)
+
 #### Overrides
 
 [CachedManager](discloud_app.CachedManager.md).[constructor](discloud_app.CachedManager.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L19)
+[packages/discloud.app/src/managers/AppManager.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L19)
 
 ## Properties
 
-### #cache
+### \_cache
 
-• `Private` **#cache**: [`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>
+• `Protected` `Readonly` **\_cache**: `Map`\<`string`, [`App`](discloud_app.App.md)\>
 
 #### Inherited from
 
-[CachedManager](discloud_app.CachedManager.md).[#cache](discloud_app.CachedManager.md##cache)
+[CachedManager](discloud_app.CachedManager.md).[_cache](discloud_app.CachedManager.md#_cache)
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:9](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ___
 
@@ -95,13 +102,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ___
 
 ### holds
 
-• `Protected` **holds**: [`Constructor`](../modules/discloud_app.md#constructor)<[`App`](discloud_app.App.md)\>
+• `Protected` `Readonly` **holds**: typeof [`App`](discloud_app.App.md)
 
 #### Inherited from
 
@@ -109,17 +116,17 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/DataManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 ## Accessors
 
 ### cache
 
-• `get` **cache**(): [`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, `T`\>
+• `get` **cache**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
 #### Returns
 
-[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, `T`\>
+`Map`\<`string`, `InstanceType`\<`T`\>\>
 
 #### Inherited from
 
@@ -127,27 +134,27 @@ CachedManager.cache
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L15)
+[packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ## Methods
 
 ### #fetchMany
 
-▸ `Private` **#fetchMany**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>\>
+▸ **#fetchMany**(): `Promise`\<`Map`\<`string`, [`App`](discloud_app.App.md)\>\>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>\>
+`Promise`\<`Map`\<`string`, [`App`](discloud_app.App.md)\>\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:328](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L328)
+[packages/discloud.app/src/managers/AppManager.ts:328](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L328)
 
 ___
 
 ### \_add
 
-▸ `Protected` **_add**(`data`): [`App`](discloud_app.App.md)
+▸ **_add**(`data`): [`App`](discloud_app.App.md)
 
 #### Parameters
 
@@ -165,13 +172,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L19)
+[packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/CachedManager.ts#L19)
 
 ___
 
 ### \_addMany
 
-▸ `Protected` **_addMany**(`data`): [`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>
+▸ **_addMany**(`data`): `Map`\<`string`, [`App`](discloud_app.App.md)\>
 
 #### Parameters
 
@@ -181,7 +188,7 @@ ___
 
 #### Returns
 
-[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>
+`Map`\<`string`, [`App`](discloud_app.App.md)\>
 
 #### Inherited from
 
@@ -189,19 +196,19 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:34](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L34)
+[packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/CachedManager.ts#L33)
 
 ___
 
 ### \_clear
 
-▸ `Protected` **_clear**(`data?`): `void`
+▸ **_clear**(`data?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data?` | (`string` \| { `id`: `string`  })[] |
+| `data?` | (`string` \| \{ `id`: `string`  })[] |
 
 #### Returns
 
@@ -213,13 +220,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L47)
+[packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/CachedManager.ts#L45)
 
 ___
 
 ### \_delete
 
-▸ `Protected` **_delete**(`id`): `boolean`
+▸ **_delete**(`id`): `boolean`
 
 #### Parameters
 
@@ -237,13 +244,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:69](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L69)
+[packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/CachedManager.ts#L58)
 
 ___
 
 ### \_deleteMany
 
-▸ `Protected` **_deleteMany**(`ids`): `boolean`
+▸ **_deleteMany**(`ids`): `boolean`
 
 #### Parameters
 
@@ -261,13 +268,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/CachedManager.ts:75](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/CachedManager.ts#L75)
+[packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/CachedManager.ts#L64)
 
 ___
 
 ### backup
 
-▸ **backup**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+▸ **backup**(`appID`): `Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 Get backups of your application on Discloud
 
@@ -279,13 +286,13 @@ Get backups of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+`Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:80](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L80)
+[packages/discloud.app/src/managers/AppManager.ts:80](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L80)
 
-▸ **backup**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppBackup`](discloud_app.AppBackup.md)\>\>
+▸ **backup**(`appID?`): `Promise`\<`Map`\<`string`, [`AppBackup`](discloud_app.AppBackup.md)\>\>
 
 #### Parameters
 
@@ -295,17 +302,17 @@ Get backups of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppBackup`](discloud_app.AppBackup.md)\>\>
+`Promise`\<`Map`\<`string`, [`AppBackup`](discloud_app.AppBackup.md)\>\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:81](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L81)
+[packages/discloud.app/src/managers/AppManager.ts:81](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L81)
 
 ___
 
 ### create
 
-▸ **create**(`options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPostApiUploadResult`](../interfaces/discloud_app.RESTPostApiUploadResult.md) & { `app`: [`AppUploaded`](discloud_app.AppUploaded.md)  }\>
+▸ **create**(`options`): `Promise`\<[`RESTPostApiUploadResult`](../interfaces/discloud_app.RESTPostApiUploadResult.md) & \{ `app`: [`AppUploaded`](discloud_app.AppUploaded.md)  }\>
 
 Upload a new app or site to Discloud
 
@@ -317,17 +324,17 @@ Upload a new app or site to Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPostApiUploadResult`](../interfaces/discloud_app.RESTPostApiUploadResult.md) & { `app`: [`AppUploaded`](discloud_app.AppUploaded.md)  }\>
+`Promise`\<[`RESTPostApiUploadResult`](../interfaces/discloud_app.RESTPostApiUploadResult.md) & \{ `app`: [`AppUploaded`](discloud_app.AppUploaded.md)  }\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:131](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L131)
+[packages/discloud.app/src/managers/AppManager.ts:131](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L131)
 
 ___
 
 ### delete
 
-▸ **delete**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **delete**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Delete your application from Discloud.
 
@@ -339,13 +346,13 @@ Delete your application from Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:169](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L169)
+[packages/discloud.app/src/managers/AppManager.ts:169](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L169)
 
-▸ **delete**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerRemovedAll`](../interfaces/discloud_app.ApiAppManagerRemovedAll.md)\>
+▸ **delete**(`appID?`): `Promise`\<[`ApiAppManagerRemovedAll`](../interfaces/discloud_app.ApiAppManagerRemovedAll.md)\>
 
 #### Parameters
 
@@ -355,17 +362,17 @@ Delete your application from Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerRemovedAll`](../interfaces/discloud_app.ApiAppManagerRemovedAll.md)\>
+`Promise`\<[`ApiAppManagerRemovedAll`](../interfaces/discloud_app.ApiAppManagerRemovedAll.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:170](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L170)
+[packages/discloud.app/src/managers/AppManager.ts:170](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L170)
 
 ___
 
 ### fetch
 
-▸ **fetch**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`App`](discloud_app.App.md)\>
+▸ **fetch**(`appID`): `Promise`\<[`App`](discloud_app.App.md)\>
 
 Get information of your application on Discloud.
 
@@ -377,13 +384,13 @@ Get information of your application on Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`App`](discloud_app.App.md)\>
+`Promise`\<[`App`](discloud_app.App.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:304](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L304)
+[packages/discloud.app/src/managers/AppManager.ts:304](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L304)
 
-▸ **fetch**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>\>
+▸ **fetch**(`appID?`): `Promise`\<`Map`\<`string`, [`App`](discloud_app.App.md)\>\>
 
 #### Parameters
 
@@ -393,17 +400,17 @@ Get information of your application on Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`App`](discloud_app.App.md)\>\>
+`Promise`\<`Map`\<`string`, [`App`](discloud_app.App.md)\>\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:305](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L305)
+[packages/discloud.app/src/managers/AppManager.ts:305](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L305)
 
 ___
 
 ### profile
 
-▸ **profile**(`appID`, `options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **profile**(`appID`, `options`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Update the profile of your apps on Discloud.
 
@@ -418,17 +425,17 @@ Update the profile of your apps on Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:196](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L196)
+[packages/discloud.app/src/managers/AppManager.ts:196](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L196)
 
 ___
 
 ### ram
 
-▸ **ram**(`appID`, `quantity`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
+▸ **ram**(`appID`, `quantity`): `Promise`\<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
 
 Set the quantity of ram to your application
 
@@ -441,17 +448,67 @@ Set the quantity of ram to your application
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
+`Promise`\<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:107](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L107)
+[packages/discloud.app/src/managers/AppManager.ts:107](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L107)
+
+___
+
+### resolve
+
+▸ **resolve**(`idOrInstance`): ``null`` \| [`App`](discloud_app.App.md)
+
+Resolves a data entry to a data Object.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `idOrInstance` | `string` \| [`App`](discloud_app.App.md) | The id or instance of something in this Manager |
+
+#### Returns
+
+``null`` \| [`App`](discloud_app.App.md)
+
+#### Inherited from
+
+[CachedManager](discloud_app.CachedManager.md).[resolve](discloud_app.CachedManager.md#resolve)
+
+#### Defined in
+
+[packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L33)
+
+___
+
+### resolveId
+
+▸ **resolveId**(`idOrInstance`): `any`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `idOrInstance` | `string` \| [`App`](discloud_app.App.md) |
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+[CachedManager](discloud_app.CachedManager.md).[resolveId](discloud_app.CachedManager.md#resolveid)
+
+#### Defined in
+
+[packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 ___
 
 ### restart
 
-▸ **restart**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **restart**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Restart your application on Discloud
 
@@ -463,13 +520,13 @@ Restart your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:214](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L214)
+[packages/discloud.app/src/managers/AppManager.ts:214](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L214)
 
-▸ **restart**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerRestartedAll`](../interfaces/discloud_app.ApiAppManagerRestartedAll.md)\>
+▸ **restart**(`appID?`): `Promise`\<[`ApiAppManagerRestartedAll`](../interfaces/discloud_app.ApiAppManagerRestartedAll.md)\>
 
 #### Parameters
 
@@ -479,17 +536,17 @@ Restart your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerRestartedAll`](../interfaces/discloud_app.ApiAppManagerRestartedAll.md)\>
+`Promise`\<[`ApiAppManagerRestartedAll`](../interfaces/discloud_app.ApiAppManagerRestartedAll.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:215](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L215)
+[packages/discloud.app/src/managers/AppManager.ts:215](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L215)
 
 ___
 
 ### start
 
-▸ **start**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **start**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Start your application on Discloud
 
@@ -501,13 +558,13 @@ Start your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:244](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L244)
+[packages/discloud.app/src/managers/AppManager.ts:244](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L244)
 
-▸ **start**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStartedAll`](../interfaces/discloud_app.ApiAppManagerStartedAll.md)\>
+▸ **start**(`appID?`): `Promise`\<[`ApiAppManagerStartedAll`](../interfaces/discloud_app.ApiAppManagerStartedAll.md)\>
 
 #### Parameters
 
@@ -517,17 +574,17 @@ Start your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStartedAll`](../interfaces/discloud_app.ApiAppManagerStartedAll.md)\>
+`Promise`\<[`ApiAppManagerStartedAll`](../interfaces/discloud_app.ApiAppManagerStartedAll.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:245](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L245)
+[packages/discloud.app/src/managers/AppManager.ts:245](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L245)
 
 ___
 
 ### status
 
-▸ **status**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
+▸ **status**(`appID`): `Promise`\<[`AppStatus`](discloud_app.AppStatus.md)\>
 
 Get the status of your application on Discloud
 
@@ -539,13 +596,13 @@ Get the status of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppStatus`](discloud_app.AppStatus.md)\>
+`Promise`\<[`AppStatus`](discloud_app.AppStatus.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:28](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L28)
+[packages/discloud.app/src/managers/AppManager.ts:28](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L28)
 
-▸ **status**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppStatus`](discloud_app.AppStatus.md)\>\>
+▸ **status**(`appID?`): `Promise`\<`Map`\<`string`, [`AppStatus`](discloud_app.AppStatus.md)\>\>
 
 #### Parameters
 
@@ -555,17 +612,17 @@ Get the status of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`AppStatus`](discloud_app.AppStatus.md)\>\>
+`Promise`\<`Map`\<`string`, [`AppStatus`](discloud_app.AppStatus.md)\>\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:29](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L29)
+[packages/discloud.app/src/managers/AppManager.ts:29](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L29)
 
 ___
 
 ### stop
 
-▸ **stop**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **stop**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Stop your application on Discloud
 
@@ -577,13 +634,13 @@ Stop your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:274](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L274)
+[packages/discloud.app/src/managers/AppManager.ts:274](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L274)
 
-▸ **stop**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStopedAll`](../interfaces/discloud_app.ApiAppManagerStopedAll.md)\>
+▸ **stop**(`appID?`): `Promise`\<[`ApiAppManagerStopedAll`](../interfaces/discloud_app.ApiAppManagerStopedAll.md)\>
 
 #### Parameters
 
@@ -593,17 +650,17 @@ Stop your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppManagerStopedAll`](../interfaces/discloud_app.ApiAppManagerStopedAll.md)\>
+`Promise`\<[`ApiAppManagerStopedAll`](../interfaces/discloud_app.ApiAppManagerStopedAll.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:275](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L275)
+[packages/discloud.app/src/managers/AppManager.ts:275](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L275)
 
 ___
 
 ### terminal
 
-▸ **terminal**(`appID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
+▸ **terminal**(`appID`): `Promise`\<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
 
 Get logs of your application on Discloud
 
@@ -615,13 +672,13 @@ Get logs of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
+`Promise`\<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:54](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L54)
+[packages/discloud.app/src/managers/AppManager.ts:54](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L54)
 
-▸ **terminal**(`appID?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>\>
+▸ **terminal**(`appID?`): `Promise`\<`Map`\<`string`, [`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>\>
 
 #### Parameters
 
@@ -631,17 +688,17 @@ Get logs of your application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`string`, [`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>\>
+`Promise`\<`Map`\<`string`, [`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:55](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L55)
+[packages/discloud.app/src/managers/AppManager.ts:55](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L55)
 
 ___
 
 ### update
 
-▸ **update**(`appID`, `options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
+▸ **update**(`appID`, `options`): `Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
 
 Update an of your apps on Discloud.
 
@@ -654,8 +711,26 @@ Update an of your apps on Discloud.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
+`Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppManager.ts:152](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/managers/AppManager.ts#L152)
+[packages/discloud.app/src/managers/AppManager.ts:152](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppManager.ts#L152)
+
+___
+
+### valueOf
+
+▸ **valueOf**(): `Map`\<`string`, [`App`](discloud_app.App.md)\>
+
+#### Returns
+
+`Map`\<`string`, [`App`](discloud_app.App.md)\>
+
+#### Inherited from
+
+[CachedManager](discloud_app.CachedManager.md).[valueOf](discloud_app.CachedManager.md#valueof)
+
+#### Defined in
+
+[packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/DataManager.ts#L46)

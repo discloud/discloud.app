@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+- `Error`
 
   ↳ **`DiscloudAPIError`**
 
@@ -37,7 +37,7 @@
 
 ### constructor
 
-• **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`)
+• **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): [`DiscloudAPIError`](discloudapp_rest.DiscloudAPIError.md)
 
 #### Parameters
 
@@ -49,13 +49,17 @@
 | `path` | `string` |
 | `body` | `any` |
 
+#### Returns
+
+[`DiscloudAPIError`](discloudapp_rest.DiscloudAPIError.md)
+
 #### Overrides
 
 Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 ## Properties
 
@@ -65,7 +69,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ___
 
@@ -89,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ___
 
@@ -113,7 +117,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ___
 
@@ -137,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ___
 
@@ -157,7 +161,7 @@ ___
 
 ### prepareStackTrace
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error ), `stackTraces`: `CallSite`[]) => `any`
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
 
 #### Type declaration
 
@@ -169,7 +173,7 @@ Optional override for formatting stack traces
 
 | Name | Type |
 | :------ | :------ |
-| `err` | [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error ) |
+| `err` | `Error` |
 | `stackTraces` | `CallSite`[] |
 
 ##### Returns
@@ -206,7 +210,7 @@ node_modules/@types/node/globals.d.ts:13
 
 ### captureStackTrace
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
@@ -215,7 +219,7 @@ Create .stack property on a target object
 | Name | Type |
 | :------ | :------ |
 | `targetObject` | `object` |
-| `constructorOpt?` | [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function ) |
+| `constructorOpt?` | `Function` |
 
 #### Returns
 

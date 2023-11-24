@@ -37,7 +37,7 @@
 
 ### constructor
 
-• **new DiscloudConfig**(`path`)
+• **new DiscloudConfig**(`path`): [`DiscloudConfig`](discloudapp_util.DiscloudConfig.md)
 
 #### Parameters
 
@@ -45,9 +45,13 @@
 | :------ | :------ |
 | `path` | `string` |
 
+#### Returns
+
+[`DiscloudConfig`](discloudapp_util.DiscloudConfig.md)
+
 #### Defined in
 
-[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L12)
+[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Properties
 
@@ -57,13 +61,13 @@
 
 #### Defined in
 
-[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L12)
+[DiscloudConfig.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L12)
 
 ## Accessors
 
 ### #requiredProps
 
-• `Private` `get` **#requiredProps**(): `string`[]
+• `get` **#requiredProps**(): `string`[]
 
 #### Returns
 
@@ -71,7 +75,7 @@
 
 #### Defined in
 
-[DiscloudConfig.ts:75](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L75)
+[DiscloudConfig.ts:75](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L75)
 
 ___
 
@@ -85,7 +89,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L24)
+[DiscloudConfig.ts:24](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L24)
 
 ___
 
@@ -99,7 +103,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L34)
+[DiscloudConfig.ts:34](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L34)
 
 ___
 
@@ -113,7 +117,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L42)
+[DiscloudConfig.ts:42](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L42)
 
 ___
 
@@ -127,7 +131,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L54)
+[DiscloudConfig.ts:54](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L54)
 
 ___
 
@@ -141,7 +145,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:66](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L66)
+[DiscloudConfig.ts:66](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L66)
 
 ___
 
@@ -155,13 +159,13 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:70](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L70)
+[DiscloudConfig.ts:70](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L70)
 
 ## Methods
 
 ### #configToObj
 
-▸ `Private` **#configToObj**(`s`): `any`
+▸ **#configToObj**(`s`): `any`
 
 #### Parameters
 
@@ -175,13 +179,13 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:104](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L104)
+[DiscloudConfig.ts:104](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L104)
 
 ___
 
 ### #objToString
 
-▸ `Private` **#objToString**(`obj`): `string`
+▸ **#objToString**(`obj`): `string`
 
 #### Parameters
 
@@ -195,13 +199,13 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:80](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L80)
+[DiscloudConfig.ts:80](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L80)
 
 ___
 
 ### #processValues
 
-▸ `Private` **#processValues**(`obj`): `any`
+▸ **#processValues**(`obj`): `any`
 
 #### Parameters
 
@@ -215,13 +219,13 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:114](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L114)
+[DiscloudConfig.ts:114](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L114)
 
 ___
 
 ### get
 
-▸ **get**<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)[`K`]
+▸ **get**\<`K`\>(`key`): [`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)[`K`]
 
 #### Type parameters
 
@@ -241,13 +245,13 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:138](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L138)
+[DiscloudConfig.ts:138](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L138)
 
 ___
 
 ### set
 
-▸ **set**<`K`\>(`key`, `value`): `void`
+▸ **set**\<`K`\>(`key`, `value`): `void`
 
 #### Type parameters
 
@@ -268,25 +272,25 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:142](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L142)
+[DiscloudConfig.ts:142](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L142)
 
 ___
 
 ### update
 
-▸ **update**(`save`, `comments?`): `void` \| [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+▸ **update**(`save`, `comments?`): `void` \| `Error`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `save` | `Partial`<[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)\> |
+| `save` | `Partial`\<[`DiscloudConfigType`](../modules/discloudapp_api_types.md#discloudconfigtype)\> |
 | `comments` | `string`[] |
 
 #### Returns
 
-`void` \| [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+`void` \| `Error`
 
 #### Defined in
 
-[DiscloudConfig.ts:146](https://github.com/discloud/discloud.app/blob/a945852/packages/util/src/DiscloudConfig.ts#L146)
+[DiscloudConfig.ts:146](https://github.com/discloud/discloud.app/blob/78281f4/packages/util/src/DiscloudConfig.ts#L146)

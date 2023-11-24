@@ -38,7 +38,7 @@ Base for all structures
 
 ### constructor
 
-• **new AppTeam**(`discloudApp`, `data`)
+• **new AppTeam**(`discloudApp`, `data`): [`AppTeam`](discloud_app.AppTeam.md)
 
 #### Parameters
 
@@ -47,13 +47,17 @@ Base for all structures
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 | `data` | [`BaseApiApp`](../interfaces/discloud_app.BaseApiApp.md) |
 
+#### Returns
+
+[`AppTeam`](discloud_app.AppTeam.md)
+
 #### Overrides
 
 [Base](discloud_app.Base.md).[constructor](discloud_app.Base.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L9)
+[packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L9)
 
 ## Properties
 
@@ -63,13 +67,13 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L7)
+[packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L7)
 
 ___
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`AppTeam`](discloud_app.AppTeam.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`AppTeam`](discloud_app.AppTeam.md)\>
 
 #### Inherited from
 
@@ -77,7 +81,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -91,13 +95,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`AppTeam`](discloud_app.AppTeam.md)
+▸ **_clone**(): [`AppTeam`](discloud_app.AppTeam.md)
 
 #### Returns
 
@@ -109,13 +113,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`AppTeam`](discloud_app.AppTeam.md)
+▸ **_patch**(`data`): [`AppTeam`](discloud_app.AppTeam.md)
 
 #### Parameters
 
@@ -133,13 +137,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L15)
+[packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L15)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`AppTeam`](discloud_app.AppTeam.md)
+▸ **_update**(`data`): [`AppTeam`](discloud_app.AppTeam.md)
 
 #### Parameters
 
@@ -157,13 +161,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
 ### create
 
-▸ **create**(`modID`, `perms`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
+▸ **create**(`modID`, `perms`): `Promise`\<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
 #### Parameters
 
@@ -174,17 +178,17 @@ ___
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
+`Promise`\<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L19)
+[packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L19)
 
 ___
 
 ### delete
 
-▸ **delete**(`modID`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **delete**(`modID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Parameters
 
@@ -194,17 +198,17 @@ ___
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L27)
+[packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L27)
 
 ___
 
 ### edit
 
-▸ **edit**(`modID`, `perms`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
+▸ **edit**(`modID`, `perms`): `Promise`\<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
 #### Parameters
 
@@ -215,22 +219,22 @@ ___
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
+`Promise`\<[`ApiAppTeamManager`](../interfaces/discloud_app.ApiAppTeamManager.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L23)
+[packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L23)
 
 ___
 
 ### fetch
 
-▸ **fetch**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeam`](../interfaces/discloud_app.ApiAppTeam.md)[]\>
+▸ **fetch**(): `Promise`\<[`ApiAppTeam`](../interfaces/discloud_app.ApiAppTeam.md)[]\>
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiAppTeam`](../interfaces/discloud_app.ApiAppTeam.md)[]\>
+`Promise`\<[`ApiAppTeam`](../interfaces/discloud_app.ApiAppTeam.md)[]\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppTeam.ts#L31)
+[packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppTeam.ts#L31)

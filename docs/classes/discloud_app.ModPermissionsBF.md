@@ -8,7 +8,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 ## Hierarchy
 
-- [`BitField`](discloud_app.BitField.md)<[`ModPermissionsFlags`](../modules/discloud_app.md#modpermissionsflags), `number`\>
+- [`BitField`](discloud_app.BitField.md)\<[`ModPermissionsFlags`](../modules/discloud_app.md#modpermissionsflags), `number`\>
 
   ↳ **`ModPermissionsBF`**
 
@@ -47,13 +47,17 @@ Data structure that makes it easy to interact with a bitfield.
 
 ### constructor
 
-• **new ModPermissionsBF**(`...bits`)
+• **new ModPermissionsBF**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] |
+
+#### Returns
+
+[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
 
 #### Inherited from
 
@@ -83,7 +87,7 @@ ___
 
 ### constructor
 
-• **constructor**: [`BitFieldConstructor`](../modules/discloud_app.md#bitfieldconstructor)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
+• **constructor**: [`BitFieldConstructor`](../modules/discloud_app.md#bitfieldconstructor)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>
 
 #### Inherited from
 
@@ -151,11 +155,11 @@ packages/util/out/ModPermissionsBF.d.ts:15
 
 ### [iterator]
 
-▸ **[iterator]**(): [`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
+▸ **[iterator]**(): `Generator`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
 
 #### Returns
 
-[`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
+`Generator`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
 
 #### Inherited from
 
@@ -177,7 +181,7 @@ Adds bits to these ones.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bits to add |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bits to add |
 
 #### Returns
 
@@ -205,7 +209,7 @@ Checks whether the bitfield has a bit, or any of multiple bits.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -231,7 +235,7 @@ Checks if this bitfield equals another
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -249,13 +253,13 @@ ___
 
 ### freeze
 
-▸ **freeze**(): `Readonly`<[`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
+▸ **freeze**(): `Readonly`\<[`BitField`](discloud_app.BitField.md)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
 
 Freezes these bits, making them immutable.
 
 #### Returns
 
-`Readonly`<[`BitField`](discloud_app.BitField.md)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
+`Readonly`\<[`BitField`](discloud_app.BitField.md)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
 
 #### Inherited from
 
@@ -277,7 +281,7 @@ Checks whether the bitfield has a bit, or multiple bits.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -303,7 +307,7 @@ Gets all given bits that are missing from the bitfield.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bit(s) to check for |
 
 #### Returns
 
@@ -329,7 +333,7 @@ Removes bits from these.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bits to remove |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | Bits to remove |
 
 #### Returns
 
@@ -349,14 +353,14 @@ ___
 
 ### serialize
 
-▸ **serialize**(): `Record`<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `boolean`\>
+▸ **serialize**(): `Record`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `boolean`\>
 
 Gets an object mapping field names to a boolean indicating whether the
 bit is available.
 
 #### Returns
 
-`Record`<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `boolean`\>
+`Record`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `boolean`\>
 
 #### Inherited from
 
@@ -378,7 +382,7 @@ Replace the bits with these.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | bits to set |
+| `...bits` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>[] | bits to set |
 
 #### Returns
 
@@ -454,7 +458,7 @@ ___
 
 ### resolve
 
-▸ `Static` **resolve**<`N`\>(`bit`): `N`
+▸ **resolve**\<`N`\>(`bit`): `N`
 
 Resolves bitfields to their numeric form.
 
@@ -468,7 +472,7 @@ Resolves bitfields to their numeric form.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `bit` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)<`string`, `N`\> | bit(s) to resolve |
+| `bit` | [`BitFieldResolvable`](../modules/discloud_app.md#bitfieldresolvable)\<`string`, `N`\> | bit(s) to resolve |
 
 #### Returns
 

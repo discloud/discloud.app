@@ -49,7 +49,7 @@ Base for all structures
 
 ### constructor
 
-• **new Base**(`discloudApp`)
+• **new Base**(`discloudApp`): [`Base`](discloud_app.Base.md)
 
 #### Parameters
 
@@ -57,19 +57,23 @@ Base for all structures
 | :------ | :------ |
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 
+#### Returns
+
+[`Base`](discloud_app.Base.md)
+
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L14)
 
 ## Properties
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`Base`](discloud_app.Base.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`Base`](discloud_app.Base.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -79,13 +83,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`Base`](discloud_app.Base.md)
+▸ **_clone**(): [`Base`](discloud_app.Base.md)
 
 #### Returns
 
@@ -93,13 +97,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`Base`](discloud_app.Base.md)
+▸ **_patch**(`data`): [`Base`](discloud_app.Base.md)
 
 #### Parameters
 
@@ -113,13 +117,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L22)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`Base`](discloud_app.Base.md)
+▸ **_update**(`data`): [`Base`](discloud_app.Base.md)
 
 #### Parameters
 
@@ -133,4 +137,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)

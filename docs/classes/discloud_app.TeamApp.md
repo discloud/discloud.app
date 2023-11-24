@@ -49,7 +49,7 @@ Base for app structures
 
 ### constructor
 
-• **new TeamApp**(`discloudApp`, `data`)
+• **new TeamApp**(`discloudApp`, `data`): [`TeamApp`](discloud_app.TeamApp.md)
 
 #### Parameters
 
@@ -58,19 +58,23 @@ Base for app structures
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 | `data` | [`BaseApiApp`](../interfaces/discloud_app.BaseApiApp.md) |
 
+#### Returns
+
+[`TeamApp`](discloud_app.TeamApp.md)
+
 #### Overrides
 
 [BaseTeamApp](discloud_app.BaseTeamApp.md).[constructor](discloud_app.BaseTeamApp.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L35)
+[packages/discloud.app/src/structures/TeamApp.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L35)
 
 ## Properties
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`TeamApp`](discloud_app.TeamApp.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`TeamApp`](discloud_app.TeamApp.md)\>
 
 #### Inherited from
 
@@ -78,7 +82,7 @@ BaseTeamApp.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -92,7 +96,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -104,7 +108,7 @@ Your team's app exit code on stop
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:11](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L11)
+[packages/discloud.app/src/structures/TeamApp.ts:11](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L11)
 
 ___
 
@@ -120,7 +124,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:13](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L13)
 
 ___
 
@@ -132,7 +136,7 @@ Your team's app programming language
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L15)
+[packages/discloud.app/src/structures/TeamApp.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L15)
 
 ___
 
@@ -144,7 +148,7 @@ Your team application name
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L19)
+[packages/discloud.app/src/structures/TeamApp.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L19)
 
 ___
 
@@ -156,19 +160,19 @@ If your team application is online
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:23](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L23)
+[packages/discloud.app/src/structures/TeamApp.ts:23](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L23)
 
 ___
 
 ### perms
 
-• `Readonly` **perms**: [`Set`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set )<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``\>
+• `Readonly` **perms**: `Set`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``\>
 
 Your permissions to manage this application.
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:27](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L27)
+[packages/discloud.app/src/structures/TeamApp.ts:27](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L27)
 
 ___
 
@@ -180,7 +184,7 @@ If your team's app stopped due to low RAM
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L31)
+[packages/discloud.app/src/structures/TeamApp.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L31)
 
 ___
 
@@ -190,13 +194,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:33](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L33)
+[packages/discloud.app/src/structures/TeamApp.ts:33](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L33)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`TeamApp`](discloud_app.TeamApp.md)
+▸ **_clone**(): [`TeamApp`](discloud_app.TeamApp.md)
 
 #### Returns
 
@@ -208,19 +212,19 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`TeamApp`](discloud_app.TeamApp.md)
+▸ **_patch**(`data`): [`TeamApp`](discloud_app.TeamApp.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `Partial`<[`ApiStatusApp`](../interfaces/discloud_app.ApiStatusApp.md) \| [`ApiTeamApps`](../interfaces/discloud_app.ApiTeamApps.md)\> |
+| `data` | `Partial`\<[`ApiStatusApp`](../interfaces/discloud_app.ApiStatusApp.md) \| [`ApiTeamApps`](../interfaces/discloud_app.ApiTeamApps.md)\> |
 
 #### Returns
 
@@ -232,13 +236,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/TeamApp.ts:43](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/TeamApp.ts#L43)
+[packages/discloud.app/src/structures/TeamApp.ts:43](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/TeamApp.ts#L43)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`TeamApp`](discloud_app.TeamApp.md)
+▸ **_update**(`data`): [`TeamApp`](discloud_app.TeamApp.md)
 
 #### Parameters
 
@@ -256,19 +260,19 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
 ### backup
 
-▸ **backup**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+▸ **backup**(): `Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 Get backups for the app of your team on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`AppBackup`](discloud_app.AppBackup.md)\>
+`Promise`\<[`AppBackup`](discloud_app.AppBackup.md)\>
 
 #### Inherited from
 
@@ -276,19 +280,19 @@ Get backups for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L31)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L31)
 
 ___
 
 ### restart
 
-▸ **restart**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **restart**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Restart your team application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Inherited from
 
@@ -296,13 +300,13 @@ Restart your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:63](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L63)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:63](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L63)
 
 ___
 
 ### setRam
 
-▸ **setRam**(`quantity`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
+▸ **setRam**(`quantity`): `Promise`\<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
 
 Set the quantity of ram to application of your team
 
@@ -314,7 +318,7 @@ Set the quantity of ram to application of your team
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
+`Promise`\<[`RESTPutApiAppRamResult`](../interfaces/discloud_app.RESTPutApiAppRamResult.md)\>
 
 #### Inherited from
 
@@ -322,19 +326,19 @@ Set the quantity of ram to application of your team
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:40](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L40)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:40](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L40)
 
 ___
 
 ### start
 
-▸ **start**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **start**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Start your team application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Inherited from
 
@@ -342,19 +346,19 @@ Start your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:70](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L70)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:70](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L70)
 
 ___
 
 ### stop
 
-▸ **stop**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+▸ **stop**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 Stop your team application on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
+`Promise`\<[`RESTApiBaseResult`](../interfaces/discloud_app.RESTApiBaseResult.md)\>
 
 #### Inherited from
 
@@ -362,19 +366,19 @@ Stop your team application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:77](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L77)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:77](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L77)
 
 ___
 
 ### terminal
 
-▸ **terminal**(): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
+▸ **terminal**(): `Promise`\<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
 
 Get logs for the app of your team on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
+`Promise`\<[`ApiTerminal`](../interfaces/discloud_app.ApiTerminal.md)\>
 
 #### Inherited from
 
@@ -382,7 +386,7 @@ Get logs for the app of your team on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L47)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:47](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L47)
 
 ___
 
@@ -400,13 +404,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:83](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L83)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:83](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L83)
 
 ___
 
 ### update
 
-▸ **update**(`options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
+▸ **update**(`options`): `Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
 
 Update an of your team apps on Discloud
 
@@ -418,7 +422,7 @@ Update an of your team apps on Discloud
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
+`Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)\>
 
 #### Inherited from
 
@@ -426,4 +430,4 @@ Update an of your team apps on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/BaseTeamApp.ts:56](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/BaseTeamApp.ts#L56)
+[packages/discloud.app/src/structures/BaseTeamApp.ts:56](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/BaseTeamApp.ts#L56)

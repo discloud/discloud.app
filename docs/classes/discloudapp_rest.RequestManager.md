@@ -43,6 +43,7 @@
 
 ### Methods
 
+- [[captureRejectionSymbol]](discloudapp_rest.RequestManager.md#[capturerejectionsymbol])
 - [addListener](discloudapp_rest.RequestManager.md#addlistener)
 - [eventNames](discloudapp_rest.RequestManager.md#eventnames)
 - [getMaxListeners](discloudapp_rest.RequestManager.md#getmaxlisteners)
@@ -68,13 +69,17 @@
 
 ### constructor
 
-• **new RequestManager**(`options?`)
+• **new RequestManager**(`options?`): [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Partial`<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
+| `options` | `Partial`\<[`RESTOptions`](../interfaces/discloudapp_rest.RESTOptions.md)\> |
+
+#### Returns
+
+[`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Inherited from
 
@@ -82,7 +87,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L47)
+[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L47)
 
 ## Properties
 
@@ -92,13 +97,13 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L24)
+[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L24)
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, ...`args`: `unknown`[]) => `boolean`
+• **emit**: \<K\>(`event`: `K`, ...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `boolean` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, ...`args`: `unknown`[]) => `boolean`
 
 #### Overrides
 
@@ -106,7 +111,7 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L11)
+[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L11)
 
 ___
 
@@ -118,7 +123,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L30)
+[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L30)
 
 ___
 
@@ -130,7 +135,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L35)
+[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L35)
 
 ___
 
@@ -142,7 +147,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L40)
+[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L40)
 
 ___
 
@@ -154,13 +159,13 @@ The time at which the last request was made
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L45)
+[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L45)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Overrides
 
@@ -168,13 +173,13 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L13)
+[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L13)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Overrides
 
@@ -182,13 +187,13 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L15)
+[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L15)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Overrides
 
@@ -196,7 +201,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L17)
+[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L17)
 
 ___
 
@@ -206,13 +211,13 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L25)
+[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L25)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & <S\>(`event?`: `Exclude`<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => [`RequestManager`](discloudapp_rest.RequestManager.md)
 
 #### Overrides
 
@@ -220,7 +225,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L19)
+[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L19)
 
 ___
 
@@ -238,7 +243,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:390
+node_modules/@types/node/events.d.ts:402
 
 ___
 
@@ -256,7 +261,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:397
+node_modules/@types/node/events.d.ts:409
 
 ___
 
@@ -304,7 +309,7 @@ v0.11.2
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:434
+node_modules/@types/node/events.d.ts:446
 
 ___
 
@@ -323,13 +328,13 @@ v13.6.0, v12.17.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:383
+node_modules/@types/node/events.d.ts:395
 
 ## Accessors
 
 ### baseURL
 
-• `Private` `get` **baseURL**(): `string`
+• `get` **baseURL**(): `string`
 
 #### Returns
 
@@ -337,7 +342,7 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L54)
+[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L54)
 
 ___
 
@@ -353,7 +358,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L61)
+[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L61)
 
 ___
 
@@ -369,7 +374,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L68)
+[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L68)
 
 ___
 
@@ -383,9 +388,35 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L72)
+[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L72)
 
 ## Methods
+
+### [captureRejectionSymbol]
+
+▸ **[captureRejectionSymbol]**(`error`, `event`, `...args`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `Error` |
+| `event` | `string` |
+| `...args` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+EventEmitter.[captureRejectionSymbol]
+
+#### Defined in
+
+node_modules/@types/node/events.d.ts:112
+
+___
 
 ### addListener
 
@@ -414,7 +445,7 @@ EventEmitter.addListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:454
+node_modules/@types/node/events.d.ts:510
 
 ___
 
@@ -453,7 +484,7 @@ EventEmitter.eventNames
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:779
+node_modules/@types/node/events.d.ts:835
 
 ___
 
@@ -478,7 +509,7 @@ EventEmitter.getMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:631
+node_modules/@types/node/events.d.ts:687
 
 ___
 
@@ -495,7 +526,7 @@ in the list of the listeners of the event.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function ) | The event handler function |
+| `listener?` | `Function` | The event handler function |
 
 #### Returns
 
@@ -511,13 +542,13 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:725
+node_modules/@types/node/events.d.ts:781
 
 ___
 
 ### listeners
 
-▸ **listeners**(`eventName`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **listeners**(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -537,7 +568,7 @@ console.log(util.inspect(server.listeners('connection')));
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -549,7 +580,7 @@ EventEmitter.listeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:644
+node_modules/@types/node/events.d.ts:700
 
 ___
 
@@ -591,7 +622,7 @@ EventEmitter.prependListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:743
+node_modules/@types/node/events.d.ts:799
 
 ___
 
@@ -631,13 +662,13 @@ EventEmitter.prependOnceListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:759
+node_modules/@types/node/events.d.ts:815
 
 ___
 
 ### rawListeners
 
-▸ **rawListeners**(`eventName`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **rawListeners**(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -675,7 +706,7 @@ emitter.emit('log');
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -687,7 +718,7 @@ EventEmitter.rawListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:675
+node_modules/@types/node/events.d.ts:731
 
 ___
 
@@ -796,28 +827,28 @@ EventEmitter.removeListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:599
+node_modules/@types/node/events.d.ts:655
 
 ___
 
 ### request
 
-▸ **request**(`url`, `options`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`ResponseData`\>
+▸ **request**(`url`, `options`): `Promise`\<`ResponseData`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `url` | `string` \| `URL` |
-| `options` | `undefined` \| { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `options` | `undefined` \| \{ `dispatcher?`: `Dispatcher`  } & `Omit`\<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`\<`Pick`\<`RequestOptions`, ``"method"``\>\> |
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`ResponseData`\>
+`Promise`\<`ResponseData`\>
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:149](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L149)
+[packages/rest/src/RequestManager.ts:149](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L149)
 
 ___
 
@@ -837,12 +868,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fetchOptions` | { `dispatcher?`: `Dispatcher`  } & `Omit`<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`<`Pick`<`RequestOptions`, ``"method"``\>\> |
+| `fetchOptions` | \{ `dispatcher?`: `Dispatcher`  } & `Omit`\<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`\<`Pick`\<`RequestOptions`, ``"method"``\>\> |
 | `url` | `URL` |
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L86)
+[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L86)
 
 ___
 
@@ -877,7 +908,7 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:625
+node_modules/@types/node/events.d.ts:681
 
 ___
 
@@ -899,13 +930,13 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/a945852/packages/rest/src/RequestManager.ts#L81)
+[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/RequestManager.ts#L81)
 
 ___
 
 ### addAbortListener
 
-▸ `Static` **addAbortListener**(`signal`, `resource`): `Disposable`
+▸ **addAbortListener**(`signal`, `resource`): `Disposable`
 
 Listens once to the `abort` event on the provided `signal`.
 
@@ -948,7 +979,7 @@ function example(signal) {
 
 `Disposable`
 
-that removes the `abort` listener.
+Disposable that removes the `abort` listener.
 
 **`Since`**
 
@@ -956,13 +987,13 @@ v20.5.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:375
+node_modules/@types/node/events.d.ts:387
 
 ___
 
 ### getEventListeners
 
-▸ `Static` **getEventListeners**(`emitter`, `name`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -998,7 +1029,7 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -1006,13 +1037,13 @@ v15.2.0, v14.17.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:296
+node_modules/@types/node/events.d.ts:308
 
 ___
 
 ### getMaxListeners
 
-▸ `Static` **getMaxListeners**(`emitter`): `number`
+▸ **getMaxListeners**(`emitter`): `number`
 
 Returns the currently set max amount of listeners.
 
@@ -1060,13 +1091,13 @@ EventEmitter.getMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:325
+node_modules/@types/node/events.d.ts:337
 
 ___
 
 ### listenerCount
 
-▸ `Static` **listenerCount**(`emitter`, `eventName`): `number`
+▸ **listenerCount**(`emitter`, `eventName`): `number`
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
@@ -1105,13 +1136,13 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:268
+node_modules/@types/node/events.d.ts:280
 
 ___
 
 ### on
 
-▸ `Static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`<`any`\>
+▸ **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`\<`any`\>
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1178,7 +1209,7 @@ process.nextTick(() => ac.abort());
 
 #### Returns
 
-`AsyncIterableIterator`<`any`\>
+`AsyncIterableIterator`\<`any`\>
 
 that iterates `eventName` events emitted by the `emitter`
 
@@ -1192,13 +1223,13 @@ EventEmitter.on
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:250
+node_modules/@types/node/events.d.ts:258
 
 ___
 
 ### once
 
-▸ `Static` **once**(`emitter`, `eventName`, `options?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1287,7 +1318,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+`Promise`\<`any`[]\>
 
 **`Since`**
 
@@ -1299,9 +1330,9 @@ EventEmitter.once
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:189
+node_modules/@types/node/events.d.ts:193
 
-▸ `Static` **once**(`emitter`, `eventName`, `options?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
 #### Parameters
 
@@ -1313,7 +1344,7 @@ node_modules/@types/node/events.d.ts:189
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+`Promise`\<`any`[]\>
 
 #### Inherited from
 
@@ -1321,13 +1352,13 @@ EventEmitter.once
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:190
+node_modules/@types/node/events.d.ts:198
 
 ___
 
 ### setMaxListeners
 
-▸ `Static` **setMaxListeners**(`n?`, `...eventTargets`): `void`
+▸ **setMaxListeners**(`n?`, `...eventTargets`): `void`
 
 ```js
 import { setMaxListeners, EventEmitter } from 'node:events';
@@ -1359,4 +1390,4 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:340
+node_modules/@types/node/events.d.ts:352

@@ -62,7 +62,7 @@ ___
 
 ### headers
 
-• **headers**: `Record`<`string`, `string`\>
+• **headers**: `Record`\<`string`, `string`\>
 
 Additional headers to send for all API requests
 

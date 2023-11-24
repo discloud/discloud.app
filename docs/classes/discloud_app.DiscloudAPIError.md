@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error )
+- `Error`
 
   ↳ **`DiscloudAPIError`**
 
@@ -37,7 +37,7 @@
 
 ### constructor
 
-• **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`)
+• **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): [`DiscloudAPIError`](discloud_app.DiscloudAPIError.md)
 
 #### Parameters
 
@@ -48,6 +48,10 @@
 | `method` | `string` |
 | `path` | `string` |
 | `body` | `any` |
+
+#### Returns
+
+[`DiscloudAPIError`](discloud_app.DiscloudAPIError.md)
 
 #### Overrides
 
@@ -157,7 +161,7 @@ ___
 
 ### prepareStackTrace
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error ), `stackTraces`: `CallSite`[]) => `any`
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
 
 #### Type declaration
 
@@ -169,7 +173,7 @@ Optional override for formatting stack traces
 
 | Name | Type |
 | :------ | :------ |
-| `err` | [`Error`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error ) |
+| `err` | `Error` |
 | `stackTraces` | `CallSite`[] |
 
 ##### Returns
@@ -206,7 +210,7 @@ node_modules/@types/node/globals.d.ts:13
 
 ### captureStackTrace
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
@@ -215,7 +219,7 @@ Create .stack property on a target object
 | Name | Type |
 | :------ | :------ |
 | `targetObject` | `object` |
-| `constructorOpt?` | [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function ) |
+| `constructorOpt?` | `Function` |
 
 #### Returns
 

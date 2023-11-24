@@ -42,6 +42,7 @@
 ### Methods
 
 - [#setToken](discloud_app.DiscloudApp.md##settoken)
+- [[captureRejectionSymbol]](discloud_app.DiscloudApp.md#[capturerejectionsymbol])
 - [addListener](discloud_app.DiscloudApp.md#addlistener)
 - [eventNames](discloud_app.DiscloudApp.md#eventnames)
 - [getMaxListeners](discloud_app.DiscloudApp.md#getmaxlisteners)
@@ -65,7 +66,7 @@
 
 ### constructor
 
-• **new DiscloudApp**(`options?`)
+• **new DiscloudApp**(`options?`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Parameters
 
@@ -73,13 +74,17 @@
 | :------ | :------ |
 | `options` | [`DiscloudAppOptions`](../interfaces/discloud_app.DiscloudAppOptions.md) |
 
+#### Returns
+
+[`DiscloudApp`](discloud_app.DiscloudApp.md)
+
 #### Inherited from
 
 EventEmitter.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
 
 ## Properties
 
@@ -89,7 +94,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
 
 ___
 
@@ -99,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
 
 ___
 
@@ -109,13 +114,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
 
 ___
 
 ### emit
 
-• **emit**: <K\>(`event`: `K`, ...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `boolean` & <S\>(`event`: `Exclude`<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, ...`args`: `unknown`[]) => `boolean`
+• **emit**: \<K\>(`event`: `K`, ...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `boolean` & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, ...`args`: `unknown`[]) => `boolean`
 
 #### Overrides
 
@@ -123,13 +128,13 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ___
 
 ### off
 
-• **off**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Overrides
 
@@ -137,13 +142,13 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ___
 
 ### on
 
-• **on**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Overrides
 
@@ -151,13 +156,13 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 ___
 
 ### once
 
-• **once**: <K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event`: `Exclude`<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Overrides
 
@@ -165,7 +170,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
 
 ___
 
@@ -175,13 +180,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: <K\>(`event?`: `K`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & <S\>(`event?`: `Exclude`<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Overrides
 
@@ -189,7 +194,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
 
 ___
 
@@ -199,7 +204,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
 
 ___
 
@@ -209,7 +214,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
 
 ___
 
@@ -219,7 +224,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
 
 ___
 
@@ -237,7 +242,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:390
+node_modules/@types/node/events.d.ts:402
 
 ___
 
@@ -255,7 +260,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:397
+node_modules/@types/node/events.d.ts:409
 
 ___
 
@@ -303,7 +308,7 @@ v0.11.2
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:434
+node_modules/@types/node/events.d.ts:446
 
 ___
 
@@ -322,7 +327,7 @@ v13.6.0, v12.17.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:383
+node_modules/@types/node/events.d.ts:395
 
 ## Accessors
 
@@ -336,13 +341,13 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:62](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L62)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:62](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L62)
 
 ## Methods
 
 ### #setToken
 
-▸ `Private` **#setToken**(`token`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **#setToken**(`token`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
 
 #### Parameters
 
@@ -356,7 +361,33 @@ node_modules/@types/node/events.d.ts:383
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:56](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L56)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:56](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L56)
+
+___
+
+### [captureRejectionSymbol]
+
+▸ **[captureRejectionSymbol]**(`error`, `event`, `...args`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `Error` |
+| `event` | `string` |
+| `...args` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+EventEmitter.[captureRejectionSymbol]
+
+#### Defined in
+
+node_modules/@types/node/events.d.ts:112
 
 ___
 
@@ -387,7 +418,7 @@ EventEmitter.addListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:454
+node_modules/@types/node/events.d.ts:510
 
 ___
 
@@ -426,7 +457,7 @@ EventEmitter.eventNames
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:779
+node_modules/@types/node/events.d.ts:835
 
 ___
 
@@ -451,7 +482,7 @@ EventEmitter.getMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:631
+node_modules/@types/node/events.d.ts:687
 
 ___
 
@@ -468,7 +499,7 @@ in the list of the listeners of the event.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `eventName` | `string` \| `symbol` | The name of the event being listened for |
-| `listener?` | [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function ) | The event handler function |
+| `listener?` | `Function` | The event handler function |
 
 #### Returns
 
@@ -484,13 +515,13 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:725
+node_modules/@types/node/events.d.ts:781
 
 ___
 
 ### listeners
 
-▸ **listeners**(`eventName`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **listeners**(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -510,7 +541,7 @@ console.log(util.inspect(server.listeners('connection')));
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -522,13 +553,13 @@ EventEmitter.listeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:644
+node_modules/@types/node/events.d.ts:700
 
 ___
 
 ### login
 
-▸ **login**(`token?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
+▸ **login**(`token?`): `Promise`\<[`User`](discloud_app.User.md)\>
 
 Login on Discloud API
 
@@ -540,11 +571,11 @@ Login on Discloud API
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`User`](discloud_app.User.md)\>
+`Promise`\<[`User`](discloud_app.User.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:71](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L71)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:71](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L71)
 
 ___
 
@@ -586,7 +617,7 @@ EventEmitter.prependListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:743
+node_modules/@types/node/events.d.ts:799
 
 ___
 
@@ -626,13 +657,13 @@ EventEmitter.prependOnceListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:759
+node_modules/@types/node/events.d.ts:815
 
 ___
 
 ### rawListeners
 
-▸ **rawListeners**(`eventName`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **rawListeners**(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -670,7 +701,7 @@ emitter.emit('log');
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -682,7 +713,7 @@ EventEmitter.rawListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:675
+node_modules/@types/node/events.d.ts:731
 
 ___
 
@@ -791,7 +822,7 @@ EventEmitter.removeListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:599
+node_modules/@types/node/events.d.ts:655
 
 ___
 
@@ -826,13 +857,13 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:625
+node_modules/@types/node/events.d.ts:681
 
 ___
 
 ### addAbortListener
 
-▸ `Static` **addAbortListener**(`signal`, `resource`): `Disposable`
+▸ **addAbortListener**(`signal`, `resource`): `Disposable`
 
 Listens once to the `abort` event on the provided `signal`.
 
@@ -875,7 +906,7 @@ function example(signal) {
 
 `Disposable`
 
-that removes the `abort` listener.
+Disposable that removes the `abort` listener.
 
 **`Since`**
 
@@ -883,13 +914,13 @@ v20.5.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:375
+node_modules/@types/node/events.d.ts:387
 
 ___
 
 ### getEventListeners
 
-▸ `Static` **getEventListeners**(`emitter`, `name`): [`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+▸ **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -925,7 +956,7 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 #### Returns
 
-[`Function`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function )[]
+`Function`[]
 
 **`Since`**
 
@@ -933,13 +964,13 @@ v15.2.0, v14.17.0
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:296
+node_modules/@types/node/events.d.ts:308
 
 ___
 
 ### getMaxListeners
 
-▸ `Static` **getMaxListeners**(`emitter`): `number`
+▸ **getMaxListeners**(`emitter`): `number`
 
 Returns the currently set max amount of listeners.
 
@@ -987,13 +1018,13 @@ EventEmitter.getMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:325
+node_modules/@types/node/events.d.ts:337
 
 ___
 
 ### listenerCount
 
-▸ `Static` **listenerCount**(`emitter`, `eventName`): `number`
+▸ **listenerCount**(`emitter`, `eventName`): `number`
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
@@ -1032,13 +1063,13 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:268
+node_modules/@types/node/events.d.ts:280
 
 ___
 
 ### on
 
-▸ `Static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`<`any`\>
+▸ **on**(`emitter`, `eventName`, `options?`): `AsyncIterableIterator`\<`any`\>
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1105,7 +1136,7 @@ process.nextTick(() => ac.abort());
 
 #### Returns
 
-`AsyncIterableIterator`<`any`\>
+`AsyncIterableIterator`\<`any`\>
 
 that iterates `eventName` events emitted by the `emitter`
 
@@ -1119,13 +1150,13 @@ EventEmitter.on
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:250
+node_modules/@types/node/events.d.ts:258
 
 ___
 
 ### once
 
-▸ `Static` **once**(`emitter`, `eventName`, `options?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1214,7 +1245,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+`Promise`\<`any`[]\>
 
 **`Since`**
 
@@ -1226,9 +1257,9 @@ EventEmitter.once
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:189
+node_modules/@types/node/events.d.ts:193
 
-▸ `Static` **once**(`emitter`, `eventName`, `options?`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+▸ **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
 #### Parameters
 
@@ -1240,7 +1271,7 @@ node_modules/@types/node/events.d.ts:189
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<`any`[]\>
+`Promise`\<`any`[]\>
 
 #### Inherited from
 
@@ -1248,13 +1279,13 @@ EventEmitter.once
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:190
+node_modules/@types/node/events.d.ts:198
 
 ___
 
 ### setMaxListeners
 
-▸ `Static` **setMaxListeners**(`n?`, `...eventTargets`): `void`
+▸ **setMaxListeners**(`n?`, `...eventTargets`): `void`
 
 ```js
 import { setMaxListeners, EventEmitter } from 'node:events';
@@ -1286,4 +1317,4 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:340
+node_modules/@types/node/events.d.ts:352

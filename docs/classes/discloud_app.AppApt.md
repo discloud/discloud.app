@@ -36,7 +36,7 @@ Base for all structures
 
 ### constructor
 
-• **new AppApt**(`discloudApp`, `data`)
+• **new AppApt**(`discloudApp`, `data`): [`AppApt`](discloud_app.AppApt.md)
 
 #### Parameters
 
@@ -45,13 +45,17 @@ Base for all structures
 | `discloudApp` | [`DiscloudApp`](discloud_app.DiscloudApp.md) |
 | `data` | [`BaseApiApp`](../interfaces/discloud_app.BaseApiApp.md) |
 
+#### Returns
+
+[`AppApt`](discloud_app.AppApt.md)
+
 #### Overrides
 
 [Base](discloud_app.Base.md).[constructor](discloud_app.Base.md#constructor)
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppApt.ts:8](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppApt.ts#L8)
+[packages/discloud.app/src/structures/AppApt.ts:8](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppApt.ts#L8)
 
 ## Properties
 
@@ -61,13 +65,13 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppApt.ts#L6)
+[packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppApt.ts#L6)
 
 ___
 
 ### constructor
 
-• **constructor**: [`Constructor`](../modules/discloud_app.md#constructor)<[`AppApt`](discloud_app.AppApt.md)\>
+• **constructor**: [`Constructor`](../interfaces/discloud_app.Constructor.md)\<[`AppApt`](discloud_app.AppApt.md)\>
 
 #### Inherited from
 
@@ -75,7 +79,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -89,13 +93,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
 ### \_clone
 
-▸ `Protected` **_clone**(): [`AppApt`](discloud_app.AppApt.md)
+▸ **_clone**(): [`AppApt`](discloud_app.AppApt.md)
 
 #### Returns
 
@@ -107,13 +111,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ `Protected` **_patch**(`data`): [`AppApt`](discloud_app.AppApt.md)
+▸ **_patch**(`data`): [`AppApt`](discloud_app.AppApt.md)
 
 #### Parameters
 
@@ -131,13 +135,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppApt.ts#L14)
+[packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppApt.ts#L14)
 
 ___
 
 ### \_update
 
-▸ `Protected` **_update**(`data`): [`AppApt`](discloud_app.AppApt.md)
+▸ **_update**(`data`): [`AppApt`](discloud_app.AppApt.md)
 
 #### Parameters
 
@@ -155,13 +159,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
 ### install
 
-▸ **install**(`apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
+▸ **install**(`apt`): `Promise`\<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
 
 #### Parameters
 
@@ -171,17 +175,17 @@ ___
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
+`Promise`\<[`RESTPutApiAppAptResult`](../interfaces/discloud_app.RESTPutApiAppAptResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppApt.ts:18](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppApt.ts#L18)
+[packages/discloud.app/src/structures/AppApt.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppApt.ts#L18)
 
 ___
 
 ### uninstall
 
-▸ **uninstall**(`apt`): [`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
+▸ **uninstall**(`apt`): `Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
 
 #### Parameters
 
@@ -191,8 +195,8 @@ ___
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise )<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
+`Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/discloud_app.RESTDeleteApiAppAptResult.md)\>
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppApt.ts:22](https://github.com/discloud/discloud.app/blob/a945852/packages/discloud.app/src/structures/AppApt.ts#L22)
+[packages/discloud.app/src/structures/AppApt.ts:22](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppApt.ts#L22)
