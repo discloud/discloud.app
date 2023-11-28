@@ -47,12 +47,12 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
-    fileName ??= file.match(fileNamePattern)?.pop() ?? "file";
+    fileName ??= file.match(fileNamePattern)?.pop() ?? "file.zip";
 
-    if (/^(?:ht|s?f)tps?:\/\//.test(file))
+    if (/^(?:s?ftp|https?):\/\//.test(file))
       return request(file, { throwOnError: true })
         .then(res => res.body.blob())
-        .then(blob => new File([blob], fileName ?? "file"));
+        .then(blob => new File([blob], fileName ?? "file.zip"));
 
     if (existsSync(file))
       return streamToFile(createReadStream(file), fileName);
@@ -60,9 +60,9 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     return new File([file], fileName);
   }
 
-  if (file instanceof Blob) return new File([file], fileName ?? "file");
+  if (file instanceof Blob) return new File([file], fileName ?? "file.zip");
 
-  if (Buffer.isBuffer(file)) return new File([file], fileName ?? "file");
+  if (Buffer.isBuffer(file)) return new File([file], fileName ?? "file.zip");
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
@@ -86,7 +86,7 @@ export function streamToFile(stream: Stream, fileName?: string | null, mimeType?
   return new Promise<File>((resolve, reject) => {
     const chunks: any[] = [];
     stream.on("data", chunk => chunks.push(chunk))
-      .once("end", () => resolve(new File(chunks, fileName ?? "file", { type: mimeType })))
+      .once("end", () => resolve(new File(chunks, fileName ?? "file.zip", { type: mimeType })))
       .once("error", reject);
   });
 }
