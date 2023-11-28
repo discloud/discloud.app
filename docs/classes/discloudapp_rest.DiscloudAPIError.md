@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ___
 
@@ -107,7 +107,7 @@ Error.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1068
+node_modules/typescript/lib/lib.es5.d.ts:1076
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ___
 
@@ -131,7 +131,7 @@ Error.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1067
+node_modules/typescript/lib/lib.es5.d.ts:1075
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/78281f4/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ___
 
@@ -155,7 +155,7 @@ Error.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1069
+node_modules/typescript/lib/lib.es5.d.ts:1077
 
 ___
 

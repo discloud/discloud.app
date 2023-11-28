@@ -67,7 +67,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:49](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L49)
+[packages/discloud.app/src/structures/AppStatus.ts:49](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L49)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Your app id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L10)
+[packages/discloud.app/src/structures/AppStatus.ts:10](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L10)
 
 ___
 
@@ -93,7 +93,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -106,7 +106,7 @@ Status of your application
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:15](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L15)
+[packages/discloud.app/src/structures/AppStatus.ts:15](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L15)
 
 ___
 
@@ -118,7 +118,7 @@ CPU usage as percentage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:19](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L19)
+[packages/discloud.app/src/structures/AppStatus.ts:19](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L19)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -144,7 +144,7 @@ Relative time of the last restart
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:23](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L23)
+[packages/discloud.app/src/structures/AppStatus.ts:23](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L23)
 
 ___
 
@@ -156,7 +156,7 @@ RAM usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:27](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L27)
+[packages/discloud.app/src/structures/AppStatus.ts:27](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L27)
 
 ___
 
@@ -168,7 +168,7 @@ Percentage of memory usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:31](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L31)
+[packages/discloud.app/src/structures/AppStatus.ts:31](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L31)
 
 ___
 
@@ -180,7 +180,7 @@ Internet usage
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:35](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L35)
+[packages/discloud.app/src/structures/AppStatus.ts:35](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L35)
 
 ___
 
@@ -192,7 +192,7 @@ Storage space
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:39](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L39)
+[packages/discloud.app/src/structures/AppStatus.ts:39](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L39)
 
 ___
 
@@ -204,7 +204,7 @@ Date of your application has started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:43](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L43)
+[packages/discloud.app/src/structures/AppStatus.ts:43](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L43)
 
 ___
 
@@ -216,7 +216,7 @@ Timestamp of when your app started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:47](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L47)
+[packages/discloud.app/src/structures/AppStatus.ts:47](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L47)
 
 ## Accessors
 
@@ -230,7 +230,7 @@ Timestamp of when your app started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:85](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L85)
+[packages/discloud.app/src/structures/AppStatus.ts:85](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L85)
 
 ## Methods
 
@@ -248,7 +248,7 @@ Timestamp of when your app started
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:55](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L55)
+[packages/discloud.app/src/structures/AppStatus.ts:55](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L55)
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/Base.ts#L26)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
@@ -310,4 +310,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppStatus.ts:89](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/structures/AppStatus.ts#L89)
+[packages/discloud.app/src/structures/AppStatus.ts:89](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppStatus.ts#L89)

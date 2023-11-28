@@ -337,7 +337,7 @@ EventEmitter.addListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:510
+node_modules/@types/node/events.d.ts:545
 
 ___
 
@@ -405,7 +405,7 @@ EventEmitter.eventNames
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:835
+node_modules/@types/node/events.d.ts:870
 
 ___
 
@@ -459,7 +459,7 @@ EventEmitter.getMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:687
+node_modules/@types/node/events.d.ts:722
 
 ___
 
@@ -492,7 +492,7 @@ EventEmitter.listenerCount
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:781
+node_modules/@types/node/events.d.ts:816
 
 ___
 
@@ -530,7 +530,7 @@ EventEmitter.listeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:700
+node_modules/@types/node/events.d.ts:735
 
 ___
 
@@ -601,7 +601,7 @@ EventEmitter.prependListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:799
+node_modules/@types/node/events.d.ts:834
 
 ___
 
@@ -641,7 +641,7 @@ EventEmitter.prependOnceListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:815
+node_modules/@types/node/events.d.ts:850
 
 ___
 
@@ -748,7 +748,7 @@ EventEmitter.rawListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:731
+node_modules/@types/node/events.d.ts:766
 
 ___
 
@@ -857,7 +857,7 @@ EventEmitter.removeListener
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:655
+node_modules/@types/node/events.d.ts:690
 
 ___
 
@@ -920,7 +920,7 @@ EventEmitter.setMaxListeners
 
 #### Defined in
 
-node_modules/@types/node/events.d.ts:681
+node_modules/@types/node/events.d.ts:716
 
 ___
 

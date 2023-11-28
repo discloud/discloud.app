@@ -22,7 +22,7 @@ Which of your applications are currently `processing`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L83)
+[packages/api-types/rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L83)
 
 ___
 
@@ -34,7 +34,7 @@ Which of your applications are currently `offline`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L87)
+[packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L87)
 
 ___
 
@@ -46,4 +46,4 @@ Which of your applications are currently `online`
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/app.ts#L91)
+[packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L91)

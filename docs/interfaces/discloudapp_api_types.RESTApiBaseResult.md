@@ -40,7 +40,9 @@
 
   ↳ [`RESTGetApiTeamResult`](discloudapp_api_types.RESTGetApiTeamResult.md)
 
-  ↳ [`RESTPostApiUploadResult`](discloudapp_api_types.RESTPostApiUploadResult.md)
+  ↳ [`RESTPostApiUploadSuccessResult`](discloudapp_api_types.RESTPostApiUploadSuccessResult.md)
+
+  ↳ [`RESTPostApiUploadErrorResult`](discloudapp_api_types.RESTPostApiUploadErrorResult.md)
 
   ↳ [`RESTGetApiUserResult`](discloudapp_api_types.RESTGetApiUserResult.md)
 
@@ -62,7 +64,7 @@ Message of the API
 
 #### Defined in
 
-[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/base.ts#L10)
+[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -74,4 +76,4 @@ The status of API response
 
 #### Defined in
 
-[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/78281f4/packages/api-types/rest/v2/base.ts#L5)
+[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/base.ts#L5)

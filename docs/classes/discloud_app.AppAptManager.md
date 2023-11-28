@@ -49,7 +49,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/managers/AppAptManager.ts#L10)
 
 ## Properties
 
@@ -63,7 +63,7 @@ Manager for APT on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -86,7 +86,7 @@ Install APTs for your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ___
 
@@ -109,4 +109,4 @@ Uninstall APTs for your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/78281f4/packages/discloud.app/src/managers/AppAptManager.ts#L40)
+[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/managers/AppAptManager.ts#L40)
