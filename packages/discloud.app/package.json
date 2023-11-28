@@ -30,7 +30,7 @@
     "@discloudapp/util": "^0.5.1",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",
-    "undici": "^5.28.0",
+    "undici": "^5.28.1",
     "zod": "^3.22.4"
   },
   "engines": {
