@@ -20,8 +20,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@discloudapp/api-types": "^0.4.0",
-    "@discloudapp/util": "^0.5.1",
+    "@discloudapp/api-types": "^0.4.1",
+    "@discloudapp/util": "^0.5.2",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",
     "undici": "^5.28.1"
