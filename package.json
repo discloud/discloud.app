@@ -22,7 +22,7 @@
     "typedoc": "^0.25.4",
     "typedoc-plugin-coverage": "^2.2.0",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typedoc-plugin-mdn-links": "^3.1.6",
+    "typedoc-plugin-mdn-links": "^3.1.7",
     "typedoc-plugin-rename-defaults": "^0.7.0",
     "typescript": "^5.3.3"
   },
