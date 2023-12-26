@@ -1,4 +1,4 @@
-import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTApiBaseResult, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTApiBaseResult, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppConsoleResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { FileResolvable, resolveFile } from "@discloudapp/util";
 import { constants } from "node:http2";
@@ -44,6 +44,22 @@ export default class AppManager extends CachedManager<typeof App> {
     }
 
     return this._add(data.apps).status;
+  }
+
+  /**
+   * Send a command to your app's terminal
+   * 
+   * @param appID - Your app id
+   * @param command - The command
+   */
+  async console(appID: string, command: string): Promise<string> {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppConsoleResult>(Routes.appConsole(appID), {
+      body: {
+        command,
+      },
+    });
+
+    return data.apps.shell.cmd;
   }
 
   /**

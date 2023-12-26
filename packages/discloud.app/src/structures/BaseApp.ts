@@ -42,6 +42,15 @@ export default abstract class BaseApp extends Base {
   }
 
   /**
+   * Send a command to your app's terminal
+   * 
+   * @param command - The command
+   */
+  console(command: string) {
+    return this.discloudApp.apps.console(this.id, command);
+  }
+
+  /**
    * Get logs of your application on Discloud
    */
   terminal() {
