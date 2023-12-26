@@ -29,6 +29,13 @@ export abstract class App {
   }
 
   /**
+   * - PUT - `/app/{appID}/console`
+   */
+  static console<appID extends string>(appID: appID): `/app/${appID}/console` {
+    return `/app/${appID}/console`;
+  }
+
+  /**
    * - DELETE - `/app/{appID}/delete`
    */
   static delete<appID extends string>(appID: appID): `/app/${appID}/delete` {

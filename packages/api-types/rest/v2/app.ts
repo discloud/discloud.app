@@ -184,6 +184,16 @@ export interface ApiTerminal {
   small: string
 }
 
+export interface ApiConsoleApp {
+  id: string
+  shell: ApiConsoleAppShell
+}
+
+export interface ApiConsoleAppShell {
+  online: boolean
+  cmd: string
+}
+
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
   /**
    * All of your applications
@@ -291,6 +301,10 @@ export interface RESTPutApiAppCommitResult extends RESTApiBaseResult {
    * API logs in case your app fails on launch
    */
   logs?: string
+}
+
+export interface RESTPutApiAppConsoleResult extends RESTApiBaseResult {
+  apps: ApiConsoleApp
 }
 
 export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
