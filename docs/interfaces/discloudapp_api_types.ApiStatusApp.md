@@ -34,7 +34,7 @@ Status of your application
 
 #### Defined in
 
-[rest/v2/app.ts:127](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L127)
+[rest/v2/app.ts:127](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L127)
 
 ___
 
@@ -46,7 +46,7 @@ CPU usage as percentage
 
 #### Defined in
 
-[rest/v2/app.ts:131](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L131)
+[rest/v2/app.ts:131](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L131)
 
 ___
 
@@ -62,7 +62,7 @@ Your app id
 
 #### Defined in
 
-[rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L7)
+[rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L7)
 
 ___
 
@@ -74,7 +74,7 @@ Relative time of the last restart
 
 #### Defined in
 
-[rest/v2/app.ts:135](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L135)
+[rest/v2/app.ts:135](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L135)
 
 ___
 
@@ -86,7 +86,7 @@ RAM usage
 
 #### Defined in
 
-[rest/v2/app.ts:139](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L139)
+[rest/v2/app.ts:139](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L139)
 
 ___
 
@@ -98,7 +98,7 @@ Internet usage
 
 #### Defined in
 
-[rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L143)
+[rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L143)
 
 ___
 
@@ -110,7 +110,7 @@ Storage space
 
 #### Defined in
 
-[rest/v2/app.ts:147](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L147)
+[rest/v2/app.ts:147](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L147)
 
 ___
 
@@ -122,4 +122,4 @@ Date of your application has started
 
 #### Defined in
 
-[rest/v2/app.ts:151](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L151)
+[rest/v2/app.ts:151](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L151)

@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ___
 
@@ -190,7 +190,7 @@ Error.prepareStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:11
+node_modules/@types/node/globals.d.ts:28
 
 ___
 
@@ -204,7 +204,7 @@ Error.stackTraceLimit
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:13
+node_modules/@types/node/globals.d.ts:30
 
 ## Methods
 
@@ -231,4 +231,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:4
+node_modules/@types/node/globals.d.ts:21

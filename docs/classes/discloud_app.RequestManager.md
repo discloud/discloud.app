@@ -87,7 +87,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:31
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:31
 
 ## Properties
 
@@ -97,7 +97,7 @@ packages/rest/out/RequestManager.d.ts:31
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:13
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:13
 
 ___
 
@@ -111,7 +111,7 @@ EventEmitter.emit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:6
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:6
 
 ___
 
@@ -123,7 +123,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:18
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:18
 
 ___
 
@@ -135,7 +135,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:22
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:22
 
 ___
 
@@ -147,7 +147,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:26
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:26
 
 ___
 
@@ -159,7 +159,7 @@ The time at which the last request was made
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:30
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:30
 
 ___
 
@@ -173,7 +173,7 @@ EventEmitter.off
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:7
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:7
 
 ___
 
@@ -187,7 +187,7 @@ EventEmitter.on
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:8
 
 ___
 
@@ -201,7 +201,7 @@ EventEmitter.once
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:9
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:9
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:14
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:14
 
 ___
 
@@ -225,7 +225,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:10
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:10
 
 ___
 
@@ -342,7 +342,7 @@ node_modules/@types/node/events.d.ts:395
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:32
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:32
 
 ___
 
@@ -358,7 +358,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:36
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:36
 
 ___
 
@@ -374,7 +374,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:40
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:40
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:41
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:41
 
 ## Methods
 
@@ -848,7 +848,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:54
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:54
 
 ___
 
@@ -873,7 +873,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:48
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:48
 
 ___
 
@@ -930,7 +930,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-packages/rest/out/RequestManager.d.ts:47
+packages/discloud.app/node_modules/@discloudapp/rest/out/RequestManager.d.ts:47
 
 ___
 

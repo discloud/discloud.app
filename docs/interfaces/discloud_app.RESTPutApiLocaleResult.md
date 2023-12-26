@@ -23,7 +23,7 @@ Your locale
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/locale.ts#L11)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/locale.ts:11
 
 ___
 
@@ -35,7 +35,7 @@ List of locales in case you choose a wrong locale
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:19](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/locale.ts#L19)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/locale.ts:19
 
 ___
 
@@ -47,7 +47,7 @@ API message response
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/locale.ts#L15)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/locale.ts:15
 
 ___
 
@@ -59,4 +59,4 @@ API status response
 
 #### Defined in
 
-[packages/api-types/rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/locale.ts#L7)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/locale.ts:7

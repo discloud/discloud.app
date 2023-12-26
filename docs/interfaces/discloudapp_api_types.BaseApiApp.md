@@ -32,4 +32,4 @@ Your app id
 
 #### Defined in
 
-[rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L7)
+[rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L7)

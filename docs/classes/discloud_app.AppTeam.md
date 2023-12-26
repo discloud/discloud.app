@@ -57,7 +57,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L9)
+[packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L9)
 
 ## Properties
 
@@ -67,7 +67,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L7)
+[packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L7)
 
 ___
 
@@ -81,7 +81,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L15)
+[packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L15)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L26)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L19)
+[packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L19)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L27)
+[packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L27)
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L23)
+[packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L23)
 
 ___
 
@@ -237,4 +237,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/AppTeam.ts#L31)
+[packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/AppTeam.ts#L31)

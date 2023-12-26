@@ -70,7 +70,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L51)
+[packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L51)
 
 ## Properties
 
@@ -82,7 +82,7 @@ Your applications ID
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L11)
+[packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L11)
 
 ___
 
@@ -96,7 +96,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -108,7 +108,7 @@ Your custom domains on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L15)
+[packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L15)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L12)
 
 ___
 
@@ -134,7 +134,7 @@ Your id
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L19)
+[packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L19)
 
 ___
 
@@ -146,7 +146,7 @@ Your locale
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L23)
+[packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L23)
 
 ___
 
@@ -158,7 +158,7 @@ Your plan
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L27)
+[packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L27)
 
 ___
 
@@ -170,7 +170,7 @@ Date of when will your plan end
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L31)
+[packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L31)
 
 ___
 
@@ -182,7 +182,7 @@ Timestamp of when will your plan end
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L35)
+[packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L35)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L49)
+[packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L49)
 
 ___
 
@@ -204,7 +204,7 @@ Quantity of RAM was used for your applications
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L39)
+[packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L39)
 
 ___
 
@@ -216,7 +216,7 @@ Your subdomains on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L43)
+[packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L43)
 
 ___
 
@@ -228,7 +228,7 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L47)
+[packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L47)
 
 ## Accessors
 
@@ -242,7 +242,7 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L111)
+[packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L111)
 
 ## Methods
 
@@ -260,7 +260,7 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L57)
+[packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L57)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/Base.ts#L26)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/Base.ts#L26)
 
 ___
 
@@ -324,7 +324,7 @@ Fetch a user from Discloud API
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L133)
+[packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L133)
 
 ___
 
@@ -356,7 +356,7 @@ Set your locale on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L121)
+[packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L121)
 
 ___
 
@@ -370,4 +370,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/structures/User.ts#L139)
+[packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/structures/User.ts#L139)

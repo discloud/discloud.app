@@ -29,7 +29,7 @@ Your applications ID
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:14](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L14)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:14
 
 ___
 
@@ -41,7 +41,7 @@ Your custom domains on Discloud
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:18](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L18)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:18
 
 ___
 
@@ -53,7 +53,7 @@ When will your plan end
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:46](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L46)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:46
 
 ___
 
@@ -65,7 +65,7 @@ Your locale
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:22](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L22)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:22
 
 ___
 
@@ -77,7 +77,7 @@ Your plan
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:26](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L26)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:26
 
 ___
 
@@ -89,7 +89,7 @@ Date of when will your plan end
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:50](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L50)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:50
 
 ___
 
@@ -101,7 +101,7 @@ Quantity of RAM was used for your applications
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:30](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L30)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:30
 
 ___
 
@@ -113,7 +113,7 @@ Your subdomains on Discloud
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:34](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L34)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:34
 
 ___
 
@@ -125,7 +125,7 @@ Your total RAM quantity
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:38](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L38)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:38
 
 ___
 
@@ -137,4 +137,4 @@ Your id
 
 #### Defined in
 
-[packages/api-types/rest/v2/user.ts:42](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/user.ts#L42)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/user.ts:42

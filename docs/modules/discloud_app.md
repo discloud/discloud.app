@@ -55,6 +55,8 @@
 - [ApiAppManagerStopedAll](../interfaces/discloud_app.ApiAppManagerStopedAll.md)
 - [ApiAppTeam](../interfaces/discloud_app.ApiAppTeam.md)
 - [ApiAppTeamManager](../interfaces/discloud_app.ApiAppTeamManager.md)
+- [ApiConsoleApp](../interfaces/discloud_app.ApiConsoleApp.md)
+- [ApiConsoleAppShell](../interfaces/discloud_app.ApiConsoleAppShell.md)
 - [ApiNetIO](../interfaces/discloud_app.ApiNetIO.md)
 - [ApiStatusApp](../interfaces/discloud_app.ApiStatusApp.md)
 - [ApiTeamApps](../interfaces/discloud_app.ApiTeamApps.md)
@@ -93,6 +95,7 @@
 - [RESTPutApiAppAllStopResult](../interfaces/discloud_app.RESTPutApiAppAllStopResult.md)
 - [RESTPutApiAppAptResult](../interfaces/discloud_app.RESTPutApiAppAptResult.md)
 - [RESTPutApiAppCommitResult](../interfaces/discloud_app.RESTPutApiAppCommitResult.md)
+- [RESTPutApiAppConsoleResult](../interfaces/discloud_app.RESTPutApiAppConsoleResult.md)
 - [RESTPutApiAppRamResult](../interfaces/discloud_app.RESTPutApiAppRamResult.md)
 - [RESTPutApiAppTeamResult](../interfaces/discloud_app.RESTPutApiAppTeamResult.md)
 - [RESTPutApiLocaleResult](../interfaces/discloud_app.RESTPutApiLocaleResult.md)
@@ -172,7 +175,7 @@
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:41](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L41)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:41
 
 ___
 
@@ -182,7 +185,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:119](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L119)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:119
 
 ___
 
@@ -192,7 +195,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:115](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L115)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:115
 
 ___
 
@@ -208,7 +211,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:128](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L128)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:128
 
 ___
 
@@ -278,7 +281,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L5)
+[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L5)
 
 ___
 
@@ -288,7 +291,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L24)
+[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L24)
 
 ___
 
@@ -305,7 +308,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:55
 
 ___
 
@@ -335,7 +338,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L11)
+[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L11)
 
 ___
 
@@ -345,7 +348,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L32)
+[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L32)
 
 ___
 
@@ -375,9 +378,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -390,7 +393,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/base.ts#L17)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/base.ts:17
 
 ___
 
@@ -400,7 +403,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:263](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L263)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:273
 
 ___
 
@@ -410,7 +413,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:318](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L318)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:332
 
 ___
 
@@ -420,7 +423,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/upload.ts#L3)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/upload.ts:3
 
 ___
 
@@ -430,7 +433,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:265](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L265)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:275
 
 ___
 
@@ -440,7 +443,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:267](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L267)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:277
 
 ___
 
@@ -450,7 +453,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:269](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/app.ts#L269)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/app.ts:279
 
 ___
 
@@ -460,7 +463,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:6
+packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:6
 
 ___
 
@@ -470,7 +473,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/@types/index.d.ts:5
+packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:5
 
 ___
 
@@ -480,7 +483,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L26)
+[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L26)
 
 ## Variables
 
@@ -498,7 +501,7 @@ API version
 
 #### Defined in
 
-[packages/api-types/rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/index.ts#L14)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/index.ts:14
 
 ___
 
@@ -520,7 +523,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:1
 
 ___
 
@@ -530,7 +533,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:39](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L39)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:39
 
 ___
 
@@ -542,7 +545,7 @@ Library default options
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/util/constants.ts#L12)
+[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/util/constants.ts#L12)
 
 ___
 
@@ -552,7 +555,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:8
 
 ___
 
@@ -562,7 +565,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:7
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:7
 
 ___
 
@@ -595,9 +598,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -613,7 +616,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/rest/v2/index.ts#L16)
+packages/discloud.app/node_modules/@discloudapp/api-types/rest/v2/index.ts:16
 
 ___
 
@@ -665,7 +668,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:6
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:6
 
 ___
 
@@ -700,7 +703,7 @@ async function () {
 
 #### Defined in
 
-[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/index.ts#L79)
+[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/index.ts#L79)
 
 ___
 
@@ -728,7 +731,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:43](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/api-types/payload/v2/DiscloudConfig.ts#L43)
+packages/discloud.app/node_modules/@discloudapp/api-types/payload/v2/DiscloudConfig.ts:43
 
 ___
 
@@ -748,7 +751,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:3
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:3
 
 ___
 
@@ -758,7 +761,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:5
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:5
 
 ___
 
@@ -768,7 +771,7 @@ ___
 
 #### Defined in
 
-packages/rest/out/utils/contants.d.ts:4
+packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:4
 
 ___
 
@@ -778,7 +781,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/c6f50ea/packages/discloud.app/src/util/constants.ts#L7)
+[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/util/constants.ts#L7)
 
 ## Functions
 

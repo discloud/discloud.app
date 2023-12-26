@@ -19,7 +19,7 @@
 
 #### Defined in
 
-packages/rest/out/@enum/index.d.ts:8
+packages/discloud.app/node_modules/@discloudapp/rest/out/@enum/index.d.ts:8
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-packages/rest/out/@enum/index.d.ts:9
+packages/discloud.app/node_modules/@discloudapp/rest/out/@enum/index.d.ts:9
