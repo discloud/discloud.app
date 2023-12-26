@@ -10,6 +10,7 @@ export abstract class Routes {
   static appApt = App.apt;
   static appBackup = App.backup;
   static appCommit = App.commit;
+  static appConsole = App.console;
   static appDelete = App.delete;
   static appLogs = App.logs;
   static appProfile = App.profile;
