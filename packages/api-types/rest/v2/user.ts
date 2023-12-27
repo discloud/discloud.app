@@ -1,4 +1,4 @@
-import { RESTApiBaseResult } from "./base";
+import type { RESTApiBaseResult } from "./base";
 
 export interface RESTGetApiUserResult extends RESTApiBaseResult {
   /**

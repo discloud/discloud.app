@@ -1,4 +1,4 @@
-import { RESTApiStatusResponse } from "./base";
+import type { RESTApiStatusResponse } from "./base";
 
 export interface RESTPutApiLocaleResult {
   /**

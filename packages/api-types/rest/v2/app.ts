@@ -1,4 +1,4 @@
-import { RESTApiBaseResult, RESTApiStatusResponse } from "./base";
+import type { RESTApiBaseResult, RESTApiStatusResponse } from "./base";
 
 export interface BaseApiApp {
   /**
