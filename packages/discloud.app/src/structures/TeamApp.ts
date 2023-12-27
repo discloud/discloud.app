@@ -1,5 +1,5 @@
 import { ApiStatusApp, ApiTeamApps, BaseApiApp } from "@discloudapp/api-types/v2";
-import { ModPermissionsFlags } from "@discloudapp/util";
+import { ModPermissionsString } from "@discloudapp/util";
 import DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseTeamApp from "./BaseTeamApp";
 import TeamAppStatus from "./TeamAppStatus";
@@ -24,7 +24,7 @@ export default class TeamApp extends BaseTeamApp {
   /**
    * Your permissions to manage this application.
    */
-  readonly perms = new Set<ModPermissionsFlags>();
+  readonly perms = new Set<ModPermissionsString>();
   /**
    * If your team's app stopped due to low RAM
    */
@@ -57,7 +57,7 @@ export default class TeamApp extends BaseTeamApp {
       if (Array.isArray(data.perms)) {
         this.perms.clear();
 
-        for (const perm of <ModPermissionsFlags[]>data.perms) {
+        for (const perm of <ModPermissionsString[]>data.perms) {
           this.perms.add(perm);
         }
       }
