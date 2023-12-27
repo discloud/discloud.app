@@ -1,6 +1,6 @@
 import BitField, { BitFieldResolvable } from "./BitField";
 
-export const ModPermissions = {
+export const ModPermissionsFlags = {
   backup_app: 1 << 0,
   commit_app: 1 << 1,
   edit_ram: 1 << 2,
@@ -11,13 +11,16 @@ export const ModPermissions = {
   stop_app: 1 << 7,
 } as const;
 
-export type ModPermissionsFlags = keyof typeof ModPermissions
+export type ModPermissionsFlags = typeof ModPermissionsFlags
 
-export type ModPermissionsResolvable = BitFieldResolvable<ModPermissionsFlags, number>
+export type ModPermissionsString = keyof ModPermissionsFlags
 
-export class ModPermissionsBF extends BitField<ModPermissionsFlags, number> {
-  static Flags = ModPermissions;
-  static All = new ModPermissionsBF(Object.values(ModPermissions));
+export type ModPermissionsResolvable = BitFieldResolvable<ModPermissionsString, number>
+
+export class ModPermissionsBF extends BitField<ModPermissionsString, number> {
+  static DefaultBit = 0;
+  static Flags = ModPermissionsFlags;
+  static All = new ModPermissionsBF(Object.values(ModPermissionsFlags));
 }
 
 export default ModPermissionsBF;
