@@ -24,16 +24,16 @@ export interface IgnoreFilesOptions {
 }
 
 export class IgnoreFiles {
-  declare fileName: string;
-  filesIgnore: string[] = [];
-  list: string[] = allBlockedFiles;
-  paths: string[] = [];
+  readonly fileName: string;
+  readonly filesIgnore = new Set<string>();
+  readonly list: string[] = allBlockedFiles;
+  readonly paths = new Set<string>();
 
   constructor(options: IgnoreFilesOptions) {
     this.fileName = options.fileName;
 
     if (options.optionalIgnoreList?.length) {
-      this.list.push(...IgnoreFiles.normalizePaths(options.optionalIgnoreList));
+      this.list = Array.from(new Set(this.list.concat(IgnoreFiles.normalizePaths(options.optionalIgnoreList))));
     }
 
     for (let i = 0; i < this.list.length; i++) {
@@ -41,19 +41,19 @@ export class IgnoreFiles {
     }
 
     if (Array.isArray(options.path)) {
-      this.paths = IgnoreFiles.normalizePaths(options.path);
+      this.paths = new Set(IgnoreFiles.normalizePaths(options.path));
     } else if (options.path) {
-      this.paths.push(IgnoreFiles.normalizePath(options.path));
+      this.paths.add(IgnoreFiles.normalizePath(options.path));
     }
 
     if (this.fileName)
       this.filesIgnore = IgnoreFiles.findIgnoreFiles(this.fileName, this.paths, this.list);
 
-    if (this.filesIgnore.length)
-      this.list.push(...this.processIgnoreFiles(this.filesIgnore));
+    if (this.filesIgnore.size)
+      this.list = Array.from(new Set(this.list.concat(this.processIgnoreFiles(this.filesIgnore))));
   }
 
-  static findIgnoreFiles(fileName: string, paths: string[], ignore: string[]) {
+  static findIgnoreFiles(fileName: string, paths: Set<string>, ignore: string[]) {
     const files = [];
 
     for (const path of paths) {
@@ -64,7 +64,7 @@ export class IgnoreFiles {
       }));
     }
 
-    return files.flat();
+    return new Set(files.flat());
   }
 
   static normalizeIgnore(ignore: string, path = "**") {
@@ -84,7 +84,7 @@ export class IgnoreFiles {
   }
 
   static processIgnoreFile(file: string) {
-    const dir = dirname(file).replace(/^\.$/, "") || "**";
+    const dir = dirname(file).replace(/^[.]$/, "") || "**";
 
     const list = readFileSync(file, "utf8")
       .replace(/\s*#.*/g, "")

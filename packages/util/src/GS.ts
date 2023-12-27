@@ -19,14 +19,14 @@ export class GS {
     });
 
     if (Array.isArray(this.pattern)) {
-      this.pattern = this.pattern.flatMap(path => [
-        join(this.#normalizePath(path), "**"),
-        join("**", this.#normalizePath(path)),
+      this.pattern = this.pattern.flatMap(pattern => [
+        this.#normalizePath(pattern),
+        join(this.#normalizePath(pattern), "**"),
       ]);
     } else {
       this.pattern = [
+        this.#normalizePath(this.pattern),
         join(this.#normalizePath(this.pattern), "**"),
-        join("**", this.#normalizePath(this.pattern)),
       ];
     }
 
