@@ -24,7 +24,7 @@ export abstract class BitField<S, N> {
 
   /**
    * Numeric bitfield flags.
-   * <info>Defined in extension classes</info>
+   * Defined in extension classes
    */
   static Flags: EnumLike<unknown, bigint | number> = {};
 
@@ -150,7 +150,9 @@ export abstract class BitField<S, N> {
   }
 
   *[Symbol.iterator]() {
-    yield* this.toArray();
+    for (const flag of this.toArray()) {
+      yield* flag;
+    }
   }
 
   /**
