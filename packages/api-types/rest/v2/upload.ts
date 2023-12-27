@@ -1,8 +1,8 @@
 import { RESTApiBaseResult } from "./base";
 
-export type RESTPostApiUploadResult = RESTPostApiUploadSuccessResult | RESTPostApiUploadErrorResult
+export type RESTPostApiUploadResult = RESTPostApiUploadOkResult | RESTPostApiUploadErrorResult
 
-export interface RESTPostApiUploadSuccessResult extends RESTApiBaseResult {
+export interface RESTPostApiUploadOkResult extends RESTApiBaseResult {
   status: "ok"
   /**
    * Status code from API
@@ -24,6 +24,10 @@ export interface RESTPostApiUploadErrorResult extends RESTApiBaseResult {
    * Status code from API
    */
   statusCode: number
+  /**
+   * Your uploaded app
+   */
+  app?: ApiUploadApp
   /**
    * API logs in case your app fails on launch
    */
