@@ -5,7 +5,7 @@ import { IgnoreFiles } from "./IgnoreFiles";
 
 export class GS {
   readonly found: string[] = [];
-  declare readonly ignore: IgnoreFiles;
+  readonly ignore: IgnoreFiles;
 
   constructor(
     public pattern: string | string[],
