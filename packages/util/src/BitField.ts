@@ -69,7 +69,7 @@ export abstract class BitField<S, N> {
   /**
    * Freezes these bits, making them immutable.
    */
-  freeze(): Readonly<BitField<S, N>> {
+  freeze(): Readonly<this> {
     return Object.freeze(this);
   }
 
