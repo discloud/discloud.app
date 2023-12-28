@@ -25,10 +25,6 @@ export interface RESTPostApiUploadErrorResult extends RESTApiBaseResult {
    */
   statusCode: number
   /**
-   * Your uploaded app
-   */
-  app?: ApiUploadApp
-  /**
    * API logs in case your app fails on launch
    */
   logs?: string
