@@ -22,7 +22,7 @@ Possible headers for an API call
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:42
+packages/rest/out/@types/index.d.ts:42
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:40
+packages/rest/out/@types/index.d.ts:40
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:41
+packages/rest/out/@types/index.d.ts:41

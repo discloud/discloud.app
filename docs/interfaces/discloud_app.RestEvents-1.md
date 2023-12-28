@@ -25,7 +25,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:86
+packages/rest/out/@types/index.d.ts:86
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:87
+packages/rest/out/@types/index.d.ts:87

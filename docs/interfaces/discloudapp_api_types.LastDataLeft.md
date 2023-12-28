@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[rest/v2/user.ts:77](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/user.ts#L77)
+[rest/v2/user.ts:77](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/user.ts#L77)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[rest/v2/user.ts:78](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/user.ts#L78)
+[rest/v2/user.ts:78](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/user.ts#L78)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[rest/v2/user.ts:79](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/user.ts#L79)
+[rest/v2/user.ts:79](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/user.ts#L79)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[rest/v2/user.ts:80](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/user.ts#L80)
+[rest/v2/user.ts:80](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/user.ts#L80)

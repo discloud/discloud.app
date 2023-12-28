@@ -22,7 +22,7 @@
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:79
+packages/rest/out/@types/index.d.ts:79
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:80
+packages/rest/out/@types/index.d.ts:80
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:81
+packages/rest/out/@types/index.d.ts:81
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:82
+packages/rest/out/@types/index.d.ts:82
 
 ___
 
@@ -62,4 +62,4 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/@types/index.d.ts:83
+packages/rest/out/@types/index.d.ts:83

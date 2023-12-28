@@ -71,7 +71,7 @@ Manager for data
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:12](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L12)
+[packages/discloud.app/src/managers/DataManager.ts:12](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L12)
 
 ## Properties
 
@@ -81,7 +81,7 @@ Manager for data
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L9)
+[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L10)
+[packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 ## Accessors
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L25)
+[packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ## Methods
 
@@ -141,7 +141,7 @@ Resolves a data entry to a data Object.
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L33)
+[packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L33)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L39)
+[packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 ___
 
@@ -175,4 +175,4 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/managers/DataManager.ts#L46)
+[packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/managers/DataManager.ts#L46)

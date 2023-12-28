@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError.d.ts:6
+packages/rest/out/errors/DiscloudAPIError.d.ts:6
 
 ## Properties
 
@@ -69,7 +69,7 @@ packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError.d.ts:5
+packages/rest/out/errors/DiscloudAPIError.d.ts:5
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError.d.ts:2
+packages/rest/out/errors/DiscloudAPIError.d.ts:2
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError.d.ts:3
+packages/rest/out/errors/DiscloudAPIError.d.ts:3
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-packages/discloud.app/node_modules/@discloudapp/rest/out/errors/DiscloudAPIError.d.ts:4
+packages/rest/out/errors/DiscloudAPIError.d.ts:4
 
 ___
 

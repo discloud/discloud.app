@@ -29,7 +29,7 @@ API logs in case your app fails on launch
 
 #### Defined in
 
-[rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/upload.ts#L30)
+[rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/upload.ts#L30)
 
 ___
 
@@ -46,7 +46,7 @@ Message of the API
 
 #### Defined in
 
-[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/base.ts#L10)
+[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/base.ts#L10)
 
 ___
 
@@ -62,7 +62,7 @@ The status of API response
 
 #### Defined in
 
-[rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/upload.ts#L22)
+[rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/upload.ts#L22)
 
 ___
 
@@ -74,4 +74,4 @@ Status code from API
 
 #### Defined in
 
-[rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/upload.ts#L26)
+[rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/upload.ts#L26)
