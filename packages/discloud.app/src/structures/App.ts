@@ -1,5 +1,5 @@
-import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import AppApt from "./AppApt";
 import AppStatus from "./AppStatus";
 import AppTeam from "./AppTeam";

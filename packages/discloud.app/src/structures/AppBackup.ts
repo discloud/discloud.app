@@ -1,9 +1,9 @@
-import { ApiAppBackup, ApiAppBackupAll } from "@discloudapp/api-types/v2";
-import { PathLike, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import type { ApiAppBackup, ApiAppBackupAll } from "@discloudapp/api-types/v2";
+import { existsSync, mkdirSync, writeFileSync, type PathLike } from "node:fs";
 import { join } from "node:path";
 import { cwd } from "node:process";
 import { fetch } from "undici";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 class AppBackup extends Base {

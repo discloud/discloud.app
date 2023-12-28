@@ -1,6 +1,6 @@
-import { ApiStatusApp, ApiTeamApps, BaseApiApp } from "@discloudapp/api-types/v2";
-import { ModPermissionsString } from "@discloudapp/util";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { ApiStatusApp, ApiTeamApps, BaseApiApp } from "@discloudapp/api-types/v2";
+import type { ModPermissionsString } from "@discloudapp/util";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseTeamApp from "./BaseTeamApp";
 import TeamAppStatus from "./TeamAppStatus";
 

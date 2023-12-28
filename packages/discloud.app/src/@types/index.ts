@@ -1,5 +1,5 @@
-import { RestEvents, RESTOptions } from "@discloudapp/rest";
-import { FileResolvable } from "@discloudapp/util";
+import type { RestEvents, RESTOptions } from "@discloudapp/rest";
+import type { FileResolvable } from "@discloudapp/util";
 import z from "zod";
 
 export type Constructable<T extends new (...args: any) => InstanceType<T> = any> = new (...args: any) => InstanceType<T>;

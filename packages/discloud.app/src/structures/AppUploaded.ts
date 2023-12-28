@@ -1,5 +1,5 @@
-import { ApiUploadApp } from "@discloudapp/api-types/v2";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { ApiUploadApp } from "@discloudapp/api-types/v2";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class AppUploaded extends Base {

@@ -1,6 +1,6 @@
-import { ApiNetIO, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
+import type { ApiNetIO, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
 import { calculatePercentage } from "@discloudapp/util";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class AppStatus extends Base {

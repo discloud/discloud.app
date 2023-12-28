@@ -1,6 +1,6 @@
 import type { BinaryLike } from "node:crypto";
-import { createReadStream, existsSync, PathLike } from "node:fs";
-import { Readable, Stream, Writable } from "node:stream";
+import { createReadStream, existsSync, type PathLike } from "node:fs";
+import { Stream, type Readable, type Writable } from "node:stream";
 import { File, request } from "undici";
 
 export const fileNamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;

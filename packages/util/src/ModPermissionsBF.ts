@@ -1,4 +1,4 @@
-import BitField, { BitFieldResolvable } from "./BitField";
+import BitField, { type BitFieldResolvable } from "./BitField";
 
 export const ModPermissionsFlags = {
   backup_app: 1 << 0,

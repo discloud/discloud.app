@@ -1,6 +1,6 @@
-import { RawFile } from "@discloudapp/util";
-import { BodyInit, Dispatcher, File, request } from "undici";
-import { RequestMethod } from "../@enum";
+import type { RawFile } from "@discloudapp/util";
+import type { BodyInit, Dispatcher, File, request } from "undici";
+import type { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
 

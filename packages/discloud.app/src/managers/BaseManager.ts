@@ -1,4 +1,4 @@
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 
 /**
  * Base for all managers

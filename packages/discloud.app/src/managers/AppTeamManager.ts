@@ -1,7 +1,7 @@
-import { ApiAppTeamManager, RESTDeleteApiAppTeamResult, RESTGetApiAppTeamResult, RESTPostApiAppTeamResult, RESTPutApiAppTeamResult, Routes } from "@discloudapp/api-types/v2";
-import { ModPermissionsBF, ModPermissionsResolvable } from "@discloudapp/util";
+import { Routes, type ApiAppTeamManager, type RESTDeleteApiAppTeamResult, type RESTGetApiAppTeamResult, type RESTPostApiAppTeamResult, type RESTPutApiAppTeamResult } from "@discloudapp/api-types/v2";
+import { ModPermissionsBF, type ModPermissionsResolvable } from "@discloudapp/util";
 import z from "zod";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseManager from "./BaseManager";
 
 /**

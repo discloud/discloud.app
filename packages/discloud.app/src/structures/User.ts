@@ -1,7 +1,7 @@
-import { ApiUser, RESTGetApiUserResult, RESTPutApiLocaleResult, Routes } from "@discloudapp/api-types/v2";
+import { Routes, type ApiUser, type RESTGetApiUserResult, type RESTPutApiLocaleResult } from "@discloudapp/api-types/v2";
 import { calculatePercentage } from "@discloudapp/util";
-import { LocaleString } from "../@types";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { LocaleString } from "../@types";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class User extends Base {

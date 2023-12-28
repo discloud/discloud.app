@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { arch, platform, release, type } from "node:os";
 import { join } from "node:path";
 import { Agent } from "undici";
-import { RESTOptions } from "../@types";
+import type { RESTOptions } from "../@types";
 
 export const os_name = type();
 export const os_release = release().split?.(".").slice(0, 2).join(".") ?? release();

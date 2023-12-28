@@ -1,11 +1,11 @@
-import { ApiAppManagerRemovedAll, ApiAppManagerRestartedAll, ApiAppManagerStartedAll, ApiAppManagerStopedAll, ApiTerminal, RESTApiBaseResult, RESTDeleteApiAppAllDeleteResult, RESTDeleteApiAppDeleteResult, RESTGetApiAppAllBackupResult, RESTGetApiAppAllLogResult, RESTGetApiAppAllResult, RESTGetApiAppAllStatusResult, RESTGetApiAppBackupResult, RESTGetApiAppLogResult, RESTGetApiAppResult, RESTGetApiAppStatusResult, RESTPostApiUploadResult, RESTPutApiAppAllRestartResult, RESTPutApiAppAllStartResult, RESTPutApiAppAllStopResult, RESTPutApiAppCommitResult, RESTPutApiAppConsoleResult, RESTPutApiAppRamResult, RESTPutApiAppRestartResult, RESTPutApiAppStartResult, RESTPutApiAppStopResult, Routes } from "@discloudapp/api-types/v2";
+import { Routes, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTDeleteApiAppDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppAllStatusResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTGetApiAppStatusResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
-import { FileResolvable, resolveFile } from "@discloudapp/util";
+import { resolveFile, type FileResolvable } from "@discloudapp/util";
 import { constants } from "node:http2";
-import { File } from "undici";
+import type { File } from "undici";
 import z from "zod";
-import { CreateAppOptions, ProfileOptions, UpdateAppOptions } from "../@types";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import { ProfileOptions, type CreateAppOptions, type UpdateAppOptions } from "../@types";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
 import AppStatus from "../structures/AppStatus";

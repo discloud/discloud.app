@@ -1,4 +1,4 @@
-import { DiscloudConfigType } from "@discloudapp/api-types/v2";
+import type { DiscloudConfigType } from "@discloudapp/api-types/v2";
 import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 

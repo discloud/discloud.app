@@ -1,6 +1,6 @@
-import { BaseApiApp } from "@discloudapp/api-types/v2";
-import { ModPermissionsResolvable } from "@discloudapp/util";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { BaseApiApp } from "@discloudapp/api-types/v2";
+import type { ModPermissionsResolvable } from "@discloudapp/util";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class AppTeam extends Base {

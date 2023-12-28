@@ -1,5 +1,5 @@
-import { Constructable } from "../@types";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { Constructable } from "../@types";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseManager from "./BaseManager";
 
 /**

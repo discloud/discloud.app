@@ -1,6 +1,6 @@
-import { APTString, RESTDeleteApiAppAptResult, RESTPutApiAppAptResult, Routes } from "@discloudapp/api-types/v2";
+import { Routes, type APTString, type RESTDeleteApiAppAptResult, type RESTPutApiAppAptResult } from "@discloudapp/api-types/v2";
 import z from "zod";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseManager from "./BaseManager";
 
 /**

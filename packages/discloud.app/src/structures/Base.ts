@@ -1,5 +1,5 @@
-import { Constructor } from "../@types";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { Constructor } from "../@types";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 
 interface Base {
   constructor: Constructor<this>

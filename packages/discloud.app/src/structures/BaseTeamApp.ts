@@ -1,6 +1,6 @@
-import { BaseApiApp } from "@discloudapp/api-types/v2";
-import { UpdateAppOptions } from "../@types";
-import DiscloudApp from "../discloudApp/DiscloudApp";
+import type { BaseApiApp } from "@discloudapp/api-types/v2";
+import type { UpdateAppOptions } from "../@types";
+import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 /**
