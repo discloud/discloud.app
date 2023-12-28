@@ -151,10 +151,10 @@ export default class AppManager extends CachedManager<typeof App> {
       file: <File>options.file,
     });
 
-    if ("app" in data && data.app) {
+    if ("app" in data) {
       this._add(data.app);
 
-      return Object.assign(data, { app: new AppUploaded(this.discloudApp, data.app) });
+      return Object.assign({}, data, { app: new AppUploaded(this.discloudApp, data.app) });
     }
 
     return data;
