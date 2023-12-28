@@ -4,7 +4,7 @@ import DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class AppTeam extends Base {
-  declare readonly appId: string;
+  readonly appId: string;
 
   constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp);

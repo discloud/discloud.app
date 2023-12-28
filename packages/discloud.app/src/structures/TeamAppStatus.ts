@@ -7,7 +7,7 @@ export default class TeamAppStatus extends Base {
   /**
    * Your app id
    */
-  declare readonly appId: string;
+  readonly appId: string;
   /**
    * Status of your application
    * - It can be `Online` or `Offline` for example

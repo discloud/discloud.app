@@ -10,7 +10,7 @@ export default abstract class BaseTeamApp extends Base {
   /**
    * Your app id
    */
-  declare readonly id: string;
+  readonly id: string;
 
   constructor(
     discloudApp: DiscloudApp,

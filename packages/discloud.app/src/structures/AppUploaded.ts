@@ -6,7 +6,7 @@ export default class AppUploaded extends Base {
   /**
    * Your app id
    */
-  declare readonly appId: string;
+  readonly appId: string;
   /**
    * The timestamp of the upload of your application
    */

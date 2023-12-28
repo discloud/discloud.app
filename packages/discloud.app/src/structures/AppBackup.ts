@@ -10,7 +10,7 @@ class AppBackup extends Base {
   /**
    * Your app id
    */
-  declare readonly appId: string;
+  readonly appId: string;
   /**
    * The backup url.
    * - You can access it `only once`.
