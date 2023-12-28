@@ -42,7 +42,7 @@
 
   ↳ [`RESTGetApiTeamResult`](discloud_app.RESTGetApiTeamResult.md)
 
-  ↳ [`RESTPostApiUploadSuccessResult`](discloud_app.RESTPostApiUploadSuccessResult.md)
+  ↳ [`RESTPostApiUploadOkResult`](discloud_app.RESTPostApiUploadOkResult.md)
 
   ↳ [`RESTPostApiUploadErrorResult`](discloud_app.RESTPostApiUploadErrorResult.md)
 

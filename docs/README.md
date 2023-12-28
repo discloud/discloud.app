@@ -23,6 +23,7 @@ yarn add discloud.app
 [How to fetch your application](#how-to-fetch-your-application)  
 [How to start, stop, restart or delete your application](#how-to-start-stop-restart-or-delete-your-application)  
 [How to view app logs](#how-to-view-app-logs)  
+[How to send a terminal command](#how-to-send-a-terminal-command)  
 [How to backup apps](#how-to-backup-apps)  
 [How to see your app statuses](#how-to-see-your-app-statuses)  
 [How to change your app's name and/or avatar](#how-to-change-your-apps-name-andor-avatar)  
@@ -143,6 +144,14 @@ const { discloud } = require("discloud.app");
 
 await discloud.apps.terminal("APP_ID"); // Promise<ApiTerminal>
 await discloud.apps.terminal(/* "all" | undefined */); // Promise<Map<string, ApiTerminal>>
+```
+
+### How to send a terminal `command`
+
+```js
+const { discloud } = require("discloud.app");
+
+await discloud.apps.console("APP_ID", "bash command"); // Promise<string>
 ```
 
 ### How to `backup` apps

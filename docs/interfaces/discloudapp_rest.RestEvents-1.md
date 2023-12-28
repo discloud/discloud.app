@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:93](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/@types/index.ts#L93)
+[packages/rest/src/@types/index.ts:93](https://github.com/discloud/discloud.app/blob/967320a/packages/rest/src/@types/index.ts#L93)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[packages/rest/src/@types/index.ts:94](https://github.com/discloud/discloud.app/blob/62751fe/packages/rest/src/@types/index.ts#L94)
+[packages/rest/src/@types/index.ts:94](https://github.com/discloud/discloud.app/blob/967320a/packages/rest/src/@types/index.ts#L94)

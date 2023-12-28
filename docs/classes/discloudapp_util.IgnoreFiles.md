@@ -44,47 +44,47 @@
 
 #### Defined in
 
-[IgnoreFiles.ts:32](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L32)
+[IgnoreFiles.ts:32](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L32)
 
 ## Properties
 
 ### fileName
 
-• **fileName**: `string`
+• `Readonly` **fileName**: `string`
 
 #### Defined in
 
-[IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L27)
+[IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L27)
 
 ___
 
 ### filesIgnore
 
-• **filesIgnore**: `string`[] = `[]`
+• `Readonly` **filesIgnore**: `Set`\<`string`\>
 
 #### Defined in
 
-[IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L28)
+[IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L28)
 
 ___
 
 ### list
 
-• **list**: `string`[] = `allBlockedFiles`
+• `Readonly` **list**: `string`[] = `allBlockedFiles`
 
 #### Defined in
 
-[IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L29)
+[IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L29)
 
 ___
 
 ### paths
 
-• **paths**: `string`[] = `[]`
+• `Readonly` **paths**: `Set`\<`string`\>
 
 #### Defined in
 
-[IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L30)
+[IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L30)
 
 ## Methods
 
@@ -96,7 +96,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `files` | `string`[] |
+| `files` | `Set`\<`string`\> |
 
 #### Returns
 
@@ -104,29 +104,29 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:103](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L103)
+[IgnoreFiles.ts:103](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L103)
 
 ___
 
 ### findIgnoreFiles
 
-▸ **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `string`[]
+▸ **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `Set`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `fileName` | `string` |
-| `paths` | `string`[] |
+| `paths` | `Set`\<`string`\> |
 | `ignore` | `string`[] |
 
 #### Returns
 
-`string`[]
+`Set`\<`string`\>
 
 #### Defined in
 
-[IgnoreFiles.ts:56](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L56)
+[IgnoreFiles.ts:56](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L56)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:70](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L70)
+[IgnoreFiles.ts:70](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L70)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:74](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L74)
+[IgnoreFiles.ts:74](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L74)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L78)
+[IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L78)
 
 ___
 
@@ -207,4 +207,4 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:86](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L86)
+[IgnoreFiles.ts:86](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L86)

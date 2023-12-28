@@ -50,7 +50,7 @@ packages/util/out/IgnoreFiles.d.ts:22
 
 ### fileName
 
-• **fileName**: `string`
+• `Readonly` **fileName**: `string`
 
 #### Defined in
 
@@ -60,7 +60,7 @@ ___
 
 ### filesIgnore
 
-• **filesIgnore**: `string`[]
+• `Readonly` **filesIgnore**: `Set`\<`string`\>
 
 #### Defined in
 
@@ -70,7 +70,7 @@ ___
 
 ### list
 
-• **list**: `string`[]
+• `Readonly` **list**: `string`[]
 
 #### Defined in
 
@@ -80,7 +80,7 @@ ___
 
 ### paths
 
-• **paths**: `string`[]
+• `Readonly` **paths**: `Set`\<`string`\>
 
 #### Defined in
 
@@ -96,7 +96,7 @@ packages/util/out/IgnoreFiles.d.ts:21
 
 | Name | Type |
 | :------ | :------ |
-| `files?` | `string`[] |
+| `files?` | `Set`\<`string`\> |
 
 #### Returns
 
@@ -110,19 +110,19 @@ ___
 
 ### findIgnoreFiles
 
-▸ **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `string`[]
+▸ **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `Set`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `fileName` | `string` |
-| `paths` | `string`[] |
+| `paths` | `Set`\<`string`\> |
 | `ignore` | `string`[] |
 
 #### Returns
 
-`string`[]
+`Set`\<`string`\>
 
 #### Defined in
 

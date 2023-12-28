@@ -1,24 +1,24 @@
-[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTPostApiUploadSuccessResult
+[Documentation](../README.md) / [Exports](../modules.md) / [discloud.app](../modules/discloud_app.md) / RESTPostApiUploadOkResult
 
-# Interface: RESTPostApiUploadSuccessResult
+# Interface: RESTPostApiUploadOkResult
 
-[discloud.app](../modules/discloud_app.md).RESTPostApiUploadSuccessResult
+[discloud.app](../modules/discloud_app.md).RESTPostApiUploadOkResult
 
 ## Hierarchy
 
 - [`RESTApiBaseResult`](discloud_app.RESTApiBaseResult.md)
 
-  ↳ **`RESTPostApiUploadSuccessResult`**
+  ↳ **`RESTPostApiUploadOkResult`**
 
 ## Table of contents
 
 ### Properties
 
-- [app](discloud_app.RESTPostApiUploadSuccessResult.md#app)
-- [logs](discloud_app.RESTPostApiUploadSuccessResult.md#logs)
-- [message](discloud_app.RESTPostApiUploadSuccessResult.md#message)
-- [status](discloud_app.RESTPostApiUploadSuccessResult.md#status)
-- [statusCode](discloud_app.RESTPostApiUploadSuccessResult.md#statuscode)
+- [app](discloud_app.RESTPostApiUploadOkResult.md#app)
+- [logs](discloud_app.RESTPostApiUploadOkResult.md#logs)
+- [message](discloud_app.RESTPostApiUploadOkResult.md#message)
+- [status](discloud_app.RESTPostApiUploadOkResult.md#status)
+- [statusCode](discloud_app.RESTPostApiUploadOkResult.md#statuscode)
 
 ## Properties
 

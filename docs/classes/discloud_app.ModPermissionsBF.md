@@ -8,7 +8,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 ## Hierarchy
 
-- [`BitField`](discloud_app.BitField.md)\<[`ModPermissionsFlags`](../modules/discloud_app.md#modpermissionsflags), `number`\>
+- [`BitField`](discloud_app.BitField.md)\<[`ModPermissionsString`](../modules/discloud_app.md#modpermissionsstring), `number`\>
 
   ↳ **`ModPermissionsBF`**
 
@@ -105,21 +105,21 @@ ___
 
 #### Defined in
 
-packages/util/out/ModPermissionsBF.d.ts:25
+packages/util/out/ModPermissionsBF.d.ts:27
 
 ___
 
 ### DefaultBit
 
-▪ `Static` **DefaultBit**: `number` \| `bigint`
+▪ `Static` **DefaultBit**: `number`
 
-#### Inherited from
+#### Overrides
 
 [BitField](discloud_app.BitField.md).[DefaultBit](discloud_app.BitField.md#defaultbit)
 
 #### Defined in
 
-packages/util/out/BitField.d.ts:20
+packages/util/out/ModPermissionsBF.d.ts:16
 
 ___
 
@@ -128,7 +128,7 @@ ___
 ▪ `Static` **Flags**: `Object`
 
 Numeric bitfield flags.
-<info>Defined in extension classes</info>
+Defined in extension classes
 
 #### Type declaration
 
@@ -149,17 +149,17 @@ Numeric bitfield flags.
 
 #### Defined in
 
-packages/util/out/ModPermissionsBF.d.ts:15
+packages/util/out/ModPermissionsBF.d.ts:17
 
 ## Methods
 
 ### [iterator]
 
-▸ **[iterator]**(): `Generator`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
+▸ **[iterator]**(): `Generator`\<`string`, `void`, `undefined`\>
 
 #### Returns
 
-`Generator`\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `void`, `undefined`\>
+`Generator`\<`string`, `void`, `undefined`\>
 
 #### Inherited from
 
@@ -253,13 +253,13 @@ ___
 
 ### freeze
 
-▸ **freeze**(): `Readonly`\<[`BitField`](discloud_app.BitField.md)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
+▸ **freeze**(): `Readonly`\<[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)\>
 
 Freezes these bits, making them immutable.
 
 #### Returns
 
-`Readonly`\<[`BitField`](discloud_app.BitField.md)\<``"backup_app"`` \| ``"commit_app"`` \| ``"edit_ram"`` \| ``"logs_app"`` \| ``"restart_app"`` \| ``"start_app"`` \| ``"status_app"`` \| ``"stop_app"``, `number`\>\>
+`Readonly`\<[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)\>
 
 #### Inherited from
 

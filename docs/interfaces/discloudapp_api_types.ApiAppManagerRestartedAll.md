@@ -32,7 +32,7 @@ Omit.alreadyInProcess
 
 #### Defined in
 
-[rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L83)
+[rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/app.ts#L83)
 
 ___
 
@@ -48,7 +48,7 @@ Omit.alreadyOffline
 
 #### Defined in
 
-[rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L87)
+[rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/app.ts#L87)
 
 ___
 
@@ -60,4 +60,4 @@ Which of your applications have been `restarted`
 
 #### Defined in
 
-[rest/v2/app.ts:105](https://github.com/discloud/discloud.app/blob/62751fe/packages/api-types/rest/v2/app.ts#L105)
+[rest/v2/app.ts:105](https://github.com/discloud/discloud.app/blob/967320a/packages/api-types/rest/v2/app.ts#L105)

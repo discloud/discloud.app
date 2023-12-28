@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[IgnoreFiles.ts:21](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L21)
+[IgnoreFiles.ts:21](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L21)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:23](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L23)
+[IgnoreFiles.ts:23](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L23)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:22](https://github.com/discloud/discloud.app/blob/62751fe/packages/util/src/IgnoreFiles.ts#L22)
+[IgnoreFiles.ts:22](https://github.com/discloud/discloud.app/blob/967320a/packages/util/src/IgnoreFiles.ts#L22)

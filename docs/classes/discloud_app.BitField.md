@@ -115,7 +115,7 @@ ___
 ▪ `Static` **Flags**: `EnumLike`\<`unknown`, `number` \| `bigint`\>
 
 Numeric bitfield flags.
-<info>Defined in extension classes</info>
+Defined in extension classes
 
 #### Defined in
 
@@ -125,11 +125,11 @@ packages/util/out/BitField.d.ts:25
 
 ### [iterator]
 
-▸ **[iterator]**(): `Generator`\<`S`, `void`, `undefined`\>
+▸ **[iterator]**(): `Generator`\<`string`, `void`, `undefined`\>
 
 #### Returns
 
-`Generator`\<`S`, `void`, `undefined`\>
+`Generator`\<`string`, `void`, `undefined`\>
 
 #### Defined in
 

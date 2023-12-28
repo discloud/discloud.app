@@ -89,7 +89,7 @@
 - [RESTOptions](../interfaces/discloud_app.RESTOptions.md)
 - [RESTPostApiAppTeamResult](../interfaces/discloud_app.RESTPostApiAppTeamResult.md)
 - [RESTPostApiUploadErrorResult](../interfaces/discloud_app.RESTPostApiUploadErrorResult.md)
-- [RESTPostApiUploadSuccessResult](../interfaces/discloud_app.RESTPostApiUploadSuccessResult.md)
+- [RESTPostApiUploadOkResult](../interfaces/discloud_app.RESTPostApiUploadOkResult.md)
 - [RESTPutApiAppAllRestartResult](../interfaces/discloud_app.RESTPutApiAppAllRestartResult.md)
 - [RESTPutApiAppAllStartResult](../interfaces/discloud_app.RESTPutApiAppAllStartResult.md)
 - [RESTPutApiAppAllStopResult](../interfaces/discloud_app.RESTPutApiAppAllStopResult.md)
@@ -122,6 +122,7 @@
 - [LocaleString](discloud_app.md#localestring)
 - [ModPermissionsFlags](discloud_app.md#modpermissionsflags)
 - [ModPermissionsResolvable](discloud_app.md#modpermissionsresolvable)
+- [ModPermissionsString](discloud_app.md#modpermissionsstring)
 - [ProfileOptions](discloud_app.md#profileoptions)
 - [RESTApiStatusResponse](discloud_app.md#restapistatusresponse)
 - [RESTDeleteApiAppDeleteResult](discloud_app.md#restdeleteapiappdeleteresult)
@@ -142,7 +143,7 @@
 - [DefaultDiscloudAppOptions](discloud_app.md#defaultdiscloudappoptions)
 - [DefaultRestOptions](discloud_app.md#defaultrestoptions)
 - [DefaultUserAgent](discloud_app.md#defaultuseragent)
-- [ModPermissions](discloud_app.md#modpermissions)
+- [ModPermissionsFlags](discloud_app.md#modpermissionsflags-1)
 - [ProfileOptions](discloud_app.md#profileoptions-1)
 - [RouteBases](discloud_app.md#routebases)
 - [allBlockedFiles](discloud_app.md#allblockedfiles)
@@ -281,7 +282,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L5)
+[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L5)
 
 ___
 
@@ -291,7 +292,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L24)
+[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L24)
 
 ___
 
@@ -338,7 +339,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L11)
+[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L11)
 
 ___
 
@@ -348,15 +349,17 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L32)
+[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L32)
 
 ___
 
 ### ModPermissionsFlags
 
-Ƭ **ModPermissionsFlags**: keyof typeof [`ModPermissions`](discloud_app.md#modpermissions)
+Ƭ **ModPermissionsFlags**: typeof [`ModPermissionsFlags`](discloud_app.md#modpermissionsflags-1)
 
 #### Defined in
+
+packages/util/out/ModPermissionsBF.d.ts:2
 
 packages/util/out/ModPermissionsBF.d.ts:12
 
@@ -364,7 +367,17 @@ ___
 
 ### ModPermissionsResolvable
 
-Ƭ **ModPermissionsResolvable**: [`BitFieldResolvable`](discloud_app.md#bitfieldresolvable)\<[`ModPermissionsFlags`](discloud_app.md#modpermissionsflags), `number`\>
+Ƭ **ModPermissionsResolvable**: [`BitFieldResolvable`](discloud_app.md#bitfieldresolvable)\<[`ModPermissionsString`](discloud_app.md#modpermissionsstring), `number`\>
+
+#### Defined in
+
+packages/util/out/ModPermissionsBF.d.ts:14
+
+___
+
+### ModPermissionsString
+
+Ƭ **ModPermissionsString**: keyof [`ModPermissionsFlags`](discloud_app.md#modpermissionsflags-1)
 
 #### Defined in
 
@@ -378,9 +391,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -419,7 +432,7 @@ ___
 
 ### RESTPostApiUploadResult
 
-Ƭ **RESTPostApiUploadResult**: [`RESTPostApiUploadSuccessResult`](../interfaces/discloud_app.RESTPostApiUploadSuccessResult.md) \| [`RESTPostApiUploadErrorResult`](../interfaces/discloud_app.RESTPostApiUploadErrorResult.md)
+Ƭ **RESTPostApiUploadResult**: [`RESTPostApiUploadOkResult`](../interfaces/discloud_app.RESTPostApiUploadOkResult.md) \| [`RESTPostApiUploadErrorResult`](../interfaces/discloud_app.RESTPostApiUploadErrorResult.md)
 
 #### Defined in
 
@@ -483,7 +496,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L26)
+[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L26)
 
 ## Variables
 
@@ -545,7 +558,7 @@ Library default options
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/util/constants.ts#L12)
+[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/util/constants.ts#L12)
 
 ___
 
@@ -569,9 +582,9 @@ packages/discloud.app/node_modules/@discloudapp/rest/out/utils/contants.d.ts:7
 
 ___
 
-### ModPermissions
+### ModPermissionsFlags
 
-• `Const` **ModPermissions**: `Object`
+• `Const` **ModPermissionsFlags**: `Object`
 
 #### Type declaration
 
@@ -590,6 +603,8 @@ ___
 
 packages/util/out/ModPermissionsBF.d.ts:2
 
+packages/util/out/ModPermissionsBF.d.ts:12
+
 ___
 
 ### ProfileOptions
@@ -598,9 +613,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -703,7 +718,7 @@ async function () {
 
 #### Defined in
 
-[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/index.ts#L79)
+[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/index.ts#L79)
 
 ___
 
@@ -781,7 +796,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/62751fe/packages/discloud.app/src/util/constants.ts#L7)
+[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/967320a/packages/discloud.app/src/util/constants.ts#L7)
 
 ## Functions
 
