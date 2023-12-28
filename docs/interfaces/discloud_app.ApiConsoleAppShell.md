@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:194](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/app.ts#L194)
+[packages/api-types/rest/v2/app.ts:194](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L194)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:193](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/app.ts#L193)
+[packages/api-types/rest/v2/app.ts:193](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L193)

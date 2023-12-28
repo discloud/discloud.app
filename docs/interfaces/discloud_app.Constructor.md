@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/discloud.app/src/@types/index.ts#L8)
+[packages/discloud.app/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L8)

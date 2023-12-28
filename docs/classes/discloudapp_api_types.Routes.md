@@ -79,7 +79,7 @@
 
 #### Defined in
 
-[rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L9)
+[rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L9)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L10)
+[rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L10)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L11)
+[rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L11)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L12)
+[rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L12)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L13)
+[rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L13)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L14)
+[rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L14)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L15)
+[rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L15)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L16)
+[rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L16)
 
 ___
 
@@ -336,7 +336,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L17)
+[rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L17)
 
 ___
 
@@ -368,7 +368,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L18)
+[rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L18)
 
 ___
 
@@ -400,7 +400,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L19)
+[rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L19)
 
 ___
 
@@ -432,7 +432,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L20)
+[rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L20)
 
 ___
 
@@ -464,7 +464,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L21)
+[rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L21)
 
 ___
 
@@ -519,7 +519,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:22](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L22)
+[rest/v2/routes/index.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L22)
 
 ___
 
@@ -551,7 +551,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:25](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L25)
+[rest/v2/routes/index.ts:25](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L25)
 
 ___
 
@@ -571,7 +571,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L28)
+[rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L28)
 
 ___
 
@@ -603,7 +603,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L29)
+[rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L29)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L30)
+[rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L30)
 
 ___
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L31)
+[rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L31)
 
 ___
 
@@ -699,7 +699,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L32)
+[rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L32)
 
 ___
 
@@ -731,7 +731,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L33)
+[rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L33)
 
 ___
 
@@ -763,7 +763,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L34)
+[rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L34)
 
 ___
 
@@ -795,7 +795,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L35)
+[rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L35)
 
 ___
 
@@ -827,7 +827,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:36](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L36)
+[rest/v2/routes/index.ts:36](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L36)
 
 ___
 
@@ -847,7 +847,7 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:39](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L39)
+[rest/v2/routes/index.ts:39](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L39)
 
 ___
 
@@ -867,4 +867,4 @@ ___
 
 #### Defined in
 
-[rest/v2/routes/index.ts:42](https://github.com/discloud/discloud.app/blob/ee3bbd2/packages/api-types/rest/v2/routes/index.ts#L42)
+[rest/v2/routes/index.ts:42](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/routes/index.ts#L42)
