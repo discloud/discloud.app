@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "main": "out",
   "types": "out/index.d.ts",
   "scripts": {
@@ -26,8 +26,8 @@
   "homepage": "https://github.com/discloud/discloud.app#readme",
   "dependencies": {
     "@discloudapp/api-types": "^0.5.3",
-    "@discloudapp/rest": "^0.8.8",
-    "@discloudapp/util": "^0.5.3",
+    "@discloudapp/rest": "^0.8.10",
+    "@discloudapp/util": "^0.5.4",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",
     "zod": "^3.22.4"
