@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "0.8.8",
+  "version": "0.8.10",
   "main": "out",
   "types": "out/index.d.ts",
   "scripts": {
@@ -21,7 +21,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@discloudapp/api-types": "^0.5.3",
-    "@discloudapp/util": "^0.5.3",
+    "@discloudapp/util": "^0.5.4",
     "source-map-support": "^0.5.21",
     "tslib": "^2.6.2",
     "undici": "^6.2.1"
