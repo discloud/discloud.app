@@ -3,7 +3,7 @@ import EventEmitter from "node:events";
 import { setTimeout as sleep } from "node:timers/promises";
 import { File, FormData, request } from "undici";
 import { RESTEvents } from "./@enum";
-import type { InternalRequest, RESTOptions, RateLimitData, RequestHeaders, RequestOptions, RestEvents } from "./@types";
+import type { InternalRequest, RESTOptions, RateLimitData, RequestOptions, RestEvents } from "./@types";
 import { DiscloudAPIError } from "./errors";
 import { DefaultRestOptions } from "./utils";
 
@@ -84,24 +84,19 @@ export class RequestManager extends EventEmitter {
   }
 
   resolveRequest(request: InternalRequest) {
-    const headers: RequestHeaders = Object.assign({}, this.options.headers, { "api-token": this.#token });
-
-    const url = new URL(this.baseURL + request.fullRoute);
-
-    if (request.query) {
-      url.search = new URLSearchParams(request.query).toString();
-    }
-
-    const additionalHeaders: Record<string, string> = {};
-    const additionalOptions: Partial<RequestOptions> = {};
+    const url = new URL(request.fullRoute, this.baseURL);
+    const options: RequestOptions = { method: request.method };
+    const headers = new Headers(Object.assign({}, request.headers, this.options.headers, { "api-token": this.#token }));
     const formData = new FormData();
+
+    if (request.query) url.search = new URLSearchParams(request.query).toString();
 
     if (request.file) {
       if (request.file instanceof File) {
         formData.append("file", request.file);
       } else {
         if (request.file.data instanceof File) {
-          request.file.name = request.file.name ?? request.file.data.name;
+          request.file.name ??= request.file.data.name;
         } else {
           request.file.data = new File([request.file.data], request.file.name);
         }
@@ -109,41 +104,39 @@ export class RequestManager extends EventEmitter {
         formData.append(request.file.key ?? "file", request.file.data);
       }
 
-      additionalOptions.headersTimeout = 300000;
-    } else if (request.body) {
-      additionalHeaders["Content-Type"] = "application/json";
+      options.headersTimeout = 300000;
     }
 
-    const fetchOptions: RequestOptions = Object.assign({
-      headers: Object.assign({}, request.headers, additionalHeaders, headers),
-      method: request.method.toUpperCase(),
-    }, additionalOptions);
-
-    if (request.body)
+    if (request.body) {
       if (request.file) {
-        if (typeof request.body === "string")
+        if (typeof request.body === "string") {
           try {
             request.body = JSON.parse(request.body);
           } catch {
             request.body = {};
           }
+        }
 
         for (const [key, value] of Object.entries(<any>request.body))
           formData.append(key, value);
       } else {
+        headers.set("Content-Type", "application/json");
+
         if (typeof request.body === "string") {
-          fetchOptions.body = request.body;
+          options.body = request.body;
         } else {
-          fetchOptions.body = JSON.stringify(request.body);
+          options.body = JSON.stringify(request.body);
         }
       }
+    }
 
-    if (request.file) fetchOptions.body = formData;
+    if (request.file) options.body = formData;
 
-    // Prioritize setting an agent per request, use the agent for this instance otherwise.
-    fetchOptions.dispatcher = request.dispatcher ?? this.options.dispatcher;
+    options.headers = Object.fromEntries(headers.entries());
 
-    return { url, fetchOptions };
+    options.dispatcher = request.dispatcher ?? this.options.dispatcher;
+
+    return { url, options };
   }
 
   async request(url: string | URL, options: RequestOptions) {

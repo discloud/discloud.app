@@ -92,7 +92,7 @@ export class REST extends EventEmitter {
     if (res.headers["content-type"]?.includes("application/json"))
       return res.body.json() as T;
 
-    if (res.headers["content-type"]?.includes("text/html"))
+    if (res.headers["content-type"]?.includes("text/"))
       return res.body.text() as T;
 
     return res.body.arrayBuffer() as T;
@@ -105,6 +105,6 @@ export class REST extends EventEmitter {
    */
   raw(options: InternalRequest) {
     const request = this.requestManager.resolveRequest(options);
-    return this.requestManager.request(request.url, request.fetchOptions);
+    return this.requestManager.request(request.url, request.options);
   }
 }

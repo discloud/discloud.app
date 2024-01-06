@@ -68,7 +68,7 @@ export interface RequestData {
   /**
    * Query string parameters to append to the called endpoint
    */
-  query?: URLSearchParams
+  query?: ConstructorParameters<typeof URLSearchParams>[0]
 }
 
 /**
