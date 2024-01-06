@@ -60,9 +60,11 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     return new File([file], fileName);
   }
 
-  if (file instanceof Blob) return new File([file], fileName ?? "file.zip");
+  fileName ??= "file.zip";
 
-  if (Buffer.isBuffer(file)) return new File([file], fileName ?? "file.zip");
+  if (file instanceof Blob) return new File([file], fileName);
+
+  if (Buffer.isBuffer(file)) return new File([file], fileName);
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
@@ -70,7 +72,31 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     return new File([file.data], file.name);
   }
 
-  if (!Stream.isErrored(file)) return streamToFile(file);
+  if (!Stream.isErrored(file)) return streamToFile(file, fileName);
+
+  throw new TypeError("Invalid file type was provided.");
+}
+
+export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writable>
+
+export function resolveFileSync(file: FileResolvableSync, fileName?: string): File {
+  if (file instanceof File) return file;
+
+  fileName ??= "file.zip";
+
+  if (typeof file === "string") {
+    return new File([file], fileName);
+  }
+
+  if (file instanceof Blob) return new File([file], fileName);
+
+  if (Buffer.isBuffer(file)) return new File([file], fileName);
+
+  if ("data" in file) {
+    if (file.data instanceof File) return file.data;
+
+    return new File([file.data], file.name);
+  }
 
   throw new TypeError("Invalid file type was provided.");
 }
