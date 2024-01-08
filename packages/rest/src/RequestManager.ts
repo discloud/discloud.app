@@ -84,7 +84,7 @@ export class RequestManager extends EventEmitter {
   }
 
   resolveRequest(request: InternalRequest) {
-    const url = new URL(request.fullRoute, this.baseURL);
+    const url = new URL(this.baseURL + request.fullRoute);
     const options: RequestOptions = { method: request.method };
     const headers = new Headers(Object.assign({}, request.headers, this.options.headers, { "api-token": this.#token }));
     const formData = new FormData();
