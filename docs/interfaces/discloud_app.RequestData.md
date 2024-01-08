@@ -74,7 +74,7 @@ ___
 
 ### query
 
-• `Optional` **query**: `URLSearchParams`
+• `Optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<[`string`, `string`]\> \| readonly [`string`, `string`][]
 
 Query string parameters to append to the called endpoint
 

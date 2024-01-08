@@ -24,7 +24,7 @@ Your app's exit code on stopping
 
 #### Defined in
 
-[rest/v2/user.ts:73](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/user.ts#L73)
+[rest/v2/user.ts:73](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/user.ts#L73)
 
 ___
 
@@ -36,7 +36,7 @@ Your app id
 
 #### Defined in
 
-[rest/v2/user.ts:57](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/user.ts#L57)
+[rest/v2/user.ts:57](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/user.ts#L57)
 
 ___
 
@@ -48,7 +48,7 @@ Your application's name
 
 #### Defined in
 
-[rest/v2/user.ts:61](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/user.ts#L61)
+[rest/v2/user.ts:61](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/user.ts#L61)
 
 ___
 
@@ -60,7 +60,7 @@ If your application is online
 
 #### Defined in
 
-[rest/v2/user.ts:65](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/user.ts#L65)
+[rest/v2/user.ts:65](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/user.ts#L65)
 
 ___
 
@@ -72,4 +72,4 @@ If your application was stopped due to lack of RAM
 
 #### Defined in
 
-[rest/v2/user.ts:69](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/user.ts#L69)
+[rest/v2/user.ts:69](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/user.ts#L69)

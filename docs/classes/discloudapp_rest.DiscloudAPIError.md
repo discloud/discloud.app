@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+[packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Error.constructor
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+[packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+[packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+[packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+[packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ___
 
@@ -162,6 +162,12 @@ ___
 ### prepareStackTrace
 
 ▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+
+Optional override for formatting stack traces
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Type declaration
 

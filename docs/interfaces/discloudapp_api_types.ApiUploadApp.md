@@ -29,7 +29,7 @@ The timestamp of the upload of your application
 
 #### Defined in
 
-[rest/v2/upload.ts:69](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L69)
+[rest/v2/upload.ts:69](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L69)
 
 ___
 
@@ -41,7 +41,7 @@ If your application has auto-restart enabled
 
 #### Defined in
 
-[rest/v2/upload.ts:73](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L73)
+[rest/v2/upload.ts:73](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L73)
 
 ___
 
@@ -53,7 +53,7 @@ Your app's avatar url
 
 #### Defined in
 
-[rest/v2/upload.ts:49](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L49)
+[rest/v2/upload.ts:49](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L49)
 
 ___
 
@@ -65,7 +65,7 @@ Your app id
 
 #### Defined in
 
-[rest/v2/upload.ts:37](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L37)
+[rest/v2/upload.ts:37](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L37)
 
 ___
 
@@ -77,7 +77,7 @@ The programming language of your app
 
 #### Defined in
 
-[rest/v2/upload.ts:61](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L61)
+[rest/v2/upload.ts:61](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L61)
 
 ___
 
@@ -89,7 +89,7 @@ The main file path of your app
 
 #### Defined in
 
-[rest/v2/upload.ts:57](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L57)
+[rest/v2/upload.ts:57](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L57)
 
 ___
 
@@ -101,7 +101,7 @@ Your app's name
 
 #### Defined in
 
-[rest/v2/upload.ts:45](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L45)
+[rest/v2/upload.ts:45](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L45)
 
 ___
 
@@ -113,7 +113,7 @@ RAM quantity for your app
 
 #### Defined in
 
-[rest/v2/upload.ts:53](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L53)
+[rest/v2/upload.ts:53](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L53)
 
 ___
 
@@ -125,7 +125,7 @@ Your app's type
 
 #### Defined in
 
-[rest/v2/upload.ts:41](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L41)
+[rest/v2/upload.ts:41](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L41)
 
 ___
 
@@ -137,4 +137,4 @@ The version of the package
 
 #### Defined in
 
-[rest/v2/upload.ts:65](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L65)
+[rest/v2/upload.ts:65](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L65)

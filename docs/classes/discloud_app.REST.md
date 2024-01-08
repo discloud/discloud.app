@@ -103,7 +103,7 @@ ___
 
 ### off
 
-• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -117,7 +117,7 @@ ___
 
 ### on
 
-• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -131,7 +131,7 @@ ___
 
 ### once
 
-• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloud_app.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloud_app.REST.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -145,7 +145,7 @@ ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: \<K\>(`event?`: `K`) => [`REST`](discloud_app.REST.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>) => [`REST`](discloud_app.REST.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => `this` & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloud_app.RestEvents-1.md)\>) => `this`
 
 #### Overrides
 
@@ -312,7 +312,7 @@ ___
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`REST`](discloud_app.REST.md)
+▸ **addListener**(`eventName`, `listener`): `this`
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -325,7 +325,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 **`Since`**
 
@@ -565,7 +565,7 @@ ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`REST`](discloud_app.REST.md)
+▸ **prependListener**(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -589,7 +589,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 **`Since`**
 
@@ -607,7 +607,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`REST`](discloud_app.REST.md)
+▸ **prependOnceListener**(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -629,7 +629,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 **`Since`**
 
@@ -754,7 +754,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`REST`](discloud_app.REST.md)
+▸ **removeListener**(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -845,7 +845,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 **`Since`**
 
@@ -891,7 +891,7 @@ ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`REST`](discloud_app.REST.md)
+▸ **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -908,7 +908,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 **`Since`**
 
@@ -926,7 +926,7 @@ ___
 
 ### setToken
 
-▸ **setToken**(`token`): [`REST`](discloud_app.REST.md)
+▸ **setToken**(`token`): `this`
 
 Sets the authorization token that should be used for requests
 
@@ -938,7 +938,7 @@ Sets the authorization token that should be used for requests
 
 #### Returns
 
-[`REST`](discloud_app.REST.md)
+`this`
 
 #### Defined in
 

@@ -51,7 +51,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:11](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/AppTeamManager.ts#L11)
+[packages/discloud.app/src/managers/AppTeamManager.ts:11](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/AppTeamManager.ts#L11)
 
 ## Properties
 
@@ -65,7 +65,7 @@ Manager for Team on your application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 ## Methods
 
@@ -89,7 +89,7 @@ Add a mod for you application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/AppTeamManager.ts#L22)
+[packages/discloud.app/src/managers/AppTeamManager.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/AppTeamManager.ts#L22)
 
 ___
 
@@ -112,7 +112,7 @@ Remove a mod from you application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:64](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/AppTeamManager.ts#L64)
+[packages/discloud.app/src/managers/AppTeamManager.ts:64](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/AppTeamManager.ts#L64)
 
 ___
 
@@ -136,7 +136,7 @@ Edit permissions of a mod for you application on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:43](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/AppTeamManager.ts#L43)
+[packages/discloud.app/src/managers/AppTeamManager.ts:43](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/AppTeamManager.ts#L43)
 
 ___
 
@@ -158,4 +158,4 @@ Get mods information for your app on Discloud
 
 #### Defined in
 
-[packages/discloud.app/src/managers/AppTeamManager.ts:78](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/managers/AppTeamManager.ts#L78)
+[packages/discloud.app/src/managers/AppTeamManager.ts:78](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/managers/AppTeamManager.ts#L78)

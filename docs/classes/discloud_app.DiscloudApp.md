@@ -84,7 +84,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
 
 ## Properties
 
@@ -94,7 +94,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:35](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L35)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:34](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L34)
 
 ___
 
@@ -128,13 +128,13 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ___
 
 ### off
 
-• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -142,13 +142,13 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ___
 
 ### on
 
-• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -156,13 +156,13 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 ___
 
 ### once
 
-• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -170,7 +170,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
 
 ___
 
@@ -180,13 +180,13 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:31](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L31)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: \<K\>(`event?`: `K`) => [`DiscloudApp`](discloud_app.DiscloudApp.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>) => [`DiscloudApp`](discloud_app.DiscloudApp.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => `this` & \<S\>(`event?`: `Exclude`\<`S`, keyof [`ClientEvents`](../interfaces/discloud_app.ClientEvents.md)\>) => `this`
 
 #### Overrides
 
@@ -194,7 +194,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:26](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L26)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:32](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L32)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:36](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L36)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:37](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L37)
 
 ___
 
@@ -341,7 +341,7 @@ node_modules/@types/node/events.d.ts:395
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:62](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L62)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:62](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L62)
 
 ## Methods
 
@@ -361,7 +361,7 @@ node_modules/@types/node/events.d.ts:395
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:56](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L56)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:56](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L56)
 
 ___
 
@@ -393,7 +393,7 @@ ___
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **addListener**(`eventName`, `listener`): `this`
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -406,7 +406,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`DiscloudApp`](discloud_app.DiscloudApp.md)
+`this`
 
 **`Since`**
 
@@ -575,13 +575,13 @@ Login on Discloud API
 
 #### Defined in
 
-[packages/discloud.app/src/discloudApp/DiscloudApp.ts:71](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L71)
+[packages/discloud.app/src/discloudApp/DiscloudApp.ts:71](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L71)
 
 ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **prependListener**(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -605,7 +605,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`DiscloudApp`](discloud_app.DiscloudApp.md)
+`this`
 
 **`Since`**
 
@@ -623,7 +623,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **prependOnceListener**(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -645,7 +645,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`DiscloudApp`](discloud_app.DiscloudApp.md)
+`this`
 
 **`Since`**
 
@@ -719,7 +719,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **removeListener**(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -810,7 +810,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`DiscloudApp`](discloud_app.DiscloudApp.md)
+`this`
 
 **`Since`**
 
@@ -828,7 +828,7 @@ ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`DiscloudApp`](discloud_app.DiscloudApp.md)
+▸ **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -845,7 +845,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`DiscloudApp`](discloud_app.DiscloudApp.md)
+`this`
 
 **`Since`**
 

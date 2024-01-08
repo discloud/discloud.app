@@ -139,7 +139,7 @@ ___
 
 ### add
 
-▸ **add**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+▸ **add**(`...bits`): `this`
 
 Adds bits to these ones.
 
@@ -151,7 +151,7 @@ Adds bits to these ones.
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+`this`
 
 These bits or new BitField if the instance is frozen.
 
@@ -267,7 +267,7 @@ ___
 
 ### remove
 
-▸ **remove**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+▸ **remove**(`...bits`): `this`
 
 Removes bits from these.
 
@@ -279,7 +279,7 @@ Removes bits from these.
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+`this`
 
 These bits or new BitField if the instance is frozen.
 
@@ -308,7 +308,7 @@ ___
 
 ### set
 
-▸ **set**(`...bits`): [`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+▸ **set**(`...bits`): `this`
 
 Replace the bits with these.
 
@@ -320,7 +320,7 @@ Replace the bits with these.
 
 #### Returns
 
-[`BitField`](discloud_app.BitField.md)\<`S`, `N`\>
+`this`
 
 These bits or new BitField if the instance is frozen.
 

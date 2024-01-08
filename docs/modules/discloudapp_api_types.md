@@ -91,7 +91,7 @@
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:41](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L41)
+[payload/v2/DiscloudConfig.ts:41](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L41)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:119](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L119)
+[payload/v2/DiscloudConfig.ts:119](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L119)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:115](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L115)
+[payload/v2/DiscloudConfig.ts:115](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L115)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:128](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L128)
+[payload/v2/DiscloudConfig.ts:128](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L128)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
+[payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/base.ts#L17)
+[rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/base.ts#L17)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[rest/v2/app.ts:273](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L273)
+[rest/v2/app.ts:273](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L273)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[rest/v2/app.ts:332](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L332)
+[rest/v2/app.ts:332](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L332)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L3)
+[rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L3)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[rest/v2/app.ts:275](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L275)
+[rest/v2/app.ts:275](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L275)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[rest/v2/app.ts:277](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L277)
+[rest/v2/app.ts:277](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L277)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[rest/v2/app.ts:279](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L279)
+[rest/v2/app.ts:279](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L279)
 
 ## Variables
 
@@ -235,7 +235,7 @@ API version
 
 #### Defined in
 
-[rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/index.ts#L14)
+[rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/index.ts#L14)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
+[payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:39](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L39)
+[payload/v2/DiscloudConfig.ts:39](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L39)
 
 ___
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/index.ts#L16)
+[rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/index.ts#L16)
 
 ___
 
@@ -293,4 +293,4 @@ ___
 
 #### Defined in
 
-[payload/v2/DiscloudConfig.ts:43](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L43)
+[payload/v2/DiscloudConfig.ts:43](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L43)

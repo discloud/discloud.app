@@ -22,6 +22,7 @@
 - [BitFieldConstructor](discloudapp_util.md#bitfieldconstructor)
 - [BitFieldResolvable](discloudapp_util.md#bitfieldresolvable)
 - [FileResolvable](discloudapp_util.md#fileresolvable)
+- [FileResolvableSync](discloudapp_util.md#fileresolvablesync)
 - [ModPermissionsFlags](discloudapp_util.md#modpermissionsflags)
 - [ModPermissionsResolvable](discloudapp_util.md#modpermissionsresolvable)
 - [ModPermissionsString](discloudapp_util.md#modpermissionsstring)
@@ -41,6 +42,7 @@
 - [calculatePercentage](discloudapp_util.md#calculatepercentage)
 - [mergeDefaults](discloudapp_util.md#mergedefaults)
 - [resolveFile](discloudapp_util.md#resolvefile)
+- [resolveFileSync](discloudapp_util.md#resolvefilesync)
 - [streamToBlob](discloudapp_util.md#streamtoblob)
 - [streamToFile](discloudapp_util.md#streamtofile)
 
@@ -59,7 +61,7 @@
 
 #### Defined in
 
-[BitField.ts:4](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/BitField.ts#L4)
+[BitField.ts:4](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/BitField.ts#L4)
 
 ___
 
@@ -82,7 +84,7 @@ Data that can be resolved to give a bitfield. This can be:
 
 #### Defined in
 
-[BitField.ts:192](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/BitField.ts#L192)
+[BitField.ts:192](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/BitField.ts#L192)
 
 ___
 
@@ -94,7 +96,17 @@ This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/di
 
 #### Defined in
 
-[FileResolver.ts:30](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/FileResolver.ts#L30)
+[FileResolver.ts:30](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L30)
+
+___
+
+### FileResolvableSync
+
+Ƭ **FileResolvableSync**: `Exclude`\<[`FileResolvable`](discloudapp_util.md#fileresolvable), `URL` \| `Readable` \| `Writable`\>
+
+#### Defined in
+
+[FileResolver.ts:80](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L80)
 
 ___
 
@@ -104,9 +116,9 @@ ___
 
 #### Defined in
 
-[ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L3)
+[ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L3)
 
-[ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L14)
+[ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L14)
 
 ___
 
@@ -116,17 +128,17 @@ ___
 
 #### Defined in
 
-[ModPermissionsBF.ts:18](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L18)
+[ModPermissionsBF.ts:18](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L18)
 
 ___
 
 ### ModPermissionsString
 
-Ƭ **ModPermissionsString**: keyof [`ModPermissionsFlags`](discloudapp_util.md#modpermissionsflags-1)
+Ƭ **ModPermissionsString**: keyof [`ModPermissionsFlags`](discloudapp_util.md#modpermissionsflags)
 
 #### Defined in
 
-[ModPermissionsBF.ts:16](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L16)
+[ModPermissionsBF.ts:16](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L16)
 
 ## Variables
 
@@ -149,9 +161,9 @@ ___
 
 #### Defined in
 
-[ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L3)
+[ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L3)
 
-[ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/ModPermissionsBF.ts#L14)
+[ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/ModPermissionsBF.ts#L14)
 
 ___
 
@@ -161,7 +173,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:16](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/IgnoreFiles.ts#L16)
+[IgnoreFiles.ts:16](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/IgnoreFiles.ts#L16)
 
 ___
 
@@ -171,7 +183,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:18](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/IgnoreFiles.ts#L18)
+[IgnoreFiles.ts:18](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/IgnoreFiles.ts#L18)
 
 ___
 
@@ -193,7 +205,7 @@ ___
 
 #### Defined in
 
-[IgnoreFiles.ts:6](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/IgnoreFiles.ts#L6)
+[IgnoreFiles.ts:6](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/IgnoreFiles.ts#L6)
 
 ___
 
@@ -211,7 +223,7 @@ ___
 
 #### Defined in
 
-[DiscloudConfig.ts:5](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/DiscloudConfig.ts#L5)
+[DiscloudConfig.ts:5](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/DiscloudConfig.ts#L5)
 
 ___
 
@@ -221,7 +233,7 @@ ___
 
 #### Defined in
 
-[FileResolver.ts:6](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/FileResolver.ts#L6)
+[FileResolver.ts:6](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L6)
 
 ## Functions
 
@@ -249,7 +261,7 @@ ___
 
 #### Defined in
 
-[utils.ts:1](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/utils.ts#L1)
+[utils.ts:1](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/utils.ts#L1)
 
 ___
 
@@ -270,7 +282,7 @@ ___
 
 #### Defined in
 
-[utils.ts:10](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/utils.ts#L10)
+[utils.ts:10](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/utils.ts#L10)
 
 ___
 
@@ -297,7 +309,7 @@ ___
 
 #### Defined in
 
-[utils.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/utils.ts#L14)
+[utils.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/utils.ts#L14)
 
 ___
 
@@ -320,7 +332,28 @@ A function that converts [FileResolvable](discloudapp_util.md#fileresolvable) to
 
 #### Defined in
 
-[FileResolver.ts:44](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/FileResolver.ts#L44)
+[FileResolver.ts:44](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L44)
+
+___
+
+### resolveFileSync
+
+▸ **resolveFileSync**(`file`, `fileName?`): `File`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `file` | [`FileResolvableSync`](discloudapp_util.md#fileresolvablesync) |
+| `fileName?` | `string` |
+
+#### Returns
+
+`File`
+
+#### Defined in
+
+[FileResolver.ts:82](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L82)
 
 ___
 
@@ -343,7 +376,7 @@ A function that converts a like Stream parameter to Blob
 
 #### Defined in
 
-[FileResolver.ts:100](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/FileResolver.ts#L100)
+[FileResolver.ts:126](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L126)
 
 ___
 
@@ -367,4 +400,4 @@ A function that converts a like Stream parameter to File
 
 #### Defined in
 
-[FileResolver.ts:85](https://github.com/discloud/discloud.app/blob/99d4db4/packages/util/src/FileResolver.ts#L85)
+[FileResolver.ts:111](https://github.com/discloud/discloud.app/blob/824e86a/packages/util/src/FileResolver.ts#L111)

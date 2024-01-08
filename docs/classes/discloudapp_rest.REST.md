@@ -83,7 +83,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L22)
+[packages/rest/src/REST.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L22)
 
 ## Properties
 
@@ -97,13 +97,13 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L7)
+[packages/rest/src/REST.ts:7](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L7)
 
 ___
 
 ### off
 
-• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -111,13 +111,13 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L9)
+[packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L9)
 
 ___
 
 ### on
 
-• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -125,13 +125,13 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L11)
+[packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L11)
 
 ___
 
 ### once
 
-• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`REST`](discloudapp_rest.REST.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`REST`](discloudapp_rest.REST.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -139,13 +139,13 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L13)
+[packages/rest/src/REST.ts:13](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L13)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: \<K\>(`event?`: `K`) => [`REST`](discloudapp_rest.REST.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => [`REST`](discloudapp_rest.REST.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => `this` & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => `this`
 
 #### Overrides
 
@@ -153,7 +153,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L15)
+[packages/rest/src/REST.ts:15](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L15)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L20)
+[packages/rest/src/REST.ts:20](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L20)
 
 ___
 
@@ -280,7 +280,7 @@ node_modules/@types/node/events.d.ts:395
 
 #### Defined in
 
-[packages/rest/src/REST.ts:30](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L30)
+[packages/rest/src/REST.ts:30](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L30)
 
 ## Methods
 
@@ -312,7 +312,7 @@ ___
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`REST`](discloudapp_rest.REST.md)
+▸ **addListener**(`eventName`, `listener`): `this`
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -325,7 +325,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`REST`](discloudapp_rest.REST.md)
+`this`
 
 **`Since`**
 
@@ -366,7 +366,7 @@ Runs a delete request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:60](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L60)
+[packages/rest/src/REST.ts:60](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L60)
 
 ___
 
@@ -434,7 +434,7 @@ Runs a get request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:50](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L50)
+[packages/rest/src/REST.ts:50](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L50)
 
 ___
 
@@ -559,13 +559,13 @@ Runs a post request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:70](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L70)
+[packages/rest/src/REST.ts:70](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L70)
 
 ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`REST`](discloudapp_rest.REST.md)
+▸ **prependListener**(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -589,7 +589,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloudapp_rest.REST.md)
+`this`
 
 **`Since`**
 
@@ -607,7 +607,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`REST`](discloudapp_rest.REST.md)
+▸ **prependOnceListener**(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -629,7 +629,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloudapp_rest.REST.md)
+`this`
 
 **`Since`**
 
@@ -670,7 +670,7 @@ Runs a put request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:80](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L80)
+[packages/rest/src/REST.ts:80](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L80)
 
 ___
 
@@ -692,7 +692,7 @@ Runs a request from the API, yielding the raw Response object
 
 #### Defined in
 
-[packages/rest/src/REST.ts:106](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L106)
+[packages/rest/src/REST.ts:106](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L106)
 
 ___
 
@@ -754,7 +754,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`REST`](discloudapp_rest.REST.md)
+▸ **removeListener**(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -845,7 +845,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloudapp_rest.REST.md)
+`this`
 
 **`Since`**
 
@@ -885,13 +885,13 @@ Runs a request from the api
 
 #### Defined in
 
-[packages/rest/src/REST.ts:89](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L89)
+[packages/rest/src/REST.ts:89](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L89)
 
 ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`REST`](discloudapp_rest.REST.md)
+▸ **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -908,7 +908,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`REST`](discloudapp_rest.REST.md)
+`this`
 
 **`Since`**
 
@@ -942,7 +942,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/REST.ts:39](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/REST.ts#L39)
+[packages/rest/src/REST.ts:39](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/REST.ts#L39)
 
 ___
 

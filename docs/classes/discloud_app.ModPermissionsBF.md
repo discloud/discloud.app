@@ -173,7 +173,7 @@ ___
 
 ### add
 
-▸ **add**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+▸ **add**(`...bits`): `this`
 
 Adds bits to these ones.
 
@@ -185,7 +185,7 @@ Adds bits to these ones.
 
 #### Returns
 
-[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+`this`
 
 These bits or new BitField if the instance is frozen.
 
@@ -325,7 +325,7 @@ ___
 
 ### remove
 
-▸ **remove**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+▸ **remove**(`...bits`): `this`
 
 Removes bits from these.
 
@@ -337,7 +337,7 @@ Removes bits from these.
 
 #### Returns
 
-[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+`this`
 
 These bits or new BitField if the instance is frozen.
 
@@ -374,7 +374,7 @@ ___
 
 ### set
 
-▸ **set**(`...bits`): [`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+▸ **set**(`...bits`): `this`
 
 Replace the bits with these.
 
@@ -386,7 +386,7 @@ Replace the bits with these.
 
 #### Returns
 
-[`ModPermissionsBF`](discloud_app.ModPermissionsBF.md)
+`this`
 
 These bits or new BitField if the instance is frozen.
 

@@ -87,7 +87,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L47)
+[packages/rest/src/RequestManager.ts:47](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L47)
 
 ## Properties
 
@@ -97,7 +97,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L24)
+[packages/rest/src/RequestManager.ts:24](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L24)
 
 ___
 
@@ -111,7 +111,7 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L11)
+[packages/rest/src/RequestManager.ts:11](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L11)
 
 ___
 
@@ -123,7 +123,7 @@ The number of requests limit on the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L30)
+[packages/rest/src/RequestManager.ts:30](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L30)
 
 ___
 
@@ -135,7 +135,7 @@ The number of requests remaining in the global bucket
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L35)
+[packages/rest/src/RequestManager.ts:35](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L35)
 
 ___
 
@@ -147,7 +147,7 @@ The seconds that the global bucket is reset
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L40)
+[packages/rest/src/RequestManager.ts:40](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L40)
 
 ___
 
@@ -159,13 +159,13 @@ The time at which the last request was made
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L45)
+[packages/rest/src/RequestManager.ts:45](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L45)
 
 ___
 
 ### off
 
-• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **off**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -173,13 +173,13 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L13)
+[packages/rest/src/RequestManager.ts:13](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L13)
 
 ___
 
 ### on
 
-• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **on**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -187,13 +187,13 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L15)
+[packages/rest/src/RequestManager.ts:15](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L15)
 
 ___
 
 ### once
 
-• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **once**: \<K\>(`event`: `K`, `listener`: (...`args`: [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)[`K`]) => `void`) => `this` & \<S\>(`event`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>, `listener`: (...`args`: `any`[]) => `void`) => `this`
 
 #### Overrides
 
@@ -201,7 +201,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L17)
+[packages/rest/src/RequestManager.ts:17](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L17)
 
 ___
 
@@ -211,13 +211,13 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L25)
+[packages/rest/src/RequestManager.ts:25](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L25)
 
 ___
 
 ### removeAllListeners
 
-• **removeAllListeners**: \<K\>(`event?`: `K`) => [`RequestManager`](discloudapp_rest.RequestManager.md) & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => [`RequestManager`](discloudapp_rest.RequestManager.md)
+• **removeAllListeners**: \<K\>(`event?`: `K`) => `this` & \<S\>(`event?`: `Exclude`\<`S`, keyof [`RestEvents`](../interfaces/discloudapp_rest.RestEvents-1.md)\>) => `this`
 
 #### Overrides
 
@@ -225,7 +225,7 @@ EventEmitter.removeAllListeners
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L19)
+[packages/rest/src/RequestManager.ts:19](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L19)
 
 ___
 
@@ -342,7 +342,7 @@ node_modules/@types/node/events.d.ts:395
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L54)
+[packages/rest/src/RequestManager.ts:54](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L54)
 
 ___
 
@@ -358,7 +358,7 @@ If the rate limit bucket is currently limited by its limit
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L61)
+[packages/rest/src/RequestManager.ts:61](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L61)
 
 ___
 
@@ -374,7 +374,7 @@ The time until queued requests can continue
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L68)
+[packages/rest/src/RequestManager.ts:68](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L68)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L72)
+[packages/rest/src/RequestManager.ts:72](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L72)
 
 ## Methods
 
@@ -420,7 +420,7 @@ ___
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`RequestManager`](discloudapp_rest.RequestManager.md)
+▸ **addListener**(`eventName`, `listener`): `this`
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -433,7 +433,7 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Returns
 
-[`RequestManager`](discloudapp_rest.RequestManager.md)
+`this`
 
 **`Since`**
 
@@ -586,7 +586,7 @@ ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`RequestManager`](discloudapp_rest.RequestManager.md)
+▸ **prependListener**(`eventName`, `listener`): `this`
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -610,7 +610,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`RequestManager`](discloudapp_rest.RequestManager.md)
+`this`
 
 **`Since`**
 
@@ -628,7 +628,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`RequestManager`](discloudapp_rest.RequestManager.md)
+▸ **prependOnceListener**(`eventName`, `listener`): `this`
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -650,7 +650,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`RequestManager`](discloudapp_rest.RequestManager.md)
+`this`
 
 **`Since`**
 
@@ -724,7 +724,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`RequestManager`](discloudapp_rest.RequestManager.md)
+▸ **removeListener**(`eventName`, `listener`): `this`
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
@@ -815,7 +815,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`RequestManager`](discloudapp_rest.RequestManager.md)
+`this`
 
 **`Since`**
 
@@ -848,7 +848,7 @@ ___
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:149](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L149)
+[packages/rest/src/RequestManager.ts:142](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L142)
 
 ___
 
@@ -868,18 +868,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `fetchOptions` | \{ `dispatcher?`: `Dispatcher`  } & `Omit`\<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`\<`Pick`\<`RequestOptions`, ``"method"``\>\> |
+| `options` | \{ `dispatcher?`: `Dispatcher`  } & `Omit`\<`RequestOptions`, ``"origin"`` \| ``"path"`` \| ``"method"``\> & `Partial`\<`Pick`\<`RequestOptions`, ``"method"``\>\> |
 | `url` | `URL` |
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L86)
+[packages/rest/src/RequestManager.ts:86](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L86)
 
 ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`RequestManager`](discloudapp_rest.RequestManager.md)
+▸ **setMaxListeners**(`n`): `this`
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -896,7 +896,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Returns
 
-[`RequestManager`](discloudapp_rest.RequestManager.md)
+`this`
 
 **`Since`**
 
@@ -930,7 +930,7 @@ Sets the authorization token that should be used for requests
 
 #### Defined in
 
-[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/99d4db4/packages/rest/src/RequestManager.ts#L81)
+[packages/rest/src/RequestManager.ts:81](https://github.com/discloud/discloud.app/blob/824e86a/packages/rest/src/RequestManager.ts#L81)
 
 ___
 

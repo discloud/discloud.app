@@ -118,6 +118,7 @@
 - [CreateAppOptions](discloud_app.md#createappoptions)
 - [DiscloudConfigType](discloud_app.md#discloudconfigtype)
 - [FileResolvable](discloud_app.md#fileresolvable)
+- [FileResolvableSync](discloud_app.md#fileresolvablesync)
 - [If](discloud_app.md#if)
 - [LocaleString](discloud_app.md#localestring)
 - [ModPermissionsFlags](discloud_app.md#modpermissionsflags)
@@ -165,6 +166,7 @@
 - [calculatePercentage](discloud_app.md#calculatepercentage)
 - [mergeDefaults](discloud_app.md#mergedefaults)
 - [resolveFile](discloud_app.md#resolvefile)
+- [resolveFileSync](discloud_app.md#resolvefilesync)
 - [streamToBlob](discloud_app.md#streamtoblob)
 - [streamToFile](discloud_app.md#streamtofile)
 
@@ -176,7 +178,7 @@
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:41](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L41)
+[packages/api-types/payload/v2/DiscloudConfig.ts:41](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L41)
 
 ___
 
@@ -186,7 +188,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:119](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L119)
+[packages/api-types/payload/v2/DiscloudConfig.ts:119](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L119)
 
 ___
 
@@ -196,7 +198,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:115](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L115)
+[packages/api-types/payload/v2/DiscloudConfig.ts:115](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L115)
 
 ___
 
@@ -212,7 +214,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:128](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L128)
+[packages/api-types/payload/v2/DiscloudConfig.ts:128](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L128)
 
 ___
 
@@ -282,7 +284,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L5)
+[packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L5)
 
 ___
 
@@ -292,7 +294,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L24)
+[packages/discloud.app/src/@types/index.ts:24](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L24)
 
 ___
 
@@ -309,7 +311,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
+[packages/api-types/payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
 
 ___
 
@@ -321,7 +323,17 @@ This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/di
 
 #### Defined in
 
-packages/util/out/FileResolver.d.ts:31
+packages/util/out/FileResolver.d.ts:32
+
+___
+
+### FileResolvableSync
+
+Ƭ **FileResolvableSync**: `Exclude`\<[`FileResolvable`](discloud_app.md#fileresolvable), `URL` \| `Readable` \| `Writable`\>
+
+#### Defined in
+
+packages/util/out/FileResolver.d.ts:40
 
 ___
 
@@ -339,7 +351,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L11)
+[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L11)
 
 ___
 
@@ -349,7 +361,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L32)
+[packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L32)
 
 ___
 
@@ -377,7 +389,7 @@ ___
 
 ### ModPermissionsString
 
-Ƭ **ModPermissionsString**: keyof [`ModPermissionsFlags`](discloud_app.md#modpermissionsflags-1)
+Ƭ **ModPermissionsString**: keyof [`ModPermissionsFlags`](discloud_app.md#modpermissionsflags)
 
 #### Defined in
 
@@ -391,9 +403,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -406,7 +418,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/base.ts#L17)
+[packages/api-types/rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/base.ts#L17)
 
 ___
 
@@ -416,7 +428,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:273](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L273)
+[packages/api-types/rest/v2/app.ts:273](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L273)
 
 ___
 
@@ -426,7 +438,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:332](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L332)
+[packages/api-types/rest/v2/app.ts:332](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L332)
 
 ___
 
@@ -436,7 +448,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/upload.ts#L3)
+[packages/api-types/rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/upload.ts#L3)
 
 ___
 
@@ -446,7 +458,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:275](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L275)
+[packages/api-types/rest/v2/app.ts:275](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L275)
 
 ___
 
@@ -456,7 +468,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:277](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L277)
+[packages/api-types/rest/v2/app.ts:277](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L277)
 
 ___
 
@@ -466,7 +478,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/app.ts:279](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/app.ts#L279)
+[packages/api-types/rest/v2/app.ts:279](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/app.ts#L279)
 
 ___
 
@@ -496,7 +508,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L26)
+[packages/discloud.app/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L26)
 
 ## Variables
 
@@ -514,7 +526,7 @@ API version
 
 #### Defined in
 
-[packages/api-types/rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/index.ts#L14)
+[packages/api-types/rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/index.ts#L14)
 
 ___
 
@@ -536,7 +548,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
+[packages/api-types/payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
 
 ___
 
@@ -546,7 +558,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:39](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L39)
+[packages/api-types/payload/v2/DiscloudConfig.ts:39](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L39)
 
 ___
 
@@ -558,7 +570,7 @@ Library default options
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/util/constants.ts#L12)
+[packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/util/constants.ts#L12)
 
 ___
 
@@ -613,9 +625,9 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L17)
+[packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L17)
 
-[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/@types/index.ts#L22)
+[packages/discloud.app/src/@types/index.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/@types/index.ts#L22)
 
 ___
 
@@ -631,7 +643,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/rest/v2/index.ts#L16)
+[packages/api-types/rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/rest/v2/index.ts#L16)
 
 ___
 
@@ -718,7 +730,7 @@ async function () {
 
 #### Defined in
 
-[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/index.ts#L79)
+[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/index.ts#L79)
 
 ___
 
@@ -746,7 +758,7 @@ ___
 
 #### Defined in
 
-[packages/api-types/payload/v2/DiscloudConfig.ts:43](https://github.com/discloud/discloud.app/blob/99d4db4/packages/api-types/payload/v2/DiscloudConfig.ts#L43)
+[packages/api-types/payload/v2/DiscloudConfig.ts:43](https://github.com/discloud/discloud.app/blob/824e86a/packages/api-types/payload/v2/DiscloudConfig.ts#L43)
 
 ___
 
@@ -756,7 +768,7 @@ ___
 
 #### Defined in
 
-packages/util/out/FileResolver.d.ts:9
+packages/util/out/FileResolver.d.ts:10
 
 ___
 
@@ -796,7 +808,7 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/util/constants.ts#L7)
+[packages/discloud.app/src/util/constants.ts:7](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/util/constants.ts#L7)
 
 ## Functions
 
@@ -895,7 +907,28 @@ A function that converts [FileResolvable](discloud_app.md#fileresolvable) to Fil
 
 #### Defined in
 
-packages/util/out/FileResolver.d.ts:38
+packages/util/out/FileResolver.d.ts:39
+
+___
+
+### resolveFileSync
+
+▸ **resolveFileSync**(`file`, `fileName?`): `File`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `file` | [`FileResolvableSync`](discloud_app.md#fileresolvablesync) |
+| `fileName?` | `string` |
+
+#### Returns
+
+`File`
+
+#### Defined in
+
+packages/util/out/FileResolver.d.ts:41
 
 ___
 
@@ -918,7 +951,7 @@ A function that converts a like Stream parameter to Blob
 
 #### Defined in
 
-packages/util/out/FileResolver.d.ts:53
+packages/util/out/FileResolver.d.ts:56
 
 ___
 
@@ -942,4 +975,4 @@ A function that converts a like Stream parameter to File
 
 #### Defined in
 
-packages/util/out/FileResolver.d.ts:46
+packages/util/out/FileResolver.d.ts:49

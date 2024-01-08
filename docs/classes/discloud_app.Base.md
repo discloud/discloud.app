@@ -63,7 +63,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L14)
+[packages/discloud.app/src/structures/Base.ts:14](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L14)
 
 ## Properties
 
@@ -73,7 +73,7 @@ Base for all structures
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L5)
+[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L5)
 
 ___
 
@@ -83,27 +83,27 @@ ___
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L12)
+[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L12)
 
 ## Methods
 
 ### \_clone
 
-▸ **_clone**(): [`Base`](discloud_app.Base.md)
+▸ **_clone**(): `this`
 
 #### Returns
 
-[`Base`](discloud_app.Base.md)
+`this`
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L18)
+[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L18)
 
 ___
 
 ### \_patch
 
-▸ **_patch**(`data`): [`Base`](discloud_app.Base.md)
+▸ **_patch**(`data`): `this`
 
 #### Parameters
 
@@ -113,17 +113,17 @@ ___
 
 #### Returns
 
-[`Base`](discloud_app.Base.md)
+`this`
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L22)
+[packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L22)
 
 ___
 
 ### \_update
 
-▸ **_update**(`data`): [`Base`](discloud_app.Base.md)
+▸ **_update**(`data`): `this`
 
 #### Parameters
 
@@ -133,8 +133,8 @@ ___
 
 #### Returns
 
-[`Base`](discloud_app.Base.md)
+`this`
 
 #### Defined in
 
-[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/99d4db4/packages/discloud.app/src/structures/Base.ts#L26)
+[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/824e86a/packages/discloud.app/src/structures/Base.ts#L26)
