@@ -11,6 +11,8 @@ export const discloudConfigRequiredScopes = {
 export class DiscloudConfig {
   constructor(public path: string) {
     try {
+      this.path = join(...path.split(/[\\/]/g));
+
       if (this.exists === "file") {
         if (this.path.endsWith("discloud.config")) return;
 
