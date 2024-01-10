@@ -139,13 +139,14 @@ export class RequestManager extends EventEmitter {
     return { url, options };
   }
 
-  async request(url: string | URL, options: RequestOptions) {
+  async request(url: URL, options: RequestOptions) {
     if (!options) options = {};
 
     while (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
         method: options.method ?? "GET",
+        path: url.pathname,
         timeToReset: this.globalTimeToReset,
         url: url.toString(),
       });
@@ -163,16 +164,13 @@ export class RequestManager extends EventEmitter {
     if (!isNaN(remaining)) this.globalRemaining = remaining;
     if (!isNaN(reset)) this.globalReset = reset;
 
-    url = url.toString();
-    const path = url.replace(this.baseURL, "") || `/${url.split("/").slice(4).join("/") ?? url.split("/").at(-1)}`;
-
     if (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
         method: options.method ?? "GET",
+        path: url.pathname,
         timeToReset: this.globalTimeToReset,
-        path,
-        url,
+        url: url.toString(),
       });
     }
 
@@ -181,6 +179,7 @@ export class RequestManager extends EventEmitter {
       const code = res.statusCode;
       const message = await res.body.json().then((body: any) => body.message).catch(() => res.body.text());
       const method = options.method ?? "GET";
+      const path = url.pathname;
       throw new DiscloudAPIError(message, code, method, path, body);
     }
 
