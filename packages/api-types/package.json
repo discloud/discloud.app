@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "scripts": {
     "watch": "tsc -watch",
     "build": "tsc",
@@ -30,7 +30,6 @@
     "access": "public"
   },
   "dependencies": {
-    "source-map-support": "^0.5.21",
     "tslib": "^2.6.2"
   }
 }
