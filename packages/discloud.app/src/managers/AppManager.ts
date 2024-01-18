@@ -213,7 +213,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async profile(appID: string, options: ProfileOptions) {
     ProfileOptions.parse(options);
 
-    const data = await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appCommit(appID), {
+    const data = await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appProfile(appID), {
       body: options,
     });
 
