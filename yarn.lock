@@ -1207,10 +1207,10 @@ typedoc-material-theme@^1.0.2:
   dependencies:
     "@material/material-color-utilities" "^0.2.7"
 
-typedoc-plugin-coverage@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-2.2.0.tgz#760bb7bab606eed165e1e559df86003fa958ff3f"
-  integrity sha512-/hq9nwSNBz2p7+VYfljT/zFSmaxN8tlfcIp6CCAaQN6VIxXCciYFIqR+pcckRhjmfHIeSJ5uy2OpCt5F683npA==
+typedoc-plugin-coverage@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-3.0.0.tgz#10fd56faddc33360780e66e7158199f245dc859a"
+  integrity sha512-At1uOrwOQWCmzEdq3PLL0ztX0I93rG1CZTkILAVmh2p4L46MhS1vHTtZFccxNOFBKeuuHV3SB/jUQyVo4jzyxA==
 
 typedoc-plugin-markdown@^3.17.1:
   version "3.17.1"
