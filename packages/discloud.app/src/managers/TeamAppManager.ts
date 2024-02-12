@@ -56,7 +56,7 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppLogResult
       | RESTGetApiAppAllLogResult
-    >(Routes.appLogs(appID));
+    >(Routes.teamLogs(appID));
     if (Array.isArray(data.apps)) {
       const cache = new Map<string, ApiTerminal>();
 
@@ -106,7 +106,7 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
     z.string().parse(appID);
     z.number().parse(quantity);
 
-    const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.teamRam(appID), {
       body: {
         ramMB: quantity,
       },
