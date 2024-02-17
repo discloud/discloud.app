@@ -21,7 +21,7 @@
     "rimraf": "^5.0.5",
     "typedoc": "^0.25.8",
     "typedoc-material-theme": "^1.0.2",
-    "typedoc-plugin-coverage": "^2.2.0",
+    "typedoc-plugin-coverage": "^3.1.0",
     "typedoc-plugin-markdown": "^3.17.1",
     "typedoc-plugin-mdn-links": "^3.1.16",
     "typedoc-plugin-rename-defaults": "^0.7.0",
