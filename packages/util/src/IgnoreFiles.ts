@@ -1,7 +1,7 @@
+import { readFileSync } from "fs";
 import { globSync } from "glob";
-import { readFileSync } from "node:fs";
-import { type } from "node:os";
-import { dirname, join } from "node:path";
+import { type } from "os";
+import { dirname, join } from "path";
 
 export const blockedFiles = {
   common: [".git", ".vscode", ".cache"],

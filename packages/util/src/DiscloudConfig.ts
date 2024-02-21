@@ -1,6 +1,6 @@
 import type { DiscloudConfigType } from "@discloudapp/api-types/v2";
-import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { existsSync, readFileSync, statSync, writeFileSync } from "fs";
+import { dirname, join } from "path";
 
 export const discloudConfigRequiredScopes = {
   bot: ["MAIN", "NAME", "TYPE", "RAM", "VERSION"],

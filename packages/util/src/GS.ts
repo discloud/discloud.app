@@ -1,6 +1,6 @@
 import { globSync } from "glob";
-import { type } from "node:os";
-import { join } from "node:path";
+import { type } from "os";
+import { join } from "path";
 import { IgnoreFiles } from "./IgnoreFiles";
 
 export class GS {

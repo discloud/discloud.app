@@ -1,5 +1,5 @@
-import { existsSync, readdirSync } from "node:fs";
-import { extname, join } from "node:path";
+import { existsSync, readdirSync } from "fs";
+import { extname, join } from "path";
 
 const FILE_EXT = extname(__filename);
 

@@ -1,6 +1,6 @@
 import { mergeDefaults } from "@discloudapp/util";
-import EventEmitter from "node:events";
-import { setTimeout as sleep } from "node:timers/promises";
+import EventEmitter from "events";
+import { setTimeout as sleep } from "timers/promises";
 import { File, FormData, request } from "undici";
 import { RESTEvents } from "./@enum";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestOptions, RestEvents } from "./@types";

@@ -1,4 +1,4 @@
-import EventEmitter from "node:events";
+import EventEmitter from "events";
 import { RequestMethod, RESTEvents } from "./@enum";
 import type { InternalRequest, RequestData, RestEvents, RESTOptions, RouteLike } from "./@types";
 import { RequestManager } from "./RequestManager";

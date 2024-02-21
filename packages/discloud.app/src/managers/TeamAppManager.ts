@@ -1,7 +1,7 @@
 import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllStatusResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppStatusResult, type RESTGetApiTeamResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
-import { constants } from "node:http2";
+import { constants } from "http2";
 import type { File } from "undici";
 import z from "zod";
 import type { UpdateAppOptions } from "../@types";

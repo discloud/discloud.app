@@ -1,5 +1,5 @@
 import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
-import assert from "node:assert";
+import assert from "assert";
 import test from "node:test";
 import App from "../../structures/App";
 import AppStatus from "../../structures/AppStatus";

@@ -1,7 +1,7 @@
 import { APIVersion } from "@discloudapp/api-types/v2";
-import { existsSync, readFileSync } from "node:fs";
-import { arch, platform, release, type } from "node:os";
-import { join } from "node:path";
+import { existsSync, readFileSync } from "fs";
+import { arch, platform, release, type } from "os";
+import { join } from "path";
 import { Agent } from "undici";
 import type { RESTOptions } from "../@types";
 

@@ -1,4 +1,4 @@
-import { deepStrictEqual, ok, strictEqual, throws } from "node:assert";
+import { deepStrictEqual, ok, strictEqual, throws } from "assert";
 import { test } from "node:test";
 import BitField from "../BitField";
 

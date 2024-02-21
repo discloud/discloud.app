@@ -1,8 +1,8 @@
 import type { ApiUser } from "@discloudapp/api-types/v2";
 import { REST, RESTEvents } from "@discloudapp/rest";
 import { mergeDefaults } from "@discloudapp/util";
-import EventEmitter from "node:events";
-import { env } from "node:process";
+import EventEmitter from "events";
+import { env } from "process";
 import type { ClientEvents, DiscloudAppOptions } from "../@types";
 import AppAptManager from "../managers/AppAptManager";
 import AppManager from "../managers/AppManager";

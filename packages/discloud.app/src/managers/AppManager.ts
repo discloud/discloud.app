@@ -1,7 +1,7 @@
 import { Routes, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTDeleteApiAppDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppAllStatusResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTGetApiAppStatusResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile, type FileResolvable } from "@discloudapp/util";
-import { constants } from "node:http2";
+import { constants } from "http2";
 import type { File } from "undici";
 import z from "zod";
 import { ProfileOptions, type CreateAppOptions, type UpdateAppOptions } from "../@types";
