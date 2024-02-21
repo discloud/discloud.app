@@ -52,6 +52,10 @@ export interface ApiApp extends BaseApiApp {
    * If your app has auto-restart enabled
    */
   autoRestart: boolean
+  /**
+   * Your app's type
+   */
+  type: number
 }
 
 export interface ApiAppBackup extends BaseApiApp {

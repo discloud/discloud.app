@@ -33,4 +33,8 @@ export interface ApiTeamApps {
    * Your permissions to manage this application.
    */
   perms: string[]
+  /**
+   * Your team's app type
+   */
+  type: number
 }

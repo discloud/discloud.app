@@ -46,8 +46,9 @@ export interface ApiUser {
   lastDataLeft?: LastDataLeft,
   /**
    * Date of when will your plan end
+   * | "Subscription"
    */
-  planDataEnd?: string
+  planDataEnd?: "Subscription" | string
 }
 
 export interface ApiUserAppStatus {
