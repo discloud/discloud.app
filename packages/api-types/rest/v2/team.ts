@@ -18,6 +18,10 @@ export interface ApiTeamApps {
    */
   online: boolean
   /**
+   * The RAM quantity for your team's app
+   */
+  ram: number
+  /**
    * If your team's app stopped due to low RAM
    */
   ramKilled: boolean
