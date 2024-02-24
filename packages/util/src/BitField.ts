@@ -1,7 +1,8 @@
 /**
  * @internal
  */
-export type BitFieldConstructor<S extends string, N extends bigint | number> = typeof BitField<S, N> & {
+export interface BitFieldConstructor<S extends string, N extends bigint | number> {
+  new(...bits: BitFieldResolvable<S, N>[]): BitField<S, N>
   DefaultBit: N
   Flags: EnumLike<S, N>
   resolve(bit: BitFieldResolvable<S, N>): N
@@ -87,7 +88,6 @@ export abstract class BitField<S, N> {
    * @param bits - Bit(s) to check for
    */
   missing(...bits: BitFieldResolvable<S, N>[]): S[] {
-    // @ts-expect-error ts(2511)
     return new this.constructor(bits).remove(this).toArray() as S[];
   }
 
