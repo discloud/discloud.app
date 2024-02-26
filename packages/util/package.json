@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/util",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "A utility pack for discloud.app",
   "main": "out",
   "types": "out/index.d.ts",
