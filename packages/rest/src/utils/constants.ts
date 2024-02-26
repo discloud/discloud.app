@@ -2,7 +2,6 @@ import { APIVersion } from "@discloudapp/api-types/v2";
 import { existsSync, readFileSync } from "fs";
 import { arch, platform, release, type } from "os";
 import { join } from "path";
-import { Agent } from "undici";
 import type { RESTOptions } from "../@types";
 
 export const os_name = type();
@@ -19,7 +18,6 @@ export const DefaultUserAgent = `DiscloudApp${discloudAppVersion} (${os_name} ${
 
 export const DefaultRestOptions: Required<RESTOptions> = {
   api: "https://api.discloud.app",
-  dispatcher: new Agent(),
   globalRequestsPerMinute: 60,
   headers: {
     "User-Agent": DefaultUserAgent,

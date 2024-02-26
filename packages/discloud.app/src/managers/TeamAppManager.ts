@@ -2,7 +2,6 @@ import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, t
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
-import type { File } from "undici";
 import z from "zod";
 import type { UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";

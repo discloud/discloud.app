@@ -1,10 +1,9 @@
 import type { RawFile } from "@discloudapp/util";
-import type { BodyInit, Dispatcher, File, request } from "undici";
 import type { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
 
-export type RequestOptions = Parameters<typeof request>[1]
+export type RequestOptions = Parameters<typeof fetch>[1]
 
 export interface RESTOptions {
   /**
@@ -12,10 +11,6 @@ export interface RESTOptions {
    * @defaultValue `'https://api.discloud.app'`
    */
   api: string
-  /**
-   * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to set globally
-   */
-  dispatcher: Dispatcher;
   /**
    * How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
    *
@@ -52,11 +47,7 @@ export interface RequestData {
   /**
    * The body to send to this request.
    */
-  body?: BodyInit | unknown
-  /**
-   * The {@link https://undici.nodejs.org/#/docs/api/Agent | Agent} to use for the request.
-   */
-  dispatcher?: Dispatcher;
+  body?: RequestInit["body"] | unknown
   /**
    * File to be attached to this request
    */

@@ -1,7 +1,6 @@
 import type { BinaryLike } from "crypto";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { Stream, type Readable, type Writable } from "stream";
-import { File, request } from "undici";
 
 export const fileNamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
 
@@ -47,29 +46,33 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
-    fileName ??= file.match(fileNamePattern)?.pop() ?? "file.zip";
+    fileName ??= file.match(fileNamePattern)?.pop();
 
-    if (/^(?:s?ftp|https?):\/\//.test(file))
-      return request(file, { throwOnError: true })
-        .then(res => res.body.blob())
-        .then(blob => new File([blob], fileName ?? "file.zip"));
+    if (/^(?:s?ftp|https?):\/\//.test(file)) {
+      const response = await fetch(file);
+
+      if (response.status > 399) throw response;
+
+      return response.blob()
+        .then(blob => new File([blob], fileName ?? `file.${resolveBlobFileType(blob)}`, { type: blob.type }));
+    }
 
     if (existsSync(file))
-      return streamToFile(createReadStream(file), fileName);
+      return streamToFile(createReadStream(file), fileName ?? "file.zip");
 
-    return new File([file], fileName);
+    return new File([file], fileName ?? "file.zip");
   }
 
-  fileName ??= "file.zip";
+  if (file instanceof Blob) return new File([file], fileName ?? `file.${resolveBlobFileType(file)}`, { type: file.type });
 
-  if (file instanceof Blob) return new File([file], fileName);
+  fileName ??= "file.zip";
 
   if (Buffer.isBuffer(file)) return new File([file], fileName);
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
 
-    return new File([file.data], file.name);
+    return new File([file.data], file.name, { type: file.contentType });
   }
 
   if (!Stream.isErrored(file)) return streamToFile(file, fileName);
@@ -133,3 +136,8 @@ export function streamToBlob(stream: Stream, mimeType?: string) {
 }
 
 export default resolveFile;
+
+function resolveBlobFileType(b: Blob | Blob["type"]) {
+  if (typeof b === "string") return b.split("/")[1].split(/\W/)[0];
+  return resolveBlobFileType(b.type);
+}

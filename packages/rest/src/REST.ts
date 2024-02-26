@@ -89,13 +89,15 @@ export class REST extends EventEmitter {
   async request<T = any>(options: InternalRequest): Promise<T> {
     const res = await this.raw(options);
 
-    if (res.headers["content-type"]?.includes("application/json"))
-      return res.body.json() as T;
+    const contentType = res.headers.get("content-type");
 
-    if (res.headers["content-type"]?.includes("text/"))
-      return res.body.text() as T;
+    if (contentType?.includes("application/json"))
+      return res.json() as T;
 
-    return res.body.arrayBuffer() as T;
+    if (contentType?.includes("text/"))
+      return res.text() as T;
+
+    return res.arrayBuffer() as T;
   }
 
   /**
