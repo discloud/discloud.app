@@ -42,7 +42,7 @@ export abstract class BitField<S, N> {
     // @ts-expect-error ts(2362)
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
-    // @ts-expect-error ts(2511)
+    // @ts-expect-error ts(2322)
     if (Object.isFrozen(this)) return new this.constructor(this.bitField | total);
 
     // @ts-expect-error ts(2363)
@@ -100,7 +100,7 @@ export abstract class BitField<S, N> {
     // @ts-expect-error ts(2362)
     const total = bits.reduce((p, b) => p | this.constructor.resolve(b), this.constructor.DefaultBit);
 
-    // @ts-expect-error ts(2511)
+    // @ts-expect-error ts(2322)
     if (Object.isFrozen(this)) return new this.constructor(this.bitField & ~total);
 
     // @ts-expect-error ts(2322)
@@ -125,7 +125,7 @@ export abstract class BitField<S, N> {
    * @returns These bits or new BitField if the instance is frozen.
    */
   set(...bits: BitFieldResolvable<S, N>[]): this {
-    // @ts-expect-error ts(2511)
+    // @ts-expect-error ts(2322)
     if (Object.isFrozen(this)) return new this.constructor(bits);
 
     this.bitField = this.constructor.resolve(bits);
@@ -151,7 +151,7 @@ export abstract class BitField<S, N> {
 
   *[Symbol.iterator]() {
     for (const flag of this.toArray()) {
-      yield* flag;
+      yield flag;
     }
   }
 
@@ -159,7 +159,7 @@ export abstract class BitField<S, N> {
    * Resolves bitfields to their numeric form.
    * @param bit - bit(s) to resolve
    */
-  static resolve<N extends bigint | number>(bit: BitFieldResolvable<string, N>): N {
+  static resolve<S extends string, N extends bigint | number>(bit: BitFieldResolvable<S, N>): N {
     if (bit instanceof BitField) return bit.bitField;
 
     const DefaultBit = this.DefaultBit as N;
