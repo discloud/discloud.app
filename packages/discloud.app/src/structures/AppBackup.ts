@@ -2,7 +2,6 @@ import type { ApiAppBackup, ApiAppBackupAll } from "@discloudapp/api-types/v2";
 import { existsSync, mkdirSync, writeFileSync, type PathLike } from "fs";
 import { join } from "path";
 import { cwd } from "process";
-import { fetch } from "undici";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 

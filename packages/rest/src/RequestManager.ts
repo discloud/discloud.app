@@ -1,7 +1,6 @@
 import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "events";
 import { setTimeout as sleep } from "timers/promises";
-import { File, FormData, request } from "undici";
 import { RESTEvents } from "./@enum";
 import type { InternalRequest, RESTOptions, RateLimitData, RequestOptions, RestEvents } from "./@types";
 import { DiscloudAPIError } from "./errors";
@@ -103,8 +102,6 @@ export class RequestManager extends EventEmitter {
 
         formData.append(request.file.key ?? "file", request.file.data);
       }
-
-      options.headersTimeout = 300000;
     }
 
     if (request.body) {
@@ -117,7 +114,7 @@ export class RequestManager extends EventEmitter {
           }
         }
 
-        for (const [key, value] of Object.entries(<any>request.body))
+        for (const [key, value] of Object.entries(request.body!))
           formData.append(key, value);
       } else {
         headers.set("Content-Type", "application/json");
@@ -134,18 +131,14 @@ export class RequestManager extends EventEmitter {
 
     options.headers = Object.fromEntries(headers.entries());
 
-    options.dispatcher = request.dispatcher ?? this.options.dispatcher;
-
     return { url, options };
   }
 
-  async request(url: URL, options: RequestOptions) {
-    if (!options) options = {};
-
+  async request(url: URL, options?: RequestOptions) {
     while (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
-        method: options.method ?? "GET",
+        method: options?.method ?? "GET",
         path: url.pathname,
         timeToReset: this.globalTimeToReset,
         url: url.toString(),
@@ -154,12 +147,12 @@ export class RequestManager extends EventEmitter {
       await sleep(this.globalTimeToReset);
     }
 
-    const res = await request(url, options);
+    const res = await fetch(url, options);
 
     this.globalTime = Date.now();
-    const limit = Number(res.headers["ratelimit-limit"]);
-    const remaining = Number(res.headers["ratelimit-remaining"]);
-    const reset = Number(res.headers["ratelimit-reset"]);
+    const limit = Number(res.headers.get("ratelimit-limit"));
+    const remaining = Number(res.headers.get("ratelimit-remaining"));
+    const reset = Number(res.headers.get("ratelimit-reset"));
     if (!isNaN(limit)) this.globalLimit = limit;
     if (!isNaN(remaining)) this.globalRemaining = remaining;
     if (!isNaN(reset)) this.globalReset = reset;
@@ -167,18 +160,18 @@ export class RequestManager extends EventEmitter {
     if (this.globalLimited) {
       this.emit(RESTEvents.RateLimited, <RateLimitData>{
         global: this.globalLimited,
-        method: options.method ?? "GET",
+        method: options?.method ?? "GET",
         path: url.pathname,
         timeToReset: this.globalTimeToReset,
         url: url.toString(),
       });
     }
 
-    if (res.statusCode > 399) {
-      const body = options.body;
-      const code = res.statusCode;
-      const message = await res.body.json().then((body: any) => body.message).catch(() => res.body.text());
-      const method = options.method ?? "GET";
+    if (res.status > 399) {
+      const body = options?.body;
+      const code = res.status;
+      const message = await res.json().then((body: any) => body.message).catch(() => res.text());
+      const method = options?.method ?? "GET";
       const path = url.pathname;
       throw new DiscloudAPIError(message, code, method, path, body);
     }
