@@ -16,7 +16,7 @@ export default class User extends Base {
   /**
    * Your id
    */
-  declare id: string;
+  declare readonly id: string;
   /**
    * Your locale
    */
@@ -51,6 +51,8 @@ export default class User extends Base {
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
+    this.id = data.userID;
+
     this._patch(data);
   }
 
@@ -72,9 +74,6 @@ export default class User extends Base {
           this.customdomains.add(customdomain);
         }
       }
-
-    if ("userID" in data)
-      this.id = data.userID!;
 
     if ("locale" in data)
       this.locale = data.locale!;
