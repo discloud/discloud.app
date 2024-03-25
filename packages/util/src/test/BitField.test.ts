@@ -1,4 +1,4 @@
-import { deepStrictEqual, ok, strictEqual, throws } from "assert";
+import assert from "assert";
 import { test } from "node:test";
 import BitField from "../BitField";
 
@@ -15,15 +15,15 @@ test("Number BitField resolve tests", () => {
     static Flags = NumberFlags;
   }
 
-  ok(new ExtendedNumberBitField());
+  assert.ok(new ExtendedNumberBitField());
 
-  ok(new ExtendedNumberBitField(Object.values(NumberFlags)));
+  assert.ok(new ExtendedNumberBitField(Object.values(NumberFlags)));
 
-  ok(new ExtendedNumberBitField(1 << 3));
+  assert.ok(new ExtendedNumberBitField(1 << 3));
 
-  strictEqual(new ExtendedNumberBitField(Object.values(NumberFlags)).bitField, 55);
+  assert.strictEqual(new ExtendedNumberBitField(Object.values(NumberFlags)).bitField, 55);
 
-  throws(() => new ExtendedNumberBitField(<keyof typeof NumberFlags>"flag0"));
+  assert.throws(() => new ExtendedNumberBitField(<keyof typeof NumberFlags>"flag0"));
 });
 
 test("BigInt BitField resolve tests", () => {
@@ -40,15 +40,15 @@ test("BigInt BitField resolve tests", () => {
     static Flags = BigIntFlags;
   }
 
-  ok(new ExtendedBigIntBitField());
+  assert.ok(new ExtendedBigIntBitField());
 
-  ok(new ExtendedBigIntBitField(Object.values(BigIntFlags)));
+  assert.ok(new ExtendedBigIntBitField(Object.values(BigIntFlags)));
 
-  ok(new ExtendedBigIntBitField(1n << 3n));
+  assert.ok(new ExtendedBigIntBitField(1n << 3n));
 
-  strictEqual(new ExtendedBigIntBitField(Object.values(BigIntFlags)).bitField, 55n);
+  assert.strictEqual(new ExtendedBigIntBitField(Object.values(BigIntFlags)).bitField, 55n);
 
-  throws(() => new ExtendedBigIntBitField(<keyof typeof BigIntFlags>"flag0"));
+  assert.throws(() => new ExtendedBigIntBitField(<keyof typeof BigIntFlags>"flag0"));
 });
 
 test("Number BitField methods tests", () => {
@@ -66,25 +66,25 @@ test("Number BitField methods tests", () => {
 
   const extendedNumberBitField = new ExtendedNumberBitField(NumberFlags.flag1, NumberFlags.flag4);
 
-  strictEqual(extendedNumberBitField.bitField, 5);
-  strictEqual(extendedNumberBitField.any(NumberFlags.flag1, NumberFlags.flag16), true);
-  strictEqual(extendedNumberBitField.any(NumberFlags.flag2, NumberFlags.flag32), false);
-  strictEqual(extendedNumberBitField.has(NumberFlags.flag1, NumberFlags.flag4), true);
-  strictEqual(extendedNumberBitField.has(NumberFlags.flag1, NumberFlags.flag16), false);
-  strictEqual(extendedNumberBitField.equals(NumberFlags.flag1, NumberFlags.flag4), true);
-  strictEqual(extendedNumberBitField.equals(NumberFlags.flag1), false);
-  deepStrictEqual(extendedNumberBitField.missing(NumberFlags.flag1, NumberFlags.flag4), []);
-  deepStrictEqual(extendedNumberBitField.missing(NumberFlags.flag1, NumberFlags.flag16), ["flag16"]);
-  strictEqual(extendedNumberBitField.add(NumberFlags.flag1).bitField, 5);
-  strictEqual(extendedNumberBitField.remove(NumberFlags.flag1).bitField, 4);
-  strictEqual(extendedNumberBitField.add(NumberFlags.flag1).bitField, 5);
-  strictEqual(extendedNumberBitField.set().bitField, 0);
-  strictEqual(extendedNumberBitField.set(NumberFlags.flag1, NumberFlags.flag4).bitField, 5);
-  deepStrictEqual(extendedNumberBitField.toArray(), ["flag1", "flag4"]);
-  deepStrictEqual([...extendedNumberBitField], ["flag1", "flag4"]);
-  strictEqual(extendedNumberBitField.toJSON(), 5);
-  strictEqual(extendedNumberBitField.valueOf(), 5);
-  deepStrictEqual(extendedNumberBitField.serialize(), {
+  assert.strictEqual(extendedNumberBitField.bitField, 5);
+  assert.strictEqual(extendedNumberBitField.any(NumberFlags.flag1, NumberFlags.flag16), true);
+  assert.strictEqual(extendedNumberBitField.any(NumberFlags.flag2, NumberFlags.flag32), false);
+  assert.strictEqual(extendedNumberBitField.has(NumberFlags.flag1, NumberFlags.flag4), true);
+  assert.strictEqual(extendedNumberBitField.has(NumberFlags.flag1, NumberFlags.flag16), false);
+  assert.strictEqual(extendedNumberBitField.equals(NumberFlags.flag1, NumberFlags.flag4), true);
+  assert.strictEqual(extendedNumberBitField.equals(NumberFlags.flag1), false);
+  assert.deepStrictEqual(extendedNumberBitField.missing(NumberFlags.flag1, NumberFlags.flag4), []);
+  assert.deepStrictEqual(extendedNumberBitField.missing(NumberFlags.flag1, NumberFlags.flag16), ["flag16"]);
+  assert.strictEqual(extendedNumberBitField.add(NumberFlags.flag1).bitField, 5);
+  assert.strictEqual(extendedNumberBitField.remove(NumberFlags.flag1).bitField, 4);
+  assert.strictEqual(extendedNumberBitField.add(NumberFlags.flag1).bitField, 5);
+  assert.strictEqual(extendedNumberBitField.set().bitField, 0);
+  assert.strictEqual(extendedNumberBitField.set(NumberFlags.flag1, NumberFlags.flag4).bitField, 5);
+  assert.deepStrictEqual(extendedNumberBitField.toArray(), ["flag1", "flag4"]);
+  assert.deepStrictEqual([...extendedNumberBitField], ["flag1", "flag4"]);
+  assert.strictEqual(extendedNumberBitField.toJSON(), 5);
+  assert.strictEqual(extendedNumberBitField.valueOf(), 5);
+  assert.deepStrictEqual(extendedNumberBitField.serialize(), {
     flag1: true,
     flag2: false,
     flag4: true,
@@ -109,25 +109,25 @@ test("BigInt BitField methods tests", () => {
 
   const extendedNumberBitField = new ExtendedNumberBitField(BigIntFlags.flag1, BigIntFlags.flag4);
 
-  strictEqual(extendedNumberBitField.bitField, 5n);
-  strictEqual(extendedNumberBitField.any(BigIntFlags.flag1, BigIntFlags.flag16), true);
-  strictEqual(extendedNumberBitField.any(BigIntFlags.flag2, BigIntFlags.flag32), false);
-  strictEqual(extendedNumberBitField.has(BigIntFlags.flag1, BigIntFlags.flag4), true);
-  strictEqual(extendedNumberBitField.has(BigIntFlags.flag1, BigIntFlags.flag16), false);
-  strictEqual(extendedNumberBitField.equals(BigIntFlags.flag1, BigIntFlags.flag4), true);
-  strictEqual(extendedNumberBitField.equals(BigIntFlags.flag1), false);
-  deepStrictEqual(extendedNumberBitField.missing(BigIntFlags.flag1, BigIntFlags.flag4), []);
-  deepStrictEqual(extendedNumberBitField.missing(BigIntFlags.flag1, BigIntFlags.flag16), ["flag16"]);
-  strictEqual(extendedNumberBitField.add(BigIntFlags.flag1).bitField, 5n);
-  strictEqual(extendedNumberBitField.remove(BigIntFlags.flag1).bitField, 4n);
-  strictEqual(extendedNumberBitField.add(BigIntFlags.flag1).bitField, 5n);
-  strictEqual(extendedNumberBitField.set().bitField, 0n);
-  strictEqual(extendedNumberBitField.set(BigIntFlags.flag1, BigIntFlags.flag4).bitField, 5n);
-  deepStrictEqual(extendedNumberBitField.toArray(), ["flag1", "flag4"]);
-  deepStrictEqual([...extendedNumberBitField], ["flag1", "flag4"]);
-  strictEqual(extendedNumberBitField.toJSON(), "5");
-  strictEqual(extendedNumberBitField.valueOf(), 5n);
-  deepStrictEqual(extendedNumberBitField.serialize(), {
+  assert.strictEqual(extendedNumberBitField.bitField, 5n);
+  assert.strictEqual(extendedNumberBitField.any(BigIntFlags.flag1, BigIntFlags.flag16), true);
+  assert.strictEqual(extendedNumberBitField.any(BigIntFlags.flag2, BigIntFlags.flag32), false);
+  assert.strictEqual(extendedNumberBitField.has(BigIntFlags.flag1, BigIntFlags.flag4), true);
+  assert.strictEqual(extendedNumberBitField.has(BigIntFlags.flag1, BigIntFlags.flag16), false);
+  assert.strictEqual(extendedNumberBitField.equals(BigIntFlags.flag1, BigIntFlags.flag4), true);
+  assert.strictEqual(extendedNumberBitField.equals(BigIntFlags.flag1), false);
+  assert.deepStrictEqual(extendedNumberBitField.missing(BigIntFlags.flag1, BigIntFlags.flag4), []);
+  assert.deepStrictEqual(extendedNumberBitField.missing(BigIntFlags.flag1, BigIntFlags.flag16), ["flag16"]);
+  assert.strictEqual(extendedNumberBitField.add(BigIntFlags.flag1).bitField, 5n);
+  assert.strictEqual(extendedNumberBitField.remove(BigIntFlags.flag1).bitField, 4n);
+  assert.strictEqual(extendedNumberBitField.add(BigIntFlags.flag1).bitField, 5n);
+  assert.strictEqual(extendedNumberBitField.set().bitField, 0n);
+  assert.strictEqual(extendedNumberBitField.set(BigIntFlags.flag1, BigIntFlags.flag4).bitField, 5n);
+  assert.deepStrictEqual(extendedNumberBitField.toArray(), ["flag1", "flag4"]);
+  assert.deepStrictEqual([...extendedNumberBitField], ["flag1", "flag4"]);
+  assert.strictEqual(extendedNumberBitField.toJSON(), "5");
+  assert.strictEqual(extendedNumberBitField.valueOf(), 5n);
+  assert.deepStrictEqual(extendedNumberBitField.serialize(), {
     flag1: true,
     flag2: false,
     flag4: true,

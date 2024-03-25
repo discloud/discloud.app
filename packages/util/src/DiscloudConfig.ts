@@ -6,16 +6,14 @@ export const discloudConfigRequiredScopes = {
   bot: ["MAIN", "NAME", "TYPE", "RAM", "VERSION"],
   site: ["ID", "MAIN", "TYPE", "RAM", "VERSION"],
   common: ["MAIN", "TYPE", "RAM", "VERSION"],
-};
+} as const;
 
 export class DiscloudConfig {
-  constructor(public path: string) {
+  constructor(public readonly path: string) {
     try {
       this.path = join(...path.split(/[\\/]/g));
 
-      if (this.exists === "file") {
-        if (this.path.endsWith("discloud.config")) return;
-
+      if (this.exists === "file" && !this.path.endsWith("discloud.config")) {
         this.path = dirname(this.path);
       }
 
@@ -36,7 +34,7 @@ export class DiscloudConfig {
   get data(): DiscloudConfigType {
     try {
       return this.#configToObj(readFileSync(this.path, "utf8")!);
-    } catch (error) {
+    } catch {
       return <any>{};
     }
   }
@@ -54,8 +52,10 @@ export class DiscloudConfig {
   }
 
   get existsMain() {
-    if (existsSync(this.data.MAIN)) {
-      const stats = statSync(this.data.MAIN);
+    const mainPath = join(dirname(this.path), this.data.MAIN);
+
+    if (existsSync(mainPath)) {
+      const stats = statSync(mainPath);
 
       if (stats.isFile()) return "file";
 
@@ -65,7 +65,7 @@ export class DiscloudConfig {
     return false;
   }
 
-  get fileExt() {
+  get mainFileExt() {
     return this.data.MAIN?.split(".").pop();
   }
 
