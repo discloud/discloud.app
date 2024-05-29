@@ -11,23 +11,7 @@ import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
 import { DefaultDiscloudAppOptions } from "../util";
 
-/**
- * Client for Discloud API
- */
-interface DiscloudApp extends EventEmitter {
-  emit: (<K extends keyof ClientEvents>(event: K, ...args: ClientEvents[K]) => boolean) &
-  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, ...args: unknown[]) => boolean);
-  off: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
-  on: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
-  once: (<K extends keyof ClientEvents>(event: K, listener: (...args: ClientEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof ClientEvents>, listener: (...args: any[]) => void) => this);
-  removeAllListeners: (<K extends keyof ClientEvents>(event?: K) => this) &
-  (<S extends string | symbol>(event?: Exclude<S, keyof ClientEvents>) => this);
-}
-
-class DiscloudApp extends EventEmitter {
+class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly options: DiscloudAppOptions;
   readonly rest: REST;
   readonly appApt = new AppAptManager(this);
