@@ -1,54 +1,84 @@
-import type { DiscloudConfigType } from "@discloudapp/api-types/v2";
-import { existsSync, readFileSync, statSync, writeFileSync } from "fs";
-import { dirname, join } from "path";
+import { DiscloudConfigScopes, discloudConfigRequiredScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
+import EventEmitter from "events";
+import { FSWatcher, existsSync, readFileSync, statSync, watch, writeFileSync } from "fs";
+import { basename, dirname, join } from "path";
+export interface DiscloudConfigEventMap {
+  change: [data: DiscloudConfigType]
+  disposed: [data: DiscloudConfigType]
+  error: [error: Error]
+  missing: [data: DiscloudConfigType]
+}
 
-export const discloudConfigRequiredScopes = {
-  bot: ["MAIN", "NAME", "TYPE", "RAM", "VERSION"],
-  site: ["ID", "MAIN", "TYPE", "RAM", "VERSION"],
-  common: ["MAIN", "TYPE", "RAM", "VERSION"],
-} as const;
+export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
+  static readonly fileName = "discloud.config";
+  #watcher?: FSWatcher;
+  #data: DiscloudConfigType = <any>{};
+  #comments: string[] = [];
 
-export class DiscloudConfig {
   constructor(public readonly path: string) {
+    super({ captureRejections: true });
+
     try {
       this.path = join(...path.split(/[\\/]/g));
 
-      if (this.exists === "file" && !this.path.endsWith("discloud.config")) {
+      while (!this.exists) this.path = dirname(this.path);
+
+      if (this.exists && this.isFile && basename(this.path) !== DiscloudConfig.fileName) {
         this.path = dirname(this.path);
       }
 
-      this.path = join(this.path, "discloud.config");
+      this.path = join(this.path, DiscloudConfig.fileName);
+
+      if (this.isFile) {
+        this.#watch();
+        this.#onChange();
+      }
     } catch { }
   }
 
-  get comments() {
+  dispose() {
+    this.emit("disposed", this.#data);
+    this.removeAllListeners();
+    this.#watcher?.removeAllListeners().close();
+  }
+
+  #watch() {
     try {
-      return readFileSync(this.path, "utf8")
-        ?.split(/\r?\n/)
-        .filter(a => /^\s*#/.test(a)) ?? [];
+      this.#watcher = watch(this.path).on("change", this.#onChange).once("close", () => this.dispose());
+    } catch (_) { }
+  }
+
+  #onChange() {
+    try {
+      const content = readFileSync(this.path, "utf8");
+      this.#data = this.#configToObj(content);
+      this.#comments = content.split(/\r?\n/).filter(a => /^\s*#/.test(a));
+      this.emit("change", this.#data);
     } catch {
-      return [];
+      this.emit("missing", this.#data);
+      this.#data = <any>{};
+      this.#comments = [];
     }
+  }
+
+  get comments() {
+    return this.#comments;
   }
 
   get data(): DiscloudConfigType {
-    try {
-      return this.#configToObj(readFileSync(this.path, "utf8")!);
-    } catch {
-      return <any>{};
-    }
+    return this.#data;
   }
 
   get exists() {
-    if (existsSync(this.path)) {
-      const stats = statSync(this.path);
+    return existsSync(this.path);
+  }
 
-      if (stats.isFile()) return "file";
-
-      if (stats.isDirectory()) return "dir";
+  get isFile() {
+    try {
+      return statSync(this.path).isFile();
+    } catch (_) {
+      return false;
     }
-
-    return false;
   }
 
   get existsMain() {
@@ -113,13 +143,25 @@ export class DiscloudConfig {
       .map(line => line.split("="))));
   }
 
+  readonly #nonProcessScopes = [
+    DiscloudConfigScopes.APT,
+    DiscloudConfigScopes.AVATAR,
+    DiscloudConfigScopes.BUILD,
+    DiscloudConfigScopes.ID,
+    DiscloudConfigScopes.MAIN,
+    DiscloudConfigScopes.NAME,
+    DiscloudConfigScopes.START,
+    DiscloudConfigScopes.TYPE,
+    DiscloudConfigScopes.VERSION,
+  ];
+
   #processValues(obj: any) {
     if (!obj) return obj;
 
-    const keys = Object.keys(obj);
+    const keys = Object.keys(obj) as DiscloudConfigScopes[];
 
     for (const key of keys) {
-      if (["APT", "AVATAR", "ID", "MAIN", "NAME", "TYPE", "VERSION"].includes(key)) continue;
+      if (this.#nonProcessScopes.includes(key)) continue;
 
       const value = obj[key];
 
