@@ -6,20 +6,7 @@ import type { InternalRequest, RESTOptions, RateLimitData, RequestOptions, RestE
 import { DiscloudAPIError } from "./errors";
 import { DefaultRestOptions } from "./utils";
 
-export interface RequestManager extends EventEmitter {
-  emit: (<K extends keyof RestEvents>(event: K, ...args: RestEvents[K]) => boolean) &
-  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, ...args: unknown[]) => boolean);
-  off: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-  on: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-  once: (<K extends keyof RestEvents>(event: K, listener: (...args: RestEvents[K]) => void) => this) &
-  (<S extends string | symbol>(event: Exclude<S, keyof RestEvents>, listener: (...args: any[]) => void) => this);
-  removeAllListeners: (<K extends keyof RestEvents>(event?: K) => this) &
-  (<S extends string | symbol>(event?: Exclude<S, keyof RestEvents>) => this);
-}
-
-export class RequestManager extends EventEmitter {
+export class RequestManager extends EventEmitter<RestEvents> {
   #token!: string;
   readonly options: RESTOptions;
 
