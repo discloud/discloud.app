@@ -1,19 +1,36 @@
 export const APT = {
   canvas: [
-    "libcairo2",
-    "libpango1.0-dev",
-    "libjpeg-dev",
-    "libgif-dev",
-    "librsvg2-dev",
+    "fonts-liberation",
+    "libcairo2-dev",
     "libgbm-dev",
+    "libgif-dev",
+    "libjpeg-dev",
+    "libpango1.0-dev",
+    "librsvg2-dev",
   ],
-  ffmpeg: ["ffmpeg"],
-  java: ["default-jre"],
-  libgl: ["libsm6", "libxext6"],
-  openssl: ["pkg-config", "libssl-dev"],
+  ffmpeg: [
+    "ffmpeg",
+  ],
+  java: [
+    "default-jre",
+  ],
+  libgl: [
+    "cmake",
+    "libsm6",
+    "libxext6",
+    "libtool",
+    "make",
+  ],
+  mysql: [
+    "default-mysql-client",
+  ],
+  openssl: [
+    "pkg-config",
+    "libssl-dev",
+  ],
   puppeteer: [
     "libasound2",
-    "libatk-1.0-0",
+    "libatk1.0-0",
     "libatk-bridge2.0-0",
     "libcairo2",
     "libcups2",
@@ -33,24 +50,59 @@ export const APT = {
     "libxrandr2",
     "libxshmfence-dev",
   ],
-  tools: ["cmake", "curl", "git", "make", "wget"],
+  tesseract: [
+    "tesseract-ocr",
+  ],
+  tools: [
+    "curl",
+    "git",
+    "openssh-client",
+    "wget",
+  ],
 };
 
 export const APTPackages = <(keyof typeof APT)[]>Object.keys(APT);
 
-export type APTString = keyof typeof APT
+export type APTString = keyof typeof APT;
 
-export const discloudConfigScopes = [
-  "APT",
-  "AUTORESTART",
-  "AVATAR",
-  "ID",
-  "MAIN",
-  "NAME",
-  "RAM",
-  "TYPE",
-  "VERSION",
-] as const;
+export enum DiscloudConfigScopes {
+  APT = "APT",
+  AUTORESTART = "AUTORESTART",
+  AVATAR = "AVATAR",
+  BUILD = "BUILD",
+  ID = "ID",
+  MAIN = "MAIN",
+  NAME = "NAME",
+  RAM = "RAM",
+  START = "START",
+  TYPE = "TYPE",
+  VERSION = "VERSION",
+}
+
+export const discloudConfigRequiredScopes = {
+  bot: [
+    DiscloudConfigScopes.MAIN,
+    DiscloudConfigScopes.NAME,
+    DiscloudConfigScopes.TYPE,
+    DiscloudConfigScopes.RAM,
+    DiscloudConfigScopes.VERSION,
+  ],
+  site: [
+    DiscloudConfigScopes.ID,
+    DiscloudConfigScopes.MAIN,
+    DiscloudConfigScopes.TYPE,
+    DiscloudConfigScopes.RAM,
+    DiscloudConfigScopes.VERSION,
+  ],
+  common: [
+    DiscloudConfigScopes.MAIN,
+    DiscloudConfigScopes.TYPE,
+    DiscloudConfigScopes.RAM,
+    DiscloudConfigScopes.VERSION,
+  ],
+} as const;
+
+export const discloudConfigScopes = Object.values(DiscloudConfigScopes);
 
 export type DiscloudConfigType<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> =
   T extends "bot" ? DiscloudConfigBot<V> :
@@ -69,6 +121,11 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   AUTORESTART: boolean
 
   /**
+   * Command to compile your app
+   */
+  BUILD?: string
+
+  /**
    * Your application id
    */
   ID?: string
@@ -82,6 +139,11 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
    * The RAM quantity for your application
    */
   RAM: number
+
+  /**
+   * Command to start your app
+   */
+  START?: string
 
   /**
    * What is your application type. @see {@link AppTypes}
@@ -135,7 +197,10 @@ export type AppVersion<T extends AppLanguages = AppLanguages> =
   T extends "rs" ? VersionRs :
   BaseVersion
 
-type BaseVersion = "latest"
+type BaseVersion =
+  | "latest"
+  | `${number}`
+  | `${number}.${number | "x"}`
   | `${number}.${number | "x"}.${number | "x"}`
 
 type VersionGo = BaseVersion
