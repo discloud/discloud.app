@@ -16,7 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "dotenv": "^16.4.5",
-    "eslint": "^9.3.0",
+    "eslint": "^9.4.0",
     "eslint-plugin-tsdoc": "^0.3.0",
     "rimraf": "^5.0.7",
     "typedoc": "^0.25.13",
