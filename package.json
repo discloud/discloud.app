@@ -13,7 +13,7 @@
   "devDependencies": {
     "@types/node": "^20.14.5",
     "@types/source-map-support": "^0.5.10",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "dotenv": "^16.4.5",
     "eslint": "^9.5.0",
