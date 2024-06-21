@@ -1107,10 +1107,10 @@ type-check@^0.4.0, type-check@~0.4.0:
   dependencies:
     prelude-ls "^1.2.1"
 
-typedoc-material-theme@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/typedoc-material-theme/-/typedoc-material-theme-1.0.2.tgz#2a1d1540ba97cbb793f91288d284ce5d9849851c"
-  integrity sha512-/nH/twYeHrnz5sZaaXzYJ85EOgKqnbl1ivzBKmuEAga1dBsARttwQUTPKAT7XrCPD+rRcoqxuCOdXZ6EGiqRQA==
+typedoc-material-theme@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/typedoc-material-theme/-/typedoc-material-theme-1.0.3.tgz#a341ddf013d7bb2073906ce92b7961186509387b"
+  integrity sha512-TDQsRAcZoWgVVdqDWRxFDn3PqZy09YGONY8pQt8Thm/upZH0wbZ3YhFdSNMfsNyKFfsvZzl2NojdquAdBvjPgg==
   dependencies:
     "@material/material-color-utilities" "^0.2.7"
 
