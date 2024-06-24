@@ -19,7 +19,7 @@ abstract class Base {
     return Object.assign(Object.create(this), this);
   }
 
-  protected _patch(data: unknown): this {
+  protected _patch(_: unknown): this {
     return this;
   }
 

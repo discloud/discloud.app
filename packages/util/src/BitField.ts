@@ -8,7 +8,6 @@ export interface BitFieldConstructor<S extends string, N extends bigint | number
   resolve(bit: BitFieldResolvable<S, N>): N
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export interface BitField<S extends string, N extends bigint | number> {
   constructor: BitFieldConstructor<S, N>;
   /**
