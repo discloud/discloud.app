@@ -1,0 +1,13 @@
+[**discloud.app**](../README.md) • **Docs**
+
+***
+
+[Documentation](../../packages.md) / [discloud.app](../README.md) / RequestOptions
+
+# Type Alias: RequestOptions
+
+> **RequestOptions**: `Parameters`\<*typeof* `fetch`\>\[`1`\]
+
+## Defined in
+
+packages/rest/out/@types/index.d.ts:6
