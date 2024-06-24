@@ -16,7 +16,7 @@ export default class User extends Base {
   /**
    * Your id
    */
-  declare readonly id: string;
+  declare id: string;
   /**
    * Your locale
    */
@@ -51,12 +51,13 @@ export default class User extends Base {
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
-    this.id = data.userID;
-
     this._patch(data);
   }
 
   protected _patch(data: Partial<ApiUser>): this {
+    if ("userID" in data && typeof data.userID === "string")
+      this.id = data.userID;
+
     if ("apps" in data)
       if (Array.isArray(data.apps)) {
         this.appIDs.clear();
