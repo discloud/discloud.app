@@ -19,7 +19,7 @@
     "eslint": "^9.6.0",
     "eslint-plugin-tsdoc": "^0.3.0",
     "globals": "^15.8.0",
-    "rimraf": "^5.0.7",
+    "rimraf": "^5.0.8",
     "typedoc": "^0.26.3",
     "typedoc-material-theme": "^1.1.0",
     "typedoc-plugin-coverage": "^3.3.0",
