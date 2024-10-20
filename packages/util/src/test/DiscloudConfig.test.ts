@@ -6,8 +6,8 @@ import { DiscloudConfig } from "../DiscloudConfig";
 describe("Testing Discloud Config", () => {
   const dConfig = new DiscloudConfig(join(__dirname, "..", "..", "__test__"));
 
-  assert.strictEqual(dConfig.exists, "file");
-  assert.strictEqual(dConfig.existsMain, "file");
+  assert.strictEqual(dConfig.exists, true);
+  assert.strictEqual(dConfig.existsMain, true);
   assert.strictEqual(dConfig.mainFileExt, "txt");
   assert.deepStrictEqual(dConfig.missingProps, []);
   assert.deepStrictEqual(dConfig.data, {
@@ -19,4 +19,6 @@ describe("Testing Discloud Config", () => {
     AUTORESTART: false,
     APT: "canvas",
   });
+
+  dConfig.dispose();
 });

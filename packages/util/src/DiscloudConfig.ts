@@ -1,6 +1,6 @@
 import { DiscloudConfigScopes, discloudConfigRequiredScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
-import { FSWatcher, existsSync, readFileSync, statSync, watch, writeFileSync } from "fs";
+import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher } from "fs";
 import { basename, dirname, join } from "path";
 export interface DiscloudConfigEventMap {
   change: [data: DiscloudConfigType]
@@ -83,16 +83,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
   get existsMain() {
     const mainPath = join(dirname(this.path), this.data.MAIN);
-
-    if (existsSync(mainPath)) {
-      const stats = statSync(mainPath);
-
-      if (stats.isFile()) return "file";
-
-      if (stats.isDirectory()) return "dir";
-    }
-
-    return false;
+    return existsSync(mainPath) && statSync(mainPath).isFile();
   }
 
   get mainFileExt() {
@@ -118,13 +109,13 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
     if (typeof obj === "object") {
       if (Array.isArray(obj)) {
-        for (const value of obj)
+        for (const value of obj) {
           result.push(this.#objToString(value));
+        }
       } else {
-        const keys = Object.keys(obj);
-
-        for (const key of keys)
+        for (const key in obj) {
           result.push(`${key}=${this.#objToString(obj[key])}`);
+        }
       }
     } else {
       result.push(obj);
@@ -158,10 +149,8 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
   #processValues(obj: any) {
     if (!obj) return obj;
 
-    const keys = Object.keys(obj) as DiscloudConfigScopes[];
-
-    for (const key of keys) {
-      if (this.#nonProcessScopes.includes(key)) continue;
+    for (const key in obj) {
+      if (this.#nonProcessScopes.includes(key as DiscloudConfigScopes)) continue;
 
       const value = obj[key];
 
