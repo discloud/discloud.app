@@ -138,7 +138,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
     return this.#processValues(Object.fromEntries(s
       .replace(/\s*#.*/g, "")
-      .split(/[\r\n]/)
+      .split(/[\r\n]+/)
       .filter(Boolean)
       .map(line => line.split("="))));
   }
