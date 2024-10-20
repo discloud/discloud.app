@@ -32,7 +32,7 @@
     "resolveJsonModule": true,
     // "noResolve": true,
     "allowJs": true,
-    "checkJs": true,
+    // "checkJs": true,
     // "maxNodeModuleJsDepth": 1,
     "declaration": true,
     "declarationMap": true,

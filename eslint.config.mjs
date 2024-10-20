@@ -1,31 +1,40 @@
 import pluginJs from "@eslint/js";
+import { Linter } from "eslint";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
+/** @type {Linter.Config[]} */
 export default [
-  { files: ["**/*.ts"] },
-  { ignores: ["**/*.js", "**/*.d.ts"] },
-  { files: ["**/*.ts"], languageOptions: { sourceType: "script" } },
+  { files: ["**/*.?(c|m)ts"] },
+  { ignores: ["**/*.?(c|m)js", "**/*.d.?(c|m)ts"] },
   { languageOptions: { globals: globals.node } },
+  { languageOptions: { sourceType: "script" } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": 0,
-      "@typescript-eslint/no-unsafe-declaration-merging": 0,
-      "@typescript-eslint/no-unused-vars": [1, {
+      "@typescript-eslint/consistent-type-imports": ["warn", { fixStyle: "inline-type-imports" }],
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-declaration-merging": "off",
+      "@typescript-eslint/no-unused-vars": ["warn", {
         argsIgnorePattern: "^_",
         caughtErrorsIgnorePattern: "^_",
         destructuredArrayIgnorePattern: "^_",
         varsIgnorePattern: "^_",
       }],
-      "comma-dangle": [1, "always-multiline"],
-      indent: [1, 2, { "SwitchCase": 1 }],
-      "no-empty": 0,
-      "no-unused-vars": 0,
-      "prefer-const": 1,
-      quotes: [1, "double"],
-      semi: [1, "always"],
+      "@typescript-eslint/prefer-ts-expect-error": "warn",
+      "comma-dangle": ["warn", "always-multiline"],
+      "func-style": ["warn", "declaration"],
+      indent: ["warn", 2, { SwitchCase: 1 }],
+      "no-duplicate-imports": ["warn", { includeExports: true }],
+      "no-empty": "off",
+      "no-unused-private-class-members": "warn",
+      "no-unused-vars": "off",
+      "prefer-const": "warn",
+      "prefer-object-has-own": "warn",
+      "prefer-regex-literals": "warn",
+      quotes: ["warn", "double"],
+      semi: ["warn", "always"],
     },
   },
 ];
