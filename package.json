@@ -21,7 +21,7 @@
     "globals": "^15.12.0",
     "rimraf": "^6.0.1",
     "typedoc": "^0.26.11",
-    "typedoc-material-theme": "^1.1.0",
+    "typedoc-material-theme": "^1.2.0",
     "typedoc-plugin-coverage": "^3.3.0",
     "typedoc-plugin-markdown": "^4.2.10",
     "typedoc-plugin-mdn-links": "^3.3.7",
