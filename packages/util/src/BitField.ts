@@ -3,8 +3,8 @@
  */
 export interface BitFieldConstructor<S extends string, N extends bigint | number> {
   new(...bits: BitFieldResolvable<S, N>[]): BitField<S, N>
-  DefaultBit: N
-  Flags: EnumLike<S, N>
+  readonly DefaultBit: N
+  readonly Flags: EnumLike<S, N>
   resolve(bit: BitFieldResolvable<S, N>): N
 }
 
@@ -20,13 +20,13 @@ export interface BitField<S extends string, N extends bigint | number> {
  * Data structure that makes it easy to interact with a bitfield.
  */
 export abstract class BitField<S, N> {
-  static DefaultBit: bigint | number = 0;
+  static readonly DefaultBit: bigint | number = 0;
 
   /**
    * Numeric bitfield flags.
    * Defined in extension classes
    */
-  static Flags: EnumLike<unknown, bigint | number> = {};
+  static readonly Flags: EnumLike<unknown, bigint | number> = {};
 
   constructor(...bits: BitFieldResolvable<S, N>[]) {
     this.bitField = this.constructor.resolve(bits ?? this.constructor.DefaultBit);
@@ -113,9 +113,12 @@ export abstract class BitField<S, N> {
    * bit is available.
    */
   serialize() {
-    return Object.entries(this.constructor.Flags)
-      .reduce((acc, [flag, bit]) => Object.assign(acc, { [flag]: this.has(bit) }),
-        <Record<S, boolean>>{});
+    const serialized = {} as Record<S, boolean>;
+    for (const flag in this.constructor.Flags) {
+      if (!isNaN(flag as any)) continue;
+      serialized[flag as any as S] = this.has(this.constructor.Flags[flag]);
+    }
+    return serialized;
   }
 
   /**
@@ -136,12 +139,15 @@ export abstract class BitField<S, N> {
    * Gets an {@link Array} of bitfield names based on the bits available.
    */
   toArray() {
-    // @ts-expect-error ts(2345)
-    return Object.keys(this.constructor.Flags).filter(bit => this.has(bit)) as S[];
+    return Array.from(this[Symbol.iterator]());
   }
 
   toJSON() {
     return typeof this.bitField === "number" ? this.bitField : this.bitField.toString();
+  }
+
+  toString() {
+    return `${this.bitField}`;
   }
 
   valueOf() {
@@ -149,8 +155,9 @@ export abstract class BitField<S, N> {
   }
 
   *[Symbol.iterator]() {
-    for (const flag of this.toArray()) {
-      yield flag;
+    for (const flag in this.constructor.Flags) {
+      // @ts-expect-error ts(2345)
+      if (isNaN(flag) && this.has(this.constructor.Flags[flag])) yield flag as any as S;
     }
   }
 
@@ -196,6 +203,6 @@ export type BitFieldResolvable<S extends string, N extends bigint | number> =
   | BitField<S, N>
   | BitFieldResolvable<S, N>[]
 
-type EnumLike<E, V> = Record<keyof E, V>
+type EnumLike<E, V> = { [P in keyof E]: V };
 
 export default BitField;

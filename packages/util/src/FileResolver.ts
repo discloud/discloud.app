@@ -51,7 +51,7 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     if (/^(?:s?ftp|https?):\/\//.test(file)) {
       const response = await fetch(file);
 
-      if (response.status > 399) throw response;
+      if (!response.ok) throw response;
 
       return response.blob()
         .then(blob => new File([blob], fileName ?? `file.${resolveBlobFileType(blob)}`, { type: blob.type }));
@@ -114,9 +114,15 @@ export function resolveFileSync(file: FileResolvableSync, fileName?: string): Fi
 export function streamToFile(stream: Stream, fileName?: string | null, mimeType?: string) {
   return new Promise<File>((resolve, reject) => {
     const chunks: any[] = [];
-    stream.on("data", chunk => chunks.push(chunk))
-      .once("end", () => resolve(new File(chunks, fileName ?? "file.zip", { type: mimeType })))
-      .once("error", reject);
+    stream.on("data", (chunk) => chunks.push(chunk))
+      .once("end", function () {
+        stream.removeAllListeners();
+        resolve(new File(chunks, fileName ?? "file.zip", { type: mimeType }));
+      })
+      .once("error", function (error) {
+        stream.removeAllListeners();
+        reject(error);
+      });
   });
 }
 
@@ -129,9 +135,15 @@ export function streamToFile(stream: Stream, fileName?: string | null, mimeType?
 export function streamToBlob(stream: Stream, mimeType?: string) {
   return new Promise<Blob>((resolve, reject) => {
     const chunks: any[] = [];
-    stream.on("data", chunk => chunks.push(chunk))
-      .once("end", () => resolve(new Blob(chunks, { type: mimeType })))
-      .once("error", reject);
+    stream.on("data", (chunk) => chunks.push(chunk))
+      .once("end", function () {
+        stream.removeAllListeners();
+        resolve(new Blob(chunks, { type: mimeType }));
+      })
+      .once("error", function (error) {
+        stream.removeAllListeners();
+        reject(error);
+      });
   });
 }
 
