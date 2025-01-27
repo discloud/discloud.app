@@ -16,7 +16,7 @@
     "@types/node": "^22.10.10",
     "@types/source-map-support": "^0.5.10",
     "dotenv": "^16.4.7",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-plugin-tsdoc": "^0.4.0",
     "globals": "^15.14.0",
     "rimraf": "^6.0.1",
