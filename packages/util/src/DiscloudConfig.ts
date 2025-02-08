@@ -44,7 +44,9 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
   #watch() {
     try {
-      this.#watcher = watch(this.path).on("change", this.#onChange).once("close", () => this.dispose());
+      this.#watcher = watch(this.path)
+        .on("change", () => this.#onChange())
+        .once("close", () => this.dispose());
     } catch (_) { }
   }
 
