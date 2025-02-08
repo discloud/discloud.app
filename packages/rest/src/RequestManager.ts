@@ -154,7 +154,7 @@ export class RequestManager extends EventEmitter<RestEvents> {
       });
     }
 
-    if (res.status > 399) {
+    if (!res.ok) {
       const body = options?.body;
       const code = res.status;
       const message = await res.json().then((body: any) => body.message).catch(() => res.text());
