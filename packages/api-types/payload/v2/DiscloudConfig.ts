@@ -1,7 +1,6 @@
 export const APT = {
   canvas: [
-    "fonts-liberation",
-    "libcairo2-dev",
+    "libcairo2",
     "libgbm-dev",
     "libgif-dev",
     "libjpeg-dev",
@@ -15,14 +14,8 @@ export const APT = {
     "default-jre",
   ],
   libgl: [
-    "cmake",
     "libsm6",
     "libxext6",
-    "libtool",
-    "make",
-  ],
-  mysql: [
-    "default-mysql-client",
   ],
   openssl: [
     "pkg-config",
@@ -30,8 +23,8 @@ export const APT = {
   ],
   puppeteer: [
     "libasound2",
-    "libatk1.0-0",
     "libatk-bridge2.0-0",
+    "libatk1.0-0",
     "libcairo2",
     "libcups2",
     "libdrm-dev",
@@ -50,20 +43,18 @@ export const APT = {
     "libxrandr2",
     "libxshmfence-dev",
   ],
-  tesseract: [
-    "tesseract-ocr",
-  ],
   tools: [
     "curl",
+    "cmake",
     "git",
-    "openssh-client",
+    "make",
     "wget",
   ],
 };
 
-export const APTPackages = <(keyof typeof APT)[]>Object.keys(APT);
-
 export type APTString = keyof typeof APT;
+
+export const APTPackages = Object.keys(APT) as APTString[];
 
 export enum DiscloudConfigScopes {
   APT = "APT",
