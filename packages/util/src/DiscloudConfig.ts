@@ -1,6 +1,6 @@
 import { DiscloudConfigScopes, discloudConfigRequiredScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
-import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher } from "fs";
+import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher, type Stats } from "fs";
 import { basename, dirname, join } from "path";
 export interface DiscloudConfigEventMap {
   change: [data: DiscloudConfigType]
@@ -14,6 +14,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
   #watcher?: FSWatcher;
   #data: DiscloudConfigType = <any>{};
   #comments: string[] = [];
+  #stats: Stats | null = null;
 
   constructor(public readonly path: string) {
     super({ captureRejections: true });
@@ -21,11 +22,10 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
     try {
       this.path = join(...path.split(/[\\/]/g));
 
-      while (!this.exists) this.path = dirname(this.path);
-
-      if (this.exists && this.isFile && basename(this.path) !== DiscloudConfig.fileName) {
+      if (this.isFile && basename(this.path) !== DiscloudConfig.fileName)
         this.path = dirname(this.path);
-      }
+
+      while (!this.exists) this.path = dirname(this.path);
 
       this.path = join(this.path, DiscloudConfig.fileName);
 
@@ -37,9 +37,9 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
   }
 
   dispose() {
+    this.#watcher?.removeAllListeners().close();
     this.emit("disposed", this.#data);
     this.removeAllListeners();
-    this.#watcher?.removeAllListeners().close();
   }
 
   #watch() {
@@ -52,11 +52,13 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
   #onChange() {
     try {
+      this.#stats = statSync(this.path);
       const content = readFileSync(this.path, "utf8");
       this.#data = this.#configToObj(content);
       this.#comments = content.split(/\r?\n/).filter(a => /^\s*#/.test(a));
       this.emit("change", this.#data);
     } catch {
+      this.#stats = null;
       this.emit("missing", this.#data);
       this.#data = <any>{};
       this.#comments = [];
@@ -75,9 +77,17 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
     return existsSync(this.path);
   }
 
+  get stats() {
+    try {
+      return this.#stats ??= statSync(this.path);
+    } catch {
+      return null;
+    }
+  }
+
   get isFile() {
     try {
-      return statSync(this.path).isFile();
+      return (this.#stats ??= statSync(this.path)).isFile();
     } catch (_) {
       return false;
     }

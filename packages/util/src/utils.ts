@@ -1,12 +1,16 @@
-export function bindFunctions<I extends Record<any, any>, B extends Partial<I> & Record<any, any>>(instance: I, bind?: B): void
+export function bindFunctions<I extends Record<any, any>>(instance: I): void;
+export function bindFunctions<I extends Record<any, any>, B extends I | unknown>(instance: I, bind: B): void;
 export function bindFunctions(instance: any, bind?: any) {
   if (!instance) return;
 
   bind ??= instance;
 
-  for (const propertyName of Object.getOwnPropertyNames(Object.getPrototypeOf(instance)))
-    if (typeof instance[propertyName] === "function")
-      bind[propertyName] = instance[propertyName].bind(bind);
+  for (const propertyName of Object.getOwnPropertyNames(Object.getPrototypeOf(instance))) {
+    try {
+      if (typeof instance[propertyName] === "function")
+        bind[propertyName] = instance[propertyName].bind(bind);
+    } catch { }
+  }
 }
 
 export function calculatePercentage(value: string | number, major: string | number) {
