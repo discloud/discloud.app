@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,42 +6,36 @@
 
 # Interface: DiscloudConfigEventMap
 
+Defined in: packages/util/out/DiscloudConfig.d.ts:4
+
 ## Properties
 
 ### change
 
-> **change**: [[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)]
+> **change**: \[[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\]
 
-#### Defined in
-
-packages/util/out/DiscloudConfig.d.ts:5
+Defined in: packages/util/out/DiscloudConfig.d.ts:5
 
 ***
 
 ### disposed
 
-> **disposed**: [[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)]
+> **disposed**: \[[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\]
 
-#### Defined in
-
-packages/util/out/DiscloudConfig.d.ts:6
+Defined in: packages/util/out/DiscloudConfig.d.ts:6
 
 ***
 
 ### error
 
-> **error**: [`Error`]
+> **error**: \[`Error`\]
 
-#### Defined in
-
-packages/util/out/DiscloudConfig.d.ts:7
+Defined in: packages/util/out/DiscloudConfig.d.ts:7
 
 ***
 
 ### missing
 
-> **missing**: [[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)]
+> **missing**: \[[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\]
 
-#### Defined in
-
-packages/util/out/DiscloudConfig.d.ts:8
+Defined in: packages/util/out/DiscloudConfig.d.ts:8

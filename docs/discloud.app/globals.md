@@ -1,4 +1,4 @@
-[**discloud.app**](README.md) • **Docs**
+[**discloud.app**](README.md)
 
 ***
 
@@ -10,8 +10,9 @@
 
 - [DiscloudConfigScopes](enumerations/DiscloudConfigScopes.md)
 - [Events](enumerations/Events.md)
-- [RESTEvents](enumerations/RESTEvents.md)
+- [ModPermissionsFlags](enumerations/ModPermissionsFlags.md)
 - [RequestMethod](enumerations/RequestMethod.md)
+- [RESTEvents](enumerations/RESTEvents.md)
 
 ## Classes
 
@@ -37,8 +38,8 @@
 - [GS](classes/GS.md)
 - [IgnoreFiles](classes/IgnoreFiles.md)
 - [ModPermissionsBF](classes/ModPermissionsBF.md)
-- [REST](classes/REST.md)
 - [RequestManager](classes/RequestManager.md)
+- [REST](classes/REST.md)
 - [Routes](classes/Routes.md)
 - [TeamApp](classes/TeamApp.md)
 - [TeamAppManager](classes/TeamAppManager.md)
@@ -69,17 +70,21 @@
 - [ApiUserAppStatus](interfaces/ApiUserAppStatus.md)
 - [BaseApiApp](interfaces/BaseApiApp.md)
 - [BitFieldConstructor](interfaces/BitFieldConstructor.md)
-- [ClientEvents](interfaces/ClientEvents.md)
 - [Constructor](interfaces/Constructor.md)
 - [DiscloudAppOptions](interfaces/DiscloudAppOptions.md)
 - [DiscloudConfigEventMap](interfaces/DiscloudConfigEventMap.md)
 - [IgnoreFilesOptions](interfaces/IgnoreFilesOptions.md)
 - [InternalRequest](interfaces/InternalRequest.md)
 - [LastDataLeft](interfaces/LastDataLeft.md)
+- [RateLimitData](interfaces/RateLimitData.md)
+- [RawFile](interfaces/RawFile.md)
+- [RequestData](interfaces/RequestData.md)
+- [RequestHeaders](interfaces/RequestHeaders.md)
 - [RESTApiAppManagerResult](interfaces/RESTApiAppManagerResult.md)
 - [RESTApiBaseResult](interfaces/RESTApiBaseResult.md)
 - [RESTDeleteApiAppAllDeleteResult](interfaces/RESTDeleteApiAppAllDeleteResult.md)
 - [RESTDeleteApiAppAptResult](interfaces/RESTDeleteApiAppAptResult.md)
+- [RestEvents](interfaces/RestEvents.md)
 - [RESTGetApiAppAllBackupResult](interfaces/RESTGetApiAppAllBackupResult.md)
 - [RESTGetApiAppAllLogResult](interfaces/RESTGetApiAppAllLogResult.md)
 - [RESTGetApiAppAllResult](interfaces/RESTGetApiAppAllResult.md)
@@ -104,20 +109,16 @@
 - [RESTPutApiAppRamResult](interfaces/RESTPutApiAppRamResult.md)
 - [RESTPutApiAppTeamResult](interfaces/RESTPutApiAppTeamResult.md)
 - [RESTPutApiLocaleResult](interfaces/RESTPutApiLocaleResult.md)
-- [RateLimitData](interfaces/RateLimitData.md)
-- [RawFile](interfaces/RawFile.md)
-- [RequestData](interfaces/RequestData.md)
-- [RequestHeaders](interfaces/RequestHeaders.md)
-- [RestEvents](interfaces/RestEvents.md)
 - [UploadAppOptions](interfaces/UploadAppOptions.md)
 
 ## Type Aliases
 
-- [APTString](type-aliases/APTString.md)
 - [AppLanguages](type-aliases/AppLanguages.md)
 - [AppTypes](type-aliases/AppTypes.md)
 - [AppVersion](type-aliases/AppVersion.md)
+- [APTString](type-aliases/APTString.md)
 - [BitFieldResolvable](type-aliases/BitFieldResolvable.md)
+- [ClientEvents](type-aliases/ClientEvents.md)
 - [Constructable](type-aliases/Constructable.md)
 - [CreateAppOptions](type-aliases/CreateAppOptions.md)
 - [DiscloudConfigType](type-aliases/DiscloudConfigType.md)
@@ -125,10 +126,10 @@
 - [FileResolvableSync](type-aliases/FileResolvableSync.md)
 - [If](type-aliases/If.md)
 - [LocaleString](type-aliases/LocaleString.md)
-- [ModPermissionsFlags](type-aliases/ModPermissionsFlags.md)
 - [ModPermissionsResolvable](type-aliases/ModPermissionsResolvable.md)
 - [ModPermissionsString](type-aliases/ModPermissionsString.md)
 - [ProfileOptions](type-aliases/ProfileOptions.md)
+- [RequestOptions](type-aliases/RequestOptions.md)
 - [RESTApiStatusResponse](type-aliases/RESTApiStatusResponse.md)
 - [RESTDeleteApiAppDeleteResult](type-aliases/RESTDeleteApiAppDeleteResult.md)
 - [RESTDeleteApiAppTeamResult](type-aliases/RESTDeleteApiAppTeamResult.md)
@@ -136,25 +137,21 @@
 - [RESTPutApiAppRestartResult](type-aliases/RESTPutApiAppRestartResult.md)
 - [RESTPutApiAppStartResult](type-aliases/RESTPutApiAppStartResult.md)
 - [RESTPutApiAppStopResult](type-aliases/RESTPutApiAppStopResult.md)
-- [RequestOptions](type-aliases/RequestOptions.md)
 - [RouteLike](type-aliases/RouteLike.md)
 - [UpdateAppOptions](type-aliases/UpdateAppOptions.md)
 
 ## Variables
 
+- [allBlockedFiles](variables/allBlockedFiles.md)
+- [allBlockedFilesRegex](variables/allBlockedFilesRegex.md)
 - [APIVersion](variables/APIVersion.md)
 - [APT](variables/APT.md)
 - [APTPackages](variables/APTPackages.md)
+- [blockedFiles](variables/blockedFiles.md)
+- [cpu\_arch](variables/cpu_arch.md)
 - [DefaultDiscloudAppOptions](variables/DefaultDiscloudAppOptions.md)
 - [DefaultRestOptions](variables/DefaultRestOptions.md)
 - [DefaultUserAgent](variables/DefaultUserAgent.md)
-- [ModPermissionsFlags](variables/ModPermissionsFlags.md)
-- [ProfileOptions](variables/ProfileOptions.md)
-- [RouteBases](variables/RouteBases.md)
-- [allBlockedFiles](variables/allBlockedFiles.md)
-- [allBlockedFilesRegex](variables/allBlockedFilesRegex.md)
-- [blockedFiles](variables/blockedFiles.md)
-- [cpu\_arch](variables/cpu_arch.md)
 - [discloud](variables/discloud.md)
 - [discloudConfigRequiredScopes](variables/discloudConfigRequiredScopes.md)
 - [discloudConfigScopes](variables/discloudConfigScopes.md)
@@ -162,6 +159,8 @@
 - [os\_name](variables/os_name.md)
 - [os\_platform](variables/os_platform.md)
 - [os\_release](variables/os_release.md)
+- [ProfileOptions](variables/ProfileOptions.md)
+- [RouteBases](variables/RouteBases.md)
 - [version](variables/version.md)
 
 ## Functions

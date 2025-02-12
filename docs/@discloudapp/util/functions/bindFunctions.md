@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -6,24 +6,48 @@
 
 # Function: bindFunctions()
 
-> **bindFunctions**\<`I`, `B`\>(`instance`, `bind`?): `void`
+## Call Signature
 
-## Type Parameters
+> **bindFunctions**\<`I`\>(`instance`): `void`
+
+Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/utils.ts#L1)
+
+### Type Parameters
 
 • **I** *extends* `Record`\<`any`, `any`\>
 
-• **B** *extends* `Partial`\<`I`\> & `Record`\<`any`, `any`\>
+### Parameters
 
-## Parameters
+#### instance
 
-• **instance**: `I`
+`I`
 
-• **bind?**: `B`
-
-## Returns
+### Returns
 
 `void`
 
-## Defined in
+## Call Signature
 
-[packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/utils.ts#L1)
+> **bindFunctions**\<`I`, `B`\>(`instance`, `bind`): `void`
+
+Defined in: [packages/util/src/utils.ts:2](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/utils.ts#L2)
+
+### Type Parameters
+
+• **I** *extends* `Record`\<`any`, `any`\>
+
+• **B** *extends* `unknown`
+
+### Parameters
+
+#### instance
+
+`I`
+
+#### bind
+
+`B`
+
+### Returns
+
+`void`

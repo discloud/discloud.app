@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -8,6 +8,8 @@
 
 > `const` **APIVersion**: `"2"` = `"2"`
 
+Defined in: [rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/index.ts#L14)
+
 API version
 
 ## Default Value
@@ -15,7 +17,3 @@ API version
 ```ts
 "2"
 ```
-
-## Defined in
-
-[rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/index.ts#L14)

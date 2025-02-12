@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,26 +6,20 @@
 
 # Interface: RestEvents
 
-## Extended by
-
-- [`ClientEvents`](ClientEvents.md)
+Defined in: packages/rest/out/@types/index.d.ts:75
 
 ## Properties
 
 ### error
 
-> **error**: [`Error`]
+> **error**: \[`Error`\]
 
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:78
+Defined in: packages/rest/out/@types/index.d.ts:76
 
 ***
 
 ### rateLimited
 
-> **rateLimited**: [[`RateLimitData`](RateLimitData.md)]
+> **rateLimited**: \[[`RateLimitData`](RateLimitData.md)\]
 
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:79
+Defined in: packages/rest/out/@types/index.d.ts:77

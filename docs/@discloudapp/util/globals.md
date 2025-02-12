@@ -1,10 +1,14 @@
-[**@discloudapp/util**](README.md) • **Docs**
+[**@discloudapp/util**](README.md)
 
 ***
 
 [Documentation](../../packages.md) / @discloudapp/util
 
 # @discloudapp/util
+
+## Enumerations
+
+- [ModPermissionsFlags](enumerations/ModPermissionsFlags.md)
 
 ## Classes
 
@@ -26,13 +30,11 @@
 - [BitFieldResolvable](type-aliases/BitFieldResolvable.md)
 - [FileResolvable](type-aliases/FileResolvable.md)
 - [FileResolvableSync](type-aliases/FileResolvableSync.md)
-- [ModPermissionsFlags](type-aliases/ModPermissionsFlags.md)
 - [ModPermissionsResolvable](type-aliases/ModPermissionsResolvable.md)
 - [ModPermissionsString](type-aliases/ModPermissionsString.md)
 
 ## Variables
 
-- [ModPermissionsFlags](variables/ModPermissionsFlags.md)
 - [allBlockedFiles](variables/allBlockedFiles.md)
 - [allBlockedFilesRegex](variables/allBlockedFilesRegex.md)
 - [blockedFiles](variables/blockedFiles.md)

@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -8,16 +8,18 @@
 
 > **calculatePercentage**(`value`, `major`): `number`
 
+Defined in: [packages/util/src/utils.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/utils.ts#L16)
+
 ## Parameters
 
-• **value**: `string` \| `number`
+### value
 
-• **major**: `string` \| `number`
+`string` | `number`
+
+### major
+
+`string` | `number`
 
 ## Returns
 
 `number`
-
-## Defined in
-
-[packages/util/src/utils.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/utils.ts#L10)

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **RequestOptions**: `Parameters`\<*typeof* `fetch`\>\[`1`\]
 
-## Defined in
-
-packages/rest/out/@types/index.d.ts:6
+Defined in: packages/rest/out/@types/index.d.ts:4

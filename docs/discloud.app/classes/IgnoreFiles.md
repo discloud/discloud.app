@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Class: IgnoreFiles
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:17
+
 ## Constructors
 
 ### new IgnoreFiles()
 
 > **new IgnoreFiles**(`options`): [`IgnoreFiles`](IgnoreFiles.md)
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:22
+
 #### Parameters
 
-• **options**: [`IgnoreFilesOptions`](../interfaces/IgnoreFilesOptions.md)
+##### options
+
+[`IgnoreFilesOptions`](../interfaces/IgnoreFilesOptions.md)
 
 #### Returns
 
 [`IgnoreFiles`](IgnoreFiles.md)
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:22
 
 ## Properties
 
@@ -30,9 +32,7 @@ packages/util/out/IgnoreFiles.d.ts:22
 
 > `readonly` **fileName**: `string`
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:18
+Defined in: packages/util/out/IgnoreFiles.d.ts:18
 
 ***
 
@@ -40,9 +40,7 @@ packages/util/out/IgnoreFiles.d.ts:18
 
 > `readonly` **filesIgnore**: `Set`\<`string`\>
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:19
+Defined in: packages/util/out/IgnoreFiles.d.ts:19
 
 ***
 
@@ -50,9 +48,7 @@ packages/util/out/IgnoreFiles.d.ts:19
 
 > `readonly` **list**: `string`[]
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:20
+Defined in: packages/util/out/IgnoreFiles.d.ts:20
 
 ***
 
@@ -60,9 +56,7 @@ packages/util/out/IgnoreFiles.d.ts:20
 
 > `readonly` **paths**: `Set`\<`string`\>
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:21
+Defined in: packages/util/out/IgnoreFiles.d.ts:21
 
 ## Methods
 
@@ -70,17 +64,17 @@ packages/util/out/IgnoreFiles.d.ts:21
 
 > **processIgnoreFiles**(`files`?): `string`[]
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:28
+
 #### Parameters
 
-• **files?**: `Set`\<`string`\>
+##### files?
+
+`Set`\<`string`\>
 
 #### Returns
 
 `string`[]
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:28
 
 ***
 
@@ -88,21 +82,25 @@ packages/util/out/IgnoreFiles.d.ts:28
 
 > `static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `Set`\<`string`\>
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:23
+
 #### Parameters
 
-• **fileName**: `string`
+##### fileName
 
-• **paths**: `Set`\<`string`\>
+`string`
 
-• **ignore**: `string`[]
+##### paths
+
+`Set`\<`string`\>
+
+##### ignore
+
+`string`[]
 
 #### Returns
 
 `Set`\<`string`\>
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:23
 
 ***
 
@@ -110,19 +108,21 @@ packages/util/out/IgnoreFiles.d.ts:23
 
 > `static` **normalizeIgnore**(`ignore`, `path`?): `string`
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:24
+
 #### Parameters
 
-• **ignore**: `string`
+##### ignore
 
-• **path?**: `string`
+`string`
+
+##### path?
+
+`string`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:24
 
 ***
 
@@ -130,17 +130,17 @@ packages/util/out/IgnoreFiles.d.ts:24
 
 > `static` **normalizePath**(`path`): `string`
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:25
+
 #### Parameters
 
-• **path**: `string`
+##### path
+
+`string`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:25
 
 ***
 
@@ -148,17 +148,17 @@ packages/util/out/IgnoreFiles.d.ts:25
 
 > `static` **normalizePaths**(`paths`): `string`[]
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:26
+
 #### Parameters
 
-• **paths**: `string`[]
+##### paths
+
+`string`[]
 
 #### Returns
 
 `string`[]
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:26
 
 ***
 
@@ -166,14 +166,14 @@ packages/util/out/IgnoreFiles.d.ts:26
 
 > `static` **processIgnoreFile**(`file`): `string`[]
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:27
+
 #### Parameters
 
-• **file**: `string`
+##### file
+
+`string`
 
 #### Returns
 
 `string`[]
-
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:27

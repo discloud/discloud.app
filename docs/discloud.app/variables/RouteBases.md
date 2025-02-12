@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,12 +8,10 @@
 
 > `const` **RouteBases**: `object`
 
+Defined in: [packages/api-types/rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/index.ts#L16)
+
 ## Type declaration
 
 ### api
 
 > `readonly` **api**: `"https://api.discloud.app/v2"`
-
-## Defined in
-
-[packages/api-types/rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/index.ts#L16)

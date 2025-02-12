@@ -1,10 +1,12 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
 [Documentation](../../../packages.md) / [@discloudapp/util](../README.md) / BitFieldConstructor
 
 # Interface: BitFieldConstructor\<S, N\>
+
+Defined in: [packages/util/src/BitField.ts:4](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L4)
 
 **`Internal`**
 
@@ -20,37 +22,33 @@
 
 > **new BitFieldConstructor**(...`bits`): [`BitField`](../classes/BitField.md)\<`S`, `N`\>
 
+Defined in: [packages/util/src/BitField.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L5)
+
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 #### Returns
 
 [`BitField`](../classes/BitField.md)\<`S`, `N`\>
 
-#### Defined in
-
-[packages/util/src/BitField.ts:5](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/BitField.ts#L5)
-
 ## Properties
 
 ### DefaultBit
 
-> **DefaultBit**: `N`
+> `readonly` **DefaultBit**: `N`
 
-#### Defined in
-
-[packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/BitField.ts#L6)
+Defined in: [packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L6)
 
 ***
 
 ### Flags
 
-> **Flags**: `EnumLike`\<`S`, `N`\>
+> `readonly` **Flags**: `EnumLike`\<`S`, `N`\>
 
-#### Defined in
-
-[packages/util/src/BitField.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/BitField.ts#L7)
+Defined in: [packages/util/src/BitField.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L7)
 
 ## Methods
 
@@ -58,14 +56,14 @@
 
 > **resolve**(`bit`): `N`
 
+Defined in: [packages/util/src/BitField.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L8)
+
 #### Parameters
 
-• **bit**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>
+##### bit
+
+[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>
 
 #### Returns
 
 `N`
-
-#### Defined in
-
-[packages/util/src/BitField.ts:8](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/BitField.ts#L8)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / BaseApiApp
 
 # Interface: BaseApiApp
+
+Defined in: [packages/api-types/rest/v2/app.ts:3](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L3)
 
 ## Extended by
 
@@ -19,8 +21,6 @@
 
 > **id**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L7)
+
 Your app id
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L7)

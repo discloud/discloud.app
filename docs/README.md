@@ -1,4 +1,4 @@
-**Documentation** • [**Docs**](packages.md)
+**Documentation**
 
 ***
 

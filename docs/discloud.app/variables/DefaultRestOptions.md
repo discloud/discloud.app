@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **DefaultRestOptions**: `Required`\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
 
-## Defined in
-
-packages/rest/out/utils/constants.d.ts:8
+Defined in: packages/rest/out/utils/constants.d.ts:7

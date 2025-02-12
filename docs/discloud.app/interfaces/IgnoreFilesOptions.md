@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: IgnoreFilesOptions
 
+Defined in: packages/util/out/IgnoreFiles.d.ts:12
+
 ## Properties
 
 ### fileName
 
 > **fileName**: `string`
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:13
+Defined in: packages/util/out/IgnoreFiles.d.ts:13
 
 ***
 
@@ -22,9 +22,7 @@ packages/util/out/IgnoreFiles.d.ts:13
 
 > `optional` **optionalIgnoreList**: `string`[]
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:15
+Defined in: packages/util/out/IgnoreFiles.d.ts:15
 
 ***
 
@@ -32,6 +30,4 @@ packages/util/out/IgnoreFiles.d.ts:15
 
 > **path**: `string` \| `string`[]
 
-#### Defined in
-
-packages/util/out/IgnoreFiles.d.ts:14
+Defined in: packages/util/out/IgnoreFiles.d.ts:14

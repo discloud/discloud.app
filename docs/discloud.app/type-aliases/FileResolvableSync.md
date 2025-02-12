@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **FileResolvableSync**: `Exclude`\<[`FileResolvable`](FileResolvable.md), `URL` \| `Readable` \| `Writable`\>
 
-## Defined in
-
-packages/util/out/FileResolver.d.ts:40
+Defined in: packages/util/out/FileResolver.d.ts:34

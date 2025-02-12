@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -8,9 +8,7 @@
 
 > **RESTApiStatusResponse**: `"ok"` \| `"error"`
 
+Defined in: [rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L17)
+
 - `ok`
 - `error`
-
-## Defined in
-
-[rest/v2/base.ts:17](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/base.ts#L17)

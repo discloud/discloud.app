@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,24 +6,48 @@
 
 # Function: bindFunctions()
 
-> **bindFunctions**\<`I`, `B`\>(`instance`, `bind`?): `void`
+## Call Signature
 
-## Type Parameters
+> **bindFunctions**\<`I`\>(`instance`): `void`
+
+Defined in: packages/util/out/utils.d.ts:1
+
+### Type Parameters
 
 • **I** *extends* `Record`\<`any`, `any`\>
 
-• **B** *extends* `Partial`\<`I`\> & `Record`\<`any`, `any`\>
+### Parameters
 
-## Parameters
+#### instance
 
-• **instance**: `I`
+`I`
 
-• **bind?**: `B`
-
-## Returns
+### Returns
 
 `void`
 
-## Defined in
+## Call Signature
 
-packages/util/out/utils.d.ts:1
+> **bindFunctions**\<`I`, `B`\>(`instance`, `bind`): `void`
+
+Defined in: packages/util/out/utils.d.ts:2
+
+### Type Parameters
+
+• **I** *extends* `Record`\<`any`, `any`\>
+
+• **B** *extends* `unknown`
+
+### Parameters
+
+#### instance
+
+`I`
+
+#### bind
+
+`B`
+
+### Returns
+
+`void`

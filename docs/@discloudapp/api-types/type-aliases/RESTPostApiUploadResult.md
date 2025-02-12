@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **RESTPostApiUploadResult**: [`RESTPostApiUploadOkResult`](../interfaces/RESTPostApiUploadOkResult.md) \| [`RESTPostApiUploadErrorResult`](../interfaces/RESTPostApiUploadErrorResult.md)
 
-## Defined in
-
-[rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/upload.ts#L3)
+Defined in: [rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/upload.ts#L3)

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **fileNamePattern**: `RegExp`
 
-## Defined in
-
-packages/util/out/FileResolver.d.ts:10
+Defined in: packages/util/out/FileResolver.d.ts:4

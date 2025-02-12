@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,16 +8,18 @@
 
 > **resolveFileSync**(`file`, `fileName`?): `File`
 
+Defined in: packages/util/out/FileResolver.d.ts:35
+
 ## Parameters
 
-• **file**: [`FileResolvableSync`](../type-aliases/FileResolvableSync.md)
+### file
 
-• **fileName?**: `string`
+[`FileResolvableSync`](../type-aliases/FileResolvableSync.md)
+
+### fileName?
+
+`string`
 
 ## Returns
 
 `File`
-
-## Defined in
-
-packages/util/out/FileResolver.d.ts:41

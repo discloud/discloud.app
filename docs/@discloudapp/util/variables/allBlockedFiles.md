@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **allBlockedFiles**: `string`[]
 
-## Defined in
-
-[packages/util/src/IgnoreFiles.ts:16](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/IgnoreFiles.ts#L16)
+Defined in: [packages/util/src/IgnoreFiles.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L16)

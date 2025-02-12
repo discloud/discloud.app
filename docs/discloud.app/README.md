@@ -1,4 +1,4 @@
-**discloud.app** • [**Docs**](globals.md)
+**discloud.app**
 
 ***
 

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,8 @@
 
 > **If**\<`T`, `A`, `B`\>: `T` *extends* `true` ? `A` : `T` *extends* `false` ? `B` : `A` \| `B`
 
+Defined in: [packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@types/index.ts#L11)
+
 ## Type Parameters
 
 • **T** *extends* `boolean`
@@ -15,7 +17,3 @@
 • **A**
 
 • **B** = `undefined`
-
-## Defined in
-
-[packages/discloud.app/src/@types/index.ts:11](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/@types/index.ts#L11)

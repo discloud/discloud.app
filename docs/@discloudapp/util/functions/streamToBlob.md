@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -8,22 +8,24 @@
 
 > **streamToBlob**(`stream`, `mimeType`?): `Promise`\<`Blob`\>
 
+Defined in: [packages/util/src/FileResolver.ts:135](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L135)
+
 A function that converts a like Stream parameter to Blob
 
 ## Parameters
 
-• **stream**: `Stream`
+### stream
+
+`Stream`
 
 A parameter like Readable or Writable
 
-• **mimeType?**: `string`
+### mimeType?
+
+`string`
 
 A mimeType parameter
 
 ## Returns
 
 `Promise`\<`Blob`\>
-
-## Defined in
-
-[packages/util/src/FileResolver.ts:129](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L129)

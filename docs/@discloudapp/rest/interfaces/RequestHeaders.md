@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md) • **Docs**
+[**@discloudapp/rest**](../README.md)
 
 ***
 
@@ -6,27 +6,17 @@
 
 # Interface: RequestHeaders
 
+Defined in: [packages/rest/src/@types/index.ts:37](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L37)
+
 Possible headers for an API call
 
 ## Properties
-
-### User-Agent?
-
-> `optional` **User-Agent**: `string`
-
-#### Defined in
-
-[packages/rest/src/@types/index.ts:40](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L40)
-
-***
 
 ### api-token
 
 > **api-token**: `string`
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:38](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L38)
+Defined in: [packages/rest/src/@types/index.ts:38](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L38)
 
 ***
 
@@ -34,6 +24,12 @@ Possible headers for an API call
 
 > `optional` **contentType**: `string`
 
-#### Defined in
+Defined in: [packages/rest/src/@types/index.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L39)
 
-[packages/rest/src/@types/index.ts:39](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L39)
+***
+
+### User-Agent?
+
+> `optional` **User-Agent**: `string`
+
+Defined in: [packages/rest/src/@types/index.ts:40](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L40)

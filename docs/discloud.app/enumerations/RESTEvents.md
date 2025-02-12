@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: RESTEvents
 
+Defined in: packages/rest/out/@enum/index.d.ts:7
+
 ## Enumeration Members
 
 ### Error
 
 > **Error**: `"error"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:8
+Defined in: packages/rest/out/@enum/index.d.ts:8
 
 ***
 
@@ -22,6 +22,4 @@ packages/rest/out/@enum/index.d.ts:8
 
 > **RateLimited**: `"rateLimited"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:9
+Defined in: packages/rest/out/@enum/index.d.ts:9

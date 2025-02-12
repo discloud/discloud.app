@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: RequestMethod
 
+Defined in: packages/rest/out/@enum/index.d.ts:1
+
 ## Enumeration Members
 
 ### Delete
 
 > **Delete**: `"DELETE"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:2
+Defined in: packages/rest/out/@enum/index.d.ts:2
 
 ***
 
@@ -22,9 +22,7 @@ packages/rest/out/@enum/index.d.ts:2
 
 > **Get**: `"GET"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:3
+Defined in: packages/rest/out/@enum/index.d.ts:3
 
 ***
 
@@ -32,9 +30,7 @@ packages/rest/out/@enum/index.d.ts:3
 
 > **Post**: `"POST"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:4
+Defined in: packages/rest/out/@enum/index.d.ts:4
 
 ***
 
@@ -42,6 +38,4 @@ packages/rest/out/@enum/index.d.ts:4
 
 > **Put**: `"PUT"`
 
-#### Defined in
-
-packages/rest/out/@enum/index.d.ts:5
+Defined in: packages/rest/out/@enum/index.d.ts:5

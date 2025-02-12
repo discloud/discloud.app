@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **AppLanguages**: `"go"` \| `"java"` \| `"js"` \| `"php"` \| `"py"` \| `"rb"` \| `"rs"`
 
-## Defined in
-
-[packages/api-types/payload/v2/DiscloudConfig.ts:181](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/payload/v2/DiscloudConfig.ts#L181)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:172](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/payload/v2/DiscloudConfig.ts#L172)

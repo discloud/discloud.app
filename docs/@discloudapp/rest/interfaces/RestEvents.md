@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md) • **Docs**
+[**@discloudapp/rest**](../README.md)
 
 ***
 
@@ -6,22 +6,20 @@
 
 # Interface: RestEvents
 
+Defined in: [packages/rest/src/@types/index.ts:83](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L83)
+
 ## Properties
 
 ### error
 
-> **error**: [`Error`]
+> **error**: \[`Error`\]
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:84](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L84)
+Defined in: [packages/rest/src/@types/index.ts:84](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L84)
 
 ***
 
 ### rateLimited
 
-> **rateLimited**: [[`RateLimitData`](RateLimitData.md)]
+> **rateLimited**: \[[`RateLimitData`](RateLimitData.md)\]
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:85](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L85)
+Defined in: [packages/rest/src/@types/index.ts:85](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L85)

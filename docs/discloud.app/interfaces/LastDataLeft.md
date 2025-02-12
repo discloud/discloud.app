@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: LastDataLeft
 
+Defined in: [packages/api-types/rest/v2/user.ts:77](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L77)
+
 ## Properties
 
 ### days
 
 > **days**: `number`
 
-#### Defined in
-
-[packages/api-types/rest/v2/user.ts:78](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L78)
+Defined in: [packages/api-types/rest/v2/user.ts:78](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L78)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > **hours**: `number`
 
-#### Defined in
-
-[packages/api-types/rest/v2/user.ts:79](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L79)
+Defined in: [packages/api-types/rest/v2/user.ts:79](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L79)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > **minutes**: `number`
 
-#### Defined in
-
-[packages/api-types/rest/v2/user.ts:80](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L80)
+Defined in: [packages/api-types/rest/v2/user.ts:80](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L80)
 
 ***
 
@@ -42,6 +38,4 @@
 
 > **seconds**: `number`
 
-#### Defined in
-
-[packages/api-types/rest/v2/user.ts:81](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L81)
+Defined in: [packages/api-types/rest/v2/user.ts:81](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L81)

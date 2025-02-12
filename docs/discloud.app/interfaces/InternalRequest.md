@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / InternalRequest
 
 # Interface: InternalRequest
+
+Defined in: packages/rest/out/@types/index.d.ts:64
 
 **`Internal`**
 
@@ -20,15 +22,13 @@ Internal request options
 
 > `optional` **body**: `unknown`
 
+Defined in: packages/rest/out/@types/index.d.ts:45
+
 The body to send to this request.
 
 #### Inherited from
 
 [`RequestData`](RequestData.md).[`body`](RequestData.md#body)
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:47
 
 ***
 
@@ -36,25 +36,21 @@ packages/rest/out/@types/index.d.ts:47
 
 > `optional` **file**: `File` \| [`RawFile`](RawFile.md)
 
+Defined in: packages/rest/out/@types/index.d.ts:49
+
 File to be attached to this request
 
 #### Inherited from
 
 [`RequestData`](RequestData.md).[`file`](RequestData.md#file)
 
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:51
-
 ***
 
 ### fullRoute
 
-> **fullRoute**: \`/$\{string\}\`
+> **fullRoute**: `` `/${string}` ``
 
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:67
+Defined in: packages/rest/out/@types/index.d.ts:65
 
 ***
 
@@ -62,15 +58,13 @@ packages/rest/out/@types/index.d.ts:67
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
+Defined in: packages/rest/out/@types/index.d.ts:53
+
 Additional headers to add to this request
 
 #### Inherited from
 
 [`RequestData`](RequestData.md).[`headers`](RequestData.md#headers)
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:55
 
 ***
 
@@ -78,22 +72,18 @@ packages/rest/out/@types/index.d.ts:55
 
 > **method**: [`RequestMethod`](../enumerations/RequestMethod.md)
 
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:68
+Defined in: packages/rest/out/@types/index.d.ts:66
 
 ***
 
 ### query?
 
-> `optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<[`string`, `string`]\> \| readonly [`string`, `string`][]
+> `optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+
+Defined in: packages/rest/out/@types/index.d.ts:57
 
 Query string parameters to append to the called endpoint
 
 #### Inherited from
 
 [`RequestData`](RequestData.md).[`query`](RequestData.md#query)
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:59

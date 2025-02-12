@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / DiscloudAPIError
 
 # Class: DiscloudAPIError
+
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:1
 
 ## Extends
 
@@ -16,17 +18,29 @@
 
 > **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): [`DiscloudAPIError`](DiscloudAPIError.md)
 
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:6
+
 #### Parameters
 
-• **message**: `string`
+##### message
 
-• **code**: `number`
+`string`
 
-• **method**: `string`
+##### code
 
-• **path**: `string`
+`number`
 
-• **body**: `any`
+##### method
+
+`string`
+
+##### path
+
+`string`
+
+##### body
+
+`any`
 
 #### Returns
 
@@ -36,19 +50,13 @@
 
 `Error.constructor`
 
-#### Defined in
-
-packages/rest/out/errors/DiscloudAPIError.d.ts:6
-
 ## Properties
 
 ### body
 
 > **body**: `any`
 
-#### Defined in
-
-packages/rest/out/errors/DiscloudAPIError.d.ts:5
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:5
 
 ***
 
@@ -56,13 +64,11 @@ packages/rest/out/errors/DiscloudAPIError.d.ts:5
 
 > `optional` **cause**: `unknown`
 
+Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
 #### Inherited from
 
 `Error.cause`
-
-#### Defined in
-
-node\_modules/typescript/lib/lib.es2022.error.d.ts:24
 
 ***
 
@@ -70,9 +76,7 @@ node\_modules/typescript/lib/lib.es2022.error.d.ts:24
 
 > **code**: `number`
 
-#### Defined in
-
-packages/rest/out/errors/DiscloudAPIError.d.ts:2
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:2
 
 ***
 
@@ -80,13 +84,11 @@ packages/rest/out/errors/DiscloudAPIError.d.ts:2
 
 > **message**: `string`
 
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 `Error.message`
-
-#### Defined in
-
-node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -94,9 +96,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **method**: `string`
 
-#### Defined in
-
-packages/rest/out/errors/DiscloudAPIError.d.ts:3
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:3
 
 ***
 
@@ -104,13 +104,11 @@ packages/rest/out/errors/DiscloudAPIError.d.ts:3
 
 > **name**: `string`
 
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
 `Error.name`
-
-#### Defined in
-
-node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -118,9 +116,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > **path**: `string`
 
-#### Defined in
-
-packages/rest/out/errors/DiscloudAPIError.d.ts:4
+Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:4
 
 ***
 
@@ -128,13 +124,11 @@ packages/rest/out/errors/DiscloudAPIError.d.ts:4
 
 > `optional` **stack**: `string`
 
+Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
+
 #### Inherited from
 
 `Error.stack`
-
-#### Defined in
-
-node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 ***
 
@@ -142,29 +136,31 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 > `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
 
+Defined in: node\_modules/@types/node/globals.d.ts:143
+
 Optional override for formatting stack traces
-
-#### See
-
-https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Parameters
 
-• **err**: `Error`
+##### err
 
-• **stackTraces**: `CallSite`[]
+`Error`
+
+##### stackTraces
+
+`CallSite`[]
 
 #### Returns
 
 `any`
 
+#### See
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
 #### Inherited from
 
 `Error.prepareStackTrace`
-
-#### Defined in
-
-node\_modules/@types/node/globals.d.ts:28
 
 ***
 
@@ -172,13 +168,11 @@ node\_modules/@types/node/globals.d.ts:28
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 `Error.stackTraceLimit`
-
-#### Defined in
-
-node\_modules/@types/node/globals.d.ts:30
 
 ## Methods
 
@@ -186,13 +180,19 @@ node\_modules/@types/node/globals.d.ts:30
 
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
+Defined in: node\_modules/@types/node/globals.d.ts:136
+
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -201,7 +201,3 @@ Create .stack property on a target object
 #### Inherited from
 
 `Error.captureStackTrace`
-
-#### Defined in
-
-node\_modules/@types/node/globals.d.ts:21

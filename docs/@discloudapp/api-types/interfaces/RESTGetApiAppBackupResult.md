@@ -1,10 +1,12 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
 [Documentation](../../../packages.md) / [@discloudapp/api-types](../README.md) / RESTGetApiAppBackupResult
 
 # Interface: RESTGetApiAppBackupResult
+
+Defined in: [rest/v2/app.ts:236](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L236)
 
 ## Extends
 
@@ -16,17 +18,17 @@
 
 > **backups**: [`ApiAppBackup`](ApiAppBackup.md)
 
+Defined in: [rest/v2/app.ts:240](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L240)
+
 Backup of your application
-
-#### Defined in
-
-[rest/v2/app.ts:240](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L240)
 
 ***
 
 ### message
 
 > **message**: `string`
+
+Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -35,22 +37,16 @@ Message of the API
 
 [`RESTApiBaseResult`](RESTApiBaseResult.md).[`message`](RESTApiBaseResult.md#message)
 
-#### Defined in
-
-[rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/base.ts#L10)
-
 ***
 
 ### status
 
 > **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
 
+Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L5)
+
 The status of API response
 
 #### Inherited from
 
 [`RESTApiBaseResult`](RESTApiBaseResult.md).[`status`](RESTApiBaseResult.md#status)
-
-#### Defined in
-
-[rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/base.ts#L5)

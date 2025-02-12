@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md) • **Docs**
+[**@discloudapp/rest**](../README.md)
 
 ***
 
@@ -6,11 +6,15 @@
 
 # Interface: RESTOptions
 
+Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L8)
+
 ## Properties
 
 ### api
 
 > **api**: `string`
+
+Defined in: [packages/rest/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L13)
 
 The base api path, without version
 
@@ -18,15 +22,13 @@ The base api path, without version
 
 `'https://api.discloud.app'`
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L13)
-
 ***
 
 ### globalRequestsPerMinute
 
 > **globalRequestsPerMinute**: `number`
+
+Defined in: [packages/rest/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L19)
 
 How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
 
@@ -34,15 +36,13 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 `60`
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L19)
-
 ***
 
 ### headers
 
 > **headers**: `Record`\<`string`, `string`\>
+
+Defined in: [packages/rest/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L25)
 
 Additional headers to send for all API requests
 
@@ -50,22 +50,16 @@ Additional headers to send for all API requests
 
 `{}`
 
-#### Defined in
-
-[packages/rest/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L25)
-
 ***
 
 ### version
 
 > **version**: `string`
 
+Defined in: [packages/rest/src/@types/index.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L31)
+
 The version of the API to use
 
 #### Default Value
 
 `{APIVersion}`
-
-#### Defined in
-
-[packages/rest/src/@types/index.ts:31](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L31)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / RequestData
 
 # Interface: RequestData
+
+Defined in: packages/rest/out/@types/index.d.ts:41
 
 Represents possible data to be given to an endpoint
 
@@ -18,11 +20,9 @@ Represents possible data to be given to an endpoint
 
 > `optional` **body**: `unknown`
 
+Defined in: packages/rest/out/@types/index.d.ts:45
+
 The body to send to this request.
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:47
 
 ***
 
@@ -30,11 +30,9 @@ packages/rest/out/@types/index.d.ts:47
 
 > `optional` **file**: `File` \| [`RawFile`](RawFile.md)
 
+Defined in: packages/rest/out/@types/index.d.ts:49
+
 File to be attached to this request
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:51
 
 ***
 
@@ -42,20 +40,16 @@ packages/rest/out/@types/index.d.ts:51
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
+Defined in: packages/rest/out/@types/index.d.ts:53
+
 Additional headers to add to this request
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:55
 
 ***
 
 ### query?
 
-> `optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<[`string`, `string`]\> \| readonly [`string`, `string`][]
+> `optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+
+Defined in: packages/rest/out/@types/index.d.ts:57
 
 Query string parameters to append to the called endpoint
-
-#### Defined in
-
-packages/rest/out/@types/index.d.ts:59

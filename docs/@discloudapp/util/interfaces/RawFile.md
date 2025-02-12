@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -6,29 +6,27 @@
 
 # Interface: RawFile
 
+Defined in: [packages/util/src/FileResolver.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L7)
+
 ## Properties
 
 ### contentType?
 
 > `optional` **contentType**: `string`
 
+Defined in: [packages/util/src/FileResolver.ts:23](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L23)
+
 Content-Type of the file
-
-#### Defined in
-
-[packages/util/src/FileResolver.ts:23](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L23)
 
 ***
 
 ### data
 
-> **data**: `Buffer` \| `Blob` \| `BinaryLike` \| `File`
+> **data**: `Buffer`\<`ArrayBufferLike`\> \| `Blob` \| `BinaryLike` \| `File`
+
+Defined in: [packages/util/src/FileResolver.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L19)
 
 The actual data for the file
-
-#### Defined in
-
-[packages/util/src/FileResolver.ts:19](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L19)
 
 ***
 
@@ -36,11 +34,9 @@ The actual data for the file
 
 > `optional` **key**: `string`
 
+Defined in: [packages/util/src/FileResolver.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L15)
+
 An explicit key to use for key of the formdata field for this file.
-
-#### Defined in
-
-[packages/util/src/FileResolver.ts:15](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L15)
 
 ***
 
@@ -48,8 +44,6 @@ An explicit key to use for key of the formdata field for this file.
 
 > **name**: `string`
 
+Defined in: [packages/util/src/FileResolver.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L11)
+
 The name of the file
-
-#### Defined in
-
-[packages/util/src/FileResolver.ts:11](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L11)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / ApiStatusApp
 
 # Interface: ApiStatusApp
+
+Defined in: [packages/api-types/rest/v2/app.ts:126](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L126)
 
 ## Extends
 
@@ -16,12 +18,10 @@
 
 > **container**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:131](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L131)
+
 Status of your application
 - It can be `Online` or `Offline` for example
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:131](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L131)
 
 ***
 
@@ -29,11 +29,9 @@ Status of your application
 
 > **cpu**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:135](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L135)
+
 CPU usage as percentage
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:135](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L135)
 
 ***
 
@@ -41,15 +39,13 @@ CPU usage as percentage
 
 > **id**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L7)
+
 Your app id
 
 #### Inherited from
 
 [`BaseApiApp`](BaseApiApp.md).[`id`](BaseApiApp.md#id)
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L7)
 
 ***
 
@@ -57,11 +53,9 @@ Your app id
 
 > **last\_restart**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:139](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L139)
+
 Relative time of the last restart
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:139](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L139)
 
 ***
 
@@ -69,11 +63,9 @@ Relative time of the last restart
 
 > **memory**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L143)
+
 RAM usage
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L143)
 
 ***
 
@@ -81,11 +73,9 @@ RAM usage
 
 > **netIO**: [`ApiNetIO`](ApiNetIO.md)
 
+Defined in: [packages/api-types/rest/v2/app.ts:147](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L147)
+
 Internet usage
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:147](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L147)
 
 ***
 
@@ -93,11 +83,9 @@ Internet usage
 
 > **ssd**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:151](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L151)
+
 Storage space
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:151](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L151)
 
 ***
 
@@ -105,8 +93,6 @@ Storage space
 
 > **startedAt**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:155](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L155)
+
 Date of your application has started
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:155](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L155)

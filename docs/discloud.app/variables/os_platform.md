@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **os\_platform**: `NodeJS.Platform`
 
-## Defined in
-
-packages/rest/out/utils/constants.d.ts:5
+Defined in: packages/rest/out/utils/constants.d.ts:4

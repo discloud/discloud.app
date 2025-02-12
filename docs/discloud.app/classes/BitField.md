@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / BitField
 
 # Class: `abstract` BitField\<S, N\>
+
+Defined in: packages/util/out/BitField.d.ts:10
 
 Data structure that makes it easy to interact with a bitfield.
 
@@ -24,17 +26,17 @@ Data structure that makes it easy to interact with a bitfield.
 
 > **new BitField**\<`S`, `N`\>(...`bits`): [`BitField`](BitField.md)\<`S`, `N`\>
 
+Defined in: packages/util/out/BitField.d.ts:27
+
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 #### Returns
 
 [`BitField`](BitField.md)\<`S`, `N`\>
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:27
 
 ## Properties
 
@@ -42,11 +44,9 @@ packages/util/out/BitField.d.ts:27
 
 > **bitField**: `N`
 
+Defined in: packages/util/out/BitField.d.ts:15
+
 Bitfield of the packed bits
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:15
 
 ***
 
@@ -54,32 +54,26 @@ packages/util/out/BitField.d.ts:15
 
 > **constructor**: [`BitFieldConstructor`](../interfaces/BitFieldConstructor.md)\<`S`, `N`\>
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:11
+Defined in: packages/util/out/BitField.d.ts:11
 
 ***
 
 ### DefaultBit
 
-> `static` **DefaultBit**: `number` \| `bigint`
+> `readonly` `static` **DefaultBit**: `number` \| `bigint`
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:21
+Defined in: packages/util/out/BitField.d.ts:21
 
 ***
 
 ### Flags
 
-> `static` **Flags**: `EnumLike`\<`unknown`, `number` \| `bigint`\>
+> `readonly` `static` **Flags**: `EnumLike`\<`unknown`, `number` \| `bigint`\>
+
+Defined in: packages/util/out/BitField.d.ts:26
 
 Numeric bitfield flags.
 Defined in extension classes
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:26
 
 ## Methods
 
@@ -87,13 +81,11 @@ packages/util/out/BitField.d.ts:26
 
 > **\[iterator\]**(): `Generator`\<`S`, `void`, `unknown`\>
 
+Defined in: packages/util/out/BitField.d.ts:82
+
 #### Returns
 
 `Generator`\<`S`, `void`, `unknown`\>
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:81
 
 ***
 
@@ -101,11 +93,15 @@ packages/util/out/BitField.d.ts:81
 
 > **add**(...`bits`): `this`
 
+Defined in: packages/util/out/BitField.d.ts:33
+
 Adds bits to these ones.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bits to add
 
@@ -115,31 +111,27 @@ Bits to add
 
 These bits or new BitField if the instance is frozen.
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:33
-
 ***
 
 ### any()
 
 > **any**(...`bits`): `boolean`
 
+Defined in: packages/util/out/BitField.d.ts:38
+
 Checks whether the bitfield has a bit, or any of multiple bits.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bit(s) to check for
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:38
 
 ***
 
@@ -147,21 +139,21 @@ packages/util/out/BitField.d.ts:38
 
 > **equals**(...`bits`): `boolean`
 
+Defined in: packages/util/out/BitField.d.ts:43
+
 Checks if this bitfield equals another
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bit(s) to check for
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:43
 
 ***
 
@@ -169,15 +161,13 @@ packages/util/out/BitField.d.ts:43
 
 > **freeze**(): `Readonly`\<[`BitField`](BitField.md)\<`S`, `N`\>\>
 
+Defined in: packages/util/out/BitField.d.ts:47
+
 Freezes these bits, making them immutable.
 
 #### Returns
 
 `Readonly`\<[`BitField`](BitField.md)\<`S`, `N`\>\>
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:47
 
 ***
 
@@ -185,11 +175,15 @@ packages/util/out/BitField.d.ts:47
 
 > **has**(...`bits`): `boolean`
 
+Defined in: packages/util/out/BitField.d.ts:52
+
 Checks whether the bitfield has a bit, or multiple bits.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bit(s) to check for
 
@@ -197,21 +191,21 @@ Bit(s) to check for
 
 `boolean`
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:52
-
 ***
 
 ### missing()
 
 > **missing**(...`bits`): `S`[]
 
+Defined in: packages/util/out/BitField.d.ts:57
+
 Gets all given bits that are missing from the bitfield.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bit(s) to check for
 
@@ -219,21 +213,21 @@ Bit(s) to check for
 
 `S`[]
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:57
-
 ***
 
 ### remove()
 
 > **remove**(...`bits`): `this`
 
+Defined in: packages/util/out/BitField.d.ts:63
+
 Removes bits from these.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 Bits to remove
 
@@ -243,15 +237,13 @@ Bits to remove
 
 These bits or new BitField if the instance is frozen.
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:63
-
 ***
 
 ### serialize()
 
 > **serialize**(): `Record`\<`S`, `boolean`\>
+
+Defined in: packages/util/out/BitField.d.ts:68
 
 Gets an object mapping field names to a boolean indicating whether the
 bit is available.
@@ -260,21 +252,21 @@ bit is available.
 
 `Record`\<`S`, `boolean`\>
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:68
-
 ***
 
 ### set()
 
 > **set**(...`bits`): `this`
 
+Defined in: packages/util/out/BitField.d.ts:74
+
 Replace the bits with these.
 
 #### Parameters
 
-• ...**bits**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
+##### bits
+
+...[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>[]
 
 bits to set
 
@@ -284,15 +276,13 @@ bits to set
 
 These bits or new BitField if the instance is frozen.
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:74
-
 ***
 
 ### toArray()
 
 > **toArray**(): `S`[]
+
+Defined in: packages/util/out/BitField.d.ts:78
 
 Gets an Array of bitfield names based on the bits available.
 
@@ -300,23 +290,29 @@ Gets an Array of bitfield names based on the bits available.
 
 `S`[]
 
-#### Defined in
-
-packages/util/out/BitField.d.ts:78
-
 ***
 
 ### toJSON()
 
 > **toJSON**(): `string` \| `N` & `number`
 
+Defined in: packages/util/out/BitField.d.ts:79
+
 #### Returns
 
 `string` \| `N` & `number`
 
-#### Defined in
+***
 
-packages/util/out/BitField.d.ts:79
+### toString()
+
+> **toString**(): `string`
+
+Defined in: packages/util/out/BitField.d.ts:80
+
+#### Returns
+
+`string`
 
 ***
 
@@ -324,19 +320,19 @@ packages/util/out/BitField.d.ts:79
 
 > **valueOf**(): `N`
 
+Defined in: packages/util/out/BitField.d.ts:81
+
 #### Returns
 
 `N`
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:80
 
 ***
 
 ### resolve()
 
 > `static` **resolve**\<`S`, `N`\>(`bit`): `N`
+
+Defined in: packages/util/out/BitField.d.ts:87
 
 Resolves bitfields to their numeric form.
 
@@ -348,14 +344,12 @@ Resolves bitfields to their numeric form.
 
 #### Parameters
 
-• **bit**: [`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>
+##### bit
+
+[`BitFieldResolvable`](../type-aliases/BitFieldResolvable.md)\<`S`, `N`\>
 
 bit(s) to resolve
 
 #### Returns
 
 `N`
-
-#### Defined in
-
-packages/util/out/BitField.d.ts:86

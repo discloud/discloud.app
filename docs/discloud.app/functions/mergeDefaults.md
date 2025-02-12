@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,20 +8,22 @@
 
 > **mergeDefaults**\<`A`\>(`defaults`, `options`): `A`
 
+Defined in: packages/util/out/utils.d.ts:4
+
 ## Type Parameters
 
 • **A** *extends* `Record`\<`any`, `any`\>
 
 ## Parameters
 
-• **defaults**: `A`
+### defaults
 
-• **options**: `Partial`\<`A`\>
+`A`
+
+### options
+
+`Partial`\<`A`\>
 
 ## Returns
 
 `A`
-
-## Defined in
-
-packages/util/out/utils.d.ts:3

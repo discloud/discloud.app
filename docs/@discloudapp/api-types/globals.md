@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](README.md) • **Docs**
+[**@discloudapp/api-types**](README.md)
 
 ***
 
@@ -68,10 +68,10 @@
 
 ## Type Aliases
 
-- [APTString](type-aliases/APTString.md)
 - [AppLanguages](type-aliases/AppLanguages.md)
 - [AppTypes](type-aliases/AppTypes.md)
 - [AppVersion](type-aliases/AppVersion.md)
+- [APTString](type-aliases/APTString.md)
 - [DiscloudConfigType](type-aliases/DiscloudConfigType.md)
 - [RESTApiStatusResponse](type-aliases/RESTApiStatusResponse.md)
 - [RESTDeleteApiAppDeleteResult](type-aliases/RESTDeleteApiAppDeleteResult.md)
@@ -86,6 +86,6 @@
 - [APIVersion](variables/APIVersion.md)
 - [APT](variables/APT.md)
 - [APTPackages](variables/APTPackages.md)
-- [RouteBases](variables/RouteBases.md)
 - [discloudConfigRequiredScopes](variables/discloudConfigRequiredScopes.md)
 - [discloudConfigScopes](variables/discloudConfigScopes.md)
+- [RouteBases](variables/RouteBases.md)

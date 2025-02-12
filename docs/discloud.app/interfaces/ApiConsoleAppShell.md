@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: ApiConsoleAppShell
 
+Defined in: [packages/api-types/rest/v2/app.ts:196](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L196)
+
 ## Properties
 
 ### cmd
 
 > **cmd**: `string`
 
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:198](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L198)
+Defined in: [packages/api-types/rest/v2/app.ts:198](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L198)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **online**: `boolean`
 
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:197](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L197)
+Defined in: [packages/api-types/rest/v2/app.ts:197](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L197)

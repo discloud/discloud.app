@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / DataManager
 
 # Class: `abstract` DataManager\<T\>
+
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L8)
 
 Manager for data
 
@@ -26,11 +28,17 @@ Manager for data
 
 > **new DataManager**\<`T`\>(`discloudApp`, `holds`): [`DataManager`](DataManager.md)\<`T`\>
 
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L12)
+
 #### Parameters
 
-• **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
+##### discloudApp
 
-• **holds**: `T`
+[`DiscloudApp`](DiscloudApp.md)
+
+##### holds
+
+`T`
 
 #### Returns
 
@@ -40,19 +48,13 @@ Manager for data
 
 [`BaseManager`](BaseManager.md).[`constructor`](BaseManager.md#constructors)
 
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:12](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L12)
-
 ## Properties
 
 ### \_cache
 
 > `protected` `readonly` **\_cache**: `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 ***
 
@@ -60,13 +62,11 @@ Manager for data
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/BaseManager.ts#L7)
+
 #### Inherited from
 
-[`BaseManager`](BaseManager.md).[`discloudApp`](BaseManager.md#discloudapp)
-
-#### Defined in
-
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[`BaseManager`](BaseManager.md).[`discloudApp`](BaseManager.md#discloudapp-1)
 
 ***
 
@@ -74,23 +74,21 @@ Manager for data
 
 > `protected` `readonly` **holds**: `T`
 
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 ## Accessors
 
 ### cache
 
-> `get` **cache**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
+#### Get Signature
 
-#### Returns
+> **get** **cache**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
+
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L25)
+
+##### Returns
 
 `Map`\<`string`, `InstanceType`\<`T`\>\>
-
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ## Methods
 
@@ -98,21 +96,21 @@ Manager for data
 
 > **resolve**(`idOrInstance`): `null` \| `InstanceType`\<`T`\>
 
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L33)
+
 Resolves a data entry to a data Object.
 
 #### Parameters
 
-• **idOrInstance**: `string` \| `InstanceType`\<`T`\>
+##### idOrInstance
 
 The id or instance of something in this Manager
+
+`string` | `InstanceType`\<`T`\>
 
 #### Returns
 
 `null` \| `InstanceType`\<`T`\>
-
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L33)
 
 ***
 
@@ -120,17 +118,17 @@ The id or instance of something in this Manager
 
 > **resolveId**(`idOrInstance`): `any`
 
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L39)
+
 #### Parameters
 
-• **idOrInstance**: `string` \| `InstanceType`\<`T`\>
+##### idOrInstance
+
+`string` | `InstanceType`\<`T`\>
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 ***
 
@@ -138,12 +136,10 @@ The id or instance of something in this Manager
 
 > **valueOf**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L46)
+
 Returns the primitive value of the specified object.
 
 #### Returns
 
 `Map`\<`string`, `InstanceType`\<`T`\>\>
-
-#### Defined in
-
-[packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/DataManager.ts#L46)

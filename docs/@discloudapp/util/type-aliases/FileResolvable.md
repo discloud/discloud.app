@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md) • **Docs**
+[**@discloudapp/util**](../README.md)
 
 ***
 
@@ -8,8 +8,6 @@
 
 > **FileResolvable**: `Blob` \| `File` \| `PathLike` \| [`RawFile`](../interfaces/RawFile.md) \| `Readable` \| `Writable`
 
+Defined in: [packages/util/src/FileResolver.ts:29](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L29)
+
 This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/RawFile.md), Readable, String, URL or Writable
-
-## Defined in
-
-[packages/util/src/FileResolver.ts:29](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/util/src/FileResolver.ts#L29)

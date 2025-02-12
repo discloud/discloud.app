@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Interface: UploadAppOptions
 
+Defined in: [packages/discloud.app/src/@types/index.ts:28](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@types/index.ts#L28)
+
 ## Properties
 
 ### file
 
 > **file**: [`FileResolvable`](../type-aliases/FileResolvable.md)
 
-#### Defined in
-
-[packages/discloud.app/src/@types/index.ts:29](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/@types/index.ts#L29)
+Defined in: [packages/discloud.app/src/@types/index.ts:29](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@types/index.ts#L29)

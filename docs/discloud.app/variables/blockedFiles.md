@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -7,6 +7,8 @@
 # Variable: blockedFiles
 
 > `const` **blockedFiles**: `object`
+
+Defined in: packages/util/out/IgnoreFiles.d.ts:1
 
 ## Type declaration
 
@@ -37,7 +39,3 @@
 ### ts
 
 > **ts**: `string`[]
-
-## Defined in
-
-packages/util/out/IgnoreFiles.d.ts:1

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: Events
 
+Defined in: [packages/discloud.app/src/@enum/index.ts:1](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@enum/index.ts#L1)
+
 ## Enumeration Members
 
 ### Error
 
 > **Error**: `"error"`
 
-#### Defined in
-
-[packages/discloud.app/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/@enum/index.ts#L2)
+Defined in: [packages/discloud.app/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@enum/index.ts#L2)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **RateLimited**: `"rateLimited"`
 
-#### Defined in
-
-[packages/discloud.app/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/@enum/index.ts#L3)
+Defined in: [packages/discloud.app/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/@enum/index.ts#L3)

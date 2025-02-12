@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -7,6 +7,8 @@
 # Variable: APT
 
 > `const` **APT**: `object`
+
+Defined in: [payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/payload/v2/DiscloudConfig.ts#L1)
 
 ## Type declaration
 
@@ -26,10 +28,6 @@
 
 > **libgl**: `string`[]
 
-### mysql
-
-> **mysql**: `string`[]
-
 ### openssl
 
 > **openssl**: `string`[]
@@ -38,14 +36,6 @@
 
 > **puppeteer**: `string`[]
 
-### tesseract
-
-> **tesseract**: `string`[]
-
 ### tools
 
 > **tools**: `string`[]
-
-## Defined in
-
-[payload/v2/DiscloudConfig.ts:1](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/payload/v2/DiscloudConfig.ts#L1)

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -7,6 +7,8 @@
 # Variable: discloud
 
 > `const` **discloud**: [`DiscloudApp`](../classes/DiscloudApp.md)
+
+Defined in: [packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/index.ts#L79)
 
 This is an instance of [DiscloudApp](../classes/DiscloudApp.md)
 
@@ -32,7 +34,3 @@ async function () {
   await discloud.apps.fetch("ID"); // Promise<App>
 }
 ```
-
-## Defined in
-
-[packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/index.ts#L79)

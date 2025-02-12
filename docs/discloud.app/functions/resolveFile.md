@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,22 +8,24 @@
 
 > **resolveFile**(`file`, `fileName`?): `Promise`\<`File`\>
 
+Defined in: packages/util/out/FileResolver.d.ts:33
+
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
 ## Parameters
 
-• **file**: [`FileResolvable`](../type-aliases/FileResolvable.md)
+### file
+
+[`FileResolvable`](../type-aliases/FileResolvable.md)
 
 The file as [FileResolvable](../type-aliases/FileResolvable.md) to resolve
 
-• **fileName?**: `string`
+### fileName?
+
+`string`
 
 The name of the file to upload
 
 ## Returns
 
 `Promise`\<`File`\>
-
-## Defined in
-
-packages/util/out/FileResolver.d.ts:39

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,26 +8,30 @@
 
 > **streamToFile**(`stream`, `fileName`?, `mimeType`?): `Promise`\<`File`\>
 
+Defined in: packages/util/out/FileResolver.d.ts:43
+
 A function that converts a like Stream parameter to File
 
 ## Parameters
 
-• **stream**: `Stream`
+### stream
+
+`Stream`
 
 A parameter like Readable or Writable
 
-• **fileName?**: `null` \| `string`
+### fileName?
 
 A file name, if you wish
 
-• **mimeType?**: `string`
+`null` | `string`
+
+### mimeType?
+
+`string`
 
 A mimeType parameter
 
 ## Returns
 
 `Promise`\<`File`\>
-
-## Defined in
-
-packages/util/out/FileResolver.d.ts:49

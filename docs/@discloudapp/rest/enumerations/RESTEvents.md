@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md) • **Docs**
+[**@discloudapp/rest**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: RESTEvents
 
+Defined in: [packages/rest/src/@enum/index.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@enum/index.ts#L8)
+
 ## Enumeration Members
 
 ### Error
 
 > **Error**: `"error"`
 
-#### Defined in
-
-[packages/rest/src/@enum/index.ts:9](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@enum/index.ts#L9)
+Defined in: [packages/rest/src/@enum/index.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@enum/index.ts#L9)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **RateLimited**: `"rateLimited"`
 
-#### Defined in
-
-[packages/rest/src/@enum/index.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@enum/index.ts#L10)
+Defined in: [packages/rest/src/@enum/index.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@enum/index.ts#L10)

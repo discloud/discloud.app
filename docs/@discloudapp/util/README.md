@@ -1,4 +1,4 @@
-[**@discloudapp/util**](README.md) • **Docs**
+[**@discloudapp/util**](README.md)
 
 ***
 

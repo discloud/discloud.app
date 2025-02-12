@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / AppTeam
 
 # Class: AppTeam
+
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L6)
 
 Base for all structures
 
@@ -18,11 +20,17 @@ Base for all structures
 
 > **new AppTeam**(`discloudApp`, `data`): [`AppTeam`](AppTeam.md)
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L9)
+
 #### Parameters
 
-• **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
+##### discloudApp
 
-• **data**: [`BaseApiApp`](../interfaces/BaseApiApp.md)
+[`DiscloudApp`](DiscloudApp.md)
+
+##### data
+
+[`BaseApiApp`](../interfaces/BaseApiApp.md)
 
 #### Returns
 
@@ -32,19 +40,13 @@ Base for all structures
 
 [`Base`](Base.md).[`constructor`](Base.md#constructors)
 
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:9](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L9)
-
 ## Properties
 
 ### appId
 
 > `readonly` **appId**: `string`
 
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L7)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L7)
 
 ***
 
@@ -52,13 +54,11 @@ Base for all structures
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<[`AppTeam`](AppTeam.md)\>
 
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L5)
+
 #### Inherited from
 
 `Base.constructor`
-
-#### Defined in
-
-[packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/Base.ts#L5)
 
 ***
 
@@ -66,19 +66,19 @@ Base for all structures
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L12)
+
 #### Inherited from
 
-[`Base`](Base.md).[`discloudApp`](Base.md#discloudapp)
-
-#### Defined in
-
-[packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/Base.ts#L12)
+[`Base`](Base.md).[`discloudApp`](Base.md#discloudapp-1)
 
 ## Methods
 
 ### \_clone()
 
 > `protected` **\_clone**(): `this`
+
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -88,19 +88,19 @@ Base for all structures
 
 [`Base`](Base.md).[`_clone`](Base.md#_clone)
 
-#### Defined in
-
-[packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/Base.ts#L18)
-
 ***
 
 ### \_patch()
 
 > `protected` **\_patch**(`data`): `this`
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L15)
+
 #### Parameters
 
-• **data**: [`BaseApiApp`](../interfaces/BaseApiApp.md)
+##### data
+
+[`BaseApiApp`](../interfaces/BaseApiApp.md)
 
 #### Returns
 
@@ -110,19 +110,19 @@ Base for all structures
 
 [`Base`](Base.md).[`_patch`](Base.md#_patch)
 
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L15)
-
 ***
 
 ### \_update()
 
 > `protected` **\_update**(`data`): `this`
 
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L26)
+
 #### Parameters
 
-• **data**: `unknown`
+##### data
+
+`unknown`
 
 #### Returns
 
@@ -132,29 +132,27 @@ Base for all structures
 
 [`Base`](Base.md).[`_update`](Base.md#_update)
 
-#### Defined in
-
-[packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/Base.ts#L26)
-
 ***
 
 ### create()
 
 > **create**(`modID`, `perms`): `Promise`\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L19)
+
 #### Parameters
 
-• **modID**: `string`
+##### modID
 
-• **perms**: [`ModPermissionsResolvable`](../type-aliases/ModPermissionsResolvable.md)
+`string`
+
+##### perms
+
+[`ModPermissionsResolvable`](../type-aliases/ModPermissionsResolvable.md)
 
 #### Returns
 
 `Promise`\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
-
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:19](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L19)
 
 ***
 
@@ -162,17 +160,17 @@ Base for all structures
 
 > **delete**(`modID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L27)
+
 #### Parameters
 
-• **modID**: `string`
+##### modID
+
+`string`
 
 #### Returns
 
 `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
-
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:27](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L27)
 
 ***
 
@@ -180,19 +178,21 @@ Base for all structures
 
 > **edit**(`modID`, `perms`): `Promise`\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L23)
+
 #### Parameters
 
-• **modID**: `string`
+##### modID
 
-• **perms**: [`ModPermissionsResolvable`](../type-aliases/ModPermissionsResolvable.md)
+`string`
+
+##### perms
+
+[`ModPermissionsResolvable`](../type-aliases/ModPermissionsResolvable.md)
 
 #### Returns
 
 `Promise`\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
-
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:23](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L23)
 
 ***
 
@@ -200,10 +200,8 @@ Base for all structures
 
 > **fetch**(): `Promise`\<[`ApiAppTeam`](../interfaces/ApiAppTeam.md)[]\>
 
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppTeam.ts#L31)
+
 #### Returns
 
 `Promise`\<[`ApiAppTeam`](../interfaces/ApiAppTeam.md)[]\>
-
-#### Defined in
-
-[packages/discloud.app/src/structures/AppTeam.ts:31](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/structures/AppTeam.ts#L31)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / REST
 
 # Class: REST
+
+Defined in: packages/rest/out/REST.d.ts:4
 
 ## Extends
 
@@ -16,9 +18,13 @@
 
 > **new REST**(`options`?): [`REST`](REST.md)
 
+Defined in: packages/rest/out/REST.d.ts:6
+
 #### Parameters
 
-• **options?**: `Partial`\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
+##### options?
+
+`Partial`\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
 
 #### Returns
 
@@ -28,47 +34,21 @@
 
 `EventEmitter<RestEvents>.constructor`
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:8
-
 ## Properties
 
 ### requestManager
 
 > `readonly` **requestManager**: [`RequestManager`](RequestManager.md)
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:7
-
-***
-
-### captureRejectionSymbol
-
-> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](DiscloudApp.md#capturerejectionsymbol)
-
-Value: `Symbol.for('nodejs.rejection')`
-
-See how to write a custom `rejection handler`.
-
-#### Since
-
-v13.4.0, v12.16.0
-
-#### Inherited from
-
-`EventEmitter.captureRejectionSymbol`
-
-#### Defined in
-
-node\_modules/@types/node/events.d.ts:468
+Defined in: packages/rest/out/REST.d.ts:5
 
 ***
 
 ### captureRejections
 
 > `static` **captureRejections**: `boolean`
+
+Defined in: node\_modules/@types/node/events.d.ts:459
 
 Value: [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
 
@@ -82,15 +62,33 @@ v13.4.0, v12.16.0
 
 `EventEmitter.captureRejections`
 
-#### Defined in
+***
 
-node\_modules/@types/node/events.d.ts:475
+### captureRejectionSymbol
+
+> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](DiscloudApp.md#capturerejectionsymbol)
+
+Defined in: node\_modules/@types/node/events.d.ts:452
+
+Value: `Symbol.for('nodejs.rejection')`
+
+See how to write a custom `rejection handler`.
+
+#### Since
+
+v13.4.0, v12.16.0
+
+#### Inherited from
+
+`EventEmitter.captureRejectionSymbol`
 
 ***
 
 ### defaultMaxListeners
 
 > `static` **defaultMaxListeners**: `number`
+
+Defined in: node\_modules/@types/node/events.d.ts:498
 
 By default, a maximum of `10` listeners can be registered for any single
 event. This limit can be changed for individual `EventEmitter` instances
@@ -136,15 +134,13 @@ v0.11.2
 
 `EventEmitter.defaultMaxListeners`
 
-#### Defined in
-
-node\_modules/@types/node/events.d.ts:514
-
 ***
 
 ### errorMonitor
 
 > `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](DiscloudApp.md#errormonitor)
+
+Defined in: node\_modules/@types/node/events.d.ts:445
 
 This symbol shall be used to install a listener for only monitoring `'error'` events. Listeners installed using this symbol are called before the regular `'error'` listeners are called.
 
@@ -159,23 +155,19 @@ v13.6.0, v12.17.0
 
 `EventEmitter.errorMonitor`
 
-#### Defined in
-
-node\_modules/@types/node/events.d.ts:461
-
 ## Accessors
 
 ### token
 
-> `get` **token**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **token**(): `string`
+
+Defined in: packages/rest/out/REST.d.ts:7
+
+##### Returns
 
 `string`
-
-#### Defined in
-
-packages/rest/out/REST.d.ts:9
 
 ## Methods
 
@@ -183,17 +175,25 @@ packages/rest/out/REST.d.ts:9
 
 > `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/@types/node/events.d.ts:136
+
 #### Type Parameters
 
 • **K**
 
 #### Parameters
 
-• **error**: `Error`
+##### error
 
-• **event**: keyof RestEvents \| `K`
+`Error`
 
-• ...**args**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+##### event
+
+keyof RestEvents | `K`
+
+##### args
+
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
 
 #### Returns
 
@@ -203,15 +203,13 @@ packages/rest/out/REST.d.ts:9
 
 `EventEmitter.[captureRejectionSymbol]`
 
-#### Defined in
-
-node\_modules/@types/node/events.d.ts:151
-
 ***
 
 ### addListener()
 
 > **addListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:597
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -221,31 +219,33 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.addListener`
-
 #### Since
 
 v0.1.26
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:613
+`EventEmitter.addListener`
 
 ***
 
 ### delete()
 
 > **delete**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+
+Defined in: packages/rest/out/REST.d.ts:27
 
 Runs a delete request from the api
 
@@ -255,11 +255,15 @@ Runs a delete request from the api
 
 #### Parameters
 
-• **fullRoute**: \`/$\{string\}\`
+##### fullRoute
+
+`` `/${string}` ``
 
 The full route to query
 
-• **options?**: [`RequestData`](../interfaces/RequestData.md)
+##### options?
+
+[`RequestData`](../interfaces/RequestData.md)
 
 Optional request options
 
@@ -267,15 +271,13 @@ Optional request options
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:29
-
 ***
 
 ### emit()
 
 > **emit**\<`K`\>(`eventName`, ...`args`): `boolean`
+
+Defined in: node\_modules/@types/node/events.d.ts:859
 
 Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -321,31 +323,33 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
-• ...**args**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+keyof RestEvents | `K`
+
+##### args
+
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
 
 #### Returns
 
 `boolean`
 
-#### Inherited from
-
-`EventEmitter.emit`
-
 #### Since
 
 v0.1.26
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:875
+`EventEmitter.emit`
 
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`"error"` \| `"rateLimited"`)[]
+
+Defined in: node\_modules/@types/node/events.d.ts:922
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -368,23 +372,21 @@ console.log(myEE.eventNames());
 
 (`"error"` \| `"rateLimited"`)[]
 
-#### Inherited from
-
-`EventEmitter.eventNames`
-
 #### Since
 
 v6.0.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:938
+`EventEmitter.eventNames`
 
 ***
 
 ### get()
 
 > **get**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+
+Defined in: packages/rest/out/REST.d.ts:20
 
 Runs a get request from the api
 
@@ -394,11 +396,15 @@ Runs a get request from the api
 
 #### Parameters
 
-• **fullRoute**: \`/$\{string\}\`
+##### fullRoute
+
+`` `/${string}` ``
 
 The full route to query
 
-• **options?**: [`RequestData`](../interfaces/RequestData.md)
+##### options?
+
+[`RequestData`](../interfaces/RequestData.md)
 
 Optional request options
 
@@ -406,40 +412,36 @@ Optional request options
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:22
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
 
+Defined in: node\_modules/@types/node/events.d.ts:774
+
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](REST.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](DiscloudApp.md#defaultmaxlisteners).
 
 #### Returns
 
 `number`
 
-#### Inherited from
-
-`EventEmitter.getMaxListeners`
-
 #### Since
 
 v1.0.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:790
+`EventEmitter.getMaxListeners`
 
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
+
+Defined in: node\_modules/@types/node/events.d.ts:868
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -451,11 +453,15 @@ in the list of the listeners of the event.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
 The name of the event being listened for
 
-• **listener?**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener?
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The event handler function
 
@@ -463,23 +469,21 @@ The event handler function
 
 `number`
 
-#### Inherited from
-
-`EventEmitter.listenerCount`
-
 #### Since
 
 v3.2.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:884
+`EventEmitter.listenerCount`
 
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+
+Defined in: node\_modules/@types/node/events.d.ts:787
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -497,29 +501,29 @@ console.log(util.inspect(server.listeners('connection')));
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
+
+keyof RestEvents | `K`
 
 #### Returns
 
 `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
-#### Inherited from
-
-`EventEmitter.listeners`
-
 #### Since
 
 v0.1.26
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:803
+`EventEmitter.listeners`
 
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:747
 
 Alias for `emitter.removeListener()`.
 
@@ -529,31 +533,33 @@ Alias for `emitter.removeListener()`.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.off`
-
 #### Since
 
 v10.0.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:763
+`EventEmitter.off`
 
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:629
 
 Adds the `listener` function to the end of the listeners array for the event
 named `eventName`. No checks are made to see if the `listener` has already
@@ -588,11 +594,15 @@ myEE.emit('foo');
 
 #### Parameters
 
-• **eventName**: `K` \| keyof RestEvents
+##### eventName
 
 The name of the event.
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -600,23 +610,21 @@ The callback function
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.on`
-
 #### Since
 
 v0.1.101
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:645
+`EventEmitter.on`
 
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:659
 
 Adds a **one-time** `listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -649,11 +657,15 @@ myEE.emit('foo');
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
 The name of the event.
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -661,23 +673,21 @@ The callback function
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.once`
-
 #### Since
 
 v0.3.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:675
+`EventEmitter.once`
 
 ***
 
 ### post()
 
 > **post**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+
+Defined in: packages/rest/out/REST.d.ts:34
 
 Runs a post request from the api
 
@@ -687,11 +697,15 @@ Runs a post request from the api
 
 #### Parameters
 
-• **fullRoute**: \`/$\{string\}\`
+##### fullRoute
+
+`` `/${string}` ``
 
 The full route to query
 
-• **options?**: [`RequestData`](../interfaces/RequestData.md)
+##### options?
+
+[`RequestData`](../interfaces/RequestData.md)
 
 Optional request options
 
@@ -699,15 +713,13 @@ Optional request options
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:36
-
 ***
 
 ### prependListener()
 
 > **prependListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:886
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -728,11 +740,15 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
 The name of the event.
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -740,23 +756,21 @@ The callback function
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.prependListener`
-
 #### Since
 
 v6.0.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:902
+`EventEmitter.prependListener`
 
 ***
 
 ### prependOnceListener()
 
 > **prependOnceListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:902
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -775,11 +789,15 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
 The name of the event.
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -787,23 +805,21 @@ The callback function
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.prependOnceListener`
-
 #### Since
 
 v6.0.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:918
+`EventEmitter.prependOnceListener`
 
 ***
 
 ### put()
 
 > **put**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+
+Defined in: packages/rest/out/REST.d.ts:41
 
 Runs a put request from the api
 
@@ -813,11 +829,15 @@ Runs a put request from the api
 
 #### Parameters
 
-• **fullRoute**: \`/$\{string\}\`
+##### fullRoute
+
+`` `/${string}` ``
 
 The full route to query
 
-• **options?**: [`RequestData`](../interfaces/RequestData.md)
+##### options?
+
+[`RequestData`](../interfaces/RequestData.md)
 
 Optional request options
 
@@ -825,21 +845,21 @@ Optional request options
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:43
-
 ***
 
 ### raw()
 
 > **raw**(`options`): `Promise`\<`Response`\>
 
+Defined in: packages/rest/out/REST.d.ts:53
+
 Runs a request from the API, yielding the raw Response object
 
 #### Parameters
 
-• **options**: [`InternalRequest`](../interfaces/InternalRequest.md)
+##### options
+
+[`InternalRequest`](../interfaces/InternalRequest.md)
 
 Request options
 
@@ -847,15 +867,13 @@ Request options
 
 `Promise`\<`Response`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:55
-
 ***
 
 ### rawListeners()
 
 > **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+
+Defined in: node\_modules/@types/node/events.d.ts:818
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -891,29 +909,29 @@ emitter.emit('log');
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
+
+keyof RestEvents | `K`
 
 #### Returns
 
 `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
-#### Inherited from
-
-`EventEmitter.rawListeners`
-
 #### Since
 
 v9.4.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:834
+`EventEmitter.rawListeners`
 
 ***
 
 ### removeAllListeners()
 
 > **removeAllListeners**(`eventName`?): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:758
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -925,29 +943,29 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **eventName?**: `unknown`
+##### eventName?
+
+`unknown`
 
 #### Returns
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.removeAllListeners`
-
 #### Since
 
 v0.1.26
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:774
+`EventEmitter.removeAllListeners`
 
 ***
 
 ### removeListener()
 
 > **removeListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:742
 
 Removes the specified `listener` from the listener array for the event named `eventName`.
 
@@ -1035,31 +1053,33 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **eventName**: keyof RestEvents \| `K`
+##### eventName
 
-• **listener**: `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+keyof RestEvents | `K`
+
+##### listener
+
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.removeListener`
-
 #### Since
 
 v0.1.26
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:758
+`EventEmitter.removeListener`
 
 ***
 
 ### request()
 
 > **request**\<`T`\>(`options`): `Promise`\<`T`\>
+
+Defined in: packages/rest/out/REST.d.ts:47
 
 Runs a request from the api
 
@@ -1069,7 +1089,9 @@ Runs a request from the api
 
 #### Parameters
 
-• **options**: [`InternalRequest`](../interfaces/InternalRequest.md)
+##### options
+
+[`InternalRequest`](../interfaces/InternalRequest.md)
 
 Request options
 
@@ -1077,15 +1099,13 @@ Request options
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:49
-
 ***
 
 ### setMaxListeners()
 
 > **setMaxListeners**(`n`): `this`
+
+Defined in: node\_modules/@types/node/events.d.ts:768
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1096,23 +1116,21 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **n**: `number`
+##### n
+
+`number`
 
 #### Returns
 
 `this`
 
-#### Inherited from
-
-`EventEmitter.setMaxListeners`
-
 #### Since
 
 v0.3.5
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:784
+`EventEmitter.setMaxListeners`
 
 ***
 
@@ -1120,11 +1138,15 @@ node\_modules/@types/node/events.d.ts:784
 
 > **setToken**(`token`): `this`
 
+Defined in: packages/rest/out/REST.d.ts:13
+
 Sets the authorization token that should be used for requests
 
 #### Parameters
 
-• **token**: `string`
+##### token
+
+`string`
 
 The authorization token to use
 
@@ -1132,15 +1154,13 @@ The authorization token to use
 
 `this`
 
-#### Defined in
-
-packages/rest/out/REST.d.ts:15
-
 ***
 
 ### addAbortListener()
 
 > `static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Defined in: node\_modules/@types/node/events.d.ts:437
 
 **`Experimental`**
 
@@ -1176,9 +1196,13 @@ function example(signal) {
 
 #### Parameters
 
-• **signal**: `AbortSignal`
+##### signal
 
-• **resource**
+`AbortSignal`
+
+##### resource
+
+(`event`) => `void`
 
 #### Returns
 
@@ -1186,23 +1210,21 @@ function example(signal) {
 
 Disposable that removes the `abort` listener.
 
-#### Inherited from
-
-`EventEmitter.addAbortListener`
-
 #### Since
 
 v20.5.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:453
+`EventEmitter.addAbortListener`
 
 ***
 
 ### getEventListeners()
 
 > `static` **getEventListeners**(`emitter`, `name`): `Function`[]
+
+Defined in: node\_modules/@types/node/events.d.ts:358
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -1231,31 +1253,33 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
+##### emitter
 
-• **name**: `string` \| `symbol`
+`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+
+##### name
+
+`string` | `symbol`
 
 #### Returns
 
 `Function`[]
 
-#### Inherited from
-
-`EventEmitter.getEventListeners`
-
 #### Since
 
 v15.2.0, v14.17.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:374
+`EventEmitter.getEventListeners`
 
 ***
 
 ### getMaxListeners()
 
 > `static` **getMaxListeners**(`emitter`): `number`
+
+Defined in: node\_modules/@types/node/events.d.ts:387
 
 Returns the currently set max amount of listeners.
 
@@ -1285,29 +1309,29 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
+##### emitter
+
+`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
 
 #### Returns
 
 `number`
 
-#### Inherited from
-
-`EventEmitter.getMaxListeners`
-
 #### Since
 
 v19.9.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:403
+`EventEmitter.getMaxListeners`
 
 ***
 
 ### ~~listenerCount()~~
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
+
+Defined in: node\_modules/@types/node/events.d.ts:330
 
 A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
 
@@ -1323,21 +1347,21 @@ console.log(listenerCount(myEmitter, 'event'));
 
 #### Parameters
 
-• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+##### emitter
+
+`EventEmitter`
 
 The emitter to query
 
-• **eventName**: `string` \| `symbol`
+##### eventName
 
 The event name
+
+`string` | `symbol`
 
 #### Returns
 
 `number`
-
-#### Inherited from
-
-`EventEmitter.listenerCount`
 
 #### Since
 
@@ -1347,17 +1371,19 @@ v0.9.12
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:346
+`EventEmitter.listenerCount`
 
 ***
 
 ### on()
 
-#### on(emitter, eventName, options)
+#### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterableIterator`\<`any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+
+Defined in: node\_modules/@types/node/events.d.ts:303
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1438,63 +1464,152 @@ console.log('done'); // prints 'done'
 
 ##### Parameters
 
-• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+###### emitter
 
-• **eventName**: `string` \| `symbol`
+`EventEmitter`
 
-The name of the event being listened for
+###### eventName
 
-• **options?**: `StaticEventEmitterOptions`
+`string` | `symbol`
+
+###### options?
+
+`StaticEventEmitterIteratorOptions`
 
 ##### Returns
 
-`AsyncIterableIterator`\<`any`\>
+`AsyncIterator`\<`any`[]\>
 
 An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
-
-##### Inherited from
-
-`EventEmitter.on`
 
 ##### Since
 
 v13.6.0, v12.16.0
 
-##### Defined in
+##### Inherited from
 
-node\_modules/@types/node/events.d.ts:319
+`EventEmitter.on`
 
-#### on(emitter, eventName, options)
+#### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterableIterator`\<`any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+
+Defined in: node\_modules/@types/node/events.d.ts:308
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+});
+
+for await (const event of on(ee, 'foo')) {
+  // The execution of this inner block is synchronous and it
+  // processes one event at a time (even with await). Do not use
+  // if concurrent execution is required.
+  console.log(event); // prints ['bar'] [42]
+}
+// Unreachable here
+```
+
+Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+if the `EventEmitter` emits `'error'`. It removes all listeners when
+exiting the loop. The `value` returned by each iteration is an array
+composed of the emitted event arguments.
+
+An `AbortSignal` can be used to cancel waiting on events:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ac = new AbortController();
+
+(async () => {
+  const ee = new EventEmitter();
+
+  // Emit later on
+  process.nextTick(() => {
+    ee.emit('foo', 'bar');
+    ee.emit('foo', 42);
+  });
+
+  for await (const event of on(ee, 'foo', { signal: ac.signal })) {
+    // The execution of this inner block is synchronous and it
+    // processes one event at a time (even with await). Do not use
+    // if concurrent execution is required.
+    console.log(event); // prints ['bar'] [42]
+  }
+  // Unreachable here
+})();
+
+process.nextTick(() => ac.abort());
+```
+
+Use the `close` option to specify an array of event names that will end the iteration:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+  ee.emit('close');
+});
+
+for await (const event of on(ee, 'foo', { close: ['close'] })) {
+  console.log(event); // prints ['bar'] [42]
+}
+// the loop will exit after 'close' is emitted
+console.log('done'); // prints 'done'
+```
 
 ##### Parameters
 
-• **emitter**: `EventTarget`
+###### emitter
 
-• **eventName**: `string`
+`EventTarget`
 
-• **options?**: `StaticEventEmitterIteratorOptions`
+###### eventName
+
+`string`
+
+###### options?
+
+`StaticEventEmitterIteratorOptions`
 
 ##### Returns
 
-`AsyncIterableIterator`\<`any`\>
+`AsyncIterator`\<`any`[]\>
+
+An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
+
+##### Since
+
+v13.6.0, v12.16.0
 
 ##### Inherited from
 
 `EventEmitter.on`
 
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:324
-
 ***
 
 ### once()
 
-#### once(emitter, eventName, options)
+#### Call Signature
 
 > `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+
+Defined in: node\_modules/@types/node/events.d.ts:217
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1575,57 +1690,146 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Parameters
 
-• **emitter**: `EventEmitter`\<`DefaultEventMap`\>
+###### emitter
 
-• **eventName**: `string` \| `symbol`
+`EventEmitter`
 
-• **options?**: `Pick`\<`StaticEventEmitterOptions`, `"signal"`\>
+###### eventName
+
+`string` | `symbol`
+
+###### options?
+
+`StaticEventEmitterOptions`
 
 ##### Returns
 
 `Promise`\<`any`[]\>
-
-##### Inherited from
-
-`EventEmitter.once`
 
 ##### Since
 
 v11.13.0, v10.16.0
 
-##### Defined in
+##### Inherited from
 
-node\_modules/@types/node/events.d.ts:232
+`EventEmitter.once`
 
-#### once(emitter, eventName, options)
+#### Call Signature
 
 > `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
+Defined in: node\_modules/@types/node/events.d.ts:222
+
+Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
+event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
+The `Promise` will resolve with an array of all the arguments emitted to the
+given event.
+
+This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
+semantics and does not listen to the `'error'` event.
+
+```js
+import { once, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+process.nextTick(() => {
+  ee.emit('myevent', 42);
+});
+
+const [value] = await once(ee, 'myevent');
+console.log(value);
+
+const err = new Error('kaboom');
+process.nextTick(() => {
+  ee.emit('error', err);
+});
+
+try {
+  await once(ee, 'myevent');
+} catch (err) {
+  console.error('error happened', err);
+}
+```
+
+The special handling of the `'error'` event is only used when `events.once()` is used to wait for another event. If `events.once()` is used to wait for the
+'`error'` event itself, then it is treated as any other kind of event without
+special handling:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+
+once(ee, 'error')
+  .then(([err]) => console.log('ok', err.message))
+  .catch((err) => console.error('error', err.message));
+
+ee.emit('error', new Error('boom'));
+
+// Prints: ok boom
+```
+
+An `AbortSignal` can be used to cancel waiting for the event:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+const ac = new AbortController();
+
+async function foo(emitter, event, signal) {
+  try {
+    await once(emitter, event, { signal });
+    console.log('event emitted!');
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.error('Waiting for the event was canceled!');
+    } else {
+      console.error('There was an error', error.message);
+    }
+  }
+}
+
+foo(ee, 'foo', ac.signal);
+ac.abort(); // Abort waiting for the event
+ee.emit('foo'); // Prints: Waiting for the event was canceled!
+```
+
 ##### Parameters
 
-• **emitter**: `EventTarget`
+###### emitter
 
-• **eventName**: `string`
+`EventTarget`
 
-• **options?**: `StaticEventEmitterOptions`
+###### eventName
+
+`string`
+
+###### options?
+
+`StaticEventEmitterOptions`
 
 ##### Returns
 
 `Promise`\<`any`[]\>
 
+##### Since
+
+v11.13.0, v10.16.0
+
 ##### Inherited from
 
 `EventEmitter.once`
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:237
 
 ***
 
 ### setMaxListeners()
 
 > `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
+
+Defined in: node\_modules/@types/node/events.d.ts:402
 
 ```js
 import { setMaxListeners, EventEmitter } from 'node:events';
@@ -1638,24 +1842,27 @@ setMaxListeners(5, target, emitter);
 
 #### Parameters
 
-• **n?**: `number`
+##### n?
+
+`number`
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-• ...**eventTargets?**: (`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`)[]
+##### eventTargets?
+
+...(`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`)[]
+
+Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
+objects.
 
 #### Returns
 
 `void`
 
-#### Inherited from
-
-`EventEmitter.setMaxListeners`
-
 #### Since
 
 v15.4.0
 
-#### Defined in
+#### Inherited from
 
-node\_modules/@types/node/events.d.ts:418
+`EventEmitter.setMaxListeners`

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -6,27 +6,33 @@
 
 # Class: GS
 
+Defined in: packages/util/out/GS.d.ts:2
+
 ## Constructors
 
 ### new GS()
 
 > **new GS**(`pattern`, `ignoreFileName`?, `optionalIgnoreList`?): [`GS`](GS.md)
 
+Defined in: packages/util/out/GS.d.ts:7
+
 #### Parameters
 
-• **pattern**: `string` \| `string`[]
+##### pattern
 
-• **ignoreFileName?**: `string`
+`string` | `string`[]
 
-• **optionalIgnoreList?**: `string`[]
+##### ignoreFileName?
+
+`string`
+
+##### optionalIgnoreList?
+
+`string`[]
 
 #### Returns
 
 [`GS`](GS.md)
-
-#### Defined in
-
-packages/util/out/GS.d.ts:7
 
 ## Properties
 
@@ -34,9 +40,7 @@ packages/util/out/GS.d.ts:7
 
 > `readonly` **found**: `string`[]
 
-#### Defined in
-
-packages/util/out/GS.d.ts:5
+Defined in: packages/util/out/GS.d.ts:5
 
 ***
 
@@ -44,9 +48,7 @@ packages/util/out/GS.d.ts:5
 
 > `readonly` **ignore**: [`IgnoreFiles`](IgnoreFiles.md)
 
-#### Defined in
-
-packages/util/out/GS.d.ts:6
+Defined in: packages/util/out/GS.d.ts:6
 
 ***
 
@@ -54,6 +56,4 @@ packages/util/out/GS.d.ts:6
 
 > **pattern**: `string` \| `string`[]
 
-#### Defined in
-
-packages/util/out/GS.d.ts:4
+Defined in: packages/util/out/GS.d.ts:4

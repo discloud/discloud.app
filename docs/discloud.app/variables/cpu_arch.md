@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **cpu\_arch**: `string`
 
-## Defined in
-
-packages/rest/out/utils/constants.d.ts:6
+Defined in: packages/rest/out/utils/constants.d.ts:5

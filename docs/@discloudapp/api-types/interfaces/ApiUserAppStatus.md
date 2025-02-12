@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Interface: ApiUserAppStatus
 
+Defined in: [rest/v2/user.ts:54](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L54)
+
 ## Properties
 
 ### exitCode
 
 > **exitCode**: `number`
 
+Defined in: [rest/v2/user.ts:74](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L74)
+
 Your app's exit code on stopping
-
-#### Defined in
-
-[rest/v2/user.ts:74](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L74)
 
 ***
 
@@ -24,11 +24,9 @@ Your app's exit code on stopping
 
 > **id**: `string`
 
+Defined in: [rest/v2/user.ts:58](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L58)
+
 Your app id
-
-#### Defined in
-
-[rest/v2/user.ts:58](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L58)
 
 ***
 
@@ -36,11 +34,9 @@ Your app id
 
 > **name**: `string`
 
+Defined in: [rest/v2/user.ts:62](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L62)
+
 Your application's name
-
-#### Defined in
-
-[rest/v2/user.ts:62](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L62)
 
 ***
 
@@ -48,11 +44,9 @@ Your application's name
 
 > **online**: `boolean`
 
+Defined in: [rest/v2/user.ts:66](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L66)
+
 If your application is online
-
-#### Defined in
-
-[rest/v2/user.ts:66](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L66)
 
 ***
 
@@ -60,8 +54,6 @@ If your application is online
 
 > **ramKilled**: `boolean`
 
+Defined in: [rest/v2/user.ts:70](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/user.ts#L70)
+
 If your application was stopped due to lack of RAM
-
-#### Defined in
-
-[rest/v2/user.ts:70](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/user.ts#L70)

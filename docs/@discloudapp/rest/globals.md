@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](README.md) • **Docs**
+[**@discloudapp/rest**](README.md)
 
 ***
 
@@ -8,23 +8,23 @@
 
 ## Enumerations
 
-- [RESTEvents](enumerations/RESTEvents.md)
 - [RequestMethod](enumerations/RequestMethod.md)
+- [RESTEvents](enumerations/RESTEvents.md)
 
 ## Classes
 
 - [DiscloudAPIError](classes/DiscloudAPIError.md)
-- [REST](classes/REST.md)
 - [RequestManager](classes/RequestManager.md)
+- [REST](classes/REST.md)
 
 ## Interfaces
 
 - [InternalRequest](interfaces/InternalRequest.md)
-- [RESTOptions](interfaces/RESTOptions.md)
 - [RateLimitData](interfaces/RateLimitData.md)
 - [RequestData](interfaces/RequestData.md)
 - [RequestHeaders](interfaces/RequestHeaders.md)
 - [RestEvents](interfaces/RestEvents.md)
+- [RESTOptions](interfaces/RESTOptions.md)
 
 ## Type Aliases
 
@@ -33,9 +33,9 @@
 
 ## Variables
 
+- [cpu\_arch](variables/cpu_arch.md)
 - [DefaultRestOptions](variables/DefaultRestOptions.md)
 - [DefaultUserAgent](variables/DefaultUserAgent.md)
-- [cpu\_arch](variables/cpu_arch.md)
 - [os\_name](variables/os_name.md)
 - [os\_platform](variables/os_platform.md)
 - [os\_release](variables/os_release.md)

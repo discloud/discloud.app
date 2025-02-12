@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md) • **Docs**
+[**@discloudapp/api-types**](../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Interface: ApiNetIO
 
+Defined in: [rest/v2/app.ts:169](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L169)
+
 ## Properties
 
 ### down
 
 > **down**: `string`
 
+Defined in: [rest/v2/app.ts:173](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L173)
+
 Amount of downloaded to container
-
-#### Defined in
-
-[rest/v2/app.ts:173](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L173)
 
 ***
 
@@ -24,8 +24,6 @@ Amount of downloaded to container
 
 > **up**: `string`
 
+Defined in: [rest/v2/app.ts:177](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L177)
+
 Amount of uploaded from container
-
-#### Defined in
-
-[rest/v2/app.ts:177](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L177)

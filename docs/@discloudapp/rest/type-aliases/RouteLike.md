@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md) • **Docs**
+[**@discloudapp/rest**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: RouteLike
 
-> **RouteLike**: \`/$\{string\}\`
+> **RouteLike**: `` `/${string}` ``
 
-## Defined in
-
-[packages/rest/src/@types/index.ts:4](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/rest/src/@types/index.ts#L4)
+Defined in: [packages/rest/src/@types/index.ts:4](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L4)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / RESTApiBaseResult
 
 # Interface: RESTApiBaseResult
+
+Defined in: [packages/api-types/rest/v2/base.ts:1](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L1)
 
 ## Extended by
 
@@ -35,12 +37,10 @@
 
 > **message**: `string`
 
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L10)
+
 Message of the API
 - It is useful to use as logs
-
-#### Defined in
-
-[packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/base.ts#L10)
 
 ***
 
@@ -48,8 +48,6 @@ Message of the API
 
 > **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
 
+Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L5)
+
 The status of API response
-
-#### Defined in
-
-[packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/base.ts#L5)

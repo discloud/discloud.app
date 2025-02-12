@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / ApiAppBackup
 
 # Interface: ApiAppBackup
+
+Defined in: [packages/api-types/rest/v2/app.ts:61](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L61)
 
 ## Extends
 
@@ -20,15 +22,13 @@
 
 > **id**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L7)
+
 Your app id
 
 #### Inherited from
 
 [`BaseApiApp`](BaseApiApp.md).[`id`](BaseApiApp.md#id)
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L7)
 
 ***
 
@@ -36,9 +36,7 @@ Your app id
 
 > **url**: `string`
 
+Defined in: [packages/api-types/rest/v2/app.ts:66](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L66)
+
 The backup url.
 - You can access it `only once`.
-
-#### Defined in
-
-[packages/api-types/rest/v2/app.ts:66](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/api-types/rest/v2/app.ts#L66)

@@ -1,10 +1,12 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / AppAptManager
 
 # Class: AppAptManager
+
+Defined in: [packages/discloud.app/src/managers/AppAptManager.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppAptManager.ts#L9)
 
 Manager for APT on your application on Discloud
 
@@ -18,9 +20,13 @@ Manager for APT on your application on Discloud
 
 > **new AppAptManager**(`discloudApp`): [`AppAptManager`](AppAptManager.md)
 
+Defined in: [packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppAptManager.ts#L10)
+
 #### Parameters
 
-• **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
+##### discloudApp
+
+[`DiscloudApp`](DiscloudApp.md)
 
 #### Returns
 
@@ -30,23 +36,17 @@ Manager for APT on your application on Discloud
 
 [`BaseManager`](BaseManager.md).[`constructor`](BaseManager.md#constructors)
 
-#### Defined in
-
-[packages/discloud.app/src/managers/AppAptManager.ts:10](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/AppAptManager.ts#L10)
-
 ## Properties
 
 ### discloudApp
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/BaseManager.ts#L7)
+
 #### Inherited from
 
-[`BaseManager`](BaseManager.md).[`discloudApp`](BaseManager.md#discloudapp)
-
-#### Defined in
-
-[packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/BaseManager.ts#L7)
+[`BaseManager`](BaseManager.md).[`discloudApp`](BaseManager.md#discloudapp-1)
 
 ## Methods
 
@@ -54,25 +54,27 @@ Manager for APT on your application on Discloud
 
 > **install**(`appID`, `apt`): `Promise`\<[`RESTPutApiAppAptResult`](../interfaces/RESTPutApiAppAptResult.md)\>
 
+Defined in: [packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppAptManager.ts#L20)
+
 Install APTs for your application on Discloud
 
 #### Parameters
 
-• **appID**: `string`
+##### appID
+
+`string`
 
 The app id
 
-• **apt**: `"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"mysql"` \| `"openssl"` \| `"puppeteer"` \| `"tesseract"` \| `"tools"` \| (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"mysql"` \| `"openssl"` \| `"puppeteer"` \| `"tesseract"` \| `"tools"`)[]
+##### apt
 
 One or more APTs to install. See AptString.
+
+`"ffmpeg"` | `"canvas"` | `"java"` | `"libgl"` | `"openssl"` | `"puppeteer"` | `"tools"` | (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
 
 #### Returns
 
 `Promise`\<[`RESTPutApiAppAptResult`](../interfaces/RESTPutApiAppAptResult.md)\>
-
-#### Defined in
-
-[packages/discloud.app/src/managers/AppAptManager.ts:20](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/AppAptManager.ts#L20)
 
 ***
 
@@ -80,22 +82,24 @@ One or more APTs to install. See AptString.
 
 > **uninstall**(`appID`, `apt`): `Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/RESTDeleteApiAppAptResult.md)\>
 
+Defined in: [packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppAptManager.ts#L40)
+
 Uninstall APTs for your application on Discloud
 
 #### Parameters
 
-• **appID**: `string`
+##### appID
+
+`string`
 
 The app id
 
-• **apt**: `"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"mysql"` \| `"openssl"` \| `"puppeteer"` \| `"tesseract"` \| `"tools"` \| (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"mysql"` \| `"openssl"` \| `"puppeteer"` \| `"tesseract"` \| `"tools"`)[]
+##### apt
 
 One or more APTs to uninstall. See AptString.
+
+`"ffmpeg"` | `"canvas"` | `"java"` | `"libgl"` | `"openssl"` | `"puppeteer"` | `"tools"` | (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
 
 #### Returns
 
 `Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/RESTDeleteApiAppAptResult.md)\>
-
-#### Defined in
-
-[packages/discloud.app/src/managers/AppAptManager.ts:40](https://github.com/discloud/discloud.app/blob/e957c12968777c01a56e127121040f7eaaf9b803/packages/discloud.app/src/managers/AppAptManager.ts#L40)

@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](README.md) • **Docs**
+[**@discloudapp/api-types**](README.md)
 
 ***
 

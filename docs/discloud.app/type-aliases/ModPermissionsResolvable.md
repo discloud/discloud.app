@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md) • **Docs**
+[**discloud.app**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > **ModPermissionsResolvable**: [`BitFieldResolvable`](BitFieldResolvable.md)\<[`ModPermissionsString`](ModPermissionsString.md), `number`\>
 
-## Defined in
-
-packages/util/out/ModPermissionsBF.d.ts:14
+Defined in: packages/util/out/ModPermissionsBF.d.ts:13
