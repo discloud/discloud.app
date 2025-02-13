@@ -1,4 +1,4 @@
-import { DiscloudConfigScopes, discloudConfigRequiredScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
+import { DiscloudConfigScopes, discloudConfigRequiredScopes, type AppLanguages, type AppTypes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
 import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher, type Stats } from "fs";
 import { basename, dirname, join } from "path";
@@ -9,25 +9,34 @@ export interface DiscloudConfigEventMap {
   missing: [data: DiscloudConfigType]
 }
 
-export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
-  static readonly fileName = "discloud.config";
-  #watcher?: FSWatcher;
-  #data: DiscloudConfigType = <any>{};
+export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> extends EventEmitter<DiscloudConfigEventMap> {
+  static readonly filename = "discloud.config";
+
   #comments: string[] = [];
+  #data: DiscloudConfigType<T, V> = <any>{};
+  #dir: string;
+  #disposed = false;
+  #watcher?: FSWatcher;
   #stats: Stats | null = null;
 
-  constructor(public readonly path: string) {
+  constructor(readonly path: string) {
     super({ captureRejections: true });
+
+    this.#dir = this.path;
 
     try {
       this.path = join(...path.split(/[\\/]/g));
 
-      if (this.isFile && basename(this.path) !== DiscloudConfig.fileName)
+      if (this.isFile && basename(this.path) !== DiscloudConfig.filename)
         this.path = dirname(this.path);
 
       while (!this.exists) this.path = dirname(this.path);
 
-      this.path = join(this.path, DiscloudConfig.fileName);
+      this.#dir = this.path;
+
+      this.path = join(this.path, DiscloudConfig.filename);
+
+      this.#stats = this.exists ? statSync(this.path) : null;
 
       if (this.isFile) {
         this.#watch();
@@ -40,6 +49,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
     this.#watcher?.removeAllListeners().close();
     this.emit("disposed", this.#data);
     this.removeAllListeners();
+    this.#disposed = true;
   }
 
   #watch() {
@@ -65,11 +75,15 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
     }
   }
 
+  get disposed() {
+    return this.#disposed;
+  }
+
   get comments() {
     return this.#comments;
   }
 
-  get data(): DiscloudConfigType {
+  get data(): DiscloudConfigType<T, V> {
     return this.#data;
   }
 
@@ -78,23 +92,18 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
   }
 
   get stats() {
-    try {
-      return this.#stats ??= statSync(this.path);
-    } catch {
-      return null;
-    }
+    if (this.exists) try { return this.#stats ??= statSync(this.path); } catch { }
+    this.#stats = null;
+    return null;
   }
 
   get isFile() {
-    try {
-      return (this.#stats ??= statSync(this.path)).isFile();
-    } catch (_) {
-      return false;
-    }
+    if (this.exists) try { return (this.#stats ??= statSync(this.path)).isFile(); } catch { }
+    return false;
   }
 
   get existsMain() {
-    const mainPath = join(dirname(this.path), this.data.MAIN);
+    const mainPath = join(this.#dir, this.data.MAIN);
     return existsSync(mainPath) && statSync(mainPath).isFile();
   }
 
@@ -114,8 +123,8 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
 
   #objToString(obj: any): string {
     if (obj === null || obj === undefined) return "";
-    if (typeof obj === "function") return this.#configToObj(obj());
     if (!obj) return `${obj}`;
+    if (typeof obj === "function") return this.#configToObj(obj());
 
     const result = [];
 
@@ -146,7 +155,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
       .map(line => line.split("="))));
   }
 
-  readonly #nonProcessScopes = [
+  readonly #nonProcessScopes = new Set([
     DiscloudConfigScopes.APT,
     DiscloudConfigScopes.AVATAR,
     DiscloudConfigScopes.BUILD,
@@ -156,13 +165,15 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
     DiscloudConfigScopes.START,
     DiscloudConfigScopes.TYPE,
     DiscloudConfigScopes.VERSION,
-  ];
+  ]);
+
+  readonly #booleanStringValues = new Set(["true", "false"]);
 
   #processValues(obj: any) {
-    if (!obj) return obj;
+    if (typeof obj !== "object" || obj === null) return obj;
 
     for (const key in obj) {
-      if (this.#nonProcessScopes.includes(key as DiscloudConfigScopes)) continue;
+      if (this.#nonProcessScopes.has(key as DiscloudConfigScopes)) continue;
 
       const value = obj[key];
 
@@ -171,7 +182,7 @@ export class DiscloudConfig extends EventEmitter<DiscloudConfigEventMap> {
         continue;
       }
 
-      if (["true", "false"].includes(obj[key])) {
+      if (this.#booleanStringValues.has(obj[key])) {
         obj[key] = value == "true";
         continue;
       }
