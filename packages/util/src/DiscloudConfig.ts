@@ -25,16 +25,19 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
     this.#dir = this.path;
 
     try {
-      this.path = join(...path.split(/[\\/]/g));
+      const stats = this.stats;
 
-      if (this.isFile && basename(this.path) !== DiscloudConfig.filename)
+      if (stats) {
+        if (stats.isFile() && basename(this.path) !== DiscloudConfig.filename)
+          this.path = dirname(this.path);
+      } else {
         this.path = dirname(this.path);
-
-      while (!this.exists) this.path = dirname(this.path);
+      }
 
       this.#dir = this.path;
 
-      this.path = join(this.path, DiscloudConfig.filename);
+      if (basename(this.path) !== DiscloudConfig.filename)
+        this.path = join(this.path, DiscloudConfig.filename);
 
       this.#stats = this.exists ? statSync(this.path) : null;
 
