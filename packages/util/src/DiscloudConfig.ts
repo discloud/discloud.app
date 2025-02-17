@@ -27,12 +27,8 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
     try {
       const stats = this.stats;
 
-      if (stats) {
-        if (stats.isFile() && basename(this.path) !== DiscloudConfig.filename)
-          this.path = dirname(this.path);
-      } else {
+      if (stats && stats.isFile() && basename(this.path) !== DiscloudConfig.filename)
         this.path = dirname(this.path);
-      }
 
       this.#dir = this.path;
 
