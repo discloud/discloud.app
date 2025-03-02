@@ -3,7 +3,7 @@ import type { RequestMethod } from "../@enum";
 
 export type RouteLike = `/${string}`
 
-export type RequestOptions = Parameters<typeof fetch>[1]
+export type RequestOptions = NonNullable<Parameters<typeof fetch>[1]>
 
 export interface RESTOptions {
   /**
@@ -22,7 +22,7 @@ export interface RESTOptions {
 	 *
 	 * @defaultValue `{}`
 	 */
-	headers: Record<string, string>;
+	headers: RequestInit["headers"];
   /**
    * The version of the API to use
    *
@@ -55,7 +55,7 @@ export interface RequestData {
   /**
    * Additional headers to add to this request
    */
-  headers?: Record<string, string>
+  headers?: RequestInit["headers"]
   /**
    * Query string parameters to append to the called endpoint
    */
