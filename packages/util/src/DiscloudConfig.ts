@@ -32,10 +32,10 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
       if (stats && stats.isFile() && basename(this.path) !== DiscloudConfig.filename)
         this.path = dirname(this.path);
 
-      this.#dir = this.path;
-
       if (basename(this.path) !== DiscloudConfig.filename)
         this.path = join(this.path, DiscloudConfig.filename);
+
+      this.#dir = dirname(this.path);
 
       this.#stats = this.exists ? statSync(this.path) : null;
 
