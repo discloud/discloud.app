@@ -1,4 +1,4 @@
-import { DiscloudConfigScopes, discloudConfigRequiredScopes, type AppLanguages, type AppTypes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
+import { discloudConfigRequiredScopes, type AppLanguages, type AppTypes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
 import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher, type Stats } from "fs";
 import { basename, dirname, join } from "path";
@@ -8,6 +8,8 @@ export interface DiscloudConfigEventMap {
   error: [error: Error]
   missing: [data: DiscloudConfigType]
 }
+
+const VERSION_REGEXP = /^(current|latest|suja|(?:\d+(?:\.[\dx]+){0,2}))$/;
 
 export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> extends EventEmitter<DiscloudConfigEventMap> {
   static readonly filename = "discloud.config";
@@ -115,6 +117,66 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
       .filter(key => !this.data[<keyof DiscloudConfigType>key]);
   }
 
+  get isValid() {
+    return this.exists && !this.missingProps.length && this.#isValidTYPE;
+  }
+
+  get #isValidTYPE() {
+    switch (this.data.TYPE) {
+      case "bot":
+        return this.data.MAIN && this.existsMain && this.#isValidRAM && this.#isValidVERSION && this.#isValidNAME;
+
+      case "site":
+        return this.data.MAIN && this.existsMain && this.#isValidRAM && this.#isValidVERSION && this.#isValidID;
+
+      default:
+        return false;
+    }
+  }
+
+  get #isValidID() {
+    switch (this.data.TYPE) {
+      case "bot":
+        return true;
+
+      case "site":
+        return this.data.ID.length > 0;
+
+      default:
+        return false;
+    }
+  }
+
+  get #isValidNAME() {
+    switch (this.data.TYPE) {
+      case "bot":
+        return this.data.NAME && this.data.NAME.length <= 30;
+
+      case "site":
+        return true;
+
+      default:
+        return false;
+    }
+  }
+
+  get #isValidRAM() {
+    switch (this.data.TYPE) {
+      case "bot":
+        return this.data.RAM >= 100;
+
+      case "site":
+        return this.data.RAM >= 512;
+
+      default:
+        return false;
+    }
+  }
+
+  get #isValidVERSION() {
+    return this.data.VERSION && VERSION_REGEXP.test(this.data.VERSION);
+  }
+
   get #requiredProps() {
     return discloudConfigRequiredScopes[this.data.TYPE] ??
       discloudConfigRequiredScopes.common;
@@ -129,8 +191,8 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
 
     if (typeof obj === "object") {
       if (Array.isArray(obj)) {
-        for (const value of obj) {
-          result.push(this.#objToString(value));
+        for (let i = 0; i < obj.length; i++) {
+          result.push(this.#objToString(obj[i]));
         }
       } else {
         for (const key in obj) {
@@ -154,36 +216,24 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
       .map(line => line.split("="))));
   }
 
-  readonly #nonProcessScopes = new Set([
-    DiscloudConfigScopes.APT,
-    DiscloudConfigScopes.AVATAR,
-    DiscloudConfigScopes.BUILD,
-    DiscloudConfigScopes.ID,
-    DiscloudConfigScopes.MAIN,
-    DiscloudConfigScopes.NAME,
-    DiscloudConfigScopes.START,
-    DiscloudConfigScopes.TYPE,
-    DiscloudConfigScopes.VERSION,
-  ]);
-
-  readonly #booleanStringValues = new Set(["true", "false"]);
-
   #processValues(obj: any) {
     if (typeof obj !== "object" || obj === null) return obj;
 
     for (const key in obj) {
-      if (this.#nonProcessScopes.has(key as DiscloudConfigScopes)) continue;
-
       const value = obj[key];
 
-      if (!isNaN(Number(value))) {
-        obj[key] = Number(value);
-        continue;
-      }
-
-      if (this.#booleanStringValues.has(obj[key])) {
-        obj[key] = value == "true";
-        continue;
+      switch (key) {
+        case "APT":
+          obj[key] = value.split(/\s*,\s*/g).filter(Boolean);
+          continue;
+        case "AUTORESTART":
+          if (["true", "false"].includes(value))
+            obj[key] = value == "true";
+          continue;
+        case "RAM":
+          if (!isNaN(Number(value)))
+            obj[key] = Number(value);
+          continue;
       }
     }
 
