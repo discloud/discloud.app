@@ -149,7 +149,7 @@ await discloud.apps.terminal(/* "all" | undefined */); // Promise<Map<string, Ap
 ```js
 const { discloud } = require("discloud.app");
 
-await discloud.apps.console("APP_ID", "bash command"); // Promise<string>
+await discloud.apps.console("APP_ID", "bash command"); // Promise<ApiConsoleAppShell>
 ```
 
 ### How to `backup` apps
