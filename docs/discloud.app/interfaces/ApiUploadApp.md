@@ -1,0 +1,109 @@
+[**discloud.app**](../README.md)
+
+***
+
+[Documentation](../../packages.md) / [discloud.app](../README.md) / ApiUploadApp
+
+# Interface: ApiUploadApp
+
+Defined in: [packages/api-types/rest/v2/upload.ts:33](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L33)
+
+## Properties
+
+### addedAtTimestamp
+
+> **addedAtTimestamp**: `number`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:69](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L69)
+
+The timestamp of the upload of your application
+
+***
+
+### autoRestart
+
+> **autoRestart**: `boolean`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:73](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L73)
+
+If your application has auto-restart enabled
+
+***
+
+### avatarURL
+
+> **avatarURL**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:49](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L49)
+
+Your app's avatar url
+
+***
+
+### id
+
+> **id**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:37](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L37)
+
+Your app id
+
+***
+
+### lang
+
+> **lang**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:61](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L61)
+
+The programming language of your app
+
+***
+
+### mainFile
+
+> **mainFile**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:57](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L57)
+
+The main file path of your app
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:45](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L45)
+
+Your app's name
+
+***
+
+### ram
+
+> **ram**: `number`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:53](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L53)
+
+RAM quantity for your app
+
+***
+
+### type
+
+> **type**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:41](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L41)
+
+Your app's type
+
+***
+
+### version
+
+> **version**: `string`
+
+Defined in: [packages/api-types/rest/v2/upload.ts:65](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/upload.ts#L65)
+
+The version of the package
