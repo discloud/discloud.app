@@ -6,7 +6,7 @@
 
 # Class: `abstract` Routes
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L7)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L7)
 
 ## Constructors
 
@@ -24,7 +24,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:7](https://github.com/di
 
 > `static` **app**: \<`appID`\>(`appID`) => `` `/app/${appID}` `` = `App.app`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L9)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:9](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L9)
 
 - GET - `/app/{appID}`
 
@@ -48,7 +48,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:9](https://github.com/di
 
 > `static` **appApt**: \<`appID`\>(`appID`) => `` `/app/${appID}/apt` `` = `App.apt`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L10)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L10)
 
 - PUT - `/app/{appID}/apt`
 - DELETE - `/app/{appID}/apt`
@@ -73,7 +73,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:10](https://github.com/d
 
 > `static` **appBackup**: \<`appID`\>(`appID`) => `` `/app/${appID}/backup` `` = `App.backup`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L11)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L11)
 
 - GET - `/app/{appID}/backup`
 
@@ -97,7 +97,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:11](https://github.com/d
 
 > `static` **appCommit**: \<`appID`\>(`appID`) => `` `/app/${appID}/commit` `` = `App.commit`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L12)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L12)
 
 - PUT - `/app/{appID}/commit`
 
@@ -121,7 +121,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:12](https://github.com/d
 
 > `static` **appConsole**: \<`appID`\>(`appID`) => `` `/app/${appID}/console` `` = `App.console`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L13)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:13](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L13)
 
 - PUT - `/app/{appID}/console`
 
@@ -145,7 +145,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:13](https://github.com/d
 
 > `static` **appDelete**: \<`appID`\>(`appID`) => `` `/app/${appID}/delete` `` = `App.delete`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L14)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:14](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L14)
 
 - DELETE - `/app/{appID}/delete`
 
@@ -169,7 +169,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:14](https://github.com/d
 
 > `static` **appLogs**: \<`appID`\>(`appID`) => `` `/app/${appID}/logs` `` = `App.logs`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L15)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:15](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L15)
 
 - GET - `/app/{appID}/logs`
 
@@ -193,7 +193,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:15](https://github.com/d
 
 > `static` **appProfile**: \<`appID`\>(`appID`) => `` `/app/${appID}/profile` `` = `App.profile`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L16)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:16](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L16)
 
 - PUT - `/app/{appID}/profile`
 
@@ -217,7 +217,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:16](https://github.com/d
 
 > `static` **appRam**: \<`appID`\>(`appID`) => `` `/app/${appID}/ram` `` = `App.ram`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L17)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:17](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L17)
 
 - PUT - `/app/{appID}/ram`
 
@@ -241,7 +241,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:17](https://github.com/d
 
 > `static` **appRestart**: \<`appID`\>(`appID`) => `` `/app/${appID}/restart` `` = `App.restart`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L18)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L18)
 
 - PUT - `/app/{appID}/restart`
 
@@ -265,7 +265,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:18](https://github.com/d
 
 > `static` **appStart**: \<`appID`\>(`appID`) => `` `/app/${appID}/start` `` = `App.start`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L19)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L19)
 
 - PUT - `/app/{appID}/start`
 
@@ -289,7 +289,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:19](https://github.com/d
 
 > `static` **appStatus**: \<`appID`\>(`appID`) => `` `/app/${appID}/status` `` = `App.status`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L20)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:20](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L20)
 
 - GET - `/app/{appID}/status`
 
@@ -313,7 +313,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:20](https://github.com/d
 
 > `static` **appStop**: \<`appID`\>(`appID`) => `` `/app/${appID}/stop` `` = `App.stop`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L21)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:21](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L21)
 
 - PUT - `/app/{appID}/stop`
 
@@ -337,7 +337,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:21](https://github.com/d
 
 > `static` **appTeam**: \<`appID`\>(`appID`) => `` `/app/${appID}/team` ``\<`appID`, `modID`\>(`appID`, `modID`) => `` `/app/${appID}/team/${modID}` `` = `App.team`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:22](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L22)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:22](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L22)
 
 - GET - `/app/{appID}/team`
 - POST - `/app/{appID}/team`
@@ -389,7 +389,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:22](https://github.com/d
 
 > `static` **locale**: \<`locale`\>(`locale`) => `` `/locale/${locale}` `` = `Locale.locale`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L25)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:25](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L25)
 
 - PUT - `/locale/{locale}`
 
@@ -413,7 +413,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:25](https://github.com/d
 
 > `static` **team**: () => `"/team"` = `Team.team`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L28)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:28](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L28)
 
 - GET - `/team`
 
@@ -427,7 +427,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:28](https://github.com/d
 
 > `static` **teamBackup**: \<`appID`\>(`appID`) => `` `/team/${appID}/backup` `` = `Team.backup`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L29)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:29](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L29)
 
 - GET - `/app/{appID}/backup`
 
@@ -451,7 +451,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:29](https://github.com/d
 
 > `static` **teamCommit**: \<`appID`\>(`appID`) => `` `/team/${appID}/commit` `` = `Team.commit`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L30)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:30](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L30)
 
 - PUT - `/app/{appID}/commit`
 
@@ -475,7 +475,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:30](https://github.com/d
 
 > `static` **teamLogs**: \<`appID`\>(`appID`) => `` `/team/${appID}/logs` `` = `Team.logs`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L31)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:31](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L31)
 
 - GET - `/team/{appID}/logs`
 
@@ -499,7 +499,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:31](https://github.com/d
 
 > `static` **teamRam**: \<`appID`\>(`appID`) => `` `/team/${appID}/ram` `` = `Team.ram`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L32)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:32](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L32)
 
 - PUT - `/team/{appID}/ram`
 
@@ -523,7 +523,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:32](https://github.com/d
 
 > `static` **teamRestart**: \<`appID`\>(`appID`) => `` `/team/${appID}/restart` `` = `Team.restart`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L33)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L33)
 
 - PUT - `/app/{appID}/restart`
 
@@ -547,7 +547,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:33](https://github.com/d
 
 > `static` **teamStart**: \<`appID`\>(`appID`) => `` `/team/${appID}/start` `` = `Team.start`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L34)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:34](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L34)
 
 - PUT - `/app/{appID}/start`
 
@@ -571,7 +571,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:34](https://github.com/d
 
 > `static` **teamStatus**: \<`appID`\>(`appID`) => `` `/team/${appID}/status` `` = `Team.status`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L35)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:35](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L35)
 
 - PUT - `/app/{appID}/status`
 
@@ -595,7 +595,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:35](https://github.com/d
 
 > `static` **teamStop**: \<`appID`\>(`appID`) => `` `/team/${appID}/stop` `` = `Team.stop`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:36](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L36)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:36](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L36)
 
 - PUT - `/app/{appID}/stop`
 
@@ -619,7 +619,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:36](https://github.com/d
 
 > `static` **upload**: () => `"/upload"` = `Upload.upload`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L39)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:39](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L39)
 
 - POST - `/upload`
 
@@ -633,7 +633,7 @@ Defined in: [packages/api-types/rest/v2/routes/index.ts:39](https://github.com/d
 
 > `static` **user**: () => `"/user"` = `User.user`
 
-Defined in: [packages/api-types/rest/v2/routes/index.ts:42](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/routes/index.ts#L42)
+Defined in: [packages/api-types/rest/v2/routes/index.ts:42](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/routes/index.ts#L42)
 
 - GET - `/user`
 

@@ -6,7 +6,7 @@
 
 # Class: ModPermissionsBF
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L18)
+Defined in: [packages/util/src/ModPermissionsBF.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L18)
 
 Data structure that makes it easy to interact with a bitfield.
 
@@ -20,7 +20,7 @@ Data structure that makes it easy to interact with a bitfield.
 
 > **new ModPermissionsBF**(...`bits`): [`ModPermissionsBF`](ModPermissionsBF.md)
 
-Defined in: [packages/util/src/BitField.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L31)
+Defined in: [packages/util/src/BitField.ts:31](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L31)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/util/src/BitField.ts:31](https://github.com/discloud/discl
 
 > **bitField**: `number`
 
-Defined in: [packages/util/src/BitField.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L16)
+Defined in: [packages/util/src/BitField.ts:16](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L16)
 
 Bitfield of the packed bits
 
@@ -56,7 +56,7 @@ Bitfield of the packed bits
 
 > **constructor**: [`BitFieldConstructor`](../interfaces/BitFieldConstructor.md)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `number`\>
 
-Defined in: [packages/util/src/BitField.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L12)
+Defined in: [packages/util/src/BitField.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L12)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/util/src/BitField.ts:12](https://github.com/discloud/discl
 
 > `readonly` `static` **All**: [`ModPermissionsBF`](ModPermissionsBF.md)
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:21](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L21)
+Defined in: [packages/util/src/ModPermissionsBF.ts:21](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L21)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:21](https://github.com/disclo
 
 > `readonly` `static` **DefaultBit**: `0` = `0`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L19)
+Defined in: [packages/util/src/ModPermissionsBF.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L19)
 
 #### Overrides
 
@@ -88,7 +88,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:19](https://github.com/disclo
 
 > `readonly` `static` **Flags**: *typeof* [`ModPermissionsFlags`](../enumerations/ModPermissionsFlags.md) = `ModPermissionsFlags`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:20](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L20)
+Defined in: [packages/util/src/ModPermissionsBF.ts:20](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L20)
 
 Numeric bitfield flags.
 Defined in extension classes
@@ -103,7 +103,7 @@ Defined in extension classes
 
 > **\[iterator\]**(): `Generator`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `void`, `unknown`\>
 
-Defined in: [packages/util/src/BitField.ts:157](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L157)
+Defined in: [packages/util/src/BitField.ts:157](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L157)
 
 #### Returns
 
@@ -119,7 +119,7 @@ Defined in: [packages/util/src/BitField.ts:157](https://github.com/discloud/disc
 
 > **add**(...`bits`): `this`
 
-Defined in: [packages/util/src/BitField.ts:40](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L40)
+Defined in: [packages/util/src/BitField.ts:40](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L40)
 
 Adds bits to these ones.
 
@@ -147,7 +147,7 @@ These bits or new BitField if the instance is frozen.
 
 > **any**(...`bits`): `boolean`
 
-Defined in: [packages/util/src/BitField.ts:57](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L57)
+Defined in: [packages/util/src/BitField.ts:57](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L57)
 
 Checks whether the bitfield has a bit, or any of multiple bits.
 
@@ -173,7 +173,7 @@ Bit(s) to check for
 
 > **equals**(...`bits`): `boolean`
 
-Defined in: [packages/util/src/BitField.ts:65](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L65)
+Defined in: [packages/util/src/BitField.ts:65](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L65)
 
 Checks if this bitfield equals another
 
@@ -199,7 +199,7 @@ Bit(s) to check for
 
 > **freeze**(): `Readonly`\<[`ModPermissionsBF`](ModPermissionsBF.md)\>
 
-Defined in: [packages/util/src/BitField.ts:72](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L72)
+Defined in: [packages/util/src/BitField.ts:72](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L72)
 
 Freezes these bits, making them immutable.
 
@@ -217,7 +217,7 @@ Freezes these bits, making them immutable.
 
 > **has**(...`bits`): `boolean`
 
-Defined in: [packages/util/src/BitField.ts:80](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L80)
+Defined in: [packages/util/src/BitField.ts:80](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L80)
 
 Checks whether the bitfield has a bit, or multiple bits.
 
@@ -243,7 +243,7 @@ Bit(s) to check for
 
 > **missing**(...`bits`): (`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`)[]
 
-Defined in: [packages/util/src/BitField.ts:89](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L89)
+Defined in: [packages/util/src/BitField.ts:89](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L89)
 
 Gets all given bits that are missing from the bitfield.
 
@@ -269,7 +269,7 @@ Bit(s) to check for
 
 > **remove**(...`bits`): `this`
 
-Defined in: [packages/util/src/BitField.ts:98](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L98)
+Defined in: [packages/util/src/BitField.ts:98](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L98)
 
 Removes bits from these.
 
@@ -297,7 +297,7 @@ These bits or new BitField if the instance is frozen.
 
 > **serialize**(): `Record`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
 
-Defined in: [packages/util/src/BitField.ts:115](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L115)
+Defined in: [packages/util/src/BitField.ts:115](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L115)
 
 Gets an object mapping field names to a boolean indicating whether the
 bit is available.
@@ -316,7 +316,7 @@ bit is available.
 
 > **set**(...`bits`): `this`
 
-Defined in: [packages/util/src/BitField.ts:129](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L129)
+Defined in: [packages/util/src/BitField.ts:129](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L129)
 
 Replace the bits with these.
 
@@ -344,7 +344,7 @@ These bits or new BitField if the instance is frozen.
 
 > **toArray**(): (`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`)[]
 
-Defined in: [packages/util/src/BitField.ts:141](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L141)
+Defined in: [packages/util/src/BitField.ts:141](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L141)
 
 Gets an Array of bitfield names based on the bits available.
 
@@ -362,7 +362,7 @@ Gets an Array of bitfield names based on the bits available.
 
 > **toJSON**(): `string` \| `number`
 
-Defined in: [packages/util/src/BitField.ts:145](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L145)
+Defined in: [packages/util/src/BitField.ts:145](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L145)
 
 #### Returns
 
@@ -378,7 +378,7 @@ Defined in: [packages/util/src/BitField.ts:145](https://github.com/discloud/disc
 
 > **toString**(): `string`
 
-Defined in: [packages/util/src/BitField.ts:149](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L149)
+Defined in: [packages/util/src/BitField.ts:149](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L149)
 
 #### Returns
 
@@ -394,7 +394,7 @@ Defined in: [packages/util/src/BitField.ts:149](https://github.com/discloud/disc
 
 > **valueOf**(): `number`
 
-Defined in: [packages/util/src/BitField.ts:153](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L153)
+Defined in: [packages/util/src/BitField.ts:153](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L153)
 
 #### Returns
 
@@ -410,7 +410,7 @@ Defined in: [packages/util/src/BitField.ts:153](https://github.com/discloud/disc
 
 > `static` **resolve**\<`S`, `N`\>(`bit`): `N`
 
-Defined in: [packages/util/src/BitField.ts:168](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/BitField.ts#L168)
+Defined in: [packages/util/src/BitField.ts:168](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/BitField.ts#L168)
 
 Resolves bitfields to their numeric form.
 

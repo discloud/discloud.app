@@ -6,7 +6,7 @@
 
 # Class: IgnoreFiles
 
-Defined in: [packages/util/src/IgnoreFiles.ts:26](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L26)
+Defined in: [packages/util/src/IgnoreFiles.ts:26](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L26)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:26](https://github.com/discloud/di
 
 > **new IgnoreFiles**(`options`): [`IgnoreFiles`](IgnoreFiles.md)
 
-Defined in: [packages/util/src/IgnoreFiles.ts:32](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L32)
+Defined in: [packages/util/src/IgnoreFiles.ts:32](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L32)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:32](https://github.com/discloud/di
 
 > `readonly` **fileName**: `string`
 
-Defined in: [packages/util/src/IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L27)
+Defined in: [packages/util/src/IgnoreFiles.ts:27](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L27)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:27](https://github.com/discloud/di
 
 > `readonly` **filesIgnore**: `Set`\<`string`\>
 
-Defined in: [packages/util/src/IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L28)
+Defined in: [packages/util/src/IgnoreFiles.ts:28](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L28)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:28](https://github.com/discloud/di
 
 > `readonly` **list**: `string`[] = `allBlockedFiles`
 
-Defined in: [packages/util/src/IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L29)
+Defined in: [packages/util/src/IgnoreFiles.ts:29](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L29)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:29](https://github.com/discloud/di
 
 > `readonly` **paths**: `Set`\<`string`\>
 
-Defined in: [packages/util/src/IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L30)
+Defined in: [packages/util/src/IgnoreFiles.ts:30](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L30)
 
 ## Methods
 
@@ -64,7 +64,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:30](https://github.com/discloud/di
 
 > **processIgnoreFiles**(`files`): `string`[]
 
-Defined in: [packages/util/src/IgnoreFiles.ts:103](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L103)
+Defined in: [packages/util/src/IgnoreFiles.ts:103](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L103)
 
 #### Parameters
 
@@ -82,7 +82,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:103](https://github.com/discloud/d
 
 > `static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `Set`\<`string`\>
 
-Defined in: [packages/util/src/IgnoreFiles.ts:56](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L56)
+Defined in: [packages/util/src/IgnoreFiles.ts:56](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L56)
 
 #### Parameters
 
@@ -108,7 +108,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:56](https://github.com/discloud/di
 
 > `static` **normalizeIgnore**(`ignore`, `path`): `string`
 
-Defined in: [packages/util/src/IgnoreFiles.ts:70](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L70)
+Defined in: [packages/util/src/IgnoreFiles.ts:70](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L70)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:70](https://github.com/discloud/di
 
 > `static` **normalizePath**(`path`): `string`
 
-Defined in: [packages/util/src/IgnoreFiles.ts:74](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L74)
+Defined in: [packages/util/src/IgnoreFiles.ts:74](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L74)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:74](https://github.com/discloud/di
 
 > `static` **normalizePaths**(`paths`): `string`[]
 
-Defined in: [packages/util/src/IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L78)
+Defined in: [packages/util/src/IgnoreFiles.ts:78](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L78)
 
 #### Parameters
 
@@ -166,7 +166,7 @@ Defined in: [packages/util/src/IgnoreFiles.ts:78](https://github.com/discloud/di
 
 > `static` **processIgnoreFile**(`file`): `string`[]
 
-Defined in: [packages/util/src/IgnoreFiles.ts:86](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L86)
+Defined in: [packages/util/src/IgnoreFiles.ts:86](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L86)
 
 #### Parameters
 

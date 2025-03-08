@@ -6,7 +6,7 @@
 
 # Class: AppManager
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:17](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L17)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:17](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L17)
 
 Manager for apps on Discloud
 
@@ -20,7 +20,7 @@ Manager for apps on Discloud
 
 > **new AppManager**(`discloudApp`): [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L18)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L18)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/discloud.app/src/managers/AppManager.ts:18](https://github
 
 > `protected` `readonly` **\_cache**: `Map`\<`string`, [`App`](App.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > `protected` `readonly` **holds**: *typeof* [`App`](App.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 #### Inherited from
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://githu
 
 > **get** **cache**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L25)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://githu
 
 > `protected` **\_add**(`data`): [`App`](App.md)
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L19)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L19)
 
 #### Parameters
 
@@ -118,7 +118,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://git
 
 > `protected` **\_addMany**(`data`): `Map`\<`string`, [`App`](App.md)\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L33)
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://git
 
 > `protected` **\_clear**(`data`?): `void`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L45)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L45)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://git
 
 > `protected` **\_delete**(`id`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L58)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L58)
 
 #### Parameters
 
@@ -184,7 +184,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://git
 
 > `protected` **\_deleteMany**(`ids`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L64)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L64)
 
 #### Parameters
 
@@ -208,7 +208,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://git
 
 > **backup**(`appID`): `Promise`\<[`AppBackup`](AppBackup.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:95](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L95)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:95](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L95)
 
 Get backups of your application on Discloud
 
@@ -228,7 +228,7 @@ Your app id
 
 > **backup**(`appID`?): `Promise`\<`Map`\<`string`, [`AppBackup`](AppBackup.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:96](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L96)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:96](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L96)
 
 Get backups of your application on Discloud
 
@@ -248,9 +248,9 @@ Your app id
 
 ### console()
 
-> **console**(`appID`, `command`): `Promise`\<`string`\>
+> **console**(`appID`, `command`): `Promise`\<[`ApiConsoleAppShell`](../interfaces/ApiConsoleAppShell.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:54](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L54)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:54](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L54)
 
 Send a command to your app's terminal
 
@@ -270,7 +270,7 @@ The command
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise`\<[`ApiConsoleAppShell`](../interfaces/ApiConsoleAppShell.md)\>
 
 ***
 
@@ -278,7 +278,7 @@ The command
 
 > **create**(`options`): `Promise`\<[`RESTPostApiUploadErrorResult`](../interfaces/RESTPostApiUploadErrorResult.md) \| [`RESTPostApiUploadOkResult`](../interfaces/RESTPostApiUploadOkResult.md) & `object`\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:146](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L146)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:146](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L146)
 
 Upload a new app or site to Discloud
 
@@ -302,7 +302,7 @@ Options for create a new app. A [FileResolvable](../type-aliases/FileResolvable.
 
 > **delete**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:185](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L185)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:185](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L185)
 
 Delete your application from Discloud.
 
@@ -322,7 +322,7 @@ Your app id
 
 > **delete**(`appID`?): `Promise`\<[`ApiAppManagerRemovedAll`](../interfaces/ApiAppManagerRemovedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:186](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L186)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:186](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L186)
 
 Delete your application from Discloud.
 
@@ -346,7 +346,7 @@ Your app id
 
 > **fetch**(`appID`): `Promise`\<[`App`](App.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:320](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L320)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:320](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L320)
 
 Get information of your application on Discloud.
 
@@ -366,7 +366,7 @@ You app id.
 
 > **fetch**(`appID`?): `Promise`\<`Map`\<`string`, [`App`](App.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:321](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L321)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:321](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L321)
 
 Get information of your application on Discloud.
 
@@ -388,7 +388,7 @@ You app id.
 
 > **profile**(`appID`, `options`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:212](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L212)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:212](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L212)
 
 Update the profile of your apps on Discloud.
 
@@ -422,7 +422,7 @@ Options to update your app.
 
 > **ram**(`appID`, `quantity`): `Promise`\<[`RESTPutApiAppRamResult`](../interfaces/RESTPutApiAppRamResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:122](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L122)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:122](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L122)
 
 Set the quantity of ram to your application
 
@@ -450,7 +450,7 @@ Minimum values is `100` to `bot` or `512` for `site`
 
 > **resolve**(`idOrInstance`): `null` \| [`App`](App.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L33)
 
 Resolves a data entry to a data Object.
 
@@ -476,7 +476,7 @@ The id or instance of something in this Manager
 
 > **resolveId**(`idOrInstance`): `any`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L39)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 #### Parameters
 
@@ -500,7 +500,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://githu
 
 > **restart**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:230](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L230)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:230](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L230)
 
 Restart your application on Discloud
 
@@ -520,7 +520,7 @@ You app id
 
 > **restart**(`appID`?): `Promise`\<[`ApiAppManagerRestartedAll`](../interfaces/ApiAppManagerRestartedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:231](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L231)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:231](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L231)
 
 Restart your application on Discloud
 
@@ -544,7 +544,7 @@ You app id
 
 > **start**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:260](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L260)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:260](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L260)
 
 Start your application on Discloud
 
@@ -564,7 +564,7 @@ You app id
 
 > **start**(`appID`?): `Promise`\<[`ApiAppManagerStartedAll`](../interfaces/ApiAppManagerStartedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:261](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L261)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:261](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L261)
 
 Start your application on Discloud
 
@@ -588,7 +588,7 @@ You app id
 
 > **status**(`appID`): `Promise`\<[`AppStatus`](AppStatus.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:27](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L27)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:27](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L27)
 
 Get the status of your application on Discloud
 
@@ -608,7 +608,7 @@ Your app id
 
 > **status**(`appID`?): `Promise`\<`Map`\<`string`, [`AppStatus`](AppStatus.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:28](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L28)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:28](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L28)
 
 Get the status of your application on Discloud
 
@@ -632,7 +632,7 @@ Your app id
 
 > **stop**(`appID`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:290](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L290)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:290](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L290)
 
 Stop your application on Discloud
 
@@ -652,7 +652,7 @@ You app id
 
 > **stop**(`appID`?): `Promise`\<[`ApiAppManagerStopedAll`](../interfaces/ApiAppManagerStopedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:291](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L291)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:291](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L291)
 
 Stop your application on Discloud
 
@@ -676,7 +676,7 @@ You app id
 
 > **terminal**(`appID`): `Promise`\<[`ApiTerminal`](../interfaces/ApiTerminal.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:69](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L69)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:69](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L69)
 
 Get logs of your application on Discloud
 
@@ -696,7 +696,7 @@ Your app id
 
 > **terminal**(`appID`?): `Promise`\<`Map`\<`string`, [`ApiTerminal`](../interfaces/ApiTerminal.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:70](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L70)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:70](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L70)
 
 Get logs of your application on Discloud
 
@@ -718,7 +718,7 @@ Your app id
 
 > **update**(`appID`, `options`): `Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/RESTPutApiAppCommitResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppManager.ts:168](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/AppManager.ts#L168)
+Defined in: [packages/discloud.app/src/managers/AppManager.ts:168](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/AppManager.ts#L168)
 
 Update an of your apps on Discloud.
 
@@ -746,7 +746,7 @@ Options to update your app.
 
 > **valueOf**(): `Map`\<`string`, [`App`](App.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L46)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L46)
 
 Returns the primitive value of the specified object.
 

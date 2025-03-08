@@ -6,7 +6,7 @@
 
 # Interface: ApiAppTeamManager
 
-Defined in: [rest/v2/app.ts:338](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L338)
+Defined in: [rest/v2/app.ts:339](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L339)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/app.ts:338](https://github.com/discloud/discloud.app/blob/b
 
 > **appID**: `string`
 
-Defined in: [rest/v2/app.ts:342](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L342)
+Defined in: [rest/v2/app.ts:343](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L343)
 
 Your team application id
 
@@ -28,7 +28,7 @@ Your team application id
 
 > **modID**: `string`
 
-Defined in: [rest/v2/app.ts:162](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L162)
+Defined in: [rest/v2/app.ts:162](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L162)
 
 Moderator ID
 
@@ -42,7 +42,7 @@ Moderator ID
 
 > **perms**: `string`[]
 
-Defined in: [rest/v2/app.ts:166](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L166)
+Defined in: [rest/v2/app.ts:166](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L166)
 
 Moderator permissions
 

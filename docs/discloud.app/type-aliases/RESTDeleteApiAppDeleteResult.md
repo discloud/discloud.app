@@ -8,4 +8,4 @@
 
 > **RESTDeleteApiAppDeleteResult**: [`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)
 
-Defined in: [packages/api-types/rest/v2/app.ts:277](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L277)
+Defined in: [packages/api-types/rest/v2/app.ts:278](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L278)

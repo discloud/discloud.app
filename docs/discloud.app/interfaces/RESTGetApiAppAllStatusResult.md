@@ -6,7 +6,7 @@
 
 # Interface: RESTGetApiAppAllStatusResult
 
-Defined in: [packages/api-types/rest/v2/app.ts:222](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L222)
+Defined in: [packages/api-types/rest/v2/app.ts:223](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L223)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:222](https://github.com/discloud/
 
 > **apps**: [`ApiStatusApp`](ApiStatusApp.md)[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:226](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L226)
+Defined in: [packages/api-types/rest/v2/app.ts:227](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L227)
 
 Status of all of your applications
 
@@ -28,7 +28,7 @@ Status of all of your applications
 
 > **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -43,7 +43,7 @@ Message of the API
 
 > **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
 
-Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 

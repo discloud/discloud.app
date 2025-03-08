@@ -40,7 +40,7 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 ### headers
 
-> **headers**: `Record`\<`string`, `string`\>
+> **headers**: `undefined` \| `HeadersInit`
 
 Defined in: packages/rest/out/@types/index.d.ts:22
 

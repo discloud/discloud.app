@@ -6,11 +6,11 @@
 
 # Class: DiscloudApp
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
 
 ## Extends
 
-- `EventEmitter`\<[`ClientEvents`](../type-aliases/ClientEvents.md)\>
+- `EventEmitter`\<[`ClientEvents`](../interfaces/ClientEvents.md)\>
 
 ## Constructors
 
@@ -18,7 +18,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://gi
 
 > **new DiscloudApp**(`options`): [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://gi
 
 > `readonly` **appApt**: [`AppAptManager`](AppAptManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://gi
 
 > `readonly` **apps**: [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://gi
 
 > `readonly` **appTeam**: [`AppTeamManager`](AppTeamManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://gi
 
 > `readonly` **options**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://gi
 
 > `readonly` **rest**: [`REST`](REST.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://gi
 
 > `readonly` **teamApps**: [`TeamAppManager`](TeamAppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://gi
 
 > `readonly` **user**: [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
 
 ***
 
@@ -211,7 +211,7 @@ v13.6.0, v12.17.0
 
 > **get** **token**(): `string`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L46)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L46)
 
 ##### Returns
 
@@ -237,11 +237,11 @@ Defined in: node\_modules/@types/node/events.d.ts:136
 
 ##### event
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] : `never`
 
 #### Returns
 
@@ -269,11 +269,11 @@ Alias for `emitter.on(eventName, listener)`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -341,11 +341,11 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] : `never`
 
 #### Returns
 
@@ -441,11 +441,11 @@ in the list of the listeners of the event.
 
 The name of the event being listened for
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener?
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The event handler function
 
@@ -465,7 +465,7 @@ v3.2.0
 
 ### listeners()
 
-> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:787
 
@@ -487,11 +487,11 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -507,7 +507,7 @@ v0.1.26
 
 > **login**(`token`): `Promise`\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
 
 Login on Discloud API
 
@@ -541,11 +541,11 @@ Alias for `emitter.removeListener()`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -604,11 +604,11 @@ myEE.emit('foo');
 
 The name of the event.
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -667,11 +667,11 @@ myEE.emit('foo');
 
 The name of the event.
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -718,11 +718,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 The name of the event.
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -767,11 +767,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 The name of the event.
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -791,7 +791,7 @@ v6.0.0
 
 ### rawListeners()
 
-> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:818
 
@@ -831,11 +831,11 @@ emitter.emit('log');
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -975,11 +975,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof ClientEvents | `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`ClientEvents`](../interfaces/ClientEvents.md) ? [`ClientEvents`](../interfaces/ClientEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 

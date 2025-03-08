@@ -8,7 +8,7 @@
 
 > `const` **discloud**: [`DiscloudApp`](../classes/DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/index.ts#L79)
+Defined in: [packages/discloud.app/src/index.ts:79](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/index.ts#L79)
 
 This is an instance of [DiscloudApp](../classes/DiscloudApp.md)
 

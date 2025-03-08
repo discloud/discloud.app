@@ -6,6 +6,6 @@
 
 # Type Alias: RequestOptions
 
-> **RequestOptions**: `Parameters`\<*typeof* `fetch`\>\[`1`\]
+> **RequestOptions**: `NonNullable`\<`Parameters`\<*typeof* `fetch`\>\[`1`\]\>
 
 Defined in: packages/rest/out/@types/index.d.ts:4

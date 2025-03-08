@@ -8,6 +8,10 @@
 
 Defined in: packages/rest/out/@types/index.d.ts:75
 
+## Extended by
+
+- [`ClientEvents`](ClientEvents.md)
+
 ## Properties
 
 ### error

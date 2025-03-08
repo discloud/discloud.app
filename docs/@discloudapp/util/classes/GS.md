@@ -6,7 +6,7 @@
 
 # Class: GS
 
-Defined in: [packages/util/src/GS.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/GS.ts#L6)
+Defined in: [packages/util/src/GS.ts:6](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/GS.ts#L6)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/GS.ts:6](https://github.com/discloud/discloud.app
 
 > **new GS**(`pattern`, `ignoreFileName`?, `optionalIgnoreList`?): [`GS`](GS.md)
 
-Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/GS.ts#L10)
+Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/GS.ts#L10)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.ap
 
 > `readonly` **found**: `string`[] = `[]`
 
-Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/GS.ts#L7)
+Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/GS.ts#L7)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app
 
 > `readonly` **ignore**: [`IgnoreFiles`](IgnoreFiles.md)
 
-Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/GS.ts#L8)
+Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/GS.ts#L8)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app
 
 > **pattern**: `string` \| `string`[]
 
-Defined in: [packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/GS.ts#L11)
+Defined in: [packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/GS.ts#L11)

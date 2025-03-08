@@ -14,7 +14,6 @@
 ## Classes
 
 - [DiscloudAPIError](classes/DiscloudAPIError.md)
-- [RequestManager](classes/RequestManager.md)
 - [REST](classes/REST.md)
 
 ## Interfaces

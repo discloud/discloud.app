@@ -38,7 +38,7 @@ File to be attached to this request
 
 ### headers?
 
-> `optional` **headers**: `Record`\<`string`, `string`\>
+> `optional` **headers**: `HeadersInit`
 
 Defined in: packages/rest/out/@types/index.d.ts:53
 

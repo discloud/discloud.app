@@ -6,7 +6,7 @@
 
 # Class: AppApt
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L5)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L5)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new AppApt**(`discloudApp`, `data`): [`AppApt`](AppApt.md)
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L8)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L8)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.co
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L6)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L6)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.co
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<[`AppApt`](AppApt.md)\>
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L5)
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L5)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -78,7 +78,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -94,7 +94,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L14)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L14)
 
 #### Parameters
 
@@ -116,7 +116,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.c
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -138,7 +138,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **install**(`apt`): `Promise`\<[`RESTPutApiAppAptResult`](../interfaces/RESTPutApiAppAptResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L18)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L18)
 
 #### Parameters
 
@@ -156,7 +156,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:18](https://github.c
 
 > **uninstall**(`apt`): `Promise`\<[`RESTDeleteApiAppAptResult`](../interfaces/RESTDeleteApiAppAptResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:22](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/AppApt.ts#L22)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:22](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/AppApt.ts#L22)
 
 #### Parameters
 

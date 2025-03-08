@@ -6,7 +6,7 @@
 
 # Interface: ApiAppManagerStopedAll
 
-Defined in: [packages/api-types/rest/v2/app.ts:119](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L119)
+Defined in: [packages/api-types/rest/v2/app.ts:119](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L119)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:119](https://github.com/discloud/
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L87)
+Defined in: [packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L87)
 
 Which of your applications are currently `processing`
 
@@ -32,7 +32,7 @@ Which of your applications are currently `processing`
 
 > **alreadyOffline**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L91)
+Defined in: [packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L91)
 
 Which of your applications are currently `offline`
 
@@ -46,6 +46,6 @@ Which of your applications are currently `offline`
 
 > **stoped**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:123](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L123)
+Defined in: [packages/api-types/rest/v2/app.ts:123](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L123)
 
 Which of your applications have been `stoped`

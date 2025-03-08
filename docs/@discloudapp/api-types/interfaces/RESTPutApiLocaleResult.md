@@ -6,7 +6,7 @@
 
 # Interface: RESTPutApiLocaleResult
 
-Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/locale.ts#L3)
+Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/locale.ts#L3)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/
 
 > **locale**: `string`
 
-Defined in: [rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/locale.ts#L11)
+Defined in: [rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/locale.ts#L11)
 
 Your locale
 
@@ -24,7 +24,7 @@ Your locale
 
 > `optional` **localeList**: `string`[]
 
-Defined in: [rest/v2/locale.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/locale.ts#L19)
+Defined in: [rest/v2/locale.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/locale.ts#L19)
 
 List of locales in case you choose a wrong locale
 
@@ -34,7 +34,7 @@ List of locales in case you choose a wrong locale
 
 > `optional` **message**: `string`
 
-Defined in: [rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/locale.ts#L15)
+Defined in: [rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/locale.ts#L15)
 
 API message response
 
@@ -44,6 +44,6 @@ API message response
 
 > **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
 
-Defined in: [rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/locale.ts#L7)
+Defined in: [rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/locale.ts#L7)
 
 API status response

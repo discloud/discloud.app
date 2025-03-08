@@ -6,7 +6,7 @@
 
 # Class: REST
 
-Defined in: packages/rest/out/REST.d.ts:4
+Defined in: packages/rest/out/REST.d.ts:3
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: packages/rest/out/REST.d.ts:4
 
 > **new REST**(`options`?): [`REST`](REST.md)
 
-Defined in: packages/rest/out/REST.d.ts:6
+Defined in: packages/rest/out/REST.d.ts:22
 
 #### Parameters
 
@@ -36,9 +36,49 @@ Defined in: packages/rest/out/REST.d.ts:6
 
 ## Properties
 
-### requestManager
+### globalLimit
 
-> `readonly` **requestManager**: [`RequestManager`](RequestManager.md)
+> **globalLimit**: `number`
+
+Defined in: packages/rest/out/REST.d.ts:9
+
+The number of requests limit on the global bucket
+
+***
+
+### globalRemaining
+
+> **globalRemaining**: `number`
+
+Defined in: packages/rest/out/REST.d.ts:13
+
+The number of requests remaining in the global bucket
+
+***
+
+### globalReset
+
+> **globalReset**: `number`
+
+Defined in: packages/rest/out/REST.d.ts:17
+
+The seconds that the global bucket is reset
+
+***
+
+### globalTime
+
+> **globalTime**: `number`
+
+Defined in: packages/rest/out/REST.d.ts:21
+
+The time at which the last request was made
+
+***
+
+### options
+
+> `readonly` **options**: [`RESTOptions`](../interfaces/RESTOptions.md)
 
 Defined in: packages/rest/out/REST.d.ts:5
 
@@ -157,13 +197,45 @@ v13.6.0, v12.17.0
 
 ## Accessors
 
+### globalLimited
+
+#### Get Signature
+
+> **get** **globalLimited**(): `boolean`
+
+Defined in: packages/rest/out/REST.d.ts:27
+
+If the rate limit bucket is currently limited by its limit
+
+##### Returns
+
+`boolean`
+
+***
+
+### globalTimeToReset
+
+#### Get Signature
+
+> **get** **globalTimeToReset**(): `number`
+
+Defined in: packages/rest/out/REST.d.ts:31
+
+The time until queued requests can continue
+
+##### Returns
+
+`number`
+
+***
+
 ### token
 
 #### Get Signature
 
 > **get** **token**(): `string`
 
-Defined in: packages/rest/out/REST.d.ts:7
+Defined in: packages/rest/out/REST.d.ts:32
 
 ##### Returns
 
@@ -245,7 +317,7 @@ v0.1.26
 
 > **delete**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:27
+Defined in: packages/rest/out/REST.d.ts:52
 
 Runs a delete request from the api
 
@@ -386,7 +458,7 @@ v6.0.0
 
 > **get**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:20
+Defined in: packages/rest/out/REST.d.ts:45
 
 Runs a get request from the api
 
@@ -598,7 +670,7 @@ myEE.emit('foo');
 
 The name of the event.
 
-keyof RestEvents | `K`
+`K` | keyof RestEvents
 
 ##### listener
 
@@ -687,7 +759,7 @@ v0.3.0
 
 > **post**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:34
+Defined in: packages/rest/out/REST.d.ts:59
 
 Runs a post request from the api
 
@@ -819,7 +891,7 @@ v6.0.0
 
 > **put**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:41
+Defined in: packages/rest/out/REST.d.ts:66
 
 Runs a put request from the api
 
@@ -844,28 +916,6 @@ Optional request options
 #### Returns
 
 `Promise`\<`T`\>
-
-***
-
-### raw()
-
-> **raw**(`options`): `Promise`\<`Response`\>
-
-Defined in: packages/rest/out/REST.d.ts:53
-
-Runs a request from the API, yielding the raw Response object
-
-#### Parameters
-
-##### options
-
-[`InternalRequest`](../interfaces/InternalRequest.md)
-
-Request options
-
-#### Returns
-
-`Promise`\<`Response`\>
 
 ***
 
@@ -1075,32 +1125,6 @@ v0.1.26
 
 ***
 
-### request()
-
-> **request**\<`T`\>(`options`): `Promise`\<`T`\>
-
-Defined in: packages/rest/out/REST.d.ts:47
-
-Runs a request from the api
-
-#### Type Parameters
-
-• **T** = `any`
-
-#### Parameters
-
-##### options
-
-[`InternalRequest`](../interfaces/InternalRequest.md)
-
-Request options
-
-#### Returns
-
-`Promise`\<`T`\>
-
-***
-
 ### setMaxListeners()
 
 > **setMaxListeners**(`n`): `this`
@@ -1138,7 +1162,7 @@ v0.3.5
 
 > **setToken**(`token`): `this`
 
-Defined in: packages/rest/out/REST.d.ts:13
+Defined in: packages/rest/out/REST.d.ts:38
 
 Sets the authorization token that should be used for requests
 

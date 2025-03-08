@@ -6,7 +6,7 @@
 
 # Class: App
 
-Defined in: [packages/discloud.app/src/structures/App.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L8)
+Defined in: [packages/discloud.app/src/structures/App.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L8)
 
 Base for app structures
 
@@ -20,7 +20,7 @@ Base for app structures
 
 > **new App**(`discloudApp`, `data`): [`App`](App.md)
 
-Defined in: [packages/discloud.app/src/structures/App.ts:58](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L58)
+Defined in: [packages/discloud.app/src/structures/App.ts:58](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L58)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/App.ts:58](https://github.com/
 
 > `readonly` **apt**: [`AppApt`](AppApt.md)
 
-Defined in: [packages/discloud.app/src/structures/App.ts:54](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L54)
+Defined in: [packages/discloud.app/src/structures/App.ts:54](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L54)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/structures/App.ts:54](https://github.com/
 
 > **autoDeployGit**: `string`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L12)
+Defined in: [packages/discloud.app/src/structures/App.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L12)
 
 If your app has auto deploy on github enabled
 
@@ -64,7 +64,7 @@ If your app has auto deploy on github enabled
 
 > **autoRestart**: `boolean`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:16](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L16)
+Defined in: [packages/discloud.app/src/structures/App.ts:16](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L16)
 
 If your app has auto-restart enabled
 
@@ -74,7 +74,7 @@ If your app has auto-restart enabled
 
 > **avatarURL**: `string`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:20](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L20)
+Defined in: [packages/discloud.app/src/structures/App.ts:20](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L20)
 
 Your app's avatar url
 
@@ -84,7 +84,7 @@ Your app's avatar url
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<[`App`](App.md)\>
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L5)
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L5)
 
 #### Inherited from
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -108,7 +108,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > **exitCode**: `number`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:24](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L24)
+Defined in: [packages/discloud.app/src/structures/App.ts:24](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L24)
 
 Your app's exit code on stopping
 
@@ -118,7 +118,7 @@ Your app's exit code on stopping
 
 > `readonly` **id**: `string`
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:13](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L13)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:13](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L13)
 
 Your app id
 
@@ -132,7 +132,7 @@ Your app id
 
 > **lang**: `string`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:28](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L28)
+Defined in: [packages/discloud.app/src/structures/App.ts:28](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L28)
 
 Your app programming language
 
@@ -142,7 +142,7 @@ Your app programming language
 
 > **mainFile**: `string`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:32](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L32)
+Defined in: [packages/discloud.app/src/structures/App.ts:32](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L32)
 
 The main file of your application
 
@@ -152,7 +152,7 @@ The main file of your application
 
 > `readonly` **mods**: `Set`\<`string`\>
 
-Defined in: [packages/discloud.app/src/structures/App.ts:36](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L36)
+Defined in: [packages/discloud.app/src/structures/App.ts:36](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L36)
 
 Moderators IDs of your app
 
@@ -162,7 +162,7 @@ Moderators IDs of your app
 
 > **name**: `string`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:40](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L40)
+Defined in: [packages/discloud.app/src/structures/App.ts:40](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L40)
 
 The name of your application
 
@@ -172,7 +172,7 @@ The name of your application
 
 > **online**: `boolean`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:44](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L44)
+Defined in: [packages/discloud.app/src/structures/App.ts:44](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L44)
 
 If your app is online
 
@@ -182,7 +182,7 @@ If your app is online
 
 > **ram**: `number`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:48](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L48)
+Defined in: [packages/discloud.app/src/structures/App.ts:48](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L48)
 
 The ram quantity for your application
 
@@ -192,7 +192,7 @@ The ram quantity for your application
 
 > **ramKilled**: `boolean`
 
-Defined in: [packages/discloud.app/src/structures/App.ts:52](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L52)
+Defined in: [packages/discloud.app/src/structures/App.ts:52](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L52)
 
 If your application was stopped due to lack of RAM
 
@@ -202,7 +202,7 @@ If your application was stopped due to lack of RAM
 
 > `readonly` **status**: [`AppStatus`](AppStatus.md)
 
-Defined in: [packages/discloud.app/src/structures/App.ts:55](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L55)
+Defined in: [packages/discloud.app/src/structures/App.ts:55](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L55)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [packages/discloud.app/src/structures/App.ts:55](https://github.com/
 
 > `readonly` **team**: [`AppTeam`](AppTeam.md)
 
-Defined in: [packages/discloud.app/src/structures/App.ts:56](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L56)
+Defined in: [packages/discloud.app/src/structures/App.ts:56](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L56)
 
 ## Methods
 
@@ -218,7 +218,7 @@ Defined in: [packages/discloud.app/src/structures/App.ts:56](https://github.com/
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -234,7 +234,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): [`App`](App.md)
 
-Defined in: [packages/discloud.app/src/structures/App.ts:70](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/App.ts#L70)
+Defined in: [packages/discloud.app/src/structures/App.ts:70](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/App.ts#L70)
 
 #### Parameters
 
@@ -256,7 +256,7 @@ Defined in: [packages/discloud.app/src/structures/App.ts:70](https://github.com/
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -278,7 +278,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **backup**(): `Promise`\<[`AppBackup`](AppBackup.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:40](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L40)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:40](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L40)
 
 Get backups of your application on Discloud
 
@@ -294,9 +294,9 @@ Get backups of your application on Discloud
 
 ### console()
 
-> **console**(`command`): `Promise`\<`string`\>
+> **console**(`command`): `Promise`\<[`ApiConsoleAppShell`](../interfaces/ApiConsoleAppShell.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:49](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L49)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:49](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L49)
 
 Send a command to your app's terminal
 
@@ -310,7 +310,7 @@ The command
 
 #### Returns
 
-`Promise`\<`string`\>
+`Promise`\<[`ApiConsoleAppShell`](../interfaces/ApiConsoleAppShell.md)\>
 
 #### Inherited from
 
@@ -322,7 +322,7 @@ The command
 
 > **delete**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:63](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L63)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:63](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L63)
 
 Delete your application from Discloud.
 
@@ -340,7 +340,7 @@ Delete your application from Discloud.
 
 > **profile**(`options`): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:67](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L67)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:67](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L67)
 
 #### Parameters
 
@@ -368,7 +368,7 @@ Defined in: [packages/discloud.app/src/structures/BaseApp.ts:67](https://github.
 
 > **restart**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:74](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L74)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:74](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L74)
 
 Restart your application on Discloud
 
@@ -386,7 +386,7 @@ Restart your application on Discloud
 
 > **setRam**(`quantity`): `Promise`\<[`RESTPutApiAppRamResult`](../interfaces/RESTPutApiAppRamResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L33)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L33)
 
 Set the quantity of ram to your application
 
@@ -412,7 +412,7 @@ Minimum values is `100` to `bot` or `512` for `site`
 
 > **start**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:81](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L81)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:81](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L81)
 
 Start your application on Discloud
 
@@ -430,7 +430,7 @@ Start your application on Discloud
 
 > **stop**(): `Promise`\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:90](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L90)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:90](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L90)
 
 Stop your application on Discloud
 
@@ -448,7 +448,7 @@ Stop your application on Discloud
 
 > **terminal**(): `Promise`\<[`ApiTerminal`](../interfaces/ApiTerminal.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:56](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L56)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:56](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L56)
 
 Get logs of your application on Discloud
 
@@ -466,7 +466,7 @@ Get logs of your application on Discloud
 
 > **toString**(): `string`
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:105](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L105)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:105](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L105)
 
 #### Returns
 
@@ -482,7 +482,7 @@ Defined in: [packages/discloud.app/src/structures/BaseApp.ts:105](https://github
 
 > **update**(`options`): `Promise`\<[`RESTPutApiAppCommitResult`](../interfaces/RESTPutApiAppCommitResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/BaseApp.ts:99](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/BaseApp.ts#L99)
+Defined in: [packages/discloud.app/src/structures/BaseApp.ts:99](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/BaseApp.ts#L99)
 
 Update an of your apps on Discloud.
 

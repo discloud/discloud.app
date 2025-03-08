@@ -8,7 +8,7 @@
 
 > `const` **blockedFiles**: `object`
 
-Defined in: [packages/util/src/IgnoreFiles.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/IgnoreFiles.ts#L6)
+Defined in: [packages/util/src/IgnoreFiles.ts:6](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/IgnoreFiles.ts#L6)
 
 ## Type declaration
 

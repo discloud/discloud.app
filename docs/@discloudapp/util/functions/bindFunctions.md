@@ -10,7 +10,7 @@
 
 > **bindFunctions**\<`I`\>(`instance`): `void`
 
-Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/utils.ts#L1)
+Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/utils.ts#L1)
 
 ### Type Parameters
 
@@ -30,7 +30,7 @@ Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.
 
 > **bindFunctions**\<`I`, `B`\>(`instance`, `bind`): `void`
 
-Defined in: [packages/util/src/utils.ts:2](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/utils.ts#L2)
+Defined in: [packages/util/src/utils.ts:2](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/utils.ts#L2)
 
 ### Type Parameters
 

@@ -8,7 +8,7 @@
 
 > `const` **APIVersion**: `"2"` = `"2"`
 
-Defined in: [packages/api-types/rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/index.ts#L14)
+Defined in: [packages/api-types/rest/v2/index.ts:14](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/index.ts#L14)
 
 API version
 

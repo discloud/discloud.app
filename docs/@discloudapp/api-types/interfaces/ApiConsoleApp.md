@@ -6,7 +6,7 @@
 
 # Interface: ApiConsoleApp
 
-Defined in: [rest/v2/app.ts:191](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L191)
+Defined in: [rest/v2/app.ts:191](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L191)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/app.ts:191](https://github.com/discloud/discloud.app/blob/b
 
 > **id**: `string`
 
-Defined in: [rest/v2/app.ts:192](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L192)
+Defined in: [rest/v2/app.ts:192](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L192)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [rest/v2/app.ts:192](https://github.com/discloud/discloud.app/blob/b
 
 > **shell**: [`ApiConsoleAppShell`](ApiConsoleAppShell.md)
 
-Defined in: [rest/v2/app.ts:193](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L193)
+Defined in: [rest/v2/app.ts:193](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L193)

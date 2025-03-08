@@ -4,7 +4,7 @@
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / DiscloudConfig
 
-# Class: DiscloudConfig
+# Class: DiscloudConfig\<T, V\>
 
 Defined in: packages/util/out/DiscloudConfig.d.ts:10
 
@@ -12,11 +12,17 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:10
 
 - `EventEmitter`\<[`DiscloudConfigEventMap`](../interfaces/DiscloudConfigEventMap.md)\>
 
+## Type Parameters
+
+• **T** *extends* [`AppTypes`](../type-aliases/AppTypes.md) = [`AppTypes`](../type-aliases/AppTypes.md)
+
+• **V** *extends* [`AppLanguages`](../type-aliases/AppLanguages.md) = [`AppLanguages`](../type-aliases/AppLanguages.md)
+
 ## Constructors
 
 ### new DiscloudConfig()
 
-> **new DiscloudConfig**(`path`): [`DiscloudConfig`](DiscloudConfig.md)
+> **new DiscloudConfig**\<`T`, `V`\>(`path`): [`DiscloudConfig`](DiscloudConfig.md)\<`T`, `V`\>
 
 Defined in: packages/util/out/DiscloudConfig.d.ts:14
 
@@ -28,7 +34,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:14
 
 #### Returns
 
-[`DiscloudConfig`](DiscloudConfig.md)
+[`DiscloudConfig`](DiscloudConfig.md)\<`T`, `V`\>
 
 #### Overrides
 
@@ -157,9 +163,9 @@ v13.6.0, v12.17.0
 
 ***
 
-### fileName
+### filename
 
-> `readonly` `static` **fileName**: `"discloud.config"` = `"discloud.config"`
+> `readonly` `static` **filename**: `"discloud.config"` = `"discloud.config"`
 
 Defined in: packages/util/out/DiscloudConfig.d.ts:13
 
@@ -171,7 +177,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:13
 
 > **get** **comments**(): `string`[]
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:16
+Defined in: packages/util/out/DiscloudConfig.d.ts:17
 
 ##### Returns
 
@@ -183,13 +189,27 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:16
 
 #### Get Signature
 
-> **get** **data**(): [`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)
+> **get** **data**(): [`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\<`T`, `V`\>
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:17
+Defined in: packages/util/out/DiscloudConfig.d.ts:18
 
 ##### Returns
 
-[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)
+[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\<`T`, `V`\>
+
+***
+
+### disposed
+
+#### Get Signature
+
+> **get** **disposed**(): `boolean`
+
+Defined in: packages/util/out/DiscloudConfig.d.ts:16
+
+##### Returns
+
+`boolean`
 
 ***
 
@@ -199,7 +219,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:17
 
 > **get** **exists**(): `boolean`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:18
+Defined in: packages/util/out/DiscloudConfig.d.ts:19
 
 ##### Returns
 
@@ -213,7 +233,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:18
 
 > **get** **existsMain**(): `boolean`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:21
+Defined in: packages/util/out/DiscloudConfig.d.ts:22
 
 ##### Returns
 
@@ -227,11 +247,25 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:21
 
 > **get** **isFile**(): `boolean`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:20
+Defined in: packages/util/out/DiscloudConfig.d.ts:21
 
 ##### Returns
 
 `boolean`
+
+***
+
+### isValid
+
+#### Get Signature
+
+> **get** **isValid**(): `boolean` \| `""`
+
+Defined in: packages/util/out/DiscloudConfig.d.ts:25
+
+##### Returns
+
+`boolean` \| `""`
 
 ***
 
@@ -241,7 +275,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:20
 
 > **get** **mainFileExt**(): `undefined` \| `string`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:22
+Defined in: packages/util/out/DiscloudConfig.d.ts:23
 
 ##### Returns
 
@@ -255,7 +289,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:22
 
 > **get** **missingProps**(): ([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`NAME`](../enumerations/DiscloudConfigScopes.md#name) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type) \| [`VERSION`](../enumerations/DiscloudConfigScopes.md#version))[]
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:23
+Defined in: packages/util/out/DiscloudConfig.d.ts:24
 
 ##### Returns
 
@@ -269,7 +303,7 @@ Defined in: packages/util/out/DiscloudConfig.d.ts:23
 
 > **get** **stats**(): `null` \| `Stats`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:19
+Defined in: packages/util/out/DiscloudConfig.d.ts:20
 
 ##### Returns
 
@@ -472,7 +506,7 @@ v6.0.0
 
 > **get**\<`K`\>(`key`): [`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\[`K`\]
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:24
+Defined in: packages/util/out/DiscloudConfig.d.ts:26
 
 #### Type Parameters
 
@@ -1069,7 +1103,7 @@ v0.1.26
 
 > **set**\<`K`\>(`key`, `value`): `void`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:25
+Defined in: packages/util/out/DiscloudConfig.d.ts:27
 
 #### Type Parameters
 
@@ -1128,7 +1162,7 @@ v0.3.5
 
 > **update**(`save`, `comments`?): `void` \| `Error`
 
-Defined in: packages/util/out/DiscloudConfig.d.ts:26
+Defined in: packages/util/out/DiscloudConfig.d.ts:28
 
 #### Parameters
 

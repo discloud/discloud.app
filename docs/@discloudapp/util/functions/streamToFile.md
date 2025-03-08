@@ -8,7 +8,7 @@
 
 > **streamToFile**(`stream`, `fileName`?, `mimeType`?): `Promise`\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:114](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/FileResolver.ts#L114)
+Defined in: [packages/util/src/FileResolver.ts:114](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/FileResolver.ts#L114)
 
 A function that converts a like Stream parameter to File
 

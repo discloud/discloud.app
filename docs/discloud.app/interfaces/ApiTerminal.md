@@ -6,7 +6,7 @@
 
 # Interface: ApiTerminal
 
-Defined in: [packages/api-types/rest/v2/app.ts:180](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L180)
+Defined in: [packages/api-types/rest/v2/app.ts:180](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L180)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:180](https://github.com/discloud/
 
 > **big**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:184](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L184)
+Defined in: [packages/api-types/rest/v2/app.ts:184](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L184)
 
 Bigger log of your application
 
@@ -24,6 +24,6 @@ Bigger log of your application
 
 > **small**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:188](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/app.ts#L188)
+Defined in: [packages/api-types/rest/v2/app.ts:188](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/app.ts#L188)
 
 Smaller log of your application

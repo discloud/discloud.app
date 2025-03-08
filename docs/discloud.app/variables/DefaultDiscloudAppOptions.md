@@ -8,7 +8,7 @@
 
 > `const` **DefaultDiscloudAppOptions**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md) & `object`
 
-Defined in: [packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/util/constants.ts#L12)
+Defined in: [packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/util/constants.ts#L12)
 
 Library default options
 

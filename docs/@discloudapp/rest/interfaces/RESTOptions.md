@@ -6,7 +6,7 @@
 
 # Interface: RESTOptions
 
-Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L8)
+Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/rest/src/@types/index.ts#L8)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/di
 
 > **api**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L13)
+Defined in: [packages/rest/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/rest/src/@types/index.ts#L13)
 
 The base api path, without version
 
@@ -28,7 +28,7 @@ The base api path, without version
 
 > **globalRequestsPerMinute**: `number`
 
-Defined in: [packages/rest/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L19)
+Defined in: [packages/rest/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/rest/src/@types/index.ts#L19)
 
 How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
 
@@ -40,9 +40,9 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 ### headers
 
-> **headers**: `Record`\<`string`, `string`\>
+> **headers**: `undefined` \| `HeadersInit`
 
-Defined in: [packages/rest/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L25)
+Defined in: [packages/rest/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/rest/src/@types/index.ts#L25)
 
 Additional headers to send for all API requests
 
@@ -56,7 +56,7 @@ Additional headers to send for all API requests
 
 > **version**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/rest/src/@types/index.ts#L31)
+Defined in: [packages/rest/src/@types/index.ts:31](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/rest/src/@types/index.ts#L31)
 
 The version of the API to use
 

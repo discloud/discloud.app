@@ -6,7 +6,7 @@
 
 # Class: `abstract` CachedManager\<T\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L8)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L8)
 
 Manager of cache
 
@@ -29,7 +29,7 @@ Manager of cache
 
 > **new CachedManager**\<`T`\>(`discloudApp`, `holds`, `iterable`?): [`CachedManager`](CachedManager.md)\<`T`\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:9](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L9)
 
 #### Parameters
 
@@ -59,7 +59,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:9](https://gith
 
 > `protected` `readonly` **\_cache**: `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 #### Inherited from
 
@@ -71,7 +71,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -83,7 +83,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > `protected` `readonly` **holds**: `T`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 #### Inherited from
 
@@ -97,7 +97,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://githu
 
 > **get** **cache**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L25)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ##### Returns
 
@@ -113,7 +113,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://githu
 
 > `protected` **\_add**(`data`): `InstanceType`\<`T`\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L19)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L19)
 
 #### Parameters
 
@@ -131,7 +131,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://git
 
 > `protected` **\_addMany**(`data`): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L33)
 
 #### Parameters
 
@@ -149,7 +149,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://git
 
 > `protected` **\_clear**(`data`?): `void`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L45)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L45)
 
 #### Parameters
 
@@ -167,7 +167,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://git
 
 > `protected` **\_delete**(`id`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L58)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L58)
 
 #### Parameters
 
@@ -185,7 +185,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://git
 
 > `protected` **\_deleteMany**(`ids`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/CachedManager.ts#L64)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/CachedManager.ts#L64)
 
 #### Parameters
 
@@ -203,7 +203,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://git
 
 > **resolve**(`idOrInstance`): `null` \| `InstanceType`\<`T`\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L33)
 
 Resolves a data entry to a data Object.
 
@@ -229,7 +229,7 @@ The id or instance of something in this Manager
 
 > **resolveId**(`idOrInstance`): `any`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L39)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 #### Parameters
 
@@ -251,7 +251,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://githu
 
 > **valueOf**(): `Map`\<`string`, `InstanceType`\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/managers/DataManager.ts#L46)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/managers/DataManager.ts#L46)
 
 Returns the primitive value of the specified object.
 

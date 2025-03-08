@@ -6,7 +6,7 @@
 
 # Enumeration: ModPermissionsFlags
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L3)
+Defined in: [packages/util/src/ModPermissionsBF.ts:3](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L3)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:3](https://github.com/disclou
 
 > **backup\_app**: `1`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:4](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L4)
+Defined in: [packages/util/src/ModPermissionsBF.ts:4](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L4)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:4](https://github.com/disclou
 
 > **commit\_app**: `2`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L5)
+Defined in: [packages/util/src/ModPermissionsBF.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L5)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:5](https://github.com/disclou
 
 > **edit\_ram**: `4`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:6](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L6)
+Defined in: [packages/util/src/ModPermissionsBF.ts:6](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L6)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:6](https://github.com/disclou
 
 > **logs\_app**: `8`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L7)
+Defined in: [packages/util/src/ModPermissionsBF.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L7)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:7](https://github.com/disclou
 
 > **restart\_app**: `16`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:8](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L8)
+Defined in: [packages/util/src/ModPermissionsBF.ts:8](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L8)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:8](https://github.com/disclou
 
 > **start\_app**: `32`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:9](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L9)
+Defined in: [packages/util/src/ModPermissionsBF.ts:9](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L9)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:9](https://github.com/disclou
 
 > **status\_app**: `64`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:10](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L10)
+Defined in: [packages/util/src/ModPermissionsBF.ts:10](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L10)
 
 ***
 
@@ -70,4 +70,4 @@ Defined in: [packages/util/src/ModPermissionsBF.ts:10](https://github.com/disclo
 
 > **stop\_app**: `128`
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/util/src/ModPermissionsBF.ts#L11)
+Defined in: [packages/util/src/ModPermissionsBF.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/util/src/ModPermissionsBF.ts#L11)

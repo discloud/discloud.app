@@ -6,7 +6,7 @@
 
 # Interface: ApiTeamApps
 
-Defined in: [rest/v2/team.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L7)
+Defined in: [rest/v2/team.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L7)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/team.ts:7](https://github.com/discloud/discloud.app/blob/bf
 
 > **exitCode**: `number`
 
-Defined in: [rest/v2/team.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L31)
+Defined in: [rest/v2/team.ts:31](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L31)
 
 Your team's app exit code on stop
 
@@ -24,7 +24,7 @@ Your team's app exit code on stop
 
 > **id**: `string`
 
-Defined in: [rest/v2/team.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L11)
+Defined in: [rest/v2/team.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L11)
 
 Your team application id
 
@@ -34,7 +34,7 @@ Your team application id
 
 > **lang**: `string`
 
-Defined in: [rest/v2/team.ts:35](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L35)
+Defined in: [rest/v2/team.ts:35](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L35)
 
 Your team's app programming language
 
@@ -44,7 +44,7 @@ Your team's app programming language
 
 > **name**: `string`
 
-Defined in: [rest/v2/team.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L15)
+Defined in: [rest/v2/team.ts:15](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L15)
 
 Your team application name
 
@@ -54,7 +54,7 @@ Your team application name
 
 > **online**: `boolean`
 
-Defined in: [rest/v2/team.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L19)
+Defined in: [rest/v2/team.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L19)
 
 If your team application is online
 
@@ -64,7 +64,7 @@ If your team application is online
 
 > **perms**: `string`[]
 
-Defined in: [rest/v2/team.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L39)
+Defined in: [rest/v2/team.ts:39](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L39)
 
 Your permissions to manage this application.
 
@@ -74,7 +74,7 @@ Your permissions to manage this application.
 
 > **ram**: `number`
 
-Defined in: [rest/v2/team.ts:23](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L23)
+Defined in: [rest/v2/team.ts:23](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L23)
 
 The RAM quantity for your team's app
 
@@ -84,7 +84,7 @@ The RAM quantity for your team's app
 
 > **ramKilled**: `boolean`
 
-Defined in: [rest/v2/team.ts:27](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L27)
+Defined in: [rest/v2/team.ts:27](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L27)
 
 If your team's app stopped due to low RAM
 
@@ -94,6 +94,6 @@ If your team's app stopped due to low RAM
 
 > **type**: `number`
 
-Defined in: [rest/v2/team.ts:43](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/rest/v2/team.ts#L43)
+Defined in: [rest/v2/team.ts:43](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/rest/v2/team.ts#L43)
 
 Your team's app type

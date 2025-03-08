@@ -8,4 +8,4 @@
 
 > `const` **discloudConfigScopes**: [`DiscloudConfigScopes`](../enumerations/DiscloudConfigScopes.md)[]
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:96](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/api-types/payload/v2/DiscloudConfig.ts#L96)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:96](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/api-types/payload/v2/DiscloudConfig.ts#L96)

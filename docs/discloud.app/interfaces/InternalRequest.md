@@ -56,7 +56,7 @@ Defined in: packages/rest/out/@types/index.d.ts:65
 
 ### headers?
 
-> `optional` **headers**: `Record`\<`string`, `string`\>
+> `optional` **headers**: `HeadersInit`
 
 Defined in: packages/rest/out/@types/index.d.ts:53
 

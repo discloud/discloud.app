@@ -6,7 +6,7 @@
 
 # Class: User
 
-Defined in: [packages/discloud.app/src/structures/User.ts:7](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L7)
+Defined in: [packages/discloud.app/src/structures/User.ts:7](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L7)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new User**(`discloudApp`, `data`): [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L51)
+Defined in: [packages/discloud.app/src/structures/User.ts:51](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L51)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/User.ts:51](https://github.com
 
 > `readonly` **appIDs**: `Set`\<`string`\>
 
-Defined in: [packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L11)
+Defined in: [packages/discloud.app/src/structures/User.ts:11](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L11)
 
 Your applications ID
 
@@ -56,7 +56,7 @@ Your applications ID
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L5)
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L5)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > `readonly` **customdomains**: `Set`\<`string`\>
 
-Defined in: [packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L15)
+Defined in: [packages/discloud.app/src/structures/User.ts:15](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L15)
 
 Your custom domains on Discloud
 
@@ -78,7 +78,7 @@ Your custom domains on Discloud
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -90,7 +90,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > **id**: `string`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L19)
+Defined in: [packages/discloud.app/src/structures/User.ts:19](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L19)
 
 Your id
 
@@ -100,7 +100,7 @@ Your id
 
 > **locale**: `string`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L23)
+Defined in: [packages/discloud.app/src/structures/User.ts:23](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L23)
 
 Your locale
 
@@ -110,7 +110,7 @@ Your locale
 
 > **plan**: `string`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L27)
+Defined in: [packages/discloud.app/src/structures/User.ts:27](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L27)
 
 Your plan
 
@@ -120,7 +120,7 @@ Your plan
 
 > **planDataEnd**: `Date`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L31)
+Defined in: [packages/discloud.app/src/structures/User.ts:31](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L31)
 
 Date of when will your plan end
 
@@ -130,7 +130,7 @@ Date of when will your plan end
 
 > **planDataEndTimestamp**: `number`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L35)
+Defined in: [packages/discloud.app/src/structures/User.ts:35](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L35)
 
 Timestamp of when will your plan end
 
@@ -140,7 +140,7 @@ Timestamp of when will your plan end
 
 > **ramUsage**: `number`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L49)
+Defined in: [packages/discloud.app/src/structures/User.ts:49](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L49)
 
 ***
 
@@ -148,7 +148,7 @@ Defined in: [packages/discloud.app/src/structures/User.ts:49](https://github.com
 
 > **ramUsedMb**: `number`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L39)
+Defined in: [packages/discloud.app/src/structures/User.ts:39](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L39)
 
 Quantity of RAM was used for your applications
 
@@ -158,7 +158,7 @@ Quantity of RAM was used for your applications
 
 > `readonly` **subdomains**: `Set`\<`string`\>
 
-Defined in: [packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L43)
+Defined in: [packages/discloud.app/src/structures/User.ts:43](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L43)
 
 Your subdomains on Discloud
 
@@ -168,7 +168,7 @@ Your subdomains on Discloud
 
 > **totalRamMb**: `number`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L47)
+Defined in: [packages/discloud.app/src/structures/User.ts:47](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L47)
 
 Your total RAM quantity
 
@@ -180,7 +180,7 @@ Your total RAM quantity
 
 > **get** **apps**(): [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L111)
+Defined in: [packages/discloud.app/src/structures/User.ts:111](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L111)
 
 ##### Returns
 
@@ -192,7 +192,7 @@ Defined in: [packages/discloud.app/src/structures/User.ts:111](https://github.co
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -208,7 +208,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L57)
+Defined in: [packages/discloud.app/src/structures/User.ts:57](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L57)
 
 #### Parameters
 
@@ -230,7 +230,7 @@ Defined in: [packages/discloud.app/src/structures/User.ts:57](https://github.com
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -252,7 +252,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **fetch**(): `Promise`\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L133)
+Defined in: [packages/discloud.app/src/structures/User.ts:133](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L133)
 
 Fetch a user from Discloud API
 
@@ -266,7 +266,7 @@ Fetch a user from Discloud API
 
 > **setLocale**\<`L`\>(`locale`): `Promise`\<`boolean`\>
 
-Defined in: [packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L121)
+Defined in: [packages/discloud.app/src/structures/User.ts:121](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L121)
 
 Set your locale on Discloud
 
@@ -296,7 +296,7 @@ Your locale like "en-US".
 
 > **toString**(): `string`
 
-Defined in: [packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/bfcb626f6315ac03eb36b36e57f162cd101e1996/packages/discloud.app/src/structures/User.ts#L139)
+Defined in: [packages/discloud.app/src/structures/User.ts:139](https://github.com/discloud/discloud.app/blob/1458affc9a022eb2fc5fe37e7b3b002130b2fdad/packages/discloud.app/src/structures/User.ts#L139)
 
 Returns a string representation of an object.
 
