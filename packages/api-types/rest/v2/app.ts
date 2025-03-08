@@ -195,7 +195,8 @@ export interface ApiConsoleApp {
 
 export interface ApiConsoleAppShell {
   online: boolean
-  cmd: string
+  stdout: string
+  stderr: string
 }
 
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
