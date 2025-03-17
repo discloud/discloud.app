@@ -1,5 +1,6 @@
 import { importJSON } from "@discloudapp/util";
 import { arch, platform, release, type } from "os";
+import { PackageLocation } from "./utils";
 
 export interface IUserAgent {
   toString(): string
@@ -10,7 +11,7 @@ export default class UserAgent implements IUserAgent {
     readonly prefix?: string,
     readonly version?: string,
   ) {
-    this.version ??= importJSON<{ version: string }>("package.json").version;
+    this.version ??= importJSON<{ version: string }>(PackageLocation).version;
   }
 
   #getUserAgent() {
