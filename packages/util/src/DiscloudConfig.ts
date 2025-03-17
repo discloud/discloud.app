@@ -1,7 +1,8 @@
-import { discloudConfigRequiredScopes, type AppLanguages, type AppTypes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
+import { discloudConfigRequiredScopes, DiscloudConfigScopes, type AppLanguages, type AppTypes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
 import { existsSync, readFileSync, statSync, watch, writeFileSync, type FSWatcher, type Stats } from "fs";
 import { basename, dirname, join } from "path";
+import { parseEnv } from "util";
 export interface DiscloudConfigEventMap {
   change: [data: DiscloudConfigType]
   disposed: [data: DiscloudConfigType]
@@ -10,6 +11,7 @@ export interface DiscloudConfigEventMap {
 }
 
 const VERSION_REGEXP = /^(current|latest|suja|(?:\d+(?:\.[\dx]+){0,2}))$/;
+const STRING_BOOLEAN = new Set(["false", "true"]);
 
 export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> extends EventEmitter<DiscloudConfigEventMap> {
   static readonly filename = "discloud.config";
@@ -65,8 +67,8 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
     try {
       this.#stats = statSync(this.path);
       const content = readFileSync(this.path, "utf8");
-      this.#data = this.#configToObj(content);
-      this.#comments = content.split(/\r?\n/).filter(a => /^\s*#/.test(a));
+      this.#data = this.#parseConfigContent(content);
+      this.#comments = content.split(/[\r\n]+/).filter(a => /^\s*#/.test(a));
       this.emit("change", this.#data);
     } catch {
       this.#stats = null;
@@ -182,21 +184,21 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
       discloudConfigRequiredScopes.common;
   }
 
-  #objToString(obj: any): string {
+  #stringifyConfigObject(obj: any): string {
     if (obj === null || obj === undefined) return "";
     if (!obj) return `${obj}`;
-    if (typeof obj === "function") return this.#configToObj(obj());
+    if (typeof obj === "function") return this.#stringifyConfigObject(obj());
 
     const result = [];
 
     if (typeof obj === "object") {
       if (Array.isArray(obj)) {
         for (let i = 0; i < obj.length; i++) {
-          result.push(this.#objToString(obj[i]));
+          result.push(this.#stringifyConfigObject(obj[i]));
         }
       } else {
         for (const key in obj) {
-          result.push(`${key}=${this.#objToString(obj[key])}`);
+          result.push(`${key}=${this.#stringifyConfigObject(obj[key])}`);
         }
       }
     } else {
@@ -206,36 +208,23 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
     return result.filter(Boolean).join("\n");
   }
 
-  #configToObj(s: string) {
+  #parseConfigContent(s: string) {
     if (typeof s !== "string") return {};
 
-    return this.#processValues(Object.fromEntries(s
-      .replace(/\s*#.*/g, "")
-      .split(/[\r\n]+/)
-      .filter(Boolean)
-      .map(line => line.split("="))));
+    return this.#processValues(parseEnv(s));
   }
 
   #processValues(obj: any) {
     if (typeof obj !== "object" || obj === null) return obj;
 
-    for (const key in obj) {
-      const value = obj[key];
+    let key = DiscloudConfigScopes.APT;
+    if (key in obj) obj[key] = obj[key].split(/\s*,\s*/g).filter(Boolean);
 
-      switch (key) {
-        case "APT":
-          obj[key] = value.split(/\s*,\s*/g).filter(Boolean);
-          continue;
-        case "AUTORESTART":
-          if (["true", "false"].includes(value))
-            obj[key] = value == "true";
-          continue;
-        case "RAM":
-          if (!isNaN(Number(value)))
-            obj[key] = Number(value);
-          continue;
-      }
-    }
+    key = DiscloudConfigScopes.AUTORESTART;
+    if (key in obj && STRING_BOOLEAN.has(obj[key])) obj[key] = obj[key] == true;
+
+    key = DiscloudConfigScopes.RAM;
+    if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
 
     return obj;
   }
@@ -252,7 +241,7 @@ export class DiscloudConfig<T extends AppTypes = AppTypes, V extends AppLanguage
     try {
       save = Object.assign(this.data, save);
 
-      writeFileSync(this.path, this.#objToString(
+      writeFileSync(this.path, this.#stringifyConfigObject(
         comments?.length ?
           [comments, save] :
           save,

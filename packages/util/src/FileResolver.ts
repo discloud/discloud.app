@@ -58,14 +58,14 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     }
 
     if (existsSync(file))
-      return streamToFile(createReadStream(file), fileName ?? "file.zip");
+      return streamToFile(createReadStream(file), fileName ?? "file");
 
-    return new File([file], fileName ?? "file.zip");
+    return new File([file], fileName ?? "file");
   }
 
   if (file instanceof Blob) return new File([file], fileName ?? `file.${resolveBlobFileType(file)}`, { type: file.type });
 
-  fileName ??= "file.zip";
+  fileName ??= "file";
 
   if (Buffer.isBuffer(file)) return new File([file], fileName);
 
@@ -85,7 +85,7 @@ export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writab
 export function resolveFileSync(file: FileResolvableSync, fileName?: string): File {
   if (file instanceof File) return file;
 
-  fileName ??= "file.zip";
+  fileName ??= "file";
 
   if (typeof file === "string") {
     return new File([file], fileName);
@@ -117,7 +117,7 @@ export function streamToFile(stream: Stream, fileName?: string | null, mimeType?
     stream.on("data", (chunk) => chunks.push(chunk))
       .once("end", function () {
         stream.removeAllListeners();
-        resolve(new File(chunks, fileName ?? "file.zip", { type: mimeType }));
+        resolve(new File(chunks, fileName ?? "file", { type: mimeType }));
       })
       .once("error", function (error) {
         stream.removeAllListeners();
