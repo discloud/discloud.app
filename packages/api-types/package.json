@@ -4,7 +4,7 @@
   "scripts": {
     "watch": "tsc -watch",
     "build": "tsc",
-    "clean:node": "rimraf --glob ./{payload,rest,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
+    "clean:node": "rimraf --glob ./{payload,rest,util,v*}/**/*.{js,mjs,d.ts,*map} ./v*.{js,mjs,d.ts,*map}",
     "postpublish": "npm run clean:node",
     "prepublish": "npm run build",
     "release": "npm run prepublish && npm publish",
