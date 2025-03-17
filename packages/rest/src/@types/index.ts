@@ -1,5 +1,6 @@
 import type { RawFile } from "@discloudapp/util";
 import type { RequestMethod } from "../@enum";
+import { type IUserAgent } from "../UserAgent";
 
 export type RouteLike = `/${string}`
 
@@ -17,18 +18,20 @@ export interface RESTOptions {
    * @defaultValue `60`
    */
   globalRequestsPerMinute: number
-	/**
-	 * Additional headers to send for all API requests
-	 *
-	 * @defaultValue `{}`
-	 */
-	headers: RequestInit["headers"];
+  /**
+   * Additional headers to send for all API requests
+   *
+   * @defaultValue `{}`
+   */
+  headers: RequestInit["headers"];
   /**
    * The version of the API to use
    *
    * @defaultValue `{APIVersion}`
    */
   version: string
+
+  userAgent: IUserAgent
 }
 
 /**

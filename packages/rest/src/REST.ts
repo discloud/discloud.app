@@ -152,7 +152,10 @@ export class REST extends EventEmitter<RestEvents> {
   #resolveRequest(request: InternalRequest) {
     const url = new URL(this.baseURL + request.fullRoute);
     const options: RequestOptions = { method: request.method };
-    const headers = new Headers(Object.assign({}, request.headers, this.options.headers, { "api-token": this.#token }));
+    const headers = new Headers(Object.assign({}, request.headers, this.options.headers, {
+      "api-token": this.#token,
+      "User-Agent": this.options.userAgent,
+    }));
     const formData = new FormData();
 
     if (request.query) url.search = new URLSearchParams(request.query).toString();
