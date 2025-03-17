@@ -5,6 +5,7 @@ export * from "./DiscloudConfig";
 export * from "./FileResolver";
 export * from "./GS";
 export * from "./IgnoreFiles";
+export * from "./JSON";
 export * from "./ModPermissionsBF";
 export * from "./utils";
 
