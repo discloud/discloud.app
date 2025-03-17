@@ -1,16 +1,18 @@
 import { DefaultRestOptions } from "@discloudapp/rest";
-import { readFileSync } from "fs";
+import UserAgent from "@discloudapp/rest/out/UserAgent";
+import { importJSON } from "@discloudapp/util";
 import { join } from "path";
-import { env } from "process";
 import type { DiscloudAppOptions } from "../@types";
 
-export const version: string = JSON.parse(readFileSync(join(__dirname, "..", "..", "package.json"), "utf8")).version;
+const PackageLocation = join(__dirname, "../../package.json");
+
+export const version: string = importJSON<{ version: string }>(PackageLocation).version;
 
 /**
  * Library default options
  */
 export const DefaultDiscloudAppOptions: DiscloudAppOptions & { token?: string } = {
-  rest: DefaultRestOptions,
+  rest: Object.assign({}, DefaultRestOptions, { userAgent: new UserAgent("DiscloudApp", version) }),
   /** The token to authenticate on Discloud API */
-  token: env.DISCLOUD_TOKEN,
+  token: process.env.DISCLOUD_TOKEN,
 };
