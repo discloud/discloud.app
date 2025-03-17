@@ -1,4 +1,8 @@
-export abstract class User {
+import { type OmitNewableFunctionKeys } from "../../../util/types";
+
+export type User = OmitNewableFunctionKeys<typeof UserRoutes>
+
+abstract class UserRoutes {
   /**
    * - GET - `/user`
    */
@@ -6,3 +10,5 @@ export abstract class User {
     return "/user";
   }
 }
+
+export const User: User = UserRoutes;

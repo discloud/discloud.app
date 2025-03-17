@@ -1,4 +1,8 @@
-export abstract class App {
+import { type OmitNewableFunctionKeys } from "../../../util/types";
+
+export type App = OmitNewableFunctionKeys<typeof AppRoutes>
+
+abstract class AppRoutes {
   /**
    * - GET - `/app/{appID}`
    */
@@ -103,3 +107,5 @@ export abstract class App {
     return modID ? `/app/${appID}/team/${modID}` : `/app/${appID}/team`;
   }
 }
+
+export const App: App = AppRoutes;

@@ -1,10 +1,13 @@
+import { type OmitNewableFunctionKeys } from "../../../util/types";
 import { App } from "./App";
 import { Locale } from "./Locale";
 import { Team } from "./Team";
 import { Upload } from "./Upload";
 import { User } from "./User";
 
-export abstract class Routes {
+export type Routes = OmitNewableFunctionKeys<typeof RoutesIndexer>
+
+abstract class RoutesIndexer {
   // app
   static app = App.app;
   static appApt = App.apt;
@@ -41,3 +44,5 @@ export abstract class Routes {
   // user
   static user = User.user;
 }
+
+export const Routes: Routes = RoutesIndexer;

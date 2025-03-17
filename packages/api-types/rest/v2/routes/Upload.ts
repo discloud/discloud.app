@@ -1,4 +1,8 @@
-export abstract class Upload {
+import { type OmitNewableFunctionKeys } from "../../../util/types";
+
+export type Upload = OmitNewableFunctionKeys<typeof UploadRoutes>
+
+abstract class UploadRoutes {
   /**
    * - POST - `/upload`
    */
@@ -6,3 +10,5 @@ export abstract class Upload {
     return "/upload";
   }
 }
+
+export const Upload: Upload = UploadRoutes;

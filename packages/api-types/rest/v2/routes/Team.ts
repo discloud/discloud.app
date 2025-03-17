@@ -1,4 +1,8 @@
-export abstract class Team {
+import { type OmitNewableFunctionKeys } from "../../../util/types";
+
+export type Team = OmitNewableFunctionKeys<typeof TeamRoutes>
+
+abstract class TeamRoutes {
   /**
    * - GET - `/team`
    */
@@ -62,3 +66,5 @@ export abstract class Team {
     return `/team/${appID}/stop`;
   }
 }
+
+export const Team: Team = TeamRoutes;
