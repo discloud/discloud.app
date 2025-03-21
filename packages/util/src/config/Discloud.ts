@@ -32,12 +32,16 @@ export default class DiscloudConfig {
       this.#data = this.#readFileSync();
   }
 
-  #data!: DiscloudConfigType;
+  #data: DiscloudConfigType = {} as DiscloudConfigType;
   #dir: string;
   #watcher!: FSWatcher | null;
 
   get data(): DiscloudConfigType {
     return this.#data;
+  }
+
+  get exists() {
+    return existsSync(this.path);
   }
 
   get existsMain() {
@@ -59,7 +63,18 @@ export default class DiscloudConfig {
     this.#watcher = null;
   }
 
-  validate() {
+  validate(): void
+  validate(doNotThrowIfInvalid: true): boolean
+  validate(doNotThrowIfInvalid?: boolean) {
+    if (doNotThrowIfInvalid) {
+      try {
+        this.validate();
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
     DiscloudConfig.validade(this.data);
     if (!this.existsMain) throw new MissingMainError();
   }
