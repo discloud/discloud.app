@@ -1,26 +1,38 @@
 import assert from "assert";
-import { describe } from "node:test";
+import { suite, test } from "node:test";
 import { join } from "path";
-import { DiscloudConfig } from "../DiscloudConfig";
+import { DiscloudConfig, MissingMainError } from "../config";
 
-describe("Testing Discloud Config", () => {
-  const dConfig = new DiscloudConfig(join(__dirname, "..", "..", "__test__"));
+suite("Testing Discloud Config", () => {
+  const BASE_TEST_PATH = join(__dirname, "..", "..", "__test__", "config");
 
-  assert(dConfig.exists);
-  assert(dConfig.existsMain);
-  assert.strictEqual(dConfig.mainFileExt, "txt");
-  assert.deepStrictEqual(dConfig.missingProps, []);
-  assert.deepStrictEqual(dConfig.data, {
-    TYPE: "bot",
-    NAME: "test",
-    MAIN: "_test.txt",
-    RAM: 100,
-    VERSION: "latest",
-    AUTORESTART: false,
-    APT: "canvas",
+  test("Testing valid Discloud Config", () => {
+    const dConfig = new DiscloudConfig(join(BASE_TEST_PATH, "valid"));
+
+    assert.doesNotThrow(() => dConfig.validate());
+    assert(dConfig.existsMain);
+    assert.strictEqual(dConfig.mainFileExt, "txt");
+    assert.deepStrictEqual(dConfig.missingProps, []);
+    assert.deepStrictEqual(dConfig.data, {
+      TYPE: "bot",
+      NAME: "test",
+      MAIN: "_test.txt",
+      RAM: 100,
+      VERSION: "latest",
+      AUTORESTART: false,
+      APT: ["canvas"],
+    });
   });
 
-  dConfig.dispose();
+  test("Testing invalid Discloud Config", () => {
+    const dConfig = new DiscloudConfig(join(BASE_TEST_PATH, "invalid"));
 
-  assert(dConfig.disposed);
+    assert.throws(() => dConfig.validate());
+  });
+
+  test("Testing invalid MAIN Discloud Config", () => {
+    const dConfig = new DiscloudConfig(join(BASE_TEST_PATH, "invalid", "MAIN"));
+
+    assert.throws(() => dConfig.validate(), new MissingMainError());
+  });
 });
