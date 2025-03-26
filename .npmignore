@@ -1,3 +1,6 @@
+**/__test__/**
 **/node_modules/**
+**/esbuild.mjs
 **/tsconfig.json
+**/typedoc.json
 packages/*/out/test/
