@@ -5,7 +5,7 @@ export interface IUserAgent {
   toString(): string
 }
 
-export default class UserAgent implements IUserAgent {
+export class UserAgent implements IUserAgent {
   constructor(
     readonly prefix?: string,
     readonly version?: string,
