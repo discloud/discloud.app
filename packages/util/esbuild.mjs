@@ -11,18 +11,17 @@ async function main() {
     format: "cjs",
     minify: production,
     sourcemap: "inline",
-    sourcesContent: false,
     platform: "node",
-    outfile: "dist/index.js",
-    external: [],
+    outdir: "dist",
     keepNames: true,
     logLevel: "warning",
+    packages: "external",
     plugins: [
       esbuildPluginVersionInjector(),
-      /* add to the end of plugins array */
       esbuildProblemMatcherPlugin,
     ],
   });
+
   if (watch) {
     await ctx.watch();
   } else {
@@ -31,9 +30,7 @@ async function main() {
   }
 }
 
-/**
- * @type {import('esbuild').Plugin}
- */
+/** @type {import("esbuild").Plugin} */
 const esbuildProblemMatcherPlugin = {
   name: "esbuild-problem-matcher",
 
