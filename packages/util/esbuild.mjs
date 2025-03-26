@@ -1,5 +1,5 @@
 import { context } from "esbuild";
-import { esbuildPluginVersionInjector } from "esbuild-plugin-version-injector";
+import { esbuildDefaultPlugins } from "../../esbuild.mjs";
 
 async function main() {
   const production = process.argv.includes("--production");
@@ -16,10 +16,7 @@ async function main() {
     keepNames: true,
     logLevel: "warning",
     packages: "external",
-    plugins: [
-      esbuildPluginVersionInjector(),
-      esbuildProblemMatcherPlugin,
-    ],
+    plugins: esbuildDefaultPlugins,
   });
 
   if (watch) {
@@ -29,28 +26,6 @@ async function main() {
     await ctx.dispose();
   }
 }
-
-/** @type {import("esbuild").Plugin} */
-const esbuildProblemMatcherPlugin = {
-  name: "esbuild-problem-matcher",
-
-  setup(build) {
-    build.onStart(() => console.log("[watch] build started"));
-
-    build.onEnd(result => {
-      for (let i = 0; i < result.errors.length; i++) {
-        const error = result.errors[i];
-
-        console.error("✘ [ERROR] %s", error.text);
-
-        if (error.location)
-          console.error("    %s:%s:%s:", error.location.file, error.location.line, error.location.column);
-      }
-
-      console.log("[watch] build finished");
-    });
-  },
-};
 
 try {
   await main();
