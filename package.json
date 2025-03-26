@@ -15,6 +15,8 @@
     "@types/node": "^22.13.13",
     "@types/source-map-support": "^0.5.10",
     "dotenv": "^16.4.7",
+    "esbuild": "^0.25.1",
+    "esbuild-plugin-version-injector": "^1.2.1",
     "eslint": "^9.23.0",
     "eslint-plugin-tsdoc": "^0.4.0",
     "globals": "^16.0.0",

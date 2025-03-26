@@ -2,15 +2,15 @@
   "name": "@discloudapp/util",
   "version": "0.8.2",
   "description": "A utility pack for discloud.app",
-  "main": "out",
-  "types": "out/index.d.ts",
+  "main": "dist",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "watch": "tsc -watch",
-    "test:node": "node --test",
-    "build": "tsc",
-    "prepublish": "npm run build",
-    "release": "npm run prepublish && npm publish",
-    "test": "tsc --noEmit && npm run build && npm run test:node"
+    "watch": "tsc -w",
+    "build": "tsc --emitDeclarationOnly",
+    "prepublish": "node esbuild.mjs --production && tsc --emitDeclarationOnly --outDir dist",
+    "release": "npm publish",
+    "test": "tsc --noEmit && tsc && npm run test:node",
+    "test:node": "node --test"
   },
   "repository": {
     "type": "git",
