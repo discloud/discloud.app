@@ -1,12 +1,6 @@
-import { DefaultRestOptions } from "@discloudapp/rest";
-import UserAgent from "@discloudapp/rest/out/UserAgent";
-import { importJSON } from "@discloudapp/util";
-import { join } from "path";
+import { DefaultRestOptions, UserAgent } from "@discloudapp/rest";
+import { version } from "..";
 import type { DiscloudAppOptions } from "../@types";
-
-const PackageLocation = join(__dirname, "../../package.json");
-
-export const version: string = importJSON<{ version: string }>(PackageLocation).version;
 
 /**
  * Library default options

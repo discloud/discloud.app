@@ -1,8 +1,8 @@
-import { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
+import { type ApiApp, type ApiStatusApp } from "@discloudapp/api-types/v2";
 import assert from "assert";
 import test from "node:test";
 import App from "../../structures/App";
-import AppStatus from "../../structures/AppStatus";
+import type AppStatus from "../../structures/AppStatus";
 
 test("Create App instance", () => {
   assert.ok(new App(<any>{}, <any>{}));

@@ -77,3 +77,5 @@ export {
  * ```
  */
 export const discloud = new DiscloudApp();
+
+export const version: string = "[VI]{{inject}}[/VI]";
