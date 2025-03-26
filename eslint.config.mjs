@@ -1,9 +1,8 @@
 import pluginJs from "@eslint/js";
-import { Linter } from "eslint";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-/** @type {Linter.Config[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
   { files: ["**/*.?(c|m)ts", "**/esbuild.mjs"] },
   { ignores: ["**/*.js", "**/*.d.?(c|m)ts"] },
