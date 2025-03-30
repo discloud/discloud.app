@@ -5,8 +5,9 @@
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
-    "watch": "tsc -w",
-    "build": "tsc --emitDeclarationOnly",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.mjs --watch",
+    "watch:tsc": "tsc --noEmit --watch",
     "prepublish": "node esbuild.mjs --production && tsc --emitDeclarationOnly --outDir dist",
     "release:pre": "npm version pre --legacy-peer-deps --no-git-tag-version && npm run prepublish && npm publish --tag=beta",
     "release": "npm run prepublish && npm publish",

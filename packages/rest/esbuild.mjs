@@ -11,6 +11,7 @@ async function main() {
     format: "cjs",
     minify: production,
     sourcemap: "inline",
+    sourcesContent: false,
     platform: "node",
     outdir: "dist",
     keepNames: true,
