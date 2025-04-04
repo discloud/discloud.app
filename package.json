@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
-    "@types/node": "^22.13.17",
+    "@types/node": "^22.14.0",
     "@types/source-map-support": "^0.5.10",
     "dotenv": "^16.4.7",
     "esbuild": "^0.25.2",
