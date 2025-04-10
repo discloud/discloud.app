@@ -1,6 +1,6 @@
 {
   "name": "discloud.app",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
