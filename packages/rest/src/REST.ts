@@ -162,7 +162,7 @@ export class REST extends EventEmitter<RestEvents> {
 
     if (request.file) {
       if (request.file instanceof File) {
-        formData.append("file", request.file);
+        formData.append(request.file.name, request.file);
       } else {
         if (request.file.data instanceof File) {
           request.file.name ??= request.file.data.name;
@@ -170,7 +170,7 @@ export class REST extends EventEmitter<RestEvents> {
           request.file.data = new File([request.file.data], request.file.name);
         }
 
-        formData.append(request.file.key ?? "file", request.file.data);
+        formData.append(request.file.name, request.file.data);
       }
     }
 
