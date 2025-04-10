@@ -1,5 +1,6 @@
 import type { BinaryLike } from "crypto";
 import { createReadStream, existsSync, type PathLike } from "fs";
+import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
 
 export const fileNamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
@@ -9,10 +10,6 @@ export interface RawFile {
    * The name of the file
    */
   name: string
-  /**
-   * An explicit key to use for key of the formdata field for this file.
-   */
-  key?: string
   /**
    * The actual data for the file
    */
@@ -58,24 +55,25 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     }
 
     if (existsSync(file))
-      return streamToFile(createReadStream(file), fileName ?? "file");
+      return streamToFile(createReadStream(file), fileName ?? basename(file));
 
     return new File([file], fileName ?? "file");
   }
 
-  if (file instanceof Blob) return new File([file], fileName ?? `file.${resolveBlobFileType(file)}`, { type: file.type });
+  if (file instanceof Blob)
+    return new File([file], fileName ?? `file.${resolveBlobFileType(file)}`, { type: file.type });
 
   fileName ??= "file";
 
   if (Buffer.isBuffer(file)) return new File([file], fileName);
+
+  if (file instanceof Stream) return streamToFile(file, fileName);
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
 
     return new File([file.data], file.name, { type: file.contentType });
   }
-
-  if (!Stream.isErrored(file)) return streamToFile(file, fileName);
 
   throw new TypeError("Invalid file type was provided.");
 }
