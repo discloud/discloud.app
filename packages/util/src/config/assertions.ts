@@ -8,7 +8,10 @@ const APTPredicate = z.union([
   z.string().trim().refine(arg => arg.split(/\s*,\s*/)),
 ]);
 
-const AVATARPredicate = z.string().trim().url();
+const AVATARPredicate = z.union([
+  z.string().trim().url(),
+  z.string().max(0),
+]);
 
 const VERSIONPredicate = z.string().trim().regex(VERSION_REGEXP);
 

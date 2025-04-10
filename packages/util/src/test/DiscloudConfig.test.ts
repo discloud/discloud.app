@@ -14,13 +14,17 @@ suite("Testing Discloud Config", () => {
     assert.strictEqual(dConfig.mainFileExt, "txt");
     assert.deepStrictEqual(dConfig.missingProps, []);
     assert.deepStrictEqual(dConfig.data, {
+      ID: "",
       TYPE: "bot",
       NAME: "test",
       MAIN: "_test.txt",
       RAM: 100,
       VERSION: "latest",
       AUTORESTART: false,
+      AVATAR: "",
       APT: ["canvas"],
+      BUILD: "",
+      START: "",
     });
   });
 
