@@ -1,20 +1,41 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
+import Comments from "./comments";
 
 const configCleanerPattern = /(^\s*#.*[\r\n]+)|(\s*#.*)/gm;
+const configLineCommentAtStartPattern = /^\s*#.*/;
 const configLineSplitterPattern = /[\r\n]+/g;
 const configArraySplitterPattern = /\s*,\s*/g;
 
 export function parseConfigContent<T>(content: string): T
-export function parseConfigContent(content: string) {
+export function parseConfigContent<T>(content: string, comments: Comments): T
+export function parseConfigContent(content: string, comments?: Comments) {
   const lines = content.replace(configCleanerPattern, "").split(configLineSplitterPattern);
 
-  return parseValues(Object.fromEntries(Array.from(parseLines(lines))));
+  return parseValues(Object.fromEntries(Array.from(parseLines(lines, comments))));
 }
 
-function* parseLines(lines: string[]) {
+function* parseLines(lines: string[], comments: Comments = new Comments()) {
+  comments.clear();
+
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    yield line.trimEnd().split("=");
+    const lineWithComment = lines[i];
+    const [content, comment] = lineWithComment.split(Comments.char);
+    const trimmedContent = content.trimEnd();
+
+    const indexOfComment = lineWithComment.indexOf(Comments.char);
+    if (indexOfComment > -1) {
+      if (configLineCommentAtStartPattern.test(lineWithComment)) {
+        comments.add(i, 0, lineWithComment);
+        continue;
+      }
+
+      const commentContent = `${Comments.char}${comment}`;
+      const startSpaces = content.replace(trimmedContent, "").length;
+
+      comments.add(i, indexOfComment, commentContent, startSpaces);
+    }
+
+    yield trimmedContent.split("=");
   }
 }
 
@@ -34,7 +55,7 @@ function parseValues(obj: any) {
   return obj;
 }
 
-export function stringifyConfigObject(obj: any): string {
+export function stringifyConfigObject(obj: any, comments?: Comments): string {
   if (obj === undefined || obj === null) return "";
   if (!obj) return `${obj}`;
 
@@ -54,16 +75,43 @@ export function stringifyConfigObject(obj: any): string {
 
       if (Array.isArray(obj)) {
         for (let i = 0; i < obj.length; i++)
-          result.push(stringifyConfigObject(obj[i]));
+          result.push(stringifyConfigObject(obj[i], comments));
       } else {
         for (const key in obj)
-          result.push(`${key}=${stringifyConfigObject(obj[key])}`);
+          result.push(`${key}=${stringifyConfigObject(obj[key], comments)}`);
       }
 
-      return result.filter(Boolean).join("\n");
+      return writeComments(result.filter(Boolean), comments);
     }
 
     default:
       return `${obj}`;
   }
+}
+
+function writeComments(lines: string[], comments: Comments = new Comments()) {
+  if (!comments.size) return lines.join("\n");
+  let count = 0;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    const comment = comments.get(i);
+
+    if (!comment) continue;
+
+    count++;
+
+    if (comment.character) {
+      lines[i] = line + comment;
+    } else {
+      const spliced = lines.splice(i);
+
+      lines.push(comment.content, ...spliced);
+    }
+
+    if (count === comments.size) break;
+  }
+
+  return lines.join("\n");
 }

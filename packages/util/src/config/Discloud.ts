@@ -4,6 +4,7 @@ import { readFile, writeFile } from "fs/promises";
 import { basename, dirname, join } from "path";
 import { fromZodError } from "zod-validation-error";
 import { DiscloudConfigPredicate } from "./assertions";
+import Comments from "./comments";
 import { MissingMainError } from "./errors";
 import { parseConfigContent, stringifyConfigObject } from "./parser";
 
@@ -30,6 +31,7 @@ export default class DiscloudConfig {
       this.#data = this.#readFileSync();
   }
 
+  #comments: Comments = new Comments();
   #data: DiscloudConfigType = {} as DiscloudConfigType;
   #dir: string;
   #watcher!: FSWatcher | null;
@@ -123,12 +125,12 @@ export default class DiscloudConfig {
   }
 
   #stringifyConfigObject(obj: any): string {
-    return stringifyConfigObject(obj);
+    return stringifyConfigObject(obj, this.#comments);
   }
 
   #parseConfigContent<T>(s: string): T {
     if (typeof s !== "string") return {} as T;
 
-    return parseConfigContent(s);
+    return parseConfigContent(s, this.#comments);
   }
 }
