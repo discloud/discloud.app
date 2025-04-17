@@ -1,15 +1,13 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import Comments from "./comments";
 
-const configCleanerPattern = /(^\s*#.*[\r\n]+)|(\s*#.*)/gm;
-const configLineCommentAtStartPattern = /^\s*#.*/;
 const configLineSplitterPattern = /[\r\n]+/g;
 const configArraySplitterPattern = /\s*,\s*/g;
 
 export function parseConfigContent<T>(content: string): T
 export function parseConfigContent<T>(content: string, comments: Comments): T
 export function parseConfigContent(content: string, comments?: Comments) {
-  const lines = content.replace(configCleanerPattern, "").split(configLineSplitterPattern);
+  const lines = content.split(configLineSplitterPattern);
 
   return parseValues(Object.fromEntries(Array.from(parseLines(lines, comments))));
 }
@@ -18,24 +16,17 @@ function* parseLines(lines: string[], comments: Comments = new Comments()) {
   comments.clear();
 
   for (let i = 0; i < lines.length; i++) {
-    const lineWithComment = lines[i];
-    const [content, comment] = lineWithComment.split(Comments.char);
-    const trimmedContent = content.trimEnd();
+    const line = lines[i].trimEnd();
+    const comment = Comments.matchCommentInLine(line);
 
-    const indexOfComment = lineWithComment.indexOf(Comments.char);
-    if (indexOfComment > -1) {
-      if (configLineCommentAtStartPattern.test(lineWithComment)) {
-        comments.add(i, 0, lineWithComment);
-        continue;
-      }
-
-      const commentContent = `${Comments.char}${comment}`;
-      const startSpaces = content.replace(trimmedContent, "").length;
-
-      comments.add(i, indexOfComment, commentContent, startSpaces);
+    if (!comment || comment.index === undefined) {
+      yield line.split("=") as [string, string];
+      continue;
     }
 
-    yield trimmedContent.split("=");
+    comments.add(i, comment.index, comment[1]);
+
+    yield line.replace(Comments.pattern, "").trimEnd().split("=") as [string, string];
   }
 }
 
@@ -91,22 +82,15 @@ export function stringifyConfigObject(obj: any, comments?: Comments): string {
 
 function writeComments(lines: string[], comments: Comments = new Comments()) {
   if (!comments.size) return lines;
-  let count = 0;
 
-  for (let i = 0; i < lines.length; i++) {
-    const comment = comments.get(i);
-
-    if (!comment) continue;
-
+  for (const comment of comments.values()) {
     if (comment.character) {
-      lines[i] = lines[i] + comment;
+      lines[comment.line] = lines[comment.line] + comment;
     } else {
-      const spliced = lines.splice(i);
+      const spliced = lines.splice(comment.line);
 
       lines.push(comment.content, ...spliced);
     }
-
-    if (++count === comments.size) break;
   }
 
   return lines;

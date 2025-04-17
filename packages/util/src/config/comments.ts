@@ -3,25 +3,29 @@ export class Comment {
     readonly line: number,
     readonly character: number,
     readonly content: string,
-    readonly startSpaces: number = 0,
   ) { }
 
   toString() {
-    return "".padEnd(this.startSpaces) + this.content;
+    return this.content;
   }
 }
 
 export default class Comments {
   static readonly char = "#";
+  static readonly pattern = /(\s*#.*)/;
 
-  #cache = new Map<number, Comment>();
+  static matchCommentInLine(line: string) {
+    return line.match(Comments.pattern);
+  }
+
+  readonly #cache = new Map<number, Comment>();
 
   get size() {
     return this.#cache.size;
   }
 
-  add(line: number, character: number, content: string, startSpaces: number = 0) {
-    this.#cache.set(line, new Comment(line, character, content, startSpaces));
+  add(line: number, character: number, content: string) {
+    this.#cache.set(line, new Comment(line, character, content));
   }
 
   clear() {
@@ -34,5 +38,9 @@ export default class Comments {
 
   get(line: number) {
     return this.#cache.get(line);
+  }
+
+  values() {
+    return this.#cache.values();
   }
 }
