@@ -100,8 +100,6 @@ function writeComments(lines: string[], comments: Comments = new Comments()) {
 
     if (!comment) continue;
 
-    count++;
-
     if (comment.character) {
       lines[i] = line + comment;
     } else {
@@ -110,7 +108,7 @@ function writeComments(lines: string[], comments: Comments = new Comments()) {
       lines.push(comment.content, ...spliced);
     }
 
-    if (count === comments.size) break;
+    if (++count === comments.size) break;
   }
 
   return lines.join("\n");
