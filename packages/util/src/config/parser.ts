@@ -81,7 +81,7 @@ export function stringifyConfigObject(obj: any, comments?: Comments): string {
           result.push(`${key}=${stringifyConfigObject(obj[key], comments)}`);
       }
 
-      return writeComments(result.filter(Boolean), comments);
+      return writeComments(result.filter(Boolean), comments).join("\n");
     }
 
     default:
@@ -90,7 +90,7 @@ export function stringifyConfigObject(obj: any, comments?: Comments): string {
 }
 
 function writeComments(lines: string[], comments: Comments = new Comments()) {
-  if (!comments.size) return lines.join("\n");
+  if (!comments.size) return lines;
   let count = 0;
 
   for (let i = 0; i < lines.length; i++) {
@@ -111,5 +111,5 @@ function writeComments(lines: string[], comments: Comments = new Comments()) {
     if (++count === comments.size) break;
   }
 
-  return lines.join("\n");
+  return lines;
 }
