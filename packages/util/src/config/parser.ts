@@ -94,14 +94,12 @@ function writeComments(lines: string[], comments: Comments = new Comments()) {
   let count = 0;
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-
     const comment = comments.get(i);
 
     if (!comment) continue;
 
     if (comment.character) {
-      lines[i] = line + comment;
+      lines[i] = lines[i] + comment;
     } else {
       const spliced = lines.splice(i);
 
