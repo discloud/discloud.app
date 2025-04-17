@@ -1,13 +1,11 @@
-import { discloudConfigRequiredScopes, DiscloudConfigScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
+import { discloudConfigRequiredScopes, type DiscloudConfigType } from "@discloudapp/api-types/v2";
 import { existsSync, type FSWatcher, readFileSync, statSync, watch } from "fs";
 import { readFile, writeFile } from "fs/promises";
 import { basename, dirname, join } from "path";
-import { parseEnv } from "util";
 import { fromZodError } from "zod-validation-error";
 import { DiscloudConfigPredicate } from "./assertions";
 import { MissingMainError } from "./errors";
-
-const STRING_BOOLEAN = new Set(["false", "true"]);
+import { parseConfigContent, stringifyConfigObject } from "./parser";
 
 export default class DiscloudConfig {
   static readonly filename = "discloud.config";
@@ -114,68 +112,23 @@ export default class DiscloudConfig {
       this.#data = await this.#readFile();
   }
 
-  async #readFile() {
+  async #readFile<T>() {
     const content = await readFile(this.path, "utf8");
-    return this.#parseConfigContent(content);
+    return this.#parseConfigContent<T>(content);
   }
 
-  #readFileSync() {
+  #readFileSync<T>() {
     const content = readFileSync(this.path, "utf8");
-    return this.#parseConfigContent(content);
+    return this.#parseConfigContent<T>(content);
   }
 
   #stringifyConfigObject(obj: any): string {
-    if (obj === undefined || obj === null) return "";
-    if (!obj) return `${obj}`;
-
-    switch (typeof obj) {
-      case "bigint":
-      case "number":
-        return `${obj}`;
-
-      case "string":
-        return obj;
-
-      case "symbol":
-        return String(obj);
-
-      case "object": {
-        const result = [];
-
-        if (Array.isArray(obj)) {
-          for (let i = 0; i < obj.length; i++)
-            result.push(this.#stringifyConfigObject(obj[i]));
-        } else {
-          for (const key in obj)
-            result.push(`${key}=${this.#stringifyConfigObject(obj[key])}`);
-        }
-
-        return result.filter(Boolean).join("\n");
-      }
-
-      default:
-        return `${obj}`;
-    }
+    return stringifyConfigObject(obj);
   }
 
-  #parseConfigContent(s: string) {
-    if (typeof s !== "string") return {};
+  #parseConfigContent<T>(s: string): T {
+    if (typeof s !== "string") return {} as T;
 
-    return this.#parseValues(parseEnv(s));
-  }
-
-  #parseValues(obj: any) {
-    if (typeof obj !== "object" || obj === null) return obj;
-
-    let key = DiscloudConfigScopes.APT;
-    if (key in obj) obj[key] = obj[key].split(/\s*,\s*/g).filter(Boolean);
-
-    key = DiscloudConfigScopes.AUTORESTART;
-    if (key in obj && STRING_BOOLEAN.has(obj[key])) obj[key] = obj[key] == true;
-
-    key = DiscloudConfigScopes.RAM;
-    if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
-
-    return obj;
+    return parseConfigContent(s);
   }
 }
