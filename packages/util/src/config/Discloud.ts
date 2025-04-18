@@ -31,7 +31,7 @@ export default class DiscloudConfig {
       this.#data = this.#readFileSync();
   }
 
-  #comments: Comments = new Comments();
+  readonly #comments: Comments = new Comments();
   #data: DiscloudConfigType = {} as DiscloudConfigType;
   #dir: string;
   #watcher!: FSWatcher | null;

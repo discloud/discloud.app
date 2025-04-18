@@ -12,11 +12,7 @@ export class Comment {
 
 export default class Comments {
   static readonly char = "#";
-  static readonly pattern = /(\s*#.*)/;
-
-  static matchCommentInLine(line: string) {
-    return line.match(Comments.pattern);
-  }
+  static readonly pattern = /(\s*#.*)$/;
 
   readonly #cache = new Map<number, Comment>();
 

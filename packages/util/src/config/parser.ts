@@ -17,9 +17,9 @@ function* parseLines(lines: string[], comments: Comments = new Comments()) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trimEnd();
-    const comment = Comments.matchCommentInLine(line);
+    const comment = line.match(Comments.pattern);
 
-    if (!comment || comment.index === undefined) {
+    if (!comment || typeof comment.index !== "number") {
       yield line.split("=") as [string, string];
       continue;
     }
