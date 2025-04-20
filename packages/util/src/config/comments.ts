@@ -8,11 +8,20 @@ export class Comment {
   toString() {
     return this.content;
   }
+
+  toJSON() {
+    return {
+      line: this.line,
+      character: this.character,
+      content: this.content,
+    };
+  }
 }
 
 export default class Comments {
   static readonly char = "#";
-  static readonly pattern = /(\s*#.*)$/;
+  /** `/(\s*#.*$)/` */
+  static readonly pattern = /(\s*#.*$)/;
 
   readonly #cache = new Map<number, Comment>();
 

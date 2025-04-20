@@ -3,6 +3,7 @@ import Comments from "./comments";
 
 const configLineSplitterPattern = /[\r\n]+/g;
 const configArraySplitterPattern = /\s*,\s*/g;
+const configAssignmentCharacter = "=";
 
 export function parseConfigContent<T>(content: string): T
 export function parseConfigContent<T>(content: string, comments: Comments): T
@@ -12,21 +13,20 @@ export function parseConfigContent(content: string, comments?: Comments) {
   return parseValues(Object.fromEntries(Array.from(parseLines(lines, comments))));
 }
 
-function* parseLines(lines: string[], comments: Comments = new Comments()) {
+export function* parseLines(lines: string[], comments: Comments = new Comments()) {
   comments.clear();
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trimEnd();
     const comment = line.match(Comments.pattern);
 
-    if (!comment || typeof comment.index !== "number") {
-      yield line.split("=") as [string, string];
-      continue;
+    if (typeof comment?.index === "number") {
+      comments.add(i, comment.index, comment[1]);
+
+      if (comment.index < 1) continue;
     }
 
-    comments.add(i, comment.index, comment[1]);
-
-    yield line.replace(Comments.pattern, "").trimEnd().split("=") as [string, string];
+    yield line.replace(Comments.pattern, "").trimEnd().split(configAssignmentCharacter) as [string, string];
   }
 }
 
@@ -69,7 +69,7 @@ export function stringifyConfigObject(obj: any, comments?: Comments): string {
           result.push(stringifyConfigObject(obj[i], comments));
       } else {
         for (const key in obj)
-          result.push(`${key}=${stringifyConfigObject(obj[key], comments)}`);
+          result.push(`${key}${configAssignmentCharacter}${stringifyConfigObject(obj[key], comments)}`);
       }
 
       return writeComments(result.filter(Boolean), comments).join("\n");
@@ -80,7 +80,7 @@ export function stringifyConfigObject(obj: any, comments?: Comments): string {
   }
 }
 
-function writeComments(lines: string[], comments: Comments = new Comments()) {
+export function writeComments(lines: string[], comments: Comments = new Comments()) {
   if (!comments.size) return lines;
 
   for (const comment of comments.values()) {
