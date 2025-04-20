@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Type Alias: FileResolvableSync
 
-> **FileResolvableSync**: `Exclude`\<[`FileResolvable`](FileResolvable.md), `URL` \| `Readable` \| `Writable`\>
+> **FileResolvableSync** = [`Exclude`](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers)\<[`FileResolvable`](FileResolvable.md), `URL` \| `Readable` \| `Writable`\>
 
-Defined in: packages/util/out/FileResolver.d.ts:34
+Defined in: packages/util/dist/FileResolver.d.ts:30

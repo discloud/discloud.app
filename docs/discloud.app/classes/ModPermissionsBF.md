@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: ModPermissionsBF
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:14
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:14
 
 Data structure that makes it easy to interact with a bitfield.
 
@@ -16,11 +16,11 @@ Data structure that makes it easy to interact with a bitfield.
 
 ## Constructors
 
-### new ModPermissionsBF()
+### Constructor
 
-> **new ModPermissionsBF**(...`bits`): [`ModPermissionsBF`](ModPermissionsBF.md)
+> **new ModPermissionsBF**(...`bits`): `ModPermissionsBF`
 
-Defined in: packages/util/out/BitField.d.ts:27
+Defined in: packages/util/dist/BitField.d.ts:27
 
 #### Parameters
 
@@ -30,11 +30,11 @@ Defined in: packages/util/out/BitField.d.ts:27
 
 #### Returns
 
-[`ModPermissionsBF`](ModPermissionsBF.md)
+`ModPermissionsBF`
 
 #### Inherited from
 
-[`BitField`](BitField.md).[`constructor`](BitField.md#constructors)
+[`BitField`](BitField.md).[`constructor`](BitField.md#constructor)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: packages/util/out/BitField.d.ts:27
 
 > **bitField**: `number`
 
-Defined in: packages/util/out/BitField.d.ts:15
+Defined in: packages/util/dist/BitField.d.ts:15
 
 Bitfield of the packed bits
 
@@ -56,7 +56,7 @@ Bitfield of the packed bits
 
 > **constructor**: [`BitFieldConstructor`](../interfaces/BitFieldConstructor.md)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `number`\>
 
-Defined in: packages/util/out/BitField.d.ts:11
+Defined in: packages/util/dist/BitField.d.ts:11
 
 #### Inherited from
 
@@ -66,9 +66,9 @@ Defined in: packages/util/out/BitField.d.ts:11
 
 ### All
 
-> `readonly` `static` **All**: [`ModPermissionsBF`](ModPermissionsBF.md)
+> `readonly` `static` **All**: `ModPermissionsBF`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:17
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:17
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:17
 
 > `readonly` `static` **DefaultBit**: `0` = `0`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:15
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:15
 
 #### Overrides
 
@@ -88,7 +88,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:15
 
 > `readonly` `static` **Flags**: *typeof* [`ModPermissionsFlags`](../enumerations/ModPermissionsFlags.md)
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:16
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:16
 
 Numeric bitfield flags.
 Defined in extension classes
@@ -101,13 +101,13 @@ Defined in extension classes
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `Generator`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `void`, `unknown`\>
+> **\[iterator\]**(): [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `void`, `unknown`\>
 
-Defined in: packages/util/out/BitField.d.ts:82
+Defined in: packages/util/dist/BitField.d.ts:82
 
 #### Returns
 
-`Generator`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `void`, `unknown`\>
+[`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `void`, `unknown`\>
 
 #### Inherited from
 
@@ -119,7 +119,7 @@ Defined in: packages/util/out/BitField.d.ts:82
 
 > **add**(...`bits`): `this`
 
-Defined in: packages/util/out/BitField.d.ts:33
+Defined in: packages/util/dist/BitField.d.ts:33
 
 Adds bits to these ones.
 
@@ -147,7 +147,7 @@ These bits or new BitField if the instance is frozen.
 
 > **any**(...`bits`): `boolean`
 
-Defined in: packages/util/out/BitField.d.ts:38
+Defined in: packages/util/dist/BitField.d.ts:38
 
 Checks whether the bitfield has a bit, or any of multiple bits.
 
@@ -173,7 +173,7 @@ Bit(s) to check for
 
 > **equals**(...`bits`): `boolean`
 
-Defined in: packages/util/out/BitField.d.ts:43
+Defined in: packages/util/dist/BitField.d.ts:43
 
 Checks if this bitfield equals another
 
@@ -197,15 +197,15 @@ Bit(s) to check for
 
 ### freeze()
 
-> **freeze**(): `Readonly`\<[`ModPermissionsBF`](ModPermissionsBF.md)\>
+> **freeze**(): [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`ModPermissionsBF`\>
 
-Defined in: packages/util/out/BitField.d.ts:47
+Defined in: packages/util/dist/BitField.d.ts:47
 
 Freezes these bits, making them immutable.
 
 #### Returns
 
-`Readonly`\<[`ModPermissionsBF`](ModPermissionsBF.md)\>
+[`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`ModPermissionsBF`\>
 
 #### Inherited from
 
@@ -217,7 +217,7 @@ Freezes these bits, making them immutable.
 
 > **has**(...`bits`): `boolean`
 
-Defined in: packages/util/out/BitField.d.ts:52
+Defined in: packages/util/dist/BitField.d.ts:52
 
 Checks whether the bitfield has a bit, or multiple bits.
 
@@ -243,7 +243,7 @@ Bit(s) to check for
 
 > **missing**(...`bits`): (`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`)[]
 
-Defined in: packages/util/out/BitField.d.ts:57
+Defined in: packages/util/dist/BitField.d.ts:57
 
 Gets all given bits that are missing from the bitfield.
 
@@ -269,7 +269,7 @@ Bit(s) to check for
 
 > **remove**(...`bits`): `this`
 
-Defined in: packages/util/out/BitField.d.ts:63
+Defined in: packages/util/dist/BitField.d.ts:63
 
 Removes bits from these.
 
@@ -295,16 +295,16 @@ These bits or new BitField if the instance is frozen.
 
 ### serialize()
 
-> **serialize**(): `Record`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
+> **serialize**(): [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
 
-Defined in: packages/util/out/BitField.d.ts:68
+Defined in: packages/util/dist/BitField.d.ts:68
 
 Gets an object mapping field names to a boolean indicating whether the
 bit is available.
 
 #### Returns
 
-`Record`\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
+[`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
 
 #### Inherited from
 
@@ -316,7 +316,7 @@ bit is available.
 
 > **set**(...`bits`): `this`
 
-Defined in: packages/util/out/BitField.d.ts:74
+Defined in: packages/util/dist/BitField.d.ts:74
 
 Replace the bits with these.
 
@@ -344,9 +344,9 @@ These bits or new BitField if the instance is frozen.
 
 > **toArray**(): (`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`)[]
 
-Defined in: packages/util/out/BitField.d.ts:78
+Defined in: packages/util/dist/BitField.d.ts:78
 
-Gets an Array of bitfield names based on the bits available.
+Gets an [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) of bitfield names based on the bits available.
 
 #### Returns
 
@@ -362,7 +362,7 @@ Gets an Array of bitfield names based on the bits available.
 
 > **toJSON**(): `string` \| `number`
 
-Defined in: packages/util/out/BitField.d.ts:79
+Defined in: packages/util/dist/BitField.d.ts:79
 
 #### Returns
 
@@ -378,7 +378,7 @@ Defined in: packages/util/out/BitField.d.ts:79
 
 > **toString**(): `string`
 
-Defined in: packages/util/out/BitField.d.ts:80
+Defined in: packages/util/dist/BitField.d.ts:80
 
 #### Returns
 
@@ -394,7 +394,7 @@ Defined in: packages/util/out/BitField.d.ts:80
 
 > **valueOf**(): `number`
 
-Defined in: packages/util/out/BitField.d.ts:81
+Defined in: packages/util/dist/BitField.d.ts:81
 
 #### Returns
 
@@ -410,15 +410,19 @@ Defined in: packages/util/out/BitField.d.ts:81
 
 > `static` **resolve**\<`S`, `N`\>(`bit`): `N`
 
-Defined in: packages/util/out/BitField.d.ts:87
+Defined in: packages/util/dist/BitField.d.ts:87
 
 Resolves bitfields to their numeric form.
 
 #### Type Parameters
 
-• **S** *extends* `string`
+##### S
 
-• **N** *extends* `number` \| `bigint`
+`S` *extends* `string`
+
+##### N
+
+`N` *extends* `number` \| `bigint`
 
 #### Parameters
 

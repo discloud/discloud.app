@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: DiscloudApp
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
 
 ## Extends
 
@@ -14,11 +14,11 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://gi
 
 ## Constructors
 
-### new DiscloudApp()
+### Constructor
 
-> **new DiscloudApp**(`options`): [`DiscloudApp`](DiscloudApp.md)
+> **new DiscloudApp**(`options`): `DiscloudApp`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
 
 #### Parameters
 
@@ -28,7 +28,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://gi
 
 #### Returns
 
-[`DiscloudApp`](DiscloudApp.md)
+`DiscloudApp`
 
 #### Overrides
 
@@ -40,7 +40,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://gi
 
 > `readonly` **appApt**: [`AppAptManager`](AppAptManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://gi
 
 > `readonly` **apps**: [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://gi
 
 > `readonly` **appTeam**: [`AppTeamManager`](AppTeamManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://gi
 
 > `readonly` **options**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://gi
 
 > `readonly` **rest**: [`REST`](REST.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://gi
 
 > `readonly` **teamApps**: [`TeamAppManager`](TeamAppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://gi
 
 > `readonly` **user**: [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
 
 ***
 
@@ -114,7 +114,7 @@ v13.4.0, v12.16.0
 
 ### captureRejectionSymbol
 
-> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](DiscloudApp.md#capturerejectionsymbol)
+> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](REST.md#capturerejectionsymbol)
 
 Defined in: node\_modules/@types/node/events.d.ts:452
 
@@ -186,7 +186,7 @@ v0.11.2
 
 ### errorMonitor
 
-> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](DiscloudApp.md#errormonitor)
+> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](REST.md#errormonitor)
 
 Defined in: node\_modules/@types/node/events.d.ts:445
 
@@ -211,7 +211,7 @@ v13.6.0, v12.17.0
 
 > **get** **token**(): `string`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L46)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L46)
 
 ##### Returns
 
@@ -227,13 +227,15 @@ Defined in: node\_modules/@types/node/events.d.ts:136
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
 ##### error
 
-`Error`
+[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ##### event
 
@@ -263,7 +265,9 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -335,7 +339,9 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -405,7 +411,7 @@ v6.0.0
 Defined in: node\_modules/@types/node/events.d.ts:774
 
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](DiscloudApp.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](REST.md#defaultmaxlisteners).
 
 #### Returns
 
@@ -423,7 +429,7 @@ v1.0.0
 
 ### listenerCount()
 
-> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener?`): `number`
 
 Defined in: node\_modules/@types/node/events.d.ts:868
 
@@ -433,7 +439,9 @@ in the list of the listeners of the event.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -481,7 +489,9 @@ console.log(util.inspect(server.listeners('connection')));
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -505,9 +515,9 @@ v0.1.26
 
 ### login()
 
-> **login**(`token`): `Promise`\<[`User`](User.md)\>
+> **login**(`token`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
 
 Login on Discloud API
 
@@ -521,7 +531,7 @@ Your Discloud token
 
 #### Returns
 
-`Promise`\<[`User`](User.md)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
 
 ***
 
@@ -535,7 +545,9 @@ Alias for `emitter.removeListener()`.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -596,7 +608,9 @@ myEE.emit('foo');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -659,7 +673,9 @@ myEE.emit('foo');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -710,7 +726,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -759,7 +777,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -825,7 +845,9 @@ emitter.emit('log');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -849,7 +871,7 @@ v9.4.0
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`eventName`?): `this`
+> **removeAllListeners**(`eventName?`): `this`
 
 Defined in: node\_modules/@types/node/events.d.ts:758
 
@@ -969,7 +991,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -1094,7 +1118,7 @@ v20.5.0
 
 ### getEventListeners()
 
-> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
+> `static` **getEventListeners**(`emitter`, `name`): [`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)[]
 
 Defined in: node\_modules/@types/node/events.d.ts:358
 
@@ -1135,7 +1159,7 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 #### Returns
 
-`Function`[]
+[`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)[]
 
 #### Since
 
@@ -1253,7 +1277,7 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 #### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:303
 
@@ -1364,7 +1388,7 @@ v13.6.0, v12.16.0
 
 #### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:308
 
@@ -1479,7 +1503,7 @@ v13.6.0, v12.16.0
 
 #### Call Signature
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:217
 
@@ -1576,7 +1600,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Returns
 
-`Promise`\<`any`[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 ##### Since
 
@@ -1588,7 +1612,7 @@ v11.13.0, v10.16.0
 
 #### Call Signature
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:222
 
@@ -1685,7 +1709,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Returns
 
-`Promise`\<`any`[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 ##### Since
 
@@ -1699,7 +1723,7 @@ v11.13.0, v10.16.0
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
 
 Defined in: node\_modules/@types/node/events.d.ts:402
 

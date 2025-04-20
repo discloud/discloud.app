@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,9 +6,9 @@
 
 # Function: streamToFile()
 
-> **streamToFile**(`stream`, `fileName`?, `mimeType`?): `Promise`\<`File`\>
+> **streamToFile**(`stream`, `fileName?`, `mimeType?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: packages/util/out/FileResolver.d.ts:43
+Defined in: packages/util/dist/FileResolver.d.ts:39
 
 A function that converts a like Stream parameter to File
 
@@ -34,4 +34,4 @@ A mimeType parameter
 
 ## Returns
 
-`Promise`\<`File`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>

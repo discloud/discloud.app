@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,19 +6,19 @@
 
 # Class: DiscloudAPIError
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:1](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L1)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:1](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L1)
 
 ## Extends
 
-- `Error`
+- [`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ## Constructors
 
-### new DiscloudAPIError()
+### Constructor
 
-> **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): [`DiscloudAPIError`](DiscloudAPIError.md)
+> **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): `DiscloudAPIError`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/
 
 #### Returns
 
-[`DiscloudAPIError`](DiscloudAPIError.md)
+`DiscloudAPIError`
 
 #### Overrides
 
@@ -56,7 +56,7 @@ Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/
 
 > **body**: `any`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **code**: `number`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **method**: `string`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > **path**: `string`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ***
 
@@ -144,7 +144,7 @@ Optional override for formatting stack traces
 
 ##### err
 
-`Error`
+[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ##### stackTraces
 
@@ -178,7 +178,7 @@ Defined in: node\_modules/@types/node/globals.d.ts:145
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Defined in: node\_modules/@types/node/globals.d.ts:136
 
@@ -192,7 +192,7 @@ Create .stack property on a target object
 
 ##### constructorOpt?
 
-`Function`
+[`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
 #### Returns
 

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 # Interface: ApiAppManagerRemovedAll
 
-Defined in: [packages/api-types/rest/v2/app.ts:98](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L98)
+Defined in: [packages/api-types/rest/v2/app.ts:98](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L98)
 
 ## Extends
 
-- `Omit`\<[`ApiAppManager`](ApiAppManager.md), `"alreadyOnline"`\>
+- [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`ApiAppManager`](ApiAppManager.md), `"alreadyOnline"`\>
 
 ## Properties
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:98](https://github.com/discloud/d
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L87)
+Defined in: [packages/api-types/rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L87)
 
 Which of your applications are currently `processing`
 
@@ -32,7 +32,7 @@ Which of your applications are currently `processing`
 
 > **alreadyOffline**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L91)
+Defined in: [packages/api-types/rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L91)
 
 Which of your applications are currently `offline`
 
@@ -46,6 +46,6 @@ Which of your applications are currently `offline`
 
 > **removealled**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:102](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L102)
+Defined in: [packages/api-types/rest/v2/app.ts:102](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L102)
 
 Which of your applications have been `removed`

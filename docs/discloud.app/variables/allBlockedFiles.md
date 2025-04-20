@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 > `const` **allBlockedFiles**: `string`[]
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:10
+Defined in: packages/util/dist/IgnoreFiles.d.ts:10

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ClientEvents
 
-Defined in: [packages/discloud.app/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/@types/index.ts#L36)
+Defined in: [packages/discloud.app/src/@types/index.ts:36](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/@types/index.ts#L36)
 
 ## Extends
 
@@ -16,9 +16,9 @@ Defined in: [packages/discloud.app/src/@types/index.ts:36](https://github.com/di
 
 ### error
 
-> **error**: \[`Error`\]
+> **error**: \[[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)\]
 
-Defined in: packages/rest/out/@types/index.d.ts:76
+Defined in: packages/rest/dist/@types/index.d.ts:78
 
 #### Inherited from
 
@@ -30,7 +30,7 @@ Defined in: packages/rest/out/@types/index.d.ts:76
 
 > **rateLimited**: \[[`RateLimitData`](RateLimitData.md)\]
 
-Defined in: packages/rest/out/@types/index.d.ts:77
+Defined in: packages/rest/dist/@types/index.d.ts:79
 
 #### Inherited from
 

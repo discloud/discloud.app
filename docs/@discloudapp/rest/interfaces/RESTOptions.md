@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RESTOptions
 
-Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L8)
+Defined in: [packages/rest/src/@types/index.ts:9](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L9)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/@types/index.ts:8](https://github.com/discloud/di
 
 > **api**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L13)
+Defined in: [packages/rest/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L14)
 
 The base api path, without version
 
@@ -28,7 +28,7 @@ The base api path, without version
 
 > **globalRequestsPerMinute**: `number`
 
-Defined in: [packages/rest/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L19)
+Defined in: [packages/rest/src/@types/index.ts:20](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L20)
 
 How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
 
@@ -42,7 +42,7 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 > **headers**: `undefined` \| `HeadersInit`
 
-Defined in: [packages/rest/src/@types/index.ts:25](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L25)
+Defined in: [packages/rest/src/@types/index.ts:26](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L26)
 
 Additional headers to send for all API requests
 
@@ -52,11 +52,19 @@ Additional headers to send for all API requests
 
 ***
 
+### userAgent
+
+> **userAgent**: [`IUserAgent`](IUserAgent.md)
+
+Defined in: [packages/rest/src/@types/index.ts:34](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L34)
+
+***
+
 ### version
 
 > **version**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:31](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L31)
+Defined in: [packages/rest/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L32)
 
 The version of the API to use
 

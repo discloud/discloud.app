@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Interface: DiscloudAppOptions
 
-Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/@types/index.ts#L13)
+Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/@types/index.ts#L13)
 
 ## Properties
 
 ### rest?
 
-> `optional` **rest**: `Partial`\<[`RESTOptions`](RESTOptions.md)\>
+> `optional` **rest**: [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`RESTOptions`](RESTOptions.md)\>
 
-Defined in: [packages/discloud.app/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/@types/index.ts#L14)
+Defined in: [packages/discloud.app/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/@types/index.ts#L14)

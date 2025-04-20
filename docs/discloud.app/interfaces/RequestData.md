@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RequestData
 
-Defined in: packages/rest/out/@types/index.d.ts:41
+Defined in: packages/rest/dist/@types/index.d.ts:43
 
 Represents possible data to be given to an endpoint
 
@@ -20,7 +20,7 @@ Represents possible data to be given to an endpoint
 
 > `optional` **body**: `unknown`
 
-Defined in: packages/rest/out/@types/index.d.ts:45
+Defined in: packages/rest/dist/@types/index.d.ts:47
 
 The body to send to this request.
 
@@ -30,7 +30,7 @@ The body to send to this request.
 
 > `optional` **file**: `File` \| [`RawFile`](RawFile.md)
 
-Defined in: packages/rest/out/@types/index.d.ts:49
+Defined in: packages/rest/dist/@types/index.d.ts:51
 
 File to be attached to this request
 
@@ -40,7 +40,7 @@ File to be attached to this request
 
 > `optional` **headers**: `HeadersInit`
 
-Defined in: packages/rest/out/@types/index.d.ts:53
+Defined in: packages/rest/dist/@types/index.d.ts:55
 
 Additional headers to add to this request
 
@@ -48,8 +48,8 @@ Additional headers to add to this request
 
 ### query?
 
-> `optional` **query**: `string` \| `URLSearchParams` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `Iterable`\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+> `optional` **query**: `string` \| `URLSearchParams` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
 
-Defined in: packages/rest/out/@types/index.d.ts:57
+Defined in: packages/rest/dist/@types/index.d.ts:59
 
 Query string parameters to append to the called endpoint

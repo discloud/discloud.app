@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,23 +6,27 @@
 
 # Interface: BitFieldConstructor\<S, N\>
 
-Defined in: packages/util/out/BitField.d.ts:4
+Defined in: packages/util/dist/BitField.d.ts:4
 
 **`Internal`**
 
 ## Type Parameters
 
-• **S** *extends* `string`
+### S
 
-• **N** *extends* `bigint` \| `number`
+`S` *extends* `string`
+
+### N
+
+`N` *extends* `bigint` \| `number`
 
 ## Constructors
 
-### new BitFieldConstructor()
+### Constructor
 
 > **new BitFieldConstructor**(...`bits`): [`BitField`](../classes/BitField.md)\<`S`, `N`\>
 
-Defined in: packages/util/out/BitField.d.ts:5
+Defined in: packages/util/dist/BitField.d.ts:5
 
 #### Parameters
 
@@ -40,7 +44,7 @@ Defined in: packages/util/out/BitField.d.ts:5
 
 > `readonly` **DefaultBit**: `N`
 
-Defined in: packages/util/out/BitField.d.ts:6
+Defined in: packages/util/dist/BitField.d.ts:6
 
 ***
 
@@ -48,7 +52,7 @@ Defined in: packages/util/out/BitField.d.ts:6
 
 > `readonly` **Flags**: `EnumLike`\<`S`, `N`\>
 
-Defined in: packages/util/out/BitField.d.ts:7
+Defined in: packages/util/dist/BitField.d.ts:7
 
 ## Methods
 
@@ -56,7 +60,7 @@ Defined in: packages/util/out/BitField.d.ts:7
 
 > **resolve**(`bit`): `N`
 
-Defined in: packages/util/out/BitField.d.ts:8
+Defined in: packages/util/dist/BitField.d.ts:8
 
 #### Parameters
 

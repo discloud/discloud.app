@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RESTOptions
 
-Defined in: packages/rest/out/@types/index.d.ts:5
+Defined in: packages/rest/dist/@types/index.d.ts:6
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/rest/out/@types/index.d.ts:5
 
 > **api**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:10
+Defined in: packages/rest/dist/@types/index.d.ts:11
 
 The base api path, without version
 
@@ -28,7 +28,7 @@ The base api path, without version
 
 > **globalRequestsPerMinute**: `number`
 
-Defined in: packages/rest/out/@types/index.d.ts:16
+Defined in: packages/rest/dist/@types/index.d.ts:17
 
 How many requests to allow sending per second (Infinity for unlimited, 60 for the standard global limit used by Discloud)
 
@@ -42,7 +42,7 @@ How many requests to allow sending per second (Infinity for unlimited, 60 for th
 
 > **headers**: `undefined` \| `HeadersInit`
 
-Defined in: packages/rest/out/@types/index.d.ts:22
+Defined in: packages/rest/dist/@types/index.d.ts:23
 
 Additional headers to send for all API requests
 
@@ -52,11 +52,19 @@ Additional headers to send for all API requests
 
 ***
 
+### userAgent
+
+> **userAgent**: [`IUserAgent`](IUserAgent.md)
+
+Defined in: packages/rest/dist/@types/index.d.ts:30
+
+***
+
 ### version
 
 > **version**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:28
+Defined in: packages/rest/dist/@types/index.d.ts:29
 
 The version of the API to use
 

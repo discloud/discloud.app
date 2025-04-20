@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RawFile
 
-Defined in: [packages/util/src/FileResolver.ts:7](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L7)
+Defined in: [packages/util/src/FileResolver.ts:8](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L8)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/FileResolver.ts:7](https://github.com/discloud/di
 
 > `optional` **contentType**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:23](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L23)
+Defined in: [packages/util/src/FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L20)
 
 Content-Type of the file
 
@@ -22,21 +22,11 @@ Content-Type of the file
 
 ### data
 
-> **data**: `Buffer`\<`ArrayBufferLike`\> \| `Blob` \| `BinaryLike` \| `File`
+> **data**: `Blob` \| `BinaryLike` \| `Buffer`\<`ArrayBufferLike`\> \| `File`
 
-Defined in: [packages/util/src/FileResolver.ts:19](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L19)
+Defined in: [packages/util/src/FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L16)
 
 The actual data for the file
-
-***
-
-### key?
-
-> `optional` **key**: `string`
-
-Defined in: [packages/util/src/FileResolver.ts:15](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L15)
-
-An explicit key to use for key of the formdata field for this file.
 
 ***
 
@@ -44,6 +34,6 @@ An explicit key to use for key of the formdata field for this file.
 
 > **name**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:11](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L11)
+Defined in: [packages/util/src/FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L12)
 
 The name of the file

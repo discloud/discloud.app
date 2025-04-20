@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Type Alias: RequestOptions
 
-> **RequestOptions**: `NonNullable`\<`Parameters`\<*typeof* `fetch`\>\[`1`\]\>
+> **RequestOptions** = [`NonNullable`](https://www.typescriptlang.org/docs/handbook/utility-types.html#nonnullabletype)\<[`Parameters`](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype)\<*typeof* `fetch`\>\[`1`\]\>
 
-Defined in: packages/rest/out/@types/index.d.ts:4
+Defined in: packages/rest/dist/@types/index.d.ts:5

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RateLimitData
 
-Defined in: packages/rest/out/@types/index.d.ts:68
+Defined in: packages/rest/dist/@types/index.d.ts:70
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/rest/out/@types/index.d.ts:68
 
 > **global**: `boolean`
 
-Defined in: packages/rest/out/@types/index.d.ts:69
+Defined in: packages/rest/dist/@types/index.d.ts:71
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: packages/rest/out/@types/index.d.ts:69
 
 > **method**: `"DELETE"` \| `"GET"` \| `"POST"` \| `"PUT"`
 
-Defined in: packages/rest/out/@types/index.d.ts:70
+Defined in: packages/rest/dist/@types/index.d.ts:72
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: packages/rest/out/@types/index.d.ts:70
 
 > **path**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:71
+Defined in: packages/rest/dist/@types/index.d.ts:73
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: packages/rest/out/@types/index.d.ts:71
 
 > **timeToReset**: `number`
 
-Defined in: packages/rest/out/@types/index.d.ts:72
+Defined in: packages/rest/dist/@types/index.d.ts:74
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: packages/rest/out/@types/index.d.ts:72
 
 > **url**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:73
+Defined in: packages/rest/dist/@types/index.d.ts:75

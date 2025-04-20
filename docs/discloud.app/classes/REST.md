@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: REST
 
-Defined in: packages/rest/out/REST.d.ts:3
+Defined in: packages/rest/dist/REST.d.ts:3
 
 ## Extends
 
@@ -14,21 +14,21 @@ Defined in: packages/rest/out/REST.d.ts:3
 
 ## Constructors
 
-### new REST()
+### Constructor
 
-> **new REST**(`options`?): [`REST`](REST.md)
+> **new REST**(`options?`): `REST`
 
-Defined in: packages/rest/out/REST.d.ts:22
+Defined in: packages/rest/dist/REST.d.ts:22
 
 #### Parameters
 
 ##### options?
 
-`Partial`\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
+[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
 
 #### Returns
 
-[`REST`](REST.md)
+`REST`
 
 #### Overrides
 
@@ -40,7 +40,7 @@ Defined in: packages/rest/out/REST.d.ts:22
 
 > **globalLimit**: `number`
 
-Defined in: packages/rest/out/REST.d.ts:9
+Defined in: packages/rest/dist/REST.d.ts:9
 
 The number of requests limit on the global bucket
 
@@ -50,7 +50,7 @@ The number of requests limit on the global bucket
 
 > **globalRemaining**: `number`
 
-Defined in: packages/rest/out/REST.d.ts:13
+Defined in: packages/rest/dist/REST.d.ts:13
 
 The number of requests remaining in the global bucket
 
@@ -60,7 +60,7 @@ The number of requests remaining in the global bucket
 
 > **globalReset**: `number`
 
-Defined in: packages/rest/out/REST.d.ts:17
+Defined in: packages/rest/dist/REST.d.ts:17
 
 The seconds that the global bucket is reset
 
@@ -70,7 +70,7 @@ The seconds that the global bucket is reset
 
 > **globalTime**: `number`
 
-Defined in: packages/rest/out/REST.d.ts:21
+Defined in: packages/rest/dist/REST.d.ts:21
 
 The time at which the last request was made
 
@@ -80,7 +80,7 @@ The time at which the last request was made
 
 > `readonly` **options**: [`RESTOptions`](../interfaces/RESTOptions.md)
 
-Defined in: packages/rest/out/REST.d.ts:5
+Defined in: packages/rest/dist/REST.d.ts:5
 
 ***
 
@@ -106,7 +106,7 @@ v13.4.0, v12.16.0
 
 ### captureRejectionSymbol
 
-> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](DiscloudApp.md#capturerejectionsymbol)
+> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](#capturerejectionsymbol)
 
 Defined in: node\_modules/@types/node/events.d.ts:452
 
@@ -178,7 +178,7 @@ v0.11.2
 
 ### errorMonitor
 
-> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](DiscloudApp.md#errormonitor)
+> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](#errormonitor)
 
 Defined in: node\_modules/@types/node/events.d.ts:445
 
@@ -203,7 +203,7 @@ v13.6.0, v12.17.0
 
 > **get** **globalLimited**(): `boolean`
 
-Defined in: packages/rest/out/REST.d.ts:27
+Defined in: packages/rest/dist/REST.d.ts:27
 
 If the rate limit bucket is currently limited by its limit
 
@@ -219,7 +219,7 @@ If the rate limit bucket is currently limited by its limit
 
 > **get** **globalTimeToReset**(): `number`
 
-Defined in: packages/rest/out/REST.d.ts:31
+Defined in: packages/rest/dist/REST.d.ts:31
 
 The time until queued requests can continue
 
@@ -235,7 +235,7 @@ The time until queued requests can continue
 
 > **get** **token**(): `string`
 
-Defined in: packages/rest/out/REST.d.ts:32
+Defined in: packages/rest/dist/REST.d.ts:32
 
 ##### Returns
 
@@ -251,13 +251,15 @@ Defined in: node\_modules/@types/node/events.d.ts:136
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
 ##### error
 
-`Error`
+[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ##### event
 
@@ -287,7 +289,9 @@ Alias for `emitter.on(eventName, listener)`.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -315,15 +319,17 @@ v0.1.26
 
 ### delete()
 
-> **delete**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+> **delete**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:52
+Defined in: packages/rest/dist/REST.d.ts:52
 
 Runs a delete request from the api
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
+
+`T` = `any`
 
 #### Parameters
 
@@ -341,7 +347,7 @@ Optional request options
 
 #### Returns
 
-`Promise`\<`T`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
 ***
 
@@ -391,7 +397,9 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -456,15 +464,17 @@ v6.0.0
 
 ### get()
 
-> **get**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+> **get**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:45
+Defined in: packages/rest/dist/REST.d.ts:45
 
 Runs a get request from the api
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
+
+`T` = `any`
 
 #### Parameters
 
@@ -482,7 +492,7 @@ Optional request options
 
 #### Returns
 
-`Promise`\<`T`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
 ***
 
@@ -493,7 +503,7 @@ Optional request options
 Defined in: node\_modules/@types/node/events.d.ts:774
 
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](DiscloudApp.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](#defaultmaxlisteners).
 
 #### Returns
 
@@ -511,7 +521,7 @@ v1.0.0
 
 ### listenerCount()
 
-> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener?`): `number`
 
 Defined in: node\_modules/@types/node/events.d.ts:868
 
@@ -521,7 +531,9 @@ in the list of the listeners of the event.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -569,7 +581,9 @@ console.log(util.inspect(server.listeners('connection')));
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -601,7 +615,9 @@ Alias for `emitter.removeListener()`.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -662,7 +678,9 @@ myEE.emit('foo');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -725,7 +743,9 @@ myEE.emit('foo');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -757,15 +777,17 @@ v0.3.0
 
 ### post()
 
-> **post**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+> **post**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:59
+Defined in: packages/rest/dist/REST.d.ts:59
 
 Runs a post request from the api
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
+
+`T` = `any`
 
 #### Parameters
 
@@ -783,7 +805,7 @@ Optional request options
 
 #### Returns
 
-`Promise`\<`T`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
 ***
 
@@ -808,7 +830,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -857,7 +881,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -889,15 +915,17 @@ v6.0.0
 
 ### put()
 
-> **put**\<`T`\>(`fullRoute`, `options`?): `Promise`\<`T`\>
+> **put**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/out/REST.d.ts:66
+Defined in: packages/rest/dist/REST.d.ts:66
 
 Runs a put request from the api
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
+
+`T` = `any`
 
 #### Parameters
 
@@ -915,7 +943,7 @@ Optional request options
 
 #### Returns
 
-`Promise`\<`T`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
 ***
 
@@ -955,7 +983,9 @@ emitter.emit('log');
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -979,7 +1009,7 @@ v9.4.0
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`eventName`?): `this`
+> **removeAllListeners**(`eventName?`): `this`
 
 Defined in: node\_modules/@types/node/events.d.ts:758
 
@@ -1099,7 +1129,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Type Parameters
 
-• **K**
+##### K
+
+`K`
 
 #### Parameters
 
@@ -1162,7 +1194,7 @@ v0.3.5
 
 > **setToken**(`token`): `this`
 
-Defined in: packages/rest/out/REST.d.ts:38
+Defined in: packages/rest/dist/REST.d.ts:38
 
 Sets the authorization token that should be used for requests
 
@@ -1246,7 +1278,7 @@ v20.5.0
 
 ### getEventListeners()
 
-> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
+> `static` **getEventListeners**(`emitter`, `name`): [`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)[]
 
 Defined in: node\_modules/@types/node/events.d.ts:358
 
@@ -1287,7 +1319,7 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 #### Returns
 
-`Function`[]
+[`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)[]
 
 #### Since
 
@@ -1405,7 +1437,7 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 #### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:303
 
@@ -1516,7 +1548,7 @@ v13.6.0, v12.16.0
 
 #### Call Signature
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[]\>
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:308
 
@@ -1631,7 +1663,7 @@ v13.6.0, v12.16.0
 
 #### Call Signature
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:217
 
@@ -1728,7 +1760,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Returns
 
-`Promise`\<`any`[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 ##### Since
 
@@ -1740,7 +1772,7 @@ v11.13.0, v10.16.0
 
 #### Call Signature
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+> `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 Defined in: node\_modules/@types/node/events.d.ts:222
 
@@ -1837,7 +1869,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Returns
 
-`Promise`\<`any`[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
 ##### Since
 
@@ -1851,7 +1883,7 @@ v11.13.0, v10.16.0
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
 
 Defined in: node\_modules/@types/node/events.d.ts:402
 

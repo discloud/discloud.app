@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Class: GS
 
-Defined in: [packages/util/src/GS.ts:6](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/GS.ts#L6)
+Defined in: [packages/util/src/GS.ts:6](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/GS.ts#L6)
 
 ## Constructors
 
-### new GS()
+### Constructor
 
-> **new GS**(`pattern`, `ignoreFileName`?, `optionalIgnoreList`?): [`GS`](GS.md)
+> **new GS**(`pattern`, `ignoreFileName?`, `optionalIgnoreList?`): `GS`
 
-Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/GS.ts#L10)
+Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/GS.ts#L10)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.ap
 
 #### Returns
 
-[`GS`](GS.md)
+`GS`
 
 ## Properties
 
@@ -40,7 +40,7 @@ Defined in: [packages/util/src/GS.ts:10](https://github.com/discloud/discloud.ap
 
 > `readonly` **found**: `string`[] = `[]`
 
-Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/GS.ts#L7)
+Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/GS.ts#L7)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/util/src/GS.ts:7](https://github.com/discloud/discloud.app
 
 > `readonly` **ignore**: [`IgnoreFiles`](IgnoreFiles.md)
 
-Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/GS.ts#L8)
+Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/GS.ts#L8)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [packages/util/src/GS.ts:8](https://github.com/discloud/discloud.app
 
 > **pattern**: `string` \| `string`[]
 
-Defined in: [packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/GS.ts#L11)
+Defined in: [packages/util/src/GS.ts:11](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/GS.ts#L11)

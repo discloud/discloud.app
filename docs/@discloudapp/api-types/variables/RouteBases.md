@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > `const` **RouteBases**: `object`
 
-Defined in: [rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/index.ts#L16)
+Defined in: [rest/v2/index.ts:16](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/index.ts#L16)
 
 ## Type declaration
 

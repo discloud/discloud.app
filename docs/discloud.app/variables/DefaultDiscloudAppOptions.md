@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > `const` **DefaultDiscloudAppOptions**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md) & `object`
 
-Defined in: [packages/discloud.app/src/util/constants.ts:12](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/discloud.app/src/util/constants.ts#L12)
+Defined in: [packages/discloud.app/src/util/constants.ts:8](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/util/constants.ts#L8)
 
 Library default options
 

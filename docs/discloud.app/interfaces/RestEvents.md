@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RestEvents
 
-Defined in: packages/rest/out/@types/index.d.ts:75
+Defined in: packages/rest/dist/@types/index.d.ts:77
 
 ## Extended by
 
@@ -16,9 +16,9 @@ Defined in: packages/rest/out/@types/index.d.ts:75
 
 ### error
 
-> **error**: \[`Error`\]
+> **error**: \[[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)\]
 
-Defined in: packages/rest/out/@types/index.d.ts:76
+Defined in: packages/rest/dist/@types/index.d.ts:78
 
 ***
 
@@ -26,4 +26,4 @@ Defined in: packages/rest/out/@types/index.d.ts:76
 
 > **rateLimited**: \[[`RateLimitData`](RateLimitData.md)\]
 
-Defined in: packages/rest/out/@types/index.d.ts:77
+Defined in: packages/rest/dist/@types/index.d.ts:79

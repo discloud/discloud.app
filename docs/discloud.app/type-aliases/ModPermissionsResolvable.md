@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Type Alias: ModPermissionsResolvable
 
-> **ModPermissionsResolvable**: [`BitFieldResolvable`](BitFieldResolvable.md)\<[`ModPermissionsString`](ModPermissionsString.md), `number`\>
+> **ModPermissionsResolvable** = [`BitFieldResolvable`](BitFieldResolvable.md)\<[`ModPermissionsString`](ModPermissionsString.md), `number`\>
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:13
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:13

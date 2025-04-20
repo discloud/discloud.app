@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RequestHeaders
 
-Defined in: packages/rest/out/@types/index.d.ts:33
+Defined in: packages/rest/dist/@types/index.d.ts:35
 
 Possible headers for an API call
 
@@ -16,7 +16,7 @@ Possible headers for an API call
 
 > **api-token**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:34
+Defined in: packages/rest/dist/@types/index.d.ts:36
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: packages/rest/out/@types/index.d.ts:34
 
 > `optional` **contentType**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:35
+Defined in: packages/rest/dist/@types/index.d.ts:37
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: packages/rest/out/@types/index.d.ts:35
 
 > `optional` **User-Agent**: `string`
 
-Defined in: packages/rest/out/@types/index.d.ts:36
+Defined in: packages/rest/dist/@types/index.d.ts:38

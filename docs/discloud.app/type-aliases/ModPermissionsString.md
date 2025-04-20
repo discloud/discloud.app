@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Type Alias: ModPermissionsString
 
-> **ModPermissionsString**: keyof *typeof* [`ModPermissionsFlags`](../enumerations/ModPermissionsFlags.md)
+> **ModPermissionsString** = keyof *typeof* [`ModPermissionsFlags`](../enumerations/ModPermissionsFlags.md)
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:12
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:12

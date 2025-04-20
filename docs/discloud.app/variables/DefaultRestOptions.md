@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Variable: DefaultRestOptions
 
-> `const` **DefaultRestOptions**: `Required`\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
+> `const` **DefaultRestOptions**: [`Required`](https://www.typescriptlang.org/docs/handbook/utility-types.html#requiredtype)\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
 
-Defined in: packages/rest/out/utils/constants.d.ts:7
+Defined in: packages/rest/dist/utils/constants.d.ts:2

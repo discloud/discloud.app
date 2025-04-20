@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ModPermissionsFlags
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:2
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:2
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:2
 
 > **backup\_app**: `1`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:3
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:3
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:3
 
 > **commit\_app**: `2`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:4
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:4
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:4
 
 > **edit\_ram**: `4`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:5
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:5
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:5
 
 > **logs\_app**: `8`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:6
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:6
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:6
 
 > **restart\_app**: `16`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:7
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:7
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:7
 
 > **start\_app**: `32`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:8
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:8
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:8
 
 > **status\_app**: `64`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:9
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:9
 
 ***
 
@@ -70,4 +70,4 @@ Defined in: packages/util/out/ModPermissionsBF.d.ts:9
 
 > **stop\_app**: `128`
 
-Defined in: packages/util/out/ModPermissionsBF.d.ts:10
+Defined in: packages/util/dist/ModPermissionsBF.d.ts:10

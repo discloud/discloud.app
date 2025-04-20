@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,19 +6,19 @@
 
 # Class: DiscloudAPIError
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:1
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:1
 
 ## Extends
 
-- `Error`
+- [`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ## Constructors
 
-### new DiscloudAPIError()
+### Constructor
 
-> **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): [`DiscloudAPIError`](DiscloudAPIError.md)
+> **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): `DiscloudAPIError`
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:6
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:6
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:6
 
 #### Returns
 
-[`DiscloudAPIError`](DiscloudAPIError.md)
+`DiscloudAPIError`
 
 #### Overrides
 
@@ -56,7 +56,7 @@ Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:6
 
 > **body**: `any`
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:5
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:5
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **code**: `number`
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:2
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:2
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **method**: `string`
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:3
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:3
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > **path**: `string`
 
-Defined in: packages/rest/out/errors/DiscloudAPIError.d.ts:4
+Defined in: packages/rest/dist/errors/DiscloudAPIError.d.ts:4
 
 ***
 
@@ -144,7 +144,7 @@ Optional override for formatting stack traces
 
 ##### err
 
-`Error`
+[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 ##### stackTraces
 
@@ -178,7 +178,7 @@ Defined in: node\_modules/@types/node/globals.d.ts:145
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Defined in: node\_modules/@types/node/globals.d.ts:136
 
@@ -192,7 +192,7 @@ Create .stack property on a target object
 
 ##### constructorOpt?
 
-`Function`
+[`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
 #### Returns
 

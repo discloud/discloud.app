@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Variable: fileNamePattern
 
-> `const` **fileNamePattern**: `RegExp`
+> `const` **fileNamePattern**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [packages/util/src/FileResolver.ts:5](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L5)
+Defined in: [packages/util/src/FileResolver.ts:6](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L6)

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,9 +6,9 @@
 
 # Type Alias: BitFieldResolvable\<S, N\>
 
-> **BitFieldResolvable**\<`S`, `N`\>: `` `${bigint}` `` \| `number` \| `N` \| `S` \| [`BitField`](../classes/BitField.md)\<`S`, `N`\> \| [`BitFieldResolvable`](BitFieldResolvable.md)\<`S`, `N`\>[]
+> **BitFieldResolvable**\<`S`, `N`\> = `` `${bigint}` `` \| `number` \| `N` \| `S` \| [`BitField`](../classes/BitField.md)\<`S`, `N`\> \| `BitFieldResolvable`\<`S`, `N`\>[]
 
-Defined in: packages/util/out/BitField.d.ts:96
+Defined in: packages/util/dist/BitField.d.ts:96
 
 Data that can be resolved to give a bitfield. This can be:
 * A bit number (this can be a number literal or a value taken from [BitField.Flags](../classes/BitField.md#flags))
@@ -18,6 +18,10 @@ Data that can be resolved to give a bitfield. This can be:
 
 ## Type Parameters
 
-• **S** *extends* `string`
+### S
 
-• **N** *extends* `bigint` \| `number`
+`S` *extends* `string`
+
+### N
+
+`N` *extends* `bigint` \| `number`

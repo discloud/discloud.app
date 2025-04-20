@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Variable: allBlockedFilesRegex
 
-> `const` **allBlockedFilesRegex**: `RegExp`
+> `const` **allBlockedFilesRegex**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:11
+Defined in: packages/util/dist/IgnoreFiles.d.ts:11

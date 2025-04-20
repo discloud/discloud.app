@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -10,11 +10,13 @@
 
 > **bindFunctions**\<`I`\>(`instance`): `void`
 
-Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/utils.ts#L1)
+Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/utils.ts#L1)
 
 ### Type Parameters
 
-• **I** *extends* `Record`\<`any`, `any`\>
+#### I
+
+`I` *extends* [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`any`, `any`\>
 
 ### Parameters
 
@@ -30,13 +32,17 @@ Defined in: [packages/util/src/utils.ts:1](https://github.com/discloud/discloud.
 
 > **bindFunctions**\<`I`, `B`\>(`instance`, `bind`): `void`
 
-Defined in: [packages/util/src/utils.ts:2](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/utils.ts#L2)
+Defined in: [packages/util/src/utils.ts:2](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/utils.ts#L2)
 
 ### Type Parameters
 
-• **I** *extends* `Record`\<`any`, `any`\>
+#### I
 
-• **B** *extends* `unknown`
+`I` *extends* [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`any`, `any`\>
+
+#### B
+
+`B` *extends* `unknown`
 
 ### Parameters
 

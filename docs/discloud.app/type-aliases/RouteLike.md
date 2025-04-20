@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,6 +6,6 @@
 
 # Type Alias: RouteLike
 
-> **RouteLike**: `` `/${string}` ``
+> **RouteLike** = `` `/${string}` ``
 
-Defined in: packages/rest/out/@types/index.d.ts:3
+Defined in: packages/rest/dist/@types/index.d.ts:4

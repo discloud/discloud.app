@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -8,11 +8,13 @@
 
 > **mergeDefaults**\<`A`\>(`defaults`, `options`): `A`
 
-Defined in: packages/util/out/utils.d.ts:4
+Defined in: packages/util/dist/utils.d.ts:4
 
 ## Type Parameters
 
-• **A** *extends* `Record`\<`any`, `any`\>
+### A
+
+`A` *extends* [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`any`, `any`\>
 
 ## Parameters
 
@@ -22,7 +24,7 @@ Defined in: packages/util/out/utils.d.ts:4
 
 ### options
 
-`Partial`\<`A`\>
+[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<`A`\>
 
 ## Returns
 

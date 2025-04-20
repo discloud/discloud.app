@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Class: IgnoreFiles
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:17
+Defined in: packages/util/dist/IgnoreFiles.d.ts:17
 
 ## Constructors
 
-### new IgnoreFiles()
+### Constructor
 
-> **new IgnoreFiles**(`options`): [`IgnoreFiles`](IgnoreFiles.md)
+> **new IgnoreFiles**(`options`): `IgnoreFiles`
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:22
+Defined in: packages/util/dist/IgnoreFiles.d.ts:22
 
 #### Parameters
 
@@ -24,7 +24,7 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:22
 
 #### Returns
 
-[`IgnoreFiles`](IgnoreFiles.md)
+`IgnoreFiles`
 
 ## Properties
 
@@ -32,15 +32,15 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:22
 
 > `readonly` **fileName**: `string`
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:18
+Defined in: packages/util/dist/IgnoreFiles.d.ts:18
 
 ***
 
 ### filesIgnore
 
-> `readonly` **filesIgnore**: `Set`\<`string`\>
+> `readonly` **filesIgnore**: [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:19
+Defined in: packages/util/dist/IgnoreFiles.d.ts:19
 
 ***
 
@@ -48,29 +48,29 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:19
 
 > `readonly` **list**: `string`[]
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:20
+Defined in: packages/util/dist/IgnoreFiles.d.ts:20
 
 ***
 
 ### paths
 
-> `readonly` **paths**: `Set`\<`string`\>
+> `readonly` **paths**: [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:21
+Defined in: packages/util/dist/IgnoreFiles.d.ts:21
 
 ## Methods
 
 ### processIgnoreFiles()
 
-> **processIgnoreFiles**(`files`?): `string`[]
+> **processIgnoreFiles**(`files?`): `string`[]
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:28
+Defined in: packages/util/dist/IgnoreFiles.d.ts:28
 
 #### Parameters
 
 ##### files?
 
-`Set`\<`string`\>
+[`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
 #### Returns
 
@@ -80,9 +80,9 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:28
 
 ### findIgnoreFiles()
 
-> `static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): `Set`\<`string`\>
+> `static` **findIgnoreFiles**(`fileName`, `paths`, `ignore`): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:23
+Defined in: packages/util/dist/IgnoreFiles.d.ts:23
 
 #### Parameters
 
@@ -92,7 +92,7 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:23
 
 ##### paths
 
-`Set`\<`string`\>
+[`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
 ##### ignore
 
@@ -100,15 +100,15 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:23
 
 #### Returns
 
-`Set`\<`string`\>
+[`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\>
 
 ***
 
 ### normalizeIgnore()
 
-> `static` **normalizeIgnore**(`ignore`, `path`?): `string`
+> `static` **normalizeIgnore**(`ignore`, `path?`): `string`
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:24
+Defined in: packages/util/dist/IgnoreFiles.d.ts:24
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:24
 
 > `static` **normalizePath**(`path`): `string`
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:25
+Defined in: packages/util/dist/IgnoreFiles.d.ts:25
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:25
 
 > `static` **normalizePaths**(`paths`): `string`[]
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:26
+Defined in: packages/util/dist/IgnoreFiles.d.ts:26
 
 #### Parameters
 
@@ -166,7 +166,7 @@ Defined in: packages/util/out/IgnoreFiles.d.ts:26
 
 > `static` **processIgnoreFile**(`file`): `string`[]
 
-Defined in: packages/util/out/IgnoreFiles.d.ts:27
+Defined in: packages/util/dist/IgnoreFiles.d.ts:27
 
 #### Parameters
 

@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RawFile
 
-Defined in: packages/util/out/FileResolver.d.ts:5
+Defined in: packages/util/dist/FileResolver.d.ts:5
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/util/out/FileResolver.d.ts:5
 
 > `optional` **contentType**: `string`
 
-Defined in: packages/util/out/FileResolver.d.ts:21
+Defined in: packages/util/dist/FileResolver.d.ts:17
 
 Content-Type of the file
 
@@ -24,19 +24,9 @@ Content-Type of the file
 
 > **data**: `Blob` \| `File` \| `Buffer`\<`ArrayBufferLike`\> \| `BinaryLike`
 
-Defined in: packages/util/out/FileResolver.d.ts:17
+Defined in: packages/util/dist/FileResolver.d.ts:13
 
 The actual data for the file
-
-***
-
-### key?
-
-> `optional` **key**: `string`
-
-Defined in: packages/util/out/FileResolver.d.ts:13
-
-An explicit key to use for key of the formdata field for this file.
 
 ***
 
@@ -44,6 +34,6 @@ An explicit key to use for key of the formdata field for this file.
 
 > **name**: `string`
 
-Defined in: packages/util/out/FileResolver.d.ts:9
+Defined in: packages/util/dist/FileResolver.d.ts:9
 
 The name of the file

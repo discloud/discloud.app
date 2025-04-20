@@ -1,4 +1,4 @@
-[**@discloudapp/rest**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RequestData
 
-Defined in: [packages/rest/src/@types/index.ts:46](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L46)
+Defined in: [packages/rest/src/@types/index.ts:49](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L49)
 
 Represents possible data to be given to an endpoint
 
@@ -20,7 +20,7 @@ Represents possible data to be given to an endpoint
 
 > `optional` **body**: `unknown`
 
-Defined in: [packages/rest/src/@types/index.ts:50](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L50)
+Defined in: [packages/rest/src/@types/index.ts:53](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L53)
 
 The body to send to this request.
 
@@ -30,7 +30,7 @@ The body to send to this request.
 
 > `optional` **file**: `File` \| [`RawFile`](../../../discloud.app/interfaces/RawFile.md)
 
-Defined in: [packages/rest/src/@types/index.ts:54](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L54)
+Defined in: [packages/rest/src/@types/index.ts:57](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L57)
 
 File to be attached to this request
 
@@ -40,7 +40,7 @@ File to be attached to this request
 
 > `optional` **headers**: `HeadersInit`
 
-Defined in: [packages/rest/src/@types/index.ts:58](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L58)
+Defined in: [packages/rest/src/@types/index.ts:61](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L61)
 
 Additional headers to add to this request
 
@@ -48,8 +48,8 @@ Additional headers to add to this request
 
 ### query?
 
-> `optional` **query**: `string` \| `Record`\<`string`, `string` \| readonly `string`[]\> \| `URLSearchParams` \| `Iterable`\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+> `optional` **query**: `string` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| `URLSearchParams` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
 
-Defined in: [packages/rest/src/@types/index.ts:62](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/rest/src/@types/index.ts#L62)
+Defined in: [packages/rest/src/@types/index.ts:65](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/@types/index.ts#L65)
 
 Query string parameters to append to the called endpoint

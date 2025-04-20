@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RESTGetApiAppTeamResult
 
-Defined in: [packages/api-types/rest/v2/app.ts:322](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L322)
+Defined in: [packages/api-types/rest/v2/app.ts:322](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L322)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:322](https://github.com/discloud/
 
 > `optional` **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:330](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L330)
+Defined in: [packages/api-types/rest/v2/app.ts:330](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L330)
 
 API message response
 
@@ -24,7 +24,7 @@ API message response
 
 > **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
 
-Defined in: [packages/api-types/rest/v2/app.ts:326](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L326)
+Defined in: [packages/api-types/rest/v2/app.ts:326](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L326)
 
 API status response
 
@@ -34,6 +34,6 @@ API status response
 
 > **team**: [`ApiAppTeam`](ApiAppTeam.md)[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:334](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/rest/v2/app.ts#L334)
+Defined in: [packages/api-types/rest/v2/app.ts:334](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L334)
 
 App of your team

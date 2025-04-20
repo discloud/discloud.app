@@ -1,4 +1,4 @@
-[**@discloudapp/util**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,9 +6,9 @@
 
 # Function: resolveFile()
 
-> **resolveFile**(`file`, `fileName`?): `Promise`\<`File`\>
+> **resolveFile**(`file`, `fileName?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:43](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/util/src/FileResolver.ts#L43)
+Defined in: [packages/util/src/FileResolver.ts:40](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L40)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -28,4 +28,4 @@ The name of the file to upload
 
 ## Returns
 
-`Promise`\<`File`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>

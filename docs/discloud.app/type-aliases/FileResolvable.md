@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,8 +6,8 @@
 
 # Type Alias: FileResolvable
 
-> **FileResolvable**: `Blob` \| `File` \| `PathLike` \| [`RawFile`](../interfaces/RawFile.md) \| `Readable` \| `Writable`
+> **FileResolvable** = `Blob` \| `File` \| `PathLike` \| [`RawFile`](../interfaces/RawFile.md) \| `Readable` \| `Writable`
 
-Defined in: packages/util/out/FileResolver.d.ts:26
+Defined in: packages/util/dist/FileResolver.d.ts:22
 
-This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/RawFile.md), Readable, String, URL or Writable
+This parameter could be Blob, Buffer, File, PathLike, [RawFile](../interfaces/RawFile.md), Readable, [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), URL or Writable

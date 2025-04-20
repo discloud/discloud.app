@@ -1,4 +1,4 @@
-[**discloud.app**](../README.md)
+[**Documentation**](../../README.md)
 
 ***
 
@@ -6,9 +6,9 @@
 
 # Function: streamToBlob()
 
-> **streamToBlob**(`stream`, `mimeType`?): `Promise`\<`Blob`\>
+> **streamToBlob**(`stream`, `mimeType?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`Blob`\>
 
-Defined in: packages/util/out/FileResolver.d.ts:50
+Defined in: packages/util/dist/FileResolver.d.ts:46
 
 A function that converts a like Stream parameter to Blob
 
@@ -28,4 +28,4 @@ A mimeType parameter
 
 ## Returns
 
-`Promise`\<`Blob`\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`Blob`\>

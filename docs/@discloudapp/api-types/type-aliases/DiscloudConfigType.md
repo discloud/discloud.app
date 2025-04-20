@@ -1,4 +1,4 @@
-[**@discloudapp/api-types**](../README.md)
+[**Documentation**](../../../README.md)
 
 ***
 
@@ -6,12 +6,16 @@
 
 # Type Alias: DiscloudConfigType\<T, V\>
 
-> **DiscloudConfigType**\<`T`, `V`\>: `T` *extends* `"bot"` ? `DiscloudConfigBot`\<`V`\> : `T` *extends* `"site"` ? `DiscloudConfigSite`\<`V`\> : `BaseDiscloudConfig`\<`V`\>
+> **DiscloudConfigType**\<`T`, `V`\> = `T` *extends* `"bot"` ? `DiscloudConfigBot`\<`V`\> : `T` *extends* `"site"` ? `DiscloudConfigSite`\<`V`\> : `BaseDiscloudConfig`\<`V`\>
 
-Defined in: [payload/v2/DiscloudConfig.ts:98](https://github.com/discloud/discloud.app/blob/8d6df0b18784d1a4408701ac8e6b9db44dbb7133/packages/api-types/payload/v2/DiscloudConfig.ts#L98)
+Defined in: [payload/v2/DiscloudConfig.ts:98](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/payload/v2/DiscloudConfig.ts#L98)
 
 ## Type Parameters
 
-• **T** *extends* [`AppTypes`](AppTypes.md) = [`AppTypes`](AppTypes.md)
+### T
 
-• **V** *extends* [`AppLanguages`](AppLanguages.md) = [`AppLanguages`](AppLanguages.md)
+`T` *extends* [`AppTypes`](AppTypes.md) = [`AppTypes`](AppTypes.md)
+
+### V
+
+`V` *extends* [`AppLanguages`](AppLanguages.md) = [`AppLanguages`](AppLanguages.md)
