@@ -1,38 +1,33 @@
 import { suite, test, type TestContext } from "node:test";
 import Comments from "../config/comments";
-import { parseLines, writeComments } from "../config/parser";
+import ConfigParser from "../config/parser";
 
 suite("Testing Discloud Config Parser", () => {
-  const linesToParse = [
-    "# first comment test",
-    "ID=123456789 # second comment test",
+  const comments = new Comments();
+  const parser = new ConfigParser(comments);
+
+  const content = "# first comment test\nID=123456789 # second comment test";
+  const expectedParsed = { ID: "123456789" };
+  const expectedComments = [
+    { line: 0, character: 0, content: "# first comment test" },
+    { line: 1, character: 12, content: " # second comment test" },
   ];
 
-  const comments = new Comments();
-
   test("Testing parser with comments", (t: TestContext) => {
-    const actual = Object.fromEntries(Array.from(parseLines(linesToParse, comments)));
-    const expected = { ID: "123456789" };
+    const actual = parser.parse(content);
 
-    t.assert.deepStrictEqual(actual, expected);
+    t.assert.deepStrictEqual(actual, expectedParsed);
   });
 
-  test("Verifying comments", (t: TestContext) => {
-    const expectedCommentsData = [
-      { line: 0, character: 0, content: "# first comment test" },
-      { line: 1, character: 12, content: " # second comment test" },
-    ];
-
+  test("Checking comments", (t: TestContext) => {
     const actual = Array.from(comments.values());
 
-    t.assert.deepEqual(actual, expectedCommentsData);
+    t.assert.deepEqual(actual, expectedComments);
   });
 
   test("Testing writing comments in lines", (t: TestContext) => {
-    const linesToWriteComments = ["ID=123456789"];
+    const actual = parser.stringify(expectedParsed);
 
-    const actual = writeComments(linesToWriteComments, comments);
-
-    t.assert.deepStrictEqual(actual, linesToParse);
+    t.assert.strictEqual(actual, content);
   });
 });

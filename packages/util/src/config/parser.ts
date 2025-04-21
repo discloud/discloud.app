@@ -1,97 +1,101 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import Comments from "./comments";
 
-const configLineSplitterPattern = /[\r\n]+/g;
-const configArraySplitterPattern = /\s*,\s*/g;
-const configAssignmentCharacter = "=";
+export default class ConfigParser {
+  private static readonly lineSplitterPattern = /[\r\n]+/g;
+  private static readonly arraySplitterPattern = /\s*,\s*/g;
+  private static readonly assignmentCharacter = "=";
+  private static readonly STRING_BOOLEAN = new Set(["false", "true"]);
 
-export function parseConfigContent<T>(content: string): T
-export function parseConfigContent<T>(content: string, comments: Comments): T
-export function parseConfigContent(content: string, comments?: Comments) {
-  const lines = content.split(configLineSplitterPattern);
+  constructor(
+    private readonly comments: Comments,
+  ) { }
 
-  return parseValues(Object.fromEntries(Array.from(parseLines(lines, comments))));
-}
+  parse<T>(content: string): T {
+    const lines = content.split(ConfigParser.lineSplitterPattern);
 
-export function* parseLines(lines: string[], comments: Comments = new Comments()) {
-  comments.clear();
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trimEnd();
-    const comment = line.match(Comments.pattern);
-
-    if (typeof comment?.index === "number") {
-      comments.set(i, comment.index, comment[1]);
-
-      if (comment.index < 1) continue;
-    }
-
-    yield line.replace(Comments.pattern, "").trimEnd().split(configAssignmentCharacter) as [string, string];
+    return this.#parseValues(Object.fromEntries(Array.from(this.#parseLines(lines))));
   }
-}
 
-const STRING_BOOLEAN = new Set(["false", "true"]);
+  *#parseLines(lines: string[]) {
+    this.comments.clear();
 
-function parseValues<T>(obj: Record<string, string>): T
-function parseValues(obj: any) {
-  let key = DiscloudConfigScopes.APT;
-  if (key in obj) obj[key] = obj[key].split(configArraySplitterPattern).filter(Boolean);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trimEnd();
+      const comment = line.match(Comments.pattern);
 
-  key = DiscloudConfigScopes.AUTORESTART;
-  if (key in obj && STRING_BOOLEAN.has(obj[key])) obj[key] = obj[key] == true;
+      if (typeof comment?.index === "number") {
+        this.comments.set(i, comment.index, comment[1]);
 
-  key = DiscloudConfigScopes.RAM;
-  if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
-
-  return obj;
-}
-
-export function stringifyConfigObject(obj: any, comments?: Comments): string {
-  if (obj === undefined || obj === null) return "";
-  if (!obj) return `${obj}`;
-
-  switch (typeof obj) {
-    case "bigint":
-    case "number":
-      return `${obj}`;
-
-    case "string":
-      return obj;
-
-    case "symbol":
-      return String(obj);
-
-    case "object": {
-      const result = [];
-
-      if (Array.isArray(obj)) {
-        for (let i = 0; i < obj.length; i++)
-          result.push(stringifyConfigObject(obj[i], comments));
-      } else {
-        for (const key in obj)
-          result.push(`${key}${configAssignmentCharacter}${stringifyConfigObject(obj[key], comments)}`);
+        if (comment.index < 1) continue;
       }
 
-      return writeComments(result.filter(Boolean), comments).join("\n");
-    }
-
-    default:
-      return `${obj}`;
-  }
-}
-
-export function writeComments(lines: string[], comments: Comments = new Comments()) {
-  if (!comments.size) return lines;
-
-  for (const comment of comments.values()) {
-    if (comment.character) {
-      lines[comment.line] = lines[comment.line] + comment;
-    } else {
-      const spliced = lines.splice(comment.line);
-
-      lines.push(comment.content, ...spliced);
+      yield line.replace(Comments.pattern, "").trimEnd().split(ConfigParser.assignmentCharacter) as [string, string];
     }
   }
 
-  return lines;
+  #parseValues<T>(obj: Record<string, string>): T
+  #parseValues(obj: any) {
+    let key = DiscloudConfigScopes.APT;
+    if (key in obj) obj[key] = obj[key].split(ConfigParser.arraySplitterPattern).filter(Boolean);
+
+    key = DiscloudConfigScopes.AUTORESTART;
+    if (key in obj && ConfigParser.STRING_BOOLEAN.has(obj[key])) obj[key] = obj[key] == true;
+
+    key = DiscloudConfigScopes.RAM;
+    if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
+
+    return obj;
+  }
+
+  stringify(obj: unknown): string
+  stringify(obj: any): string {
+    if (obj === undefined || obj === null) return "";
+    if (!obj) return `${obj}`;
+
+    switch (typeof obj) {
+      case "bigint":
+      case "number":
+        return `${obj}`;
+
+      case "string":
+        return obj;
+
+      case "symbol":
+        return String(obj);
+
+      case "object": {
+        const result = [];
+
+        if (Array.isArray(obj)) {
+          for (let i = 0; i < obj.length; i++)
+            result.push(this.stringify(obj[i]));
+        } else {
+          for (const key in obj)
+            result.push(`${key}${ConfigParser.assignmentCharacter}${this.stringify(obj[key])}`);
+        }
+
+        return this.#writeComments(result.filter(Boolean)).join("\n");
+      }
+
+      default:
+        return `${obj}`;
+    }
+  }
+
+  #writeComments(lines: string[]) {
+    if (!this.comments.size) return lines;
+
+    for (const comment of this.comments.values()) {
+      if (comment.character) {
+        lines[comment.line] = lines[comment.line] + comment;
+      } else {
+        const spliced = lines.splice(comment.line);
+
+        lines.push(comment.content, ...spliced);
+      }
+    }
+
+    return lines;
+  }
 }

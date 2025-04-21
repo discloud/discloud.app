@@ -6,7 +6,7 @@ import { fromZodError } from "zod-validation-error";
 import { DiscloudConfigPredicate } from "./assertions";
 import Comments from "./comments";
 import { MissingMainError } from "./errors";
-import { parseConfigContent, stringifyConfigObject } from "./parser";
+import ConfigParser from "./parser";
 
 export * from "./errors";
 
@@ -34,6 +34,7 @@ export class DiscloudConfig {
   }
 
   readonly #comments: Comments = new Comments();
+  readonly #parser: ConfigParser = new ConfigParser(this.#comments);
   #data: DiscloudConfigType = {} as DiscloudConfigType;
   #dir: string;
   #watcher!: FSWatcher | null;
@@ -101,7 +102,7 @@ export class DiscloudConfig {
   async update(config: Partial<DiscloudConfigType>) {
     config = Object.assign(this.data, config);
 
-    const content = this.#stringifyConfigObject(config);
+    const content = this.#stringify(config);
 
     await writeFile(this.path, content, "utf8");
   }
@@ -118,21 +119,21 @@ export class DiscloudConfig {
 
   async #readFile<T>() {
     const content = await readFile(this.path, "utf8");
-    return this.#parseConfigContent<T>(content);
+    return this.#parse<T>(content);
   }
 
   #readFileSync<T>() {
     const content = readFileSync(this.path, "utf8");
-    return this.#parseConfigContent<T>(content);
+    return this.#parse<T>(content);
   }
 
-  #stringifyConfigObject(obj: any): string {
-    return stringifyConfigObject(obj, this.#comments);
+  #stringify(obj: any): string {
+    return this.#parser.stringify(obj);
   }
 
-  #parseConfigContent<T>(s: string): T {
+  #parse<T>(s: string): T {
     if (typeof s !== "string") return {} as T;
 
-    return parseConfigContent(s, this.#comments);
+    return this.#parser.parse(s);
   }
 }
