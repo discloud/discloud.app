@@ -47,8 +47,8 @@ export default class Comments {
     return this.#cache.delete(line);
   }
 
-  get(line: number): Map<number, Comment> | void
   get(line: number, character: number): Comment | void
+  get(line: number): Map<number, Comment> | void
   get(line: number, character?: number): unknown {
     if (typeof character === "number")
       return this.#cache.get(line)?.get(character);
