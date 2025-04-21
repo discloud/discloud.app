@@ -1,4 +1,5 @@
 import type { BinaryLike } from "crypto";
+import { fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream } from "file-type";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
@@ -28,8 +29,7 @@ export type FileResolvable =
   | File
   | PathLike
   | RawFile
-  | Readable
-  | Writable;
+  | Readable;
 
 /**
  * A function that converts {@link FileResolvable} to {@link File}
@@ -50,8 +50,11 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
 
       if (!response.ok) throw response;
 
-      return response.blob()
-        .then(blob => new File([blob], fileName ?? `file.${resolveBlobFileType(blob)}`, { type: blob.type }));
+      const blob = await response.blob();
+
+      const fileType = await fileTypeFromBlob(blob);
+
+      return new File([blob], fileName ?? `file.${fileType?.ext}`, { type: fileType?.mime });
     }
 
     if (existsSync(file))
@@ -60,14 +63,23 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
     return new File([file], fileName ?? "file");
   }
 
-  if (file instanceof Blob)
-    return new File([file], fileName ?? `file.${resolveBlobFileType(file)}`, { type: file.type });
+  if (file instanceof Blob) {
+    const fileType = await fileTypeFromBlob(file);
 
-  fileName ??= "file";
+    return new File([file], fileName ?? `file.${fileType?.ext}`, { type: fileType?.mime });
+  }
 
-  if (Buffer.isBuffer(file)) return new File([file], fileName);
+  if (Buffer.isBuffer(file)) {
+    const fileType = await fileTypeFromBuffer(file);
 
-  if (file instanceof Stream) return streamToFile(file, fileName);
+    return new File([file], fileName ?? `file.${fileType?.ext}`);
+  }
+
+  if (file instanceof Stream) {
+    const fileType = await fileTypeFromStream(file);
+
+    return streamToFile(file, fileName ?? `file.${fileType?.ext}`, fileType?.mime);
+  }
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
@@ -80,10 +92,8 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
 
 export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writable>
 
-export function resolveFileSync(file: FileResolvableSync, fileName?: string): File {
+export function resolveFileSync(file: FileResolvableSync, fileName: string): File {
   if (file instanceof File) return file;
-
-  fileName ??= "file";
 
   if (typeof file === "string") {
     return new File([file], fileName);
@@ -146,8 +156,3 @@ export function streamToBlob(stream: Stream, mimeType?: string) {
 }
 
 export default resolveFile;
-
-function resolveBlobFileType(b: Blob | Blob["type"]) {
-  if (typeof b === "string") return b.split("/")[1].split(/\W/)[0];
-  return resolveBlobFileType(b.type);
-}
