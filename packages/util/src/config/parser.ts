@@ -88,12 +88,13 @@ export default class ConfigParser {
 
     for (const comment of this.comments.values()) {
       if (comment.character) {
-        lines[comment.line] = lines[comment.line] + comment;
-      } else {
-        const spliced = lines.splice(comment.line);
-
-        lines.push(comment.content, ...spliced);
+        lines[comment.line] += comment.content;
+        continue;
       }
+
+      const spliced = lines.splice(comment.line);
+
+      lines.push(comment.content, ...spliced);
     }
 
     return lines;
