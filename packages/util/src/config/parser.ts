@@ -21,7 +21,7 @@ export function* parseLines(lines: string[], comments: Comments = new Comments()
     const comment = line.match(Comments.pattern);
 
     if (typeof comment?.index === "number") {
-      comments.add(i, comment.index, comment[1]);
+      comments.set(i, comment.index, comment[1]);
 
       if (comment.index < 1) continue;
     }
