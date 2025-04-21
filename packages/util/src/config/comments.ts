@@ -42,7 +42,8 @@ export default class Comments {
   }
 
   delete(line: number, character?: number) {
-    if (character) return this.#cache.get(line)?.delete(character) ?? false;
+    if (typeof character === "number")
+      return this.#cache.get(line)?.delete(character) ?? false;
 
     return this.#cache.delete(line);
   }
