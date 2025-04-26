@@ -24,3 +24,8 @@ updates:
     directory: "/packages/rest"
     schedule:
       interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/util"
+    schedule:
+      interval: "daily"
