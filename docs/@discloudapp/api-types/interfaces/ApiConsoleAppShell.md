@@ -6,7 +6,7 @@
 
 # Interface: ApiConsoleAppShell
 
-Defined in: [rest/v2/app.ts:196](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L196)
+Defined in: [rest/v2/app.ts:196](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/app.ts#L196)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/app.ts:196](https://github.com/discloud/discloud.app/blob/5
 
 > **online**: `boolean`
 
-Defined in: [rest/v2/app.ts:197](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L197)
+Defined in: [rest/v2/app.ts:197](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/app.ts#L197)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [rest/v2/app.ts:197](https://github.com/discloud/discloud.app/blob/5
 
 > **stderr**: `string`
 
-Defined in: [rest/v2/app.ts:199](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L199)
+Defined in: [rest/v2/app.ts:199](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/app.ts#L199)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [rest/v2/app.ts:199](https://github.com/discloud/discloud.app/blob/5
 
 > **stdout**: `string`
 
-Defined in: [rest/v2/app.ts:198](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/app.ts#L198)
+Defined in: [rest/v2/app.ts:198](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/app.ts#L198)

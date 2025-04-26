@@ -8,7 +8,7 @@
 
 > **Constructable**\<`T`\> = (...`args`) => [`InstanceType`](https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype)\<`T`\>
 
-Defined in: [packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/@types/index.ts#L5)
+Defined in: [packages/discloud.app/src/@types/index.ts:5](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/@types/index.ts#L5)
 
 ## Type Parameters
 

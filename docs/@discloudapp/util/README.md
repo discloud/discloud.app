@@ -14,15 +14,13 @@
 
 - [BitField](classes/BitField.md)
 - [DiscloudConfig](classes/DiscloudConfig.md)
-- [GS](classes/GS.md)
-- [IgnoreFiles](classes/IgnoreFiles.md)
+- [Ignore](classes/Ignore.md)
 - [MissingMainError](classes/MissingMainError.md)
 - [ModPermissionsBF](classes/ModPermissionsBF.md)
 
 ## Interfaces
 
 - [BitFieldConstructor](interfaces/BitFieldConstructor.md)
-- [IgnoreFilesOptions](interfaces/IgnoreFilesOptions.md)
 - [RawFile](interfaces/RawFile.md)
 
 ## Type Aliases
@@ -35,9 +33,6 @@
 
 ## Variables
 
-- [allBlockedFiles](variables/allBlockedFiles.md)
-- [allBlockedFilesRegex](variables/allBlockedFilesRegex.md)
-- [blockedFiles](variables/blockedFiles.md)
 - [fileNamePattern](variables/fileNamePattern.md)
 - [version](variables/version.md)
 
@@ -45,6 +40,7 @@
 
 - [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
+- [glob](functions/glob.md)
 - [importJSON](functions/importJSON.md)
 - [mergeDefaults](functions/mergeDefaults.md)
 - [resolveFile](functions/resolveFile.md)

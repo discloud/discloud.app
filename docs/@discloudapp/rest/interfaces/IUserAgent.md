@@ -6,7 +6,7 @@
 
 # Interface: IUserAgent
 
-Defined in: [packages/rest/src/UserAgent.ts:4](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/UserAgent.ts#L4)
+Defined in: [packages/rest/src/UserAgent.ts:4](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/rest/src/UserAgent.ts#L4)
 
 ## Methods
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/UserAgent.ts:4](https://github.com/discloud/discl
 
 > **toString**(): `string`
 
-Defined in: [packages/rest/src/UserAgent.ts:5](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/rest/src/UserAgent.ts#L5)
+Defined in: [packages/rest/src/UserAgent.ts:5](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/rest/src/UserAgent.ts#L5)
 
 #### Returns
 

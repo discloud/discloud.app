@@ -6,7 +6,7 @@
 
 # Interface: ApiUser
 
-Defined in: [packages/api-types/rest/v2/user.ts:10](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L10)
+Defined in: [packages/api-types/rest/v2/user.ts:10](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L10)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/api-types/rest/v2/user.ts:10](https://github.com/discloud/
 
 > **apps**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/user.ts:14](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L14)
+Defined in: [packages/api-types/rest/v2/user.ts:14](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L14)
 
 Your applications ID
 
@@ -24,7 +24,7 @@ Your applications ID
 
 > **customdomains**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/user.ts:18](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L18)
+Defined in: [packages/api-types/rest/v2/user.ts:18](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L18)
 
 Your custom domains on Discloud
 
@@ -34,7 +34,7 @@ Your custom domains on Discloud
 
 > `optional` **lastDataLeft**: [`LastDataLeft`](LastDataLeft.md)
 
-Defined in: [packages/api-types/rest/v2/user.ts:46](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L46)
+Defined in: [packages/api-types/rest/v2/user.ts:46](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L46)
 
 When will your plan end
 
@@ -44,7 +44,7 @@ When will your plan end
 
 > **locale**: `string`
 
-Defined in: [packages/api-types/rest/v2/user.ts:22](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L22)
+Defined in: [packages/api-types/rest/v2/user.ts:22](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L22)
 
 Your locale
 
@@ -54,7 +54,7 @@ Your locale
 
 > **plan**: `string`
 
-Defined in: [packages/api-types/rest/v2/user.ts:26](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L26)
+Defined in: [packages/api-types/rest/v2/user.ts:26](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L26)
 
 Your plan
 
@@ -64,7 +64,7 @@ Your plan
 
 > `optional` **planDataEnd**: `string`
 
-Defined in: [packages/api-types/rest/v2/user.ts:51](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L51)
+Defined in: [packages/api-types/rest/v2/user.ts:51](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L51)
 
 Date of when will your plan end
 | "Subscription"
@@ -75,7 +75,7 @@ Date of when will your plan end
 
 > **ramUsedMb**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:30](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L30)
+Defined in: [packages/api-types/rest/v2/user.ts:30](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L30)
 
 Quantity of RAM was used for your applications
 
@@ -85,7 +85,7 @@ Quantity of RAM was used for your applications
 
 > **subdomains**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/user.ts:34](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L34)
+Defined in: [packages/api-types/rest/v2/user.ts:34](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L34)
 
 Your subdomains on Discloud
 
@@ -95,7 +95,7 @@ Your subdomains on Discloud
 
 > **totalRamMb**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:38](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L38)
+Defined in: [packages/api-types/rest/v2/user.ts:38](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L38)
 
 Your total RAM quantity
 
@@ -105,6 +105,6 @@ Your total RAM quantity
 
 > **userID**: `string`
 
-Defined in: [packages/api-types/rest/v2/user.ts:42](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/api-types/rest/v2/user.ts#L42)
+Defined in: [packages/api-types/rest/v2/user.ts:42](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/user.ts#L42)
 
 Your id

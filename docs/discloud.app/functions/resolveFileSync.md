@@ -6,7 +6,7 @@
 
 # Function: resolveFileSync()
 
-> **resolveFileSync**(`file`, `fileName?`): `File`
+> **resolveFileSync**(`file`, `fileName`): `File`
 
 Defined in: packages/util/dist/FileResolver.d.ts:31
 
@@ -16,7 +16,7 @@ Defined in: packages/util/dist/FileResolver.d.ts:31
 
 [`FileResolvableSync`](../type-aliases/FileResolvableSync.md)
 
-### fileName?
+### fileName
 
 `string`
 

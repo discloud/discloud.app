@@ -6,7 +6,7 @@
 
 # Type Alias: FileResolvable
 
-> **FileResolvable** = `Blob` \| `File` \| `PathLike` \| [`RawFile`](../interfaces/RawFile.md) \| `Readable` \| `Writable`
+> **FileResolvable** = `Blob` \| `File` \| `PathLike` \| [`RawFile`](../interfaces/RawFile.md) \| `Readable`
 
 Defined in: packages/util/dist/FileResolver.d.ts:22
 

@@ -6,7 +6,7 @@
 
 # Class: DiscloudConfig
 
-Defined in: [packages/util/src/config/index.ts:13](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L13)
+Defined in: [packages/util/src/config/index.ts:13](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L13)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/config/index.ts:13](https://github.com/discloud/d
 
 > **new DiscloudConfig**(`path`): `DiscloudConfig`
 
-Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L21)
+Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L21)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/d
 
 > `readonly` **path**: `string`
 
-Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L21)
+Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L21)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [packages/util/src/config/index.ts:21](https://github.com/discloud/d
 
 > `readonly` `static` **filename**: `"discloud.config"` = `"discloud.config"`
 
-Defined in: [packages/util/src/config/index.ts:14](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L14)
+Defined in: [packages/util/src/config/index.ts:14](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L14)
 
 ## Accessors
 
@@ -50,7 +50,7 @@ Defined in: [packages/util/src/config/index.ts:14](https://github.com/discloud/d
 
 > **get** **data**(): [`DiscloudConfigType`](../../api-types/type-aliases/DiscloudConfigType.md)
 
-Defined in: [packages/util/src/config/index.ts:41](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L41)
+Defined in: [packages/util/src/config/index.ts:42](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L42)
 
 ##### Returns
 
@@ -64,7 +64,7 @@ Defined in: [packages/util/src/config/index.ts:41](https://github.com/discloud/d
 
 > **get** **exists**(): `boolean`
 
-Defined in: [packages/util/src/config/index.ts:45](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L45)
+Defined in: [packages/util/src/config/index.ts:46](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L46)
 
 ##### Returns
 
@@ -78,7 +78,7 @@ Defined in: [packages/util/src/config/index.ts:45](https://github.com/discloud/d
 
 > **get** **existsMain**(): `boolean`
 
-Defined in: [packages/util/src/config/index.ts:49](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L49)
+Defined in: [packages/util/src/config/index.ts:50](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L50)
 
 ##### Returns
 
@@ -92,7 +92,7 @@ Defined in: [packages/util/src/config/index.ts:49](https://github.com/discloud/d
 
 > **get** **mainFileExt**(): `undefined` \| `string`
 
-Defined in: [packages/util/src/config/index.ts:54](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L54)
+Defined in: [packages/util/src/config/index.ts:55](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L55)
 
 ##### Returns
 
@@ -106,7 +106,7 @@ Defined in: [packages/util/src/config/index.ts:54](https://github.com/discloud/d
 
 > **get** **missingProps**(): ([`ID`](../../api-types/enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../../api-types/enumerations/DiscloudConfigScopes.md#main) \| [`NAME`](../../api-types/enumerations/DiscloudConfigScopes.md#name) \| [`RAM`](../../api-types/enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../../api-types/enumerations/DiscloudConfigScopes.md#type) \| [`VERSION`](../../api-types/enumerations/DiscloudConfigScopes.md#version))[]
 
-Defined in: [packages/util/src/config/index.ts:58](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L58)
+Defined in: [packages/util/src/config/index.ts:59](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L59)
 
 ##### Returns
 
@@ -118,7 +118,7 @@ Defined in: [packages/util/src/config/index.ts:58](https://github.com/discloud/d
 
 > **dispose**(): `void`
 
-Defined in: [packages/util/src/config/index.ts:63](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L63)
+Defined in: [packages/util/src/config/index.ts:64](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L64)
 
 #### Returns
 
@@ -130,7 +130,7 @@ Defined in: [packages/util/src/config/index.ts:63](https://github.com/discloud/d
 
 > **get**\<`K`\>(`key`): [`DiscloudConfigType`](../../api-types/type-aliases/DiscloudConfigType.md)\[`K`\]
 
-Defined in: [packages/util/src/config/index.ts:93](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L93)
+Defined in: [packages/util/src/config/index.ts:94](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L94)
 
 #### Type Parameters
 
@@ -154,7 +154,7 @@ Defined in: [packages/util/src/config/index.ts:93](https://github.com/discloud/d
 
 > **set**\<`K`\>(`key`, `value`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/util/src/config/index.ts:97](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L97)
+Defined in: [packages/util/src/config/index.ts:98](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L98)
 
 #### Type Parameters
 
@@ -182,7 +182,7 @@ Defined in: [packages/util/src/config/index.ts:97](https://github.com/discloud/d
 
 > **update**(`config`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/util/src/config/index.ts:101](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L101)
+Defined in: [packages/util/src/config/index.ts:102](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L102)
 
 #### Parameters
 
@@ -202,7 +202,7 @@ Defined in: [packages/util/src/config/index.ts:101](https://github.com/discloud/
 
 > **validate**(): `void`
 
-Defined in: [packages/util/src/config/index.ts:68](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L68)
+Defined in: [packages/util/src/config/index.ts:69](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L69)
 
 ##### Returns
 
@@ -212,7 +212,7 @@ Defined in: [packages/util/src/config/index.ts:68](https://github.com/discloud/d
 
 > **validate**(`doNotThrowIfInvalid`): `boolean`
 
-Defined in: [packages/util/src/config/index.ts:69](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L69)
+Defined in: [packages/util/src/config/index.ts:70](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L70)
 
 ##### Parameters
 
@@ -230,7 +230,7 @@ Defined in: [packages/util/src/config/index.ts:69](https://github.com/discloud/d
 
 > **watch**(): `DiscloudConfig`
 
-Defined in: [packages/util/src/config/index.ts:84](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L84)
+Defined in: [packages/util/src/config/index.ts:85](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L85)
 
 #### Returns
 
@@ -242,7 +242,7 @@ Defined in: [packages/util/src/config/index.ts:84](https://github.com/discloud/d
 
 > `static` **validade**(`data`): `void`
 
-Defined in: [packages/util/src/config/index.ts:16](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/config/index.ts#L16)
+Defined in: [packages/util/src/config/index.ts:16](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/config/index.ts#L16)
 
 #### Parameters
 

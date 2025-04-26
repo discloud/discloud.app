@@ -6,7 +6,7 @@
 
 # Class: TeamAppStatus
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:6](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L6)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:6](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L6)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new TeamAppStatus**(`discloudApp`, `data`): `TeamAppStatus`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:49](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L49)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:49](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L49)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:49](https://g
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:10](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L10)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:10](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L10)
 
 Your app id
 
@@ -56,7 +56,7 @@ Your app id
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<`TeamAppStatus`\>
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/Base.ts#L5)
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/Base.ts#L5)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > **container**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:15](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L15)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:15](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L15)
 
 Status of your application
 - It can be `Online` or `Offline` for example
@@ -79,7 +79,7 @@ Status of your application
 
 > **cpu**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:19](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L19)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:19](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L19)
 
 CPU usage as percentage
 
@@ -89,7 +89,7 @@ CPU usage as percentage
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -101,7 +101,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > **lastRestart**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:23](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L23)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:23](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L23)
 
 Relative time of the last restart
 
@@ -111,7 +111,7 @@ Relative time of the last restart
 
 > **memory**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:27](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L27)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:27](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L27)
 
 RAM usage
 
@@ -121,7 +121,7 @@ RAM usage
 
 > **memoryUsage**: `number`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:31](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L31)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:31](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L31)
 
 Percentage of memory usage
 
@@ -131,7 +131,7 @@ Percentage of memory usage
 
 > **netIO**: [`ApiNetIO`](../interfaces/ApiNetIO.md)
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:35](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L35)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:35](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L35)
 
 Internet usage
 
@@ -141,7 +141,7 @@ Internet usage
 
 > **ssd**: `string`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:39](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L39)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:39](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L39)
 
 Storage space
 
@@ -151,7 +151,7 @@ Storage space
 
 > **startedAt**: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:43](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L43)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:43](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L43)
 
 Date of your application has started
 
@@ -161,7 +161,7 @@ Date of your application has started
 
 > **startedAtTimestamp**: `number`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:47](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L47)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:47](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L47)
 
 Timestamp of when your app started
 
@@ -173,7 +173,7 @@ Timestamp of when your app started
 
 > **get** **app**(): `undefined` \| [`TeamApp`](TeamApp.md)
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:85](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L85)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:85](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L85)
 
 ##### Returns
 
@@ -185,7 +185,7 @@ Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:85](https://g
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -201,7 +201,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:55](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L55)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:55](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L55)
 
 #### Parameters
 
@@ -223,7 +223,7 @@ Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:55](https://g
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -245,7 +245,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **fetch**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`TeamAppStatus`\>
 
-Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:89](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/discloud.app/src/structures/TeamAppStatus.ts#L89)
+Defined in: [packages/discloud.app/src/structures/TeamAppStatus.ts:89](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/structures/TeamAppStatus.ts#L89)
 
 #### Returns
 

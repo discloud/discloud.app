@@ -6,7 +6,7 @@
 
 # Interface: BitFieldConstructor\<S, N\>
 
-Defined in: [packages/util/src/BitField.ts:4](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/BitField.ts#L4)
+Defined in: [packages/util/src/BitField.ts:4](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/BitField.ts#L4)
 
 **`Internal`**
 
@@ -26,7 +26,7 @@ Defined in: [packages/util/src/BitField.ts:4](https://github.com/discloud/disclo
 
 > **new BitFieldConstructor**(...`bits`): [`BitField`](../classes/BitField.md)\<`S`, `N`\>
 
-Defined in: [packages/util/src/BitField.ts:5](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/BitField.ts#L5)
+Defined in: [packages/util/src/BitField.ts:5](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/BitField.ts#L5)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: [packages/util/src/BitField.ts:5](https://github.com/discloud/disclo
 
 > `readonly` **DefaultBit**: `N`
 
-Defined in: [packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/BitField.ts#L6)
+Defined in: [packages/util/src/BitField.ts:6](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/BitField.ts#L6)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [packages/util/src/BitField.ts:6](https://github.com/discloud/disclo
 
 > `readonly` **Flags**: `EnumLike`\<`S`, `N`\>
 
-Defined in: [packages/util/src/BitField.ts:7](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/BitField.ts#L7)
+Defined in: [packages/util/src/BitField.ts:7](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/BitField.ts#L7)
 
 ## Methods
 
@@ -60,7 +60,7 @@ Defined in: [packages/util/src/BitField.ts:7](https://github.com/discloud/disclo
 
 > **resolve**(`bit`): `N`
 
-Defined in: [packages/util/src/BitField.ts:8](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/BitField.ts#L8)
+Defined in: [packages/util/src/BitField.ts:8](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/BitField.ts#L8)
 
 #### Parameters
 

@@ -6,7 +6,7 @@
 
 # Interface: RawFile
 
-Defined in: [packages/util/src/FileResolver.ts:8](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L8)
+Defined in: [packages/util/src/FileResolver.ts:9](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L9)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/FileResolver.ts:8](https://github.com/discloud/di
 
 > `optional` **contentType**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:20](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L20)
+Defined in: [packages/util/src/FileResolver.ts:21](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L21)
 
 Content-Type of the file
 
@@ -24,7 +24,7 @@ Content-Type of the file
 
 > **data**: `Blob` \| `BinaryLike` \| `Buffer`\<`ArrayBufferLike`\> \| `File`
 
-Defined in: [packages/util/src/FileResolver.ts:16](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L16)
+Defined in: [packages/util/src/FileResolver.ts:17](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L17)
 
 The actual data for the file
 
@@ -34,6 +34,6 @@ The actual data for the file
 
 > **name**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:12](https://github.com/discloud/discloud.app/blob/5b4e3fe9c701f0b4f5ffa4246f463403d1e47fa1/packages/util/src/FileResolver.ts#L12)
+Defined in: [packages/util/src/FileResolver.ts:13](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L13)
 
 The name of the file

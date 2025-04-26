@@ -281,8 +281,7 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [DiscloudAPIError](classes/DiscloudAPIError.md)
 - [DiscloudApp](classes/DiscloudApp.md)
 - [DiscloudConfig](classes/DiscloudConfig.md)
-- [GS](classes/GS.md)
-- [IgnoreFiles](classes/IgnoreFiles.md)
+- [Ignore](classes/Ignore.md)
 - [MissingMainError](classes/MissingMainError.md)
 - [ModPermissionsBF](classes/ModPermissionsBF.md)
 - [REST](classes/REST.md)
@@ -319,7 +318,6 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [ClientEvents](interfaces/ClientEvents.md)
 - [Constructor](interfaces/Constructor.md)
 - [DiscloudAppOptions](interfaces/DiscloudAppOptions.md)
-- [IgnoreFilesOptions](interfaces/IgnoreFilesOptions.md)
 - [InternalRequest](interfaces/InternalRequest.md)
 - [IUserAgent](interfaces/IUserAgent.md)
 - [LastDataLeft](interfaces/LastDataLeft.md)
@@ -389,12 +387,9 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 
 ## Variables
 
-- [allBlockedFiles](variables/allBlockedFiles.md)
-- [allBlockedFilesRegex](variables/allBlockedFilesRegex.md)
 - [APIVersion](variables/APIVersion.md)
 - [APT](variables/APT.md)
 - [APTPackages](variables/APTPackages.md)
-- [blockedFiles](variables/blockedFiles.md)
 - [DefaultDiscloudAppOptions](variables/DefaultDiscloudAppOptions.md)
 - [DefaultRestOptions](variables/DefaultRestOptions.md)
 - [discloud](variables/discloud.md)
@@ -410,6 +405,7 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 
 - [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
+- [glob](functions/glob.md)
 - [importJSON](functions/importJSON.md)
 - [mergeDefaults](functions/mergeDefaults.md)
 - [resolveFile](functions/resolveFile.md)
