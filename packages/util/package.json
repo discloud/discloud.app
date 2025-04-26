@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@discloudapp/api-types": "^0.7.3",
-    "file-type": "^20.4.1",
+    "file-type": "^20.5.0",
     "glob": "^11.0.2",
     "globify-gitignore": "^1.0.3",
     "source-map-support": "^0.5.21",
