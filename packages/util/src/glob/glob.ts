@@ -1,4 +1,4 @@
-import globMudule from "glob";
+import * as globMudule from "glob";
 import { type } from "os";
 import { joinWithRoot } from "../path";
 import { DISCLOUD_IGNORE_FILENAME } from "./constants";
