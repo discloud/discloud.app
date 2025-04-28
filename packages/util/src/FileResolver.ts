@@ -1,5 +1,4 @@
 import type { BinaryLike } from "crypto";
-import { fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream } from "file-type";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
@@ -40,6 +39,8 @@ export type FileResolvable =
 export async function resolveFile(file: FileResolvable, fileName?: string): Promise<File> {
   if (file instanceof File) return file;
 
+  const fileType = await import("file-type");
+
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
@@ -52,9 +53,9 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
 
       const blob = await response.blob();
 
-      const fileType = await fileTypeFromBlob(blob);
+      const fileTypeResult = await fileType.fileTypeFromBlob(blob);
 
-      return new File([blob], fileName ?? `file.${fileType?.ext}`, { type: fileType?.mime });
+      return new File([blob], fileName ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
     }
 
     if (existsSync(file))
@@ -64,21 +65,21 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
   }
 
   if (file instanceof Blob) {
-    const fileType = await fileTypeFromBlob(file);
+    const fileTypeResult = await fileType.fileTypeFromBlob(file);
 
-    return new File([file], fileName ?? `file.${fileType?.ext}`, { type: fileType?.mime });
+    return new File([file], fileName ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
   }
 
   if (Buffer.isBuffer(file)) {
-    const fileType = await fileTypeFromBuffer(file);
+    const fileTypeResult = await fileType.fileTypeFromBuffer(file);
 
-    return new File([file], fileName ?? `file.${fileType?.ext}`);
+    return new File([file], fileName ?? `file.${fileTypeResult?.ext}`);
   }
 
   if (file instanceof Stream) {
-    const fileType = await fileTypeFromStream(file);
+    const fileTypeResult = await fileType.fileTypeFromStream(file);
 
-    return streamToFile(file, fileName ?? `file.${fileType?.ext}`, fileType?.mime);
+    return streamToFile(file, fileName ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
   }
 
   if ("data" in file) {
