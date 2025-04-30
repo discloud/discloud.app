@@ -22,12 +22,12 @@ export default class ConfigParser {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trimEnd();
-      const comment = line.match(Comments.pattern);
+      const result = Comments.match(line);
 
-      if (typeof comment?.index === "number") {
-        this.comments.set(i, comment.index, comment[1]);
+      if (result !== null) {
+        this.comments.set(i, result.index, result.content);
 
-        if (comment.index < 1) continue;
+        if (result.index < 1) continue;
       }
 
       yield line.replace(Comments.pattern, "").trimEnd().split(ConfigParser.assignmentCharacter) as [string, string];

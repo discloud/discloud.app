@@ -18,10 +18,18 @@ export class Comment {
   }
 }
 
+interface MatchedComment extends RegExpExecArray {
+  content: string
+}
+
 export default class Comments {
   static readonly char = "#";
-  /** `/(\s*#.*$)/` */
-  static readonly pattern = /(\s*#.*$)/;
+  /** `/(?<content>\s*#.*$)/` */
+  static readonly pattern = /(?<content>\s*#.*$)/;
+
+  static match(line: string): MatchedComment | null {
+    return Comments.pattern.exec(line) as MatchedComment;
+  }
 
   readonly #cache = new Map<number, Map<number, Comment>>();
 
