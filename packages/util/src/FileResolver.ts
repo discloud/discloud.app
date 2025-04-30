@@ -3,7 +3,9 @@ import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
 
-export const fileNamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
+export const filenamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
+/** @deprecated This variable has been renamed to follow the camelCase pattern. Use `filenamePattern` instead */
+export const fileNamePattern = filenamePattern;
 
 export interface RawFile {
   /**
@@ -34,9 +36,9 @@ export type FileResolvable =
  * A function that converts {@link FileResolvable} to {@link File}
  * 
  * @param file - The file as {@link FileResolvable} to resolve
- * @param fileName - The name of the file to upload
+ * @param filename - The name of the file to upload
  */
-export async function resolveFile(file: FileResolvable, fileName?: string): Promise<File> {
+export async function resolveFile(file: FileResolvable, filename?: string): Promise<File> {
   if (file instanceof File) return file;
 
   const fileType = await import("file-type");
@@ -44,7 +46,7 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
   if (file instanceof URL || typeof file === "string") {
     file = file.toString();
 
-    fileName ??= file.match(fileNamePattern)?.pop();
+    filename ??= file.match(filenamePattern)?.pop();
 
     if (/^(?:s?ftp|https?):\/\//.test(file)) {
       const response = await fetch(file);
@@ -55,31 +57,31 @@ export async function resolveFile(file: FileResolvable, fileName?: string): Prom
 
       const fileTypeResult = await fileType.fileTypeFromBlob(blob);
 
-      return new File([blob], fileName ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
+      return new File([blob], filename ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
     }
 
     if (existsSync(file))
-      return streamToFile(createReadStream(file), fileName ?? basename(file));
+      return streamToFile(createReadStream(file), filename ?? basename(file));
 
-    return new File([file], fileName ?? "file");
+    return new File([file], filename ?? "file");
   }
 
   if (file instanceof Blob) {
     const fileTypeResult = await fileType.fileTypeFromBlob(file);
 
-    return new File([file], fileName ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
+    return new File([file], filename ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
   }
 
   if (Buffer.isBuffer(file)) {
     const fileTypeResult = await fileType.fileTypeFromBuffer(file);
 
-    return new File([file], fileName ?? `file.${fileTypeResult?.ext}`);
+    return new File([file], filename ?? `file.${fileTypeResult?.ext}`);
   }
 
   if (file instanceof Stream) {
     const fileTypeResult = await fileType.fileTypeFromStream(file);
 
-    return streamToFile(file, fileName ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
+    return streamToFile(file, filename ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
   }
 
   if ("data" in file) {
