@@ -4,3 +4,4 @@
 **/tsconfig.json
 **/typedoc.json
 packages/*/out/test/
+packages/*/src/

@@ -7,8 +7,7 @@
 # build api-types
 packages/**/*.d.ts
 packages/**/*.js
-packages/**/*.js.map
-packages/**/*.ts.map
+packages/**/*.map
 packages/*/out/
 
 # Logs
