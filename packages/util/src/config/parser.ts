@@ -14,23 +14,27 @@ export default class ConfigParser {
   parse<T>(content: string): T {
     const lines = content.split(ConfigParser.lineSplitterPattern);
 
-    return this.#parseValues(Object.fromEntries(Array.from(this.#parseLines(lines))));
+    const obj = Object.fromEntries(Array.from(this.#parseLines(lines)));
+
+    return this.#parseValues(obj);
   }
 
   *#parseLines(lines: string[]) {
     this.comments.clear();
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trimEnd();
+      let line = lines[i].trimEnd();
       const result = Comments.match(line);
 
       if (result !== null) {
-        this.comments.set(i, result.index, result.content);
+        this.comments.set(i, result.index, result.groups!.content);
 
         if (result.index < 1) continue;
+
+        line = line.substring(0, result.index);
       }
 
-      yield line.replace(Comments.pattern, "").trimEnd().split(ConfigParser.assignmentCharacter) as [string, string];
+      yield line.split(ConfigParser.assignmentCharacter) as [string, string];
     }
   }
 
