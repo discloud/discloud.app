@@ -1,9 +1,7 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPointStrategy": "packages",
-  "entryPoints": [
-    "packages/*"
-  ],
+  "entryPoints": ["packages/*"],
   "out": "docs",
   "pretty": false,
   "githubPages": true,

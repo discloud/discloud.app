@@ -13,6 +13,7 @@ export default [
   {
     rules: {
       "@typescript-eslint/consistent-type-imports": ["warn", { fixStyle: "inline-type-imports" }],
+      "@typescript-eslint/no-empty-object-type": "warn",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unsafe-declaration-merging": "off",
       "@typescript-eslint/no-unused-vars": ["warn", {

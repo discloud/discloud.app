@@ -1,7 +1,6 @@
 {
-  "exclude": ["node_modules", "**/.ignore_*"],
-  "include": ["./**.ts", "./**.d.ts"],
   "extends": "../../tsconfig.json",
+  "include": ["**/*.ts"],
   "compilerOptions": {
     "outDir": "./"
   }

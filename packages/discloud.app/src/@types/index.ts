@@ -15,7 +15,7 @@ export interface DiscloudAppOptions {
 }
 
 export const ProfileOptions = z.object({
-  avatarURL: z.coerce.string().url().regex(/^((?:s?ftp|https?):\/\/\S+\.(?:gif|jpe?g|png))(?:[?]\S*)?$/),
+  avatarURL: z.coerce.string().url().regex(/^((?:s?ftp|https?):\/\/\S+\.(?:gif|jpe?g|png|webp))(?:[?#]\S*)?$/),
   name: z.string().max(30),
 }).partial();
 
@@ -33,4 +33,4 @@ export type LocaleString =
   | "en-US"
   | "pt-BR"
 
-export interface ClientEvents extends RestEvents { }
+export type ClientEvents = RestEvents
