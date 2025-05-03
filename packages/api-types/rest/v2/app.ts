@@ -1,4 +1,4 @@
-import type { RESTApiBaseResult, RESTApiStatusResponse } from "./base";
+import type { RESTApiBaseResult } from "./base";
 
 export interface BaseApiApp {
   /**
@@ -319,11 +319,7 @@ export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
   statusCode: number
 }
 
-export interface RESTGetApiAppTeamResult {
-  /**
-   * API status response
-   */
-  status: RESTApiStatusResponse
+export interface RESTGetApiAppTeamResult extends Omit<RESTApiBaseResult, "message"> {
   /**
    * API message response
    */
