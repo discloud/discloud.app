@@ -2,21 +2,25 @@ import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import Comments from "./comments";
 
 export default class ConfigParser {
-  private static readonly lineSplitterPattern = /[\r\n]+/g;
   private static readonly arraySplitterPattern = /\s*,\s*/g;
+  private static readonly arraySplitterCharacter = ",";
   private static readonly assignmentCharacter = "=";
-  private static readonly STRING_BOOLEAN = new Set(["false", "true"]);
+  private static readonly lineBreakCharacter = "\n";
+  private static readonly lineBreakSplitterPattern = /[\r\n]+/g;
+  private static readonly falseString = "false";
+  private static readonly trueString = "true";
+  private static readonly stringBoolean = new Set([ConfigParser.falseString, ConfigParser.trueString]);
 
   constructor(
     private readonly comments: Comments,
   ) { }
 
   parse<T>(content: string): T {
-    const lines = content.split(ConfigParser.lineSplitterPattern);
+    const lines = content.split(ConfigParser.lineBreakSplitterPattern);
 
-    const obj = Object.fromEntries(Array.from(this.#parseLines(lines)));
+    const parsed = Object.fromEntries(Array.from(this.#parseLines(lines)));
 
-    return this.#parseValues(obj);
+    return this.#parseValues(parsed);
   }
 
   *#parseLines(lines: string[]) {
@@ -44,7 +48,7 @@ export default class ConfigParser {
     if (key in obj) obj[key] = obj[key].split(ConfigParser.arraySplitterPattern).filter(Boolean);
 
     key = DiscloudConfigScopes.AUTORESTART;
-    if (key in obj && ConfigParser.STRING_BOOLEAN.has(obj[key])) obj[key] = obj[key] == true;
+    if (key in obj && ConfigParser.stringBoolean.has(obj[key])) obj[key] = obj[key] == ConfigParser.trueString;
 
     key = DiscloudConfigScopes.RAM;
     if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
@@ -54,6 +58,10 @@ export default class ConfigParser {
 
   stringify(obj: unknown): string
   stringify(obj: any): string {
+    return this.#writeComments(this.#stringify(obj));
+  }
+
+  #stringify(obj: any): string {
     if (obj === undefined || obj === null) return "";
     if (!obj) return `${obj}`;
 
@@ -73,13 +81,15 @@ export default class ConfigParser {
 
         if (Array.isArray(obj)) {
           for (let i = 0; i < obj.length; i++)
-            result.push(this.stringify(obj[i]));
-        } else {
-          for (const key in obj)
-            result.push(`${key}${ConfigParser.assignmentCharacter}${this.stringify(obj[key])}`);
+            result.push(this.#stringify(obj[i]));
+
+          return result.join(ConfigParser.arraySplitterCharacter);
         }
 
-        return this.#writeComments(result.filter(Boolean)).join("\n");
+        for (const key in obj)
+          result.push(`${key}${ConfigParser.assignmentCharacter}${this.#stringify(obj[key])}`);
+
+        return result.join(ConfigParser.lineBreakCharacter);
       }
 
       default:
@@ -87,8 +97,17 @@ export default class ConfigParser {
     }
   }
 
-  #writeComments(lines: string[]) {
+  #writeComments(lines: string[]): string[]
+  #writeComments(content: string): string
+  #writeComments(lines: string | string[]) {
     if (!this.comments.size) return lines;
+
+    let linesIsArray = true;
+
+    if (!Array.isArray(lines)) {
+      linesIsArray = false;
+      lines = lines.split(ConfigParser.lineBreakSplitterPattern);
+    }
 
     for (const comment of this.comments.values()) {
       if (comment.character) {
@@ -101,6 +120,6 @@ export default class ConfigParser {
       lines.push(comment.content, ...spliced);
     }
 
-    return lines;
+    return linesIsArray ? lines : lines.join(ConfigParser.lineBreakCharacter);
   }
 }

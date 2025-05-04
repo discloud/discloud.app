@@ -6,8 +6,21 @@ suite("Testing Discloud Config Parser", () => {
   const comments = new Comments();
   const parser = new ConfigParser(comments);
 
-  const content = "# first comment test\nID=123456789 # second comment test";
-  const expectedParsed = { ID: "123456789" };
+  const content = [
+    "# first comment test",
+    "ID=123456789 # second comment test",
+    "RAM=100",
+    "AUTORESTART=true",
+    "APT=apt1,apt2",
+  ].join("\n");
+
+  const expectedParsed = {
+    ID: "123456789",
+    RAM: 100,
+    AUTORESTART: true,
+    APT: ["apt1", "apt2"],
+  };
+
   const expectedComments = [
     { line: 0, character: 0, content: "# first comment test" },
     { line: 1, character: 12, content: " # second comment test" },
