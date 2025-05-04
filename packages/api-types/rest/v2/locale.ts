@@ -1,10 +1,6 @@
-import type { RESTApiStatusResponse } from "./base";
+import { type RESTApiBaseResult } from "./base";
 
-export interface RESTPutApiLocaleResult {
-  /**
-   * API status response
-   */
-  status: RESTApiStatusResponse
+export interface RESTPutApiLocaleResult extends Omit<RESTApiBaseResult, "message"> {
   /**
    * Your locale
    */
