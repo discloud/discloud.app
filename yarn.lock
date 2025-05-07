@@ -3048,10 +3048,10 @@ zod-to-json-schema@^3.24.1:
   resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.24.5.tgz#d1095440b147fb7c2093812a53c54df8d5df50a3"
   integrity sha512-/AuWwMP+YqiPbsJx5D6TfgRTc4kTLjsh5SOcd4bLsfUg2RcEXrFMJl1DGgdHy2aCfsIA/cr/1JM0xcB2GZji8g==
 
-zod-validation-error@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/zod-validation-error/-/zod-validation-error-3.4.0.tgz"
-  integrity sha512-ZOPR9SVY6Pb2qqO5XHt+MkkTRxGXb4EVtnjc9JpXUOtUB1T9Ru7mZOT361AN3MsetVe7R0a1KZshJDZdgp9miQ==
+zod-validation-error@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/zod-validation-error/-/zod-validation-error-3.4.1.tgz#fb0a64f15d90f4aafe9ccc804331853609aad408"
+  integrity sha512-1KP64yqDPQ3rupxNv7oXhf7KdhHHgaqbKuspVoiN93TT0xrBjql+Svjkdjq/Qh/7GSMmgQs3AfvBT0heE35thw==
 
 zod@^3.23.8, zod@^3.24.2, zod@^3.24.4:
   version "3.24.4"
