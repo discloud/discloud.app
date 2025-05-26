@@ -115,9 +115,7 @@ export default class ConfigParser {
         continue;
       }
 
-      const spliced = lines.splice(comment.line);
-
-      lines.push(comment.content, ...spliced);
+      lines.splice(comment.line, 0, comment.content);
     }
 
     return linesIsArray ? lines : lines.join(ConfigParser.lineBreakCharacter);
