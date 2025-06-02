@@ -25,7 +25,7 @@
     "typedoc": "^0.28.5",
     "typedoc-material-theme": "^1.4.0",
     "typedoc-plugin-coverage": "^4.0.1",
-    "typedoc-plugin-markdown": "^4.6.3",
+    "typedoc-plugin-markdown": "^4.6.4",
     "typedoc-plugin-mdn-links": "^5.0.2",
     "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "^5.8.3",

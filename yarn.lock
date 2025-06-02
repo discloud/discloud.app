@@ -2496,10 +2496,10 @@ typedoc-plugin-coverage@^4.0.1:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-4.0.1.tgz#27042ed2bbfccc17ac00304718145424659e0b35"
   integrity sha512-P1QBR5GJSfW3fDrpz4Vkd8z8lzWaBYjaHebRLk0u2Uga0oSFlPaqrCyiHzItBXxZX28aMlNlZwrUnsLgUgqA7g==
 
-typedoc-plugin-markdown@^4.6.3:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.6.3.tgz#eb3cfda8ef7f66b6fc6be1fc7f0f037880355287"
-  integrity sha512-86oODyM2zajXwLs4Wok2mwVEfCwCnp756QyhLGX2IfsdRYr1DXLCgJgnLndaMUjJD7FBhnLk2okbNE9PdLxYRw==
+typedoc-plugin-markdown@^4.6.4:
+  version "4.6.4"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.6.4.tgz#b28ce1a31b93a1e5a31f74b5fcc6f27f0417cbee"
+  integrity sha512-AnbToFS1T1H+n40QbO2+i0wE6L+55rWnj7zxnM1r781+2gmhMF2dB6dzFpaylWLQYkbg4D1Y13sYnne/6qZwdw==
 
 typedoc-plugin-mdn-links@^5.0.2:
   version "5.0.2"
