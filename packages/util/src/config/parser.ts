@@ -1,18 +1,19 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
-import Comments from "./comments";
+import { type IParser } from "./interfaces/comments/parser";
+import { type ICommentRepository } from "./interfaces/comments/repository";
 
-export default class ConfigParser {
-  private static readonly arraySplitterPattern = /\s*,\s*/g;
-  private static readonly arraySplitterCharacter = ",";
-  private static readonly assignmentCharacter = "=";
-  private static readonly lineBreakCharacter = "\n";
-  private static readonly lineBreakSplitterPattern = /[\r\n]+/g;
-  private static readonly falseString = "false";
-  private static readonly trueString = "true";
-  private static readonly stringBoolean = new Set([ConfigParser.falseString, ConfigParser.trueString]);
+export default class ConfigParser implements IParser {
+  protected static readonly arraySplitterPattern = /\s*,\s*/g;
+  protected static readonly arraySplitterCharacter = ",";
+  protected static readonly assignmentCharacter = "=";
+  protected static readonly lineBreakCharacter = "\n";
+  protected static readonly lineBreakSplitterPattern = /[\r\n]+/g;
+  protected static readonly falseString = "false";
+  protected static readonly trueString = "true";
+  protected static readonly stringBoolean = new Set([ConfigParser.falseString, ConfigParser.trueString]);
 
   constructor(
-    private readonly comments: Comments,
+    protected readonly _commentRepository: ICommentRepository,
   ) { }
 
   parse<T>(content: string): T {
@@ -24,21 +25,14 @@ export default class ConfigParser {
   }
 
   *#parseLines(lines: string[]) {
-    this.comments.clear();
+    this._commentRepository.clear();
 
     for (let i = 0; i < lines.length; i++) {
-      let line = lines[i].trimEnd();
-      const result = Comments.match(line);
+      const content = this._commentRepository.parse(i, lines[i].trimEnd());
 
-      if (result !== null) {
-        this.comments.set(i, result.index, result.groups!.content);
+      if (!content) continue;
 
-        if (result.index < 1) continue;
-
-        line = line.substring(0, result.index);
-      }
-
-      yield line.split(ConfigParser.assignmentCharacter) as [string, string];
+      yield content.split(ConfigParser.assignmentCharacter) as [string, string];
     }
   }
 
@@ -62,21 +56,15 @@ export default class ConfigParser {
   }
 
   #stringify(obj: any): string {
-    if (obj === undefined || obj === null) return "";
-    if (!obj) return `${obj}`;
-
     switch (typeof obj) {
       case "bigint":
+      case "boolean":
       case "number":
         return `${obj}`;
 
-      case "string":
-        return obj;
-
-      case "symbol":
-        return String(obj);
-
       case "object": {
+        if (obj === null) return "";
+
         const result = [];
 
         if (Array.isArray(obj)) {
@@ -92,24 +80,25 @@ export default class ConfigParser {
         return result.join(ConfigParser.lineBreakCharacter);
       }
 
+      case "string": return obj;
+
+      case "symbol": return String(obj);
+
+      case "function":
+      case "undefined":
       default:
-        return `${obj}`;
+        return "";
     }
   }
 
   #writeComments(lines: string[]): string[]
   #writeComments(content: string): string
   #writeComments(lines: string | string[]) {
-    if (!this.comments.size) return lines;
+    if (!this._commentRepository.size) return lines;
 
-    let linesIsArray = true;
+    if (!Array.isArray(lines)) return this.#writeComments(lines.split(ConfigParser.lineBreakSplitterPattern));
 
-    if (!Array.isArray(lines)) {
-      linesIsArray = false;
-      lines = lines.split(ConfigParser.lineBreakSplitterPattern);
-    }
-
-    for (const comment of this.comments.values()) {
+    for (const comment of this._commentRepository) {
       if (comment.character) {
         lines[comment.line] += comment.content;
         continue;
@@ -118,6 +107,6 @@ export default class ConfigParser {
       lines.splice(comment.line, 0, comment.content);
     }
 
-    return linesIsArray ? lines : lines.join(ConfigParser.lineBreakCharacter);
+    return lines.join(ConfigParser.lineBreakCharacter);
   }
 }

@@ -1,10 +1,12 @@
 import { suite, test, type TestContext } from "node:test";
-import Comments from "../config/comments";
+import CommentRepository from "../config/comments/repository";
+import { type IParser } from "../config/interfaces/comments/parser";
+import { type ICommentRepository } from "../config/interfaces/comments/repository";
 import ConfigParser from "../config/parser";
 
 suite("Testing Discloud Config Parser", () => {
-  const comments = new Comments();
-  const parser = new ConfigParser(comments);
+  const comments: ICommentRepository = new CommentRepository();
+  const parser: IParser = new ConfigParser(comments);
 
   const content = [
     "# first comment test",

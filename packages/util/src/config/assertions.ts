@@ -1,7 +1,7 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import z from "zod";
 
-const VERSION_REGEXP = /^(current|latest|suja|(?:\d+(?:\.[\dx]+){0,2}))$/;
+const VERSION_REGEXP = /^(current|latest|lts|suja|(?:\d+(?:\.(?:\d+|x)){0,2}))$/;
 
 const APTPredicate = z.union([
   z.array(z.string()),
