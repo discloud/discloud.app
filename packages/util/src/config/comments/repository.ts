@@ -26,12 +26,11 @@ export default class CommentRepository implements ICommentRepository {
     return this.#cache.delete(line);
   }
 
-  get(line: number): CommentEntity | void
-  get(line: number): unknown {
+  get(line: number) {
     return this.#cache.get(line);
   }
 
-  parse(line: number, content: string): string | void {
+  parse(line: number, content: string) {
     const result = CommentRepository.match(content);
 
     if (!result) return content;
