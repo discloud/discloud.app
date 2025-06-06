@@ -1,3 +1,4 @@
+import { type ICommentEntity } from "../interfaces/comments/entity";
 import { type ICommentRepository } from "../interfaces/comments/repository";
 import { CommentEntity } from "./entity";
 import { type MatchedComment } from "./types";
@@ -11,7 +12,7 @@ export default class CommentRepository implements ICommentRepository {
     return CommentRepository.pattern.exec(line) as MatchedComment;
   }
 
-  readonly #cache = new Map<number, CommentEntity>();
+  readonly #cache = new Map<number, ICommentEntity>();
 
   get size() {
     return this.#cache.size;
@@ -43,7 +44,7 @@ export default class CommentRepository implements ICommentRepository {
   }
 
   set(line: number, character: number, content: string) {
-    const comment = new CommentEntity(line, character, content);
+    const comment: ICommentEntity = new CommentEntity(line, character, content);
 
     this.#cache.set(character, comment);
   }
