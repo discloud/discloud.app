@@ -13,6 +13,10 @@ export interface ApiUser {
    */
   apps: string[]
   /**
+   * Your avatar
+   */
+  avatar: string | null
+  /**
    * Your custom domains on Discloud
    */
   customdomains: string[]
@@ -40,6 +44,10 @@ export interface ApiUser {
    * Your id
    */
   userID: string
+  /**
+   * Your username
+   */
+  username: string | null
   /**
    * When will your plan end
    */

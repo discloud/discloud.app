@@ -220,13 +220,6 @@ export interface RESTGetApiAppAllLogResult extends RESTApiBaseResult {
   apps: ApiAppLog[]
 }
 
-export interface RESTGetApiAppAllStatusResult extends RESTApiBaseResult {
-  /**
-   * Status of all of your applications
-   */
-  apps: ApiStatusApp[]
-}
-
 export interface RESTGetApiAppResult extends RESTApiBaseResult {
   /**
    * Your application

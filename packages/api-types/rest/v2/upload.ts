@@ -38,7 +38,7 @@ export interface ApiUploadApp {
   /**
    * Your app's type
    */
-  type: string,
+  type: number,
   /**
    * Your app's name
    */
