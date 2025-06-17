@@ -22,11 +22,7 @@ export default class AppAptManager extends BaseManager {
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
-    const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), {
-      body: {
-        apt,
-      },
-    });
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
 
     return data;
   }
