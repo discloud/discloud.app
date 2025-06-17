@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/api-types",
-  "version": "0.7.5",
+  "version": "1.0.0",
   "scripts": {
     "watch": "tsc -w",
     "build": "tsc",
