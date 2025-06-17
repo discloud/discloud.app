@@ -38,7 +38,7 @@ export default class AppUploaded extends Base {
   /**
    * Your app's type
    */
-  declare type: string;
+  declare type: number;
   /**
    * The version of the package
    */

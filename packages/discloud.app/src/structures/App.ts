@@ -50,6 +50,10 @@ export default class App extends BaseApp {
    * If your application was stopped due to lack of RAM
    */
   declare ramKilled: boolean;
+  /**
+   * Your app's type
+   */
+  declare type: number;
 
   declare readonly apt: AppApt;
   declare readonly status: AppStatus;
@@ -106,6 +110,9 @@ export default class App extends BaseApp {
 
     if ("ramKilled" in data)
       this.ramKilled = data.ramKilled!;
+
+    if ("type" in data && typeof data.type === "number")
+      this.type = data.type;
 
     // @ts-expect-error ts(2345) ts(2445)
     this.apt._patch(data); this.status._patch(data); this.team._patch(data);

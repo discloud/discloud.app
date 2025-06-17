@@ -1,4 +1,4 @@
-import { Routes, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiConsoleAppShell, type ApiTerminal, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTDeleteApiAppDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppAllStatusResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTGetApiAppStatusResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
+import { Routes, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiConsoleAppShell, type ApiTerminal, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTDeleteApiAppDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTGetApiAppStatusResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
@@ -25,22 +25,8 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param appID - Your app id
    */
   async status(appID: string): Promise<AppStatus>
-  async status(appID?: "all"): Promise<Map<string, AppStatus>>
-  async status(appID = "all") {
-    const data = await this.discloudApp.rest.get<
-      | RESTGetApiAppStatusResult
-      | RESTGetApiAppAllStatusResult
-    >(Routes.appStatus(appID));
-
-    if (Array.isArray(data.apps)) {
-      const cache = new Map<string, AppStatus>();
-
-      for (const app of this._addMany(data.apps).values()) {
-        cache.set(app.id, app.status);
-      }
-
-      return cache;
-    }
+  async status(appID: string) {
+    const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.appStatus(appID));
 
     return this._add(data.apps).status;
   }
@@ -53,9 +39,7 @@ export default class AppManager extends CachedManager<typeof App> {
    */
   async console(appID: string, command: string): Promise<ApiConsoleAppShell> {
     const data = await this.discloudApp.rest.put<RESTPutApiAppConsoleResult>(Routes.appConsole(appID), {
-      body: {
-        command,
-      },
+      body: { command },
     });
 
     return data.apps.shell;

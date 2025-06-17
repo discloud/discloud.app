@@ -1,4 +1,4 @@
-import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllStatusResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppStatusResult, type RESTGetApiTeamResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
+import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppStatusResult, type RESTGetApiTeamResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
@@ -7,7 +7,7 @@ import type { UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
 import TeamApp from "../structures/TeamApp";
-import TeamAppStatus from "../structures/TeamAppStatus";
+import type TeamAppStatus from "../structures/TeamAppStatus";
 import CachedManager from "./CachedManager";
 
 /**
@@ -24,22 +24,8 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async status(appID: string): Promise<TeamAppStatus>
-  async status(appID?: "all"): Promise<Map<string, TeamAppStatus>>
-  async status(appID = "all") {
-    const data = await this.discloudApp.rest.get<
-      | RESTGetApiAppStatusResult
-      | RESTGetApiAppAllStatusResult
-    >(Routes.teamStatus(appID));
-
-    if (Array.isArray(data.apps)) {
-      const cache = new Map<string, TeamAppStatus>();
-
-      for (const app of this._addMany(data.apps).values()) {
-        cache.set(app.id, app.status);
-      }
-
-      return cache;
-    }
+  async status(appID: string) {
+    const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.teamStatus(appID));
 
     return this._add(data.apps).status;
   }
