@@ -19,24 +19,28 @@ const DiscloudConfigCommonRequiredPredicate = z.object({
   [DiscloudConfigScopes.MAIN]: z.string().min(1),
   [DiscloudConfigScopes.RAM]: z.coerce.number().min(100),
   [DiscloudConfigScopes.TYPE]: z.enum(["bot", "site"]),
-  [DiscloudConfigScopes.VERSION]: VERSIONPredicate,
 });
 
 const DiscloudConfigOptionalPredicate = z.object({
   [DiscloudConfigScopes.APT]: APTPredicate,
   [DiscloudConfigScopes.AUTORESTART]: z.coerce.boolean(),
   [DiscloudConfigScopes.AVATAR]: AVATARPredicate,
-  [DiscloudConfigScopes.BUILD]: z.string(),
+  [DiscloudConfigScopes.HOSTNAME]: z.string(),
+  [DiscloudConfigScopes.NAME]: z.string(),
   [DiscloudConfigScopes.START]: z.string(),
+  [DiscloudConfigScopes.STORAGE]: z.string(),
+  [DiscloudConfigScopes.VERSION]: VERSIONPredicate,
+  [DiscloudConfigScopes.VLAN]: z.string(),
 }).partial();
 
 const DiscloudConfigBotPredicate = z.object({
+  [DiscloudConfigScopes.MAIN]: z.string().min(1),
   [DiscloudConfigScopes.TYPE]: z.string().refine(arg => arg === "bot"),
-  [DiscloudConfigScopes.NAME]: z.string().min(1).max(30),
   [DiscloudConfigScopes.RAM]: z.coerce.number().min(100),
 });
 
 const DiscloudConfigSitePredicate = z.object({
+  [DiscloudConfigScopes.MAIN]: z.string().min(1),
   [DiscloudConfigScopes.TYPE]: z.string().refine(arg => arg === "site"),
   [DiscloudConfigScopes.ID]: z.string().min(1),
   [DiscloudConfigScopes.RAM]: z.coerce.number().min(512),
