@@ -60,36 +60,34 @@ export enum DiscloudConfigScopes {
   APT = "APT",
   AUTORESTART = "AUTORESTART",
   AVATAR = "AVATAR",
-  BUILD = "BUILD",
+  HOSTNAME = "HOSTNAME",
   ID = "ID",
   MAIN = "MAIN",
   NAME = "NAME",
   RAM = "RAM",
   START = "START",
+  STORAGE = "STORAGE",
   TYPE = "TYPE",
   VERSION = "VERSION",
+  VLAN = "VLAN",
 }
 
 export const discloudConfigRequiredScopes = {
   bot: [
     DiscloudConfigScopes.MAIN,
-    DiscloudConfigScopes.NAME,
     DiscloudConfigScopes.TYPE,
     DiscloudConfigScopes.RAM,
-    DiscloudConfigScopes.VERSION,
   ],
   site: [
     DiscloudConfigScopes.ID,
     DiscloudConfigScopes.MAIN,
     DiscloudConfigScopes.TYPE,
     DiscloudConfigScopes.RAM,
-    DiscloudConfigScopes.VERSION,
   ],
   common: [
     DiscloudConfigScopes.MAIN,
     DiscloudConfigScopes.TYPE,
     DiscloudConfigScopes.RAM,
-    DiscloudConfigScopes.VERSION,
   ],
 } as const;
 
@@ -107,14 +105,19 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   APT: string
 
   /**
+   * Your application avatar url
+   */
+  AVATAR?: string
+
+  /**
    * If your app has auto-restart enabled
    */
   AUTORESTART: boolean
 
   /**
-   * Command to compile your app
+   * Hostname to communicate between applications
    */
-  BUILD?: string
+  HOSTNAME?: string
 
   /**
    * Your application id
@@ -127,6 +130,11 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   MAIN: string
 
   /**
+   * Your application name
+   */
+  NAME?: string
+
+  /**
    * The RAM quantity for your application
    */
   RAM: number
@@ -137,6 +145,11 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   START?: string
 
   /**
+   * Name of your storage
+   */
+  STORAGE?: string
+
+  /**
    * What is your application type. @see {@link AppTypes}
    */
   TYPE: AppTypes
@@ -144,19 +157,15 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   /**
    * What is your application version. @see {@link AppVersion}
    */
-  VERSION: AppVersion<V>
+  VERSION?: AppVersion<V>
+
+  /**
+   * Active or deactive private network
+   */
+  VLAN?: boolean
 }
 
 interface DiscloudConfigBot<V extends AppLanguages> extends BaseDiscloudConfig<V> {
-  /**
-   * Your application avatar url
-   */
-  AVATAR?: string
-
-  /**
-   * Your application name
-   */
-  NAME: string
   TYPE: "bot"
 }
 
