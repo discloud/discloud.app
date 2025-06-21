@@ -139,15 +139,16 @@ export abstract class BitField<S, N> {
    * Gets an {@link Array} of bitfield names based on the bits available.
    */
   toArray() {
-    return Array.from(this[Symbol.iterator]());
+    const iterator = this[Symbol.iterator]();
+    return iterator.toArray?.() ?? Array.from(this[Symbol.iterator]());
   }
 
-  toJSON() {
-    return typeof this.bitField === "number" ? this.bitField : this.bitField.toString();
+  toJSON(): N extends number ? N : `${N}` {
+    return (typeof this.bitField === "number" ? this.bitField : `${this.bitField}`) as any;
   }
 
   toString() {
-    return `${this.bitField}`;
+    return `${this.bitField}` as const;
   }
 
   valueOf() {

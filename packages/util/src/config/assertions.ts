@@ -30,7 +30,7 @@ const DiscloudConfigOptionalPredicate = z.object({
   [DiscloudConfigScopes.START]: z.string(),
   [DiscloudConfigScopes.STORAGE]: z.string(),
   [DiscloudConfigScopes.VERSION]: VERSIONPredicate,
-  [DiscloudConfigScopes.VLAN]: z.string(),
+  [DiscloudConfigScopes.VLAN]: z.coerce.boolean(),
 }).partial();
 
 const DiscloudConfigBotPredicate = z.object({

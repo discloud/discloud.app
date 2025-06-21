@@ -47,6 +47,9 @@ export default class ConfigParser implements IParser {
     key = DiscloudConfigScopes.RAM;
     if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
 
+    key = DiscloudConfigScopes.VLAN;
+    if (key in obj && ConfigParser.stringBoolean.has(obj[key])) obj[key] = obj[key] == ConfigParser.trueString;
+
     return obj;
   }
 

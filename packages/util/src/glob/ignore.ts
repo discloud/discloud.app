@@ -45,8 +45,9 @@ export class Ignore {
     readonly filename: string,
   ) { }
 
-  async findIgnoreFiles(ignore?: string | string[]) {
+  async findIgnoreFiles(ignore?: string | string[], cwd?: string) {
     const files = await glob(`**/${this.filename}`, {
+      cwd,
       dot: true,
       ignore,
       nodir: true,

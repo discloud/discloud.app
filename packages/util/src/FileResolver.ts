@@ -2,10 +2,13 @@ import type { BinaryLike } from "crypto";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
+import { isArrayBufferView } from "util/types";
 
 export const filenamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
 /** @deprecated This variable has been renamed to follow the camelCase pattern. Use `filenamePattern` instead */
 export const fileNamePattern = filenamePattern;
+
+const externalUrlPattern = /^(?:https?):\/\//;
 
 export interface RawFile {
   /**
@@ -15,7 +18,7 @@ export interface RawFile {
   /**
    * The actual data for the file
    */
-  data: Blob | BinaryLike | Buffer | DataView | File
+  data: Blob | BinaryLike | Buffer | File
   /**
    * Content-Type of the file
    */
@@ -23,14 +26,15 @@ export interface RawFile {
 }
 
 /**
- * This parameter could be {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link String}, {@link URL} or {@link Writable} 
+ * This parameter could be {@link BinaryLike}, {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link String} or {@link URL}
  */
 export type FileResolvable =
+  | BinaryLike
   | Blob
   | File
   | PathLike
   | RawFile
-  | Readable;
+  | Readable
 
 /**
  * A function that converts {@link FileResolvable} to {@link File}
@@ -44,11 +48,11 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
   const fileType = await import("file-type");
 
   if (file instanceof URL || typeof file === "string") {
-    file = file.toString();
+    if (file instanceof URL) file = file.toString();
 
     filename ??= file.match(filenamePattern)?.pop();
 
-    if (/^(?:s?ftp|https?):\/\//.test(file)) {
+    if (externalUrlPattern.test(file)) {
       const response = await fetch(file);
 
       if (!response.ok) throw response;
@@ -78,11 +82,35 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
     return new File([file], filename ?? `file.${fileTypeResult?.ext}`);
   }
 
+  if (isArrayBufferView(file)) return new File([file], filename ?? "file");
+
   if (file instanceof Stream) {
     const fileTypeResult = await fileType.fileTypeFromStream(file);
 
     return streamToFile(file, filename ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
   }
+
+  if ("data" in file) {
+    if (file.data instanceof File) return file.data;
+
+    if (!file.contentType) return resolveFile(file.data, filename);
+
+    return new File([file.data], file.name, { type: file.contentType });
+  }
+
+  throw new TypeError("Invalid file type was provided.");
+}
+
+export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writable>
+
+export function resolveFileSync(file: FileResolvableSync, filename: string): File {
+  if (file instanceof File) return file;
+
+  if (typeof file === "string") return new File([file], filename);
+
+  if (file instanceof Blob) return new File([file], filename);
+
+  if (Buffer.isBuffer(file)) return new File([file], filename);
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
@@ -93,42 +121,20 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
   throw new TypeError("Invalid file type was provided.");
 }
 
-export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writable>
-
-export function resolveFileSync(file: FileResolvableSync, fileName: string): File {
-  if (file instanceof File) return file;
-
-  if (typeof file === "string") {
-    return new File([file], fileName);
-  }
-
-  if (file instanceof Blob) return new File([file], fileName);
-
-  if (Buffer.isBuffer(file)) return new File([file], fileName);
-
-  if ("data" in file) {
-    if (file.data instanceof File) return file.data;
-
-    return new File([file.data], file.name);
-  }
-
-  throw new TypeError("Invalid file type was provided.");
-}
-
 /**
  * A function that converts a like {@link Stream} parameter to {@link File}
  * 
  * @param stream - A parameter like {@link Readable} or {@link Writable}
- * @param fileName - A file name, if you wish
+ * @param filename - A file name, if you wish
  * @param mimeType - A mimeType parameter
  */
-export function streamToFile(stream: Stream, fileName?: string | null, mimeType?: string) {
+export function streamToFile(stream: Stream, filename?: string | null, mimeType?: string) {
   return new Promise<File>((resolve, reject) => {
-    const chunks: any[] = [];
+    const chunks: Buffer[] = [];
     stream.on("data", (chunk) => chunks.push(chunk))
       .once("end", function () {
         stream.removeAllListeners();
-        resolve(new File(chunks, fileName ?? "file", { type: mimeType }));
+        resolve(new File(chunks, filename ?? "file", { type: mimeType }));
       })
       .once("error", function (error) {
         stream.removeAllListeners();
@@ -145,7 +151,7 @@ export function streamToFile(stream: Stream, fileName?: string | null, mimeType?
  */
 export function streamToBlob(stream: Stream, mimeType?: string) {
   return new Promise<Blob>((resolve, reject) => {
-    const chunks: any[] = [];
+    const chunks: Buffer[] = [];
     stream.on("data", (chunk) => chunks.push(chunk))
       .once("end", function () {
         stream.removeAllListeners();
