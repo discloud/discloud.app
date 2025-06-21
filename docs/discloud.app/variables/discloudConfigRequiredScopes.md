@@ -8,18 +8,18 @@
 
 > `const` **discloudConfigRequiredScopes**: `object`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:73](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/payload/v2/DiscloudConfig.ts#L73)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:75](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/payload/v2/DiscloudConfig.ts#L75)
 
 ## Type declaration
 
 ### bot
 
-> `readonly` **bot**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`NAME`](../enumerations/DiscloudConfigScopes.md#name), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram), [`VERSION`](../enumerations/DiscloudConfigScopes.md#version)\]
+> `readonly` **bot**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]
 
 ### common
 
-> `readonly` **common**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram), [`VERSION`](../enumerations/DiscloudConfigScopes.md#version)\]
+> `readonly` **common**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]
 
 ### site
 
-> `readonly` **site**: readonly \[[`ID`](../enumerations/DiscloudConfigScopes.md#id), [`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram), [`VERSION`](../enumerations/DiscloudConfigScopes.md#version)\]
+> `readonly` **site**: readonly \[[`ID`](../enumerations/DiscloudConfigScopes.md#id), [`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]

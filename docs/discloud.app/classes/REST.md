@@ -688,7 +688,7 @@ myEE.emit('foo');
 
 The name of the event.
 
-`K` | keyof RestEvents
+keyof RestEvents | `K`
 
 ##### listener
 

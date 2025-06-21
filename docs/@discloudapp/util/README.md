@@ -33,7 +33,8 @@
 
 ## Variables
 
-- [fileNamePattern](variables/fileNamePattern.md)
+- [filenamePattern](variables/filenamePattern.md)
+- [~~fileNamePattern~~](variables/fileNamePattern-1.md)
 - [version](variables/version.md)
 
 ## Functions
@@ -41,6 +42,7 @@
 - [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
 - [glob](functions/glob.md)
+- [globIterate](functions/globIterate.md)
 - [importJSON](functions/importJSON.md)
 - [mergeDefaults](functions/mergeDefaults.md)
 - [resolveFile](functions/resolveFile.md)

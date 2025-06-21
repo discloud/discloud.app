@@ -6,9 +6,9 @@
 
 # Function: resolveFile()
 
-> **resolveFile**(`file`, `fileName?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
+> **resolveFile**(`file`, `filename?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:40](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L40)
+Defined in: [packages/util/src/FileResolver.ts:45](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/FileResolver.ts#L45)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -20,7 +20,7 @@ A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to 
 
 The file as [FileResolvable](../type-aliases/FileResolvable.md) to resolve
 
-### fileName?
+### filename?
 
 `string`
 

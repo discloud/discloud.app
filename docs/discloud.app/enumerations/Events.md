@@ -6,7 +6,7 @@
 
 # Enumeration: Events
 
-Defined in: [packages/discloud.app/src/@enum/index.ts:1](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/@enum/index.ts#L1)
+Defined in: [packages/discloud.app/src/@enum/index.ts:1](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/@enum/index.ts#L1)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [packages/discloud.app/src/@enum/index.ts:1](https://github.com/disc
 
 > **Error**: `"error"`
 
-Defined in: [packages/discloud.app/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/@enum/index.ts#L2)
+Defined in: [packages/discloud.app/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/@enum/index.ts#L2)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [packages/discloud.app/src/@enum/index.ts:2](https://github.com/disc
 
 > **RateLimited**: `"rateLimited"`
 
-Defined in: [packages/discloud.app/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/@enum/index.ts#L3)
+Defined in: [packages/discloud.app/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/@enum/index.ts#L3)

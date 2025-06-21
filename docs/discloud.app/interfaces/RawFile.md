@@ -6,7 +6,7 @@
 
 # Interface: RawFile
 
-Defined in: packages/util/dist/FileResolver.d.ts:5
+Defined in: packages/util/dist/FileResolver.d.ts:7
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: packages/util/dist/FileResolver.d.ts:5
 
 > `optional` **contentType**: `string`
 
-Defined in: packages/util/dist/FileResolver.d.ts:17
+Defined in: packages/util/dist/FileResolver.d.ts:19
 
 Content-Type of the file
 
@@ -22,9 +22,9 @@ Content-Type of the file
 
 ### data
 
-> **data**: `Blob` \| `File` \| `Buffer`\<`ArrayBufferLike`\> \| `BinaryLike`
+> **data**: `BinaryLike` \| `Blob` \| `File` \| `Buffer`\<`ArrayBufferLike`\>
 
-Defined in: packages/util/dist/FileResolver.d.ts:13
+Defined in: packages/util/dist/FileResolver.d.ts:15
 
 The actual data for the file
 
@@ -34,6 +34,6 @@ The actual data for the file
 
 > **name**: `string`
 
-Defined in: packages/util/dist/FileResolver.d.ts:9
+Defined in: packages/util/dist/FileResolver.d.ts:11
 
 The name of the file

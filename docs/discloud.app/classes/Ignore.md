@@ -38,7 +38,7 @@ Defined in: packages/util/dist/glob/ignore.d.ts:3
 
 ### findIgnoreFiles()
 
-> **findIgnoreFiles**(`ignore?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> **findIgnoreFiles**(`ignore?`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
 Defined in: packages/util/dist/glob/ignore.d.ts:6
 
@@ -47,6 +47,10 @@ Defined in: packages/util/dist/glob/ignore.d.ts:6
 ##### ignore?
 
 `string` | `string`[]
+
+##### cwd?
+
+`string`
 
 #### Returns
 

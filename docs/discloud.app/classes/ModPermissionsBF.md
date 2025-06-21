@@ -197,7 +197,7 @@ Bit(s) to check for
 
 ### freeze()
 
-> **freeze**(): [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`ModPermissionsBF`\>
+> **freeze**(): [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`this`\>
 
 Defined in: packages/util/dist/BitField.d.ts:47
 
@@ -205,7 +205,7 @@ Freezes these bits, making them immutable.
 
 #### Returns
 
-[`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`ModPermissionsBF`\>
+[`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`this`\>
 
 #### Inherited from
 
@@ -295,7 +295,7 @@ These bits or new BitField if the instance is frozen.
 
 ### serialize()
 
-> **serialize**(): [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
+> **serialize**(): [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`S`, `boolean`\>
 
 Defined in: packages/util/dist/BitField.d.ts:68
 
@@ -304,7 +304,7 @@ bit is available.
 
 #### Returns
 
-[`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`"backup_app"` \| `"commit_app"` \| `"edit_ram"` \| `"logs_app"` \| `"restart_app"` \| `"start_app"` \| `"status_app"` \| `"stop_app"`, `boolean`\>
+[`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`S`, `boolean`\>
 
 #### Inherited from
 
@@ -360,13 +360,13 @@ Gets an [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 ### toJSON()
 
-> **toJSON**(): `string` \| `number`
+> **toJSON**(): `number`
 
 Defined in: packages/util/dist/BitField.d.ts:79
 
 #### Returns
 
-`string` \| `number`
+`number`
 
 #### Inherited from
 
@@ -376,13 +376,13 @@ Defined in: packages/util/dist/BitField.d.ts:79
 
 ### toString()
 
-> **toString**(): `string`
+> **toString**(): `` `${number}` ``
 
 Defined in: packages/util/dist/BitField.d.ts:80
 
 #### Returns
 
-`string`
+`` `${number}` ``
 
 #### Inherited from
 

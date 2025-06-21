@@ -6,9 +6,9 @@
 
 # Function: resolveFileSync()
 
-> **resolveFileSync**(`file`, `fileName`): `File`
+> **resolveFileSync**(`file`, `filename`): `File`
 
-Defined in: [packages/util/src/FileResolver.ts:95](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/FileResolver.ts#L95)
+Defined in: [packages/util/src/FileResolver.ts:106](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/FileResolver.ts#L106)
 
 ## Parameters
 
@@ -16,7 +16,7 @@ Defined in: [packages/util/src/FileResolver.ts:95](https://github.com/discloud/d
 
 [`FileResolvableSync`](../type-aliases/FileResolvableSync.md)
 
-### fileName
+### filename
 
 `string`
 

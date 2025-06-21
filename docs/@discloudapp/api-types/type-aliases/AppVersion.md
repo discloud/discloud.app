@@ -8,7 +8,7 @@
 
 > **AppVersion**\<`T`\> = `T` *extends* `"go"` ? `VersionGo` : `T` *extends* `"java"` ? `VersionJava` : `T` *extends* `"js"` ? `VersionJs` : `T` *extends* `"php"` ? `VersionPhp` : `T` *extends* `"py"` ? `VersionPy` : `T` *extends* `"rb"` ? `VersionRb` : `T` *extends* `"rs"` ? `VersionRs` : `BaseVersion`
 
-Defined in: [payload/v2/DiscloudConfig.ts:181](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/payload/v2/DiscloudConfig.ts#L181)
+Defined in: [payload/v2/DiscloudConfig.ts:190](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/payload/v2/DiscloudConfig.ts#L190)
 
 ## Type Parameters
 

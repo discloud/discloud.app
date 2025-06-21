@@ -6,9 +6,9 @@
 
 # Function: streamToFile()
 
-> **streamToFile**(`stream`, `fileName?`, `mimeType?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
+> **streamToFile**(`stream`, `filename?`, `mimeType?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: packages/util/dist/FileResolver.d.ts:39
+Defined in: packages/util/dist/FileResolver.d.ts:41
 
 A function that converts a like Stream parameter to File
 
@@ -20,7 +20,7 @@ A function that converts a like Stream parameter to File
 
 A parameter like Readable or Writable
 
-### fileName?
+### filename?
 
 A file name, if you wish
 

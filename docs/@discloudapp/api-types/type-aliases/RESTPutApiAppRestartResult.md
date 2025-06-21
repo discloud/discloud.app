@@ -8,4 +8,4 @@
 
 > **RESTPutApiAppRestartResult** = [`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)
 
-Defined in: [rest/v2/app.ts:280](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/app.ts#L280)
+Defined in: [rest/v2/app.ts:273](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L273)

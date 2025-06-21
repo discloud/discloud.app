@@ -8,4 +8,4 @@
 
 > `const` **ProfileOptions**: `ZodObject`\<\{ `avatarURL`: `ZodOptional`\<`ZodString`\>; `name`: `ZodOptional`\<`ZodString`\>; \}, `"strip"`, `ZodTypeAny`, \{ `avatarURL?`: `string`; `name?`: `string`; \}, \{ `avatarURL?`: `string`; `name?`: `string`; \}\>
 
-Defined in: [packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/discloud.app/src/@types/index.ts#L17)
+Defined in: [packages/discloud.app/src/@types/index.ts:17](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/@types/index.ts#L17)

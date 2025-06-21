@@ -8,4 +8,4 @@
 
 > **RESTPostApiUploadResult** = [`RESTPostApiUploadOkResult`](../interfaces/RESTPostApiUploadOkResult.md) \| [`RESTPostApiUploadErrorResult`](../interfaces/RESTPostApiUploadErrorResult.md)
 
-Defined in: [packages/api-types/rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/upload.ts#L3)
+Defined in: [packages/api-types/rest/v2/upload.ts:3](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/upload.ts#L3)

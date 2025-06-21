@@ -6,7 +6,7 @@
 
 # Function: glob()
 
-> **glob**(`pattern`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> **glob**(`pattern`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
 Defined in: packages/util/dist/glob/glob.d.ts:1
 
@@ -15,6 +15,10 @@ Defined in: packages/util/dist/glob/glob.d.ts:1
 ### pattern
 
 `string` | `string`[]
+
+### cwd?
+
+`string`
 
 ## Returns
 

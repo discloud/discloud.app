@@ -6,7 +6,7 @@
 
 # Class: DiscloudConfig
 
-Defined in: packages/util/dist/config/index.d.ts:3
+Defined in: packages/util/dist/config/config.d.ts:3
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: packages/util/dist/config/index.d.ts:3
 
 > **new DiscloudConfig**(`path`): `DiscloudConfig`
 
-Defined in: packages/util/dist/config/index.d.ts:8
+Defined in: packages/util/dist/config/config.d.ts:9
 
 #### Parameters
 
@@ -26,13 +26,41 @@ Defined in: packages/util/dist/config/index.d.ts:8
 
 `DiscloudConfig`
 
+### Constructor
+
+> **new DiscloudConfig**(`path`, `content`): `DiscloudConfig`
+
+Defined in: packages/util/dist/config/config.d.ts:10
+
+#### Parameters
+
+##### path
+
+`string`
+
+##### content
+
+`string`
+
+#### Returns
+
+`DiscloudConfig`
+
 ## Properties
+
+### \_watcher?
+
+> `protected` `optional` **\_watcher**: `FSWatcher`
+
+Defined in: packages/util/dist/config/config.d.ts:11
+
+***
 
 ### path
 
 > `readonly` **path**: `string`
 
-Defined in: packages/util/dist/config/index.d.ts:5
+Defined in: packages/util/dist/config/config.d.ts:5
 
 ***
 
@@ -40,7 +68,7 @@ Defined in: packages/util/dist/config/index.d.ts:5
 
 > `readonly` `static` **filename**: `"discloud.config"` = `"discloud.config"`
 
-Defined in: packages/util/dist/config/index.d.ts:6
+Defined in: packages/util/dist/config/config.d.ts:6
 
 ## Accessors
 
@@ -48,13 +76,13 @@ Defined in: packages/util/dist/config/index.d.ts:6
 
 #### Get Signature
 
-> **get** **data**(): [`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)
+> **get** **data**(): `ParsedDiscloudConfigData`
 
-Defined in: packages/util/dist/config/index.d.ts:9
+Defined in: packages/util/dist/config/config.d.ts:13
 
 ##### Returns
 
-[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)
+`ParsedDiscloudConfigData`
 
 ***
 
@@ -64,21 +92,7 @@ Defined in: packages/util/dist/config/index.d.ts:9
 
 > **get** **exists**(): `boolean`
 
-Defined in: packages/util/dist/config/index.d.ts:10
-
-##### Returns
-
-`boolean`
-
-***
-
-### existsMain
-
-#### Get Signature
-
-> **get** **existsMain**(): `boolean`
-
-Defined in: packages/util/dist/config/index.d.ts:11
+Defined in: packages/util/dist/config/config.d.ts:14
 
 ##### Returns
 
@@ -92,7 +106,7 @@ Defined in: packages/util/dist/config/index.d.ts:11
 
 > **get** **mainFileExt**(): `undefined` \| `string`
 
-Defined in: packages/util/dist/config/index.d.ts:12
+Defined in: packages/util/dist/config/config.d.ts:15
 
 ##### Returns
 
@@ -104,21 +118,21 @@ Defined in: packages/util/dist/config/index.d.ts:12
 
 #### Get Signature
 
-> **get** **missingProps**(): ([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`NAME`](../enumerations/DiscloudConfigScopes.md#name) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type) \| [`VERSION`](../enumerations/DiscloudConfigScopes.md#version))[]
+> **get** **missingProps**(): ([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
 
-Defined in: packages/util/dist/config/index.d.ts:13
+Defined in: packages/util/dist/config/config.d.ts:16
 
 ##### Returns
 
-([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`NAME`](../enumerations/DiscloudConfigScopes.md#name) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type) \| [`VERSION`](../enumerations/DiscloudConfigScopes.md#version))[]
+([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
 
 ## Methods
 
-### dispose()
+### \[dispose\]()
 
-> **dispose**(): `void`
+> **\[dispose\]**(): `void`
 
-Defined in: packages/util/dist/config/index.d.ts:14
+Defined in: packages/util/dist/config/config.d.ts:25
 
 #### Returns
 
@@ -126,17 +140,41 @@ Defined in: packages/util/dist/config/index.d.ts:14
 
 ***
 
+### dispose()
+
+> **dispose**(): `void`
+
+Defined in: packages/util/dist/config/config.d.ts:17
+
+#### Returns
+
+`void`
+
+***
+
+### existsMain()
+
+> **existsMain**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`\>
+
+Defined in: packages/util/dist/config/config.d.ts:18
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`\>
+
+***
+
 ### get()
 
-> **get**\<`K`\>(`key`): [`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\[`K`\]
+> **get**\<`K`\>(`key`): `ParsedDiscloudConfigData`\[`K`\]
 
-Defined in: packages/util/dist/config/index.d.ts:18
+Defined in: packages/util/dist/config/config.d.ts:19
 
 #### Type Parameters
 
 ##### K
 
-`K` *extends* `"APT"` \| `"AUTORESTART"` \| `"BUILD"` \| `"ID"` \| `"MAIN"` \| `"RAM"` \| `"START"` \| `"TYPE"` \| `"VERSION"`
+`K` *extends* keyof `ParsedDiscloudConfigData`
 
 #### Parameters
 
@@ -146,7 +184,7 @@ Defined in: packages/util/dist/config/index.d.ts:18
 
 #### Returns
 
-[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\[`K`\]
+`ParsedDiscloudConfigData`\[`K`\]
 
 ***
 
@@ -154,13 +192,13 @@ Defined in: packages/util/dist/config/index.d.ts:18
 
 > **set**\<`K`\>(`key`, `value`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: packages/util/dist/config/index.d.ts:19
+Defined in: packages/util/dist/config/config.d.ts:20
 
 #### Type Parameters
 
 ##### K
 
-`K` *extends* `"APT"` \| `"AUTORESTART"` \| `"BUILD"` \| `"ID"` \| `"MAIN"` \| `"RAM"` \| `"START"` \| `"TYPE"` \| `"VERSION"`
+`K` *extends* keyof `ParsedDiscloudConfigData`
 
 #### Parameters
 
@@ -170,7 +208,7 @@ Defined in: packages/util/dist/config/index.d.ts:19
 
 ##### value
 
-[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\[`K`\]
+`ParsedDiscloudConfigData`\[`K`\]
 
 #### Returns
 
@@ -182,13 +220,13 @@ Defined in: packages/util/dist/config/index.d.ts:19
 
 > **update**(`config`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: packages/util/dist/config/index.d.ts:20
+Defined in: packages/util/dist/config/config.d.ts:21
 
 #### Parameters
 
 ##### config
 
-[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)\>
+[`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<`ParsedDiscloudConfigData`\>
 
 #### Returns
 
@@ -200,19 +238,19 @@ Defined in: packages/util/dist/config/index.d.ts:20
 
 #### Call Signature
 
-> **validate**(): `void`
+> **validate**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: packages/util/dist/config/index.d.ts:15
+Defined in: packages/util/dist/config/config.d.ts:22
 
 ##### Returns
 
-`void`
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
 #### Call Signature
 
-> **validate**(`doNotThrowIfInvalid`): `boolean`
+> **validate**(`doNotThrowIfInvalid`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`\>
 
-Defined in: packages/util/dist/config/index.d.ts:16
+Defined in: packages/util/dist/config/config.d.ts:23
 
 ##### Parameters
 
@@ -222,7 +260,7 @@ Defined in: packages/util/dist/config/index.d.ts:16
 
 ##### Returns
 
-`boolean`
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`boolean`\>
 
 ***
 
@@ -230,7 +268,7 @@ Defined in: packages/util/dist/config/index.d.ts:16
 
 > **watch**(): `this`
 
-Defined in: packages/util/dist/config/index.d.ts:17
+Defined in: packages/util/dist/config/config.d.ts:24
 
 #### Returns
 
@@ -238,17 +276,35 @@ Defined in: packages/util/dist/config/index.d.ts:17
 
 ***
 
+### fromPath()
+
+> `static` **fromPath**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`DiscloudConfig`\>
+
+Defined in: packages/util/dist/config/config.d.ts:7
+
+#### Parameters
+
+##### path
+
+`string`
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`DiscloudConfig`\>
+
+***
+
 ### validade()
 
 > `static` **validade**(`data`): `void`
 
-Defined in: packages/util/dist/config/index.d.ts:7
+Defined in: packages/util/dist/config/config.d.ts:8
 
 #### Parameters
 
 ##### data
 
-[`DiscloudConfigType`](../type-aliases/DiscloudConfigType.md)
+`ParsedDiscloudConfigData`
 
 #### Returns
 

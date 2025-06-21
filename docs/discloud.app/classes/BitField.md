@@ -72,7 +72,7 @@ Defined in: packages/util/dist/BitField.d.ts:21
 
 ### Flags
 
-> `readonly` `static` **Flags**: `EnumLike`\<`unknown`, `number` \| `bigint`\>
+> `readonly` `static` **Flags**: `EnumLike`\<`unknown`, `bigint` \| `number`\>
 
 Defined in: packages/util/dist/BitField.d.ts:26
 
@@ -163,7 +163,7 @@ Bit(s) to check for
 
 ### freeze()
 
-> **freeze**(): [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`BitField`\<`S`, `N`\>\>
+> **freeze**(): [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`this`\>
 
 Defined in: packages/util/dist/BitField.d.ts:47
 
@@ -171,7 +171,7 @@ Freezes these bits, making them immutable.
 
 #### Returns
 
-[`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`BitField`\<`S`, `N`\>\>
+[`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<`this`\>
 
 ***
 
@@ -298,25 +298,25 @@ Gets an [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 ### toJSON()
 
-> **toJSON**(): `string` \| `N` & `number`
+> **toJSON**(): `N` *extends* `number` ? `N`\<`N`\> : `` `${N}` ``
 
 Defined in: packages/util/dist/BitField.d.ts:79
 
 #### Returns
 
-`string` \| `N` & `number`
+`N` *extends* `number` ? `N`\<`N`\> : `` `${N}` ``
 
 ***
 
 ### toString()
 
-> **toString**(): `string`
+> **toString**(): `` `${N}` ``
 
 Defined in: packages/util/dist/BitField.d.ts:80
 
 #### Returns
 
-`string`
+`` `${N}` ``
 
 ***
 

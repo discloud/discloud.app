@@ -6,15 +6,19 @@
 
 # Function: glob()
 
-> **glob**(`pattern`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> **glob**(`pattern`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/glob.ts:7](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/glob.ts#L7)
+Defined in: [packages/util/src/glob/glob.ts:7](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/glob.ts#L7)
 
 ## Parameters
 
 ### pattern
 
 `string` | `string`[]
+
+### cwd?
+
+`string`
 
 ## Returns
 

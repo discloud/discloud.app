@@ -6,7 +6,7 @@
 
 # Class: Ignore
 
-Defined in: [packages/util/src/glob/ignore.ts:7](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L7)
+Defined in: [packages/util/src/glob/ignore.ts:7](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L7)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/glob/ignore.ts:7](https://github.com/discloud/dis
 
 > **new Ignore**(`filename`): `Ignore`
 
-Defined in: [packages/util/src/glob/ignore.ts:44](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L44)
+Defined in: [packages/util/src/glob/ignore.ts:44](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L44)
 
 #### Parameters
 
@@ -32,21 +32,25 @@ Defined in: [packages/util/src/glob/ignore.ts:44](https://github.com/discloud/di
 
 > `readonly` **filename**: `string`
 
-Defined in: [packages/util/src/glob/ignore.ts:45](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L45)
+Defined in: [packages/util/src/glob/ignore.ts:45](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L45)
 
 ## Methods
 
 ### findIgnoreFiles()
 
-> **findIgnoreFiles**(`ignore?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> **findIgnoreFiles**(`ignore?`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:48](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L48)
+Defined in: [packages/util/src/glob/ignore.ts:48](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L48)
 
 #### Parameters
 
 ##### ignore?
 
 `string` | `string`[]
+
+##### cwd?
+
+`string`
 
 #### Returns
 
@@ -58,7 +62,7 @@ Defined in: [packages/util/src/glob/ignore.ts:48](https://github.com/discloud/di
 
 > **resolveIgnoreFile**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:58](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L58)
+Defined in: [packages/util/src/glob/ignore.ts:59](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L59)
 
 #### Parameters
 
@@ -76,7 +80,7 @@ Defined in: [packages/util/src/glob/ignore.ts:58](https://github.com/discloud/di
 
 > **resolveIgnoreFiles**(`paths`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:62](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L62)
+Defined in: [packages/util/src/glob/ignore.ts:63](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L63)
 
 #### Parameters
 
@@ -94,7 +98,7 @@ Defined in: [packages/util/src/glob/ignore.ts:62](https://github.com/discloud/di
 
 > `static` **globify**(`content`, `directory?`, `absolute?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:8](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/util/src/glob/ignore.ts#L8)
+Defined in: [packages/util/src/glob/ignore.ts:8](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L8)
 
 #### Parameters
 

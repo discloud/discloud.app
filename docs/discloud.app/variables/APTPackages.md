@@ -8,4 +8,4 @@
 
 > `const` **APTPackages**: (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:57](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/payload/v2/DiscloudConfig.ts#L57)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:57](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/payload/v2/DiscloudConfig.ts#L57)

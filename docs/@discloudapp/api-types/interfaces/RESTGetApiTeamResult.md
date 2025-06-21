@@ -6,7 +6,7 @@
 
 # Interface: RESTGetApiTeamResult
 
-Defined in: [rest/v2/team.ts:3](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/team.ts#L3)
+Defined in: [rest/v2/team.ts:3](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/team.ts#L3)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/team.ts:3](https://github.com/discloud/discloud.app/blob/e0
 
 > **apps**: [`ApiTeamApps`](ApiTeamApps.md)[]
 
-Defined in: [rest/v2/team.ts:4](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/team.ts#L4)
+Defined in: [rest/v2/team.ts:4](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/team.ts#L4)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [rest/v2/team.ts:4](https://github.com/discloud/discloud.app/blob/e0
 
 > **message**: `string`
 
-Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -39,9 +39,9 @@ Message of the API
 
 ### status
 
-> **status**: [`RESTApiStatusResponse`](../type-aliases/RESTApiStatusResponse.md)
+> **status**: `"ok"` \| `"error"`
 
-Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/e06d08869d94db25520cbe5fdcc3cdbc242fb0cb/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 

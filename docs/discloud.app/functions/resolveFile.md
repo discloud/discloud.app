@@ -6,9 +6,9 @@
 
 # Function: resolveFile()
 
-> **resolveFile**(`file`, `fileName?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
+> **resolveFile**(`file`, `filename?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: packages/util/dist/FileResolver.d.ts:29
+Defined in: packages/util/dist/FileResolver.d.ts:31
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -20,7 +20,7 @@ A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to 
 
 The file as [FileResolvable](../type-aliases/FileResolvable.md) to resolve
 
-### fileName?
+### filename?
 
 `string`
 
