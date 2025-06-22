@@ -18,8 +18,8 @@ export class DiscloudConfig {
 
   static async fromPath(path: string) {
     path = await this.#resolveConfigPath(path);
-    const content = await readFile(path, enconding);
-    return new DiscloudConfig(path, content);
+    const content = await readFile(path, enconding).catch(() => null);
+    return new DiscloudConfig(path, content!);
   }
 
   static async #resolveConfigPath(path: string) {
