@@ -54,11 +54,11 @@ export class DiscloudConfig {
   constructor(readonly path: string, content?: string) {
     if (!content) {
       this.path = DiscloudConfig.#resolveConfigPathSync(this.path);
-      content = readFileSync(this.path, enconding);
+      try { content = readFileSync(this.path, enconding); } catch { }
     }
 
     this.#dir = dirname(this.path);
-    this.#data = this.#parse(content);
+    this.#data = this.#parse(content!);
   }
 
   readonly #commentRepository: ICommentRepository = new CommentRepository();
