@@ -14,7 +14,7 @@ Defined in: packages/util/dist/glob/ignore.d.ts:1
 
 > **new Ignore**(`filename`): `Ignore`
 
-Defined in: packages/util/dist/glob/ignore.d.ts:5
+Defined in: packages/util/dist/glob/ignore.d.ts:7
 
 #### Parameters
 
@@ -36,11 +36,11 @@ Defined in: packages/util/dist/glob/ignore.d.ts:3
 
 ## Methods
 
-### findIgnoreFiles()
+### \_findIgnoreFiles()
 
-> **findIgnoreFiles**(`ignore?`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> `protected` **\_findIgnoreFiles**(`ignore?`, `cwd?`): [`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`, `void`, `void`\>
 
-Defined in: packages/util/dist/glob/ignore.d.ts:6
+Defined in: packages/util/dist/glob/ignore.d.ts:10
 
 #### Parameters
 
@@ -54,39 +54,39 @@ Defined in: packages/util/dist/glob/ignore.d.ts:6
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+[`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`, `void`, `void`\>
 
 ***
 
-### resolveIgnoreFile()
+### \_getIgnoreIterate()
 
-> **resolveIgnoreFile**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> `protected` **\_getIgnoreIterate**(`cwd?`): [`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`[], `void`, `unknown`\>
 
-Defined in: packages/util/dist/glob/ignore.d.ts:7
+Defined in: packages/util/dist/glob/ignore.d.ts:9
 
 #### Parameters
 
-##### path
+##### cwd?
 
 `string`
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+[`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`[], `void`, `unknown`\>
 
 ***
 
-### resolveIgnoreFiles()
+### getIgnorePatterns()
 
-> **resolveIgnoreFiles**(`paths`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> **getIgnorePatterns**(`cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
 Defined in: packages/util/dist/glob/ignore.d.ts:8
 
 #### Parameters
 
-##### paths
+##### cwd?
 
-`string`[]
+`string`
 
 #### Returns
 
@@ -113,6 +113,42 @@ Defined in: packages/util/dist/glob/ignore.d.ts:4
 ##### absolute?
 
 `boolean`
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+***
+
+### resolveIgnoreFile()
+
+> `static` **resolveIgnoreFile**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+Defined in: packages/util/dist/glob/ignore.d.ts:5
+
+#### Parameters
+
+##### path
+
+`string`
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+***
+
+### resolveIgnoreFiles()
+
+> `static` **resolveIgnoreFiles**(`paths`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+Defined in: packages/util/dist/glob/ignore.d.ts:6
+
+#### Parameters
+
+##### paths
+
+`string`[]
 
 #### Returns
 

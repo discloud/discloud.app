@@ -6,7 +6,7 @@
 
 # Class: MissingMainError
 
-Defined in: [packages/util/src/config/errors.ts:1](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/config/errors.ts#L1)
+Defined in: [packages/util/src/config/errors.ts:1](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/config/errors.ts#L1)
 
 ## Extends
 
@@ -88,7 +88,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > `readonly` **name**: `"MissingMain"` = `"MissingMain"`
 
-Defined in: [packages/util/src/config/errors.ts:2](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/config/errors.ts#L2)
+Defined in: [packages/util/src/config/errors.ts:2](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/config/errors.ts#L2)
 
 #### Overrides
 

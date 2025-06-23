@@ -6,7 +6,7 @@
 
 # Interface: ApiAppManager
 
-Defined in: [rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L83)
+Defined in: [rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L83)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/app.ts:83](https://github.com/discloud/discloud.app/blob/1e
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L87)
+Defined in: [rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L87)
 
 Which of your applications are currently `processing`
 
@@ -24,7 +24,7 @@ Which of your applications are currently `processing`
 
 > **alreadyOffline**: `string`[]
 
-Defined in: [rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L91)
+Defined in: [rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L91)
 
 Which of your applications are currently `offline`
 
@@ -34,6 +34,6 @@ Which of your applications are currently `offline`
 
 > **alreadyOnline**: `string`[]
 
-Defined in: [rest/v2/app.ts:95](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L95)
+Defined in: [rest/v2/app.ts:95](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L95)
 
 Which of your applications are currently `online`

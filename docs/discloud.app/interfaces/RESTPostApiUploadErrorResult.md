@@ -6,7 +6,7 @@
 
 # Interface: RESTPostApiUploadErrorResult
 
-Defined in: [packages/api-types/rest/v2/upload.ts:21](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/upload.ts#L21)
+Defined in: [packages/api-types/rest/v2/upload.ts:21](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/upload.ts#L21)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/upload.ts:21](https://github.com/disclou
 
 > `optional` **logs**: `string`
 
-Defined in: [packages/api-types/rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/upload.ts#L30)
+Defined in: [packages/api-types/rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/upload.ts#L30)
 
 API logs in case your app fails on launch
 
@@ -28,7 +28,7 @@ API logs in case your app fails on launch
 
 > **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -43,7 +43,7 @@ Message of the API
 
 > **status**: `"error"`
 
-Defined in: [packages/api-types/rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/upload.ts#L22)
+Defined in: [packages/api-types/rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/upload.ts#L22)
 
 The status of API response
 
@@ -57,6 +57,6 @@ The status of API response
 
 > **statusCode**: `number`
 
-Defined in: [packages/api-types/rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/upload.ts#L26)
+Defined in: [packages/api-types/rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/upload.ts#L26)
 
 Status code from API

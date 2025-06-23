@@ -21,6 +21,8 @@
 ## Interfaces
 
 - [BitFieldConstructor](interfaces/BitFieldConstructor.md)
+- [FSGlobOptionsWithFileTypes](interfaces/FSGlobOptionsWithFileTypes.md)
+- [FSGlobOptionsWithoutFileTypes](interfaces/FSGlobOptionsWithoutFileTypes.md)
 - [RawFile](interfaces/RawFile.md)
 
 ## Type Aliases
@@ -28,6 +30,7 @@
 - [BitFieldResolvable](type-aliases/BitFieldResolvable.md)
 - [FileResolvable](type-aliases/FileResolvable.md)
 - [FileResolvableSync](type-aliases/FileResolvableSync.md)
+- [FSGlobOptions](type-aliases/FSGlobOptions.md)
 - [ModPermissionsResolvable](type-aliases/ModPermissionsResolvable.md)
 - [ModPermissionsString](type-aliases/ModPermissionsString.md)
 
@@ -41,6 +44,8 @@
 
 - [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
+- [fsGlob](functions/fsGlob.md)
+- [fsGlobIterate](functions/fsGlobIterate.md)
 - [glob](functions/glob.md)
 - [globIterate](functions/globIterate.md)
 - [importJSON](functions/importJSON.md)

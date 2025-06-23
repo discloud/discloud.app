@@ -6,7 +6,7 @@
 
 # Interface: ApiAppLog
 
-Defined in: [rest/v2/app.ts:76](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L76)
+Defined in: [rest/v2/app.ts:76](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L76)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/app.ts:76](https://github.com/discloud/discloud.app/blob/1e
 
 > **id**: `string`
 
-Defined in: [rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L7)
+Defined in: [rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L7)
 
 Your app id
 
@@ -32,6 +32,6 @@ Your app id
 
 > **terminal**: [`ApiTerminal`](ApiTerminal.md)
 
-Defined in: [rest/v2/app.ts:80](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L80)
+Defined in: [rest/v2/app.ts:80](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L80)
 
 Here you can see your application `logs`

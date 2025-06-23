@@ -6,7 +6,7 @@
 
 # Interface: RESTPutApiAppCommitResult
 
-Defined in: [packages/api-types/rest/v2/app.ts:293](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L293)
+Defined in: [packages/api-types/rest/v2/app.ts:293](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L293)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:293](https://github.com/discloud/
 
 > `optional` **logs**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:301](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L301)
+Defined in: [packages/api-types/rest/v2/app.ts:301](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L301)
 
 API logs in case your app fails on launch
 
@@ -28,7 +28,7 @@ API logs in case your app fails on launch
 
 > **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -43,7 +43,7 @@ Message of the API
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 
@@ -57,6 +57,6 @@ The status of API response
 
 > **statusCode**: `number`
 
-Defined in: [packages/api-types/rest/v2/app.ts:297](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L297)
+Defined in: [packages/api-types/rest/v2/app.ts:297](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L297)
 
 Status code from API

@@ -6,7 +6,7 @@
 
 # Class: TeamAppManager
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:16](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L16)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:16](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L16)
 
 Manager for your team on Discloud
 
@@ -20,7 +20,7 @@ Manager for your team on Discloud
 
 > **new TeamAppManager**(`discloudApp`): `TeamAppManager`
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:17](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L17)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:17](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L17)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:17](https://gi
 
 > `protected` `readonly` **\_cache**: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`TeamApp`](TeamApp.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > `protected` `readonly` **holds**: *typeof* [`TeamApp`](TeamApp.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L10)
 
 #### Inherited from
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:10](https://githu
 
 > **get** **cache**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`InstanceType`](https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype)\<`T`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L25)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L25)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:25](https://githu
 
 > `protected` **\_add**(`data`): [`TeamApp`](TeamApp.md)
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/CachedManager.ts#L19)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/CachedManager.ts#L19)
 
 #### Parameters
 
@@ -118,7 +118,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:19](https://git
 
 > `protected` **\_addMany**(`data`): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`TeamApp`](TeamApp.md)\>
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/CachedManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/CachedManager.ts#L33)
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:33](https://git
 
 > `protected` **\_clear**(`data?`): `void`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/CachedManager.ts#L45)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/CachedManager.ts#L45)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:45](https://git
 
 > `protected` **\_delete**(`id`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/CachedManager.ts#L58)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/CachedManager.ts#L58)
 
 #### Parameters
 
@@ -184,7 +184,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:58](https://git
 
 > `protected` **\_deleteMany**(`ids`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/CachedManager.ts#L64)
+Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/CachedManager.ts#L64)
 
 #### Parameters
 
@@ -208,7 +208,7 @@ Defined in: [packages/discloud.app/src/managers/CachedManager.ts:64](https://git
 
 > **backup**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AppBackup`](AppBackup.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:63](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L63)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:63](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L63)
 
 Get backups for the app of your team on Discloud
 
@@ -228,7 +228,7 @@ Your team app id
 
 > **backup**(`appID?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppBackup`](AppBackup.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:64](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L64)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:64](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L64)
 
 Get backups for the app of your team on Discloud
 
@@ -250,7 +250,7 @@ Your team app id
 
 > **fetch**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`TeamApp`](TeamApp.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:222](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L222)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:222](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L222)
 
 Get information of your team application on Discloud.
 
@@ -264,7 +264,7 @@ Get information of your team application on Discloud.
 
 > **ram**(`appID`, `quantity`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTPutApiAppRamResult`](../interfaces/RESTPutApiAppRamResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:90](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L90)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:90](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L90)
 
 Set the quantity of ram to application of your team
 
@@ -292,7 +292,7 @@ Minimum values is `100` to `bot` or `512` for `site`
 
 > **resolve**(`idOrInstance`): `null` \| [`TeamApp`](TeamApp.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L33)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:33](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L33)
 
 Resolves a data entry to a data Object.
 
@@ -318,7 +318,7 @@ The id or instance of something in this Manager
 
 > **resolveId**(`idOrInstance`): `any`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L39)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L39)
 
 #### Parameters
 
@@ -342,7 +342,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:39](https://githu
 
 > **restart**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:134](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L134)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:134](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L134)
 
 Restart your team application on Discloud
 
@@ -362,7 +362,7 @@ Your team app id
 
 > **restart**(`appID?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppManagerRestartedAll`](../interfaces/ApiAppManagerRestartedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:135](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L135)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:135](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L135)
 
 Restart your team application on Discloud
 
@@ -386,7 +386,7 @@ Your team app id
 
 > **start**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:164](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L164)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:164](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L164)
 
 Start your team application on Discloud
 
@@ -406,7 +406,7 @@ Your team app id
 
 > **start**(`appID?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppManagerStartedAll`](../interfaces/ApiAppManagerStartedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:165](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L165)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:165](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L165)
 
 Start your team application on Discloud
 
@@ -428,7 +428,7 @@ Your team app id
 
 > **status**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`TeamAppStatus`](TeamAppStatus.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:26](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L26)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:26](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L26)
 
 Get the status for the app of your team on Discloud
 
@@ -452,7 +452,7 @@ Your team app id
 
 > **stop**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:194](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L194)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:194](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L194)
 
 Stop your team application on Discloud
 
@@ -472,7 +472,7 @@ Your team app id
 
 > **stop**(`appID?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppManagerStopedAll`](../interfaces/ApiAppManagerStopedAll.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:195](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L195)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:195](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L195)
 
 Stop your team application on Discloud
 
@@ -496,7 +496,7 @@ Your team app id
 
 > **terminal**(`appID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiTerminal`](../interfaces/ApiTerminal.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:38](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L38)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:38](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L38)
 
 Get logs for the app of your team on Discloud
 
@@ -516,7 +516,7 @@ Your team app id
 
 > **terminal**(`appID?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`ApiTerminal`](../interfaces/ApiTerminal.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:39](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L39)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:39](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L39)
 
 Get logs for the app of your team on Discloud
 
@@ -538,7 +538,7 @@ Your team app id
 
 > **update**(`appID`, `options`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTPutApiAppCommitResult`](../interfaces/RESTPutApiAppCommitResult.md)\>
 
-Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:115](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/TeamAppManager.ts#L115)
+Defined in: [packages/discloud.app/src/managers/TeamAppManager.ts:115](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/TeamAppManager.ts#L115)
 
 Update an of your team apps on Discloud
 
@@ -566,7 +566,7 @@ Options to update your app.
 
 > **valueOf**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`TeamApp`](TeamApp.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/discloud.app/src/managers/DataManager.ts#L46)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:46](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/DataManager.ts#L46)
 
 Returns the primitive value of the specified object.
 

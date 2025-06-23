@@ -6,7 +6,7 @@
 
 # Class: Ignore
 
-Defined in: [packages/util/src/glob/ignore.ts:7](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L7)
+Defined in: [packages/util/src/glob/ignore.ts:8](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L8)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [packages/util/src/glob/ignore.ts:7](https://github.com/discloud/dis
 
 > **new Ignore**(`filename`): `Ignore`
 
-Defined in: [packages/util/src/glob/ignore.ts:44](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L44)
+Defined in: [packages/util/src/glob/ignore.ts:55](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L55)
 
 #### Parameters
 
@@ -32,15 +32,15 @@ Defined in: [packages/util/src/glob/ignore.ts:44](https://github.com/discloud/di
 
 > `readonly` **filename**: `string`
 
-Defined in: [packages/util/src/glob/ignore.ts:45](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L45)
+Defined in: [packages/util/src/glob/ignore.ts:56](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L56)
 
 ## Methods
 
-### findIgnoreFiles()
+### \_findIgnoreFiles()
 
-> **findIgnoreFiles**(`ignore?`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> `protected` **\_findIgnoreFiles**(`ignore?`, `cwd?`): [`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`, `void`, `void`\>
 
-Defined in: [packages/util/src/glob/ignore.ts:48](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L48)
+Defined in: [packages/util/src/glob/ignore.ts:72](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L72)
 
 #### Parameters
 
@@ -54,15 +54,77 @@ Defined in: [packages/util/src/glob/ignore.ts:48](https://github.com/discloud/di
 
 #### Returns
 
+[`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`, `void`, `void`\>
+
+***
+
+### \_getIgnoreIterate()
+
+> `protected` **\_getIgnoreIterate**(`cwd?`): [`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`[], `void`, `unknown`\>
+
+Defined in: [packages/util/src/glob/ignore.ts:63](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L63)
+
+#### Parameters
+
+##### cwd?
+
+`string`
+
+#### Returns
+
+[`AsyncGenerator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)\<`string`[], `void`, `unknown`\>
+
+***
+
+### getIgnorePatterns()
+
+> **getIgnorePatterns**(`cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+Defined in: [packages/util/src/glob/ignore.ts:59](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L59)
+
+#### Parameters
+
+##### cwd?
+
+`string`
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+***
+
+### globify()
+
+> `static` **globify**(`content`, `directory?`, `absolute?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+
+Defined in: [packages/util/src/glob/ignore.ts:9](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L9)
+
+#### Parameters
+
+##### content
+
+`string`
+
+##### directory?
+
+`string`
+
+##### absolute?
+
+`boolean`
+
+#### Returns
+
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
 ***
 
 ### resolveIgnoreFile()
 
-> **resolveIgnoreFile**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> `static` **resolveIgnoreFile**(`path`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:59](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L59)
+Defined in: [packages/util/src/glob/ignore.ts:47](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L47)
 
 #### Parameters
 
@@ -78,41 +140,15 @@ Defined in: [packages/util/src/glob/ignore.ts:59](https://github.com/discloud/di
 
 ### resolveIgnoreFiles()
 
-> **resolveIgnoreFiles**(`paths`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
+> `static` **resolveIgnoreFiles**(`paths`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/ignore.ts:63](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L63)
+Defined in: [packages/util/src/glob/ignore.ts:51](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/util/src/glob/ignore.ts#L51)
 
 #### Parameters
 
 ##### paths
 
 `string`[]
-
-#### Returns
-
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
-
-***
-
-### globify()
-
-> `static` **globify**(`content`, `directory?`, `absolute?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
-
-Defined in: [packages/util/src/glob/ignore.ts:8](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/util/src/glob/ignore.ts#L8)
-
-#### Parameters
-
-##### content
-
-`string`
-
-##### directory?
-
-`string`
-
-##### absolute?
-
-`boolean`
 
 #### Returns
 

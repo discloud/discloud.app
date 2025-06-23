@@ -6,7 +6,7 @@
 
 # Interface: ApiAppTeam
 
-Defined in: [rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L158)
+Defined in: [rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L158)
 
 ## Extended by
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/app.ts:158](https://github.com/discloud/discloud.app/blob/1
 
 > **modID**: `string`
 
-Defined in: [rest/v2/app.ts:162](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L162)
+Defined in: [rest/v2/app.ts:162](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L162)
 
 Moderator ID
 
@@ -28,6 +28,6 @@ Moderator ID
 
 > **perms**: `string`[]
 
-Defined in: [rest/v2/app.ts:166](https://github.com/discloud/discloud.app/blob/1e4ce40911bd2c25d95ae21441839a6f9ec7c445/packages/api-types/rest/v2/app.ts#L166)
+Defined in: [rest/v2/app.ts:166](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L166)
 
 Moderator permissions
