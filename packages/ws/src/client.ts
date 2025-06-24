@@ -2,7 +2,7 @@ import EventEmitter from "events";
 import WebSocket from "ws";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
 import { BufferOverflowError } from "./errors";
-import { type OnProgressCallback, type SocketEventsMap, type SocketOptions } from "./types";
+import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
   extends EventEmitter<SocketEventsMap<Data>>
@@ -76,7 +76,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     });
   }
 
-  async sendJSON(value: Record<string, unknown>): Promise<void> {
+  async sendJSON(value: Record<any, any> | any[]): Promise<void> {
     if (!this.connected) await this.connect();
 
     await new Promise<void>((resolve, reject) => {
@@ -100,9 +100,11 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
       const current = ++i;
       const pending = current < total;
 
-      await this.sendJSON({ chunk, current, pending, total });
+      const value: ProgressData = { chunk, current, pending, total };
 
-      await onProgress?.({ current, total });
+      await this.sendJSON(value);
+
+      await onProgress?.(value);
     }
   }
 
