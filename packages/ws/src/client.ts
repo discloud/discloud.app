@@ -11,7 +11,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     super({ captureRejections: true });
 
     if (options) {
-      if (options.chunkSize !== undefined)
+      if (typeof options.chunkSize === "number")
         this._chunkSize = options.chunkSize;
 
       if (options.connectingTimeout !== undefined)
@@ -25,9 +25,11 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   }
 
   protected _chunkSize: number = DEFAULT_CHUNK_SIZE;
+  declare protected _connected: boolean;
   protected readonly _connectingTimeout: number | null = 10_000;
   protected readonly _disposeOnClose: boolean = true;
   protected readonly _headers: Record<string, string> = {};
+  declare protected _lastError?: any;
   declare protected _socket?: WebSocket;
   declare protected _ping: number;
   declare protected _pong: number;
@@ -119,11 +121,6 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           : {},
       };
 
-      const status = {
-        connected: false,
-        error: undefined as any,
-      };
-
       this._socket = new WebSocket(this.wsURL, options)
         .once("close", (code, reason) => {
           queueMicrotask(() => this.emit("close", code, reason));
@@ -131,16 +128,17 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
           switch (code) {
             case SOCKET_UNAUTHORIZED_CODE:
+              this._connected = false;
               return this.emit("unauthorized");
           }
 
-          if (!status.connected) return this.emit("connectionFailed");
+          if (!this._connected) return this.emit("connectionFailed");
 
-          status.connected = false;
+          this._connected = false;
 
-          if (status.error) {
-            const error = status.error;
-            delete status.error;
+          if (this._lastError) {
+            const error = this._lastError;
+            delete this._lastError;
 
             switch (error.code) {
               case NETWORK_UNREACHABLE_CODE:
@@ -149,15 +147,15 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           }
         })
         .on("error", (error) => {
-          this.emit("error", status.error = error);
+          this.emit("error", this._lastError = error);
         })
         .on("message", (data) => {
           try { this.emit("data", JSON.parse(data.toString())); }
           catch { this.emit("message", data); }
         })
         .once("open", () => {
-          status.connected = true;
-          status.error = null;
+          this._connected = true;
+          delete this._lastError;
 
           this._ping = Date.now();
           this._socket!.ping();
