@@ -16,6 +16,8 @@ export interface SocketOptions {
   /**
    * Set the buffer chunk size per message
    * 
+   * Note that very large chunks may cause unexpected closure
+   * 
    * @default 65_536 (64KB)
    */
   chunkSize?: number
