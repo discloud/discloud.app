@@ -94,13 +94,13 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     const chunkSize = Math.ceil(buffer.length / total);
 
     for (let i = 0; i < total;) {
-      const start = chunkSize * i;
-      const end = start + chunkSize;
-      const chunk = buffer.subarray(start, end);
+      const offset = chunkSize * i;
+      const end = offset + chunkSize;
+      const chunk = buffer.subarray(offset, end);
       const current = ++i;
       const pending = current < total;
 
-      const value: ProgressData = { chunk, current, pending, total };
+      const value: ProgressData = { chunk, current, offset, pending, total };
 
       await this.sendJSON(value);
 
