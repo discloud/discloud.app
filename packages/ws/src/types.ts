@@ -9,6 +9,7 @@ export interface SocketEventsMap<Data extends Record<any, any> | any[] = Record<
   data: [data: Data]
   error: [error: Error]
   message: [data: RawData]
+  unauthorized: []
 }
 
 export interface SocketOptions {
