@@ -55,15 +55,15 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   async #waitConnect() {
     await new Promise<void>((resolve, reject) => {
       if (this.connecting) {
-        const onConnect = () => {
+        const onConnected = () => {
           this.off("close", onClose);
           resolve();
         };
         const onClose = () => {
-          this.off("connect", onConnect);
+          this.off("connected", onConnected);
           reject();
         };
-        return this.once("connect", onConnect).once("close", onClose);
+        return this.once("connected", onConnected).once("close", onClose);
       }
       if (this.connected) return resolve();
       reject();
@@ -126,31 +126,47 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           : {},
       };
 
-      let _error!: any;
+      const status = {
+        connected: false,
+        error: undefined as any,
+      };
 
       this._socket = new WebSocket(this.wsURL, options)
         .once("close", (code, reason) => {
           if (this._disposeOnClose) queueMicrotask(() => this.dispose());
 
-          if (_error) {
-            switch (_error.code) {
-              case NETWORK_UNREACHABLE_CODE: return;
+          if (!status.connected) return this.emit("connectionFailed");
+
+          status.connected = false;
+
+          if (status.error) {
+            const error = status.error;
+            delete status.error;
+
+            switch (error.code) {
+              case NETWORK_UNREACHABLE_CODE:
+                return this.emit("connectionFailed");
             }
           }
 
           this.emit("close", code, reason);
         })
         .on("error", (error) => {
-          this.emit("error", _error = error);
+          this.emit("error", status.error = error);
         })
         .on("message", (data) => {
           try { this.emit("data", JSON.parse(data.toString())); }
           catch { this.emit("message", data); }
         })
         .once("open", () => {
+          status.connected = true;
+          status.error = null;
+
           this._ping = Date.now();
           this._socket!.ping();
-          this.emit("connect");
+
+          this.emit("connected");
+
           resolve();
         })
         .on("ping", () => {
