@@ -2,10 +2,10 @@ import { type ApiUploadApp } from "discloud.app";
 import { type RawData } from "ws";
 
 export interface SocketEventsMap<Data extends Record<any, any> | any[] = Record<any, any> | any[]> {
+  close: [code: number, reason: Buffer]
   connected: []
   connecting: []
   connectionFailed: []
-  close: [code: number, reason: Buffer]
   data: [data: Data]
   error: [error: Error]
   message: [data: RawData]
