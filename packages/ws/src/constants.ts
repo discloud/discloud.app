@@ -1,5 +1,5 @@
-/** `64KB` */
-export const DEFAULT_CHUNK_SIZE = 65_536;
+/** `256KB` */
+export const DEFAULT_CHUNK_SIZE = 262_144;
 
 /** `100MB` */
 export const MAX_BUFFER_SIZE = 104_857_600;

@@ -18,7 +18,7 @@ export interface SocketOptions {
    * 
    * Note that very large chunks may cause unexpected closure
    * 
-   * @default 65_536 (64KB)
+   * @default 262_144 (256KB)
    */
   chunkSize?: number
   /**
