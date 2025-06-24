@@ -11,6 +11,9 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     super({ captureRejections: true });
 
     if (options) {
+      if (options.chunkSize !== undefined)
+        this._chunkSize = options.chunkSize;
+
       if (options.connectingTimeout !== undefined)
         this._connectingTimeout = options.connectingTimeout;
 
@@ -21,6 +24,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     }
   }
 
+  protected _chunkSize: number = DEFAULT_CHUNK_SIZE;
   protected readonly _connectingTimeout: number | null = 10_000;
   protected readonly _disposeOnClose: boolean = true;
   protected readonly _headers: Record<string, string> = {};
@@ -81,21 +85,10 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     });
   }
 
-  async sendBuffer(buffer: Buffer) {
-    if (!this.connected) await this.connect();
+  async sendBuffer(buffer: Buffer, onProgress?: OnProgressCallback) {
+    if (buffer.length > MAX_FILE_SIZE) throw new BufferOverflowError(MAX_FILE_SIZE);
 
-    await new Promise<void>((resolve, reject) => {
-      this._socket!.send(buffer, (err) => {
-        if (err) return reject(err);
-        resolve();
-      });
-    });
-  }
-
-  async sendFile(buffer: Buffer, onProgress?: OnProgressCallback) {
-    if (buffer.length > MAX_FILE_SIZE) throw new BufferOverflowError();
-
-    const total = Math.ceil(buffer.length / DEFAULT_CHUNK_SIZE);
+    const total = Math.ceil(buffer.length / this._chunkSize);
     const chunkSize = Math.ceil(buffer.length / total);
 
     for (let i = 0; i < total;) {
@@ -105,7 +98,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
       const current = ++i;
       const pending = current < total;
 
-      await this.sendJSON({ current, chunk, pending, total });
+      await this.sendJSON({ chunk, current, pending, total });
 
       await onProgress?.({ current, total });
     }
