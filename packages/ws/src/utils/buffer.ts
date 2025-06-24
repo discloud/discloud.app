@@ -11,7 +11,7 @@ import { DEFAULT_CHUNK_SIZE, MAX_CHUNK_SIZE, MIN_CHUNK_SIZE } from "../constants
  * 
  * @param chunkSize
  * Limited between `8_192` (`8KB`) and `1_048_576` (`1MB`)  
- * Default `65_536` (`64KB`)
+ * Default `262_144` (`256KB`)
  */
 export function* splitBuffer(buffer: Buffer, chunkSize: number = DEFAULT_CHUNK_SIZE) {
   chunkSize = Math.max(MIN_CHUNK_SIZE, Math.min(MAX_CHUNK_SIZE, chunkSize));
