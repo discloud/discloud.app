@@ -1,6 +1,6 @@
 import EventEmitter from "events";
 import WebSocket from "ws";
-import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
+import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_ABNORMAL_CLOSURE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
 import { BufferOverflowError, NetworkUnreachableError, UnauthorizedError } from "./errors";
 import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
 
@@ -128,15 +128,15 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           if (this._disposeOnClose) queueMicrotask(() => this.dispose());
 
           switch (code) {
+            case SOCKET_ABNORMAL_CLOSURE:
+              if (this._connected) break;
+              this.emit("connectionFailed");
+              return reject(new NetworkUnreachableError());
+
             case SOCKET_UNAUTHORIZED_CODE:
               this._connected = false;
               this.emit("unauthorized");
               return reject(new UnauthorizedError());
-          }
-
-          if (!this._connected) {
-            this.emit("connectionFailed");
-            return reject(new NetworkUnreachableError());
           }
 
           this._connected = false;
