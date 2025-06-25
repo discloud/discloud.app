@@ -4,6 +4,6 @@ export class BufferOverflowError extends Error {
   constructor(
     readonly max: number,
   ) {
-    super();
+    super("Buffer overflow");
   }
 }

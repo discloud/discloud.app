@@ -1,7 +1,7 @@
 import EventEmitter from "events";
 import WebSocket from "ws";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
-import { BufferOverflowError } from "./errors";
+import { BufferOverflowError, NetworkUnreachableError, UnauthorizedError } from "./errors";
 import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
@@ -125,16 +125,19 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
       this._socket = new WebSocket(this.wsURL, options)
         .once("close", (code, reason) => {
-          queueMicrotask(() => this.emit("close", code, reason));
           if (this._disposeOnClose) queueMicrotask(() => this.dispose());
 
           switch (code) {
             case SOCKET_UNAUTHORIZED_CODE:
               this._connected = false;
-              return this.emit("unauthorized");
+              this.emit("unauthorized");
+              return reject(new UnauthorizedError());
           }
 
-          if (!this._connected) return this.emit("connectionFailed");
+          if (!this._connected) {
+            this.emit("connectionFailed");
+            return reject(new NetworkUnreachableError());
+          }
 
           this._connected = false;
 
@@ -144,9 +147,12 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
             switch (error.code) {
               case NETWORK_UNREACHABLE_CODE:
-                return this.emit("connectionFailed");
+                this.emit("connectionFailed");
+                return reject(new NetworkUnreachableError());
             }
           }
+
+          this.emit("close", code, reason);
         })
         .on("error", (error) => {
           this.emit("error", this._lastError = error);
