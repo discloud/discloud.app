@@ -100,11 +100,11 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
       const current = ++i;
       const pending = current < total;
 
-      const value: ProgressData = { chunk, current, offset, pending, total };
+      const data: ProgressData = { chunk, current, offset, pending, total };
 
-      await this.sendJSON(value);
+      await this.sendJSON(data);
 
-      await onProgress?.(value);
+      await onProgress?.(data);
     }
   }
 
