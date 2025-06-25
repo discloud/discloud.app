@@ -127,19 +127,19 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
         .once("close", (code, reason) => {
           if (this._disposeOnClose) queueMicrotask(() => this.dispose());
 
+          const isConnected = this._connected;
+          this._connected = false;
+
           switch (code) {
             case SOCKET_ABNORMAL_CLOSURE:
-              if (this._connected) break;
+              if (isConnected) break;
               this.emit("connectionFailed");
               return reject(new NetworkUnreachableError());
 
             case SOCKET_UNAUTHORIZED_CODE:
-              this._connected = false;
               this.emit("unauthorized");
               return reject(new UnauthorizedError());
           }
-
-          this._connected = false;
 
           if (this._lastError) {
             const error = this._lastError;
