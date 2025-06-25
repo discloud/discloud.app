@@ -3,6 +3,7 @@ import WebSocket from "ws";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_ABNORMAL_CLOSURE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
 import { BufferOverflowError, NetworkUnreachableError, UnauthorizedError } from "./errors";
 import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
+import { SocketEvents } from "./enum";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
   extends EventEmitter<SocketEventsMap<Data>>
@@ -35,10 +36,10 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   declare protected _pong: number;
   declare ping: number;
 
-  get closed() { return !this._socket || this._socket.readyState === this._socket.CLOSED; }
-  get closing() { return this._socket ? this._socket.readyState === this._socket.CLOSING : false; }
-  get connected() { return this._socket ? this._socket.readyState === this._socket.OPEN : false; }
-  get connecting() { return this._socket ? this._socket.readyState === this._socket.CONNECTING : false; }
+  get closed() { return !this._socket || this._socket.readyState === WebSocket.CLOSED; }
+  get closing() { return this._socket ? this._socket.readyState === WebSocket.CLOSING : false; }
+  get connected() { return this._socket ? this._socket.readyState === WebSocket.OPEN : false; }
+  get connecting() { return this._socket ? this._socket.readyState === WebSocket.CONNECTING : false; }
 
   close() {
     if (this._socket) {
@@ -62,14 +63,14 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
     await new Promise<void>((resolve, reject) => {
       if (this.connecting) {
         const onConnected = () => {
-          this.off("close", onClose);
+          this.off(SocketEvents.close, onClose);
           resolve();
         };
         const onClose = () => {
-          this.off("connected", onConnected);
+          this.off(SocketEvents.connected, onConnected);
           reject();
         };
-        return this.once("connected", onConnected).once("close", onClose);
+        return this.once(SocketEvents.connected, onConnected).once(SocketEvents.close, onClose);
       }
       if (this.connected) return resolve();
       reject();
@@ -133,11 +134,11 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           switch (code) {
             case SOCKET_ABNORMAL_CLOSURE:
               if (isConnected) break;
-              this.emit("connectionFailed");
+              this.emit(SocketEvents.connectionFailed);
               return reject(new NetworkUnreachableError());
 
             case SOCKET_UNAUTHORIZED_CODE:
-              this.emit("unauthorized");
+              this.emit(SocketEvents.unauthorized);
               return reject(new UnauthorizedError());
           }
 
@@ -147,19 +148,19 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
             switch (error.code) {
               case NETWORK_UNREACHABLE_CODE:
-                this.emit("connectionFailed");
+                this.emit(SocketEvents.connectionFailed);
                 return reject(new NetworkUnreachableError());
             }
           }
 
-          this.emit("close", code, reason);
+          this.emit(SocketEvents.close, code, reason);
         })
         .on("error", (error) => {
-          this.emit("error", this._lastError = error);
+          this.emit(SocketEvents.error, this._lastError = error);
         })
         .on("message", (data) => {
-          try { this.emit("data", JSON.parse(data.toString())); }
-          catch { this.emit("message", data); }
+          try { this.emit(SocketEvents.data, JSON.parse(data.toString())); }
+          catch { this.emit(SocketEvents.message, data); }
         })
         .once("open", () => {
           this._connected = true;
@@ -168,7 +169,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           this._ping = Date.now();
           this._socket!.ping();
 
-          this.emit("connected");
+          this.emit(SocketEvents.connected);
 
           resolve();
         })
