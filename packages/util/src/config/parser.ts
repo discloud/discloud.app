@@ -38,6 +38,9 @@ export default class ConfigParser implements IParser {
 
   #parseValues<T>(obj: Record<string, string>): T
   #parseValues(obj: any) {
+    for (const key in obj)
+      if (!obj[key]) delete obj[key];
+
     let key = DiscloudConfigScopes.APT;
     if (key in obj) obj[key] = obj[key].split(ConfigParser.arraySplitterPattern).filter(Boolean);
 
@@ -45,7 +48,7 @@ export default class ConfigParser implements IParser {
     if (key in obj && ConfigParser.stringBoolean.has(obj[key])) obj[key] = obj[key] == ConfigParser.trueString;
 
     key = DiscloudConfigScopes.RAM;
-    if (key in obj && !isNaN(obj[key])) obj[key] = Number(obj[key]);
+    if (key in obj && obj[key]) obj[key] = Number(obj[key]);
 
     key = DiscloudConfigScopes.VLAN;
     if (key in obj && ConfigParser.stringBoolean.has(obj[key])) obj[key] = obj[key] == ConfigParser.trueString;
