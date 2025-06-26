@@ -38,9 +38,6 @@ export default class ConfigParser implements IParser {
 
   #parseValues<T>(obj: Record<string, string>): T
   #parseValues(obj: any) {
-    for (const key in obj)
-      if (!obj[key]) delete obj[key];
-
     let key = DiscloudConfigScopes.APT;
     if (key in obj) obj[key] = obj[key].split(ConfigParser.arraySplitterPattern).filter(Boolean);
 

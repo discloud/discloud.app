@@ -20,7 +20,19 @@ suite("Testing Discloud Config", async () => {
     assert.strictEqual(dConfig.mainFileExt, ".txt");
     assert.deepStrictEqual(dConfig.missingProps, []);
     assert.deepStrictEqual(dConfig.data, {
+      APT: [],
+      AUTORESTART: "",
+      AVATAR: "",
+      HOSTNAME: "",
+      ID: "",
       MAIN: "_test.txt",
+      NAME: "",
+      RAM: "",
+      START: "",
+      STORAGE: "",
+      TYPE: "",
+      VERSION: "",
+      VLAN: "",
     });
   });
 
