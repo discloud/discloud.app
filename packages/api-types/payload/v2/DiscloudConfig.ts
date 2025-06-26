@@ -72,26 +72,21 @@ export enum DiscloudConfigScopes {
   VLAN = "VLAN",
 }
 
+export const discloudConfigScopes = Object.values(DiscloudConfigScopes);
+
 export const discloudConfigRequiredScopes = {
   bot: [
     DiscloudConfigScopes.MAIN,
-    DiscloudConfigScopes.TYPE,
-    DiscloudConfigScopes.RAM,
   ],
   site: [
     DiscloudConfigScopes.ID,
     DiscloudConfigScopes.MAIN,
     DiscloudConfigScopes.TYPE,
-    DiscloudConfigScopes.RAM,
   ],
   common: [
     DiscloudConfigScopes.MAIN,
-    DiscloudConfigScopes.TYPE,
-    DiscloudConfigScopes.RAM,
   ],
 } as const;
-
-export const discloudConfigScopes = Object.values(DiscloudConfigScopes);
 
 export type DiscloudConfigType<T extends AppTypes = AppTypes, V extends AppLanguages = AppLanguages> =
   T extends "bot" ? DiscloudConfigBot<V> :
@@ -102,7 +97,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   /**
    * APT packages for your application on Discloud
    */
-  APT: string
+  APT?: string[]
 
   /**
    * Your application avatar url
@@ -112,7 +107,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   /**
    * If your app has auto-restart enabled
    */
-  AUTORESTART: boolean
+  AUTORESTART?: boolean
 
   /**
    * Hostname to communicate between applications
@@ -137,7 +132,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   /**
    * The RAM quantity for your application
    */
-  RAM: number
+  RAM?: number
 
   /**
    * Command to start your app
@@ -152,7 +147,7 @@ interface BaseDiscloudConfig<V extends AppLanguages> {
   /**
    * What is your application type. @see {@link AppTypes}
    */
-  TYPE: AppTypes
+  TYPE?: AppTypes
 
   /**
    * What is your application version. @see {@link AppVersion}
