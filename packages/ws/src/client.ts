@@ -1,9 +1,9 @@
 import EventEmitter from "events";
 import WebSocket from "ws";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_ABNORMAL_CLOSURE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
+import { SocketEvents } from "./enum";
 import { BufferOverflowError, NetworkUnreachableError, UnauthorizedError } from "./errors";
 import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
-import { SocketEvents } from "./enum";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
   extends EventEmitter<SocketEventsMap<Data>>
@@ -118,7 +118,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
       this.emit("connecting");
 
       const options: ConstructorParameters<typeof WebSocket>[2] = {
-        headers: this._headers,
+        headers: this.#resolveHeaders(this._headers),
         ...typeof this._connectingTimeout === "number"
           ? { signal: AbortSignal.timeout(this._connectingTimeout) }
           : {},
@@ -182,6 +182,12 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           this.ping = this._pong - this._ping;
         });
     });
+  }
+
+  #resolveHeaders(headers: Record<string, string>) {
+    headers["api-token"] ??= process.env.DISCLOUD_TOKEN!;
+
+    return headers;
   }
 
   [Symbol.dispose]() {
