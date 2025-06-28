@@ -18,9 +18,6 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
       if (options.connectingTimeout !== undefined)
         this._connectingTimeout = options.connectingTimeout;
 
-      if (typeof options.disposeOnClose === "boolean")
-        this._disposeOnClose = options.disposeOnClose;
-
       if (options.headers) Object.assign(this._headers, options.headers);
     }
   }
@@ -28,7 +25,6 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   protected _chunkSize: number = DEFAULT_CHUNK_SIZE;
   declare protected _connected: boolean;
   protected readonly _connectingTimeout: number | null = 10_000;
-  protected readonly _disposeOnClose: boolean = true;
   protected readonly _headers: Record<string, string> = {};
   declare protected _lastError?: any;
   declare protected _socket?: WebSocket;
@@ -41,7 +37,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   get connected() { return this._socket ? this._socket.readyState === WebSocket.OPEN : false; }
   get connecting() { return this._socket ? this._socket.readyState === WebSocket.CONNECTING : false; }
 
-  close() {
+  disconnect() {
     if (this._socket) {
       this._socket.removeAllListeners().close();
       delete this._socket;
@@ -126,7 +122,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
       this._socket = new WebSocket(this.wsURL, options)
         .once("close", (code, reason) => {
-          if (this._disposeOnClose) queueMicrotask(() => this.dispose());
+          queueMicrotask(() => this.dispose());
 
           const isConnected = this._connected;
           this._connected = false;
@@ -191,7 +187,7 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
   }
 
   [Symbol.dispose]() {
-    this.close();
+    this.disconnect();
     this.removeAllListeners();
   }
 }
