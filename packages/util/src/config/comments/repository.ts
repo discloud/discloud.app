@@ -48,6 +48,10 @@ export default class CommentRepository implements ICommentRepository {
     this.#cache.set(character, comment);
   }
 
+  toJSON() {
+    return this.#cache.values().toArray();
+  }
+
   *values() {
     yield* this.#cache.values();
   }
