@@ -4,6 +4,7 @@ import { globIterate } from "glob";
 import { globifyGitIgnore } from "globify-gitignore";
 import { dirname } from "path";
 import { joinWithRoot } from "../path";
+import { asyncGeneratorToArray } from "../utils/array";
 
 export class Ignore {
   static async globify(content: string, directory?: string, absolute?: boolean) {
@@ -56,8 +57,8 @@ export class Ignore {
     readonly filename: string,
   ) { }
 
-  async getIgnorePatterns(cwd?: string) {
-    return await Array.fromAsync(this._getIgnoreIterate(cwd)).then((value) => value.flat());
+  getIgnorePatterns(cwd?: string) {
+    return asyncGeneratorToArray(this._getIgnoreIterate(cwd)).then((value) => value.flat());
   }
 
   protected async* _getIgnoreIterate(cwd?: string) {

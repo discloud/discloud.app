@@ -1,6 +1,7 @@
 import { type Dirent } from "fs";
 import { glob, stat } from "fs/promises";
 import { join } from "path";
+import { asyncGeneratorToArray } from "../utils/array";
 import { DISCLOUD_IGNORE_FILENAME } from "./constants";
 import { Ignore } from "./ignore";
 import type { FSGlobOptions, FSGlobOptionsWithFileTypes, FSGlobOptionsWithoutFileTypes } from "./types";
@@ -9,7 +10,7 @@ export function fsGlob(pattern: string | string[], options?: FSGlobOptionsWithou
 export function fsGlob(pattern: string | string[], options?: FSGlobOptionsWithFileTypes): Promise<Dirent[]>
 export function fsGlob(pattern: string | string[], options?: FSGlobOptions): Promise<Array<string | Dirent>>
 export function fsGlob(pattern: string | string[], options?: any): Promise<unknown> {
-  return Array.fromAsync(fsGlobIterate(pattern, options));
+  return asyncGeneratorToArray(fsGlobIterate(pattern, options));
 }
 
 export function fsGlobIterate(pattern: string | string[], options?: FSGlobOptionsWithoutFileTypes): AsyncGenerator<string>
