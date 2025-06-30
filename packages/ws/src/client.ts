@@ -1,13 +1,23 @@
+import { RouteBases, Routes } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
 import WebSocket from "ws";
+import { uploadAction } from "./actions/upload";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_ABNORMAL_CLOSURE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
 import { SocketEvents } from "./enum";
 import { BufferOverflowError, NetworkUnreachableError, UnauthorizedError } from "./errors";
-import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketOptions } from "./types";
+import { type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketEventUploadData, type SocketOptions, type SocketUploadActionOptions } from "./types";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
   extends EventEmitter<SocketEventsMap<Data>>
   implements Disposable {
+  static async upload(buffer: Buffer, options: SocketUploadActionOptions) {
+    const url = new URL(`${RouteBases.api}/ws${Routes.upload()}`);
+
+    const socket = new SocketClient<SocketEventUploadData>(url);
+
+    return uploadAction(socket, buffer, options);
+  }
+
   constructor(protected wsURL: URL, options?: SocketOptions) {
     super({ captureRejections: true });
 
@@ -130,11 +140,9 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
           switch (code) {
             case SOCKET_ABNORMAL_CLOSURE:
               if (isConnected) break;
-              this.emit(SocketEvents.connectionFailed);
               return reject(new NetworkUnreachableError());
 
             case SOCKET_UNAUTHORIZED_CODE:
-              this.emit(SocketEvents.unauthorized);
               return reject(new UnauthorizedError());
           }
 
@@ -144,7 +152,6 @@ export class SocketClient<Data extends Record<any, any> | any[] = Record<any, an
 
             switch (error.code) {
               case NETWORK_UNREACHABLE_CODE:
-                this.emit(SocketEvents.connectionFailed);
                 return reject(new NetworkUnreachableError());
             }
           }
