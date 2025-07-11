@@ -19,7 +19,7 @@ const DiscloudConfigCommonRequiredPredicate = z.object({
 const DiscloudConfigOptionalPredicate = z.object({
   [DiscloudConfigScopes.APT]: APTPredicate,
   [DiscloudConfigScopes.AUTORESTART]: z.coerce.boolean(),
-  [DiscloudConfigScopes.AVATAR]: z.string().trim().url().or(EmptyStringPredicate),
+  [DiscloudConfigScopes.AVATAR]: z.url().or(EmptyStringPredicate),
   [DiscloudConfigScopes.HOSTNAME]: z.string(),
   [DiscloudConfigScopes.ID]: z.string(),
   [DiscloudConfigScopes.MAIN]: z.string(),
