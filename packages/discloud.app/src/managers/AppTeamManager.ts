@@ -1,7 +1,7 @@
 import { Routes, type ApiAppTeamManager, type RESTDeleteApiAppTeamResult, type RESTGetApiAppTeamResult, type RESTPostApiAppTeamResult, type RESTPutApiAppTeamResult } from "@discloudapp/api-types/v2";
 import { ModPermissionsBF, type ModPermissionsResolvable } from "@discloudapp/util";
-import z from "zod";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
+import { validateNonEmptyString } from "../util/assertions";
 import BaseManager from "./BaseManager";
 
 /**
@@ -20,8 +20,8 @@ export default class AppTeamManager extends BaseManager {
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    */
   async create(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
-    z.string().parse(appID);
-    z.string().parse(modID);
+    validateNonEmptyString(appID);
+    validateNonEmptyString(modID);
 
     const data = await this.discloudApp.rest.post<RESTPostApiAppTeamResult>(Routes.appTeam(appID), {
       body: {
@@ -41,8 +41,8 @@ export default class AppTeamManager extends BaseManager {
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    */
   async edit(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
-    z.string().parse(appID);
-    z.string().parse(modID);
+    validateNonEmptyString(appID);
+    validateNonEmptyString(modID);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppTeamResult>(Routes.appTeam(appID), {
       body: {
@@ -62,8 +62,8 @@ export default class AppTeamManager extends BaseManager {
    * @param modID - The mod id
    */
   async delete(appID: string, modID: string): Promise<RESTDeleteApiAppTeamResult> {
-    z.string().parse(appID);
-    z.string().parse(modID);
+    validateNonEmptyString(appID);
+    validateNonEmptyString(modID);
 
     const data = await this.discloudApp.rest.delete<
       RESTDeleteApiAppTeamResult
@@ -76,7 +76,7 @@ export default class AppTeamManager extends BaseManager {
    * Get mods information for your app on Discloud
    */
   async fetch(appID: string) {
-    z.string().parse(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.get<RESTGetApiAppTeamResult>(Routes.appTeam(appID));
 
