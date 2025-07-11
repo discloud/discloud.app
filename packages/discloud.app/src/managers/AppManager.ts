@@ -8,7 +8,7 @@ import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
 import type AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
-import { validateNumberType, validateStringType } from "../util/assertions";
+import { validateNonEmptyString, validateNumberType } from "../util/assertions";
 import CachedManager from "./CachedManager";
 
 /**
@@ -26,7 +26,7 @@ export default class AppManager extends CachedManager<typeof App> {
    */
   async status(appID: string): Promise<AppStatus>
   async status(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.appStatus(appID));
 
@@ -40,8 +40,8 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param command - The command
    */
   async console(appID: string, command: string): Promise<ApiConsoleAppShell> {
-    validateStringType(appID);
-    validateStringType(command);
+    validateNonEmptyString(appID);
+    validateNonEmptyString(command);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppConsoleResult>(Routes.appConsole(appID), {
       body: { command },
@@ -58,7 +58,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async terminal(appID: string): Promise<ApiTerminal>
   async terminal(appID: "all"): Promise<Map<string, ApiTerminal>>
   async terminal(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppLogResult
@@ -86,7 +86,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async backup(appID: string): Promise<AppBackup>
   async backup(appID: "all"): Promise<Map<string, AppBackup>>
   async backup(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppBackupResult
@@ -113,7 +113,7 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
   async ram(appID: string, quantity: number) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
     validateNumberType(quantity);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
@@ -159,7 +159,7 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param options - Options to update your app.
    */
   async update(appID: string, options: UpdateAppOptions) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     options.file = await resolveFile(options.file);
 
@@ -178,7 +178,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async delete(appID: string): Promise<RESTDeleteApiAppDeleteResult>
   async delete(appID: "all"): Promise<ApiAppManagerRemovedAll>
   async delete(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.delete<
       | RESTDeleteApiAppDeleteResult
@@ -205,7 +205,7 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param options - Options to update your app.
    */
   async profile(appID: string, options: ProfileOptions) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
     ProfileOptions.parse(options);
 
     const data = await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appProfile(appID), {
@@ -226,7 +226,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
   async restart(appID: "all"): Promise<ApiAppManagerRestartedAll>
   async restart(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppRestartResult
@@ -258,7 +258,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async start(appID: string): Promise<RESTPutApiAppStartResult>
   async start(appID: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStartResult
@@ -290,7 +290,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
   async stop(appID: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStopResult
@@ -322,7 +322,7 @@ export default class AppManager extends CachedManager<typeof App> {
   async fetch(appID: string): Promise<App>
   async fetch(appID: "all"): Promise<Map<string, App>>
   async fetch(appID: string) {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     if (appID === "all") return this.#fetchMany();
 

@@ -1,6 +1,6 @@
 import { Routes, type APTString, type RESTDeleteApiAppAptResult, type RESTPutApiAppAptResult } from "@discloudapp/api-types/v2";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
-import { validateStringType } from "../util/assertions";
+import { validateNonEmptyString } from "../util/assertions";
 import BaseManager from "./BaseManager";
 
 /**
@@ -18,7 +18,7 @@ export default class AppAptManager extends BaseManager {
    * @param apt - One or more APTs to install. See {@link AptString}.
    */
   async install(appID: string, apt: APTString | APTString[]): Promise<RESTPutApiAppAptResult> {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
@@ -34,7 +34,7 @@ export default class AppAptManager extends BaseManager {
    * @param apt - One or more APTs to uninstall. See {@link AptString}.
    */
   async uninstall(appID: string, apt: APTString | APTString[]): Promise<RESTDeleteApiAppAptResult> {
-    validateStringType(appID);
+    validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
