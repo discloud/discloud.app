@@ -48,6 +48,9 @@ export default class User extends Base {
 
   declare ramUsage: number;
 
+  declare avatar: string | null;
+  declare username: string | null;
+
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
 
@@ -66,6 +69,9 @@ export default class User extends Base {
           this.appIDs.add(appId);
         }
       }
+
+    if ("avatar" in data)
+      this.avatar = data.avatar ?? null;
 
     if ("customdomains" in data)
       if (Array.isArray(data.customdomains)) {
@@ -104,6 +110,9 @@ export default class User extends Base {
 
     if ("ramUsedMb" in this && "totalRamMb" in this)
       this.ramUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
+
+    if ("username" in data)
+      this.username = data.username ?? null;
 
     return super._patch(data);
   }
