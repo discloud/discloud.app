@@ -2539,10 +2539,10 @@ typedoc-plugin-markdown@^4.7.1:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.7.1.tgz#2f2ffef815f5d52419b4a66cfa665d073162e741"
   integrity sha512-HN/fHLm2S6MD4HX8txfB4eWvVBzX/mEYy5U5s1KTAdh3E5uX5/lilswqTzZlPTT6fNZInAboAdFGpbAuBKnE4A==
 
-typedoc-plugin-mdn-links@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-mdn-links/-/typedoc-plugin-mdn-links-5.0.5.tgz#92b9191bcfcd3852e13a4709efd54014ebade654"
-  integrity sha512-M6aZtJokVIiDpgVnozmn653t28FU8iiNu6mg0GHifuHv5egG5rRMlm0tscMRMG02+7xK51MfRWS2xvaoSWMEeg==
+typedoc-plugin-mdn-links@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-mdn-links/-/typedoc-plugin-mdn-links-5.0.6.tgz#32cab986f3695163aa4cd91d261379dc9bf23f1b"
+  integrity sha512-HMT80FBtXmsxM26RXjoEARWf6g5cRJwcWJ6GiaMNxXu9VlZHxoin15MpxSZVlw3BrG0YILeAieRTJbrnrJXyvw==
 
 typedoc-plugin-rename-defaults@^0.7.3:
   version "0.7.3"
