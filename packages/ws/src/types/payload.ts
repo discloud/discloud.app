@@ -2,6 +2,14 @@ import type { ApiApp } from "@discloudapp/api-types/v2";
 
 export type BufferLike = Parameters<WebSocket["send"]>[0]
 
+export interface SocketEventCommitData {
+  logs?: string
+  message: string | null
+  progress: SocketProgressData
+  status: "ok" | "error"
+  statusCode: number
+}
+
 export interface SocketEventUploadData {
   app?: ApiApp
   logs?: string

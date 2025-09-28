@@ -1,6 +1,7 @@
 import { RouteBases, Routes } from "@discloudapp/api-types/v2";
 import EventEmitter from "events";
 import WebSocket from "ws";
+import { commitAction } from "./actions/commit";
 import { uploadAction } from "./actions/upload";
 import { DEFAULT_CHUNK_SIZE, MAX_FILE_SIZE, NETWORK_UNREACHABLE_CODE, SOCKET_ABNORMAL_CLOSURE, SOCKET_UNAUTHORIZED_CODE } from "./constants";
 import { SocketEvents } from "./enum";
@@ -8,11 +9,27 @@ import { BufferOverflowError } from "./errors/BufferOverflow";
 import ClosedError from "./errors/Closed";
 import { NetworkUnreachableError } from "./errors/NetworkUnreachable";
 import { UnauthorizedError } from "./errors/Unauthorized";
-import { type BufferLike, type OnProgressCallback, type ProgressData, type SocketEventsMap, type SocketEventUploadData, type SocketOptions, type SocketUploadActionOptions } from "./types";
+import { type BufferLike, type OnProgressCallback, type ProgressData, type SocketCommitActionOptions, type SocketEventCommitData, type SocketEventsMap, type SocketEventUploadData, type SocketOptions, type SocketUploadActionOptions } from "./types";
 
 export class SocketClient<Data extends Record<any, any> | any[] = Record<any, any> | any[]>
   extends EventEmitter<SocketEventsMap<Data>>
   implements Disposable {
+  static async teamCommit(appId: string, buffer: Buffer, options: SocketCommitActionOptions) {
+    const url = new URL(`${RouteBases.api}/ws${Routes.teamCommit(appId)}`);
+
+    const socket = new SocketClient<SocketEventCommitData>(url);
+
+    return commitAction(socket, buffer, options);
+  }
+
+  static async userCommit(appId: string, buffer: Buffer, options: SocketCommitActionOptions) {
+    const url = new URL(`${RouteBases.api}/ws${Routes.appCommit(appId)}`);
+
+    const socket = new SocketClient<SocketEventCommitData>(url);
+
+    return commitAction(socket, buffer, options);
+  }
+
   static async upload(buffer: Buffer, options: SocketUploadActionOptions) {
     const url = new URL(`${RouteBases.api}/ws${Routes.upload()}`);
 

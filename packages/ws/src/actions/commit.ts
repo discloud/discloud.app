@@ -1,14 +1,15 @@
-import { type ApiApp } from "@discloudapp/api-types/v2";
 import { type SocketClient } from "../client";
 import { SocketEvents } from "../enum";
-import type { SocketEventUploadData, SocketUploadActionOptions } from "../types";
+import type { SocketCommitActionOptions, SocketEventCommitData } from "../types";
 
 /** *Note* Setting the `options.onError` property prevents promise rejection */
-export function uploadAction(socket: SocketClient<SocketEventUploadData>, buffer: Buffer, options?: SocketUploadActionOptions): Promise<ApiApp | void>
-export function uploadAction(socket: SocketClient, buffer: Buffer, options?: SocketUploadActionOptions): Promise<ApiApp | void>
-export function uploadAction(socket: SocketClient<SocketEventUploadData>, buffer: Buffer, options: SocketUploadActionOptions = {}) {
-  return new Promise<ApiApp | void>((resolve, reject) => {
-    let app: ApiApp;
+export function commitAction(
+  socket: SocketClient<SocketEventCommitData>,
+  buffer: Buffer,
+  options: SocketCommitActionOptions = {},
+) {
+  return new Promise<boolean>((resolve, reject) => {
+    let success = false;
 
     function onError(error: any) {
       if (typeof options.onError === "function") return options.onError(error);
@@ -19,7 +20,7 @@ export function uploadAction(socket: SocketClient<SocketEventUploadData>, buffer
     socket
       .on(SocketEvents.close, (code, reason) => {
         if (typeof options.onClose === "function") options.onClose(code, reason);
-        resolve(app);
+        resolve(success);
       })
       .on(SocketEvents.error, onError)
       .on(SocketEvents.connecting, () => {
@@ -35,13 +36,13 @@ export function uploadAction(socket: SocketClient<SocketEventUploadData>, buffer
         }
       })
       .on(SocketEvents.data, (data) => {
+        if (typeof options.onData === "function") options.onData(data);
+
         switch (data.statusCode) {
-          case 102:
-            if (typeof options.onData === "function") options.onData(data);
+          case 200:
+            success = true;
             break;
         }
-
-        if (data.app) app = data.app;
       })
       .connect()
       .catch(onError);
