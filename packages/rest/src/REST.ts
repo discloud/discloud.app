@@ -45,7 +45,7 @@ export class REST extends EventEmitter<RestEvents> {
    * If the rate limit bucket is currently limited by its limit
    */
   get globalLimited() {
-    return !this.globalRemaining && this.globalTimeToReset > -1;
+    return this.globalRemaining < 1;
   }
 
   /**
@@ -130,6 +130,7 @@ export class REST extends EventEmitter<RestEvents> {
       await sleep(this.globalTimeToReset);
     }
 
+    this.globalRemaining--;
     const response = await fetch(url, options);
 
     queueMicrotask(() => this.#resolveResponseHeaders(response.headers));
@@ -232,10 +233,10 @@ export class REST extends EventEmitter<RestEvents> {
     this.#initRateLimitResetTimer();
   }
 
+  // eslint-disable-next-line no-unused-private-class-members
   #timer!: NodeJS.Timeout | null;
   #initRateLimitResetTimer() {
-    if (this.#timer) return;
-    this.#timer = setTimeout(() => {
+    this.#timer ??= setTimeout(() => {
       this.#timer = null;
       this.globalRemaining = this.globalLimit;
     }, this.globalTimeToReset);

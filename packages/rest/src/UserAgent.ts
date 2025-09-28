@@ -9,7 +9,9 @@ export class UserAgent implements IUserAgent {
   constructor(
     readonly prefix?: string,
     readonly version?: string,
-  ) { }
+  ) {
+    this.#version = version!;
+  }
 
   #getUserAgent() {
     const osRelease = release().split?.(".").slice(0, 2).join(".") ?? release();
@@ -17,7 +19,7 @@ export class UserAgent implements IUserAgent {
   }
 
   #getVersion() {
-    return this.version ?? (this.#version ??= version);
+    return this.#version ||= version;
   }
 
   #userAgent!: string;
