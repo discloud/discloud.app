@@ -10,7 +10,7 @@ export interface SocketOptions {
   /**
    * Connecting timeout in milliseconds
    * 
-   * @default 10_000
+   * @default 10_000 (10 seconds)
    */
   connectingTimeout?: number | null
   headers?: Record<string, string>

@@ -1,7 +1,9 @@
-import type { ApiUploadApp } from "@discloudapp/api-types/v2";
+import type { ApiApp } from "@discloudapp/api-types/v2";
+
+export type BufferLike = Parameters<WebSocket["send"]>[0]
 
 export interface SocketEventUploadData {
-  app?: ApiUploadApp
+  app?: ApiApp
   logs?: string
   message: string | null
   progress: SocketProgressData
