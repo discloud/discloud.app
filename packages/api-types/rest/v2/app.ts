@@ -1,61 +1,37 @@
 import type { RESTApiBaseResult } from "./base";
 
 export interface BaseApiApp {
-  /**
-   * Your app id
-   */
+  /** Your app id */
   id: string
 }
 
 export interface ApiApp extends BaseApiApp {
-  /**
-   * Your application's name
-   */
+  /** Your application's name */
   name: string
-  /**
-   * If your application is online
-   */
+  /** If your application is online */
   online: boolean
-  /**
-   * If your application was stopped due to lack of RAM
-   */
+  /** If your application was stopped due to lack of RAM */
   ramKilled: boolean
-  /**
-   * The RAM quantity for your application
-   */
+  /** The RAM quantity for your application */
   ram: number
-  /**
-   * The main file path
-   */
+  /** The main file path */
   mainFile: string
-  /**
-   * Your app's exit code on stopping
-   */
+  /** Your app's exit code on stopping */
   exitCode: number
-  /**
-   * Your application's programming language
-   */
+  /** Your application's programming language */
   lang: string
-  /**
-   * The IDs of your application's moderators
-   */
+  /** The IDs of your application's moderators */
   mods: string[]
-  /**
-   * Your app's avatar url
-   */
+  /** Your app's avatar url */
   avatarURL: string
-  /**
-   * If your app has auto deploy on github enabled
-   */
-  autoDeployGit: string
-  /**
-   * If your app has auto-restart enabled
-   */
+  /** If your app has auto-restart enabled */
   autoRestart: boolean
-  /**
-   * Your app's type
-   */
+  /** Your app's type */
   type: number
+  /** Your app's apts */
+  apts: string[]
+  /** When your app was uploaded */
+  addedTimestamp: number
 }
 
 export interface ApiAppBackup extends BaseApiApp {
@@ -67,124 +43,80 @@ export interface ApiAppBackup extends BaseApiApp {
 }
 
 export interface ApiAppBackupAll extends ApiAppBackup {
-  /**
-   * The backup status
-   */
+  /** The backup status */
   status: string
 }
 
 export interface ApiAppLog extends BaseApiApp {
-  /**
-   * Here you can see your application `logs`
-   */
+  /** Here you can see your application `logs` */
   terminal: ApiTerminal
 }
 
 export interface ApiAppManager {
-  /**
-   * Which of your applications are currently `processing`
-   */
+  /** Which of your applications are currently `processing` */
   alreadyInProcess: string[]
-  /**
-   * Which of your applications are currently `offline`
-   */
+  /** Which of your applications are currently `offline` */
   alreadyOffline: string[]
-  /**
-   * Which of your applications are currently `online`
-   */
+  /** Which of your applications are currently `online` */
   alreadyOnline: string[]
 }
 
 export interface ApiAppManagerRemovedAll extends Omit<ApiAppManager, "alreadyOnline"> {
-  /**
-   * Which of your applications have been `removed`
-   */
+  /** Which of your applications have been `removed` */
   removealled: string[]
 }
 
 export interface ApiAppManagerRestartedAll extends Omit<ApiAppManager, "alreadyOnline"> {
-  /**
-   * Which of your applications have been `restarted`
-   */
+  /** Which of your applications have been `restarted` */
   restarted: string[]
 }
 
 export interface ApiAppManagerStartedAll extends Omit<ApiAppManager, "alreadyOffline"> {
-  /**
-   * Which of your applications have been `started`
-   */
+  /** Which of your applications have been `started` */
   started: string[]
 }
 
 export interface ApiAppManagerStopedAll extends Omit<ApiAppManager, "alreadyOnline"> {
-  /**
-   * Which of your applications have been `stoped`
-   */
+  /** Which of your applications have been `stoped` */
   stoped: string[]
 }
 
 export interface ApiStatusApp extends BaseApiApp {
-  /**
-   * Status of your application
-   * - It can be `Online` or `Offline` for example
+  /** Status of your application * - It can be `Online` or `Offline` for example
    */
   container: string
-  /**
-   * CPU usage as percentage
-   */
+  /** CPU usage as percentage */
   cpu: string
-  /**
-   * Relative time of the last restart
-   */
+  /** Relative time of the last restart */
   last_restart: string
-  /**
-   * RAM usage
-   */
+  /** RAM usage */
   memory: string
-  /**
-   * Internet usage
-   */
+  /** Internet usage */
   netIO: ApiNetIO
-  /**
-   * Storage space
-   */
+  /** Storage space */
   ssd: string
-  /**
-   * Date of your application has started
-   */
+  /** Date of your application has started */
   startedAt: string
 }
 
 export interface ApiAppTeam {
-  /**
-   * Moderator ID
-   */
+  /** Moderator ID */
   modID: string
-  /**
-   * Moderator permissions
-   */
+  /** Moderator permissions */
   perms: string[]
 }
 
 export interface ApiNetIO {
-  /**
-   * Amount of downloaded to container
-   */
+  /** Amount of downloaded to container */
   down: string
-  /**
-   * Amount of uploaded from container
-   */
+  /** Amount of uploaded from container */
   up: string
 }
 
 export interface ApiTerminal {
-  /**
-   * Bigger log of your application
-   */
+  /** Bigger log of your application */
   big: string
-  /**
-   * Smaller log of your application
-   */
+  /** Smaller log of your application */
   small: string
 }
 
@@ -200,51 +132,37 @@ export interface ApiConsoleAppShell {
 }
 
 export interface RESTGetApiAppAllResult extends RESTApiBaseResult {
-  /**
-   * All of your applications
-   */
+  /** All of your applications */
   apps: ApiApp[]
 }
 
 export interface RESTGetApiAppAllBackupResult extends RESTApiBaseResult {
-  /**
-   * Backup of all of your applications
-   */
+  /** Backup of all of your applications */
   backups: ApiAppBackupAll[]
 }
 
 export interface RESTGetApiAppAllLogResult extends RESTApiBaseResult {
-  /**
-   * Logs of all of your applications
-   */
+  /** Logs of all of your applications */
   apps: ApiAppLog[]
 }
 
 export interface RESTGetApiAppResult extends RESTApiBaseResult {
-  /**
-   * Your application
-   */
+  /** Your application */
   apps: ApiApp
 }
 
 export interface RESTGetApiAppBackupResult extends RESTApiBaseResult {
-  /**
-   * Backup of your application
-   */
+  /** Backup of your application */
   backups: ApiAppBackup
 }
 
 export interface RESTGetApiAppLogResult extends RESTApiBaseResult {
-  /**
-   * Log of your application
-   */
+  /** Log of your application */
   apps: ApiAppLog
 }
 
 export interface RESTGetApiAppStatusResult extends RESTApiBaseResult {
-  /**
-   * Status of your application
-   */
+  /** Status of your application */
   apps: ApiStatusApp
 }
 
@@ -277,27 +195,19 @@ export type RESTPutApiAppStartResult = RESTApiBaseResult
 export type RESTPutApiAppStopResult = RESTApiBaseResult
 
 export interface RESTPutApiAppAptResult extends RESTApiBaseResult {
-  /**
-   * Status code from API
-   */
+  /** Status code from API */
   statusCode: number
 }
 
 export interface RESTDeleteApiAppAptResult extends RESTApiBaseResult {
-  /**
-   * Status code from API
-   */
+  /** Status code from API */
   statusCode: number
 }
 
 export interface RESTPutApiAppCommitResult extends RESTApiBaseResult {
-  /**
-   * Status code from API
-   */
+  /** Status code from API */
   statusCode: number
-  /**
-   * API logs in case your app fails on launch
-   */
+  /** API logs in case your app fails on launch */
   logs?: string
 }
 
@@ -306,29 +216,21 @@ export interface RESTPutApiAppConsoleResult extends RESTApiBaseResult {
 }
 
 export interface RESTPutApiAppRamResult extends RESTApiBaseResult {
-  /**
-   * Status code from API
-   */
+  /** Status code from API */
   statusCode: number
 }
 
 export interface RESTGetApiAppTeamResult extends Omit<RESTApiBaseResult, "message"> {
-  /**
-   * API message response
-   */
+  /** API message response */
   message?: string
-  /**
-   * App of your team
-   */
+  /** App of your team */
   team: ApiAppTeam[]
 }
 
 export type RESTDeleteApiAppTeamResult = RESTApiBaseResult
 
 export interface ApiAppTeamManager extends ApiAppTeam {
-  /**
-   * Your team application id
-   */
+  /** Your team application id */
   appID: string
 }
 

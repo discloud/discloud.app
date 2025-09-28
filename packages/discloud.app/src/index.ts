@@ -26,7 +26,7 @@ export * from "@discloudapp/rest";
 export * from "@discloudapp/util";
 export * from "./@enum";
 export * from "./@types";
-export * from "./util";
+export * from "./util/constants";
 export {
   App,
   AppApt,

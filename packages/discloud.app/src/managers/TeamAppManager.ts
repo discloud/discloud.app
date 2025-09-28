@@ -2,12 +2,12 @@ import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, t
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
-import z from "zod";
 import type { UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
 import TeamApp from "../structures/TeamApp";
 import type TeamAppStatus from "../structures/TeamAppStatus";
+import { validateNumberType, validateNonEmptyString } from "../util/assertions";
 import CachedManager from "./CachedManager";
 
 /**
@@ -25,6 +25,8 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    */
   async status(appID: string): Promise<TeamAppStatus>
   async status(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.teamStatus(appID));
 
     return this._add(data.apps).status;
@@ -36,8 +38,10 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async terminal(appID: string): Promise<ApiTerminal>
-  async terminal(appID?: "all"): Promise<Map<string, ApiTerminal>>
-  async terminal(appID = "all") {
+  async terminal(appID: "all"): Promise<Map<string, ApiTerminal>>
+  async terminal(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppLogResult
       | RESTGetApiAppAllLogResult
@@ -61,8 +65,10 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async backup(appID: string): Promise<AppBackup>
-  async backup(appID?: "all"): Promise<Map<string, AppBackup>>
-  async backup(appID = "all") {
+  async backup(appID: "all"): Promise<Map<string, AppBackup>>
+  async backup(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.get<
       | RESTGetApiAppBackupResult
       | RESTGetApiAppAllBackupResult
@@ -88,8 +94,8 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
   async ram(appID: string, quantity: number) {
-    z.string().parse(appID);
-    z.number().parse(quantity);
+    validateNonEmptyString(appID);
+    validateNumberType(quantity);
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.teamRam(appID), {
       body: {
@@ -113,7 +119,7 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param options - Options to update your app.
    */
   async update(appID: string, options: UpdateAppOptions) {
-    z.string().parse(appID);
+    validateNonEmptyString(appID);
 
     options.file = await resolveFile(options.file);
 
@@ -132,8 +138,10 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async restart(appID: string): Promise<RESTPutApiAppRestartResult>
-  async restart(appID?: "all"): Promise<ApiAppManagerRestartedAll>
-  async restart(appID = "all") {
+  async restart(appID: "all"): Promise<ApiAppManagerRestartedAll>
+  async restart(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppRestartResult
       | RESTPutApiAppAllRestartResult
@@ -162,8 +170,10 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async start(appID: string): Promise<RESTPutApiAppStartResult>
-  async start(appID?: "all"): Promise<ApiAppManagerStartedAll>
-  async start(appID = "all") {
+  async start(appID: "all"): Promise<ApiAppManagerStartedAll>
+  async start(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStartResult
       | RESTPutApiAppAllStartResult
@@ -192,8 +202,10 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * @param appID - Your team app id
    */
   async stop(appID: string): Promise<RESTPutApiAppStopResult>
-  async stop(appID?: "all"): Promise<ApiAppManagerStopedAll>
-  async stop(appID = "all") {
+  async stop(appID: "all"): Promise<ApiAppManagerStopedAll>
+  async stop(appID: string) {
+    validateNonEmptyString(appID);
+
     const data = await this.discloudApp.rest.put<
       | RESTPutApiAppStopResult
       | RESTPutApiAppAllStopResult
