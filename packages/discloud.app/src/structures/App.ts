@@ -7,9 +7,9 @@ import BaseApp from "./BaseApp";
 
 export default class App extends BaseApp {
   /**
-   * If your app has auto deploy on github enabled
+   * When your app was uploaded
    */
-  declare autoDeployGit: string;
+  declare addedTimestamp: number;
   /**
    * If your app has auto-restart enabled
    */
@@ -72,8 +72,8 @@ export default class App extends BaseApp {
   }
 
   protected _patch(data: Partial<ApiApp | ApiStatusApp>) {
-    if ("autoDeployGit" in data)
-      this.autoDeployGit = data.autoDeployGit!;
+    if ("addedTimestamp" in data)
+      this.addedTimestamp = data.addedTimestamp!;
 
     if ("autoRestart" in data)
       this.autoRestart = data.autoRestart!;

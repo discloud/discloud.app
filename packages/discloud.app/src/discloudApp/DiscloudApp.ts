@@ -2,14 +2,13 @@ import type { ApiUser } from "@discloudapp/api-types/v2";
 import { REST, RESTEvents } from "@discloudapp/rest";
 import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "events";
-import { env } from "process";
 import type { ClientEvents, DiscloudAppOptions } from "../@types";
 import AppAptManager from "../managers/AppAptManager";
 import AppManager from "../managers/AppManager";
 import AppTeamManager from "../managers/AppTeamManager";
 import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
-import { DefaultDiscloudAppOptions } from "../util";
+import { DefaultDiscloudAppOptions } from "../util/constants";
 
 class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly options: DiscloudAppOptions;
@@ -38,7 +37,7 @@ class DiscloudApp extends EventEmitter<ClientEvents> {
   }
 
   #setToken(token: string) {
-    if (!env.DISCLOUD_TOKEN && token) env.DISCLOUD_TOKEN = token;
+    if (!process.env.DISCLOUD_TOKEN && token) process.env.DISCLOUD_TOKEN = token;
     this.rest.setToken(token);
     return this;
   }
@@ -52,7 +51,7 @@ class DiscloudApp extends EventEmitter<ClientEvents> {
    * 
    * @param token - Your Discloud token
    */
-  login(token = this.token ?? env.DISCLOUD_TOKEN) {
+  login(token = this.token ?? process.env.DISCLOUD_TOKEN) {
     if (typeof token !== "string") throw new Error("[DISCLOUD API] Missing token.");
 
     this.#setToken(token);

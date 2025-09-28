@@ -10,7 +10,7 @@ test("Create App instance", () => {
 
 test("App with ApiApp", () => {
   const apiAppData = <ApiApp>{
-    autoDeployGit: "auto deploy git",
+    addedTimestamp: 0,
     autoRestart: true,
     avatarURL: "http://avatar.png",
     exitCode: 0,
