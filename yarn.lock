@@ -2524,10 +2524,10 @@ typedarray.prototype.slice@^1.0.5:
     typed-array-buffer "^1.0.3"
     typed-array-byte-offset "^1.0.4"
 
-typedoc-material-theme@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/typedoc-material-theme/-/typedoc-material-theme-1.4.0.tgz#fc9acb41dc7bc99d127a4505f56acf8c7dda68f5"
-  integrity sha512-TBoBpX/4zWO6l74/wBLivXHC2rIiD70KXMliYrw1KhcqdybyxkVBLP5z8KiJuNV8aQIeS+rK2QG6GSucQHJQDQ==
+typedoc-material-theme@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/typedoc-material-theme/-/typedoc-material-theme-1.4.1.tgz#c879e9af508775c0ea41108b8231961a798678ef"
+  integrity sha512-/inKZw8SqZPt+pmawpMhDmXCJQyIm+fHFuGChioyJQICZcX2FyzpwZnyPWcZHmJ09upttWFhti4ZI3hESJNkSA==
   dependencies:
     "@material/material-color-utilities" "^0.3.0"
 
