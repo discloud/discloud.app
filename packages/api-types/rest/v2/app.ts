@@ -104,6 +104,10 @@ export interface ApiAppTeam {
   modID: string
   /** Moderator permissions */
   perms: string[]
+  /** Moderator avatar url */
+  avatar: string | null
+  /** Moderator username */
+  username: string | null
 }
 
 export interface ApiNetIO {
