@@ -4,15 +4,21 @@ import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
 export default class AppTeam extends Base {
-  readonly appId: string;
-
   constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp);
 
     this.appId = data.id;
   }
 
+  readonly appId: string;
+  declare avatar: string | null;
+  declare username: string | null;
+
   protected _patch(data: BaseApiApp): this {
+    if ("avatar" in data) this.avatar = data.avatar as string | null;
+
+    if ("username" in data) this.username = data.username as string | null;
+
     return super._patch(data);
   }
 
