@@ -6,7 +6,7 @@
 
 # Interface: RESTPutApiLocaleResult
 
-Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/locale.ts#L3)
+Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/locale.ts#L3)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/locale.ts:3](https://github.com/discloud/discloud.app/blob/
 
 > **locale**: `string`
 
-Defined in: [rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/locale.ts#L7)
+Defined in: [rest/v2/locale.ts:7](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/locale.ts#L7)
 
 Your locale
 
@@ -28,7 +28,7 @@ Your locale
 
 > `optional` **localeList**: `string`[]
 
-Defined in: [rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/locale.ts#L15)
+Defined in: [rest/v2/locale.ts:15](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/locale.ts#L15)
 
 List of locales in case you choose a wrong locale
 
@@ -38,7 +38,7 @@ List of locales in case you choose a wrong locale
 
 > `optional` **message**: `string`
 
-Defined in: [rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/locale.ts#L11)
+Defined in: [rest/v2/locale.ts:11](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/locale.ts#L11)
 
 API message response
 
@@ -48,10 +48,10 @@ API message response
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 
 #### Inherited from
 
-`Omit.status`
+[`RESTApiBaseResult`](RESTApiBaseResult.md).[`status`](RESTApiBaseResult.md#status)

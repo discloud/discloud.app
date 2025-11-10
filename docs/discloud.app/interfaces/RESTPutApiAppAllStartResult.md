@@ -6,7 +6,7 @@
 
 # Interface: RESTPutApiAppAllStartResult
 
-Defined in: [packages/api-types/rest/v2/app.ts:263](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L263)
+Defined in: [packages/api-types/rest/v2/app.ts:185](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L185)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:263](https://github.com/discloud/
 
 > **apps**: [`ApiAppManagerStartedAll`](ApiAppManagerStartedAll.md)
 
-Defined in: [packages/api-types/rest/v2/app.ts:264](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L264)
+Defined in: [packages/api-types/rest/v2/app.ts:186](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L186)
 
 #### Overrides
 
@@ -30,7 +30,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:264](https://github.com/discloud/
 
 > **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -45,7 +45,7 @@ Message of the API
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 

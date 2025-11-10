@@ -6,7 +6,7 @@
 
 # Class: DiscloudApp
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L13)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://gi
 
 > **new DiscloudApp**(`options`): `DiscloudApp`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://gi
 
 > `readonly` **appApt**: [`AppAptManager`](AppAptManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://gi
 
 > `readonly` **apps**: [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://gi
 
 > `readonly` **appTeam**: [`AppTeamManager`](AppTeamManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://gi
 
 > `readonly` **options**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://gi
 
 > `readonly` **rest**: [`REST`](REST.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://gi
 
 > `readonly` **teamApps**: [`TeamAppManager`](TeamAppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://gi
 
 > `readonly` **user**: [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://gi
 
 > `static` **captureRejections**: `boolean`
 
-Defined in: node\_modules/@types/node/events.d.ts:459
+Defined in: node\_modules/@types/node/events.d.ts:425
 
 Value: [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
 
@@ -116,7 +116,7 @@ v13.4.0, v12.16.0
 
 > `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](REST.md#capturerejectionsymbol)
 
-Defined in: node\_modules/@types/node/events.d.ts:452
+Defined in: node\_modules/@types/node/events.d.ts:418
 
 Value: `Symbol.for('nodejs.rejection')`
 
@@ -136,7 +136,7 @@ v13.4.0, v12.16.0
 
 > `static` **defaultMaxListeners**: `number`
 
-Defined in: node\_modules/@types/node/events.d.ts:498
+Defined in: node\_modules/@types/node/events.d.ts:464
 
 By default, a maximum of `10` listeners can be registered for any single
 event. This limit can be changed for individual `EventEmitter` instances
@@ -188,7 +188,7 @@ v0.11.2
 
 > `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](REST.md#errormonitor)
 
-Defined in: node\_modules/@types/node/events.d.ts:445
+Defined in: node\_modules/@types/node/events.d.ts:411
 
 This symbol shall be used to install a listener for only monitoring `'error'` events. Listeners installed using this symbol are called before the regular `'error'` listeners are called.
 
@@ -211,7 +211,7 @@ v13.6.0, v12.17.0
 
 > **get** **token**(): `string`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L46)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:45](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L45)
 
 ##### Returns
 
@@ -223,7 +223,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:46](https://gi
 
 > `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
 
-Defined in: node\_modules/@types/node/events.d.ts:136
+Defined in: node\_modules/@types/node/events.d.ts:103
 
 #### Type Parameters
 
@@ -259,7 +259,7 @@ keyof RestEvents | `K`
 
 > **addListener**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:597
+Defined in: node\_modules/@types/node/events.d.ts:642
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -297,7 +297,7 @@ v0.1.26
 
 > **emit**\<`K`\>(`eventName`, ...`args`): `boolean`
 
-Defined in: node\_modules/@types/node/events.d.ts:859
+Defined in: node\_modules/@types/node/events.d.ts:904
 
 Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -371,7 +371,7 @@ v0.1.26
 
 > **eventNames**(): (`"error"` \| `"rateLimited"`)[]
 
-Defined in: node\_modules/@types/node/events.d.ts:922
+Defined in: node\_modules/@types/node/events.d.ts:967
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -408,7 +408,7 @@ v6.0.0
 
 > **getMaxListeners**(): `number`
 
-Defined in: node\_modules/@types/node/events.d.ts:774
+Defined in: node\_modules/@types/node/events.d.ts:819
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [EventEmitter.defaultMaxListeners](REST.md#defaultmaxlisteners).
@@ -431,7 +431,7 @@ v1.0.0
 
 > **listenerCount**\<`K`\>(`eventName`, `listener?`): `number`
 
-Defined in: node\_modules/@types/node/events.d.ts:868
+Defined in: node\_modules/@types/node/events.d.ts:913
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -475,7 +475,7 @@ v3.2.0
 
 > **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
-Defined in: node\_modules/@types/node/events.d.ts:787
+Defined in: node\_modules/@types/node/events.d.ts:832
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -517,7 +517,7 @@ v0.1.26
 
 > **login**(`token`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:55](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L55)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:54](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L54)
 
 Login on Discloud API
 
@@ -539,7 +539,7 @@ Your Discloud token
 
 > **off**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:747
+Defined in: node\_modules/@types/node/events.d.ts:792
 
 Alias for `emitter.removeListener()`.
 
@@ -577,7 +577,7 @@ v10.0.0
 
 > **on**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:629
+Defined in: node\_modules/@types/node/events.d.ts:674
 
 Adds the `listener` function to the end of the listeners array for the event
 named `eventName`. No checks are made to see if the `listener` has already
@@ -644,7 +644,7 @@ v0.1.101
 
 > **once**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:659
+Defined in: node\_modules/@types/node/events.d.ts:704
 
 Adds a **one-time** `listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -709,7 +709,7 @@ v0.3.0
 
 > **prependListener**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:886
+Defined in: node\_modules/@types/node/events.d.ts:931
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -762,7 +762,7 @@ v6.0.0
 
 > **prependOnceListener**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:902
+Defined in: node\_modules/@types/node/events.d.ts:947
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -813,7 +813,7 @@ v6.0.0
 
 > **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
-Defined in: node\_modules/@types/node/events.d.ts:818
+Defined in: node\_modules/@types/node/events.d.ts:863
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -873,7 +873,7 @@ v9.4.0
 
 > **removeAllListeners**(`eventName?`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:758
+Defined in: node\_modules/@types/node/events.d.ts:803
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -907,7 +907,7 @@ v0.1.26
 
 > **removeListener**\<`K`\>(`eventName`, `listener`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:742
+Defined in: node\_modules/@types/node/events.d.ts:787
 
 Removes the specified `listener` from the listener array for the event named `eventName`.
 
@@ -1023,7 +1023,7 @@ v0.1.26
 
 > **setMaxListeners**(`n`): `this`
 
-Defined in: node\_modules/@types/node/events.d.ts:768
+Defined in: node\_modules/@types/node/events.d.ts:813
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1056,9 +1056,7 @@ v0.3.5
 
 > `static` **addAbortListener**(`signal`, `resource`): `Disposable`
 
-Defined in: node\_modules/@types/node/events.d.ts:437
-
-**`Experimental`**
+Defined in: node\_modules/@types/node/events.d.ts:403
 
 Listens once to the `abort` event on the provided `signal`.
 
@@ -1120,7 +1118,7 @@ v20.5.0
 
 > `static` **getEventListeners**(`emitter`, `name`): [`Function`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)[]
 
-Defined in: node\_modules/@types/node/events.d.ts:358
+Defined in: node\_modules/@types/node/events.d.ts:325
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -1175,7 +1173,7 @@ v15.2.0, v14.17.0
 
 > `static` **getMaxListeners**(`emitter`): `number`
 
-Defined in: node\_modules/@types/node/events.d.ts:387
+Defined in: node\_modules/@types/node/events.d.ts:354
 
 Returns the currently set max amount of listeners.
 
@@ -1227,7 +1225,7 @@ v19.9.0
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
-Defined in: node\_modules/@types/node/events.d.ts:330
+Defined in: node\_modules/@types/node/events.d.ts:297
 
 A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
 
@@ -1279,7 +1277,7 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 > `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
-Defined in: node\_modules/@types/node/events.d.ts:303
+Defined in: node\_modules/@types/node/events.d.ts:270
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1390,7 +1388,7 @@ v13.6.0, v12.16.0
 
 > `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
-Defined in: node\_modules/@types/node/events.d.ts:308
+Defined in: node\_modules/@types/node/events.d.ts:275
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1505,7 +1503,7 @@ v13.6.0, v12.16.0
 
 > `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
-Defined in: node\_modules/@types/node/events.d.ts:217
+Defined in: node\_modules/@types/node/events.d.ts:184
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1614,7 +1612,7 @@ v11.13.0, v10.16.0
 
 > `static` **once**(`emitter`, `eventName`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`any`[]\>
 
-Defined in: node\_modules/@types/node/events.d.ts:222
+Defined in: node\_modules/@types/node/events.d.ts:189
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1725,7 +1723,7 @@ v11.13.0, v10.16.0
 
 > `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
 
-Defined in: node\_modules/@types/node/events.d.ts:402
+Defined in: node\_modules/@types/node/events.d.ts:369
 
 ```js
 import { setMaxListeners, EventEmitter } from 'node:events';

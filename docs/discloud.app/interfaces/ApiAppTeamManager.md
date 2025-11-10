@@ -6,7 +6,7 @@
 
 # Interface: ApiAppTeamManager
 
-Defined in: [packages/api-types/rest/v2/app.ts:328](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L328)
+Defined in: [packages/api-types/rest/v2/app.ts:236](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L236)
 
 ## Extends
 
@@ -18,9 +18,23 @@ Defined in: [packages/api-types/rest/v2/app.ts:328](https://github.com/discloud/
 
 > **appID**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:332](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L332)
+Defined in: [packages/api-types/rest/v2/app.ts:238](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L238)
 
 Your team application id
+
+***
+
+### avatar
+
+> **avatar**: `string` \| `null`
+
+Defined in: [packages/api-types/rest/v2/app.ts:108](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L108)
+
+Moderator avatar url
+
+#### Inherited from
+
+[`ApiAppTeam`](ApiAppTeam.md).[`avatar`](ApiAppTeam.md#avatar)
 
 ***
 
@@ -28,7 +42,7 @@ Your team application id
 
 > **modID**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:162](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L162)
+Defined in: [packages/api-types/rest/v2/app.ts:104](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L104)
 
 Moderator ID
 
@@ -42,10 +56,24 @@ Moderator ID
 
 > **perms**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:166](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L166)
+Defined in: [packages/api-types/rest/v2/app.ts:106](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L106)
 
 Moderator permissions
 
 #### Inherited from
 
 [`ApiAppTeam`](ApiAppTeam.md).[`perms`](ApiAppTeam.md#perms)
+
+***
+
+### username
+
+> **username**: `string` \| `null`
+
+Defined in: [packages/api-types/rest/v2/app.ts:110](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L110)
+
+Moderator username
+
+#### Inherited from
+
+[`ApiAppTeam`](ApiAppTeam.md).[`username`](ApiAppTeam.md#username)

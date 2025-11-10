@@ -104,13 +104,13 @@ Defined in: packages/util/dist/config/config.d.ts:14
 
 #### Get Signature
 
-> **get** **mainFileExt**(): `undefined` \| `string`
+> **get** **mainFileExt**(): `string` \| `undefined`
 
 Defined in: packages/util/dist/config/config.d.ts:15
 
 ##### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 ***
 
@@ -118,13 +118,13 @@ Defined in: packages/util/dist/config/config.d.ts:15
 
 #### Get Signature
 
-> **get** **missingProps**(): ([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
+> **get** **missingProps**(): ([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
 
 Defined in: packages/util/dist/config/config.d.ts:16
 
 ##### Returns
 
-([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`RAM`](../enumerations/DiscloudConfigScopes.md#ram) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
+([`ID`](../enumerations/DiscloudConfigScopes.md#id) \| [`MAIN`](../enumerations/DiscloudConfigScopes.md#main) \| [`TYPE`](../enumerations/DiscloudConfigScopes.md#type))[]
 
 ## Methods
 

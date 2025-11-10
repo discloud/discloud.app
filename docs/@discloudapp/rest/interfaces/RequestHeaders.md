@@ -6,7 +6,7 @@
 
 # Interface: RequestHeaders
 
-Defined in: [packages/rest/src/@types/index.ts:40](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/rest/src/@types/index.ts#L40)
+Defined in: [packages/rest/src/@types/index.ts:40](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L40)
 
 Possible headers for an API call
 
@@ -16,7 +16,7 @@ Possible headers for an API call
 
 > **api-token**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:41](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/rest/src/@types/index.ts#L41)
+Defined in: [packages/rest/src/@types/index.ts:41](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L41)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [packages/rest/src/@types/index.ts:41](https://github.com/discloud/d
 
 > `optional` **contentType**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:42](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/rest/src/@types/index.ts#L42)
+Defined in: [packages/rest/src/@types/index.ts:42](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L42)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [packages/rest/src/@types/index.ts:42](https://github.com/discloud/d
 
 > `optional` **User-Agent**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:43](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/rest/src/@types/index.ts#L43)
+Defined in: [packages/rest/src/@types/index.ts:43](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L43)

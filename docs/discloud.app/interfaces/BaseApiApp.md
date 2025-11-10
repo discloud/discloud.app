@@ -6,7 +6,7 @@
 
 # Interface: BaseApiApp
 
-Defined in: [packages/api-types/rest/v2/app.ts:3](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L3)
+Defined in: [packages/api-types/rest/v2/app.ts:3](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L3)
 
 ## Extended by
 
@@ -21,6 +21,6 @@ Defined in: [packages/api-types/rest/v2/app.ts:3](https://github.com/discloud/di
 
 > **id**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L7)
+Defined in: [packages/api-types/rest/v2/app.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L5)
 
 Your app id

@@ -6,7 +6,7 @@
 
 # Interface: ApiAppManagerStartedAll
 
-Defined in: [rest/v2/app.ts:112](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L112)
+Defined in: [rest/v2/app.ts:74](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L74)
 
 ## Extends
 
@@ -18,13 +18,13 @@ Defined in: [rest/v2/app.ts:112](https://github.com/discloud/discloud.app/blob/f
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L87)
+Defined in: [rest/v2/app.ts:57](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L57)
 
 Which of your applications are currently `processing`
 
 #### Inherited from
 
-`Omit.alreadyInProcess`
+[`ApiAppManager`](ApiAppManager.md).[`alreadyInProcess`](ApiAppManager.md#alreadyinprocess)
 
 ***
 
@@ -32,13 +32,13 @@ Which of your applications are currently `processing`
 
 > **alreadyOnline**: `string`[]
 
-Defined in: [rest/v2/app.ts:95](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L95)
+Defined in: [rest/v2/app.ts:61](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L61)
 
 Which of your applications are currently `online`
 
 #### Inherited from
 
-`Omit.alreadyOnline`
+[`ApiAppManager`](ApiAppManager.md).[`alreadyOnline`](ApiAppManager.md#alreadyonline)
 
 ***
 
@@ -46,6 +46,6 @@ Which of your applications are currently `online`
 
 > **started**: `string`[]
 
-Defined in: [rest/v2/app.ts:116](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L116)
+Defined in: [rest/v2/app.ts:76](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L76)
 
 Which of your applications have been `started`

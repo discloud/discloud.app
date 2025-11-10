@@ -6,7 +6,7 @@
 
 # Interface: ApiAppManagerRestartedAll
 
-Defined in: [rest/v2/app.ts:105](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L105)
+Defined in: [rest/v2/app.ts:69](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L69)
 
 ## Extends
 
@@ -18,13 +18,13 @@ Defined in: [rest/v2/app.ts:105](https://github.com/discloud/discloud.app/blob/f
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [rest/v2/app.ts:87](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L87)
+Defined in: [rest/v2/app.ts:57](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L57)
 
 Which of your applications are currently `processing`
 
 #### Inherited from
 
-`Omit.alreadyInProcess`
+[`ApiAppManager`](ApiAppManager.md).[`alreadyInProcess`](ApiAppManager.md#alreadyinprocess)
 
 ***
 
@@ -32,13 +32,13 @@ Which of your applications are currently `processing`
 
 > **alreadyOffline**: `string`[]
 
-Defined in: [rest/v2/app.ts:91](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L91)
+Defined in: [rest/v2/app.ts:59](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L59)
 
 Which of your applications are currently `offline`
 
 #### Inherited from
 
-`Omit.alreadyOffline`
+[`ApiAppManager`](ApiAppManager.md).[`alreadyOffline`](ApiAppManager.md#alreadyoffline)
 
 ***
 
@@ -46,6 +46,6 @@ Which of your applications are currently `offline`
 
 > **restarted**: `string`[]
 
-Defined in: [rest/v2/app.ts:109](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L109)
+Defined in: [rest/v2/app.ts:71](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L71)
 
 Which of your applications have been `restarted`

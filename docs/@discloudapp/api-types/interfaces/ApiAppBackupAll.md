@@ -6,7 +6,7 @@
 
 # Interface: ApiAppBackupAll
 
-Defined in: [rest/v2/app.ts:69](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L69)
+Defined in: [rest/v2/app.ts:45](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L45)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/app.ts:69](https://github.com/discloud/discloud.app/blob/ff
 
 > **id**: `string`
 
-Defined in: [rest/v2/app.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L7)
+Defined in: [rest/v2/app.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L5)
 
 Your app id
 
@@ -32,7 +32,7 @@ Your app id
 
 > **status**: `string`
 
-Defined in: [rest/v2/app.ts:73](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L73)
+Defined in: [rest/v2/app.ts:47](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L47)
 
 The backup status
 
@@ -42,7 +42,7 @@ The backup status
 
 > **url**: `string`
 
-Defined in: [rest/v2/app.ts:66](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/rest/v2/app.ts#L66)
+Defined in: [rest/v2/app.ts:42](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/app.ts#L42)
 
 The backup url.
 - You can access it `only once`.

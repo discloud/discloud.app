@@ -6,7 +6,7 @@
 
 # Interface: UploadAppOptions
 
-Defined in: [packages/discloud.app/src/@types/index.ts:28](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/@types/index.ts#L28)
+Defined in: [packages/discloud.app/src/@types/index.ts:28](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/@types/index.ts#L28)
 
 ## Properties
 
@@ -14,4 +14,4 @@ Defined in: [packages/discloud.app/src/@types/index.ts:28](https://github.com/di
 
 > **file**: [`FileResolvable`](../type-aliases/FileResolvable.md)
 
-Defined in: [packages/discloud.app/src/@types/index.ts:29](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/@types/index.ts#L29)
+Defined in: [packages/discloud.app/src/@types/index.ts:29](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/@types/index.ts#L29)

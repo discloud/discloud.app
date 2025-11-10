@@ -4,9 +4,9 @@
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / BaseManager
 
-# Class: `abstract` BaseManager
+# Abstract Class: BaseManager
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:6](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/BaseManager.ts#L6)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:6](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/managers/BaseManager.ts#L6)
 
 Base for all managers
 
@@ -22,7 +22,7 @@ Base for all managers
 
 > **new BaseManager**(`discloudApp`): `BaseManager`
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:9](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/BaseManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:9](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/managers/BaseManager.ts#L9)
 
 #### Parameters
 
@@ -40,4 +40,4 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:9](https://github
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/managers/BaseManager.ts#L7)

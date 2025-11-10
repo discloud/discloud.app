@@ -24,7 +24,7 @@ A parameter like Readable or Writable
 
 A file name, if you wish
 
-`null` | `string`
+`string` | `null`
 
 ### mimeType?
 

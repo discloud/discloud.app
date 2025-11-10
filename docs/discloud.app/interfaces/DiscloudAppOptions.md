@@ -6,7 +6,7 @@
 
 # Interface: DiscloudAppOptions
 
-Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/@types/index.ts#L13)
+Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/@types/index.ts#L13)
 
 ## Properties
 
@@ -14,4 +14,4 @@ Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/di
 
 > `optional` **rest**: [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`RESTOptions`](RESTOptions.md)\>
 
-Defined in: [packages/discloud.app/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/discloud.app/src/@types/index.ts#L14)
+Defined in: [packages/discloud.app/src/@types/index.ts:14](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/@types/index.ts#L14)

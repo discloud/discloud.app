@@ -6,7 +6,7 @@
 
 # Enumeration: DiscloudConfigScopes
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:59](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L59)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:59](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L59)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:59](https://github.
 
 > **APT**: `"APT"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:60](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L60)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:60](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L60)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:60](https://github.
 
 > **AUTORESTART**: `"AUTORESTART"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:61](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L61)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:61](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L61)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:61](https://github.
 
 > **AVATAR**: `"AVATAR"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:62](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L62)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:62](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L62)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:62](https://github.
 
 > **HOSTNAME**: `"HOSTNAME"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L63)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:63](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L63)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:63](https://github.
 
 > **ID**: `"ID"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:64](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L64)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:64](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L64)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:64](https://github.
 
 > **MAIN**: `"MAIN"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:65](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L65)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:65](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L65)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:65](https://github.
 
 > **NAME**: `"NAME"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:66](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L66)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:66](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L66)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:66](https://github.
 
 > **RAM**: `"RAM"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:67](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L67)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:67](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L67)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:67](https://github.
 
 > **START**: `"START"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L68)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:68](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L68)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:68](https://github.
 
 > **STORAGE**: `"STORAGE"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:69](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L69)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:69](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L69)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:69](https://github.
 
 > **TYPE**: `"TYPE"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:70](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L70)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:70](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L70)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:70](https://github.
 
 > **VERSION**: `"VERSION"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:71](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L71)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:71](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L71)
 
 ***
 
@@ -110,4 +110,4 @@ Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:71](https://github.
 
 > **VLAN**: `"VLAN"`
 
-Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:72](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L72)
+Defined in: [packages/api-types/payload/v2/DiscloudConfig.ts:72](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L72)

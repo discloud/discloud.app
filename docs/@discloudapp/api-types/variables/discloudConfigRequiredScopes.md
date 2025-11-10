@@ -8,18 +8,18 @@
 
 > `const` **discloudConfigRequiredScopes**: `object`
 
-Defined in: [payload/v2/DiscloudConfig.ts:75](https://github.com/discloud/discloud.app/blob/ff86a7704bdfa4b9011141068419f0a48ab50b8b/packages/api-types/payload/v2/DiscloudConfig.ts#L75)
+Defined in: [payload/v2/DiscloudConfig.ts:77](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/payload/v2/DiscloudConfig.ts#L77)
 
-## Type declaration
+## Type Declaration
 
 ### bot
 
-> `readonly` **bot**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]
+> `readonly` **bot**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main)\]
 
 ### common
 
-> `readonly` **common**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]
+> `readonly` **common**: readonly \[[`MAIN`](../enumerations/DiscloudConfigScopes.md#main)\]
 
 ### site
 
-> `readonly` **site**: readonly \[[`ID`](../enumerations/DiscloudConfigScopes.md#id), [`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type), [`RAM`](../enumerations/DiscloudConfigScopes.md#ram)\]
+> `readonly` **site**: readonly \[[`ID`](../enumerations/DiscloudConfigScopes.md#id), [`MAIN`](../enumerations/DiscloudConfigScopes.md#main), [`TYPE`](../enumerations/DiscloudConfigScopes.md#type)\]

@@ -4,7 +4,7 @@
 
 [Documentation](../../packages.md) / [discloud.app](../README.md) / BitField
 
-# Class: `abstract` BitField\<S, N\>
+# Abstract Class: BitField\<S, N\>
 
 Defined in: packages/util/dist/BitField.d.ts:10
 
