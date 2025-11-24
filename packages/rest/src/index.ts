@@ -7,4 +7,4 @@ export * from "./REST";
 export * from "./UserAgent";
 export * from "./utils";
 
-export const version: string = "[VI]{{inject}}[/VI]";
+export const version: string = "__PACKAGE_VERSION__";
