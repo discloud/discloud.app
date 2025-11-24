@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/rest",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
     "release:pre": "npm version pre --legacy-peer-deps --no-git-tag-version && npm run prepublish && npm publish --tag=beta",
     "release": "npm run prepublish && npm publish",
     "test": "tsc --noEmit && tsc && npm run test:node",
-    "test:node": "node --test"
+    "test:node": "node --test **/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@discloudapp/api-types": "^1.0.4",
-    "@discloudapp/util": "^1.2.5",
+    "@discloudapp/util": "^1.2.6",
     "source-map-support": "^0.5.21",
     "tslib": "^2.8.1"
   },

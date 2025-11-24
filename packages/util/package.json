@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/util",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "A utility pack for discloud.app",
   "main": "dist",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "release:pre": "npm version pre --legacy-peer-deps --no-git-tag-version && npm run prepublish && npm publish --tag=beta",
     "release": "npm run prepublish && npm publish",
     "test": "tsc --noEmit && tsc && npm run test:node",
-    "test:node": "node --test"
+    "test:node": "node --test **/*.test.js"
   },
   "repository": {
     "type": "git",
