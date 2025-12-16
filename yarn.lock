@@ -1775,7 +1775,7 @@ lunr@^2.3.9:
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
   integrity sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==
 
-magic-string@^0.30.19:
+magic-string@^0.30.21:
   version "0.30.21"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.21.tgz#56763ec09a0fa8091df27879fd94d19078c00d91"
   integrity sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==
@@ -2125,6 +2125,13 @@ rimraf@^6.1.2:
   dependencies:
     glob "^13.0.0"
     package-json-from-dist "^1.0.1"
+
+rolldown-string@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/rolldown-string/-/rolldown-string-0.2.1.tgz#331034f391e9a0e509251b22bbccf7816885a5ea"
+  integrity sha512-7H8oH5A8+L96pbBTPCt/rZrwayEhZY5/ejhdk9nRODH32H1v7+bfkaCr+kS15DcGQ7VC1HcWdQVNABFYgrMOzg==
+  dependencies:
+    magic-string "^0.30.21"
 
 run-parallel@^1.1.9:
   version "1.2.0"
@@ -2620,15 +2627,15 @@ undici-types@~7.16.0:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"
   integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
-unplugin-replace@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/unplugin-replace/-/unplugin-replace-0.6.2.tgz#08eacfff9a9476557f125f76302eadbceae43f98"
-  integrity sha512-02as8l4oiIG6f+VHuNBCaFW/2U8VZ95RgQOjILFq+mfwhxJcTf7FJ7CEw/mz4t46xLNtfyii0mCJZq67XC3fXw==
+unplugin-replace@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/unplugin-replace/-/unplugin-replace-0.6.3.tgz#968880a3f66f61eb8324c6f15ec2e80ec24eaacf"
+  integrity sha512-BBJGOu5T/R2BUKzQg9AjiCWfAKG/WCM6ph8Sh5rQ2fgdtDEhrDd2ZD3UeHZRZ689VsnmduTgnjg/BY8uZMe4Mg==
   dependencies:
-    magic-string "^0.30.19"
-    unplugin "^2.3.10"
+    rolldown-string "^0.2.1"
+    unplugin "^2.3.11"
 
-unplugin@^2.3.10:
+unplugin@^2.3.11:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-2.3.11.tgz#411e020dd2ba90e2fbe1e7bd63a5a399e6ee3b54"
   integrity sha512-5uKD0nqiYVzlmCRs01Fhs2BdkEgBS3SAVP6ndrBsuK42iC2+JHyxM05Rm9G8+5mkmRtzMZGY8Ct5+mliZxU/Ww==
