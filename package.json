@@ -30,7 +30,7 @@
     "typedoc-plugin-mdn-links": "^5.1.0",
     "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.0",
+    "typescript-eslint": "^8.53.1",
     "unplugin-replace": "^0.6.3"
   }
 }
