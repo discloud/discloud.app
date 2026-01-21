@@ -33,6 +33,8 @@ export interface ApiTeamApps {
    * Your team's app programming language
    */
   lang: string
+  /** The app owner */
+  owner: ApiTeamAppOwner
   /**
    * Your permissions to manage this application.
    */
@@ -41,4 +43,11 @@ export interface ApiTeamApps {
    * Your team's app type
    */
   type: number
+}
+
+export interface ApiTeamAppOwner {
+  /** Owner name */
+  name: string
+  /** Owner avatar url */
+  avatar: string
 }
