@@ -1,6 +1,6 @@
 {
   "name": "@discloudapp/util",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "A utility pack for discloud.app",
   "main": "dist",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@discloudapp/api-types": "^1.0.4",
+    "@discloudapp/api-types": "^1.0.5",
     "file-type": "^21.3.0",
     "glob": "^13.0.0",
     "globify-gitignore": "^1.0.3",
