@@ -2,6 +2,7 @@ import type { ApiStatusApp, ApiTeamApps, BaseApiApp } from "@discloudapp/api-typ
 import type { ModPermissionsString } from "@discloudapp/util";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseTeamApp from "./BaseTeamApp";
+import TeamAppOwner from "./TeamAppOwner";
 import TeamAppStatus from "./TeamAppStatus";
 
 export default class TeamApp extends BaseTeamApp {
@@ -30,11 +31,13 @@ export default class TeamApp extends BaseTeamApp {
    */
   declare ramKilled: boolean;
 
+  declare readonly owner: TeamAppOwner;
   declare readonly status: TeamAppStatus;
 
   constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
     super(discloudApp, data);
 
+    Object.defineProperty(this, "owner", { value: new TeamAppOwner(this.discloudApp) });
     Object.defineProperty(this, "status", { value: new TeamAppStatus(this.discloudApp, data) });
 
     this._patch(data);
@@ -53,7 +56,12 @@ export default class TeamApp extends BaseTeamApp {
     if ("online" in data)
       this.online = data.online!;
 
-    if ("perms" in data) 
+    if ("owner" in data && data.owner) {
+      // @ts-expect-error ts(2445)
+      this.owner._patch(data.owner);
+    }
+
+    if ("perms" in data)
       if (Array.isArray(data.perms)) {
         this.perms.clear();
 
