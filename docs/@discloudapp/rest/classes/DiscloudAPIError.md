@@ -6,7 +6,7 @@
 
 # Class: DiscloudAPIError
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:1](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L1)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:1](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L1)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:1](https://github.com/
 
 > **new DiscloudAPIError**(`message`, `code`, `method`, `path`, `body`): `DiscloudAPIError`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L2)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L2)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:2](https://github.com/
 
 > **body**: `any`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L7)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:7](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L7)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > **code**: `number`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L4)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:4](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L4)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **method**: `string`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L5)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:5](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L5)
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > **path**: `string`
 
-Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/errors/DiscloudAPIError.ts#L6)
+Defined in: [packages/rest/src/errors/DiscloudAPIError.ts:6](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/errors/DiscloudAPIError.ts#L6)
 
 ***
 

@@ -6,7 +6,7 @@
 
 # Interface: RateLimitData
 
-Defined in: [packages/rest/src/@types/index.ts:78](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L78)
+Defined in: [packages/rest/src/@types/index.ts:78](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L78)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/@types/index.ts:78](https://github.com/discloud/d
 
 > **global**: `boolean`
 
-Defined in: [packages/rest/src/@types/index.ts:79](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L79)
+Defined in: [packages/rest/src/@types/index.ts:79](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L79)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/rest/src/@types/index.ts:79](https://github.com/discloud/d
 
 > **method**: `"DELETE"` \| `"GET"` \| `"POST"` \| `"PUT"`
 
-Defined in: [packages/rest/src/@types/index.ts:80](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L80)
+Defined in: [packages/rest/src/@types/index.ts:80](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L80)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/rest/src/@types/index.ts:80](https://github.com/discloud/d
 
 > **path**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:81](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L81)
+Defined in: [packages/rest/src/@types/index.ts:81](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L81)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [packages/rest/src/@types/index.ts:81](https://github.com/discloud/d
 
 > **timeToReset**: `number`
 
-Defined in: [packages/rest/src/@types/index.ts:82](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L82)
+Defined in: [packages/rest/src/@types/index.ts:82](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L82)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [packages/rest/src/@types/index.ts:82](https://github.com/discloud/d
 
 > **url**: `string`
 
-Defined in: [packages/rest/src/@types/index.ts:83](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L83)
+Defined in: [packages/rest/src/@types/index.ts:83](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L83)

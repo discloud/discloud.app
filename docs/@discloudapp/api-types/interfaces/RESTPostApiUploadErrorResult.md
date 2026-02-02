@@ -6,7 +6,7 @@
 
 # Interface: RESTPostApiUploadErrorResult
 
-Defined in: [rest/v2/upload.ts:21](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/upload.ts#L21)
+Defined in: [rest/v2/upload.ts:21](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/upload.ts#L21)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/upload.ts:21](https://github.com/discloud/discloud.app/blob
 
 > `optional` **logs**: `string`
 
-Defined in: [rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/upload.ts#L30)
+Defined in: [rest/v2/upload.ts:30](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/upload.ts#L30)
 
 API logs in case your app fails on launch
 
@@ -28,7 +28,7 @@ API logs in case your app fails on launch
 
 > **message**: `string`
 
-Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -43,7 +43,7 @@ Message of the API
 
 > **status**: `"error"`
 
-Defined in: [rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/upload.ts#L22)
+Defined in: [rest/v2/upload.ts:22](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/upload.ts#L22)
 
 The status of API response
 
@@ -57,6 +57,6 @@ The status of API response
 
 > **statusCode**: `number`
 
-Defined in: [rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/api-types/rest/v2/upload.ts#L26)
+Defined in: [rest/v2/upload.ts:26](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/upload.ts#L26)
 
 Status code from API

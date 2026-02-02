@@ -6,7 +6,7 @@
 
 # Interface: RestEvents
 
-Defined in: [packages/rest/src/@types/index.ts:86](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L86)
+Defined in: [packages/rest/src/@types/index.ts:86](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L86)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/@types/index.ts:86](https://github.com/discloud/d
 
 > **error**: \[[`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)\]
 
-Defined in: [packages/rest/src/@types/index.ts:87](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L87)
+Defined in: [packages/rest/src/@types/index.ts:87](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L87)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [packages/rest/src/@types/index.ts:87](https://github.com/discloud/d
 
 > **rateLimited**: \[[`RateLimitData`](RateLimitData.md)\]
 
-Defined in: [packages/rest/src/@types/index.ts:88](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/rest/src/@types/index.ts#L88)
+Defined in: [packages/rest/src/@types/index.ts:88](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L88)

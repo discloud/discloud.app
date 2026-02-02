@@ -6,6 +6,6 @@
 
 # Variable: version
 
-> `const` **version**: `string` = `"[VI]{{inject}}[/VI]"`
+> `const` **version**: `string` = `"__PACKAGE_VERSION__"`
 
-Defined in: [packages/util/src/index.ts:11](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/util/src/index.ts#L11)
+Defined in: [packages/util/src/index.ts:11](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/index.ts#L11)

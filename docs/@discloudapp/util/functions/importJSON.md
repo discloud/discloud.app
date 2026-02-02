@@ -10,7 +10,7 @@
 
 > **importJSON**\<`T`\>(`path`): `T`
 
-Defined in: [packages/util/src/JSON.ts:6](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/util/src/JSON.ts#L6)
+Defined in: [packages/util/src/JSON.ts:6](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/JSON.ts#L6)
 
 ### Type Parameters
 
@@ -32,7 +32,7 @@ Defined in: [packages/util/src/JSON.ts:6](https://github.com/discloud/discloud.a
 
 > **importJSON**\<`T`\>(`path`, `async`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/util/src/JSON.ts:7](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/util/src/JSON.ts#L7)
+Defined in: [packages/util/src/JSON.ts:7](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/JSON.ts#L7)
 
 ### Type Parameters
 

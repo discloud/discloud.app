@@ -308,6 +308,7 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [ApiConsoleAppShell](interfaces/ApiConsoleAppShell.md)
 - [ApiNetIO](interfaces/ApiNetIO.md)
 - [ApiStatusApp](interfaces/ApiStatusApp.md)
+- [ApiTeamAppOwner](interfaces/ApiTeamAppOwner.md)
 - [ApiTeamApps](interfaces/ApiTeamApps.md)
 - [ApiTerminal](interfaces/ApiTerminal.md)
 - [ApiUploadApp](interfaces/ApiUploadApp.md)

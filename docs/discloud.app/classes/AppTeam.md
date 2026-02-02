@@ -6,7 +6,7 @@
 
 # Class: AppTeam
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:6](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L6)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:6](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L6)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new AppTeam**(`discloudApp`, `data`): `AppTeam`
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L7)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:7](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L7)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:7](https://github.c
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:13](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L13)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:13](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L13)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:13](https://github.
 
 > **avatar**: `string` \| `null`
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:14](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L14)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:14](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L14)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:14](https://github.
 
 > **constructor**: [`Constructor`](../interfaces/Constructor.md)\<`AppTeam`\>
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/Base.ts#L5)
+Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L5)
 
 #### Inherited from
 
@@ -74,7 +74,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -86,7 +86,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > **username**: `string` \| `null`
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L15)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:15](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L15)
 
 ## Methods
 
@@ -94,7 +94,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:15](https://github.
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -110,7 +110,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:17](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L17)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:17](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L17)
 
 #### Parameters
 
@@ -132,7 +132,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:17](https://github.
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -154,7 +154,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **create**(`modID`, `perms`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:25](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L25)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:25](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L25)
 
 #### Parameters
 
@@ -176,7 +176,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:25](https://github.
 
 > **delete**(`modID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTApiBaseResult`](../interfaces/RESTApiBaseResult.md)\>
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:33](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L33)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:33](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L33)
 
 #### Parameters
 
@@ -194,7 +194,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:33](https://github.
 
 > **edit**(`modID`, `perms`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppTeamManager`](../interfaces/ApiAppTeamManager.md)\>
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:29](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L29)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:29](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L29)
 
 #### Parameters
 
@@ -216,7 +216,7 @@ Defined in: [packages/discloud.app/src/structures/AppTeam.ts:29](https://github.
 
 > **fetch**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ApiAppTeam`](../interfaces/ApiAppTeam.md)[]\>
 
-Defined in: [packages/discloud.app/src/structures/AppTeam.ts:37](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/structures/AppTeam.ts#L37)
+Defined in: [packages/discloud.app/src/structures/AppTeam.ts:37](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppTeam.ts#L37)
 
 #### Returns
 

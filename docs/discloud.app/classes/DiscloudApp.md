@@ -6,7 +6,7 @@
 
 # Class: DiscloudApp
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L13)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L13)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://gi
 
 > **new DiscloudApp**(`options`): `DiscloudApp`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://gi
 
 > `readonly` **appApt**: [`AppAptManager`](AppAptManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://gi
 
 > `readonly` **apps**: [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://gi
 
 > `readonly` **appTeam**: [`AppTeamManager`](AppTeamManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://gi
 
 > `readonly` **options**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://gi
 
 > `readonly` **rest**: [`REST`](REST.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://gi
 
 > `readonly` **teamApps**: [`TeamAppManager`](TeamAppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://gi
 
 > `readonly` **user**: [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ***
 
@@ -211,7 +211,7 @@ v13.6.0, v12.17.0
 
 > **get** **token**(): `string`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:45](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L45)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:45](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L45)
 
 ##### Returns
 
@@ -517,7 +517,7 @@ v0.1.26
 
 > **login**(`token`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:54](https://github.com/discloud/discloud.app/blob/ef5a53ad8a6f91adbc134ed77dfe720d80e4b29f/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L54)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:54](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L54)
 
 Login on Discloud API
 
