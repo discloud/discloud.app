@@ -28,11 +28,11 @@ export default class User extends Base {
   /**
    * Date of when will your plan end
    */
-  declare planDataEnd: Date;
+  planDataEnd: Date | null = null;
   /**
    * Timestamp of when will your plan end
    */
-  declare planDataEndTimestamp: number;
+  planDataEndTimestamp: number | null = null;
   /**
    * Quantity of RAM was used for your applications
    */
@@ -48,8 +48,8 @@ export default class User extends Base {
 
   declare ramUsage: number;
 
-  declare avatar: string | null;
-  declare username: string | null;
+  avatar: string | null = null;
+  username: string | null = null;
 
   constructor(discloudApp: DiscloudApp, data: ApiUser) {
     super(discloudApp);
@@ -89,8 +89,14 @@ export default class User extends Base {
       this.plan = data.plan!;
 
     if ("planDataEnd" in data) {
-      this.planDataEnd = new Date(data.planDataEnd!);
-      this.planDataEndTimestamp = this.planDataEnd.valueOf();
+      const planDataEndTimestamp = Date.parse(data.planDataEnd!);
+
+      if (isNaN(planDataEndTimestamp)) {
+        this.planDataEnd = this.planDataEndTimestamp = null;
+      } else {
+        this.planDataEnd = new Date(planDataEndTimestamp);
+        this.planDataEndTimestamp = planDataEndTimestamp;
+      }
     }
 
     if ("ramUsedMb" in data)
