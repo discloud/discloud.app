@@ -34,7 +34,7 @@ yarn add discloud.app
 // Get instanced discloud
 const { discloud } = require("discloud.app");
 
-// Set token
+// Set token and authenticate
 await discloud.login("DISCLOUD_TOKEN");
 ```
 
