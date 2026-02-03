@@ -10,7 +10,7 @@ import TeamAppManager from "../managers/TeamAppManager";
 import User from "../structures/User";
 import { DefaultDiscloudAppOptions } from "../util/constants";
 
-class DiscloudApp extends EventEmitter<ClientEvents> {
+export default class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly options: DiscloudAppOptions;
   readonly rest: REST;
   readonly appApt = new AppAptManager(this);
@@ -37,7 +37,7 @@ class DiscloudApp extends EventEmitter<ClientEvents> {
   }
 
   #setToken(token: string) {
-    if (!process.env.DISCLOUD_TOKEN && token) process.env.DISCLOUD_TOKEN = token;
+    process.env.DISCLOUD_TOKEN = token;
     this.rest.setToken(token);
     return this;
   }
@@ -59,5 +59,3 @@ class DiscloudApp extends EventEmitter<ClientEvents> {
     return this.user.fetch();
   }
 }
-
-export default DiscloudApp;
