@@ -1,5 +1,5 @@
 import { type Dirent } from "fs";
-import { glob, stat } from "fs/promises";
+import { stat } from "fs/promises";
 import { join } from "path";
 import { asyncGeneratorToArray } from "../utils/array";
 import { DISCLOUD_IGNORE_FILENAME } from "./constants";
@@ -32,10 +32,14 @@ export async function* fsGlobIterate(pattern: string | string[], options?: any) 
 async function* _fsGlobIterate(pattern: string | string[], options: FSGlobOptionsWithoutFileTypes) {
   if (!options.withDirectories) return yield* _fsGlobIterateOnlyFiles(pattern, options);
 
+  const { glob } = await import("fs/promises");
+
   yield* glob(pattern, options);
 }
 
 async function* _fsGlobIterateOnlyFiles(pattern: string | string[], options: FSGlobOptionsWithoutFileTypes) {
+  const { glob } = await import("fs/promises");
+
   for await (const relativeFilePath of glob(pattern, options)) {
     const filePath = join(options.cwd!, relativeFilePath);
 
@@ -50,10 +54,14 @@ async function* _fsGlobIterateOnlyFiles(pattern: string | string[], options: FSG
 async function* _fsGlobIterateWithFileTypes(pattern: string | string[], options: FSGlobOptionsWithFileTypes) {
   if (!options.withDirectories) return yield* _fsGlobIterateWithFileTypesOnlyFiles(pattern, options);
 
+  const { glob } = await import("fs/promises");
+
   yield* glob(pattern, options);
 }
 
 async function* _fsGlobIterateWithFileTypesOnlyFiles(pattern: string | string[], options: FSGlobOptionsWithFileTypes) {
+  const { glob } = await import("fs/promises");
+
   for await (const dirent of glob(pattern, options)) {
     if (!dirent.isFile()) continue;
     yield dirent;
