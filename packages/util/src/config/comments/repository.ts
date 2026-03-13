@@ -3,7 +3,7 @@ import { type ICommentRepository } from "../interfaces/comments/repository";
 import { CommentEntity } from "./entity";
 import { type MatchedComment } from "./types";
 
-export default class CommentRepository implements ICommentRepository {
+export default class CommentRepository implements ICommentRepository, Disposable {
   static readonly char = "#";
   /** `/(?<content>\s*#.*$)/` */
   static readonly pattern = /(?<content>\s*#.*$)/;
