@@ -1941,10 +1941,10 @@ rimraf@^6.1.3:
     glob "^13.0.3"
     package-json-from-dist "^1.0.1"
 
-rolldown-string@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/rolldown-string/-/rolldown-string-0.2.1.tgz#331034f391e9a0e509251b22bbccf7816885a5ea"
-  integrity sha512-7H8oH5A8+L96pbBTPCt/rZrwayEhZY5/ejhdk9nRODH32H1v7+bfkaCr+kS15DcGQ7VC1HcWdQVNABFYgrMOzg==
+rolldown-string@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/rolldown-string/-/rolldown-string-0.3.0.tgz#095643a80ac40ba052d3f063d337779a64d1ead9"
+  integrity sha512-qGhBPNSv/27uzFBQdO+Cs4YAXC/1PKznD7Jz5Fl7NIAIlteuTPBTBWBhCpJ2AFTqLsoKvvUr7wSjqSUip0Fkpg==
   dependencies:
     magic-string "^0.30.21"
 
@@ -2416,13 +2416,13 @@ undici-types@~7.18.0:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.18.2.tgz#29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9"
   integrity sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==
 
-unplugin-replace@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/unplugin-replace/-/unplugin-replace-0.7.0.tgz#c5e0eb246390d6ea15d37c66176d9f43aa492e8b"
-  integrity sha512-Cpygt9g701xxcm+R3AWMgqptXHnELCpOBG6wGAsP8muDFZ5kxtE9IQFvNavlQAn7Z+qKaahwbsoVV45Ol+Olog==
+unplugin-replace@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/unplugin-replace/-/unplugin-replace-0.8.0.tgz#b41be355b681175403cdc679b9630bd30ae43c70"
+  integrity sha512-/qhj6nsRIJB1WxWessn/nMp29yusnkpYZa6D9OgAxrPinzK+cvrKVsbBNWChCkuQUsEr/3JIW86tX4iOYs51uw==
   dependencies:
     js-tokens "^10.0.0"
-    rolldown-string "^0.2.1"
+    rolldown-string "^0.3.0"
     unplugin "^3.0.0"
 
 unplugin@^3.0.0:
