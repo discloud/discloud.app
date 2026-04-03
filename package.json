@@ -16,7 +16,7 @@
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.18.1",
     "dotenv": "^17.4.0",
-    "esbuild": "^0.27.7",
+    "esbuild": "^0.28.0",
     "eslint": "^10.1.0",
     "eslint-plugin-tsdoc": "^0.5.2",
     "globals": "^17.4.0",
