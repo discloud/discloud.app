@@ -2334,10 +2334,10 @@ typedoc-material-theme@^1.4.1:
   dependencies:
     "@material/material-color-utilities" "^0.3.0"
 
-typedoc-plugin-coverage@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-4.0.2.tgz#96895bccb0656c1496ba818b000f4baf02223e2f"
-  integrity sha512-mfn0e7NCqB8x2PfvhXrtmd7KWlsNf1+B2N9y8gR/jexXBLrXl/0e+b2HdG5HaTXGi7i0t2pyQY2VRmq7gtdEHQ==
+typedoc-plugin-coverage@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-4.0.3.tgz#24cb2730db122e45580237c515938477bef671dd"
+  integrity sha512-baim3wyMkqpX7rBzL/6iZ7wzKJuSr9ffP16RHOsdTUNoHUZeXLIZHSUBtUhXmNHaUNRgfqdmKLBwyggbJjGdeQ==
 
 typedoc-plugin-markdown@^4.11.0:
   version "4.11.0"
