@@ -1,4 +1,4 @@
-export const enum Events {
+export enum Events {
   Error = "error",
   RateLimited = "rateLimited"
 }

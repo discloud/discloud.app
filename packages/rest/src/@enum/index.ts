@@ -1,11 +1,11 @@
-export const enum RequestMethod {
+export enum RequestMethod {
   Delete = "DELETE",
   Get = "GET",
   Post = "POST",
   Put = "PUT",
 }
 
-export const enum RESTEvents {
+export enum RESTEvents {
   Error = "error",
   RateLimited = "rateLimited"
 }

@@ -1,4 +1,5 @@
 import type { BinaryLike } from "crypto";
+import { fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream } from "file-type";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
 import { Stream, type Readable, type Writable } from "stream";
@@ -45,8 +46,6 @@ export type FileResolvable =
 export async function resolveFile(file: FileResolvable, filename?: string): Promise<File> {
   if (file instanceof File) return file;
 
-  const fileType = await import("file-type");
-
   if (file instanceof URL || typeof file === "string") {
     if (file instanceof URL) file = file.toString();
 
@@ -59,7 +58,7 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
 
       const blob = await response.blob();
 
-      const fileTypeResult = await fileType.fileTypeFromBlob(blob);
+      const fileTypeResult = await fileTypeFromBlob(blob);
 
       return new File([blob], filename ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
     }
@@ -71,13 +70,13 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
   }
 
   if (file instanceof Blob) {
-    const fileTypeResult = await fileType.fileTypeFromBlob(file);
+    const fileTypeResult = await fileTypeFromBlob(file);
 
     return new File([file], filename ?? `file.${fileTypeResult?.ext}`, { type: fileTypeResult?.mime });
   }
 
   if (Buffer.isBuffer(file)) {
-    const fileTypeResult = await fileType.fileTypeFromBuffer(file);
+    const fileTypeResult = await fileTypeFromBuffer(file);
 
     return new File([file], filename ?? `file.${fileTypeResult?.ext}`);
   }
@@ -85,7 +84,7 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
   if (isArrayBufferView(file)) return new File([file], filename ?? "file");
 
   if (file instanceof Stream) {
-    const fileTypeResult = await fileType.fileTypeFromStream(file);
+    const fileTypeResult = await fileTypeFromStream(file);
 
     return streamToFile(file, filename ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
   }
