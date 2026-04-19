@@ -1,8 +1,9 @@
 import { type RESTApiBaseResult } from "./base";
 
 export interface ApiSubdomain {
-  _id: string
+  id: string
   userID: string
+  /** `1=available` `2=using` */
   status: number
   date: number
 }
@@ -12,7 +13,7 @@ export interface RESTGetApiSubdomainListResult extends RESTApiBaseResult {
 }
 
 export interface RESTGetApiSubdomainResult extends RESTApiBaseResult {
-  subdomains: ApiSubdomain
+  subdomain: ApiSubdomain
 }
 
 export type RESTPostApiSubdomainResult = RESTGetApiSubdomainResult;
