@@ -1,6 +1,8 @@
 import { type OmitNewableFunctionKeys } from "../../../util/types";
 import { App } from "./App";
+import { Customdomain } from "./Customdomain";
 import { Locale } from "./Locale";
+import { Subdomain } from "./Subdomain";
 import { Team } from "./Team";
 import { Upload } from "./Upload";
 import { User } from "./User";
@@ -24,8 +26,19 @@ abstract class RoutesIndexer {
   static appStop = App.stop;
   static appTeam = App.team;
 
+  // customdomain
+  static customdmain = Customdomain.customdomain;
+  static customdomainCreate = Customdomain.customdomainCreate;
+  static customdomainEdit = Customdomain.customdomainEdit;
+  static customdomainList = Customdomain.customdomainList;
+  static customdomainVerify = Customdomain.customdomainVerify;
+
   // locale
   static locale = Locale.locale;
+
+  // subdmain
+  static subdmain = Subdomain.subdomain;
+  static subdomainList = Subdomain.subdomainList;
 
   // team
   static team = Team.team;
