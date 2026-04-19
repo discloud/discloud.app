@@ -2,7 +2,7 @@ import type { BinaryLike } from "crypto";
 import { fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream } from "file-type";
 import { createReadStream, existsSync, type PathLike } from "fs";
 import { basename } from "path";
-import { Stream, type Readable, type Writable } from "stream";
+import { Readable, Stream, type Writable } from "stream";
 import { isArrayBufferView } from "util/types";
 
 export const filenamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
@@ -84,7 +84,7 @@ export async function resolveFile(file: FileResolvable, filename?: string): Prom
   if (isArrayBufferView(file)) return new File([file], filename ?? "file");
 
   if (file instanceof Stream) {
-    const fileTypeResult = await fileTypeFromStream(file);
+    const fileTypeResult = await fileTypeFromStream(Readable.toWeb(file));
 
     return streamToFile(file, filename ?? `file.${fileTypeResult?.ext}`, fileTypeResult?.mime);
   }
