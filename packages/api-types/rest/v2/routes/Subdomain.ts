@@ -11,13 +11,6 @@ abstract class SubdomainRoutes {
   static subdomain<Subdomain extends string>(Subdomain: Subdomain): `/subdomain/${Subdomain}` {
     return `/subdomain/${Subdomain}`;
   }
-
-  /**
-   * - GET - `/subdomain/list`
-   */
-  static subdomainList(): "/subdomain/list" {
-    return "/subdomain/list";
-  }
 }
 
 export const Subdomain: Subdomain = SubdomainRoutes;

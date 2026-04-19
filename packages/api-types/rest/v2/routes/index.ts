@@ -30,7 +30,6 @@ abstract class RoutesIndexer {
   static customdmain = Customdomain.customdomain;
   static customdomainCreate = Customdomain.customdomainCreate;
   static customdomainEdit = Customdomain.customdomainEdit;
-  static customdomainList = Customdomain.customdomainList;
   static customdomainVerify = Customdomain.customdomainVerify;
 
   // locale
@@ -38,7 +37,6 @@ abstract class RoutesIndexer {
 
   // subdmain
   static subdmain = Subdomain.subdomain;
-  static subdomainList = Subdomain.subdomainList;
 
   // team
   static team = Team.team;

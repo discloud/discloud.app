@@ -4,11 +4,11 @@ export type Customdomain = OmitNewableFunctionKeys<typeof CustomdomainRoutes>
 
 abstract class CustomdomainRoutes {
   /**
-   * - GET - `/customdomain/{Customdomain}`
-   * - DELETE - `/customdomain/{Customdomain}`
+   * - GET - `/customdomain/{Domain}`
+   * - DELETE - `/customdomain/{Domain}`
    */
-  static customdomain<Customdomain extends string>(Customdomain: Customdomain): `/customdomain/${Customdomain}` {
-    return `/customdomain/${Customdomain}`;
+  static customdomain<Domain extends string>(Domain: Domain): `/customdomain/${Domain}` {
+    return `/customdomain/${Domain}`;
   }
 
   /**
@@ -26,14 +26,14 @@ abstract class CustomdomainRoutes {
   }
 
   /**
-   * - GET - `/customdomain/list`
+   * - DELETE - `/customdomain/remove/${Domain}`
    */
-  static customdomainList(): "/customdomain/list" {
-    return "/customdomain/list";
+  static customdomainRemove<Domain extends string>(Domain: Domain): `/customdomain/remove/${Domain}` {
+    return `/customdomain/remove/${Domain}`;
   }
 
   /**
-   * - GET - `/customdomain/verify/${Customdomain}`
+   * - GET - `/customdomain/verify/${Domain}`
    */
   static customdomainVerify<Customdomain extends string>(Customdomain: Customdomain): `/customdomain/verify/${Customdomain}` {
     return `/customdomain/verify/${Customdomain}`;
