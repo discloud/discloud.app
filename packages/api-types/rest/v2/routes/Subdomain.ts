@@ -4,12 +4,12 @@ export type Subdomain = OmitNewableFunctionKeys<typeof SubdomainRoutes>
 
 abstract class SubdomainRoutes {
   /**
-   * - GET - `/subdomain/{Subdomain}`
-   * - POST - `/subdomain/{Subdomain}`
-   * - DELETE - `/subdomain/{Subdomain}`
+   * - GET - `/subdomain/{subdomain}`
+   * - POST - `/subdomain/{subdomain}`
+   * - DELETE - `/subdomain/{subdomain}`
    */
-  static subdomain<Subdomain extends string>(Subdomain: Subdomain): `/subdomain/${Subdomain}` {
-    return `/subdomain/${Subdomain}`;
+  static subdomain<subdomain extends string>(subdomain: subdomain): `/subdomain/${subdomain}` {
+    return `/subdomain/${subdomain}`;
   }
 }
 

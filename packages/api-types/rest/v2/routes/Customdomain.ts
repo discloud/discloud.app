@@ -4,11 +4,11 @@ export type Customdomain = OmitNewableFunctionKeys<typeof CustomdomainRoutes>
 
 abstract class CustomdomainRoutes {
   /**
-   * - GET - `/customdomain/{Domain}`
-   * - DELETE - `/customdomain/{Domain}`
+   * - GET - `/customdomain/{domain}`
+   * - DELETE - `/customdomain/{domain}`
    */
-  static customdomain<Domain extends string>(Domain: Domain): `/customdomain/${Domain}` {
-    return `/customdomain/${Domain}`;
+  static customdomain<domain extends string>(domain: domain): `/customdomain/${domain}` {
+    return `/customdomain/${domain}`;
   }
 
   /**
@@ -19,24 +19,24 @@ abstract class CustomdomainRoutes {
   }
 
   /**
-   * - PUT - `/customdomain/edit`
+   * - PUT - `/customdomain/{domain}/edit`
    */
-  static customdomainEdit(): "/customdomain/edit" {
-    return "/customdomain/edit";
+  static customdomainEdit<domain extends string>(domain: domain): `/customdomain/${domain}/edit` {
+    return `/customdomain/${domain}/edit`;
   }
 
   /**
-   * - DELETE - `/customdomain/remove/${Domain}`
+   * - DELETE - `/customdomain/${domain}/remove`
    */
-  static customdomainRemove<Domain extends string>(Domain: Domain): `/customdomain/remove/${Domain}` {
-    return `/customdomain/remove/${Domain}`;
+  static customdomainRemove<domain extends string>(domain: domain): `/customdomain/${domain}/remove` {
+    return `/customdomain/${domain}/remove`;
   }
 
   /**
-   * - GET - `/customdomain/verify/${Domain}`
+   * - GET - `/customdomain/${domain}/verify`
    */
-  static customdomainVerify<Customdomain extends string>(Customdomain: Customdomain): `/customdomain/verify/${Customdomain}` {
-    return `/customdomain/verify/${Customdomain}`;
+  static customdomainVerify<domain extends string>(domain: domain): `/customdomain/${domain}/verify` {
+    return `/customdomain/${domain}/verify`;
   }
 }
 
