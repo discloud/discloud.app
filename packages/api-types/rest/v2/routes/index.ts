@@ -27,9 +27,10 @@ abstract class RoutesIndexer {
   static appTeam = App.team;
 
   // customdomain
-  static customdmain = Customdomain.customdomain;
+  static customdomain = Customdomain.customdomain;
   static customdomainCreate = Customdomain.customdomainCreate;
   static customdomainEdit = Customdomain.customdomainEdit;
+  static customdomainRemove = Customdomain.customdomainRemove;
   static customdomainVerify = Customdomain.customdomainVerify;
 
   // locale

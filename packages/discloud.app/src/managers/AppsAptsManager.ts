@@ -6,7 +6,7 @@ import BaseManager from "./BaseManager";
 /**
  * Manager for APT on your application on Discloud
  */
-export default class AppAptManager extends BaseManager {
+export default class AppsAptsManager extends BaseManager {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp);
   }
@@ -17,14 +17,14 @@ export default class AppAptManager extends BaseManager {
    * @param appID - The app id
    * @param apt - One or more APTs to install. See {@link AptString}.
    */
-  async install(appID: string, apt: APTString | APTString[]): Promise<RESTPutApiAppAptResult> {
+  async install(appID: string, apt: APTString | APTString[]): Promise<boolean> {
     validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
     const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
 
-    return data;
+    return data.status === "ok";
   }
 
   /**
@@ -33,17 +33,13 @@ export default class AppAptManager extends BaseManager {
    * @param appID - The app id
    * @param apt - One or more APTs to uninstall. See {@link AptString}.
    */
-  async uninstall(appID: string, apt: APTString | APTString[]): Promise<RESTDeleteApiAppAptResult> {
+  async uninstall(appID: string, apt: APTString | APTString[]): Promise<boolean> {
     validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
-    const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(appID), {
-      body: {
-        apt,
-      },
-    });
+    const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
 
-    return data;
+    return data.status === "ok";
   }
 }

@@ -36,4 +36,4 @@ export type RESTPutApiCustomdomainEditResult = RESTApiBaseResult
 
 export type RESTDeleteApiCustomdomainResult = RESTApiBaseResult
 
-export type RESTGetApiCustomdomainVerifyResult = RESTApiBaseResult
+export type RESTGetApiCustomdomainVerifyResult = RESTGetApiCustomdomainResult

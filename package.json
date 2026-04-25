@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/lodash": "^4.17.24",
     "@types/node": "22",
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.18.1",
@@ -30,7 +31,7 @@
     "typedoc-plugin-mdn-links": "^5.1.1",
     "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.58.2",
+    "typescript-eslint": "^8.59.0",
     "unplugin-replace": "^0.8.0"
   }
 }

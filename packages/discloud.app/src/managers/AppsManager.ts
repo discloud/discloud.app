@@ -1,37 +1,32 @@
-import { Routes, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiConsoleAppShell, type ApiTerminal, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTDeleteApiAppDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTGetApiAppStatusResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
+import { Routes, type ApiApp, type ApiAppManagerRemovedAll, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiConsoleAppShell, type ApiTerminal, type BaseApiApp, type RESTApiBaseResult, type RESTDeleteApiAppAllDeleteResult, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppAllResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppResult, type RESTPostApiUploadResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppConsoleResult, type RESTPutApiAppRamResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
-import { ProfileOptions, type CreateAppOptions, type UpdateAppOptions } from "../@types";
+import { type CreateAppOptions, type UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
-import type AppStatus from "../structures/AppStatus";
 import AppUploaded from "../structures/AppUploaded";
 import { validateNonEmptyString, validateNumberType } from "../util/assertions";
-import CachedManager from "./CachedManager";
+import { ProfileOptions } from "../util/validations";
+import AppsAptsManager from "./AppsAptsManager";
+import AppsModeratorsManager from "./AppsModeratorsManager";
+import AppsStatusManager from "./AppsStatusManager";
+import BaseAppsManager from "./BaseAppsManager";
+
+type PartialApiApp = BaseApiApp & Partial<ApiApp>
 
 /**
  * Manager for apps on Discloud
  */
-export default class AppManager extends CachedManager<typeof App> {
+export default class AppsManager extends BaseAppsManager<typeof App> {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp, App);
   }
 
-  /**
-   * Get the status of your application on Discloud
-   * 
-   * @param appID - Your app id
-   */
-  async status(appID: string): Promise<AppStatus>
-  async status(appID: string) {
-    validateNonEmptyString(appID);
-
-    const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.appStatus(appID));
-
-    return this._add(data.apps).status;
-  }
+  readonly apts = new AppsAptsManager(this.discloudApp);
+  readonly moderators = new AppsModeratorsManager(this.discloudApp);
+  readonly status = new AppsStatusManager(this.discloudApp);
 
   /**
    * Send a command to your app's terminal
@@ -116,19 +111,16 @@ export default class AppManager extends CachedManager<typeof App> {
     validateNonEmptyString(appID);
     validateNumberType(quantity);
 
-    const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
+    await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.appRam(appID), {
       body: {
         ramMB: quantity,
       },
     });
 
-    if (data.status === "ok")
-      this._add({
-        id: appID,
-        ram: quantity,
-      });
-
-    return data;
+    this._add({
+      id: appID,
+      ram: quantity,
+    } as PartialApiApp);
   }
 
   /**
@@ -175,26 +167,21 @@ export default class AppManager extends CachedManager<typeof App> {
    * 
    * @param appID - Your app id
    */
-  async delete(appID: string): Promise<RESTDeleteApiAppDeleteResult>
+  async delete(appID: string): Promise<void>
   async delete(appID: "all"): Promise<ApiAppManagerRemovedAll>
   async delete(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.delete<
-      | RESTDeleteApiAppDeleteResult
-      | RESTDeleteApiAppAllDeleteResult
-    >(Routes.appDelete(appID));
+    const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAllDeleteResult>(Routes.appDelete(appID));
 
-    if ("apps" in data) {
-      this._deleteMany(data.apps.removealled);
+    if (appID === "all") {
+      if (Array.isArray(data.apps.removealled))
+        this._deleteMany(data.apps.removealled);
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
-    if (data.status === "ok")
-      this._delete(appID);
-
-    return data;
+    this._delete(appID);
   }
 
 
@@ -208,14 +195,15 @@ export default class AppManager extends CachedManager<typeof App> {
     validateNonEmptyString(appID);
     ProfileOptions.parse(options);
 
-    const data = await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appProfile(appID), {
+    await this.discloudApp.rest.put<RESTApiBaseResult>(Routes.appProfile(appID), {
       body: options,
     });
 
-    if (data.status === "ok")
-      this._add(options);
-
-    return data;
+    this._add({
+      id: appID,
+      avatarURL: options.avatarURL,
+      name: options.name,
+    } as PartialApiApp);
   }
 
   /**
@@ -223,31 +211,27 @@ export default class AppManager extends CachedManager<typeof App> {
    * 
    * @param appID - You app id
    */
-  async restart(appID: string): Promise<RESTPutApiAppRestartResult>
+  async restart(appID: string): Promise<void>
   async restart(appID: "all"): Promise<ApiAppManagerRestartedAll>
   async restart(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppRestartResult
-      | RESTPutApiAppAllRestartResult
-    >(Routes.appRestart(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllRestartResult>(Routes.appRestart(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.restarted.map(app => ({
-        id: app,
-        online: true,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.restarted))
+        for (let i = 0; i < data.apps.restarted.length; i++) {
+          const appId = data.apps.restarted[i];
+          this._patch(appId, { online: true } as PartialApiApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: data.status === "ok",
-    });
-
-    return data;
+      online: true,
+    } as PartialApiApp);
   }
 
   /**
@@ -255,31 +239,27 @@ export default class AppManager extends CachedManager<typeof App> {
    * 
    * @param appID - You app id
    */
-  async start(appID: string): Promise<RESTPutApiAppStartResult>
+  async start(appID: string): Promise<void>
   async start(appID: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppStartResult
-      | RESTPutApiAppAllStartResult
-    >(Routes.appStart(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllStartResult>(Routes.appStart(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.started.map(app => ({
-        id: app,
-        online: true,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.started))
+        for (let i = 0; i < data.apps.started.length; i++) {
+          const appId = data.apps.started[i];
+          this._patch(appId, { online: true } as PartialApiApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: data.status === "ok",
-    });
-
-    return data;
+      online: true,
+    } as PartialApiApp);
   }
 
   /**
@@ -287,31 +267,27 @@ export default class AppManager extends CachedManager<typeof App> {
    * 
    * @param appID - You app id
    */
-  async stop(appID: string): Promise<RESTPutApiAppStopResult>
+  async stop(appID: string): Promise<void>
   async stop(appID: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppStopResult
-      | RESTPutApiAppAllStopResult
-    >(Routes.appStop(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllStopResult>(Routes.appStop(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.stoped.map(app => ({
-        id: app,
-        online: false,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.stoped))
+        for (let i = 0; i < data.apps.stoped.length; i++) {
+          const appId = data.apps.stoped[i];
+          this._patch(appId, { online: false } as PartialApiApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: !(data.status === "ok"),
-    });
-
-    return data;
+      online: false,
+    } as PartialApiApp);
   }
 
   /**
@@ -320,11 +296,11 @@ export default class AppManager extends CachedManager<typeof App> {
    * @param appID - You app id.
    */
   async fetch(appID: string): Promise<App>
-  async fetch(appID: "all"): Promise<Map<string, App>>
-  async fetch(appID: string) {
-    validateNonEmptyString(appID);
-
+  async fetch(appID?: "all"): Promise<Map<string, App>>
+  async fetch(appID: string = "all") {
     if (appID === "all") return this.#fetchMany();
+
+    validateNonEmptyString(appID);
 
     try {
       const data = await this.discloudApp.rest.get<RESTGetApiAppResult>(Routes.app(appID));

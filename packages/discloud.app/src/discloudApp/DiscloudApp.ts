@@ -1,28 +1,49 @@
-import type { ApiUser } from "@discloudapp/api-types/v2";
 import { REST, RESTEvents } from "@discloudapp/rest";
-import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "events";
+import _ from "lodash";
 import type { ClientEvents, DiscloudAppOptions } from "../@types";
-import AppAptManager from "../managers/AppAptManager";
-import AppManager from "../managers/AppManager";
-import AppTeamManager from "../managers/AppTeamManager";
-import TeamAppManager from "../managers/TeamAppManager";
+import AppsManager from "../managers/AppsManager";
+import CustomdomainsManager from "../managers/CustomdomainsManager";
+import SharedAppsManager from "../managers/SharedAppsManager";
+import SubdomainsManager from "../managers/SubdomainsManager";
 import User from "../structures/User";
 import { DefaultDiscloudAppOptions } from "../util/constants";
+import Deprecation from "../util/deprecation";
+
+const appAptDeprecation = new Deprecation("The appApt property is deprecated. Use apps.apts instead.");
+const appTeamDeprecation = new Deprecation("The appTeam property is deprecated. Use apps.moderators instead.");
+const teamAppsDeprecation = new Deprecation("The teamApps property is deprecated. Use sharedApps instead.");
 
 export default class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly options: DiscloudAppOptions;
   readonly rest: REST;
-  readonly appApt = new AppAptManager(this);
-  readonly apps = new AppManager(this);
-  readonly appTeam = new AppTeamManager(this);
-  readonly teamApps = new TeamAppManager(this);
-  readonly user = new User(this, <ApiUser>{});
+  readonly apps = new AppsManager(this);
+  readonly sharedApps = new SharedAppsManager(this);
+  readonly customdomains = new CustomdomainsManager(this);
+  readonly subdomains = new SubdomainsManager(this);
+  readonly user = new User(this);
+
+  /** @deprecated use appsApts instead */
+  get appApt() {
+    appAptDeprecation.emit();
+    return this.apps.apts;
+  }
+
+  /** @deprecated use appsModerators instead */
+  get appTeam() {
+    appTeamDeprecation.emit();
+    return this.apps.moderators;
+  }
+
+  get teamApps() {
+    teamAppsDeprecation.emit();
+    return this.sharedApps;
+  }
 
   constructor(options: DiscloudAppOptions = {}) {
     super({ captureRejections: true });
 
-    options = mergeDefaults(DefaultDiscloudAppOptions, options);
+    options = _.defaultsDeep(options, DefaultDiscloudAppOptions);
 
     this.rest = new REST(options.rest)
       .on(RESTEvents.Error, this.emit.bind(this, RESTEvents.Error))

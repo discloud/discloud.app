@@ -1,13 +1,9 @@
-import type { ApiNetIO, ApiStatusApp, BaseApiApp } from "@discloudapp/api-types/v2";
+import type { ApiNetIO, ApiStatusApp } from "@discloudapp/api-types/v2";
 import { calculatePercentage } from "@discloudapp/util";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
-import Base from "./Base";
+import BaseAppStatus from "./BaseAppStatus";
 
-export default class AppStatus extends Base {
-  /**
-   * Your app id
-   */
-  readonly appId: string;
+export default class AppStatus extends BaseAppStatus {
   /**
    * Status of your application
    * - It can be `Online` or `Offline` for example
@@ -46,35 +42,35 @@ export default class AppStatus extends Base {
    */
   declare startedAtTimestamp: number;
 
-  constructor(discloudApp: DiscloudApp, data: BaseApiApp) {
-    super(discloudApp);
+  constructor(discloudApp: DiscloudApp, data: ApiStatusApp) {
+    super(discloudApp, data);
 
-    this.appId = data.id;
+    this._patch(data);
   }
 
   protected _patch(data: Partial<ApiStatusApp>): this {
-    if ("container" in data)
+    if (data.container !== undefined)
       this.container = data.container!;
 
-    if ("cpu" in data)
+    if (data.cpu !== undefined)
       this.cpu = data.cpu!;
 
-    if ("last_restart" in data)
+    if (data.last_restart !== undefined)
       this.lastRestart = data.last_restart!;
 
-    if ("memory" in data) {
+    if (data.memory !== undefined) {
       this.memory = data.memory!;
       const matched = data.memory?.match(/[\d.]+/g) ?? [];
       this.memoryUsage = calculatePercentage(matched[0]!, matched[1]);
     }
 
-    if ("netIO" in data)
+    if (data.netIO !== undefined)
       this.netIO = data.netIO!;
 
-    if ("ssd" in data)
+    if (data.ssd !== undefined)
       this.ssd = data.ssd!;
 
-    if ("startedAt" in data) {
+    if (data.startedAt !== undefined) {
       this.startedAt = new Date(data.startedAt!);
       this.startedAtTimestamp = this.startedAt.valueOf();
     }
@@ -84,9 +80,5 @@ export default class AppStatus extends Base {
 
   get app() {
     return this.discloudApp.apps.cache.get(this.appId);
-  }
-
-  fetch() {
-    return this.discloudApp.apps.status(this.appId);
   }
 }

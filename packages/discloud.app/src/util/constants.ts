@@ -10,3 +10,16 @@ export const DefaultDiscloudAppOptions: DiscloudAppOptions & { token?: string } 
   /** The token to authenticate on Discloud API */
   token: process.env.DISCLOUD_TOKEN,
 };
+
+export const validAvatarURLExtensions = new Set([
+  ".apng",
+  ".avif",
+  ".bmp",
+  ".gif",
+  ".jpeg",
+  ".jpg",
+  ".png",
+  ".tif",
+  ".tiff",
+  ".webp",
+]);

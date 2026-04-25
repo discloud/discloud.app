@@ -1,13 +1,14 @@
-import { Routes, type ApiAppTeamManager, type RESTDeleteApiAppTeamResult, type RESTGetApiAppTeamResult, type RESTPostApiAppTeamResult, type RESTPutApiAppTeamResult } from "@discloudapp/api-types/v2";
+import { Routes, type RESTDeleteApiAppTeamResult, type RESTGetApiAppTeamResult, type RESTPostApiAppTeamResult, type RESTPutApiAppTeamResult } from "@discloudapp/api-types/v2";
 import { ModPermissionsBF, type ModPermissionsResolvable } from "@discloudapp/util";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
+import AppModerator from "../structures/AppModerator";
 import { validateNonEmptyString } from "../util/assertions";
 import BaseManager from "./BaseManager";
 
 /**
  * Manager for Team on your application on Discloud
  */
-export default class AppTeamManager extends BaseManager {
+export default class AppsModeratorsManager extends BaseManager {
   constructor(discloudApp: DiscloudApp) {
     super(discloudApp);
   }
@@ -19,7 +20,7 @@ export default class AppTeamManager extends BaseManager {
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    */
-  async create(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+  async create(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<AppModerator> {
     validateNonEmptyString(appID);
     validateNonEmptyString(modID);
 
@@ -30,7 +31,7 @@ export default class AppTeamManager extends BaseManager {
       },
     });
 
-    return data.app;
+    return new AppModerator(this.discloudApp, appID, data.app);
   }
 
   /**
@@ -40,7 +41,7 @@ export default class AppTeamManager extends BaseManager {
    * @param modID - The mod id
    * @param perms - The permissions for the mod. See {@link ModPermissionsResolvable}
    */
-  async edit(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<ApiAppTeamManager> {
+  async edit(appID: string, modID: string, perms: ModPermissionsResolvable): Promise<AppModerator> {
     validateNonEmptyString(appID);
     validateNonEmptyString(modID);
 
@@ -51,7 +52,7 @@ export default class AppTeamManager extends BaseManager {
       },
     });
 
-    return data.app;
+    return new AppModerator(this.discloudApp, appID, data.app);
   }
 
 
@@ -61,7 +62,7 @@ export default class AppTeamManager extends BaseManager {
    * @param appID - The app id
    * @param modID - The mod id
    */
-  async delete(appID: string, modID: string): Promise<RESTDeleteApiAppTeamResult> {
+  async delete(appID: string, modID: string): Promise<boolean> {
     validateNonEmptyString(appID);
     validateNonEmptyString(modID);
 
@@ -69,17 +70,24 @@ export default class AppTeamManager extends BaseManager {
       RESTDeleteApiAppTeamResult
     >(Routes.appTeam(appID, modID));
 
-    return data;
+    return data.status === "ok";
   }
 
   /**
    * Get mods information for your app on Discloud
    */
-  async fetch(appID: string) {
+  async fetch(appID: string): Promise<AppModerator[]> {
     validateNonEmptyString(appID);
 
     const data = await this.discloudApp.rest.get<RESTGetApiAppTeamResult>(Routes.appTeam(appID));
 
-    return data.team;
+    const list: AppModerator[] = [];
+
+    for (let i = 0; i < data.team.length; i++) {
+      const mod = data.team[i];
+      list.push(new AppModerator(this.discloudApp, appID, mod));
+    }
+
+    return list;
   }
 }

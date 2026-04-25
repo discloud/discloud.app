@@ -1,9 +1,9 @@
-import type { Constructor } from "../@types";
+/* import type { Constructor } from "../@types"; */
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 
-interface Base {
+/* interface Base {
   constructor: Constructor<this>
-}
+} */
 
 /**
  * Base for all structures

@@ -53,31 +53,31 @@ export default class AppUploaded extends Base {
   }
 
   protected _patch(data: Partial<ApiUploadApp>): this {
-    if ("addedAtTimestamp" in data)
+    if (data.addedAtTimestamp !== undefined)
       this.addedAtTimestamp = data.addedAtTimestamp!;
 
-    if ("avatarURL" in data)
+    if (data.avatarURL !== undefined)
       this.avatarURL = data.avatarURL!;
 
-    if ("autoRestart" in data)
+    if (data.autoRestart !== undefined)
       this.autoRestart = data.autoRestart!;
 
-    if ("lang" in data)
+    if (data.lang !== undefined)
       this.lang = data.lang!;
 
-    if ("mainFile" in data)
+    if (data.mainFile !== undefined)
       this.mainFile = data.mainFile!;
 
-    if ("name" in data)
+    if (data.name !== undefined)
       this.name = data.name!;
 
-    if ("ram" in data)
+    if (data.ram !== undefined)
       this.ram = data.ram!;
 
-    if ("type" in data)
+    if (data.type !== undefined)
       this.type = data.type!;
 
-    if ("version" in data)
+    if (data.version !== undefined)
       this.version = data.version!;
 
     return super._patch(data);

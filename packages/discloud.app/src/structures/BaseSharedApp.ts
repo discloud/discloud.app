@@ -6,7 +6,7 @@ import Base from "./Base";
 /**
  * Base for app structures
  */
-export default abstract class BaseTeamApp extends Base {
+export default abstract class BaseSharedApp extends Base {
   /**
    * Your app id
    */
@@ -29,7 +29,7 @@ export default abstract class BaseTeamApp extends Base {
    * Get backups for the app of your team on Discloud
    */
   backup() {
-    return this.discloudApp.teamApps.backup(this.id);
+    return this.discloudApp.sharedApps.backup(this.id);
   }
 
   /**
@@ -38,14 +38,14 @@ export default abstract class BaseTeamApp extends Base {
    * @param quantity - Minimum values is `100` to `bot` or `512` for `site`
    */
   setRam(quantity: number) {
-    return this.discloudApp.teamApps.ram(this.id, quantity);
+    return this.discloudApp.sharedApps.ram(this.id, quantity);
   }
 
   /**
    * Get logs for the app of your team on Discloud
    */
   terminal() {
-    return this.discloudApp.teamApps.terminal(this.id);
+    return this.discloudApp.sharedApps.terminal(this.id);
   }
 
   /**
@@ -54,28 +54,28 @@ export default abstract class BaseTeamApp extends Base {
    * @param options - Options to update your app.
    */
   update(options: UpdateAppOptions) {
-    return this.discloudApp.teamApps.update(this.id, options);
+    return this.discloudApp.sharedApps.update(this.id, options);
   }
 
   /**
    * Restart your team application on Discloud
    */
-  async restart() {
-    return this.discloudApp.teamApps.restart(this.id);
+  restart() {
+    return this.discloudApp.sharedApps.restart(this.id);
   }
 
   /**
    * Start your team application on Discloud
    */
   start() {
-    return this.discloudApp.teamApps.start(this.id);
+    return this.discloudApp.sharedApps.start(this.id);
   }
 
   /**
    * Stop your team application on Discloud
    */
   stop() {
-    return this.discloudApp.teamApps.stop(this.id);
+    return this.discloudApp.sharedApps.stop(this.id);
   }
 
   /**

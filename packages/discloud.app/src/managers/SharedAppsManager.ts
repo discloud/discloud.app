@@ -1,36 +1,26 @@
-import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTerminal, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiAppStatusResult, type RESTGetApiTeamResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppRamResult, type RESTPutApiAppRestartResult, type RESTPutApiAppStartResult, type RESTPutApiAppStopResult } from "@discloudapp/api-types/v2";
+import { Routes, type ApiAppManagerRestartedAll, type ApiAppManagerStartedAll, type ApiAppManagerStopedAll, type ApiTeamApp, type ApiTerminal, type BaseApiApp, type RESTGetApiAppAllBackupResult, type RESTGetApiAppAllLogResult, type RESTGetApiAppBackupResult, type RESTGetApiAppLogResult, type RESTGetApiTeamResult, type RESTPutApiAppAllRestartResult, type RESTPutApiAppAllStartResult, type RESTPutApiAppAllStopResult, type RESTPutApiAppCommitResult, type RESTPutApiAppRamResult } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { resolveFile } from "@discloudapp/util";
 import { constants } from "http2";
 import type { UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import AppBackup from "../structures/AppBackup";
-import TeamApp from "../structures/TeamApp";
-import type TeamAppStatus from "../structures/TeamAppStatus";
-import { validateNumberType, validateNonEmptyString } from "../util/assertions";
-import CachedManager from "./CachedManager";
+import SharedApp from "../structures/SharedApp";
+import { validateNonEmptyString, validateNumberType } from "../util/assertions";
+import BaseSharedAppsManager from "./BaseSharedAppsManager";
+import SharedAppsStatusManager from "./SharedAppsStatusManager";
+
+type PartialApiSharedApp = BaseApiApp & ApiTeamApp;
 
 /**
  * Manager for your team on Discloud
  */
-export default class TeamAppManager extends CachedManager<typeof TeamApp> {
+export default class SharedAppsManager extends BaseSharedAppsManager<typeof SharedApp> {
   constructor(discloudApp: DiscloudApp) {
-    super(discloudApp, TeamApp);
+    super(discloudApp, SharedApp);
   }
 
-  /**
-   * Get the status for the app of your team on Discloud
-   * 
-   * @param appID - Your team app id
-   */
-  async status(appID: string): Promise<TeamAppStatus>
-  async status(appID: string) {
-    validateNonEmptyString(appID);
-
-    const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.teamStatus(appID));
-
-    return this._add(data.apps).status;
-  }
+  readonly status = new SharedAppsStatusManager(this.discloudApp);
 
   /**
    * Get logs for the app of your team on Discloud
@@ -54,9 +44,9 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
       }
 
       return cache;
-    } else {
-      return data.apps.terminal;
     }
+
+    return data.apps.terminal;
   }
 
   /**
@@ -97,19 +87,16 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
     validateNonEmptyString(appID);
     validateNumberType(quantity);
 
-    const data = await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.teamRam(appID), {
+    await this.discloudApp.rest.put<RESTPutApiAppRamResult>(Routes.teamRam(appID), {
       body: {
         ramMB: quantity,
       },
     });
 
-    if (data.statusCode === 200)
-      this._add({
-        id: appID,
-        ram: quantity,
-      });
-
-    return data;
+    this._add({
+      id: appID,
+      ram: quantity,
+    } as PartialApiSharedApp);
   }
 
   /**
@@ -123,9 +110,7 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
 
     options.file = await resolveFile(options.file);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppCommitResult
-    >(Routes.teamCommit(appID), {
+    const data = await this.discloudApp.rest.put<RESTPutApiAppCommitResult>(Routes.teamCommit(appID), {
       file: <File>options.file,
     });
 
@@ -137,31 +122,27 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * 
    * @param appID - Your team app id
    */
-  async restart(appID: string): Promise<RESTPutApiAppRestartResult>
+  async restart(appID: string): Promise<void>
   async restart(appID: "all"): Promise<ApiAppManagerRestartedAll>
   async restart(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppRestartResult
-      | RESTPutApiAppAllRestartResult
-    >(Routes.teamRestart(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllRestartResult>(Routes.teamRestart(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.restarted.map(app => ({
-        id: app,
-        online: true,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.restarted))
+        for (let i = 0; i < data.apps.restarted.length; i++) {
+          const appId = data.apps.restarted[i];
+          this._patch(appId, { online: true } as PartialApiSharedApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: data.status === "ok",
-    });
-
-    return data;
+      online: true,
+    } as PartialApiSharedApp);
   }
 
   /**
@@ -169,31 +150,27 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * 
    * @param appID - Your team app id
    */
-  async start(appID: string): Promise<RESTPutApiAppStartResult>
+  async start(appID: string): Promise<boolean>
   async start(appID: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppStartResult
-      | RESTPutApiAppAllStartResult
-    >(Routes.teamStart(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllStartResult>(Routes.teamStart(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.started.map(app => ({
-        id: app,
-        online: true,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.started))
+        for (let i = 0; i < data.apps.started.length; i++) {
+          const appId = data.apps.started[i];
+          this._patch(appId, { online: true } as PartialApiSharedApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: data.status === "ok",
-    });
-
-    return data;
+      online: true,
+    } as PartialApiSharedApp);
   }
 
   /**
@@ -201,31 +178,27 @@ export default class TeamAppManager extends CachedManager<typeof TeamApp> {
    * 
    * @param appID - Your team app id
    */
-  async stop(appID: string): Promise<RESTPutApiAppStopResult>
+  async stop(appID: string): Promise<boolean>
   async stop(appID: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID: string) {
     validateNonEmptyString(appID);
 
-    const data = await this.discloudApp.rest.put<
-      | RESTPutApiAppStopResult
-      | RESTPutApiAppAllStopResult
-    >(Routes.teamStop(appID));
+    const data = await this.discloudApp.rest.put<RESTPutApiAppAllStopResult>(Routes.teamStop(appID));
 
-    if ("apps" in data) {
-      this._addMany(data.apps.stoped.map(app => ({
-        id: app,
-        online: false,
-      })));
+    if (appID === "all") {
+      if (Array.isArray(data.apps.stoped))
+        for (let i = 0; i < data.apps.stoped.length; i++) {
+          const appId = data.apps.stoped[i];
+          this._patch(appId, { online: true } as PartialApiSharedApp);
+        }
 
-      return data.apps;
+      return data.apps as unknown;
     }
 
     this._add({
       id: appID,
-      online: !(data.status === "ok"),
-    });
-
-    return data;
+      online: false,
+    } as PartialApiSharedApp);
   }
 
   /**

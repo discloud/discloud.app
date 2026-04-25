@@ -1,9 +1,11 @@
 import type { ApiAppBackup, ApiAppBackupAll } from "@discloudapp/api-types/v2";
-import { existsSync, mkdirSync, writeFileSync, type PathLike } from "fs";
-import { join } from "path";
+import { existsSync, type PathLike } from "fs";
+import { mkdir, writeFile } from "fs/promises";
+import { extname, join } from "path";
 import { cwd } from "process";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
+import { HttpBadStatusError } from "../errors/http";
 
 class AppBackup extends Base {
   /**
@@ -29,12 +31,12 @@ class AppBackup extends Base {
 
     this.appId = data.id;
 
+    this.url = data.url;
+
     this._patch(data);
   }
 
   protected _patch(data: Partial<ApiAppBackupAll | ApiAppBackup>): this {
-    this.url = data.url!;
-
     if ("status" in data)
       this.status = data.status;
 
@@ -45,22 +47,28 @@ class AppBackup extends Base {
    * Make backup of your application
    * 
    * @param path - Backup path
-   * @param fileName - Backup file name
+   * @param filename - Backup file name
    */
-  async download(path: PathLike = cwd(), fileName: string = this.appId) {
+  async download(path: PathLike = cwd(), filename: string = this.appId) {
     if (!this.url) throw Error("Missing backup URL");
 
     path = path.toString();
 
-    if (!existsSync(path)) mkdirSync(path, { recursive: true });
+    if (!existsSync(path)) await mkdir(path, { recursive: true });
 
-    this.data = await fetch(this.url).then(res => res.arrayBuffer()).then(Buffer.from);
+    const url = new URL(this.url);
 
-    const file = join(path, `${fileName}.${this.url.split(".").at(-1)}`);
+    const response = await fetch(url);
 
-    writeFileSync(file, this.data);
+    if (!response.ok) throw HttpBadStatusError.fromResponse(response);
 
-    if (existsSync(file)) this.url = file;
+    this.data = await response.arrayBuffer().then(Buffer.from);
+
+    const filepath = join(path, `${filename}${extname(url.pathname)}`);
+
+    await writeFile(filepath, this.data);
+
+    if (existsSync(filepath)) this.url = filepath;
 
     return this;
   }
