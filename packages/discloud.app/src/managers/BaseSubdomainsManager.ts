@@ -22,6 +22,7 @@ export default abstract class BaseSubdomainsManager<T extends Instanciable<typeo
     // @ts-expect-error ts(2511)
     const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
     this._cache.set(entry.id, entry);
+    this.discloudApp.user.subdomains.add(data.id);
     return entry;
   }
 
@@ -37,7 +38,10 @@ export default abstract class BaseSubdomainsManager<T extends Instanciable<typeo
   }
 
   protected _clear(data?: (string | PartialApiSubdomain)[]): void {
-    if (!data?.length) return this._cache.clear();
+    if (!data?.length) {
+      this.discloudApp.user.subdomains.clear();
+      return this._cache.clear();
+    }
 
     const mapped = new Set(data.map(v => typeof v === "string" ? v : v.id));
 
@@ -49,6 +53,7 @@ export default abstract class BaseSubdomainsManager<T extends Instanciable<typeo
   }
 
   protected _delete(id: string): boolean {
+    this.discloudApp.user.subdomains.delete(id);
     return this._cache.delete(id);
   }
 

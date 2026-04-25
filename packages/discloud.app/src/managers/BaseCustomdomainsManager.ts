@@ -22,6 +22,7 @@ export default abstract class BaseCustomdomainsManager<T extends Instanciable<ty
     // @ts-expect-error ts(2511)
     const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
     this._cache.set(entry.id, entry);
+    this.discloudApp.user.customdomains.add(data.id);
     return entry;
   }
 
@@ -37,7 +38,10 @@ export default abstract class BaseCustomdomainsManager<T extends Instanciable<ty
   }
 
   protected _clear(data?: (string | PartialApiCustomdomain)[]): void {
-    if (!data?.length) return this._cache.clear();
+    if (!data?.length) {
+      this.discloudApp.user.customdomains.clear();
+      return this._cache.clear();
+    }
 
     const mapped = new Set(data.map(v => typeof v === "string" ? v : v.id));
 
@@ -49,6 +53,7 @@ export default abstract class BaseCustomdomainsManager<T extends Instanciable<ty
   }
 
   protected _delete(id: string): boolean {
+    this.discloudApp.user.customdomains.delete(id);
     return this._cache.delete(id);
   }
 
