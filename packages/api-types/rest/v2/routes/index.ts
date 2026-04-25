@@ -2,6 +2,7 @@ import { type OmitNewableFunctionKeys } from "../../../util/types";
 import { App } from "./App";
 import { Customdomain } from "./Customdomain";
 import { Locale } from "./Locale";
+import { Snapshot } from "./Snapshot";
 import { Subdomain } from "./Subdomain";
 import { Team } from "./Team";
 import { Upload } from "./Upload";
@@ -35,6 +36,9 @@ abstract class RoutesIndexer {
 
   // locale
   static locale = Locale.locale;
+
+  // snapshot
+  static snapshot = Snapshot.snapshot;
 
   // subdmain
   static subdmain = Subdomain.subdomain;

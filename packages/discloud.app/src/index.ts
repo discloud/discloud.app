@@ -38,6 +38,7 @@ import Customdomain from "./structures/Customdomain";
 import CustomdomainApp from "./structures/CustomdomainApp";
 import CustomdomainInstruction from "./structures/CustomdomainInstruction";
 import SharedApp from "./structures/SharedApp";
+import SharedAppOwner from "./structures/SharedAppOwner";
 import SharedAppStatus from "./structures/SharedAppStatus";
 import Subdomain from "./structures/Subdomain";
 import User from "./structures/User";
@@ -95,6 +96,7 @@ export {
   DataManager,
   DiscloudApp,
   SharedApp,
+  SharedAppOwner,
   SharedAppsManager,
   SharedAppStatus,
   SharedAppStatusManager,

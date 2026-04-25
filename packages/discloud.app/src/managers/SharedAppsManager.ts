@@ -150,7 +150,7 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
    * 
    * @param appID - Your team app id
    */
-  async start(appID: string): Promise<boolean>
+  async start(appID: string): Promise<void>
   async start(appID: "all"): Promise<ApiAppManagerStartedAll>
   async start(appID: string) {
     validateNonEmptyString(appID);
@@ -178,7 +178,7 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
    * 
    * @param appID - Your team app id
    */
-  async stop(appID: string): Promise<boolean>
+  async stop(appID: string): Promise<void>
   async stop(appID: "all"): Promise<ApiAppManagerStopedAll>
   async stop(appID: string) {
     validateNonEmptyString(appID);

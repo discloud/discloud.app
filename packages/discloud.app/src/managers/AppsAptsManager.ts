@@ -17,14 +17,12 @@ export default class AppsAptsManager extends BaseManager {
    * @param appID - The app id
    * @param apt - One or more APTs to install. See {@link AptString}.
    */
-  async install(appID: string, apt: APTString | APTString[]): Promise<boolean> {
+  async install(appID: string, apt: APTString | APTString[]): Promise<void> {
     validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
-    const data = await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
-
-    return data.status === "ok";
+    await this.discloudApp.rest.put<RESTPutApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
   }
 
   /**
@@ -33,13 +31,11 @@ export default class AppsAptsManager extends BaseManager {
    * @param appID - The app id
    * @param apt - One or more APTs to uninstall. See {@link AptString}.
    */
-  async uninstall(appID: string, apt: APTString | APTString[]): Promise<boolean> {
+  async uninstall(appID: string, apt: APTString | APTString[]): Promise<void> {
     validateNonEmptyString(appID);
 
     if (Array.isArray(apt)) apt = <APTString>apt.join();
 
-    const data = await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
-
-    return data.status === "ok";
+    await this.discloudApp.rest.delete<RESTDeleteApiAppAptResult>(Routes.appApt(appID), { body: { apt } });
   }
 }
