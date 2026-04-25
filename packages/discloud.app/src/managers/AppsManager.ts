@@ -6,7 +6,6 @@ import { type CreateAppOptions, type UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
-import AppUploaded from "../structures/AppUploaded";
 import { validateNonEmptyString, validateNumberType } from "../util/assertions";
 import { ProfileOptions } from "../util/validations";
 import AppsAptsManager from "./AppsAptsManager";
@@ -136,9 +135,9 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
     });
 
     if ("app" in data) {
-      this._add(data.app);
+      const app = this._add(data.app);
 
-      return Object.assign({}, data, { app: new AppUploaded(this.discloudApp, data.app) });
+      return Object.assign({}, data, { app });
     }
 
     return data;
