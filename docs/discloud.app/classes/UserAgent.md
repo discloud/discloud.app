@@ -38,7 +38,7 @@ Defined in: packages/rest/dist/UserAgent.d.ts:8
 
 ### prefix?
 
-> `readonly` `optional` **prefix**: `string`
+> `readonly` `optional` **prefix?**: `string`
 
 Defined in: packages/rest/dist/UserAgent.d.ts:6
 
@@ -46,7 +46,7 @@ Defined in: packages/rest/dist/UserAgent.d.ts:6
 
 ### version?
 
-> `readonly` `optional` **version**: `string`
+> `readonly` `optional` **version?**: `string`
 
 Defined in: packages/rest/dist/UserAgent.d.ts:7
 

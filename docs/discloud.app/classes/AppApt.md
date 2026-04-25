@@ -6,7 +6,7 @@
 
 # Class: AppApt
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:5](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L5)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppApt.ts#L5)
 
 Base for all structures
 
@@ -18,9 +18,9 @@ Base for all structures
 
 ### Constructor
 
-> **new AppApt**(`discloudApp`, `data`): `AppApt`
+> **new AppApt**(`discloudApp`, `appId`): `AppApt`
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L8)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppApt.ts#L6)
 
 #### Parameters
 
@@ -28,9 +28,9 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.co
 
 [`DiscloudApp`](DiscloudApp.md)
 
-##### data
+##### appId
 
-[`BaseApiApp`](../interfaces/BaseApiApp.md)
+`string`
 
 #### Returns
 
@@ -46,19 +46,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:8](https://github.co
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L6)
-
-***
-
-### constructor
-
-> **constructor**: [`Constructor`](../interfaces/Constructor.md)\<`AppApt`\>
-
-Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L5)
-
-#### Inherited from
-
-`Base.constructor`
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppApt.ts#L6)
 
 ***
 
@@ -66,7 +54,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:5](https://github.com/
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -78,7 +66,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -92,21 +80,21 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 ### \_patch()
 
-> `protected` **\_patch**(`data`): `this`
+> `protected` **\_patch**(`_`): `this`
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L14)
+Defined in: [packages/discloud.app/src/structures/Base.ts:22](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L22)
 
 #### Parameters
 
-##### data
+##### \_
 
-[`BaseApiApp`](../interfaces/BaseApiApp.md)
+`unknown`
 
 #### Returns
 
 `this`
 
-#### Overrides
+#### Inherited from
 
 [`Base`](Base.md).[`_patch`](Base.md#_patch)
 
@@ -116,7 +104,7 @@ Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.c
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -136,34 +124,34 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 ### install()
 
-> **install**(`apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTPutApiAppAptResult`](../interfaces/RESTPutApiAppAptResult.md)\>
+> **install**(`apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:18](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L18)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppApt.ts#L10)
 
 #### Parameters
 
 ##### apt
 
-`"ffmpeg"` | `"canvas"` | `"java"` | `"libgl"` | `"openssl"` | `"puppeteer"` | `"tools"` | (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
+`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"` \| (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTPutApiAppAptResult`](../interfaces/RESTPutApiAppAptResult.md)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
 ***
 
 ### uninstall()
 
-> **uninstall**(`apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTDeleteApiAppAptResult`](../interfaces/RESTDeleteApiAppAptResult.md)\>
+> **uninstall**(`apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/structures/AppApt.ts:22](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/structures/AppApt.ts#L22)
+Defined in: [packages/discloud.app/src/structures/AppApt.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppApt.ts#L14)
 
 #### Parameters
 
 ##### apt
 
-`"ffmpeg"` | `"canvas"` | `"java"` | `"libgl"` | `"openssl"` | `"puppeteer"` | `"tools"` | (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
+`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"` \| (`"ffmpeg"` \| `"canvas"` \| `"java"` \| `"libgl"` \| `"openssl"` \| `"puppeteer"` \| `"tools"`)[]
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RESTDeleteApiAppAptResult`](../interfaces/RESTDeleteApiAppAptResult.md)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>

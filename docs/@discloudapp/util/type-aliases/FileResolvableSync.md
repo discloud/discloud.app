@@ -8,4 +8,4 @@
 
 > **FileResolvableSync** = [`Exclude`](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers)\<[`FileResolvable`](FileResolvable.md), `URL` \| `Readable` \| `Writable`\>
 
-Defined in: [packages/util/src/FileResolver.ts:104](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/FileResolver.ts#L104)
+Defined in: [packages/util/src/FileResolver.ts:126](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L126)

@@ -8,17 +8,17 @@
 
 > **calculatePercentage**(`value`, `major`): `number`
 
-Defined in: [packages/util/src/utils.ts:16](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/utils.ts#L16)
+Defined in: [packages/util/src/utils.ts:21](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/utils.ts#L21)
 
 ## Parameters
 
 ### value
 
-`string` | `number`
+`string` \| `number`
 
 ### major
 
-`string` | `number`
+`string` \| `number`
 
 ## Returns
 

@@ -62,7 +62,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1082
 
 ### cause?
 
-> `optional` **cause**: `unknown`
+> `optional` **cause?**: `unknown`
 
 Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
@@ -98,7 +98,7 @@ Defined in: packages/util/dist/config/errors.d.ts:2
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 

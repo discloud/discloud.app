@@ -8,7 +8,7 @@
 
 > `const` **DefaultDiscloudAppOptions**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md) & `object`
 
-Defined in: [packages/discloud.app/src/util/constants.ts:8](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/util/constants.ts#L8)
+Defined in: [packages/discloud.app/src/util/constants.ts:8](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/util/constants.ts#L8)
 
 Library default options
 
@@ -16,4 +16,4 @@ Library default options
 
 ### token?
 
-> `optional` **token**: `string`
+> `optional` **token?**: `string`

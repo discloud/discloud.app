@@ -8,4 +8,4 @@
 
 > `const` **DefaultRestOptions**: [`Required`](https://www.typescriptlang.org/docs/handbook/utility-types.html#requiredtype)\<[`RESTOptions`](../interfaces/RESTOptions.md)\>
 
-Defined in: [packages/rest/src/utils/constants.ts:6](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/utils/constants.ts#L6)
+Defined in: [packages/rest/src/utils/constants.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/utils/constants.ts#L6)

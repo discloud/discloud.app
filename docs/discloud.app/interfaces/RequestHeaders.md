@@ -22,7 +22,7 @@ Defined in: packages/rest/dist/@types/index.d.ts:36
 
 ### contentType?
 
-> `optional` **contentType**: `string`
+> `optional` **contentType?**: `string`
 
 Defined in: packages/rest/dist/@types/index.d.ts:37
 
@@ -30,6 +30,6 @@ Defined in: packages/rest/dist/@types/index.d.ts:37
 
 ### User-Agent?
 
-> `optional` **User-Agent**: `string`
+> `optional` **User-Agent?**: `string`
 
 Defined in: packages/rest/dist/@types/index.d.ts:38

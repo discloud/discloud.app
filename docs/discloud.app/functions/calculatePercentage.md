@@ -8,17 +8,17 @@
 
 > **calculatePercentage**(`value`, `major`): `number`
 
-Defined in: packages/util/dist/utils.d.ts:3
+Defined in: packages/util/dist/utils.d.ts:5
 
 ## Parameters
 
 ### value
 
-`string` | `number`
+`string` \| `number`
 
 ### major
 
-`string` | `number`
+`string` \| `number`
 
 ## Returns
 

@@ -298,13 +298,13 @@ Gets an [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 ### toJSON()
 
-> **toJSON**(): `N` *extends* `number` ? `N`\<`N`\> : `` `${N}` ``
+> **toJSON**(): `N` *extends* `number` ? `N` : `` `${N}` ``
 
 Defined in: packages/util/dist/BitField.d.ts:79
 
 #### Returns
 
-`N` *extends* `number` ? `N`\<`N`\> : `` `${N}` ``
+`N` *extends* `number` ? `N` : `` `${N}` ``
 
 ***
 

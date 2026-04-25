@@ -8,7 +8,7 @@
 
 > **resolveFileSync**(`file`, `filename`): `File`
 
-Defined in: packages/util/dist/FileResolver.d.ts:33
+Defined in: packages/util/dist/FileResolver.d.ts:42
 
 ## Parameters
 

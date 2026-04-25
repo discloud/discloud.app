@@ -50,7 +50,7 @@ Defined in: packages/util/dist/config/config.d.ts:10
 
 ### \_watcher?
 
-> `protected` `optional` **\_watcher**: `FSWatcher`
+> `protected` `optional` **\_watcher?**: `FSWatcher`
 
 Defined in: packages/util/dist/config/config.d.ts:11
 

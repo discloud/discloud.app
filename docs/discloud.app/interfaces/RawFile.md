@@ -10,23 +10,37 @@ Defined in: packages/util/dist/FileResolver.d.ts:7
 
 ## Properties
 
-### contentType?
+### ~~contentType?~~
 
-> `optional` **contentType**: `string`
+> `optional` **contentType?**: `string`
 
-Defined in: packages/util/dist/FileResolver.d.ts:19
+Defined in: packages/util/dist/FileResolver.d.ts:20
 
 Content-Type of the file
+
+#### Deprecated
+
+use mimeType instead.
 
 ***
 
 ### data
 
-> **data**: `BinaryLike` \| `Blob` \| `File` \| `Buffer`\<`ArrayBufferLike`\>
+> **data**: `BinaryLike` \| `Blob`
 
 Defined in: packages/util/dist/FileResolver.d.ts:15
 
 The actual data for the file
+
+***
+
+### mimeType?
+
+> `optional` **mimeType?**: `string`
+
+Defined in: packages/util/dist/FileResolver.d.ts:24
+
+Content-Type of the file
 
 ***
 

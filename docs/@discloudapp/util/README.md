@@ -36,20 +36,20 @@
 
 ## Variables
 
+- [~~bindFunctions~~](variables/bindFunctions.md)
 - [filenamePattern](variables/filenamePattern.md)
 - [~~fileNamePattern~~](variables/fileNamePattern-1.md)
+- [~~mergeDefaults~~](variables/mergeDefaults.md)
 - [version](variables/version.md)
 
 ## Functions
 
-- [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
 - [fsGlob](functions/fsGlob.md)
 - [fsGlobIterate](functions/fsGlobIterate.md)
 - [glob](functions/glob.md)
 - [globIterate](functions/globIterate.md)
 - [importJSON](functions/importJSON.md)
-- [mergeDefaults](functions/mergeDefaults.md)
 - [resolveFile](functions/resolveFile.md)
 - [resolveFileSync](functions/resolveFileSync.md)
 - [streamToBlob](functions/streamToBlob.md)

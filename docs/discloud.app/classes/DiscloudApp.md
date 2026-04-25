@@ -6,7 +6,7 @@
 
 # Class: DiscloudApp
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L13)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
 
 ## Extends
 
@@ -16,13 +16,13 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:13](https://gi
 
 ### Constructor
 
-> **new DiscloudApp**(`options`): `DiscloudApp`
+> **new DiscloudApp**(`options?`): `DiscloudApp`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:44](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L44)
 
 #### Parameters
 
-##### options
+##### options?
 
 [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md) = `{}`
 
@@ -36,27 +36,19 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://gi
 
 ## Properties
 
-### appApt
-
-> `readonly` **appApt**: [`AppAptManager`](AppAptManager.md)
-
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:16](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L16)
-
-***
-
 ### apps
 
 > `readonly` **apps**: [`AppManager`](AppManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:17](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L17)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
 
 ***
 
-### appTeam
+### customdomains
 
-> `readonly` **appTeam**: [`AppTeamManager`](AppTeamManager.md)
+> `readonly` **customdomains**: [`CustomdomainsManager`](CustomdomainsManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:22](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L22)
 
 ***
 
@@ -64,7 +56,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://gi
 
 > `readonly` **options**: [`DiscloudAppOptions`](../interfaces/DiscloudAppOptions.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L14)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L18)
 
 ***
 
@@ -72,15 +64,23 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:14](https://gi
 
 > `readonly` **rest**: [`REST`](REST.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:15](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L15)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
 
 ***
 
-### teamApps
+### sharedApps
 
-> `readonly` **teamApps**: [`TeamAppManager`](TeamAppManager.md)
+> `readonly` **sharedApps**: [`SharedAppsManager`](SharedAppsManager.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L19)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:21](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L21)
+
+***
+
+### subdomains
+
+> `readonly` **subdomains**: [`SubdomainsManager`](SubdomainsManager.md)
+
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:23](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L23)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:19](https://gi
 
 > `readonly` **user**: [`User`](User.md)
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:20](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L20)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:24](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L24)
 
 ***
 
@@ -205,13 +205,67 @@ v13.6.0, v12.17.0
 
 ## Accessors
 
+### appApt
+
+#### Get Signature
+
+> **get** **appApt**(): [`AppAptManager`](AppAptManager.md)
+
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:27](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L27)
+
+##### Deprecated
+
+use apps.apts instead
+
+##### Returns
+
+[`AppAptManager`](AppAptManager.md)
+
+***
+
+### appTeam
+
+#### Get Signature
+
+> **get** **appTeam**(): [`AppsModeratorsManager`](AppsModeratorsManager.md)
+
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:33](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L33)
+
+##### Deprecated
+
+use apps.moderators instead
+
+##### Returns
+
+[`AppsModeratorsManager`](AppsModeratorsManager.md)
+
+***
+
+### teamApps
+
+#### Get Signature
+
+> **get** **teamApps**(): [`SharedAppsManager`](SharedAppsManager.md)
+
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:39](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L39)
+
+##### Deprecated
+
+use sharedApps instead
+
+##### Returns
+
+[`SharedAppsManager`](SharedAppsManager.md)
+
+***
+
 ### token
 
 #### Get Signature
 
 > **get** **token**(): `string`
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:45](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L45)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:67](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L67)
 
 ##### Returns
 
@@ -239,11 +293,11 @@ Defined in: node\_modules/@types/node/events.d.ts:103
 
 ##### event
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -273,11 +327,11 @@ Alias for `emitter.on(eventName, listener)`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -347,11 +401,11 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -447,13 +501,13 @@ in the list of the listeners of the event.
 
 ##### eventName
 
-The name of the event being listened for
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event being listened for
 
 ##### listener?
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The event handler function
 
@@ -473,7 +527,7 @@ v3.2.0
 
 ### listeners()
 
-> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:832
 
@@ -497,11 +551,11 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -515,15 +569,15 @@ v0.1.26
 
 ### login()
 
-> **login**(`token`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
+> **login**(`token?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`User`](User.md)\>
 
-Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:54](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L54)
+Defined in: [packages/discloud.app/src/discloudApp/DiscloudApp.ts:76](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/discloudApp/DiscloudApp.ts#L76)
 
 Login on Discloud API
 
 #### Parameters
 
-##### token
+##### token?
 
 `string` = `...`
 
@@ -553,11 +607,11 @@ Alias for `emitter.removeListener()`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -616,13 +670,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -681,13 +735,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -734,13 +788,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -785,13 +839,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -811,7 +865,7 @@ v6.0.0
 
 ### rawListeners()
 
-> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:863
 
@@ -853,11 +907,11 @@ emitter.emit('log');
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -999,11 +1053,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -1149,11 +1203,11 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 ##### name
 
-`string` | `symbol`
+`string` \| `symbol`
 
 #### Returns
 
@@ -1205,7 +1259,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 #### Returns
 
@@ -1249,9 +1303,9 @@ The emitter to query
 
 ##### eventName
 
-The event name
+`string` \| `symbol`
 
-`string` | `symbol`
+The event name
 
 #### Returns
 
@@ -1364,7 +1418,7 @@ console.log('done'); // prints 'done'
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1590,7 +1644,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1721,7 +1775,7 @@ v11.13.0, v10.16.0
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets`): `void`
 
 Defined in: node\_modules/@types/node/events.d.ts:369
 
@@ -1742,7 +1796,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-##### eventTargets?
+##### eventTargets
 
 ...(`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`)[]
 

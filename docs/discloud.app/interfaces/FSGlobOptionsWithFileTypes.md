@@ -16,7 +16,7 @@ Defined in: packages/util/dist/glob/types.d.ts:18
 
 ### cwd?
 
-> `optional` **cwd**: `string`
+> `optional` **cwd?**: `string`
 
 Defined in: packages/util/dist/glob/types.d.ts:6
 
@@ -36,7 +36,7 @@ process.cwd()
 
 ### withDirectories?
 
-> `optional` **withDirectories**: `boolean`
+> `optional` **withDirectories?**: `boolean`
 
 Defined in: packages/util/dist/glob/types.d.ts:10
 

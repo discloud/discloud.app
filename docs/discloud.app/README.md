@@ -267,27 +267,49 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [AppAptManager](classes/AppAptManager.md)
 - [AppBackup](classes/AppBackup.md)
 - [AppManager](classes/AppManager.md)
+- [AppModerator](classes/AppModerator.md)
+- [AppModeratorsManager](classes/AppModeratorsManager.md)
+- [AppsModeratorsManager](classes/AppsModeratorsManager.md)
 - [AppStatus](classes/AppStatus.md)
-- [AppTeam](classes/AppTeam.md)
-- [AppTeamManager](classes/AppTeamManager.md)
+- [AppStatusManager](classes/AppStatusManager.md)
 - [AppUploaded](classes/AppUploaded.md)
 - [Base](classes/Base.md)
 - [BaseApp](classes/BaseApp.md)
+- [BaseAppsManager](classes/BaseAppsManager.md)
+- [BaseAppsModeratorsManager](classes/BaseAppsModeratorsManager.md)
+- [BaseAppsStatusManager](classes/BaseAppsStatusManager.md)
+- [BaseAppStatus](classes/BaseAppStatus.md)
+- [BaseCustomdomain](classes/BaseCustomdomain.md)
+- [BaseCustomdomainsManager](classes/BaseCustomdomainsManager.md)
 - [BaseManager](classes/BaseManager.md)
-- [BaseTeamApp](classes/BaseTeamApp.md)
+- [BaseSharedApp](classes/BaseSharedApp.md)
+- [BaseSharedAppsManager](classes/BaseSharedAppsManager.md)
+- [BaseSharedAppsStatusManager](classes/BaseSharedAppsStatusManager.md)
+- [BaseSharedAppStatus](classes/BaseSharedAppStatus.md)
+- [BaseSubdomain](classes/BaseSubdomain.md)
+- [BaseSubdomainsManager](classes/BaseSubdomainsManager.md)
 - [BitField](classes/BitField.md)
 - [CachedManager](classes/CachedManager.md)
+- [Customdomain](classes/Customdomain.md)
+- [CustomdomainApp](classes/CustomdomainApp.md)
+- [CustomdomainInstruction](classes/CustomdomainInstruction.md)
+- [CustomdomainsManager](classes/CustomdomainsManager.md)
 - [DataManager](classes/DataManager.md)
 - [DiscloudAPIError](classes/DiscloudAPIError.md)
 - [DiscloudApp](classes/DiscloudApp.md)
 - [DiscloudConfig](classes/DiscloudConfig.md)
+- [HttpBadStatusError](classes/HttpBadStatusError.md)
 - [Ignore](classes/Ignore.md)
 - [MissingMainError](classes/MissingMainError.md)
 - [ModPermissionsBF](classes/ModPermissionsBF.md)
 - [REST](classes/REST.md)
-- [TeamApp](classes/TeamApp.md)
-- [TeamAppManager](classes/TeamAppManager.md)
-- [TeamAppStatus](classes/TeamAppStatus.md)
+- [SharedApp](classes/SharedApp.md)
+- [SharedAppOwner](classes/SharedAppOwner.md)
+- [SharedAppsManager](classes/SharedAppsManager.md)
+- [SharedAppStatus](classes/SharedAppStatus.md)
+- [SharedAppStatusManager](classes/SharedAppStatusManager.md)
+- [Subdomain](classes/Subdomain.md)
+- [SubdomainsManager](classes/SubdomainsManager.md)
 - [User](classes/User.md)
 - [UserAgent](classes/UserAgent.md)
 
@@ -306,17 +328,21 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [ApiAppTeamManager](interfaces/ApiAppTeamManager.md)
 - [ApiConsoleApp](interfaces/ApiConsoleApp.md)
 - [ApiConsoleAppShell](interfaces/ApiConsoleAppShell.md)
+- [ApiDomain](interfaces/ApiDomain.md)
+- [ApiDomainApp](interfaces/ApiDomainApp.md)
+- [ApiDomainInstruction](interfaces/ApiDomainInstruction.md)
 - [ApiNetIO](interfaces/ApiNetIO.md)
 - [ApiStatusApp](interfaces/ApiStatusApp.md)
+- [ApiSubdomain](interfaces/ApiSubdomain.md)
+- [ApiTeamApp](interfaces/ApiTeamApp.md)
 - [ApiTeamAppOwner](interfaces/ApiTeamAppOwner.md)
-- [ApiTeamApps](interfaces/ApiTeamApps.md)
+- [~~ApiTeamApps~~](interfaces/ApiTeamApps.md)
 - [ApiTerminal](interfaces/ApiTerminal.md)
 - [ApiUploadApp](interfaces/ApiUploadApp.md)
 - [ApiUser](interfaces/ApiUser.md)
 - [ApiUserAppStatus](interfaces/ApiUserAppStatus.md)
 - [BaseApiApp](interfaces/BaseApiApp.md)
 - [BitFieldConstructor](interfaces/BitFieldConstructor.md)
-- [Constructor](interfaces/Constructor.md)
 - [DiscloudAppOptions](interfaces/DiscloudAppOptions.md)
 - [FSGlobOptionsWithFileTypes](interfaces/FSGlobOptionsWithFileTypes.md)
 - [FSGlobOptionsWithoutFileTypes](interfaces/FSGlobOptionsWithoutFileTypes.md)
@@ -340,6 +366,10 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [RESTGetApiAppResult](interfaces/RESTGetApiAppResult.md)
 - [RESTGetApiAppStatusResult](interfaces/RESTGetApiAppStatusResult.md)
 - [RESTGetApiAppTeamResult](interfaces/RESTGetApiAppTeamResult.md)
+- [RESTGetApiCustomdomainListResult](interfaces/RESTGetApiCustomdomainListResult.md)
+- [RESTGetApiCustomdomainResult](interfaces/RESTGetApiCustomdomainResult.md)
+- [RESTGetApiSubdomainListResult](interfaces/RESTGetApiSubdomainListResult.md)
+- [RESTGetApiSubdomainResult](interfaces/RESTGetApiSubdomainResult.md)
 - [RESTGetApiTeamResult](interfaces/RESTGetApiTeamResult.md)
 - [RESTGetApiUserResult](interfaces/RESTGetApiUserResult.md)
 - [RESTOptions](interfaces/RESTOptions.md)
@@ -365,24 +395,28 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [APTString](type-aliases/APTString.md)
 - [BitFieldResolvable](type-aliases/BitFieldResolvable.md)
 - [ClientEvents](type-aliases/ClientEvents.md)
-- [Constructable](type-aliases/Constructable.md)
 - [CreateAppOptions](type-aliases/CreateAppOptions.md)
 - [DiscloudConfigType](type-aliases/DiscloudConfigType.md)
 - [FileResolvable](type-aliases/FileResolvable.md)
 - [FileResolvableSync](type-aliases/FileResolvableSync.md)
 - [FSGlobOptions](type-aliases/FSGlobOptions.md)
-- [If](type-aliases/If.md)
+- [Instanciable](type-aliases/Instanciable.md)
 - [LocaleString](type-aliases/LocaleString.md)
 - [ModPermissionsResolvable](type-aliases/ModPermissionsResolvable.md)
 - [ModPermissionsString](type-aliases/ModPermissionsString.md)
-- [ProfileOptions](type-aliases/ProfileOptions.md)
 - [RequestOptions](type-aliases/RequestOptions.md)
 - [RESTDeleteApiAppDeleteResult](type-aliases/RESTDeleteApiAppDeleteResult.md)
 - [RESTDeleteApiAppTeamResult](type-aliases/RESTDeleteApiAppTeamResult.md)
+- [RESTDeleteApiCustomdomainResult](type-aliases/RESTDeleteApiCustomdomainResult.md)
+- [RESTDeleteApiSubdomainResult](type-aliases/RESTDeleteApiSubdomainResult.md)
+- [RESTGetApiCustomdomainVerifyResult](type-aliases/RESTGetApiCustomdomainVerifyResult.md)
+- [RESTPostApiCustomdomainCreateResult](type-aliases/RESTPostApiCustomdomainCreateResult.md)
+- [RESTPostApiSubdomainResult](type-aliases/RESTPostApiSubdomainResult.md)
 - [RESTPostApiUploadResult](type-aliases/RESTPostApiUploadResult.md)
 - [RESTPutApiAppRestartResult](type-aliases/RESTPutApiAppRestartResult.md)
 - [RESTPutApiAppStartResult](type-aliases/RESTPutApiAppStartResult.md)
 - [RESTPutApiAppStopResult](type-aliases/RESTPutApiAppStopResult.md)
+- [RESTPutApiCustomdomainEditResult](type-aliases/RESTPutApiCustomdomainEditResult.md)
 - [RouteLike](type-aliases/RouteLike.md)
 - [Routes](type-aliases/Routes.md)
 - [UpdateAppOptions](type-aliases/UpdateAppOptions.md)
@@ -392,6 +426,7 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [APIVersion](variables/APIVersion.md)
 - [APT](variables/APT.md)
 - [APTPackages](variables/APTPackages.md)
+- [~~bindFunctions~~](variables/bindFunctions.md)
 - [DefaultDiscloudAppOptions](variables/DefaultDiscloudAppOptions.md)
 - [DefaultRestOptions](variables/DefaultRestOptions.md)
 - [discloud](variables/discloud.md)
@@ -399,22 +434,69 @@ await discloud.appTeam.delete("APP_ID", "MOD_ID"); // Promise<RESTApiBaseResult>
 - [discloudConfigScopes](variables/discloudConfigScopes.md)
 - [filenamePattern](variables/filenamePattern.md)
 - [~~fileNamePattern~~](variables/fileNamePattern-1.md)
-- [ProfileOptions](variables/ProfileOptions.md)
+- [~~mergeDefaults~~](variables/mergeDefaults.md)
 - [RouteBases](variables/RouteBases.md)
 - [Routes](variables/Routes.md)
+- [validAvatarURLExtensions](variables/validAvatarURLExtensions.md)
 - [version](variables/version.md)
 
 ## Functions
 
-- [bindFunctions](functions/bindFunctions.md)
 - [calculatePercentage](functions/calculatePercentage.md)
 - [fsGlob](functions/fsGlob.md)
 - [fsGlobIterate](functions/fsGlobIterate.md)
 - [glob](functions/glob.md)
 - [globIterate](functions/globIterate.md)
 - [importJSON](functions/importJSON.md)
-- [mergeDefaults](functions/mergeDefaults.md)
 - [resolveFile](functions/resolveFile.md)
 - [resolveFileSync](functions/resolveFileSync.md)
 - [streamToBlob](functions/streamToBlob.md)
 - [streamToFile](functions/streamToFile.md)
+
+## References
+
+### AppsAptsManager
+
+Renames and re-exports [AppAptManager](classes/AppAptManager.md)
+
+***
+
+### AppsManager
+
+Renames and re-exports [AppManager](classes/AppManager.md)
+
+***
+
+### AppTeam
+
+Renames and re-exports [AppModerator](classes/AppModerator.md)
+
+***
+
+### AppTeamManager
+
+Renames and re-exports [AppsModeratorsManager](classes/AppsModeratorsManager.md)
+
+***
+
+### BaseTeamApp
+
+Renames and re-exports [BaseSharedApp](classes/BaseSharedApp.md)
+
+***
+
+### TeamApp
+
+Renames and re-exports [SharedApp](classes/SharedApp.md)
+
+***
+
+### TeamAppManager
+
+Renames and re-exports [SharedAppsManager](classes/SharedAppsManager.md)
+
+***
+
+### TeamAppStatus
+
+Renames and re-exports [SharedAppStatus](classes/SharedAppStatus.md)

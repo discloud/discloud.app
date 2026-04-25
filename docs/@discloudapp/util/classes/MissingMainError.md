@@ -6,7 +6,7 @@
 
 # Class: MissingMainError
 
-Defined in: [packages/util/src/config/errors.ts:1](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/config/errors.ts#L1)
+Defined in: [packages/util/src/config/errors.ts:1](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/config/errors.ts#L1)
 
 ## Extends
 
@@ -62,7 +62,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1082
 
 ### cause?
 
-> `optional` **cause**: `unknown`
+> `optional` **cause?**: `unknown`
 
 Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
@@ -88,7 +88,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > `readonly` **name**: `"MissingMain"` = `"MissingMain"`
 
-Defined in: [packages/util/src/config/errors.ts:2](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/config/errors.ts#L2)
+Defined in: [packages/util/src/config/errors.ts:2](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/config/errors.ts#L2)
 
 #### Overrides
 
@@ -98,7 +98,7 @@ Defined in: [packages/util/src/config/errors.ts:2](https://github.com/discloud/d
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
 
 Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 

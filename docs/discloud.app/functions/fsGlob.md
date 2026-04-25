@@ -16,7 +16,7 @@ Defined in: packages/util/dist/glob/fsGlob.d.ts:3
 
 #### pattern
 
-`string` | `string`[]
+`string` \| `string`[]
 
 #### options?
 
@@ -36,7 +36,7 @@ Defined in: packages/util/dist/glob/fsGlob.d.ts:4
 
 #### pattern
 
-`string` | `string`[]
+`string` \| `string`[]
 
 #### options?
 
@@ -56,7 +56,7 @@ Defined in: packages/util/dist/glob/fsGlob.d.ts:5
 
 #### pattern
 
-`string` | `string`[]
+`string` \| `string`[]
 
 #### options?
 

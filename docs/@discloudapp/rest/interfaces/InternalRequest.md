@@ -6,7 +6,7 @@
 
 # Interface: InternalRequest
 
-Defined in: [packages/rest/src/@types/index.ts:73](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L73)
+Defined in: [packages/rest/src/@types/index.ts:73](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L73)
 
 **`Internal`**
 
@@ -20,9 +20,9 @@ Internal request options
 
 ### body?
 
-> `optional` **body**: `unknown`
+> `optional` **body?**: `unknown`
 
-Defined in: [packages/rest/src/@types/index.ts:53](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L53)
+Defined in: [packages/rest/src/@types/index.ts:53](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L53)
 
 The body to send to this request.
 
@@ -34,9 +34,9 @@ The body to send to this request.
 
 ### file?
 
-> `optional` **file**: `File` \| [`RawFile`](../../../discloud.app/interfaces/RawFile.md)
+> `optional` **file?**: `File` \| [`RawFile`](../../../discloud.app/interfaces/RawFile.md)
 
-Defined in: [packages/rest/src/@types/index.ts:57](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L57)
+Defined in: [packages/rest/src/@types/index.ts:57](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L57)
 
 File to be attached to this request
 
@@ -50,15 +50,15 @@ File to be attached to this request
 
 > **fullRoute**: `` `/${string}` ``
 
-Defined in: [packages/rest/src/@types/index.ts:74](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L74)
+Defined in: [packages/rest/src/@types/index.ts:74](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L74)
 
 ***
 
 ### headers?
 
-> `optional` **headers**: `HeadersInit`
+> `optional` **headers?**: `HeadersInit`
 
-Defined in: [packages/rest/src/@types/index.ts:61](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L61)
+Defined in: [packages/rest/src/@types/index.ts:61](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L61)
 
 Additional headers to add to this request
 
@@ -72,15 +72,15 @@ Additional headers to add to this request
 
 > **method**: [`RequestMethod`](../enumerations/RequestMethod.md)
 
-Defined in: [packages/rest/src/@types/index.ts:75](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L75)
+Defined in: [packages/rest/src/@types/index.ts:75](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L75)
 
 ***
 
 ### query?
 
-> `optional` **query**: `string` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| `URLSearchParams` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+> `optional` **query?**: `string` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| `URLSearchParams` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
 
-Defined in: [packages/rest/src/@types/index.ts:65](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/@types/index.ts#L65)
+Defined in: [packages/rest/src/@types/index.ts:65](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@types/index.ts#L65)
 
 Query string parameters to append to the called endpoint
 
