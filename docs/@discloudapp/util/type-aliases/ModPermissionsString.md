@@ -8,4 +8,4 @@
 
 > **ModPermissionsString** = keyof *typeof* [`ModPermissionsFlags`](../enumerations/ModPermissionsFlags.md)
 
-Defined in: [packages/util/src/ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/ModPermissionsBF.ts#L14)
+Defined in: [packages/util/src/ModPermissionsBF.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/ModPermissionsBF.ts#L14)

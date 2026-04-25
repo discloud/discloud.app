@@ -6,7 +6,7 @@
 
 # Interface: RESTGetApiAppAllBackupResult
 
-Defined in: [packages/api-types/rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L143)
+Defined in: [packages/api-types/rest/v2/app.ts:143](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L143)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:143](https://github.com/discloud/
 
 > **backups**: [`ApiAppBackupAll`](ApiAppBackupAll.md)[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:145](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L145)
+Defined in: [packages/api-types/rest/v2/app.ts:145](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L145)
 
 Backup of all of your applications
 
@@ -28,7 +28,7 @@ Backup of all of your applications
 
 > **message**: `string`
 
-Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [packages/api-types/rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -43,7 +43,7 @@ Message of the API
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [packages/api-types/rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 

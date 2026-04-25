@@ -6,7 +6,7 @@
 
 # Class: CustomdomainApp
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L5)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L5)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new CustomdomainApp**(`discloudApp`, `data`): `CustomdomainApp`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L6)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L6)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:6](https://
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -58,7 +58,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > **id**: `string`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:15](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L15)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:15](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L15)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:15](https:/
 
 > **name**: `string`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L12)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L12)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:12](https:/
 
 > **online**: `boolean`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L13)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L13)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:13](https:/
 
 > **type**: `number`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L14)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L14)
 
 ## Methods
 
@@ -90,7 +90,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:14](https:/
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -106,7 +106,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:17](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/CustomdomainApp.ts#L17)
+Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:17](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/CustomdomainApp.ts#L17)
 
 #### Parameters
 
@@ -128,7 +128,7 @@ Defined in: [packages/discloud.app/src/structures/CustomdomainApp.ts:17](https:/
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 

@@ -8,4 +8,4 @@
 
 > **RESTPostApiCustomdomainCreateResult** = [`RESTGetApiCustomdomainResult`](../interfaces/RESTGetApiCustomdomainResult.md)
 
-Defined in: [rest/v2/customdomain.ts:33](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L33)
+Defined in: [rest/v2/customdomain.ts:33](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L33)

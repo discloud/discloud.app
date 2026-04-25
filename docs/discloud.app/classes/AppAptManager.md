@@ -6,7 +6,7 @@
 
 # Class: AppAptManager
 
-Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppsAptsManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppsAptsManager.ts#L9)
 
 Manager for APT on your application on Discloud
 
@@ -20,7 +20,7 @@ Manager for APT on your application on Discloud
 
 > **new AppAptManager**(`discloudApp`): `AppsAptsManager`
 
-Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppsAptsManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppsAptsManager.ts#L10)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:10](https://g
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > **install**(`appID`, `apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:20](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppsAptsManager.ts#L20)
+Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:20](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppsAptsManager.ts#L20)
 
 Install APTs for your application on Discloud
 
@@ -82,7 +82,7 @@ One or more APTs to install. See AptString.
 
 > **uninstall**(`appID`, `apt`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:34](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppsAptsManager.ts#L34)
+Defined in: [packages/discloud.app/src/managers/AppsAptsManager.ts:34](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppsAptsManager.ts#L34)
 
 Uninstall APTs for your application on Discloud
 

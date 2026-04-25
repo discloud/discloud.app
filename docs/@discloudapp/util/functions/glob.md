@@ -8,7 +8,7 @@
 
 > **glob**(`pattern`, `cwd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`string`[]\>
 
-Defined in: [packages/util/src/glob/glob.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/glob/glob.ts#L7)
+Defined in: [packages/util/src/glob/glob.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/glob/glob.ts#L7)
 
 ## Parameters
 

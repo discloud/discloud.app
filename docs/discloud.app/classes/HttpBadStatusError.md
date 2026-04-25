@@ -6,7 +6,7 @@
 
 # Class: HttpBadStatusError
 
-Defined in: [packages/discloud.app/src/errors/http.ts:1](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/errors/http.ts#L1)
+Defined in: [packages/discloud.app/src/errors/http.ts:1](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/errors/http.ts#L1)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/discloud.app/src/errors/http.ts:1](https://github.com/disc
 
 > **new HttpBadStatusError**(`code`, `message`): `HttpBadStatusError`
 
-Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/errors/http.ts#L6)
+Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/errors/http.ts#L6)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 > `readonly` **code**: `number`
 
-Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/errors/http.ts#L6)
+Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/errors/http.ts#L6)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/disc
 
 > `readonly` **message**: `string`
 
-Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/errors/http.ts#L6)
+Defined in: [packages/discloud.app/src/errors/http.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/errors/http.ts#L6)
 
 #### Inherited from
 
@@ -192,7 +192,7 @@ a();
 
 > `static` **fromResponse**(`response`): `HttpBadStatusError`
 
-Defined in: [packages/discloud.app/src/errors/http.ts:2](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/errors/http.ts#L2)
+Defined in: [packages/discloud.app/src/errors/http.ts:2](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/errors/http.ts#L2)
 
 #### Parameters
 

@@ -6,7 +6,7 @@
 
 # Class: CustomdomainsManager
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L12)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L12)
 
 Manager for customdomains on Discloud
 
@@ -20,7 +20,7 @@ Manager for customdomains on Discloud
 
 > **new CustomdomainsManager**(`discloudApp`): `CustomdomainsManager`
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L13)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L13)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:13](http
 
 > `protected` `readonly` **\_cache**: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L13)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L13)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://githu
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > `protected` `readonly` **holds**: *typeof* [`Customdomain`](Customdomain.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 #### Inherited from
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github
 
 > **get** **cache**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`K`, [`InstanceType`](https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype)\<`V`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L15)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L15)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://githu
 
 > `protected` **\_add**(`data`): [`Customdomain`](Customdomain.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L18)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:18](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L18)
 
 #### Parameters
 
@@ -118,7 +118,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:18](
 
 > `protected` **\_addMany**(`data`): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:29](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L29)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:29](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L29)
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:29](
 
 > `protected` **\_clear**(`data?`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L40)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L40)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:40](
 
 > `protected` **\_delete**(`id`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L55)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L55)
 
 #### Parameters
 
@@ -184,7 +184,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:55](
 
 > `protected` **\_deleteMany**(`ids`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L60)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L60)
 
 #### Parameters
 
@@ -206,7 +206,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:60](
 
 > `protected` **\_patch**(`id`, `data`): [`Customdomain`](Customdomain.md) \| `undefined`
 
-Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:65](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L65)
+Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:65](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseCustomdomainsManager.ts#L65)
 
 #### Parameters
 
@@ -232,7 +232,7 @@ Defined in: [packages/discloud.app/src/managers/BaseCustomdomainsManager.ts:65](
 
 > **create**(`appId`, `domain`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:25](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L25)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:25](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L25)
 
 #### Parameters
 
@@ -270,7 +270,7 @@ Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:25](http
 
 > **delete**(`domain`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:43](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L43)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:43](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L43)
 
 #### Parameters
 
@@ -302,7 +302,7 @@ You domain id.
 
 > **edit**(`domain`, `appId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L55)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L55)
 
 #### Parameters
 
@@ -342,7 +342,7 @@ You app id.
 
 > **fetch**(`id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:88](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L88)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:88](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L88)
 
 Get information of your customdomain on Discloud.
 
@@ -362,7 +362,7 @@ You customdomain id.
 
 > **fetch**(`id?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Customdomain`](Customdomain.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:89](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L89)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:89](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L89)
 
 Get information of your customdomain on Discloud.
 
@@ -384,7 +384,7 @@ You customdomain id.
 
 > **resolve**(`keyOrInstance`): [`Customdomain`](Customdomain.md) \| `null`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:23](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L23)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:23](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L23)
 
 Resolves a data entry to a data Object.
 
@@ -410,7 +410,7 @@ The id or instance of something in this Manager
 
 > **valueOf**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:31](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L31)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:31](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L31)
 
 Returns the primitive value of the specified object.
 
@@ -428,7 +428,7 @@ Returns the primitive value of the specified object.
 
 > **verify**(`domain`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Customdomain`](Customdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:77](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/CustomdomainsManager.ts#L77)
+Defined in: [packages/discloud.app/src/managers/CustomdomainsManager.ts:77](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/CustomdomainsManager.ts#L77)
 
 #### Parameters
 

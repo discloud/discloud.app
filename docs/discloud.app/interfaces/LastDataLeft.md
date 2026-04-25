@@ -6,7 +6,7 @@
 
 # Interface: LastDataLeft
 
-Defined in: [packages/api-types/rest/v2/user.ts:85](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/user.ts#L85)
+Defined in: [packages/api-types/rest/v2/user.ts:85](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/user.ts#L85)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/api-types/rest/v2/user.ts:85](https://github.com/discloud/
 
 > **days**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:86](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/user.ts#L86)
+Defined in: [packages/api-types/rest/v2/user.ts:86](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/user.ts#L86)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/api-types/rest/v2/user.ts:86](https://github.com/discloud/
 
 > **hours**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:87](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/user.ts#L87)
+Defined in: [packages/api-types/rest/v2/user.ts:87](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/user.ts#L87)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/api-types/rest/v2/user.ts:87](https://github.com/discloud/
 
 > **minutes**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:88](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/user.ts#L88)
+Defined in: [packages/api-types/rest/v2/user.ts:88](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/user.ts#L88)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [packages/api-types/rest/v2/user.ts:88](https://github.com/discloud/
 
 > **seconds**: `number`
 
-Defined in: [packages/api-types/rest/v2/user.ts:89](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/user.ts#L89)
+Defined in: [packages/api-types/rest/v2/user.ts:89](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/user.ts#L89)

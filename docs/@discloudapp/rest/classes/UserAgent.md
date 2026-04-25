@@ -6,7 +6,7 @@
 
 # Class: UserAgent
 
-Defined in: [packages/rest/src/UserAgent.ts:8](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/UserAgent.ts#L8)
+Defined in: [packages/rest/src/UserAgent.ts:8](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/UserAgent.ts#L8)
 
 ## Implements
 
@@ -18,7 +18,7 @@ Defined in: [packages/rest/src/UserAgent.ts:8](https://github.com/discloud/discl
 
 > **new UserAgent**(`prefix?`, `version?`): `UserAgent`
 
-Defined in: [packages/rest/src/UserAgent.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/UserAgent.ts#L9)
+Defined in: [packages/rest/src/UserAgent.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/UserAgent.ts#L9)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/rest/src/UserAgent.ts:9](https://github.com/discloud/discl
 
 > `readonly` `optional` **prefix?**: `string`
 
-Defined in: [packages/rest/src/UserAgent.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/UserAgent.ts#L10)
+Defined in: [packages/rest/src/UserAgent.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/UserAgent.ts#L10)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/rest/src/UserAgent.ts:10](https://github.com/discloud/disc
 
 > `readonly` `optional` **version?**: `string`
 
-Defined in: [packages/rest/src/UserAgent.ts:11](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/UserAgent.ts#L11)
+Defined in: [packages/rest/src/UserAgent.ts:11](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/UserAgent.ts#L11)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Defined in: [packages/rest/src/UserAgent.ts:11](https://github.com/discloud/disc
 
 > **toString**(): `string`
 
-Defined in: [packages/rest/src/UserAgent.ts:28](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/UserAgent.ts#L28)
+Defined in: [packages/rest/src/UserAgent.ts:28](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/UserAgent.ts#L28)
 
 #### Returns
 

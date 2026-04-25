@@ -6,7 +6,7 @@
 
 # Interface: ApiSubdomain
 
-Defined in: [rest/v2/subdomain.ts:3](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L3)
+Defined in: [rest/v2/subdomain.ts:3](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L3)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/subdomain.ts:3](https://github.com/discloud/discloud.app/bl
 
 > **date**: `number`
 
-Defined in: [rest/v2/subdomain.ts:8](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L8)
+Defined in: [rest/v2/subdomain.ts:8](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L8)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [rest/v2/subdomain.ts:8](https://github.com/discloud/discloud.app/bl
 
 > **id**: `string`
 
-Defined in: [rest/v2/subdomain.ts:4](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L4)
+Defined in: [rest/v2/subdomain.ts:4](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L4)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [rest/v2/subdomain.ts:4](https://github.com/discloud/discloud.app/bl
 
 > **status**: `number`
 
-Defined in: [rest/v2/subdomain.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L7)
+Defined in: [rest/v2/subdomain.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L7)
 
 `1=available` `2=using`
 
@@ -40,4 +40,4 @@ Defined in: [rest/v2/subdomain.ts:7](https://github.com/discloud/discloud.app/bl
 
 > **userID**: `string`
 
-Defined in: [rest/v2/subdomain.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L5)
+Defined in: [rest/v2/subdomain.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L5)

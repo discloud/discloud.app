@@ -6,7 +6,7 @@
 
 # Interface: ApiDomainApp
 
-Defined in: [packages/api-types/rest/v2/customdomain.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L13)
+Defined in: [packages/api-types/rest/v2/customdomain.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L13)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/customdomain.ts:13](https://github.com/d
 
 > **id**: `string`
 
-Defined in: [packages/api-types/rest/v2/app.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L5)
+Defined in: [packages/api-types/rest/v2/app.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L5)
 
 Your app id
 
@@ -32,7 +32,7 @@ Your app id
 
 > **name**: `string`
 
-Defined in: [packages/api-types/rest/v2/customdomain.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L14)
+Defined in: [packages/api-types/rest/v2/customdomain.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L14)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [packages/api-types/rest/v2/customdomain.ts:14](https://github.com/d
 
 > **online**: `boolean`
 
-Defined in: [packages/api-types/rest/v2/customdomain.ts:15](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L15)
+Defined in: [packages/api-types/rest/v2/customdomain.ts:15](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L15)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: [packages/api-types/rest/v2/customdomain.ts:15](https://github.com/d
 
 > **type**: `number`
 
-Defined in: [packages/api-types/rest/v2/customdomain.ts:16](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L16)
+Defined in: [packages/api-types/rest/v2/customdomain.ts:16](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L16)

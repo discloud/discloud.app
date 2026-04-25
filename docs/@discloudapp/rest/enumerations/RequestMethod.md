@@ -6,7 +6,7 @@
 
 # Enumeration: RequestMethod
 
-Defined in: [packages/rest/src/@enum/index.ts:1](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@enum/index.ts#L1)
+Defined in: [packages/rest/src/@enum/index.ts:1](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/@enum/index.ts#L1)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [packages/rest/src/@enum/index.ts:1](https://github.com/discloud/dis
 
 > **Delete**: `"DELETE"`
 
-Defined in: [packages/rest/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@enum/index.ts#L2)
+Defined in: [packages/rest/src/@enum/index.ts:2](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/@enum/index.ts#L2)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/rest/src/@enum/index.ts:2](https://github.com/discloud/dis
 
 > **Get**: `"GET"`
 
-Defined in: [packages/rest/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@enum/index.ts#L3)
+Defined in: [packages/rest/src/@enum/index.ts:3](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/@enum/index.ts#L3)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/rest/src/@enum/index.ts:3](https://github.com/discloud/dis
 
 > **Post**: `"POST"`
 
-Defined in: [packages/rest/src/@enum/index.ts:4](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@enum/index.ts#L4)
+Defined in: [packages/rest/src/@enum/index.ts:4](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/@enum/index.ts#L4)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [packages/rest/src/@enum/index.ts:4](https://github.com/discloud/dis
 
 > **Put**: `"PUT"`
 
-Defined in: [packages/rest/src/@enum/index.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/@enum/index.ts#L5)
+Defined in: [packages/rest/src/@enum/index.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/@enum/index.ts#L5)

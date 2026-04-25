@@ -6,7 +6,7 @@
 
 # Interface: ApiAppManagerRemovedAll
 
-Defined in: [packages/api-types/rest/v2/app.ts:64](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L64)
+Defined in: [packages/api-types/rest/v2/app.ts:64](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L64)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/api-types/rest/v2/app.ts:64](https://github.com/discloud/d
 
 > **alreadyInProcess**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:57](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L57)
+Defined in: [packages/api-types/rest/v2/app.ts:57](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L57)
 
 Which of your applications are currently `processing`
 
@@ -32,7 +32,7 @@ Which of your applications are currently `processing`
 
 > **alreadyOffline**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:59](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L59)
+Defined in: [packages/api-types/rest/v2/app.ts:59](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L59)
 
 Which of your applications are currently `offline`
 
@@ -46,6 +46,6 @@ Which of your applications are currently `offline`
 
 > **removealled**: `string`[]
 
-Defined in: [packages/api-types/rest/v2/app.ts:66](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L66)
+Defined in: [packages/api-types/rest/v2/app.ts:66](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/app.ts#L66)
 
 Which of your applications have been `removed`

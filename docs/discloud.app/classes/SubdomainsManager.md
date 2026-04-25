@@ -6,7 +6,7 @@
 
 # Class: SubdomainsManager
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L12)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L12)
 
 Manager for subdomains on Discloud
 
@@ -20,7 +20,7 @@ Manager for subdomains on Discloud
 
 > **new SubdomainsManager**(`discloudApp`): `SubdomainsManager`
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L13)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L13)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:13](https:/
 
 > `protected` `readonly` **\_cache**: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Subdomain`](Subdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L13)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L13)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:13](https://githu
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > `protected` `readonly` **holds**: *typeof* [`Subdomain`](Subdomain.md)
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L9)
 
 #### Inherited from
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:9](https://github
 
 > **get** **cache**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`K`, [`InstanceType`](https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype)\<`V`\>\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L15)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L15)
 
 ##### Returns
 
@@ -96,7 +96,7 @@ Defined in: [packages/discloud.app/src/managers/DataManager.ts:15](https://githu
 
 > `protected` **\_add**(`data`): [`Subdomain`](Subdomain.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L18)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:18](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L18)
 
 #### Parameters
 
@@ -118,7 +118,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:18](htt
 
 > `protected` **\_addMany**(`data`): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Subdomain`](Subdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:29](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L29)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:29](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L29)
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:29](htt
 
 > `protected` **\_clear**(`data?`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L40)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L40)
 
 #### Parameters
 
@@ -162,7 +162,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:40](htt
 
 > `protected` **\_delete**(`id`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L55)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:55](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L55)
 
 #### Parameters
 
@@ -184,7 +184,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:55](htt
 
 > `protected` **\_deleteMany**(`ids`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L60)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L60)
 
 #### Parameters
 
@@ -206,7 +206,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:60](htt
 
 > `protected` **\_patch**(`id`, `data`): [`Subdomain`](Subdomain.md) \| `undefined`
 
-Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:65](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L65)
+Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:65](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseSubdomainsManager.ts#L65)
 
 #### Parameters
 
@@ -232,7 +232,7 @@ Defined in: [packages/discloud.app/src/managers/BaseSubdomainsManager.ts:65](htt
 
 > **create**(`id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Subdomain`](Subdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:24](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L24)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:24](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L24)
 
 #### Parameters
 
@@ -264,7 +264,7 @@ You subdomain id.
 
 > **delete**(`id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L40)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:40](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L40)
 
 #### Parameters
 
@@ -302,7 +302,7 @@ You subdomain id.
 
 > **fetch**(`id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Subdomain`](Subdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:53](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L53)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:53](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L53)
 
 Get information of your subdomain on Discloud.
 
@@ -326,7 +326,7 @@ You subdomain id.
 
 > **fetch**(`id?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Subdomain`](Subdomain.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/SubdomainsManager.ts#L60)
+Defined in: [packages/discloud.app/src/managers/SubdomainsManager.ts:60](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/SubdomainsManager.ts#L60)
 
 ##### Parameters
 
@@ -354,7 +354,7 @@ You subdomain id.
 
 > **resolve**(`keyOrInstance`): [`Subdomain`](Subdomain.md) \| `null`
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:23](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L23)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:23](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L23)
 
 Resolves a data entry to a data Object.
 
@@ -380,7 +380,7 @@ The id or instance of something in this Manager
 
 > **valueOf**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Subdomain`](Subdomain.md)\>
 
-Defined in: [packages/discloud.app/src/managers/DataManager.ts:31](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/DataManager.ts#L31)
+Defined in: [packages/discloud.app/src/managers/DataManager.ts:31](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/DataManager.ts#L31)
 
 Returns the primitive value of the specified object.
 

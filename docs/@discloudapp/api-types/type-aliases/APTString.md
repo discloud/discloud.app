@@ -8,4 +8,4 @@
 
 > **APTString** = keyof *typeof* [`APT`](../variables/APT.md)
 
-Defined in: [payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/payload/v2/DiscloudConfig.ts#L55)
+Defined in: [payload/v2/DiscloudConfig.ts:55](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/payload/v2/DiscloudConfig.ts#L55)

@@ -6,7 +6,7 @@
 
 # Class: AppBackup
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L10)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L10)
 
 Base for all structures
 
@@ -20,7 +20,7 @@ Base for all structures
 
 > **new AppBackup**(`discloudApp`, `data`): `AppBackup`
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:29](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L29)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:29](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L29)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/structures/AppBackup.ts:29](https://githu
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L14)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L14)
 
 Your app id
 
@@ -56,7 +56,7 @@ Your app id
 
 > `optional` **data?**: `Buffer`\<`ArrayBufferLike`\>
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:27](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L27)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:27](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L27)
 
 The backup Buffer
 
@@ -66,7 +66,7 @@ The backup Buffer
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -78,7 +78,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > `optional` **status?**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:23](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L23)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:23](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L23)
 
 The backup status
 
@@ -88,7 +88,7 @@ The backup status
 
 > **url**: `string`
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:19](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L19)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:19](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L19)
 
 The backup url.
 - You can access it `only once`.
@@ -99,7 +99,7 @@ The backup url.
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -115,7 +115,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:39](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L39)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:39](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L39)
 
 #### Parameters
 
@@ -137,7 +137,7 @@ Defined in: [packages/discloud.app/src/structures/AppBackup.ts:39](https://githu
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 
@@ -159,7 +159,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com
 
 > **download**(`path?`, `filename?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`AppBackup`\>
 
-Defined in: [packages/discloud.app/src/structures/AppBackup.ts:52](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/AppBackup.ts#L52)
+Defined in: [packages/discloud.app/src/structures/AppBackup.ts:52](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/AppBackup.ts#L52)
 
 Make backup of your application
 

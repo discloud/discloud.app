@@ -6,7 +6,7 @@
 
 # Interface: RESTGetApiSubdomainResult
 
-Defined in: [rest/v2/subdomain.ts:15](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L15)
+Defined in: [rest/v2/subdomain.ts:15](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L15)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/subdomain.ts:15](https://github.com/discloud/discloud.app/b
 
 > **message**: `string`
 
-Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -33,7 +33,7 @@ Message of the API
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 
@@ -47,4 +47,4 @@ The status of API response
 
 > **subdomain**: [`ApiSubdomain`](ApiSubdomain.md)
 
-Defined in: [rest/v2/subdomain.ts:16](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/subdomain.ts#L16)
+Defined in: [rest/v2/subdomain.ts:16](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/subdomain.ts#L16)

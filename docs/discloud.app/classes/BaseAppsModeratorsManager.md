@@ -6,7 +6,7 @@
 
 # Abstract Class: BaseAppsModeratorsManager
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:11](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L11)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:11](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L11)
 
 Apps cache manager
 
@@ -24,7 +24,7 @@ Apps cache manager
 
 > **new BaseAppsModeratorsManager**(`discloudApp`): `BaseAppsModeratorsManager`
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L12)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L12)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:12]
 
 > `protected` `readonly` **\_cache**: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppModerator`](AppModerator.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:16](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L16)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:16](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L16)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:16]
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > **get** **cache**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppModerator`](AppModerator.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:17](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L17)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:17](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L17)
 
 ##### Returns
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:17]
 
 > `protected` **\_add**(`appId`, `data`): [`AppModerator`](AppModerator.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:19](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L19)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:19](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L19)
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:19]
 
 > `protected` **\_addMany**(`appId`, `data`): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppModerator`](AppModerator.md)\>
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:35](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L35)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:35](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L35)
 
 #### Parameters
 
@@ -124,7 +124,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:35]
 
 > `protected` **\_clear**(`appId`, `data?`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:46](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L46)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:46](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L46)
 
 #### Parameters
 
@@ -146,7 +146,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:46]
 
 > `protected` **\_delete**(`appId`, `modId`): `boolean`
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:62](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L62)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:62](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L62)
 
 #### Parameters
 
@@ -168,7 +168,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:62]
 
 > `protected` **\_deleteMany**(`appId`, `modIds`): `void`
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:72](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L72)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:72](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L72)
 
 #### Parameters
 
@@ -190,7 +190,7 @@ Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:72]
 
 > `protected` **\_patch**(`appId`, `modId`, `data`): [`AppModerator`](AppModerator.md) \| `undefined`
 
-Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:80](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L80)
+Defined in: [packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts:80](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseAppsModeratorsManager.ts#L80)
 
 #### Parameters
 

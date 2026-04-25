@@ -6,7 +6,7 @@
 
 # Class: REST
 
-Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L9)
+Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L9)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.a
 
 > **new REST**(`options?`): `REST`
 
-Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L33)
+Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L33)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.
 
 > `readonly` **options**: [`RESTOptions`](../interfaces/RESTOptions.md)
 
-Defined in: [packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L11)
+Defined in: [packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L11)
 
 ***
 
@@ -163,7 +163,7 @@ v13.6.0, v12.17.0
 
 > **get** **globalLimited**(): `boolean`
 
-Defined in: [packages/rest/src/REST.ts:47](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L47)
+Defined in: [packages/rest/src/REST.ts:47](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L47)
 
 If the rate limit bucket is currently limited by its limit
 
@@ -179,7 +179,7 @@ If the rate limit bucket is currently limited by its limit
 
 > **get** **globalTimeToReset**(): `number`
 
-Defined in: [packages/rest/src/REST.ts:54](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L54)
+Defined in: [packages/rest/src/REST.ts:54](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L54)
 
 The time until queued requests can continue
 
@@ -195,7 +195,7 @@ The time until queued requests can continue
 
 > **get** **token**(): `string`
 
-Defined in: [packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L58)
+Defined in: [packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L58)
 
 ##### Returns
 
@@ -281,7 +281,7 @@ v0.1.26
 
 > **delete**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L88)
+Defined in: [packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L88)
 
 Runs a delete request from the api
 
@@ -426,7 +426,7 @@ v6.0.0
 
 > **get**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:78](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L78)
+Defined in: [packages/rest/src/REST.ts:78](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L78)
 
 Runs a get request from the api
 
@@ -739,7 +739,7 @@ v0.3.0
 
 > **post**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:98](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L98)
+Defined in: [packages/rest/src/REST.ts:98](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L98)
 
 Runs a post request from the api
 
@@ -877,7 +877,7 @@ v6.0.0
 
 > **put**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:108](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L108)
+Defined in: [packages/rest/src/REST.ts:108](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L108)
 
 Runs a put request from the api
 
@@ -1154,7 +1154,7 @@ v0.3.5
 
 > **setToken**(`token`): `REST`
 
-Defined in: [packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L67)
+Defined in: [packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/rest/src/REST.ts#L67)
 
 Sets the authorization token that should be used for requests
 

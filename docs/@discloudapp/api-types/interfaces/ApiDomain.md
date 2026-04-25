@@ -6,7 +6,7 @@
 
 # Interface: ApiDomain
 
-Defined in: [rest/v2/customdomain.ts:4](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L4)
+Defined in: [rest/v2/customdomain.ts:4](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L4)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [rest/v2/customdomain.ts:4](https://github.com/discloud/discloud.app
 
 > **app**: [`ApiDomainApp`](ApiDomainApp.md)
 
-Defined in: [rest/v2/customdomain.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L9)
+Defined in: [rest/v2/customdomain.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L9)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [rest/v2/customdomain.ts:9](https://github.com/discloud/discloud.app
 
 > **date**: `number`
 
-Defined in: [rest/v2/customdomain.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L7)
+Defined in: [rest/v2/customdomain.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L7)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [rest/v2/customdomain.ts:7](https://github.com/discloud/discloud.app
 
 > **dns\_status**: `string`
 
-Defined in: [rest/v2/customdomain.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L6)
+Defined in: [rest/v2/customdomain.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L6)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [rest/v2/customdomain.ts:6](https://github.com/discloud/discloud.app
 
 > **id**: `string`
 
-Defined in: [rest/v2/customdomain.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L5)
+Defined in: [rest/v2/customdomain.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L5)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [rest/v2/customdomain.ts:5](https://github.com/discloud/discloud.app
 
 > **instructions**: [`ApiDomainInstruction`](ApiDomainInstruction.md)[]
 
-Defined in: [rest/v2/customdomain.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L10)
+Defined in: [rest/v2/customdomain.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L10)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [rest/v2/customdomain.ts:10](https://github.com/discloud/discloud.ap
 
 > **isLegacy**: `boolean`
 
-Defined in: [rest/v2/customdomain.ts:8](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/customdomain.ts#L8)
+Defined in: [rest/v2/customdomain.ts:8](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/api-types/rest/v2/customdomain.ts#L8)

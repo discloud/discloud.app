@@ -6,7 +6,7 @@
 
 # Class: AppModeratorsManager
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L9)
 
 Manager for Team on your application on Discloud
 
@@ -20,7 +20,7 @@ Manager for Team on your application on Discloud
 
 > **new AppModeratorsManager**(`discloudApp`, `appId`): `AppModeratorsManager`
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L10)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](http
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L10)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L10)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:10](http
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > **get** **cache**(): [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppModerator`](AppModerator.md)\> \| `undefined`
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L14)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L14)
 
 ##### Returns
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:14](http
 
 > **create**(`modID`, `perms`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AppModerator`](AppModerator.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:22](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L22)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:22](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L22)
 
 Add a mod for you application on Discloud
 
@@ -108,7 +108,7 @@ The permissions for the mod. See [ModPermissionsResolvable](../type-aliases/ModP
 
 > **delete**(`modID`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:42](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L42)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:42](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L42)
 
 Remove a mod from you application on Discloud
 
@@ -130,7 +130,7 @@ The mod id
 
 > **edit**(`modID`, `perms`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AppModerator`](AppModerator.md)\>
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:32](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L32)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:32](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L32)
 
 Edit permissions of a mod for you application on Discloud
 
@@ -158,7 +158,7 @@ The permissions for the mod. See [ModPermissionsResolvable](../type-aliases/ModP
 
 > **fetch**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, [`AppModerator`](AppModerator.md)\>\>
 
-Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:49](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppModeratorsManager.ts#L49)
+Defined in: [packages/discloud.app/src/managers/AppModeratorsManager.ts:49](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppModeratorsManager.ts#L49)
 
 Get mods information for your app on Discloud
 

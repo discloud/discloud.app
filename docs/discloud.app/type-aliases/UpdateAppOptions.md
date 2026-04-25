@@ -8,4 +8,4 @@
 
 > **UpdateAppOptions** = [`UploadAppOptions`](../interfaces/UploadAppOptions.md)
 
-Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/@types/index.ts#L13)
+Defined in: [packages/discloud.app/src/@types/index.ts:13](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/@types/index.ts#L13)

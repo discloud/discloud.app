@@ -6,7 +6,7 @@
 
 # Abstract Class: BaseAppStatus
 
-Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/BaseAppStatus.ts#L5)
+Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/BaseAppStatus.ts#L5)
 
 Base for all structures
 
@@ -24,7 +24,7 @@ Base for all structures
 
 > **new BaseAppStatus**(`discloudApp`, `data`): `BaseAppStatus`
 
-Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:11](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/BaseAppStatus.ts#L11)
+Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:11](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/BaseAppStatus.ts#L11)
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:11](https://g
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/BaseAppStatus.ts#L9)
+Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/BaseAppStatus.ts#L9)
 
 Your app id
 
@@ -60,7 +60,7 @@ Your app id
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L12)
+Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L12)
 
 #### Inherited from
 
@@ -72,7 +72,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:12](https://github.com
 
 > `protected` **\_clone**(): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L18)
+Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L18)
 
 #### Returns
 
@@ -88,7 +88,7 @@ Defined in: [packages/discloud.app/src/structures/Base.ts:18](https://github.com
 
 > `protected` **\_patch**(`data`): `BaseAppStatus`
 
-Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:20](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/BaseAppStatus.ts#L20)
+Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:20](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/BaseAppStatus.ts#L20)
 
 #### Parameters
 
@@ -110,7 +110,7 @@ Defined in: [packages/discloud.app/src/structures/BaseAppStatus.ts:20](https://g
 
 > `protected` **\_update**(`data`): `this`
 
-Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/structures/Base.ts#L26)
+Defined in: [packages/discloud.app/src/structures/Base.ts:26](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/structures/Base.ts#L26)
 
 #### Parameters
 

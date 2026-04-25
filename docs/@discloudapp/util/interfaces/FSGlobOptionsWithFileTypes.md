@@ -6,7 +6,7 @@
 
 # Interface: FSGlobOptionsWithFileTypes
 
-Defined in: [packages/util/src/glob/types.ts:20](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/glob/types.ts#L20)
+Defined in: [packages/util/src/glob/types.ts:20](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/glob/types.ts#L20)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [packages/util/src/glob/types.ts:20](https://github.com/discloud/dis
 
 > `optional` **cwd?**: `string`
 
-Defined in: [packages/util/src/glob/types.ts:6](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/glob/types.ts#L6)
+Defined in: [packages/util/src/glob/types.ts:6](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/glob/types.ts#L6)
 
 Current working directory.
 
@@ -38,7 +38,7 @@ process.cwd()
 
 > `optional` **withDirectories?**: `boolean`
 
-Defined in: [packages/util/src/glob/types.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/glob/types.ts#L10)
+Defined in: [packages/util/src/glob/types.ts:10](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/glob/types.ts#L10)
 
 #### Default
 
@@ -56,7 +56,7 @@ false
 
 > **withFileTypes**: `true`
 
-Defined in: [packages/util/src/glob/types.ts:21](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/glob/types.ts#L21)
+Defined in: [packages/util/src/glob/types.ts:21](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/glob/types.ts#L21)
 
 `true` if the glob should return paths as `Dirent`s, `false` otherwise.
 

@@ -6,7 +6,7 @@
 
 # Class: AppStatusManager
 
-Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:4](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppStatusManager.ts#L4)
+Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:4](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppStatusManager.ts#L4)
 
 Base for all managers
 
@@ -20,7 +20,7 @@ Base for all managers
 
 > **new AppStatusManager**(`discloudApp`, `appId`): `AppStatusManager`
 
-Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppStatusManager.ts#L5)
+Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppStatusManager.ts#L5)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://g
 
 > `readonly` **appId**: `string`
 
-Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppStatusManager.ts#L5)
+Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppStatusManager.ts#L5)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:5](https://g
 
 > `readonly` **discloudApp**: [`DiscloudApp`](DiscloudApp.md)
 
-Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/BaseManager.ts#L7)
+Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/BaseManager.ts#L7)
 
 #### Inherited from
 
@@ -68,7 +68,7 @@ Defined in: [packages/discloud.app/src/managers/BaseManager.ts:7](https://github
 
 > **get** **cache**(): [`AppStatus`](AppStatus.md) \| `undefined`
 
-Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppStatusManager.ts#L9)
+Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:9](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppStatusManager.ts#L9)
 
 ##### Returns
 
@@ -80,7 +80,7 @@ Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:9](https://g
 
 > **fetch**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
-Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:14](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/managers/AppStatusManager.ts#L14)
+Defined in: [packages/discloud.app/src/managers/AppStatusManager.ts:14](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/discloud.app/src/managers/AppStatusManager.ts#L14)
 
 Get the status of your application on Discloud
 

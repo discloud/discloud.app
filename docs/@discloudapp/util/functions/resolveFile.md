@@ -10,7 +10,7 @@
 
 > **resolveFile**(`file`, `filename?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:55](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L55)
+Defined in: [packages/util/src/FileResolver.ts:55](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/FileResolver.ts#L55)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -36,7 +36,7 @@ The name of the file to upload
 
 > **resolveFile**(`file`, `filename?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:56](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L56)
+Defined in: [packages/util/src/FileResolver.ts:56](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/FileResolver.ts#L56)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -62,7 +62,7 @@ The name of the file to upload
 
 > **resolveFile**(`file`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:57](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L57)
+Defined in: [packages/util/src/FileResolver.ts:57](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/FileResolver.ts#L57)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -82,7 +82,7 @@ The file as [FileResolvable](../type-aliases/FileResolvable.md) to resolve
 
 > **resolveFile**(`file`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:58](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L58)
+Defined in: [packages/util/src/FileResolver.ts:58](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/FileResolver.ts#L58)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
@@ -102,7 +102,7 @@ The file as [FileResolvable](../type-aliases/FileResolvable.md) to resolve
 
 > **resolveFile**(`file`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`File`\>
 
-Defined in: [packages/util/src/FileResolver.ts:59](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L59)
+Defined in: [packages/util/src/FileResolver.ts:59](https://github.com/discloud/discloud.app/blob/0972a1ca74cdc01f67360218d659dacc1fe5800d/packages/util/src/FileResolver.ts#L59)
 
 A function that converts [FileResolvable](../type-aliases/FileResolvable.md) to File
 
