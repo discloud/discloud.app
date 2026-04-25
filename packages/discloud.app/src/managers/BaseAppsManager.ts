@@ -21,7 +21,7 @@ export default abstract class BaseAppsManager<T extends Instanciable<typeof Base
 
     // @ts-expect-error ts(2511)
     const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
-    this.cache.set(entry.id, entry);
+    this._cache.set(entry.id, entry);
     this.discloudApp.user.appIDs.add(entry.id);
     return entry;
   }
@@ -54,18 +54,16 @@ export default abstract class BaseAppsManager<T extends Instanciable<typeof Base
 
   protected _delete(id: string): boolean {
     this.discloudApp.user.appIDs.delete(id);
-    return this.cache.delete(id);
+    return this._cache.delete(id);
   }
 
-  protected _deleteMany(ids: string[]): boolean {
+  protected _deleteMany(ids: string[]) {
     for (const id of ids)
       this._delete(id);
-
-    return true;
   }
 
   protected _patch(id: string, data: Partial<ApiApp>): InstanceType<T> | undefined {
     // @ts-expect-error ts(2339)
-    return this.cache.get(id)?._patch(data);
+    return this._cache.get(id)?._patch(data);
   }
 }

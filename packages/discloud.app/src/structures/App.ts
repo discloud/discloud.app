@@ -1,5 +1,6 @@
 import type { ApiApp } from "@discloudapp/api-types/v2";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
+import AppModeratorsManager from "../managers/AppModeratorsManager";
 import AppStatusManager from "../managers/AppStatusManager";
 import Deprecation from "../util/deprecation";
 import AppApt from "./AppApt";
@@ -64,12 +65,14 @@ export default class App extends BaseApp {
   }
 
   readonly apts: AppApt;
+  readonly moderators: AppModeratorsManager;
   readonly status: AppStatusManager;
 
   constructor(discloudApp: DiscloudApp, data: ApiApp) {
     super(discloudApp, data);
 
     this.apts = new AppApt(this.discloudApp, this.id);
+    this.moderators = new AppModeratorsManager(this.discloudApp, this.id);
     this.status = new AppStatusManager(this.discloudApp, this.id);
 
     this._patch(data);

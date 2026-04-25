@@ -24,7 +24,7 @@ export default abstract class CachedManager<K, T extends Instanciable<T>> extend
 
   protected abstract _delete(key: unknown): boolean;
 
-  protected abstract _deleteMany(keys: Iterable<unknown>): boolean;
+  protected abstract _deleteMany(keys: Iterable<unknown>): void;
 
   protected abstract _patch(key: unknown, value: unknown): InstanceType<T> | undefined;
 }

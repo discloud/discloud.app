@@ -11,6 +11,12 @@ export default class AppModerator extends Base {
     this._patch(data);
   }
 
+  declare readonly modID: string;
+  readonly perms = new Set<string>();
+
+  declare avatar: string | null;
+  declare username: string | null;
+
   protected _patch(data: Partial<ApiAppTeam>): this {
     if (Array.isArray(data.perms)) {
       this.perms.clear();
@@ -28,11 +34,6 @@ export default class AppModerator extends Base {
 
     return super._patch(data);
   }
-
-  declare readonly modID: string;
-  readonly perms = new Set<string>();
-  declare avatar: string | null;
-  declare username: string | null;
 
   get app() {
     return this.discloudApp.apps.cache.get(this.appId);

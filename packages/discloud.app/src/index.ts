@@ -2,11 +2,13 @@
 import "source-map-support/register";
 
 import DiscloudApp from "./discloudApp/DiscloudApp";
+import AppModeratorsManager from "./managers/AppModeratorsManager";
 import AppsAptsManager from "./managers/AppsAptsManager";
 import AppsManager from "./managers/AppsManager";
 import AppsModeratorsManager from "./managers/AppsModeratorsManager";
 import AppStatusManager from "./managers/AppStatusManager";
 import BaseAppsManager from "./managers/BaseAppsManager";
+import BaseAppsModeratorsManager from "./managers/BaseAppsModeratorsManager";
 import BaseAppsStatusManager from "./managers/BaseAppsStatusManager";
 import BaseCustomdomainsManager from "./managers/BaseCustomdomainsManager";
 import BaseManager from "./managers/BaseManager";
@@ -57,6 +59,7 @@ export {
   /** @deprecated use {@link AppsManager} instead */
   AppsManager as AppManager,
   AppModerator,
+  AppModeratorsManager,
   AppsAptsManager,
   AppsManager,
   AppsModeratorsManager,
@@ -70,6 +73,7 @@ export {
   Base,
   BaseApp,
   BaseAppsManager,
+  BaseAppsModeratorsManager,
   BaseAppsStatusManager,
   BaseAppStatus,
   BaseCustomdomain,

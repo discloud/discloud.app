@@ -23,18 +23,19 @@ export default class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly subdomains = new SubdomainsManager(this);
   readonly user = new User(this);
 
-  /** @deprecated use appsApts instead */
+  /** @deprecated use apps.apts instead */
   get appApt() {
     appAptDeprecation.emit();
     return this.apps.apts;
   }
 
-  /** @deprecated use appsModerators instead */
+  /** @deprecated use apps.moderators instead */
   get appTeam() {
     appTeamDeprecation.emit();
     return this.apps.moderators;
   }
 
+  /** @deprecated use sharedApps instead */
   get teamApps() {
     teamAppsDeprecation.emit();
     return this.sharedApps;
