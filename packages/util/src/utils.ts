@@ -35,7 +35,7 @@ function _mergeDefaults<A extends Record<any, any>>(defaults: A, options: Partia
     const canRecurse =
       typeof defaultValue === "object" && defaultValue !== null &&
       typeof optionValue === "object" && optionValue !== null &&
-      Object.prototype.hasOwnProperty.call(options, key);
+      Object.hasOwn(options, key);
 
     if (canRecurse) {
       options[key as keyof A] = _mergeDefaults(defaultValue, optionValue);
