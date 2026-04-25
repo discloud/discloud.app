@@ -6,27 +6,41 @@
 
 # Interface: RawFile
 
-Defined in: [packages/util/src/FileResolver.ts:13](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/FileResolver.ts#L13)
+Defined in: [packages/util/src/FileResolver.ts:18](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L18)
 
 ## Properties
 
-### contentType?
+### ~~contentType?~~
 
-> `optional` **contentType**: `string`
+> `optional` **contentType?**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:25](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/FileResolver.ts#L25)
+Defined in: [packages/util/src/FileResolver.ts:31](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L31)
 
 Content-Type of the file
+
+#### Deprecated
+
+use mimeType instead.
 
 ***
 
 ### data
 
-> **data**: `Blob` \| `BinaryLike` \| `Buffer`\<`ArrayBufferLike`\> \| `File`
+> **data**: `BinaryLike` \| `Blob`
 
-Defined in: [packages/util/src/FileResolver.ts:21](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/FileResolver.ts#L21)
+Defined in: [packages/util/src/FileResolver.ts:26](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L26)
 
 The actual data for the file
+
+***
+
+### mimeType?
+
+> `optional` **mimeType?**: `string`
+
+Defined in: [packages/util/src/FileResolver.ts:35](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L35)
+
+Content-Type of the file
 
 ***
 
@@ -34,6 +48,6 @@ The actual data for the file
 
 > **name**: `string`
 
-Defined in: [packages/util/src/FileResolver.ts:17](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/util/src/FileResolver.ts#L17)
+Defined in: [packages/util/src/FileResolver.ts:22](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/util/src/FileResolver.ts#L22)
 
 The name of the file

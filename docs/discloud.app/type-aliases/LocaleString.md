@@ -8,4 +8,4 @@
 
 > **LocaleString** = `"en-US"` \| `"pt-BR"`
 
-Defined in: [packages/discloud.app/src/@types/index.ts:32](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/discloud.app/src/@types/index.ts#L32)
+Defined in: [packages/discloud.app/src/@types/index.ts:19](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/discloud.app/src/@types/index.ts#L19)

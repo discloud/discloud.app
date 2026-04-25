@@ -6,7 +6,7 @@
 
 # Interface: RESTPutApiAppAllStopResult
 
-Defined in: [rest/v2/app.ts:189](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/app.ts#L189)
+Defined in: [rest/v2/app.ts:189](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L189)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [rest/v2/app.ts:189](https://github.com/discloud/discloud.app/blob/5
 
 > **apps**: [`ApiAppManagerStopedAll`](ApiAppManagerStopedAll.md)
 
-Defined in: [rest/v2/app.ts:190](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/app.ts#L190)
+Defined in: [rest/v2/app.ts:190](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/app.ts#L190)
 
 #### Overrides
 
@@ -30,7 +30,7 @@ Defined in: [rest/v2/app.ts:190](https://github.com/discloud/discloud.app/blob/5
 
 > **message**: `string`
 
-Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/base.ts#L10)
+Defined in: [rest/v2/base.ts:10](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L10)
 
 Message of the API
 - It is useful to use as logs
@@ -45,7 +45,7 @@ Message of the API
 
 > **status**: `"ok"` \| `"error"`
 
-Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/api-types/rest/v2/base.ts#L5)
+Defined in: [rest/v2/base.ts:5](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/api-types/rest/v2/base.ts#L5)
 
 The status of API response
 

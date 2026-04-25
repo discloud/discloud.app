@@ -1,5 +1,5 @@
-import { mergeDefaults } from "@discloudapp/util";
 import EventEmitter from "events";
+import _ from "lodash";
 import { setTimeout as sleep } from "timers/promises";
 import { RequestMethod, RESTEvents } from "./@enum";
 import type { InternalRequest, RateLimitData, RequestData, RequestOptions, RestEvents, RESTOptions, RouteLike } from "./@types";
@@ -13,28 +13,28 @@ export class REST extends EventEmitter<RestEvents> {
   /**
    * The number of requests limit on the global bucket
    */
-  globalLimit = 60;
+  #globalLimit = 60;
 
   /**
    * The number of requests remaining in the global bucket
    */
-  globalRemaining = 0;
+  #globalRemaining = 0;
 
   /**
    * The seconds that the global bucket is reset
    */
-  globalReset = 0;
+  #globalReset = 0;
 
   /**
    * The time at which the last request was made
    */
-  globalTime = 0;
+  #globalTime = 0;
 
   constructor(options: Partial<RESTOptions> = {}) {
     super({ captureRejections: true });
-    this.options = mergeDefaults(DefaultRestOptions, options);
-    this.globalLimit = this.options.globalRequestsPerMinute;
-    this.globalRemaining = this.options.globalRequestsPerMinute;
+    this.options = _.defaultsDeep(options, DefaultRestOptions);
+    this.#globalLimit = this.options.globalRequestsPerMinute;
+    this.#globalRemaining = this.options.globalRequestsPerMinute;
   }
 
   private get baseURL() {
@@ -45,14 +45,14 @@ export class REST extends EventEmitter<RestEvents> {
    * If the rate limit bucket is currently limited by its limit
    */
   get globalLimited() {
-    return this.globalRemaining < 1;
+    return this.#globalRemaining < 1;
   }
 
   /**
    * The time until queued requests can continue
    */
   get globalTimeToReset(): number {
-    return this.globalReset * 1000 + this.globalTime - Date.now();
+    return this.#globalReset * 1000 + this.#globalTime - Date.now();
   }
 
   get token() {
@@ -130,7 +130,7 @@ export class REST extends EventEmitter<RestEvents> {
       await sleep(this.globalTimeToReset);
     }
 
-    this.globalRemaining--;
+    this.#globalRemaining--;
     const response = await fetch(url, options);
 
     queueMicrotask(() => this.#resolveResponseHeaders(response.headers));
@@ -221,14 +221,14 @@ export class REST extends EventEmitter<RestEvents> {
   }
 
   #resolveResponseHeaders(headers: Headers) {
-    this.globalTime = Date.now();
+    this.#globalTime = Date.now();
 
     const Limit = parseInt(headers.get("ratelimit-limit")!);
     const Remaining = parseInt(headers.get("ratelimit-remaining")!);
     const Reset = parseInt(headers.get("ratelimit-reset")!);
-    if (!isNaN(Limit)) this.globalLimit = Math.max(Limit, 0);
-    if (!isNaN(Remaining)) this.globalRemaining = Math.max(Remaining, 0);
-    if (!isNaN(Reset)) this.globalReset = Math.max(Reset, 0);
+    if (!isNaN(Limit)) this.#globalLimit = Math.max(Limit, 0);
+    if (!isNaN(Remaining)) this.#globalRemaining = Math.max(Remaining, 0);
+    if (!isNaN(Reset)) this.#globalReset = Math.max(Reset, 0);
 
     this.#initRateLimitResetTimer();
   }
@@ -238,7 +238,7 @@ export class REST extends EventEmitter<RestEvents> {
   #initRateLimitResetTimer() {
     this.#timer ??= setTimeout(() => {
       this.#timer = null;
-      this.globalRemaining = this.globalLimit;
+      this.#globalRemaining = this.#globalLimit;
     }, this.globalTimeToReset);
   }
 }

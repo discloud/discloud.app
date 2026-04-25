@@ -1,10 +1,10 @@
 import type { RESTApiBaseResult } from "./base";
 
 export interface RESTGetApiTeamResult extends RESTApiBaseResult {
-  apps: ApiTeamApps[]
+  apps: ApiTeamApp[]
 }
 
-export interface ApiTeamApps {
+export interface ApiTeamApp {
   /**
    * Your team application id
    */
@@ -44,6 +44,10 @@ export interface ApiTeamApps {
    */
   type: number
 }
+
+/** @deprecated use {@link ApiTeamApp} instead */
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface ApiTeamApps extends ApiTeamApp { }
 
 export interface ApiTeamAppOwner {
   /** Owner name */

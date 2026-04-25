@@ -8,7 +8,7 @@
 
 > **streamToBlob**(`stream`, `mimeType?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`Blob`\>
 
-Defined in: packages/util/dist/FileResolver.d.ts:48
+Defined in: packages/util/dist/FileResolver.d.ts:57
 
 A function that converts a like Stream parameter to Blob
 

@@ -20,7 +20,7 @@ Internal request options
 
 ### body?
 
-> `optional` **body**: `unknown`
+> `optional` **body?**: `unknown`
 
 Defined in: packages/rest/dist/@types/index.d.ts:47
 
@@ -34,7 +34,7 @@ The body to send to this request.
 
 ### file?
 
-> `optional` **file**: `File` \| [`RawFile`](RawFile.md)
+> `optional` **file?**: `File` \| [`RawFile`](RawFile.md)
 
 Defined in: packages/rest/dist/@types/index.d.ts:51
 
@@ -56,7 +56,7 @@ Defined in: packages/rest/dist/@types/index.d.ts:67
 
 ### headers?
 
-> `optional` **headers**: `HeadersInit`
+> `optional` **headers?**: `HeadersInit`
 
 Defined in: packages/rest/dist/@types/index.d.ts:55
 
@@ -78,7 +78,7 @@ Defined in: packages/rest/dist/@types/index.d.ts:68
 
 ### query?
 
-> `optional` **query**: `string` \| `URLSearchParams` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
+> `optional` **query?**: `string` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| readonly `string`[]\> \| `URLSearchParams` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`string`, `string`\], `any`, `any`\> \| readonly \[`string`, `string`\][]
 
 Defined in: packages/rest/dist/@types/index.d.ts:59
 

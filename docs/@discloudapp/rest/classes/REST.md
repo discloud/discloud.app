@@ -6,7 +6,7 @@
 
 # Class: REST
 
-Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L9)
+Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L9)
 
 ## Extends
 
@@ -16,13 +16,13 @@ Defined in: [packages/rest/src/REST.ts:9](https://github.com/discloud/discloud.a
 
 ### Constructor
 
-> **new REST**(`options`): `REST`
+> **new REST**(`options?`): `REST`
 
-Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L33)
+Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L33)
 
 #### Parameters
 
-##### options
+##### options?
 
 [`Partial`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)\<[`RESTOptions`](../interfaces/RESTOptions.md)\> = `{}`
 
@@ -36,51 +36,11 @@ Defined in: [packages/rest/src/REST.ts:33](https://github.com/discloud/discloud.
 
 ## Properties
 
-### globalLimit
-
-> **globalLimit**: `number` = `60`
-
-Defined in: [packages/rest/src/REST.ts:16](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L16)
-
-The number of requests limit on the global bucket
-
-***
-
-### globalRemaining
-
-> **globalRemaining**: `number` = `0`
-
-Defined in: [packages/rest/src/REST.ts:21](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L21)
-
-The number of requests remaining in the global bucket
-
-***
-
-### globalReset
-
-> **globalReset**: `number` = `0`
-
-Defined in: [packages/rest/src/REST.ts:26](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L26)
-
-The seconds that the global bucket is reset
-
-***
-
-### globalTime
-
-> **globalTime**: `number` = `0`
-
-Defined in: [packages/rest/src/REST.ts:31](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L31)
-
-The time at which the last request was made
-
-***
-
 ### options
 
 > `readonly` **options**: [`RESTOptions`](../interfaces/RESTOptions.md)
 
-Defined in: [packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L11)
+Defined in: [packages/rest/src/REST.ts:11](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L11)
 
 ***
 
@@ -203,7 +163,7 @@ v13.6.0, v12.17.0
 
 > **get** **globalLimited**(): `boolean`
 
-Defined in: [packages/rest/src/REST.ts:47](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L47)
+Defined in: [packages/rest/src/REST.ts:47](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L47)
 
 If the rate limit bucket is currently limited by its limit
 
@@ -219,7 +179,7 @@ If the rate limit bucket is currently limited by its limit
 
 > **get** **globalTimeToReset**(): `number`
 
-Defined in: [packages/rest/src/REST.ts:54](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L54)
+Defined in: [packages/rest/src/REST.ts:54](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L54)
 
 The time until queued requests can continue
 
@@ -235,7 +195,7 @@ The time until queued requests can continue
 
 > **get** **token**(): `string`
 
-Defined in: [packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L58)
+Defined in: [packages/rest/src/REST.ts:58](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L58)
 
 ##### Returns
 
@@ -263,11 +223,11 @@ Defined in: node\_modules/@types/node/events.d.ts:103
 
 ##### event
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -297,11 +257,11 @@ Alias for `emitter.on(eventName, listener)`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -319,9 +279,9 @@ v0.1.26
 
 ### delete()
 
-> **delete**\<`T`\>(`fullRoute`, `options`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+> **delete**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L88)
+Defined in: [packages/rest/src/REST.ts:88](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L88)
 
 Runs a delete request from the api
 
@@ -339,7 +299,7 @@ Runs a delete request from the api
 
 The full route to query
 
-##### options
+##### options?
 
 [`RequestData`](../interfaces/RequestData.md) = `{}`
 
@@ -405,11 +365,11 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -464,9 +424,9 @@ v6.0.0
 
 ### get()
 
-> **get**\<`T`\>(`fullRoute`, `options`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+> **get**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:78](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L78)
+Defined in: [packages/rest/src/REST.ts:78](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L78)
 
 Runs a get request from the api
 
@@ -484,7 +444,7 @@ Runs a get request from the api
 
 The full route to query
 
-##### options
+##### options?
 
 [`RequestData`](../interfaces/RequestData.md) = `{}`
 
@@ -539,13 +499,13 @@ in the list of the listeners of the event.
 
 ##### eventName
 
-The name of the event being listened for
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event being listened for
 
 ##### listener?
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The event handler function
 
@@ -565,7 +525,7 @@ v3.2.0
 
 ### listeners()
 
-> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:832
 
@@ -589,11 +549,11 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -623,11 +583,11 @@ Alias for `emitter.removeListener()`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -686,13 +646,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -751,13 +711,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -777,9 +737,9 @@ v0.3.0
 
 ### post()
 
-> **post**\<`T`\>(`fullRoute`, `options`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+> **post**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:98](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L98)
+Defined in: [packages/rest/src/REST.ts:98](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L98)
 
 Runs a post request from the api
 
@@ -797,7 +757,7 @@ Runs a post request from the api
 
 The full route to query
 
-##### options
+##### options?
 
 [`RequestData`](../interfaces/RequestData.md) = `{}`
 
@@ -838,13 +798,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -889,13 +849,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -915,9 +875,9 @@ v6.0.0
 
 ### put()
 
-> **put**\<`T`\>(`fullRoute`, `options`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+> **put**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: [packages/rest/src/REST.ts:108](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L108)
+Defined in: [packages/rest/src/REST.ts:108](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L108)
 
 Runs a put request from the api
 
@@ -935,7 +895,7 @@ Runs a put request from the api
 
 The full route to query
 
-##### options
+##### options?
 
 [`RequestData`](../interfaces/RequestData.md) = `{}`
 
@@ -949,7 +909,7 @@ Optional request options
 
 ### rawListeners()
 
-> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:863
 
@@ -991,11 +951,11 @@ emitter.emit('log');
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -1137,11 +1097,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -1194,7 +1154,7 @@ v0.3.5
 
 > **setToken**(`token`): `REST`
 
-Defined in: [packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/5849f1b1f34ceb1cb07b41e95e2ec257b46b9f4b/packages/rest/src/REST.ts#L67)
+Defined in: [packages/rest/src/REST.ts:67](https://github.com/discloud/discloud.app/blob/c4016c90540db229b9170cffe6882c41b0b114cb/packages/rest/src/REST.ts#L67)
 
 Sets the authorization token that should be used for requests
 
@@ -1309,11 +1269,11 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 ##### name
 
-`string` | `symbol`
+`string` \| `symbol`
 
 #### Returns
 
@@ -1365,7 +1325,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 #### Returns
 
@@ -1409,9 +1369,9 @@ The emitter to query
 
 ##### eventName
 
-The event name
+`string` \| `symbol`
 
-`string` | `symbol`
+The event name
 
 #### Returns
 
@@ -1524,7 +1484,7 @@ console.log('done'); // prints 'done'
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1750,7 +1710,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1881,7 +1841,7 @@ v11.13.0, v10.16.0
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets`): `void`
 
 Defined in: node\_modules/@types/node/events.d.ts:369
 
@@ -1902,7 +1862,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-##### eventTargets?
+##### eventTargets
 
 ...(`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`)[]
 

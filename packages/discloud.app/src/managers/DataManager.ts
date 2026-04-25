@@ -1,49 +1,34 @@
-import type { Constructable } from "../@types";
+import type { Instanciable } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import BaseManager from "./BaseManager";
 
 /**
  * Manager for data
  */
-export default abstract class DataManager<T extends Constructable<T>> extends BaseManager {
-  declare protected readonly _cache: Map<string, InstanceType<T>>;
-  declare protected readonly holds: T;
-
-  constructor(discloudApp: DiscloudApp, holds: T) {
+export default abstract class DataManager<K, V extends Instanciable<V>> extends BaseManager {
+  constructor(discloudApp: DiscloudApp, protected readonly holds: V) {
     super(discloudApp);
-
-    Object.defineProperties(this, {
-      _cache: {
-        value: new Map(),
-      },
-      holds: {
-        value: holds,
-      },
-    });
   }
 
-  get cache(): Map<string, InstanceType<T>> {
+  protected readonly _cache: Map<K, InstanceType<V>> = new Map();
+
+  get cache(): Map<K, InstanceType<V>> {
     return this._cache;
   }
 
   /**
    * Resolves a data entry to a data Object.
-   * @param idOrInstance - The id or instance of something in this Manager
+   * @param keyOrInstance - The id or instance of something in this Manager
    */
-  resolve(idOrInstance: string | InstanceType<T>) {
-    if (idOrInstance instanceof this.holds) return idOrInstance;
-    if (typeof idOrInstance === "string") return this.cache.get(idOrInstance) ?? null;
-    return null;
-  }
-
-  resolveId(idOrInstance: string | InstanceType<T>) {
-    if (typeof idOrInstance === "string") return idOrInstance;
-    // @ts-expect-error ts(2339)
-    if (idOrInstance instanceof this.holds) return idOrInstance.id;
+  resolve(keyOrInstance: K | InstanceType<V>) {
+    if (keyOrInstance instanceof this.holds) return keyOrInstance;
+    if (typeof keyOrInstance === typeof this._cache.keys().next().value) {
+      return this._cache.get(keyOrInstance as K) ?? null;
+    }
     return null;
   }
 
   valueOf() {
-    return this.cache;
+    return this._cache;
   }
 }

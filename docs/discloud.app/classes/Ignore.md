@@ -46,7 +46,7 @@ Defined in: packages/util/dist/glob/ignore.d.ts:10
 
 ##### ignore?
 
-`string` | `string`[]
+`string` \| `string`[]
 
 ##### cwd?
 

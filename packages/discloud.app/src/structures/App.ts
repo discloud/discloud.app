@@ -1,9 +1,12 @@
-import type { ApiApp, ApiStatusApp } from "@discloudapp/api-types/v2";
+import type { ApiApp } from "@discloudapp/api-types/v2";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
+import AppModeratorsManager from "../managers/AppModeratorsManager";
+import AppStatusManager from "../managers/AppStatusManager";
+import Deprecation from "../util/deprecation";
 import AppApt from "./AppApt";
-import AppStatus from "./AppStatus";
-import AppTeam from "./AppTeam";
 import BaseApp from "./BaseApp";
+
+const aptDeprecation = new Deprecation("The apt property is deprecated. Use apts instead.");
 
 export default class App extends BaseApp {
   /**
@@ -55,67 +58,67 @@ export default class App extends BaseApp {
    */
   declare type: number;
 
-  declare readonly apt: AppApt;
-  declare readonly status: AppStatus;
-  declare readonly team: AppTeam;
+  /** @deprecated use apts instead. */
+  get apt() {
+    aptDeprecation.emit();
+    return this.apts;
+  }
 
-  constructor(discloudApp: DiscloudApp, data: ApiApp | ApiStatusApp) {
+  readonly apts: AppApt;
+  readonly moderators: AppModeratorsManager;
+  readonly status: AppStatusManager;
+
+  constructor(discloudApp: DiscloudApp, data: ApiApp) {
     super(discloudApp, data);
 
-    Object.defineProperties(this, {
-      apt: { value: new AppApt(this.discloudApp, data) },
-      status: { value: new AppStatus(this.discloudApp, data) },
-      team: { value: new AppTeam(this.discloudApp, data) },
-    });
+    this.apts = new AppApt(this.discloudApp, this.id);
+    this.moderators = new AppModeratorsManager(this.discloudApp, this.id);
+    this.status = new AppStatusManager(this.discloudApp, this.id);
 
     this._patch(data);
   }
 
-  protected _patch(data: Partial<ApiApp | ApiStatusApp>) {
-    if ("addedTimestamp" in data)
-      this.addedTimestamp = data.addedTimestamp!;
+  protected _patch(data: Partial<ApiApp>) {
+    if (data.addedTimestamp !== undefined)
+      this.addedTimestamp = data.addedTimestamp;
 
-    if ("autoRestart" in data)
-      this.autoRestart = data.autoRestart!;
+    if (data.autoRestart !== undefined)
+      this.autoRestart = data.autoRestart;
 
-    if ("avatarURL" in data)
-      this.avatarURL = data.avatarURL!;
+    if (data.avatarURL !== undefined)
+      this.avatarURL = data.avatarURL;
 
-    if ("exitCode" in data)
-      this.exitCode = data.exitCode!;
+    if (data.exitCode !== undefined)
+      this.exitCode = data.exitCode;
 
-    if ("lang" in data)
-      this.lang = data.lang!;
+    if (data.lang !== undefined)
+      this.lang = data.lang;
 
-    if ("mainFile" in data)
-      this.mainFile = data.mainFile!;
+    if (data.mainFile !== undefined)
+      this.mainFile = data.mainFile;
 
-    if ("mods" in data)
-      if (Array.isArray(data.mods)) {
-        this.mods.clear();
+    if (Array.isArray(data.mods)) {
+      this.mods.clear();
 
-        for (const mod of data.mods) {
-          this.mods.add(mod);
-        }
+      for (const mod of data.mods) {
+        this.mods.add(mod);
       }
+    }
 
-    if ("name" in data)
-      this.name = data.name!;
+    if (data.name !== undefined)
+      this.name = data.name;
 
-    if ("online" in data)
-      this.online = data.online!;
+    if (data.online !== undefined)
+      this.online = data.online;
 
-    if ("ram" in data)
-      this.ram = data.ram!;
+    if (data.ram !== undefined)
+      this.ram = data.ram;
 
-    if ("ramKilled" in data)
-      this.ramKilled = data.ramKilled!;
+    if (data.ramKilled !== undefined)
+      this.ramKilled = data.ramKilled;
 
-    if ("type" in data && typeof data.type === "number")
+    if (data.type !== undefined)
       this.type = data.type;
-
-    // @ts-expect-error ts(2345) ts(2445)
-    this.apt._patch(data); this.status._patch(data); this.team._patch(data);
 
     return super._patch(data);
   }

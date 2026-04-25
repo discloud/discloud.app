@@ -4,121 +4,192 @@ import type { LocaleString } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import Base from "./Base";
 
+// eslint-disable-next-line func-style
+let emitWarning = () => {
+  process.emitWarning("Use fetch() method before it.");
+};
+
+function noop() { }
+
 export default class User extends Base {
+  private readonly _appIDs = new Set<string>();
+  private readonly _customdomains = new Set<string>();
+  private readonly _subdomains = new Set<string>();
+
+  declare private _id: string;
+  declare private _locale: string;
+  declare private _plan: string;
+  private _planDataEnd: Date | null = null;
+  private _planDataEndTimestamp: number | null = null;
+  declare private _ramUsedMb: number;
+  declare private _totalRamMb: number;
+  declare private _ramUsage: number;
+  private _avatar: string | null = null;
+  private _username: string | null = null;
+
   /**
    * Your applications ID
+   * @readonly
    */
-  readonly appIDs = new Set<string>();
+  get appIDs() {
+    emitWarning();
+    return this._appIDs;
+  }
   /**
    * Your custom domains on Discloud
+   * @readonly
    */
-  readonly customdomains = new Set<string>();
+  get customdomains() {
+    emitWarning();
+    return this._customdomains;
+  }
   /**
    * Your id
+   * @readonly
    */
-  declare id: string;
+  get id() {
+    emitWarning();
+    return this._id;
+  }
   /**
    * Your locale
+   * @readonly
    */
-  declare locale: string;
+  get locale() {
+    emitWarning();
+    return this._locale;
+  }
   /**
    * Your plan
+   * @readonly
    */
-  declare plan: string;
+  get plan() {
+    emitWarning();
+    return this._plan;
+  }
   /**
    * Date of when will your plan end
+   * @readonly
    */
-  planDataEnd: Date | null = null;
+  get planDataEnd() {
+    emitWarning();
+    return this._planDataEnd;
+  }
   /**
    * Timestamp of when will your plan end
+   * @readonly
    */
-  planDataEndTimestamp: number | null = null;
+  get planDataEndTimestamp() {
+    emitWarning();
+    return this._planDataEndTimestamp;
+  }
   /**
    * Quantity of RAM was used for your applications
+   * @readonly
    */
-  declare ramUsedMb: number;
+  get ramUsedMb() {
+    emitWarning();
+    return this._ramUsedMb;
+  }
   /**
    * Your subdomains on Discloud
+   * @readonly
    */
-  readonly subdomains = new Set<string>();
+  get subdomains() {
+    emitWarning();
+    return this._subdomains;
+  }
   /**
    * Your total RAM quantity
+   * @readonly
    */
-  declare totalRamMb: number;
-
-  declare ramUsage: number;
-
-  avatar: string | null = null;
-  username: string | null = null;
-
-  constructor(discloudApp: DiscloudApp, data: ApiUser) {
-    super(discloudApp);
-
-    this._patch(data);
+  get totalRamMb() {
+    emitWarning();
+    return this._totalRamMb;
+  }
+  /**
+   * @readonly
+   */
+  get avatar() {
+    emitWarning();
+    return this._avatar;
+  }
+  /**
+   * @readonly
+   */
+  get username() {
+    emitWarning();
+    return this._username;
   }
 
+  constructor(discloudApp: DiscloudApp) {
+    super(discloudApp);
+  }
+
+  get loaded() { return emitWarning === noop; }
+
   protected _patch(data: Partial<ApiUser>): this {
-    if ("userID" in data && typeof data.userID === "string")
-      this.id = data.userID;
+    if (data.userID !== undefined)
+      this._id ??= data.userID;
 
-    if ("apps" in data)
-      if (Array.isArray(data.apps)) {
-        this.appIDs.clear();
+    if (Array.isArray(data.apps)) {
+      this._appIDs.clear();
 
-        for (const appId of data.apps) {
-          this.appIDs.add(appId);
-        }
-      }
-
-    if ("avatar" in data)
-      this.avatar = data.avatar ?? null;
-
-    if ("customdomains" in data)
-      if (Array.isArray(data.customdomains)) {
-        this.customdomains.clear();
-
-        for (const customdomain of data.customdomains) {
-          this.customdomains.add(customdomain);
-        }
-      }
-
-    if ("locale" in data)
-      this.locale = data.locale!;
-
-    if ("plan" in data)
-      this.plan = data.plan!;
-
-    if ("planDataEnd" in data) {
-      const planDataEndTimestamp = Date.parse(data.planDataEnd!);
-
-      if (isNaN(planDataEndTimestamp)) {
-        this.planDataEnd = this.planDataEndTimestamp = null;
-      } else {
-        this.planDataEnd = new Date(planDataEndTimestamp);
-        this.planDataEndTimestamp = planDataEndTimestamp;
+      for (const appId of data.apps) {
+        this._appIDs.add(appId);
       }
     }
 
-    if ("ramUsedMb" in data)
-      this.ramUsedMb = data.ramUsedMb!;
+    if (data.avatar !== undefined)
+      this._avatar = data.avatar;
 
-    if ("subdomains" in data)
-      if (Array.isArray(data.subdomains)) {
-        this.subdomains.clear();
+    if (Array.isArray(data.customdomains)) {
+      this._customdomains.clear();
 
-        for (const subdomain of data.subdomains) {
-          this.subdomains.add(subdomain);
-        }
+      for (const customdomain of data.customdomains) {
+        this._customdomains.add(customdomain);
       }
+    }
 
-    if ("totalRamMb" in data)
-      this.totalRamMb = data.totalRamMb!;
+    if (data.locale !== undefined)
+      this._locale = data.locale;
 
-    if ("ramUsedMb" in this && "totalRamMb" in this)
-      this.ramUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
+    if (data.plan !== undefined)
+      this._plan = data.plan;
 
-    if ("username" in data)
-      this.username = data.username ?? null;
+    if (data.planDataEnd !== undefined) {
+      const planDataEndTimestamp = Date.parse(data.planDataEnd);
+
+      if (isNaN(planDataEndTimestamp)) {
+        this._planDataEnd = this._planDataEndTimestamp = null;
+      } else {
+        this._planDataEnd = new Date(planDataEndTimestamp);
+        this._planDataEndTimestamp = planDataEndTimestamp;
+      }
+    }
+
+    if (data.ramUsedMb !== undefined)
+      this._ramUsedMb = data.ramUsedMb;
+
+    if (Array.isArray(data.subdomains)) {
+      this._subdomains.clear();
+
+      for (const subdomain of data.subdomains) {
+        this._subdomains.add(subdomain);
+      }
+    }
+
+    if (data.totalRamMb !== undefined)
+      this._totalRamMb = data.totalRamMb;
+
+    if (this.ramUsedMb !== undefined && this.totalRamMb !== undefined)
+      this._ramUsage = calculatePercentage(this.ramUsedMb, this.totalRamMb);
+
+    if (data.username !== undefined)
+      this._username = data.username;
+
+    // disable warn
+    emitWarning = noop;
 
     return super._patch(data);
   }
@@ -136,8 +207,8 @@ export default class User extends Base {
   async setLocale<L extends LocaleString>(locale: L): Promise<boolean> {
     const data = await this.discloudApp.rest.put<RESTPutApiLocaleResult>(Routes.locale(locale));
 
-    if ("locale" in data)
-      this.locale = data.locale;
+    if (data.locale !== undefined)
+      this._locale = data.locale;
 
     return data.locale === locale;
   }

@@ -14,7 +14,7 @@ Defined in: packages/util/dist/glob/glob.d.ts:1
 
 ### pattern
 
-`string` | `string`[]
+`string` \| `string`[]
 
 ### cwd?
 

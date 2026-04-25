@@ -18,7 +18,7 @@ Defined in: packages/rest/dist/REST.d.ts:3
 
 > **new REST**(`options?`): `REST`
 
-Defined in: packages/rest/dist/REST.d.ts:22
+Defined in: packages/rest/dist/REST.d.ts:6
 
 #### Parameters
 
@@ -35,46 +35,6 @@ Defined in: packages/rest/dist/REST.d.ts:22
 `EventEmitter<RestEvents>.constructor`
 
 ## Properties
-
-### globalLimit
-
-> **globalLimit**: `number`
-
-Defined in: packages/rest/dist/REST.d.ts:9
-
-The number of requests limit on the global bucket
-
-***
-
-### globalRemaining
-
-> **globalRemaining**: `number`
-
-Defined in: packages/rest/dist/REST.d.ts:13
-
-The number of requests remaining in the global bucket
-
-***
-
-### globalReset
-
-> **globalReset**: `number`
-
-Defined in: packages/rest/dist/REST.d.ts:17
-
-The seconds that the global bucket is reset
-
-***
-
-### globalTime
-
-> **globalTime**: `number`
-
-Defined in: packages/rest/dist/REST.d.ts:21
-
-The time at which the last request was made
-
-***
 
 ### options
 
@@ -203,7 +163,7 @@ v13.6.0, v12.17.0
 
 > **get** **globalLimited**(): `boolean`
 
-Defined in: packages/rest/dist/REST.d.ts:27
+Defined in: packages/rest/dist/REST.d.ts:11
 
 If the rate limit bucket is currently limited by its limit
 
@@ -219,7 +179,7 @@ If the rate limit bucket is currently limited by its limit
 
 > **get** **globalTimeToReset**(): `number`
 
-Defined in: packages/rest/dist/REST.d.ts:31
+Defined in: packages/rest/dist/REST.d.ts:15
 
 The time until queued requests can continue
 
@@ -235,7 +195,7 @@ The time until queued requests can continue
 
 > **get** **token**(): `string`
 
-Defined in: packages/rest/dist/REST.d.ts:32
+Defined in: packages/rest/dist/REST.d.ts:16
 
 ##### Returns
 
@@ -263,11 +223,11 @@ Defined in: node\_modules/@types/node/events.d.ts:103
 
 ##### event
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -297,11 +257,11 @@ Alias for `emitter.on(eventName, listener)`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -321,7 +281,7 @@ v0.1.26
 
 > **delete**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/dist/REST.d.ts:52
+Defined in: packages/rest/dist/REST.d.ts:36
 
 Runs a delete request from the api
 
@@ -405,11 +365,11 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### args
 
-...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] : `never`
+...`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] : `never`
 
 #### Returns
 
@@ -466,7 +426,7 @@ v6.0.0
 
 > **get**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/dist/REST.d.ts:45
+Defined in: packages/rest/dist/REST.d.ts:29
 
 Runs a get request from the api
 
@@ -539,13 +499,13 @@ in the list of the listeners of the event.
 
 ##### eventName
 
-The name of the event being listened for
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event being listened for
 
 ##### listener?
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The event handler function
 
@@ -565,7 +525,7 @@ v3.2.0
 
 ### listeners()
 
-> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **listeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:832
 
@@ -589,11 +549,11 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -623,11 +583,11 @@ Alias for `emitter.removeListener()`.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -686,13 +646,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -751,13 +711,13 @@ myEE.emit('foo');
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -779,7 +739,7 @@ v0.3.0
 
 > **post**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/dist/REST.d.ts:59
+Defined in: packages/rest/dist/REST.d.ts:43
 
 Runs a post request from the api
 
@@ -838,13 +798,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -889,13 +849,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-The name of the event.
+keyof RestEvents \| `K`
 
-keyof RestEvents | `K`
+The name of the event.
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 The callback function
 
@@ -917,7 +877,7 @@ v6.0.0
 
 > **put**\<`T`\>(`fullRoute`, `options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
-Defined in: packages/rest/dist/REST.d.ts:66
+Defined in: packages/rest/dist/REST.d.ts:50
 
 Runs a put request from the api
 
@@ -949,7 +909,7 @@ Optional request options
 
 ### rawListeners()
 
-> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+> **rawListeners**\<`K`\>(`eventName`): `K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 Defined in: node\_modules/@types/node/events.d.ts:863
 
@@ -991,11 +951,11 @@ emitter.emit('log');
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 #### Returns
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`[]
 
 #### Since
 
@@ -1137,11 +1097,11 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### eventName
 
-keyof RestEvents | `K`
+keyof RestEvents \| `K`
 
 ##### listener
 
-`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\<`K`\>\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
+`K` *extends* keyof [`RestEvents`](../interfaces/RestEvents.md) ? [`RestEvents`](../interfaces/RestEvents.md)\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 #### Returns
 
@@ -1194,7 +1154,7 @@ v0.3.5
 
 > **setToken**(`token`): `this`
 
-Defined in: packages/rest/dist/REST.d.ts:38
+Defined in: packages/rest/dist/REST.d.ts:22
 
 Sets the authorization token that should be used for requests
 
@@ -1309,11 +1269,11 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 ##### name
 
-`string` | `symbol`
+`string` \| `symbol`
 
 #### Returns
 
@@ -1365,7 +1325,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 ##### emitter
 
-`EventEmitter`\<`DefaultEventMap`\> | `EventTarget`
+`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`
 
 #### Returns
 
@@ -1409,9 +1369,9 @@ The emitter to query
 
 ##### eventName
 
-The event name
+`string` \| `symbol`
 
-`string` | `symbol`
+The event name
 
 #### Returns
 
@@ -1524,7 +1484,7 @@ console.log('done'); // prints 'done'
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1750,7 +1710,7 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ###### eventName
 
-`string` | `symbol`
+`string` \| `symbol`
 
 ###### options?
 
@@ -1881,7 +1841,7 @@ v11.13.0, v10.16.0
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n?`, ...`eventTargets?`): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets`): `void`
 
 Defined in: node\_modules/@types/node/events.d.ts:369
 
@@ -1902,7 +1862,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-##### eventTargets?
+##### eventTargets
 
 ...(`EventEmitter`\<`DefaultEventMap`\> \| `EventTarget`)[]
 
