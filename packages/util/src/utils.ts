@@ -27,10 +27,20 @@ function _mergeDefaults<A extends Record<any, any>>(defaults: A, options: Partia
   if (options === undefined) return defaults;
 
   for (const key in defaults) {
-    if (typeof options[key] === "object") {
-      options[key as keyof A] = _mergeDefaults(defaults[key], options[key]!);
+    if (key === "__proto__" || key === "prototype" || key === "constructor") continue;
+
+    const defaultValue = defaults[key];
+    const optionValue = options[key];
+
+    const canRecurse =
+      typeof defaultValue === "object" && defaultValue !== null &&
+      typeof optionValue === "object" && optionValue !== null &&
+      Object.prototype.hasOwnProperty.call(options, key);
+
+    if (canRecurse) {
+      options[key as keyof A] = _mergeDefaults(defaultValue, optionValue);
     } else {
-      options[key as keyof A] ??= defaults[key];
+      options[key as keyof A] ??= defaultValue;
     }
   }
 
