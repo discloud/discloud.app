@@ -16,8 +16,12 @@ export default abstract class BaseAppsModeratorsManager extends BaseManager {
   protected readonly _cache: Map<string, Map<string, AppModerator>> = new Map();
   get cache() { return this._cache; }
 
-  protected _add(appId: string, data: PartialApiAppModerator): InstanceType<typeof AppModerator> {
-    const cache = this._cache.getOrInsertComputed(appId, () => new Map());
+  protected _add(appId: string, data: PartialApiAppModerator): AppModerator {
+    let cache = this._cache.get(appId);
+    if (!cache) {
+      cache = new Map<string, AppModerator>();
+      this._cache.set(appId, cache);
+    }
     const existing = cache.get(data.modID);
     // @ts-expect-error ts(2445)
     if (existing) return existing._patch(data);
@@ -28,8 +32,8 @@ export default abstract class BaseAppsModeratorsManager extends BaseManager {
     return entry;
   }
 
-  protected _addMany(appId: string, data: PartialApiAppModerator[]): Map<string, InstanceType<typeof AppModerator>> {
-    const cache = new Map<string, InstanceType<typeof AppModerator>>();
+  protected _addMany(appId: string, data: PartialApiAppModerator[]): Map<string, AppModerator> {
+    const cache = new Map<string, AppModerator>();
 
     for (const element of data) {
       const obj = this._add(appId, element);
@@ -73,7 +77,7 @@ export default abstract class BaseAppsModeratorsManager extends BaseManager {
       cache.delete(modId);
   }
 
-  protected _patch(appId: string, modId: string, data: PartialApiAppModerator): InstanceType<typeof AppModerator> | undefined {
+  protected _patch(appId: string, modId: string, data: PartialApiAppModerator): AppModerator | undefined {
     // @ts-expect-error ts(2445)
     return this._cache.get(appId)?.get(modId)?._patch(data);
   }
