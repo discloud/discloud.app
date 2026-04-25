@@ -14,6 +14,7 @@ export default abstract class BaseAppsModeratorsManager extends BaseManager {
   }
 
   protected readonly _cache: Map<string, Map<string, AppModerator>> = new Map();
+  get cache() { return this._cache; }
 
   protected _add(appId: string, data: PartialApiAppModerator): InstanceType<typeof AppModerator> {
     const cache = this._cache.getOrInsertComputed(appId, () => new Map());

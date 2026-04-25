@@ -22,9 +22,7 @@ export default abstract class DataManager<K, V extends Instanciable<V>> extends 
    */
   resolve(keyOrInstance: K | InstanceType<V>) {
     if (keyOrInstance instanceof this.holds) return keyOrInstance;
-    if (keyOrInstance !== undefined && keyOrInstance !== null)
-      return this._cache.get(keyOrInstance as K) ?? null;
-    return null;
+    return this._cache.get(keyOrInstance as K) ?? null;
   }
 
   valueOf() {
