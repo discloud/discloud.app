@@ -1,13 +1,28 @@
 import type { ApiAppBackup, ApiAppBackupAll } from "@discloudapp/api-types/v2";
 import { existsSync, type PathLike } from "fs";
-import { mkdir, writeFile } from "fs/promises";
+import { mkdir, open } from "fs/promises";
 import { extname, join } from "path";
 import { cwd } from "process";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
-import Base from "./Base";
 import { HttpBadStatusError } from "../errors/http";
+import Base from "./Base";
+import { FlexibleBuffer } from "@discloudapp/util";
 
-class AppBackup extends Base {
+/**
+ * Callback de progresso do download
+ */
+export type DownloadProgressCallback = (progress: {
+  /**
+   * Bytes baixados
+   */
+  downloaded: number;
+  /**
+   * Total de bytes (pode ser 0 se o servidor não informar)
+   */
+  total: number;
+}) => void | Promise<void>;
+
+export default class AppBackup extends Base {
   /**
    * Your app id
    */
@@ -48,8 +63,13 @@ class AppBackup extends Base {
    * 
    * @param path - Backup path
    * @param filename - Backup file name
+   * @param onProgress - Callback para acompanhar o progresso do download
    */
-  async download(path: PathLike = cwd(), filename: string = this.appId) {
+  async download(
+    path: PathLike = cwd(),
+    filename: string = this.appId,
+    onProgress?: DownloadProgressCallback,
+  ) {
     if (!this.url) throw Error("Missing backup URL");
 
     path = path.toString();
@@ -62,16 +82,32 @@ class AppBackup extends Base {
 
     if (!response.ok) throw HttpBadStatusError.fromResponse(response);
 
-    this.data = await response.arrayBuffer().then(Buffer.from);
+    const contentLength = response.headers.get("content-length");
+    const total = contentLength ? parseInt(contentLength) : 0;
 
     const filepath = join(path, `${filename}${extname(url.pathname)}`);
+    const file = await open(filepath, "w");
 
-    await writeFile(filepath, this.data);
+    const buffer = total > 0 ? FlexibleBuffer.fixed(total) : FlexibleBuffer.flexible();
 
-    if (existsSync(filepath)) this.url = filepath;
+    try {
+      if (!response.body) return this;
+
+      for await (const chunk of response.body.values()) {
+        await file.write(chunk);
+
+        buffer.push(chunk);
+
+        if (onProgress) {
+          await onProgress({ downloaded: buffer.length, total });
+        }
+      }
+    } finally {
+      this.data = buffer.toBuffer();
+      if (existsSync(filepath)) this.url = filepath;
+      await file.close();
+    }
 
     return this;
   }
 }
-
-export default AppBackup;
