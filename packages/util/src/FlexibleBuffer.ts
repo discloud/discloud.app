@@ -89,6 +89,6 @@ export class ArrayFlexibleBuffer extends FlexibleBuffer {
   }
 
   toJSON(): { type: "Buffer", data: number[] } {
-    return { type: "Buffer", data: this._buffer };
+    return this.toBuffer().toJSON();
   }
 }
