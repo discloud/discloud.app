@@ -19,8 +19,7 @@ export default abstract class BaseCustomdomainsManager<T extends Instanciable<ty
     const existing = this._patch(data.id, data);
     if (existing) return existing;
 
-    // @ts-expect-error ts(2511)
-    const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
+    const entry = new this.holds(this.discloudApp, data) as InstanceType<T>;
     this._cache.set(entry.id, entry);
     this.discloudApp.user.customdomains.add(data.id);
     return entry;
@@ -63,7 +62,7 @@ export default abstract class BaseCustomdomainsManager<T extends Instanciable<ty
   }
 
   protected _patch(id: string, data: Partial<ApiDomain>): InstanceType<T> | undefined {
-    // @ts-expect-error ts(2339)
+    // @ts-expect-error ts(2445)
     return this._cache.get(id)?._patch(data);
   }
 }

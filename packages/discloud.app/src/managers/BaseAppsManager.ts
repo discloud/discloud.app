@@ -1,10 +1,8 @@
-import { type ApiApp, type BaseApiApp } from "@discloudapp/api-types/v2";
+import { type BaseApiApp } from "@discloudapp/api-types/v2";
 import { type Instanciable } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import type BaseApp from "../structures/BaseApp";
 import CachedManager from "./CachedManager";
-
-type PartialApiApp = BaseApiApp & Partial<ApiApp>
 
 /**
  * Apps cache manager
@@ -15,18 +13,17 @@ export default abstract class BaseAppsManager<T extends Instanciable<typeof Base
     super(discloudApp, holds);
   }
 
-  protected _add(data: PartialApiApp): InstanceType<T> {
+  protected _add(data: BaseApiApp): InstanceType<T> {
     const existing = this._patch(data.id, data);
     if (existing) return existing;
 
-    // @ts-expect-error ts(2511)
-    const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
+    const entry = new this.holds(this.discloudApp, data) as InstanceType<T>;
     this._cache.set(entry.id, entry);
     this.discloudApp.user.appIDs.add(entry.id);
     return entry;
   }
 
-  protected _addMany(data: PartialApiApp[]): Map<string, InstanceType<T>> {
+  protected _addMany(data: BaseApiApp[]): Map<string, InstanceType<T>> {
     const cache = new Map<string, InstanceType<T>>();
 
     for (const element of data) {
@@ -37,7 +34,7 @@ export default abstract class BaseAppsManager<T extends Instanciable<typeof Base
     return cache;
   }
 
-  protected _clear(data?: (string | PartialApiApp)[]): void {
+  protected _clear(data?: (string | BaseApiApp)[]): void {
     if (!data?.length) {
       this.discloudApp.user.appIDs.clear();
       return this._cache.clear();
@@ -62,8 +59,8 @@ export default abstract class BaseAppsManager<T extends Instanciable<typeof Base
       this._delete(id);
   }
 
-  protected _patch(id: string, data: Partial<ApiApp>): InstanceType<T> | undefined {
-    // @ts-expect-error ts(2339)
+  protected _patch(id: string, data: Partial<BaseApiApp>): InstanceType<T> | undefined {
+    // @ts-expect-error ts(2445)
     return this._cache.get(id)?._patch(data);
   }
 }

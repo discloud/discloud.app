@@ -1,10 +1,8 @@
-import { type ApiTeamApp, type BaseApiApp } from "@discloudapp/api-types/v2";
+import { type BaseApiApp } from "@discloudapp/api-types/v2";
 import { type Instanciable } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import type BaseSharedApp from "../structures/BaseSharedApp";
 import CachedManager from "./CachedManager";
-
-type PartialApiSharedApp = BaseApiApp & Partial<ApiTeamApp>
 
 /**
  * Shared apps cache manager
@@ -15,17 +13,16 @@ export default abstract class BaseSharedAppsManager<T extends Instanciable<typeo
     super(discloudApp, holds);
   }
 
-  protected _add(data: PartialApiSharedApp): InstanceType<T> {
+  protected _add(data: BaseApiApp): InstanceType<T> {
     const existing = this._patch(data.id, data);
     if (existing) return existing;
 
-    // @ts-expect-error ts(2511)
-    const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
+    const entry = new this.holds(this.discloudApp, data) as InstanceType<T>;
     this._cache.set(entry.id, entry);
     return entry;
   }
 
-  protected _addMany(data: PartialApiSharedApp[]): Map<string, InstanceType<T>> {
+  protected _addMany(data: BaseApiApp[]): Map<string, InstanceType<T>> {
     const cache = new Map<string, InstanceType<T>>();
 
     for (const element of data) {
@@ -36,7 +33,7 @@ export default abstract class BaseSharedAppsManager<T extends Instanciable<typeo
     return cache;
   }
 
-  protected _clear(data?: (string | PartialApiSharedApp)[]): void {
+  protected _clear(data?: (string | BaseApiApp)[]): void {
     if (!data?.length) return this._cache.clear();
 
     const mapped = new Set(data.map(v => typeof v === "string" ? v : v.id));
@@ -57,8 +54,8 @@ export default abstract class BaseSharedAppsManager<T extends Instanciable<typeo
       this._delete(id);
   }
 
-  protected _patch(id: string, data: Partial<ApiTeamApp>): InstanceType<T> | undefined {
-    // @ts-expect-error ts(2339)
+  protected _patch(id: string, data: BaseApiApp): InstanceType<T> | undefined {
+    // @ts-expect-error ts(2445)
     return this._cache.get(id)?._patch(data);
   }
 }

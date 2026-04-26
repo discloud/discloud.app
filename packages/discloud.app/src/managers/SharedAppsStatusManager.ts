@@ -1,13 +1,12 @@
 import { type RESTGetApiAppStatusResult, Routes } from "@discloudapp/api-types/v2";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
-import BaseSharedAppStatus from "../structures/BaseSharedAppStatus";
 import SharedAppStatus from "../structures/SharedAppStatus";
 import { validateNonEmptyString } from "../util/assertions";
 import BaseSharedAppsStatusManager from "./BaseSharedAppsStatusManager";
 
-export default class SharedAppsStatusManager extends BaseSharedAppsStatusManager<typeof BaseSharedAppStatus> {
+export default class SharedAppsStatusManager extends BaseSharedAppsStatusManager<typeof SharedAppStatus> {
   constructor(discloudApp: DiscloudApp) {
-    super(discloudApp, BaseSharedAppStatus);
+    super(discloudApp, SharedAppStatus);
   }
 
   /**
@@ -20,6 +19,6 @@ export default class SharedAppsStatusManager extends BaseSharedAppsStatusManager
 
     const data = await this.discloudApp.rest.get<RESTGetApiAppStatusResult>(Routes.teamStatus(appID));
 
-    return new SharedAppStatus(this.discloudApp, data.apps);
+    return this._add(data.apps);
   }
 }

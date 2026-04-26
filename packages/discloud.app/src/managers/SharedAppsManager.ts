@@ -93,10 +93,7 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
       },
     });
 
-    this._add({
-      id: appID,
-      ram: quantity,
-    } as PartialApiSharedApp);
+    this._patch(appID, { ram: quantity } as PartialApiSharedApp);
   }
 
   /**
@@ -139,10 +136,7 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: true,
-    } as PartialApiSharedApp);
+    this._patch(appID, { online: true } as PartialApiSharedApp);
   }
 
   /**
@@ -167,10 +161,7 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: true,
-    } as PartialApiSharedApp);
+    this._patch(appID, { online: true } as PartialApiSharedApp);
   }
 
   /**
@@ -189,16 +180,13 @@ export default class SharedAppsManager extends BaseSharedAppsManager<typeof Shar
       if (Array.isArray(data.apps.stoped))
         for (let i = 0; i < data.apps.stoped.length; i++) {
           const appId = data.apps.stoped[i];
-          this._patch(appId, { online: true } as PartialApiSharedApp);
+          this._patch(appId, { online: false } as PartialApiSharedApp);
         }
 
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: false,
-    } as PartialApiSharedApp);
+    this._patch(appID, { online: false } as PartialApiSharedApp);
   }
 
   /**

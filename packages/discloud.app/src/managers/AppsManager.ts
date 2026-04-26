@@ -6,6 +6,7 @@ import { type CreateAppOptions, type UpdateAppOptions } from "../@types";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
 import App from "../structures/App";
 import AppBackup from "../structures/AppBackup";
+import AppUploaded from "../structures/AppUploaded";
 import { validateNonEmptyString, validateNumberType } from "../util/assertions";
 import { ProfileOptions } from "../util/validations";
 import AppsAptsManager from "./AppsAptsManager";
@@ -116,10 +117,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
       },
     });
 
-    this._add({
-      id: appID,
-      ram: quantity,
-    } as PartialApiApp);
+    this._patch(appID, { ram: quantity } as PartialApiApp);
   }
 
   /**
@@ -135,7 +133,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
     });
 
     if ("app" in data) {
-      const app = this._add(data.app);
+      const app = new AppUploaded(this.discloudApp, data.app);
 
       return Object.assign({}, data, { app });
     }
@@ -198,11 +196,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
       body: options,
     });
 
-    this._add({
-      id: appID,
-      avatarURL: options.avatarURL,
-      name: options.name,
-    } as PartialApiApp);
+    this._patch(appID, { avatarURL: options.avatarURL, name: options.name } as PartialApiApp);
   }
 
   /**
@@ -227,10 +221,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: true,
-    } as PartialApiApp);
+    this._patch(appID, { online: true } as PartialApiApp);
   }
 
   /**
@@ -255,10 +246,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: true,
-    } as PartialApiApp);
+    this._patch(appID, { online: true } as PartialApiApp);
   }
 
   /**
@@ -283,10 +271,7 @@ export default class AppsManager extends BaseAppsManager<typeof App> {
       return data.apps as unknown;
     }
 
-    this._add({
-      id: appID,
-      online: false,
-    } as PartialApiApp);
+    this._patch(appID, { online: false } as PartialApiApp);
   }
 
   /**

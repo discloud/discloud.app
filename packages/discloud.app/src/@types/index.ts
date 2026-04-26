@@ -1,8 +1,8 @@
 import type { RestEvents, RESTOptions } from "@discloudapp/rest";
 import type { FileResolvable } from "@discloudapp/util";
 
-export type Instanciable<T extends abstract new (...args: any) => any>
-  = abstract new (...args: any) => InstanceType<T>;
+export type Instanciable<T extends NewableFunction & (abstract new (...args: any) => any)>
+  = new (...args: any) => InstanceType<T>;
 
 export interface DiscloudAppOptions {
   rest?: Partial<RESTOptions>

@@ -17,9 +17,8 @@ export default abstract class BaseAppsStatusManager<T extends Instanciable<typeo
     const existing = this._patch(data.id, data);
     if (existing) return existing;
 
-    // @ts-expect-error ts(2511)
-    const entry = this.holds ? new this.holds(this.discloudApp, data) : data;
-    this._cache.set(entry.id, entry);
+    const entry = new this.holds(this.discloudApp, data) as InstanceType<T>;
+    this._cache.set(entry.appId, entry);
     return entry;
   }
 
@@ -56,7 +55,7 @@ export default abstract class BaseAppsStatusManager<T extends Instanciable<typeo
   }
 
   protected _patch(id: string, data: BaseApiApp): InstanceType<T> | undefined {
-    // @ts-expect-error ts(2339)
+    // @ts-expect-error ts(2445)
     return this._cache.get(id)?._patch(data);
   }
 }

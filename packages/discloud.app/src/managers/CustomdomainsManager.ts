@@ -1,4 +1,4 @@
-import { type RESTDeleteApiCustomdomainResult, type RESTGetApiCustomdomainListResult, type RESTGetApiCustomdomainResult, type RESTGetApiCustomdomainVerifyResult, type RESTPostApiCustomdomainCreateResult, type RESTPutApiCustomdomainEditResult, Routes } from "@discloudapp/api-types/v2";
+import { type ApiDomain, type RESTDeleteApiCustomdomainResult, type RESTGetApiCustomdomainListResult, type RESTGetApiCustomdomainResult, type RESTGetApiCustomdomainVerifyResult, type RESTPostApiCustomdomainCreateResult, type RESTPutApiCustomdomainEditResult, Routes } from "@discloudapp/api-types/v2";
 import { DiscloudAPIError } from "@discloudapp/rest";
 import { constants } from "http2";
 import type DiscloudApp from "../discloudApp/DiscloudApp";
@@ -59,11 +59,7 @@ export default class CustomdomainsManager extends BaseCustomdomainsManager<typeo
       },
     });
 
-    this._patch(domain, {
-      app: {
-        id: appId,
-      } as any,
-    });
+    this._patch(domain, { app: { id: appId } } as Partial<ApiDomain>);
   }
 
   /**
