@@ -41,7 +41,7 @@ export default class CustomdomainsManager extends BaseCustomdomainsManager<typeo
    * @param domain - You domain id.
    */
   async delete(domain: string) {
-    await this.discloudApp.rest.post<RESTDeleteApiCustomdomainResult>(Routes.customdomainRemove(domain));
+    await this.discloudApp.rest.delete<RESTDeleteApiCustomdomainResult>(Routes.customdomainRemove(domain));
   }
 
   /**
@@ -53,7 +53,7 @@ export default class CustomdomainsManager extends BaseCustomdomainsManager<typeo
    * @param appId - You app id.
    */
   async edit(domain: string, appId: string) {
-    await this.discloudApp.rest.post<RESTPutApiCustomdomainEditResult>(Routes.customdomainEdit(domain), {
+    await this.discloudApp.rest.put<RESTPutApiCustomdomainEditResult>(Routes.customdomainEdit(domain), {
       body: {
         newAppID: appId,
       },
@@ -71,7 +71,7 @@ export default class CustomdomainsManager extends BaseCustomdomainsManager<typeo
    * @param domain - You domain id.
    */
   async verify(domain: string) {
-    const data = await this.discloudApp.rest.post<RESTGetApiCustomdomainVerifyResult>(Routes.customdomainVerify(domain));
+    const data = await this.discloudApp.rest.get<RESTGetApiCustomdomainVerifyResult>(Routes.customdomainVerify(domain));
 
     return this._add(data.domain);
   }
