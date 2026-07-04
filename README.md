@@ -37,6 +37,7 @@ yarn add discloud.app
 [How to manage custom domains](#how-to-manage-custom-domains)  
 [How to manage subdomains](#how-to-manage-subdomains)  
 [How to manage shared/team applications](#how-to-manage-sharedteam-applications)  
+[How to create snapshots](#how-to-create-snapshots)
 
 ```js
 // index.js
@@ -327,6 +328,38 @@ await discloud.sharedApps.stop("APP_ID"); // Promise<void>
 
 // Get status of a shared application
 const status = await discloud.sharedApps.status.fetch("APP_ID"); // Promise<SharedAppStatus>
+```
+
+### How to create snapshots
+```js
+const { discloud } = require("discloud.app");
+
+// Create a new snapshot
+await discloud.snapshots.create("APP_ID");
+
+// List snapshots for the app
+await discloud.snapshots.fetch("APP_ID");
+
+// Fetch all snapshots
+await discloud.snapshots.fetch();
+```
+
+### How to download the snapshot
+```js
+const { discloud } = require("discloud.app");
+
+// List the snapshots
+const snapshots = await discloud.snapshots.fetch("APP_ID");
+
+// Get the most recent snapshot (last of the Map)
+const snap = [...snapshots.values()].pop();
+
+// Download the snapshot
+await snap.download("./backups");
+
+- If you want a specific one by version (YYYYMMDD-HHMMSS format):
+const snapshots = await discloud.snapshots.fetch("APP_ID");
+const snap = snapshots.get("APP_ID-20260420-153000"); // appId-version
 ```
 
 > **Note:** In v1.x, use `discloud.teamApps` instead of `discloud.sharedApps`. See the [Migration Guide](./MIGRATION.md) for more details.

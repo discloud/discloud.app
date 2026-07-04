@@ -3,6 +3,7 @@ export * from "./base";
 export * from "./customdomain";
 export * from "./locale";
 export * from "./routes";
+export * from "./snapshot"
 export * from "./subdomain";
 export * from "./team";
 export * from "./upload";

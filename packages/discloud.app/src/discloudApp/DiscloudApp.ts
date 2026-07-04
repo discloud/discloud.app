@@ -9,6 +9,7 @@ import SubdomainsManager from "../managers/SubdomainsManager";
 import User from "../structures/User";
 import { DefaultDiscloudAppOptions } from "../util/constants";
 import Deprecation from "../util/deprecation";
+import SnapshotsManager from "../managers/SnapshotsManager";
 
 const appAptDeprecation = new Deprecation("The appApt property is deprecated. Use apps.apts instead.");
 const appTeamDeprecation = new Deprecation("The appTeam property is deprecated. Use apps.moderators instead.");
@@ -20,6 +21,7 @@ export default class DiscloudApp extends EventEmitter<ClientEvents> {
   readonly apps = new AppsManager(this);
   readonly sharedApps = new SharedAppsManager(this);
   readonly customdomains = new CustomdomainsManager(this);
+  readonly snapshots = new SnapshotsManager(this)
   readonly subdomains = new SubdomainsManager(this);
   readonly user = new User(this);
 
