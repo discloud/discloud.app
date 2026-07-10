@@ -1,10 +1,15 @@
+interface IBufferJson {
+  type: string
+  data: number[]
+}
+
 interface IFlexibleBuffer {
   readonly length: number
   push(value: ArrayLike<number>): this
   toBuffer(): Buffer
   toArray(): number[]
   clear(): void
-  toJSON(): { type: "Buffer"; data: number[] }
+  toJSON(): IBufferJson
 }
 
 export abstract class FlexibleBuffer implements IFlexibleBuffer {
@@ -17,11 +22,11 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
   }
 
   abstract readonly length: number
-  abstract push(_value: ArrayLike<number>): this
+  abstract push(value: ArrayLike<number>): this
   abstract toBuffer(): Buffer
   abstract toArray(): number[]
   abstract clear(): void
-  abstract toJSON(): { type: "Buffer"; data: number[] }
+  abstract toJSON(): IBufferJson
 }
 
 export class BufferFlexibleBuffer extends FlexibleBuffer {
@@ -56,7 +61,7 @@ export class BufferFlexibleBuffer extends FlexibleBuffer {
     this._index = 0;
   }
 
-  toJSON() {
+  toJSON(): IBufferJson {
     return this._buffer.toJSON();
   }
 }
@@ -88,7 +93,7 @@ export class ArrayFlexibleBuffer extends FlexibleBuffer {
     this._length = 0;
   }
 
-  toJSON(): { type: "Buffer", data: number[] } {
+  toJSON(): IBufferJson {
     return this.toBuffer().toJSON();
   }
 }
