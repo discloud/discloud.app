@@ -13,11 +13,17 @@ interface IFlexibleBuffer {
 }
 
 export abstract class FlexibleBuffer implements IFlexibleBuffer {
-  static flexible() {
+  static auto(size?: number | null): FlexibleBuffer {
+    return typeof size === "number"
+      ? new BufferFlexibleBuffer(size)
+      : new ArrayFlexibleBuffer();
+  }
+
+  static flexible(): FlexibleBuffer {
     return new ArrayFlexibleBuffer();
   }
 
-  static fixed(size: number) {
+  static fixed(size: number): FlexibleBuffer {
     return new BufferFlexibleBuffer(size);
   }
 
@@ -29,14 +35,14 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
   abstract toJSON(): IBufferJson
 }
 
-export class BufferFlexibleBuffer extends FlexibleBuffer {
-  private readonly _buffer: Buffer;
-  private _index: number = 0;
-
+class BufferFlexibleBuffer extends FlexibleBuffer {
   constructor(size: number) {
     super();
     this._buffer = Buffer.alloc(size);
   }
+
+  private readonly _buffer: Buffer;
+  private _index: number = 0;
 
   get length(): number {
     return this._index;
@@ -66,7 +72,7 @@ export class BufferFlexibleBuffer extends FlexibleBuffer {
   }
 }
 
-export class ArrayFlexibleBuffer extends FlexibleBuffer {
+class ArrayFlexibleBuffer extends FlexibleBuffer {
   private readonly _buffer: any[] = [];
   private _length = 0;
 
