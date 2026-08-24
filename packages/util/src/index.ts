@@ -1,4 +1,5 @@
 import "source-map-support/register";
+import "./@prototypes";
 
 export * from "./BitField";
 export * from "./config";

@@ -1,11 +1,10 @@
 import * as globMudule from "glob";
 import { type } from "os";
-import { asyncGeneratorToArray } from "../utils/array";
 import { DISCLOUD_IGNORE_FILENAME } from "./constants";
 import { Ignore } from "./ignore";
 
 export function glob(pattern: string | string[], cwd?: string) {
-  return asyncGeneratorToArray(globIterate(pattern, cwd));
+  return Array.fromAsync(globIterate(pattern, cwd));
 }
 
 export async function* globIterate(pattern: string | string[], cwd?: string) {
