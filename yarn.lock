@@ -2373,10 +2373,10 @@ typedoc-plugin-coverage@^4.0.3:
   resolved "https://registry.yarnpkg.com/typedoc-plugin-coverage/-/typedoc-plugin-coverage-4.0.3.tgz#24cb2730db122e45580237c515938477bef671dd"
   integrity sha512-baim3wyMkqpX7rBzL/6iZ7wzKJuSr9ffP16RHOsdTUNoHUZeXLIZHSUBtUhXmNHaUNRgfqdmKLBwyggbJjGdeQ==
 
-typedoc-plugin-markdown@^4.12.0:
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.12.0.tgz#94d008b5212f43303edc9578c3031f542f16cae4"
-  integrity sha512-eJDEMAfxCmede22c/Jw7d0FA13ggAQv+KkwQYKYCdqI02cin6Rc9QRwbG/7XvvHWinuFejySnZVUWDtvGk3Vbg==
+typedoc-plugin-markdown@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-4.13.0.tgz#a3757c57207e4ecee85f00e971636d04b9d3359f"
+  integrity sha512-OHaOLoMTS0wL2ud73WXvxv486mrUEtgXxW4iKiTOGJVipT/VBWY76rlVRMQGes7aVonoIf5roWRe1UvHbufLlQ==
 
 typedoc-plugin-mdn-links@^5.1.1:
   version "5.1.1"
