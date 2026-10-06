@@ -15,7 +15,7 @@
     "@types/lodash": "^4.17.25",
     "@types/node": "22",
     "@types/source-map-support": "^0.5.10",
-    "@types/ws": "^8.18.1",
+    "@types/ws": "^8.18.2",
     "dotenv": "^17.4.2",
     "esbuild": "^0.28.2",
     "eslint": "^10.12.0",
