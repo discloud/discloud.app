@@ -2,21 +2,46 @@ import assert from "assert";
 import test, { suite } from "node:test";
 import { FlexibleBuffer } from "../FlexibleBuffer";
 
-const array = [1, 2, 3];
+const _array = [65, 66, 67];
 
 suite("Array FlexibleBuffer", () => {
-  const buffer = FlexibleBuffer.flexible();
+  const flexibleBuffer = FlexibleBuffer.flexible();
 
   test("Allow push oversized", () => {
-    buffer.push(array);
-    assert.strictEqual(buffer.length, array.length);
+    flexibleBuffer.push(_array);
+    assert.strictEqual(flexibleBuffer.length, _array.length);
+  });
+
+  test("Transform to buffer", () => {
+    assert.doesNotThrow(() => {
+      const buffer = flexibleBuffer.toBuffer();
+
+      assert.strictEqual(buffer.length, _array.length);
+
+      for (let i = 0; i < buffer.length; i++) {
+        assert.strictEqual(buffer[i], _array[i]);
+      }
+    });
   });
 });
 
 suite("Buffer FlexibleBuffer", () => {
-  const buffer = FlexibleBuffer.fixed(1);
+  const fixedBuffer = FlexibleBuffer.fixed(3);
+
+  test("Allow pushing a list with a size within the limit", () => {
+    assert.doesNotThrow(() => fixedBuffer.push(_array));
+    assert.strictEqual(fixedBuffer.length, _array.length);
+  });
 
   test("Deny push oversized", () => {
-    assert.throws(() => buffer.push(array));
+    assert.throws(() => fixedBuffer.push(_array));
+  });
+
+  test("Transform to array", () => {
+    assert.doesNotThrow(() => {
+      const array = fixedBuffer.toArray();
+      assert.strictEqual(array.length, _array.length);
+      assert.deepStrictEqual(array, _array);
+    });
   });
 });
