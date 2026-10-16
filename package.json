@@ -32,6 +32,6 @@
     "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.71.1",
-    "unplugin-replace": "^0.9.0"
+    "unplugin-replace": "^0.9.1"
   }
 }
