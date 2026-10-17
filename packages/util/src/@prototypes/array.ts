@@ -14,7 +14,7 @@ async function mappedFromAsync<T, U>(
 ) {
   const array: U[] = [];
   for await (const element of await iterableOrArrayLike as AsyncGenerator<PromiseLike<T>>) {
-    array.push(mapFn(await element, array.length));
+    array.push(await mapFn(await element, array.length));
   }
   return array;
 }
