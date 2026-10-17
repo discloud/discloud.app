@@ -9,10 +9,10 @@ interface IBufferJson {
 
 interface IFlexibleBuffer {
   readonly length: number
-  push(value: ArrayLike<number>): void
-  toBuffer(): Buffer
-  toArray(): IBufferRawData
   clear(): void
+  push(value: ArrayLike<number>): void
+  toArray(): IBufferRawData
+  toBuffer(): Buffer
   toJSON(): IBufferJson
 }
 
@@ -23,16 +23,47 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
       : new ArrayFlexibleBuffer();
   }
 
-  static flexible(): FlexibleBuffer { return new ArrayFlexibleBuffer(); }
-
   static fixed(size: number): FlexibleBuffer { return new BufferFlexibleBuffer(size); }
 
+  static flexible(): FlexibleBuffer { return new ArrayFlexibleBuffer(); }
+
   abstract readonly length: number
-  abstract push(value: ArrayLike<number>): void
-  abstract toBuffer(): Buffer
-  abstract toArray(): IBufferRawData
   abstract clear(): void
+  abstract push(value: ArrayLike<number>): void
+  abstract toArray(): IBufferRawData
+  abstract toBuffer(): Buffer
   abstract toJSON(): IBufferJson
+}
+
+class ArrayFlexibleBuffer extends FlexibleBuffer {
+  private readonly _array: Uint8Array[] = [];
+  private _length = 0;
+
+  get length(): number {
+    return this._length;
+  }
+
+  clear(): void {
+    this._length = this._array.length = 0;
+  }
+
+  push(value: ArrayLike<number>): void {
+    if (!isUint8Array(value)) value = new Uint8Array(value);
+    this._array.push(value as Uint8Array);
+    this._length += value.length;
+  }
+
+  toArray(): IBufferRawData {
+    return this.toJSON().data;
+  }
+
+  toBuffer(): Buffer {
+    return Buffer.concat(this._array, this._length);
+  }
+
+  toJSON(): IBufferJson {
+    return this.toBuffer().toJSON();
+  }
 }
 
 class BufferFlexibleBuffer extends FlexibleBuffer {
@@ -48,57 +79,25 @@ class BufferFlexibleBuffer extends FlexibleBuffer {
     return this._index;
   }
 
+  clear(): void {
+    this._buffer.fill(0);
+    this._index = 0;
+  }
+
   push(value: ArrayLike<number>) {
     this._buffer.set(value, this._index);
     this._index += value.length;
+  }
+
+  toArray(): IBufferRawData {
+    return this.toJSON().data;
   }
 
   toBuffer(): Buffer {
     return this._buffer;
   }
 
-  toArray(): IBufferRawData {
-    return this.toJSON().data;
-  }
-
-  clear(): void {
-    this._buffer.fill(0);
-    this._index = 0;
-  }
-
   toJSON(): IBufferJson {
     return this._buffer.toJSON();
-  }
-}
-
-class ArrayFlexibleBuffer extends FlexibleBuffer {
-  private readonly _array: Uint8Array[] = [];
-  private _length = 0;
-
-  get length(): number {
-    return this._length;
-  }
-
-  push(value: ArrayLike<number>): void {
-    if (!isUint8Array(value)) value = new Uint8Array(value);
-    this._array.push(value as Uint8Array);
-    this._length += value.length;
-  }
-
-  toBuffer(): Buffer {
-    return Buffer.concat(this._array, this._length);
-  }
-
-  toArray(): IBufferRawData {
-    return this.toJSON().data;
-  }
-
-  clear(): void {
-    this._array.length = 0;
-    this._length = 0;
-  }
-
-  toJSON(): IBufferJson {
-    return this.toBuffer().toJSON();
   }
 }
