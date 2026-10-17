@@ -1,3 +1,5 @@
+import { isUint8Array } from "util/types";
+
 type IBufferRawData = number[]
 
 interface IBufferJson {
@@ -78,7 +80,8 @@ class ArrayFlexibleBuffer extends FlexibleBuffer {
   }
 
   push(value: ArrayLike<number>): void {
-    this._array.push(new Uint8Array(value));
+    if (!isUint8Array(value)) value = new Uint8Array(value);
+    this._array.push(value as Uint8Array);
     this._length += value.length;
   }
 
