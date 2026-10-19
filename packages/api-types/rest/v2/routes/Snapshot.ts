@@ -1,4 +1,4 @@
-import { type OmitNewableFunctionKeys } from "../../../util/types";
+import type { OmitNewableFunctionKeys } from "../../../util/types";
 
 const _snapshot = "/snapshot" as const;
 

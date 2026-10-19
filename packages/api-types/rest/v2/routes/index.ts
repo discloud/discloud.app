@@ -1,4 +1,4 @@
-import { type OmitNewableFunctionKeys } from "../../../util/types";
+import type { OmitNewableFunctionKeys } from "../../../util/types";
 import { App } from "./App";
 import { Customdomain } from "./Customdomain";
 import { Database } from "./Database";

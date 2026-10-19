@@ -1,4 +1,4 @@
-import { type OmitNewableFunctionKeys } from "../../../util/types";
+import type { OmitNewableFunctionKeys } from "../../../util/types";
 
 const _customdomain = "/customdomain" as const;
 const _customdomainCreate = "/customdomain/create" as const;

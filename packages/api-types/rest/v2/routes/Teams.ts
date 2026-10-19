@@ -1,4 +1,4 @@
-import { type OmitNewableFunctionKeys } from "../../../util/types";
+import type { OmitNewableFunctionKeys } from "../../../util/types";
 
 const _teams = "/teams" as const;
 const _teamsApps = `${_teams}/apps` as const;
