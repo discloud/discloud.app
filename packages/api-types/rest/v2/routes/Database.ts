@@ -25,6 +25,7 @@ abstract class DatabaseRoutes {
 
   /**
    * - GET - `/database/{dbID}/backups`
+   * - GET - `/database/{dbID}/backups/{backupID}/download`
    */
   static backups<dbID extends string>(dbID: dbID): `/database/${dbID}/backups`
   static backups<dbID extends string, backupID extends string>(dbID: dbID, backupID: backupID): `/database/${dbID}/backups/${backupID}/download`

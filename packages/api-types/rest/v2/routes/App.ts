@@ -62,14 +62,14 @@ abstract class AppRoutes {
   }
 
   /**
-   * - PUT `/app/{appID}/explorer`
+   * - PUT `/app/{appID}/explorer/edit`
    */
   static explorerEdit<appID extends string>(appID: appID): `/app/${appID}/explorer/edit` {
     return `/app/${appID}/explorer/edit`;
   }
 
   /**
-   * - GET `/app/{appID}/explorer`
+   * - GET `/app/{appID}/explorer/open`
    */
   static explorerOpen<appID extends string>(appID: appID): `/app/${appID}/explorer/open` {
     return `/app/${appID}/explorer/open`;
