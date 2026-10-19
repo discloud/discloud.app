@@ -1,3 +1,4 @@
+import type { RawFile } from "@discloudapp/util";
 import EventEmitter from "events";
 import _ from "lodash";
 import { setTimeout as sleep } from "timers/promises";
@@ -6,30 +7,13 @@ import type { InternalRequest, RateLimitData, RequestData, RequestOptions, RestE
 import { DiscloudAPIError } from "./errors";
 import { DefaultRestOptions } from "./utils";
 
+const _defaultLimit = 60;
+const _one = 1;
+const _sInMs = 1_000;
+const _v = "/v";
+const _zero = 0;
+
 export class REST extends EventEmitter<RestEvents> {
-  #token!: string;
-  readonly options: RESTOptions;
-
-  /**
-   * The number of requests limit on the global bucket
-   */
-  #globalLimit = 60;
-
-  /**
-   * The number of requests remaining in the global bucket
-   */
-  #globalRemaining = 0;
-
-  /**
-   * The seconds that the global bucket is reset
-   */
-  #globalReset = 0;
-
-  /**
-   * The time at which the last request was made
-   */
-  #globalTime = 0;
-
   constructor(options: Partial<RESTOptions> = {}) {
     super({ captureRejections: true });
     this.options = _.defaultsDeep(options, DefaultRestOptions);
@@ -37,22 +21,37 @@ export class REST extends EventEmitter<RestEvents> {
     this.#globalRemaining = this.options.globalRequestsPerMinute;
   }
 
+  #token!: string;
+  readonly options: RESTOptions;
+
+  /** The number of requests limit on the global bucket */
+  #globalLimit = _defaultLimit;
+
+  /** The number of requests remaining in the global bucket */
+  #globalRemaining = _zero;
+
+  /** The seconds that the global bucket is reset */
+  #globalReset = _zero;
+
+  /** The time at which the last request was made */
+  #globalTime = _zero;
+
   private get baseURL() {
-    return this.options.api + "/v" + this.options.version;
+    return this.options.api + _v + this.options.version;
   }
 
   /**
    * If the rate limit bucket is currently limited by its limit
    */
   get globalLimited() {
-    return this.#globalRemaining < 1;
+    return this.#globalRemaining < _one;
   }
 
   /**
    * The time until queued requests can continue
    */
   get globalTimeToReset(): number {
-    return this.#globalReset * 1000 + this.#globalTime - Date.now();
+    return this.#globalReset * _sInMs + this.#globalTime - Date.now();
   }
 
   get token() {
@@ -70,6 +69,16 @@ export class REST extends EventEmitter<RestEvents> {
   }
 
   /**
+   * Runs a delete request from the api
+   *
+   * @param fullRoute - The full route to query
+   * @param options - Optional request options
+   */
+  delete<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
+    return this.#raw(Object.assign(options, { fullRoute, method: RequestMethod.Delete }));
+  }
+
+  /**
    * Runs a get request from the api
    *
    * @param fullRoute - The full route to query
@@ -80,13 +89,13 @@ export class REST extends EventEmitter<RestEvents> {
   }
 
   /**
-   * Runs a delete request from the api
+   * Runs a patch request from the api
    *
    * @param fullRoute - The full route to query
    * @param options - Optional request options
    */
-  delete<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
-    return this.#raw(Object.assign(options, { fullRoute, method: RequestMethod.Delete }));
+  patch<T = any>(fullRoute: RouteLike, options: RequestData = {}): Promise<T> {
+    return this.#raw(Object.assign(options, { fullRoute, method: RequestMethod.Patch }));
   }
 
   /**
@@ -114,7 +123,7 @@ export class REST extends EventEmitter<RestEvents> {
 
     const response = await this.#request(request.url, request.options);
 
-    return this.#resolveResponseBody(response);
+    return _resolveResponseBody(response);
   }
 
   async #request(url: URL, options: RequestOptions) {
@@ -136,7 +145,7 @@ export class REST extends EventEmitter<RestEvents> {
     queueMicrotask(() => this.#resolveResponseHeaders(response.headers));
 
     if (!response.ok) {
-      const responseBody = await this.#resolveResponseBody<any>(response);
+      const responseBody = await _resolveResponseBody<any>(response);
 
       throw new DiscloudAPIError(
         responseBody.message ?? responseBody,
@@ -157,67 +166,38 @@ export class REST extends EventEmitter<RestEvents> {
       "api-token": this.#token,
       "User-Agent": this.options.userAgent,
     }));
-    const formData = new FormData();
 
     if (request.query) url.search = new URLSearchParams(request.query).toString();
 
-    if (request.file) {
-      if (request.file instanceof File) {
-        formData.append(request.file.name, request.file);
-      } else {
-        if (request.file.data instanceof File) {
-          request.file.name ??= request.file.data.name;
-        } else {
-          request.file.data = new File([request.file.data], request.file.name);
-        }
+    if (request.file != null) {
+      const formData = new FormData();
 
-        formData.append(request.file.name, request.file.data);
-      }
-    }
+      request.file = _resolveRequestFile(request.file);
 
-    if (request.body) {
-      if (request.file) {
-        if (typeof request.body === "string") {
-          try {
-            request.body = JSON.parse(request.body);
-          } catch {
-            request.body = {};
-          }
-        }
+      formData.append(request.file.name, request.file);
 
-        for (const key in request.body ?? {})
+      if (request.body != null) {
+        if (typeof request.body === "string")
+          try { request.body = JSON.parse(request.body); } catch { request.body = {}; }
+
+        for (const key in request.body!)
           formData.append(key, request.body![key as keyof InternalRequest["body"]]);
-      } else {
-        headers.set("Content-Type", "application/json");
+      }
 
-        if (typeof request.body === "string") {
-          options.body = request.body;
-        } else {
-          options.body = JSON.stringify(request.body);
-        }
+      options.body = formData;
+    } else if (request.body != null) {
+      headers.set("Content-Type", "application/json");
+
+      if (typeof request.body === "string") {
+        options.body = request.body;
+      } else {
+        options.body = JSON.stringify(request.body);
       }
     }
-
-    if (request.file) options.body = formData;
 
     options.headers = Object.fromEntries(headers.entries());
 
     return { url, options };
-  }
-
-  #resolveResponseBody<T>(response: Response): Promise<T>
-  #resolveResponseBody(response: Response) {
-    const contentType = response.headers.get("content-type");
-
-    if (typeof contentType === "string") {
-      if (contentType.includes("application/json"))
-        return response.json();
-
-      if (contentType.includes("text/"))
-        return response.text();
-    }
-
-    return response.arrayBuffer();
   }
 
   #resolveResponseHeaders(headers: Headers) {
@@ -241,4 +221,25 @@ export class REST extends EventEmitter<RestEvents> {
       this.#globalRemaining = this.#globalLimit;
     }, this.globalTimeToReset);
   }
+}
+
+function _resolveRequestFile(file: File | RawFile) {
+  if (file instanceof File) return file;
+  if (file.data instanceof File) return file.data;
+  return new File([file.data], file.name);
+}
+
+function _resolveResponseBody<T>(response: Response): Promise<T>
+async function _resolveResponseBody(response: Response) {
+  const contentType = response.headers.get("content-type");
+
+  if (typeof contentType === "string") {
+    if (contentType.includes("application/json"))
+      return response.json();
+
+    if (contentType.includes("text/"))
+      return response.text();
+  }
+
+  return response.arrayBuffer();
 }
