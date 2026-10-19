@@ -47,6 +47,35 @@ abstract class AppRoutes {
   }
 
   /**
+   * - PUT `/app/{appID}/exec`
+   */
+  static exec<appID extends string>(appID: appID): `/app/${appID}/exec` {
+    return `/app/${appID}/exec`;
+  }
+
+  /**
+   * - GET `/app/{appID}/explorer`
+   * - POST `/app/{appID}/explorer`
+   */
+  static explorer<appID extends string>(appID: appID): `/app/${appID}/explorer` {
+    return `/app/${appID}/explorer`;
+  }
+
+  /**
+   * - PUT `/app/{appID}/explorer`
+   */
+  static explorerEdit<appID extends string>(appID: appID): `/app/${appID}/explorer/edit` {
+    return `/app/${appID}/explorer/edit`;
+  }
+
+  /**
+   * - GET `/app/{appID}/explorer`
+   */
+  static explorerOpen<appID extends string>(appID: appID): `/app/${appID}/explorer/open` {
+    return `/app/${appID}/explorer/open`;
+  }
+
+  /**
    * - GET - `/app/{appID}/logs`
    */
   static logs<appID extends string>(appID: appID): `/app/${appID}/logs` {
@@ -100,9 +129,13 @@ abstract class AppRoutes {
    * - POST - `/app/{appID}/team`
    * - PUT - `/app/{appID}/team`
    * - DELETE - `/app/{appID}/team/{modID}`
+   * 
+   * @deprecated Removed from the docs and will be deactivated soon.
    */
   static team<appID extends string>(appID: appID): `/app/${appID}/team`
+  /** @deprecated Removed from the docs and will be deactivated soon. */
   static team<appID extends string, modID extends string>(appID: appID, modID: modID): `/app/${appID}/team/${modID}`
+  /** @deprecated Removed from the docs and will be deactivated soon. */
   static team<appID extends string, modID extends string>(appID: appID, modID?: modID) {
     return modID ? `/app/${appID}/team/${modID}` : `/app/${appID}/team`;
   }

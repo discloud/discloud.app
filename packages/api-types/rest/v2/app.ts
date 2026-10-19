@@ -47,6 +47,25 @@ export interface ApiAppBackupAll extends ApiAppBackup {
   status: string
 }
 
+export interface ApiAppExec {
+  stdout: string
+  stderr: string
+  exitCode: number
+}
+
+export interface ApiAppExplorerDirectory {
+  name: string
+  type: string
+}
+
+export interface ApiAppExplorerFile {
+  name: string
+  type: string
+  size: number
+}
+
+export type ApiAppExplorerEntity = ApiAppExplorerDirectory | ApiAppExplorerFile
+
 export interface ApiAppLog extends BaseApiApp {
   /** Here you can see your application `logs` */
   terminal: ApiTerminal
@@ -158,6 +177,29 @@ export interface RESTGetApiAppResult extends RESTApiBaseResult {
 export interface RESTGetApiAppBackupResult extends RESTApiBaseResult {
   /** Backup of your application */
   backups: ApiAppBackup
+}
+
+export interface RESTPutApiAppExecResult extends RESTApiBaseResult {
+  exec: ApiAppExec
+}
+
+export interface RESTGetApiAppExplorerResult extends RESTApiBaseResult {
+  path: string
+  dir: ApiAppExplorerEntity[]
+}
+
+export interface RESTPostApiAppExplorerResult extends RESTApiBaseResult {
+  path: string
+}
+
+export interface RESTGetApiAppExplorerOpenResult extends RESTApiBaseResult {
+  content: string
+  name: string
+  path: string
+}
+
+export interface RESTPutApiAppExplorerEditResult extends RESTApiBaseResult {
+  path: string
 }
 
 export interface RESTGetApiAppLogResult extends RESTApiBaseResult {
