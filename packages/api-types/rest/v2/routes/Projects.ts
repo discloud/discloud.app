@@ -1,5 +1,7 @@
 import { type OmitNewableFunctionKeys } from "../../../util/types";
 
+const _projects = "/projects" as const;
+
 export type Projects = OmitNewableFunctionKeys<typeof ProjectsRoutes>
 
 abstract class ProjectsRoutes {
@@ -13,14 +15,14 @@ abstract class ProjectsRoutes {
   static projects(): "/projects"
   static projects<projectID extends string>(projectID: projectID): `/projects/${projectID}`
   static projects<projectID extends string>(projectID?: projectID) {
-    return projectID ? `/projects/${projectID}` : "/projects";
+    return projectID ? `${_projects}/${projectID}` : _projects;
   }
 
   /**
    * - PATCH - `/projects/{projectID}/team`
    */
   static team<projectID extends string>(projectID: projectID): `/projects/${projectID}/team` {
-    return `/projects/${projectID}/team`;
+    return `${_projects}/${projectID}/team`;
   }
 
   /**
@@ -31,7 +33,7 @@ abstract class ProjectsRoutes {
   static apps<projectID extends string>(projectID: projectID): `/projects/${projectID}/apps`
   static apps<projectID extends string, appID extends string>(projectID: projectID, appID: appID): `/projects/${projectID}/apps/${appID}`
   static apps<projectID extends string, appID extends string>(projectID: projectID, appID?: appID) {
-    return appID ? `/projects/${projectID}/apps/${appID}` : `/projects/${projectID}/apps`;
+    return appID ? `${_projects}/${projectID}/apps/${appID}` : `${_projects}/${projectID}/apps`;
   }
 }
 

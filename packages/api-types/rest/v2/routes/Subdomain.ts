@@ -1,5 +1,7 @@
 import { type OmitNewableFunctionKeys } from "../../../util/types";
 
+const _subdomain = "/subdomain" as const;
+
 export type Subdomain = OmitNewableFunctionKeys<typeof SubdomainRoutes>
 
 abstract class SubdomainRoutes {
@@ -9,7 +11,7 @@ abstract class SubdomainRoutes {
    * - DELETE - `/subdomain/{subdomain}`
    */
   static subdomain<subdomain extends string>(subdomain: subdomain): `/subdomain/${subdomain}` {
-    return `/subdomain/${subdomain}`;
+    return `${_subdomain}/${subdomain}`;
   }
 }
 

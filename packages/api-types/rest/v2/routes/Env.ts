@@ -1,5 +1,10 @@
 import { type OmitNewableFunctionKeys } from "../../../util/types";
 
+const _env = "/env" as const;
+const _envAccount = `${_env}/account` as const;
+const _envApp = `${_env}/app` as const;
+const _envProject = `${_env}/project` as const;
+
 export type Env = OmitNewableFunctionKeys<typeof EnvRoutes>
 
 abstract class EnvRoutes {
@@ -8,8 +13,8 @@ abstract class EnvRoutes {
    * - PUT - `/env/account`
    * - DELETE - `/env/account`
    */
-  static account(): "/env/account" {
-    return "/env/account";
+  static account() {
+    return _envAccount;
   }
 
   /**
@@ -18,7 +23,7 @@ abstract class EnvRoutes {
    * - DELETE - `/env/app/{appID}`
    */
   static app<appID extends string>(appID: appID): `/env/app/${appID}` {
-    return `/env/app/${appID}`;
+    return `${_envApp}/${appID}`;
   }
 
   /**
@@ -27,7 +32,7 @@ abstract class EnvRoutes {
    * - DELETE - `/env/project/{projectID}`
    */
   static project<projectID extends string>(projectID: projectID): `/env/project/${projectID}` {
-    return `/env/project/${projectID}`;
+    return `${_envProject}/${projectID}`;
   }
 }
 
