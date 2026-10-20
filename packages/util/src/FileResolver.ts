@@ -5,11 +5,12 @@ import { stat } from "fs/promises";
 import { basename } from "path";
 import { Readable, Stream, type Writable } from "stream";
 import { isArrayBufferView } from "util/types";
+import { HttpBadStatusError } from "./errors";
 import Deprecation from "./utils/deprecation";
 
-const contentTypeDeprecation = new Deprecation("The contentType property is deprecated. Use mimeType instead.");
+const _contentTypeDeprecation = new Deprecation("The contentType property is deprecated. Use mimeType instead.");
 
-const LOCAL_URL_ORIGIN = "null";
+const _localUrlOrigin = "null";
 
 export const filenamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
 /** @deprecated This variable has been renamed to follow the camelCase pattern. Use `filenamePattern` instead */
@@ -50,7 +51,7 @@ export type FileResolvable =
  * A function that converts {@link FileResolvable} to {@link File}
  * 
  * @param file - The file as {@link FileResolvable} to resolve
- * @param filename - The name of the file to upload
+ * @param filename - The name of the file
  */
 export function resolveFile(file: FileResolvable, filename?: string | null): Promise<File>
 export function resolveFile(file: Blob, filename?: string): Promise<File>
@@ -61,13 +62,13 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
   if (file instanceof File) return file;
 
   if (file instanceof URL) {
-    filename = basename(file.pathname);
+    filename ??= basename(file.pathname);
 
-    if (file.origin === LOCAL_URL_ORIGIN) return streamToFile(createReadStream(file), filename);
+    if (file.origin === _localUrlOrigin) return streamToFile(createReadStream(file), filename);
 
     const response = await fetch(file);
 
-    if (!response.ok) throw response;
+    if (!response.ok) throw HttpBadStatusError.fromResponse(response);
 
     const type = response.headers.get("content-type") || undefined;
 
@@ -77,7 +78,7 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
   }
 
   if (typeof file === "string") {
-    if (URL.canParse(file)) return resolveFile(new URL(file));
+    if (URL.canParse(file)) return resolveFile(new URL(file), filename);
 
     if (existsSync(file)) {
       const fstat = await stat(file);
@@ -92,18 +93,18 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
 
   if (file instanceof Blob) {
     if (!filename) {
-      const fileTypeResult = await fileTypeFromBlob(file);
-      if (fileTypeResult) filename = `file.${fileTypeResult.ext}`;
+      const fileType = await fileTypeFromBlob(file);
+      if (fileType) filename = `file.${fileType.ext}`;
     }
 
     return new File([file], filename ?? "file", { type: file.type });
   }
 
   if (Buffer.isBuffer(file)) {
-    const fileTypeResult = await fileTypeFromBuffer(file);
-    if (fileTypeResult) filename ??= `file.${fileTypeResult.ext}`;
+    const fileType = await fileTypeFromBuffer(file);
+    if (fileType) return new File([file], filename ?? `file.${fileType.ext}`, { type: fileType.mime });
 
-    return new File([file], filename ?? "file", { type: fileTypeResult?.mime });
+    return new File([file], filename ?? "file");
   }
 
   if (isArrayBufferView(file)) return new File([file], filename ?? "file");
@@ -111,7 +112,7 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
   if (file instanceof Stream) return streamToFile(file, filename);
 
   if ("data" in file) {
-    if ("contentType" in file) contentTypeDeprecation.emit();
+    if ("contentType" in file) _contentTypeDeprecation.emit();
 
     if (file.data instanceof File) return file.data;
 
@@ -137,7 +138,7 @@ export function resolveFileSync(file: FileResolvableSync, filename: string): Fil
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
 
-    return new File([file.data], file.name, { type: file.contentType });
+    return new File([file.data], file.name, { type: file.mimeType || file.contentType });
   }
 
   throw new TypeError("Invalid file type was provided.");
@@ -150,21 +151,24 @@ export function resolveFileSync(file: FileResolvableSync, filename: string): Fil
  * @param filename - A file name, if you wish
  * @param mimeType - A mimeType parameter
  */
-export async function streamToFile(stream: Stream, filename?: string | null, mimeType?: string) {
+export function streamToFile(stream: Stream, filename?: string | null, mimeType?: string) {
   return new Promise<File>((resolve, reject) => {
     const chunks: Buffer[] = [];
-    stream.on("data", (chunk) => chunks.push(chunk))
+
+    stream
+      .on("data", (chunk) => chunks.push(chunk))
       .once("end", async function () {
         stream.removeAllListeners();
 
-        if (!chunks.length || filename && mimeType) {
+        if (!chunks.length || filename && mimeType)
           return resolve(new File(chunks, filename ?? "file", { type: mimeType }));
-        }
 
-        const fileTypeResult = await fileTypeFromBuffer(chunks[0]);
-        if (fileTypeResult) filename ??= `file.${fileTypeResult.ext}`;
+        const fileType = await fileTypeFromBuffer(chunks[0]);
 
-        resolve(new File(chunks, filename ?? "file", { type: mimeType ?? fileTypeResult?.mime }));
+        if (fileType)
+          return resolve(new File(chunks, filename ?? `file.${fileType.ext}`, { type: mimeType ?? fileType.mime }));
+
+        resolve(new File(chunks, filename ?? "file", { type: mimeType }));
       })
       .once("error", function (error) {
         stream.removeAllListeners();
@@ -182,7 +186,9 @@ export async function streamToFile(stream: Stream, filename?: string | null, mim
 export function streamToBlob(stream: Stream, mimeType?: string) {
   return new Promise<Blob>((resolve, reject) => {
     const chunks: Buffer[] = [];
-    stream.on("data", (chunk) => chunks.push(chunk))
+
+    stream
+      .on("data", (chunk) => chunks.push(chunk))
       .once("end", async function () {
         stream.removeAllListeners();
 

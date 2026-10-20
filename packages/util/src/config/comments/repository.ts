@@ -1,18 +1,20 @@
-import { type ICommentEntity } from "../interfaces/comments/entity";
-import { type ICommentRepository } from "../interfaces/comments/repository";
+import type { ICommentEntity } from "../interfaces/comments/entity";
+import type { ICommentRepository } from "../interfaces/comments/repository";
 import { CommentEntity } from "./entity";
-import { type MatchedComment } from "./types";
+import type { MatchedComment } from "./types";
 
-export default class CommentRepository implements ICommentRepository, Disposable {
-  static readonly char = "#";
-  /** `/(?<content>\s*#.*$)/` */
-  static readonly pattern = /(?<content>\s*#.*$)/;
+/** `/(?<content>\s*#.*$)/` */
+const _commentRegexp = /(?<content>\s*#.*$)/;
 
+const _one = 1;
+const _zero = 0;
+
+export default class CommentRepository implements ICommentRepository {
   static match(line: string): MatchedComment | null {
-    return CommentRepository.pattern.exec(line) as MatchedComment;
+    return _commentRegexp.exec(line) as MatchedComment;
   }
 
-  readonly #cache = new Map<number, ICommentEntity>();
+  readonly #cache = new Map<number, Readonly<ICommentEntity>>();
 
   get size() {
     return this.#cache.size;
@@ -35,11 +37,11 @@ export default class CommentRepository implements ICommentRepository, Disposable
 
     if (!result) return content;
 
-    this.set(line, result.index, result.groups!.content);
+    this.set(line, result.index, result.groups.content);
 
-    if (result.index < 1) return;
+    if (result.index < _one) return;
 
-    return content.substring(0, result.index);
+    return content.substring(_zero, result.index);
   }
 
   set(line: number, character: number, content: string) {
