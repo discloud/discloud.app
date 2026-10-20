@@ -1,17 +1,16 @@
 export default class Deprecation extends Error {
-  constructor(message: string, code?: string);
-  constructor(readonly message: string, readonly code?: string) {
-    super();
+  constructor(message: string, readonly code?: string) {
+    super(message);
   }
 
-  readonly name = warningType;
+  readonly name = _warningType;
 
   emit() {
-    this.emit = noop;
+    this.emit = _noop;
     process.emitWarning(this);
   }
 }
 
-function noop() { }
+function _noop() { }
 
-const warningType = "Deprecation";
+const _warningType = "Deprecation";

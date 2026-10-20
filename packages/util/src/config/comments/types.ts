@@ -1,9 +1,11 @@
 export interface CommentData {
-  line: number;
-  character: number;
-  content: string;
+  readonly line: number;
+  readonly character: number;
+  readonly content: string;
 }
 
 export interface MatchedComment extends RegExpExecArray {
-  content: string
+  readonly groups: {
+    readonly content: string
+  }
 }

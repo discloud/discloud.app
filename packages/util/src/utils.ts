@@ -15,7 +15,7 @@ function _bindFunctions(instance: any, bind?: any) {
   }
 }
 
-/** @deprecated bindFunctions is deprecated and will be removed in the future. */
+/** @deprecated `bindFunctions` is deprecated and will be removed in the future. */
 export const bindFunctions = deprecate(_bindFunctions, "bindFunctions is deprecated and will be removed in the future.");
 
 export function calculatePercentage(value: string | number, major: string | number) {
@@ -47,5 +47,5 @@ function _mergeDefaults<A extends Record<any, any>>(defaults: A, options: Partia
   return options as A;
 }
 
-/** @deprecated mergeDefaults is deprecated and will be removed in the future. */
+/** @deprecated `mergeDefaults` is deprecated and will be removed in the future. */
 export const mergeDefaults = deprecate(_mergeDefaults, "mergeDefaults is deprecated and will be removed in the future.");

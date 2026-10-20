@@ -1,4 +1,4 @@
-import { type ICommentEntity } from "../interfaces/comments/entity";
+import type { ICommentEntity } from "../interfaces/comments/entity";
 
 export class CommentEntity implements ICommentEntity {
   constructor(
@@ -12,6 +12,10 @@ export class CommentEntity implements ICommentEntity {
   }
 
   toJSON() {
-    return Object.assign({}, this);
+    return {
+      line: this.line,
+      character: this.character,
+      content: this.content,
+    };
   }
 }
