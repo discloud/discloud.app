@@ -11,8 +11,12 @@ const _contentTypeDeprecation = new Deprecation("The contentType property is dep
 
 const _localUrlOrigin = "null";
 
+/** `/.*\/+([^?#]+)(?:[?#].*)?/` */
 export const filenamePattern = /.*\/+([^?#]+)(?:[?#].*)?/;
-/** @deprecated This variable has been renamed to follow the camelCase pattern. Use `filenamePattern` instead */
+/**
+ * `/.*\/+([^?#]+)(?:[?#].*)?/`
+ * @deprecated This variable has been renamed to follow the camelCase pattern. Use `filenamePattern` instead 
+ */
 export const fileNamePattern = filenamePattern;
 
 export interface RawFile {
@@ -23,7 +27,7 @@ export interface RawFile {
   /**
    * The actual data for the file
    */
-  data: BinaryLike | Blob
+  data: BinaryLike | Blob | Buffer
   /**
    * `Content-Type` of the file
    * @deprecated use `mimeType` instead.
@@ -36,7 +40,7 @@ export interface RawFile {
 }
 
 /**
- * This parameter could be {@link BinaryLike}, {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link Request}, {@link String} or {@link URL}
+ * This parameter could be {@link BinaryLike}, {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link Request} or {@link URL}
  */
 export type FileResolvable =
   | BinaryLike
@@ -73,7 +77,8 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
   }
 
   if (file instanceof URL) {
-    if (file.origin === _localUrlOrigin) return streamToFile(createReadStream(file), filename);
+    if (file.origin === _localUrlOrigin)
+      return streamToFile(createReadStream(file), filename ?? basename(file.pathname));
 
     return resolveFile(new Request(file), filename);
   }
