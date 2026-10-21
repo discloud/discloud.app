@@ -1,9 +1,8 @@
 import type { BinaryLike } from "crypto";
 import { fileTypeFromBlob, fileTypeFromBuffer } from "file-type";
-import { createReadStream, existsSync, type PathLike } from "fs";
-import { stat } from "fs/promises";
+import { createReadStream, type PathLike } from "fs";
 import { basename } from "path";
-import { Readable, Stream, type Writable } from "stream";
+import { type Readable, Stream } from "stream";
 import { isArrayBufferView } from "util/types";
 import { HttpBadStatusError } from "./errors";
 import Deprecation from "./utils/deprecation";
@@ -26,18 +25,18 @@ export interface RawFile {
    */
   data: BinaryLike | Blob
   /**
-   * Content-Type of the file
-   * @deprecated use mimeType instead.
+   * `Content-Type` of the file
+   * @deprecated use `mimeType` instead.
    */
   contentType?: string
   /**
-   * Content-Type of the file
+   * `Content-Type` of the file
    */
   mimeType?: string
 }
 
 /**
- * This parameter could be {@link BinaryLike}, {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link String} or {@link URL}
+ * This parameter could be {@link BinaryLike}, {@link Blob}, {@link Buffer}, {@link File}, {@link PathLike}, {@link RawFile}, {@link Readable}, {@link Request}, {@link String} or {@link URL}
  */
 export type FileResolvable =
   | BinaryLike
@@ -46,6 +45,7 @@ export type FileResolvable =
   | PathLike
   | RawFile
   | Readable
+  | Request
 
 /**
  * A function that converts {@link FileResolvable} to {@link File}
@@ -54,39 +54,32 @@ export type FileResolvable =
  * @param filename - The name of the file
  */
 export function resolveFile(file: FileResolvable, filename?: string | null): Promise<File>
-export function resolveFile(file: Blob, filename?: string): Promise<File>
+export function resolveFile(file: Blob, filename?: string | null): Promise<File>
 export function resolveFile(file: File): Promise<File>
 export function resolveFile(file: RawFile): Promise<File>
+export function resolveFile(file: Request): Promise<File>
 export function resolveFile(file: URL): Promise<File>
 export async function resolveFile(file: FileResolvable, filename?: string | null): Promise<File> {
   if (file instanceof File) return file;
 
-  if (file instanceof URL) {
-    filename ??= basename(file.pathname);
-
-    if (file.origin === _localUrlOrigin) return streamToFile(createReadStream(file), filename);
-
+  if (file instanceof Request) {
     const response = await fetch(file);
 
     if (!response.ok) throw HttpBadStatusError.fromResponse(response);
 
     const type = response.headers.get("content-type") || undefined;
 
-    if (response.body) return streamToFile(Readable.from(response.body), filename, type);
+    return new File([await response.blob()], filename ?? basename(file.url), { type });
+  }
 
-    return new File([await response.blob()], filename, { type });
+  if (file instanceof URL) {
+    if (file.origin === _localUrlOrigin) return streamToFile(createReadStream(file), filename);
+
+    return resolveFile(new Request(file), filename);
   }
 
   if (typeof file === "string") {
     if (URL.canParse(file)) return resolveFile(new URL(file), filename);
-
-    if (existsSync(file)) {
-      const fstat = await stat(file);
-
-      if (!fstat.isFile()) throw new TypeError("Invalid file path was provided.");
-
-      return streamToFile(createReadStream(file), filename ?? basename(file));
-    }
 
     return new File([file], filename ?? "file");
   }
@@ -94,7 +87,7 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
   if (file instanceof Blob) {
     if (!filename) {
       const fileType = await fileTypeFromBlob(file);
-      if (fileType) filename = `file.${fileType.ext}`;
+      if (fileType) return new File([file], `file.${fileType.ext}`, { type: file.type });
     }
 
     return new File([file], filename ?? "file", { type: file.type });
@@ -116,24 +109,30 @@ export async function resolveFile(file: FileResolvable, filename?: string | null
 
     if (file.data instanceof File) return file.data;
 
-    if (!(file.mimeType || file.contentType)) return resolveFile(file.data, filename);
+    const type = file.mimeType || file.contentType;
 
-    return new File([file.data], file.name, { type: file.mimeType || file.contentType });
+    if (!type) return resolveFile(file.data, filename);
+
+    return new File([file.data], file.name, { type });
   }
 
   throw new TypeError("Invalid file type was provided.");
 }
 
-export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Writable>
+export type FileResolvableSync = Exclude<FileResolvable, URL | Readable | Request>
 
-export function resolveFileSync(file: FileResolvableSync, filename: string): File {
+export function resolveFileSync(file: FileResolvableSync, filename: string): File
+export function resolveFileSync(file: File): File
+export function resolveFileSync(file: FileResolvableSync, filename?: string): File {
   if (file instanceof File) return file;
 
-  if (typeof file === "string") return new File([file], filename);
+  if (typeof file === "string") return new File([file], filename || "file");
 
-  if (file instanceof Blob) return new File([file], filename);
+  if (file instanceof Blob) return new File([file], filename || "file");
 
-  if (Buffer.isBuffer(file)) return new File([file], filename);
+  if (Buffer.isBuffer(file)) return new File([file], filename || "file");
+
+  if (isArrayBufferView(file)) return new File([file], filename || "file");
 
   if ("data" in file) {
     if (file.data instanceof File) return file.data;
