@@ -1,21 +1,57 @@
-async function fromAsync<T>(
+async function _fromAsync<T>(
   iterableOrArrayLike: AsyncIterable<T> | Iterable<T | PromiseLike<T>> | ArrayLike<T | PromiseLike<T>>,
 ) {
   const array: T[] = [];
-  for await (const element of await iterableOrArrayLike as AsyncGenerator<PromiseLike<T>>) {
-    array.push(await element);
+
+  if (Symbol.asyncIterator in iterableOrArrayLike) {
+    for await (const element of iterableOrArrayLike) {
+      array.push(element);
+    }
+
+    return array;
   }
+
+  if (Symbol.iterator in iterableOrArrayLike) {
+    for (const element of iterableOrArrayLike) {
+      array.push(await element);
+    }
+
+    return array;
+  }
+
+  for (let i = 0; i < iterableOrArrayLike.length; i++) {
+    array.push(await iterableOrArrayLike[i]);
+  }
+
   return array;
 }
 
-async function mappedFromAsync<T, U>(
+async function _mappedFromAsync<T, U>(
   iterableOrArrayLike: AsyncIterable<T> | Iterable<T | PromiseLike<T>> | ArrayLike<T | PromiseLike<T>>,
   mapFn: (value: Awaited<T>, index: number) => U,
 ) {
   const array: U[] = [];
-  for await (const element of await iterableOrArrayLike as AsyncGenerator<PromiseLike<T>>) {
-    array.push(await mapFn(await element, array.length));
+
+  if (Symbol.asyncIterator in iterableOrArrayLike) {
+    for await (const element of iterableOrArrayLike) {
+      array.push(await mapFn(element, array.length));
+    }
+
+    return array;
   }
+
+  if (Symbol.iterator in iterableOrArrayLike) {
+    for (const element of iterableOrArrayLike) {
+      array.push(await mapFn(await element, array.length));
+    }
+
+    return array;
+  }
+
+  for (let i = 0; i < iterableOrArrayLike.length; i++) {
+    array.push(await mapFn(await iterableOrArrayLike[i], i));
+  }
+
   return array;
 }
 
@@ -26,5 +62,5 @@ Array.fromAsync ??= <T, U>(
   iterableOrArrayLike: AsyncIterable<T> | Iterable<T | PromiseLike<T>> | ArrayLike<T | PromiseLike<T>>,
   mapFn?: (value: Awaited<T>, index: number) => U,
 ) => typeof mapFn === "function"
-    ? mappedFromAsync(iterableOrArrayLike, mapFn)
-    : fromAsync(iterableOrArrayLike);
+    ? _mappedFromAsync(iterableOrArrayLike, mapFn)
+    : _fromAsync(iterableOrArrayLike);
