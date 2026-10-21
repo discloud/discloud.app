@@ -29,7 +29,7 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
 
   static flexible(): FlexibleBuffer { return new ArrayFlexibleBuffer(); }
 
-  abstract readonly length: number
+  abstract declare readonly length: number
   abstract clear(): void
   abstract push(value: ArrayLike<number>): void
   abstract toArray(): IBufferRawData
