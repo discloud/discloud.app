@@ -16,6 +16,8 @@ interface IFlexibleBuffer extends Iterable<number> {
   toJSON(): IBufferJson
 }
 
+const _zero = 0;
+
 export abstract class FlexibleBuffer implements IFlexibleBuffer {
   static auto(size?: number | null): FlexibleBuffer {
     return typeof size === "number" && !isNaN(size)
@@ -27,7 +29,7 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
 
   static flexible(): FlexibleBuffer { return new ArrayFlexibleBuffer(); }
 
-  abstract readonly length: number
+  abstract declare readonly length: number
   abstract clear(): void
   abstract push(value: ArrayLike<number>): void
   abstract toArray(): IBufferRawData
@@ -37,22 +39,22 @@ export abstract class FlexibleBuffer implements IFlexibleBuffer {
   abstract [Symbol.iterator](): Iterator<number>
 }
 
-class ArrayFlexibleBuffer extends FlexibleBuffer {
-  private readonly _array: Uint8Array[] = [];
-  private _length = 0;
+class ArrayFlexibleBuffer implements FlexibleBuffer {
+  readonly #array: Uint8Array[] = [];
+  #length = _zero;
 
   get length(): number {
-    return this._length;
+    return this.#length;
   }
 
   clear(): void {
-    this._length = this._array.length = 0;
+    this.#length = this.#array.length = _zero;
   }
 
   push(value: ArrayLike<number>): void {
     if (!isUint8Array(value)) value = new Uint8Array(value);
-    this._array.push(value as Uint8Array);
-    this._length += value.length;
+    this.#array.push(value as Uint8Array);
+    this.#length += value.length;
   }
 
   toArray(): IBufferRawData {
@@ -60,7 +62,7 @@ class ArrayFlexibleBuffer extends FlexibleBuffer {
   }
 
   toBuffer(): Buffer {
-    return Buffer.concat(this._array, this._length);
+    return Buffer.concat(this.#array, this.#length);
   }
 
   toJSON(): IBufferJson {
@@ -68,33 +70,37 @@ class ArrayFlexibleBuffer extends FlexibleBuffer {
   }
 
   *[Symbol.iterator]() {
-    for (const buffer of this._array) {
+    for (const buffer of this.#array) {
       yield* buffer;
     }
   }
 }
 
-class BufferFlexibleBuffer extends FlexibleBuffer {
+class BufferFlexibleBuffer implements FlexibleBuffer {
   constructor(readonly size: number) {
-    super();
-    this._buffer = Buffer.alloc(size);
+    this.#buffer = Buffer.alloc(size);
   }
 
-  private readonly _buffer: Buffer;
-  private _index: number = 0;
+  #buffer: Buffer;
+  #index: number = _zero;
 
   get length(): number {
-    return this._index;
+    return this.#index;
   }
 
   clear(): void {
-    this._buffer.fill(0);
-    this._index = 0;
+    this.#buffer.fill(_zero);
+    this.#index = _zero;
   }
 
   push(value: ArrayLike<number>): void {
-    this._buffer.set(value, this._index);
-    this._index += value.length;
+    const totalLength = this.#index + value.length;
+
+    if (totalLength > this.#buffer.length)
+      this.#buffer = Buffer.concat([this.#buffer], totalLength);
+
+    this.#buffer.set(value, this.#index);
+    this.#index = totalLength;
   }
 
   toArray(): IBufferRawData {
@@ -102,14 +108,16 @@ class BufferFlexibleBuffer extends FlexibleBuffer {
   }
 
   toBuffer(): Buffer {
-    return this._buffer;
+    if (this.#index < this.#buffer.length)
+      return this.#buffer.subarray(_zero, this.#index);
+    return this.#buffer;
   }
 
   toJSON(): IBufferJson {
-    return this._buffer.toJSON();
+    return this.toBuffer().toJSON();
   }
 
   *[Symbol.iterator]() {
-    yield* this._buffer;
+    yield* this.toBuffer();
   }
 }
