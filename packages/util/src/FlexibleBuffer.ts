@@ -118,10 +118,6 @@ class BufferFlexibleBuffer implements FlexibleBuffer {
   }
 
   *[Symbol.iterator]() {
-    if (this.#index < this.#buffer.length) {
-      yield* this.#buffer.subarray(_zero, this.#index);
-      return;
-    }
-    yield* this.#buffer;
+    yield* this.toBuffer();
   }
 }
