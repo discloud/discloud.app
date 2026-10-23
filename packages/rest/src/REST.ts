@@ -3,7 +3,6 @@ import type { RawFile } from "@discloudapp/util";
 import EventEmitter from "events";
 import _ from "lodash";
 import { setTimeout as sleep } from "timers/promises";
-import { version } from ".";
 import { RequestMethod, RESTEvents } from "./@enum";
 import type { InternalRequest, RateLimitData, RequestData, RequestOptions, RestEvents, RESTOptions, RouteLike } from "./@types";
 import { DiscloudAPIError } from "./errors";
@@ -22,7 +21,7 @@ function _defaultOptions(): Required<RESTOptions> {
     globalRequestsPerMinute: 60,
     headers: {},
     version: APIVersion,
-    userAgent: new UserAgent("DiscloudApp", version),
+    userAgent: new UserAgent(),
   };
 }
 
