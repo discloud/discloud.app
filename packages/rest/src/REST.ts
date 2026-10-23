@@ -1,22 +1,35 @@
+import { APIVersion } from "@discloudapp/api-types/v2";
 import type { RawFile } from "@discloudapp/util";
 import EventEmitter from "events";
 import _ from "lodash";
 import { setTimeout as sleep } from "timers/promises";
+import { version } from ".";
 import { RequestMethod, RESTEvents } from "./@enum";
 import type { InternalRequest, RateLimitData, RequestData, RequestOptions, RestEvents, RESTOptions, RouteLike } from "./@types";
 import { DiscloudAPIError } from "./errors";
-import { DefaultRestOptions } from "./utils";
+import { UserAgent } from "./UserAgent";
 
+const _baseApiUrl = "https://api.discloud.app";
 const _defaultLimit = 60;
 const _one = 1;
 const _sInMs = 1_000;
 const _v = "/v";
 const _zero = 0;
 
+function _defaultOptions(): Required<RESTOptions> {
+  return {
+    api: _baseApiUrl,
+    globalRequestsPerMinute: 60,
+    headers: {},
+    version: APIVersion,
+    userAgent: new UserAgent("DiscloudApp", version),
+  };
+}
+
 export class REST extends EventEmitter<RestEvents> {
   constructor(options: Partial<RESTOptions> = {}) {
     super({ captureRejections: true });
-    this.options = _.defaultsDeep(options, DefaultRestOptions);
+    this.options = _.defaultsDeep(options, _defaultOptions());
     this.#globalLimit = this.options.globalRequestsPerMinute;
     this.#globalRemaining = this.options.globalRequestsPerMinute;
   }
