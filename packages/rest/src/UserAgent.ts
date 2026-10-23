@@ -5,27 +5,27 @@ export interface IUserAgent {
   toString(): string
 }
 
+const _product = "DiscloudApp";
+
+function _osProperties() { return `(${type()} ${_formatOsRelease(release())}; ${platform()}; ${arch()})`; }
+
+function _formatOsRelease(r: string) { return r.split?.(".").slice(0, 2).join(".") || r; }
+
 export class UserAgent implements IUserAgent {
-  constructor(
-    readonly prefix?: string,
-    readonly version?: string,
-  ) {
-    this.#version = version!;
+  constructor(product?: string, productVersion?: string) {
+    this.#product = product || _product;
+    this.#version = productVersion || version;
   }
 
-  #getUserAgent() {
-    const osRelease = release().split?.(".").slice(0, 2).join(".") ?? release();
-    return `${this.prefix}/${this.#getVersion()} (${type()} ${osRelease}; ${platform()}; ${arch()})`;
-  }
+  #userAgent?: string;
+  #product: string;
+  #version: string;
 
-  #getVersion() {
-    return this.#version ||= version;
-  }
+  #getUserAgent() { return `${this.#product}/${this.#version} ${_osProperties()}`; }
 
-  #userAgent!: string;
-  #version!: string;
+  get product() { return this.#product; }
 
-  toString() {
-    return this.#userAgent ??= this.#getUserAgent();
-  }
+  get version() { return this.#version; }
+
+  toString() { return this.#userAgent ??= this.#getUserAgent(); }
 }

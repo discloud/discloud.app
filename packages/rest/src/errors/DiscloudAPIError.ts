@@ -6,6 +6,6 @@ export class DiscloudAPIError extends Error {
     public path: string,
     public body: any,
   ) {
-    super(`\x1b[31m[DISCLOUD API] ${message}\x1b[0m`);
+    super(`[DISCLOUD API] ${message}`);
   }
 }
