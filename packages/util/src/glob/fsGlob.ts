@@ -1,4 +1,4 @@
-import { type Dirent } from "fs";
+import type { Dirent } from "fs";
 import { stat } from "fs/promises";
 import { join } from "path";
 import { DISCLOUD_IGNORE_FILENAME } from "./constants";
