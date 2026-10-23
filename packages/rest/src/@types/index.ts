@@ -31,7 +31,7 @@ export interface RESTOptions {
    */
   version: string
 
-  userAgent: IUserAgent
+  userAgent: string | IUserAgent
 }
 
 /**
