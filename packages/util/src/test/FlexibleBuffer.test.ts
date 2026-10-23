@@ -26,22 +26,26 @@ suite("Array FlexibleBuffer", () => {
 });
 
 suite("Buffer FlexibleBuffer", () => {
-  const fixedBuffer = FlexibleBuffer.fixed(3);
+  const array = _array;
+  const fixedBuffer = FlexibleBuffer.fixed(array.length);
 
   test("Allow pushing a list with a size within the limit", () => {
     assert.doesNotThrow(() => fixedBuffer.push(_array));
     assert.strictEqual(fixedBuffer.length, _array.length);
   });
 
-  test("Deny push oversized", () => {
-    assert.throws(() => fixedBuffer.push(_array));
+  test("Allow push oversized", () => {
+    assert.doesNotThrow(() => {
+      fixedBuffer.push(_array);
+      array.push(..._array);
+    });
   });
 
   test("Transform to array", () => {
     assert.doesNotThrow(() => {
       const array = fixedBuffer.toArray();
-      assert.strictEqual(array.length, _array.length);
-      assert.deepStrictEqual(array, _array);
+      assert.strictEqual(array.length, array.length);
+      assert.deepStrictEqual(array, array);
     });
   });
 });

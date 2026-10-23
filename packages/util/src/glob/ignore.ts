@@ -1,71 +1,63 @@
-import { existsSync } from "fs";
-import { readFile } from "fs/promises";
+import { type FileHandle, open } from "fs/promises";
 import { globIterate } from "glob";
 import { globifyGitIgnore } from "globify-gitignore";
 import { dirname } from "path";
 import { joinWithRoot } from "../path";
 
 export class Ignore {
-  static async globify(content: string, directory?: string, absolute?: boolean) {
-    const patterns = [];
-
+  static async *globifyContent(
+    content: string,
+    directory?: string,
+    absolute?: boolean,
+  ) {
     const entries = await globifyGitIgnore(content, directory, absolute);
 
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
-
-      if (!entry.included) patterns.push(entry.glob);
+    for (const entry of entries) {
+      if (!entry.included) {
+        yield entry.glob;
+      }
     }
-
-    return patterns;
   }
 
-  static async #getGlobfiedIgnoreFile(directory: string) {
-    const patterns = [];
+  static async *#getGlobfiedIgnoreFile(path: string) {
+    let fileHandle!: FileHandle;
+    try {
+      fileHandle = await open(path, "r");
 
-    if (existsSync(directory)) {
-      const content = await readFile(directory, "utf8");
+      const content = await fileHandle.readFile("utf8");
 
-      patterns.push(await Ignore.globify(content, dirname(directory)));
+      yield* Ignore.globifyContent(content, dirname(path));
+    } finally {
+      await fileHandle?.close();
     }
-
-    return patterns.flat();
   }
 
-  static async #getGlobfiedIgnoreFiles(directories: string[]) {
-    const promises = [];
-
-    for (let i = 0; i < directories.length; i++) {
-      promises.push(Ignore.#getGlobfiedIgnoreFile(directories[i]));
+  static async *#getGlobfiedIgnoreFiles(paths: string[]) {
+    for (let i = 0; i < paths.length; i++) {
+      yield* Ignore.#getGlobfiedIgnoreFile(paths[i]);
     }
-
-    const result = await Promise.all(promises);
-
-    return result.flat();
   }
 
   static resolveIgnoreFile(path: string) {
-    return Ignore.#getGlobfiedIgnoreFile(path);
+    return Array.fromAsync(Ignore.#getGlobfiedIgnoreFile(path));
   }
 
   static resolveIgnoreFiles(paths: string[]) {
-    return Ignore.#getGlobfiedIgnoreFiles(paths);
+    return Array.fromAsync(Ignore.#getGlobfiedIgnoreFiles(paths));
   }
 
-  constructor(
-    readonly filename: string,
-  ) { }
+  constructor(readonly filename: string) { }
 
   getIgnorePatterns(cwd?: string) {
-    return Array.fromAsync(this._getIgnoreIterate(cwd)).then((value) => value.flat());
+    return Array.fromAsync(this._getIgnoreIterate(cwd));
   }
 
-  protected async* _getIgnoreIterate(cwd?: string) {
+  protected async *_getIgnoreIterate(cwd?: string) {
     const rootIgnorePath = joinWithRoot(this.filename);
     const rootIgnore = await Ignore.resolveIgnoreFile(rootIgnorePath);
 
     for await (const path of this._findIgnoreFiles(rootIgnore, cwd)) {
-      yield Ignore.#getGlobfiedIgnoreFile(path);
+      yield* Ignore.#getGlobfiedIgnoreFile(path);
     }
   }
 

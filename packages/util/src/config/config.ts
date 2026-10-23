@@ -1,24 +1,24 @@
 import { discloudConfigRequiredScopes } from "@discloudapp/api-types/v2";
 import { existsSync, type FSWatcher, readFileSync, type Stats, statSync, watch } from "fs";
-import { readFile, stat, writeFile } from "fs/promises";
+import { open, readFile, stat, writeFile } from "fs/promises";
 import { basename, dirname, extname, join } from "path";
 import { fromZodError } from "zod-validation-error";
 import { DiscloudConfigPredicate } from "./assertions";
 import CommentRepository from "./comments/repository";
 import { MissingMainError } from "./errors";
-import { type IParser } from "./interfaces/comments/parser";
-import { type ICommentRepository } from "./interfaces/comments/repository";
+import type { IParser } from "./interfaces/comments/parser";
+import type { ICommentRepository } from "./interfaces/comments/repository";
 import ConfigParser from "./parser";
-import { type ParsedDiscloudConfigData } from "./types";
+import type { ParsedDiscloudConfigData } from "./types";
 
-const enconding = "utf8";
+const _enconding = "utf8";
 
-export class DiscloudConfig {
+export class DiscloudConfig implements Disposable {
   static readonly filename = "discloud.config";
 
   static async fromPath(path: string) {
     path = await this.#resolveConfigPath(path);
-    const content = await readFile(path, enconding).catch(() => null);
+    const content = await readFile(path, _enconding).catch(() => null);
     return new DiscloudConfig(path, content!);
   }
 
@@ -54,7 +54,7 @@ export class DiscloudConfig {
   constructor(readonly path: string, content?: string) {
     if (!content) {
       this.path = DiscloudConfig.#resolveConfigPathSync(this.path);
-      try { content = readFileSync(this.path, enconding); } catch { }
+      try { content = readFileSync(this.path, _enconding); } catch { }
     }
 
     this.#dir = dirname(this.path);
@@ -77,36 +77,27 @@ export class DiscloudConfig {
   }
 
   get mainFileExt() {
-    if (!this.data.MAIN) return;
-    return extname(this.data.MAIN);
+    if (!this.#data.MAIN) return;
+    return extname(this.#data.MAIN);
   }
 
   get missingProps() {
-    return this.#requiredProps.filter(key => !this.data[key]);
+    return this.#requiredProps.filter(key => !this.#data[key]);
   }
 
   get #requiredProps() {
-    return discloudConfigRequiredScopes[this.data.TYPE || "common"] ??
+    return discloudConfigRequiredScopes[this.#data.TYPE || "common"] ??
       discloudConfigRequiredScopes.common;
   }
 
-  dispose() {
-    if (this._watcher) {
-      this._watcher.removeAllListeners().close();
-      delete this._watcher;
-    }
-
-    this.#commentRepository.clear();
-  }
-
   async existsMain() {
-    if (!this.data.MAIN) return false;
-    try { return await stat(join(this.#dir, this.data.MAIN)).then(fileStat => fileStat.isFile()); }
+    if (!this.#data.MAIN) return false;
+    try { return await stat(join(this.#dir, this.#data.MAIN)).then(fileStat => fileStat.isFile()); }
     catch { return false; }
   }
 
   get<K extends keyof ParsedDiscloudConfigData>(key: K): ParsedDiscloudConfigData[K] {
-    return this.data[key];
+    return this.#data[key];
   }
 
   async set<K extends keyof ParsedDiscloudConfigData>(key: K, value: ParsedDiscloudConfigData[K]) {
@@ -114,11 +105,11 @@ export class DiscloudConfig {
   }
 
   async update(config: Partial<ParsedDiscloudConfigData>) {
-    config = Object.assign(this.data, config);
+    config = Object.assign(this.#data, config);
 
     const content = this.#stringify(config);
 
-    await writeFile(this.path, content, enconding);
+    await writeFile(this.path, content, _enconding);
   }
 
   validate(): Promise<void>
@@ -133,7 +124,7 @@ export class DiscloudConfig {
       }
     }
 
-    DiscloudConfig.validade(this.data);
+    DiscloudConfig.validade(this.#data);
     if (!await this.existsMain()) throw new MissingMainError();
   }
 
@@ -158,15 +149,31 @@ export class DiscloudConfig {
   }
 
   async #readFile<T>() {
-    const content = await readFile(this.path, enconding);
-    return this.#parse<T>(content);
+    const buffer = await _readFirstFileChunk(this.path);
+    return this.#parse<T>(buffer.toString(_enconding));
   }
 
   #stringify(obj: unknown): string {
     return this.#parser.stringify(obj);
   }
 
-  [Symbol.dispose]() {
-    this.dispose();
+  dispose() {
+    this[Symbol.dispose]();
   }
+
+  [Symbol.dispose]() {
+    if (this._watcher) {
+      this._watcher.removeAllListeners().close();
+      delete this._watcher;
+    }
+
+    this.#commentRepository.clear();
+  }
+}
+
+async function _readFirstFileChunk(path: string) {
+  const fileHandle = await open(path);
+  const result = await fileHandle.read();
+  await fileHandle[Symbol.asyncDispose]();
+  return result.buffer;
 }
