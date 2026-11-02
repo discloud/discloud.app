@@ -352,12 +352,13 @@
   resolved "https://registry.yarnpkg.com/@shikijs/vscode-textmate/-/vscode-textmate-10.1.0.tgz#de59840c1d9903b5f5732dbc7852437003d35f11"
   integrity sha512-cVBuhDQjBZaNMTwBquYfPydrUP+E3hE6oYGasx8h6ZrODIM7/r+gxLDXdd66oszbrggZHEntdE6j+5gYIVyMWQ==
 
-"@tokenizer/inflate@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@tokenizer/inflate/-/inflate-0.5.1.tgz#d2b4171436928429e2766b70fdcaac6c592c76ae"
-  integrity sha512-56U2O6fDLFtqokwWh597IdeUgtM7j+TT9tb1soybhgA6cy163gAcVmoQr8H4Ud/CkgCkViwcuLyqtn6wYqw59Q==
+"@tokenizer/inflate@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@tokenizer/inflate/-/inflate-0.6.0.tgz#e249321793cb6c4e5fd58b8fc79cb23465f3d0c5"
+  integrity sha512-+0RDxhBkyT9xMnGdJAwmats9yxRLR8ypJrQgrnLqOu4Gv/aHlnxYgdGVy2QTwvBl6IF/w2Hr+ZNirH+iMUbVZA==
   dependencies:
     debug "^4.4.3"
+    strtok3 "^10.6.2"
     token-types "^6.1.2"
 
 "@tokenizer/token@^0.3.0":
@@ -1165,13 +1166,13 @@ fdir@^6.5.0:
   dependencies:
     flat-cache "^6.1.23"
 
-file-type@^22.2.0:
-  version "22.2.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-22.2.0.tgz#f4e7119f03c9807e7bb840cfd61ce1131962060b"
-  integrity sha512-XmEVJsRpQMVYC+sWFW+FKAVo2P7/lPctDdWH4UQ1r6oxhdrTobnowdM3z+ZJ93a4J8D3yDpxX0bEvRuFev0vUQ==
+file-type@^22.3.0:
+  version "22.3.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-22.3.0.tgz#cb5ad3c202d48e0973f4f5e3c60b180045321f52"
+  integrity sha512-PrPedgnnWl5bWz3JHgar0QSzRvzeyFh7dZ9JpYOgcPZu4KALS9zw4MMa6qXRYyjeBsAlpaWB2boLuG991+0HIQ==
   dependencies:
-    "@tokenizer/inflate" "^0.5.1"
-    strtok3 "^10.5.0"
+    "@tokenizer/inflate" "^0.6.0"
+    strtok3 "^10.6.3"
     token-types "^6.1.2"
     uint8array-extras "^1.6.0"
 
@@ -2295,10 +2296,10 @@ strip-bom@^3.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
   integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
 
-strtok3@^10.5.0:
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.6.2.tgz#7fac1be17e83295b863399f01a843e962f4d648f"
-  integrity sha512-BkdixFFUt7r7LsX6aGNPVyYMLjW+M1USLlKPNbZsrZEmLFh5tGqhdfckKo6xgsZIJqdDD0CZGkeCJJwNWQIKQA==
+strtok3@^10.6.2, strtok3@^10.6.3:
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-10.6.3.tgz#8272dc2fa4ee9c50e4d28e952ad01c9b34be77d0"
+  integrity sha512-MD8mENgyXMr2mDaDfzP3RWYDSyYQxIIou7HhCiCJiBekrsoDtUG0id3vYnjDfY9ndOEbazFXe13Qw6u/1AB8ew==
   dependencies:
     "@tokenizer/token" "^0.3.0"
 
