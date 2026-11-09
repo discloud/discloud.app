@@ -27,7 +27,7 @@
   "dependencies": {
     "@discloudapp/api-types": "^1.1.0",
     "file-type": "^22.3.0",
-    "glob": "^14.0.3",
+    "glob": "^14.0.4",
     "globify-gitignore": "^1.0.3",
     "source-map-support": "^0.5.21",
     "tslib": "^2.9.1",
