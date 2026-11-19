@@ -6,7 +6,6 @@ import type { MatchedComment } from "./types";
 /** `/(?<content>\s*#.*$)/` */
 const _commentRegexp = /(?<content>\s*#.*$)/;
 
-const _one = 1;
 const _zero = 0;
 
 export default class CommentRepository implements ICommentRepository {
@@ -39,13 +38,11 @@ export default class CommentRepository implements ICommentRepository {
 
     this.set(line, result.index, result.groups.content);
 
-    if (result.index < _one) return;
-
-    return content.substring(_zero, result.index);
+    if (result.index > _zero) return content.substring(_zero, result.index);
   }
 
   set(line: number, character: number, content: string) {
-    const comment: ICommentEntity = new CommentEntity(line, character, content);
+    const comment = Object.freeze<ICommentEntity>(new CommentEntity(line, character, content));
 
     this.#cache.set(character, comment);
   }

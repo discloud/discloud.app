@@ -7,5 +7,5 @@ export interface ICommentRepository extends Disposable, Iterable<Readonly<IComme
   get(line: number): Readonly<ICommentEntity> | void
   parse(line: number, content: string): string | void
   set(line: number, character: number, content: string): void
-  values(): Generator<Readonly<ICommentEntity>>
+  values(): Generator<Readonly<ICommentEntity>, void, void>
 }
