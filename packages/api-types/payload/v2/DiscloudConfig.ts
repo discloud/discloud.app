@@ -204,6 +204,7 @@ type VersionJava = BaseVersion
 
 type VersionJs = BaseVersion
   | "current"
+  | "lts"
   | "suja"
 
 type VersionPhp = BaseVersion

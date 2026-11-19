@@ -1,5 +1,5 @@
-import { type BaseApiApp } from "./app";
-import { type RESTApiBaseResult } from "./base";
+import type { BaseApiApp } from "./app";
+import type { RESTApiBaseResult } from "./base";
 
 export interface ApiDomain {
   id: string

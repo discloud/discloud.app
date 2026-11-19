@@ -1,4 +1,4 @@
-import { type RESTApiBaseResult } from "./base";
+import type { RESTApiBaseResult } from "./base";
 
 export interface RESTPutApiLocaleResult extends Omit<RESTApiBaseResult, "message"> {
   /**
