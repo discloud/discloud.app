@@ -2,11 +2,11 @@ import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import type { IParser } from "./interfaces/comments/parser";
 import type { ICommentRepository } from "./interfaces/comments/repository";
 
-const _arraySplitterPattern = /\s*,\s*/g;
 const _arraySplitterCharacter = ",";
+const _arraySplitterRegExp = /\s*,\s*/g;
 const _assignmentCharacter = "=";
 const _lineBreakCharacter = "\n";
-const _lineBreakSplitterPattern = /\r?\n/g;
+const _lineBreakSplitterRegExp = /\r?\n/g;
 const _trueAsText = "true";
 const _zero = 0;
 
@@ -16,7 +16,7 @@ export default class ConfigParser implements IParser {
   ) { }
 
   parse<T>(content: string): T {
-    const lines = content.trim().split(_lineBreakSplitterPattern);
+    const lines = content.trim().split(_lineBreakSplitterRegExp);
 
     const parsed = Object.fromEntries(Array.from(this.#parseLines(lines)));
 
@@ -42,7 +42,7 @@ export default class ConfigParser implements IParser {
   #writeComments(lines: string | string[]) {
     if (!this._commentRepository.size) return lines;
 
-    if (!Array.isArray(lines)) return this.#writeComments(lines.split(_lineBreakSplitterPattern));
+    if (!Array.isArray(lines)) return this.#writeComments(lines.split(_lineBreakSplitterRegExp));
 
     for (const comment of this._commentRepository) {
       if (comment.character !== _zero) {
@@ -75,7 +75,7 @@ function _parseValues(obj: any) {
 }
 
 function _resolveArrayValue(value: string) {
-  return value.split(_arraySplitterPattern).filter(Boolean);
+  return value.split(_arraySplitterRegExp).filter(Boolean);
 }
 
 function _resolveBooleanValue(value: boolean | string) {

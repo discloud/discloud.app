@@ -1,4 +1,4 @@
-import { type AppTypes, type AppVersion } from "@discloudapp/api-types/v2";
+import type { AppTypes, AppVersion } from "@discloudapp/api-types/v2";
 
 export interface ParsedDiscloudConfigData {
   APT?: string[]
