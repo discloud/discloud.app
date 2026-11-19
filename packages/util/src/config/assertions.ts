@@ -1,51 +1,60 @@
 import { DiscloudConfigScopes } from "@discloudapp/api-types/v2";
 import z from "zod";
 
-const VERSION_REGEXP = /^(current|latest|lts|suja|(?:\d+(?:\.(?:\d+|x)){0,2}))$/;
+const _emptyText = "";
 
-const STRING_ARRAY_REGEXP = /\s*,\s*/;
+const _bot = "bot";
+const _site = "site";
 
-const EmptyStringPredicate = z.string().max(0);
+const _appTypes = [_bot, _site] as const;
 
-const APTPredicate = z.union([
+const _versionRegexp = /^(current|latest|lts|suja|(?:\d+(?:\.(?:\d+|x)){0,2}))$/;
+
+const _stringArrayRegexp = /\s*,\s*/;
+
+const _emptyTextPredicate = z.literal(_emptyText);
+
+const _appTypesPredicate = z.literal(_appTypes);
+
+const _APTPredicate = z.union([
   z.array(z.string()),
-  z.string().trim().refine(arg => arg.split(STRING_ARRAY_REGEXP)),
+  z.string().trim().refine(arg => arg.split(_stringArrayRegexp)),
 ]);
 
-const DiscloudConfigCommonRequiredPredicate = z.object({
+const _discloudConfigCommonRequiredPredicate = z.object({
   [DiscloudConfigScopes.MAIN]: z.string().min(1),
 });
 
-const DiscloudConfigOptionalPredicate = z.object({
-  [DiscloudConfigScopes.APT]: APTPredicate,
+const _discloudConfigOptionalPredicate = z.object({
+  [DiscloudConfigScopes.APT]: _APTPredicate,
   [DiscloudConfigScopes.AUTORESTART]: z.coerce.boolean(),
-  [DiscloudConfigScopes.AVATAR]: z.url().or(EmptyStringPredicate),
+  [DiscloudConfigScopes.AVATAR]: z.url().or(_emptyTextPredicate),
   [DiscloudConfigScopes.HOSTNAME]: z.string(),
   [DiscloudConfigScopes.ID]: z.string(),
   [DiscloudConfigScopes.MAIN]: z.string(),
   [DiscloudConfigScopes.NAME]: z.string(),
-  [DiscloudConfigScopes.RAM]: z.coerce.number().min(100).or(EmptyStringPredicate),
+  [DiscloudConfigScopes.RAM]: z.coerce.number().min(100),
   [DiscloudConfigScopes.START]: z.string(),
   [DiscloudConfigScopes.STORAGE]: z.string(),
-  [DiscloudConfigScopes.TYPE]: z.enum(["bot", "site"]).or(EmptyStringPredicate),
-  [DiscloudConfigScopes.VERSION]: z.string().trim().regex(VERSION_REGEXP).or(EmptyStringPredicate),
+  [DiscloudConfigScopes.TYPE]: _appTypesPredicate.or(_emptyTextPredicate),
+  [DiscloudConfigScopes.VERSION]: z.string().trim().regex(_versionRegexp).or(_emptyTextPredicate),
   [DiscloudConfigScopes.VLAN]: z.coerce.boolean(),
 }).partial();
 
-const DiscloudConfigBotPredicate = z.object({
-  [DiscloudConfigScopes.TYPE]: z.string().refine(arg => !arg || arg === "bot").optional(),
+const _discloudConfigBotPredicate = z.object({
+  [DiscloudConfigScopes.TYPE]: z.literal(_bot).or(_emptyTextPredicate).optional(),
 });
 
-const DiscloudConfigSitePredicate = z.object({
-  [DiscloudConfigScopes.TYPE]: z.string().refine(arg => arg === "site"),
-  [DiscloudConfigScopes.ID]: z.string().min(1),
-  [DiscloudConfigScopes.RAM]: z.coerce.number().min(512).or(EmptyStringPredicate).optional(),
+const _discloudConfigSitePredicate = z.object({
+  [DiscloudConfigScopes.TYPE]: z.literal(_site),
+  [DiscloudConfigScopes.ID]: z.string().min(1).max(30),
+  [DiscloudConfigScopes.RAM]: z.coerce.number().min(512).optional(),
 });
 
 export const DiscloudConfigPredicate =
-  DiscloudConfigCommonRequiredPredicate
-    .and(DiscloudConfigOptionalPredicate)
+  _discloudConfigCommonRequiredPredicate
+    .and(_discloudConfigOptionalPredicate)
     .and(z.union([
-      DiscloudConfigSitePredicate,
-      DiscloudConfigBotPredicate,
+      _discloudConfigSitePredicate,
+      _discloudConfigBotPredicate,
     ]));
